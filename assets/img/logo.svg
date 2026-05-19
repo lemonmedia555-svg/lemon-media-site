@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 48" fill="none">
+  <!-- Лимончик: круг с листочком -->
+  <circle cx="24" cy="24" r="18" fill="#FFDD2D"/>
+  <path d="M24 6c-1 0-2 .4-2.6 1.2L19 10.6c-.7 1 .1 2.4 1.4 2.4h7.2c1.3 0 2-1.4 1.4-2.4l-2.4-3.4C26 6.4 25 6 24 6z" fill="#2EB872"/>
+  <ellipse cx="18" cy="20" rx="3" ry="2" fill="#FFF1A6" opacity="0.6"/>
+  <!-- Wordmark: «Лимон Медиа» -->
+  <text x="52" y="32" font-family="Manrope, -apple-system, sans-serif" font-weight="800" font-size="22" fill="#1B1B1B" letter-spacing="-0.5">Лимон Медиа</text>
+</svg>

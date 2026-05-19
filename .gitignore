@@ -1,0 +1,25 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+
+# Env
+.env
+.env.local
+
+# Deploy
+deploy/secrets.sh
+deploy/*.key
+deploy/*.pem
+
+# Temporary
+*.tmp
+*.bak
