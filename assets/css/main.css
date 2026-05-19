@@ -967,6 +967,197 @@ body.is-locked { overflow: hidden; }
   .services-grid, .portfolio-grid, .video-grid, .reviews-grid, .social-grid { grid-template-columns: 1fr; }
 }
 
+/* ============================================================
+   БРЕНДОВЫЕ КОМПОНЕНТЫ ЛИМОН МЕДИА
+   Уникальные дизайн-элементы: иконки, marquee, hover-эффекты,
+   акценты «лимончик», точные числовые блоки.
+   ============================================================ */
+
+/* === SVG-ИКОНКИ === */
+.ico {
+  width: 1em; height: 1em;
+  display: inline-block; flex-shrink: 0;
+  fill: none;
+  color: currentColor;
+}
+.ico-md { width: 24px; height: 24px; }
+.ico-lg { width: 32px; height: 32px; }
+.ico-xl { width: 40px; height: 40px; }
+
+/* Цветная плашка под иконку (заменяет emoji-боксы) */
+.ico-tile {
+  width: 48px; height: 48px;
+  border-radius: var(--r-sm);
+  display: inline-flex; align-items: center; justify-content: center;
+  background: var(--yellow);
+  color: var(--ink);
+  flex-shrink: 0;
+  position: relative;
+  transition: transform var(--t-base);
+}
+.ico-tile .ico { width: 24px; height: 24px; }
+.ico-tile--dark { background: var(--ink); color: var(--yellow); }
+.ico-tile--soft { background: var(--yellow-soft); }
+.ico-tile--lg { width: 64px; height: 64px; }
+.ico-tile--lg .ico { width: 30px; height: 30px; }
+.card-hover:hover .ico-tile,
+.service-card:hover .ico-tile { transform: rotate(-6deg) scale(1.05); }
+
+/* Section eyebrow с числовой меткой 01 / 02 / 03 */
+.eyebrow {
+  display: inline-flex; align-items: center; gap: 12px;
+  font-size: var(--fs-sm); font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--gray-700);
+}
+.eyebrow__num {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 28px; height: 28px; border-radius: 50%;
+  background: var(--yellow); color: var(--ink);
+  font-size: var(--fs-xs); font-weight: 800;
+  letter-spacing: 0;
+  font-variant-numeric: tabular-nums;
+}
+
+/* === БЕГУЩАЯ СТРОКА (marquee) === */
+.marquee {
+  background: var(--ink); color: var(--white);
+  overflow: hidden;
+  position: relative;
+  padding: 18px 0;
+  border-top: 1px solid rgba(255,255,255,.1);
+  border-bottom: 1px solid rgba(255,255,255,.1);
+}
+.marquee__track {
+  display: inline-flex; align-items: center; gap: var(--sp-7);
+  white-space: nowrap;
+  animation: marquee-scroll 38s linear infinite;
+  padding-left: var(--sp-7);
+}
+.marquee__item {
+  font-size: clamp(1.25rem, 2.5vw, 2rem);
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  display: inline-flex; align-items: center; gap: 18px;
+}
+.marquee__dot {
+  width: 10px; height: 10px; border-radius: 50%; background: var(--yellow);
+  flex-shrink: 0;
+}
+.marquee--yellow { background: var(--yellow); color: var(--ink); border-color: var(--yellow-hover); }
+.marquee--yellow .marquee__dot { background: var(--ink); }
+
+@keyframes marquee-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .marquee__track { animation: none; }
+}
+
+/* === ДЕКОРАТИВНАЯ ПОДЛОЖКА (лимончиковая) === */
+.section--patterned {
+  position: relative;
+  isolation: isolate;
+}
+.section--patterned::before {
+  content: ""; position: absolute; inset: 0;
+  background-image:
+    radial-gradient(circle at 20% 20%, rgba(255,221,45,.15) 0, transparent 14%),
+    radial-gradient(circle at 80% 40%, rgba(46,184,114,.08) 0, transparent 12%),
+    radial-gradient(circle at 60% 80%, rgba(255,221,45,.1)  0, transparent 18%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Лимончиковый знак (decoration) */
+.deco-lemon {
+  position: absolute;
+  pointer-events: none;
+  opacity: .25;
+}
+
+/* === КАРТОЧКА УСЛУГИ — расширенный hover === */
+.service-card { position: relative; overflow: hidden; }
+.service-card::before {
+  content: "";
+  position: absolute; bottom: 0; left: 0; right: 0;
+  height: 3px;
+  background: var(--yellow);
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform .35s cubic-bezier(.22,.9,.32,1);
+}
+.service-card:hover::before { transform: scaleX(1); }
+.service-card__arrow {
+  position: absolute; top: var(--sp-5); right: var(--sp-5);
+  width: 32px; height: 32px; border-radius: 50%;
+  background: var(--gray-100);
+  display: flex; align-items: center; justify-content: center;
+  transition: background var(--t-base), color var(--t-base), transform var(--t-base);
+  color: var(--gray-700);
+}
+.service-card:hover .service-card__arrow { background: var(--ink); color: var(--yellow); transform: rotate(-45deg); }
+
+/* === ЦИФРОВЫЕ БЛОКИ — табулярные === */
+.stat__num, .pricing__price-num, .hero__metric-num,
+.risk-free__circle-num, .clients-strip__num-big {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "ss01", "tnum";
+}
+
+/* === БРЕНДОВЫЕ БЕЙДЖИ === */
+.badge-lemon {
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  padding: 6px 10px 6px 6px;
+}
+.badge-lemon svg { width: 22px; height: 22px; }
+
+/* === ГЕОМЕТРИЯ HERO === */
+.hero--split { position: relative; }
+.hero__deco-dot {
+  position: absolute; pointer-events: none;
+}
+.hero__deco-dot--1 { width: 320px; height: 320px; background: radial-gradient(circle, rgba(255,221,45,.35), transparent 70%); top: -80px; left: -80px; }
+.hero__deco-dot--2 { width: 220px; height: 220px; background: radial-gradient(circle, rgba(46,184,114,.15), transparent 70%); bottom: 40px; left: 35%; }
+
+/* Тонкая работа с заголовками */
+h1, .h1 { font-feature-settings: "ss01", "kern", "liga"; }
+
+/* === АНИМИРОВАННАЯ ПОЯВЛЯЮЩАЯСЯ ПОДЛОЖКА КАРТОЧЕК === */
+.card-hover { will-change: transform; }
+
+/* === BEFORE/AFTER УЛУЧШЕНИЕ === */
+.ba-card { position: relative; overflow: hidden; }
+.ba-card--after::after {
+  content: ""; position: absolute;
+  width: 200px; height: 200px;
+  background: radial-gradient(circle, rgba(255,221,45,.2), transparent 70%);
+  right: -50px; bottom: -50px;
+  pointer-events: none;
+}
+
+/* === РАМКА HOVER-EFFECT для карточек кейсов === */
+.portfolio-card { position: relative; }
+.portfolio-card::after {
+  content: ""; position: absolute; inset: 0;
+  border: 3px solid transparent;
+  border-radius: var(--r-md);
+  transition: border-color var(--t-base);
+  pointer-events: none;
+}
+.portfolio-card:hover::after { border-color: var(--yellow); }
+
+/* === АДАПТИВ === */
+@media (max-width: 768px) {
+  .marquee__item { font-size: 1.125rem; gap: 12px; }
+  .marquee__track { gap: var(--sp-6); }
+  .hero__deco-dot { display: none; }
+  .service-card__arrow { display: none; }
+}
+
 /* === УТИЛИТЫ === */
 .mt-0 { margin-top: 0 !important; }
 .mt-3 { margin-top: var(--sp-3); }
