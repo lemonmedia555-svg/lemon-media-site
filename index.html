@@ -3,15 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Лимон Медиа — Дизайн, контент и реклама для соцсетей</title>
-<meta name="description" content="Лимон Медиа — студия полного цикла: логотипы, фирменный стиль, контент для соцсетей, рекламные креативы и видео. Команда дизайнеров и копирайтеров, понятный процесс, готовые результаты в срок.">
-<meta property="og:title" content="Лимон Медиа — студия дизайна и контента">
-<meta property="og:description" content="Контент, дизайн и реклама для соцсетей без головной боли. Команда, процесс, KPI.">
-<meta property="og:type" content="website">
+<title>Лимон Медиа — Дизайн, контент и реклама по подписке</title>
+<meta name="description" content="Лимон Медиа — студия полного цикла: соцсети, дизайн, реклама и видео. Готовая команда по фиксированной подписке. Старт за 14 дней.">
 <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800;900&display=swap">
 <link rel="stylesheet" href="/assets/css/main.css">
 </head>
 <body>
@@ -23,14 +20,15 @@
       <img src="/assets/img/logo.svg" alt="Лимон Медиа">
     </a>
     <nav class="nav" aria-label="Основная навигация">
-      <a href="/" class="nav__link" data-nav="index.html">Главная</a>
-      <a href="/pricing.html" class="nav__link" data-nav="pricing.html">Тарифы</a>
+      <a href="/about.html" class="nav__link" data-nav="about.html">О компании</a>
+      <a href="/pricing.html" class="nav__link" data-nav="pricing.html">Услуги</a>
       <a href="/examples.html" class="nav__link" data-nav="examples.html">Примеры</a>
-      <a href="/reviews.html" class="nav__link" data-nav="reviews.html">Отзывы</a>
-      <a href="/about.html" class="nav__link" data-nav="about.html">О нас</a>
+      <a href="/pricing.html" class="nav__link" data-nav="pricing.html">Тарифы</a>
     </nav>
     <div class="header__cta">
-      <a href="/book-demo.html" class="btn btn-primary btn-sm">Записаться на демо</a>
+      <a href="#" class="nav__link">Войти</a>
+      <a href="/book-demo.html" class="btn btn-outline btn-sm">Записаться на демо</a>
+      <a href="/pricing.html" class="btn btn-primary btn-sm">Начать сейчас</a>
       <button class="burger" aria-label="Открыть меню" aria-expanded="false">
         <span class="burger__lines"></span>
       </button>
@@ -38,349 +36,885 @@
   </div>
 </header>
 
-<!-- Мобильная навигация (выезжает) -->
 <nav class="mobile-nav" aria-label="Мобильная навигация">
-  <a href="/" class="mobile-nav__link" data-nav="index.html">Главная</a>
-  <a href="/pricing.html" class="mobile-nav__link" data-nav="pricing.html">Тарифы</a>
-  <a href="/examples.html" class="mobile-nav__link" data-nav="examples.html">Примеры работ</a>
-  <a href="/reviews.html" class="mobile-nav__link" data-nav="reviews.html">Отзывы</a>
-  <a href="/about.html" class="mobile-nav__link" data-nav="about.html">О нас</a>
-  <a href="/book-demo.html" class="btn btn-primary btn-lg btn-block mt-4">Записаться на демо</a>
+  <a href="/about.html" class="mobile-nav__link">О компании</a>
+  <a href="/pricing.html" class="mobile-nav__link">Услуги</a>
+  <a href="/examples.html" class="mobile-nav__link">Примеры</a>
+  <a href="/pricing.html" class="mobile-nav__link">Тарифы</a>
+  <a href="/reviews.html" class="mobile-nav__link">Отзывы</a>
+  <a href="/book-demo.html" class="btn btn-outline btn-lg btn-block mt-4">Записаться на демо</a>
+  <a href="/pricing.html" class="btn btn-primary btn-lg btn-block">Начать сейчас</a>
 </nav>
 
 <main>
 
-<!-- ================= HERO ================= -->
-<section class="hero">
+<!-- ============== 1. HERO (двухколоночный) ============== -->
+<section class="hero hero--split">
   <div class="container">
     <div class="hero__inner">
       <div>
-        <span class="badge">Студия полного цикла · с 2020 года</span>
-        <h1 class="hero__title mt-4">Контент и дизайн для соцсетей <span class="highlight">без головной боли</span></h1>
-        <p class="hero__lead">Команда дизайнеров, копирайтеров и таргетологов закрывает SMM и креативы под ключ. Вы согласуете идеи в одном окне, мы делаем посты, видео и рекламу в срок.</p>
+        <span class="hero__rating">
+          <span class="hero__rating-stars">★★★★★</span>
+          4,9 · средняя оценка клиентов
+        </span>
+        <h1 class="hero__title mt-5">Маркетинг и дизайн <span class="highlight">по подписке</span></h1>
+        <p class="hero__lead">Готовая команда дизайнеров, копирайтеров и таргетологов — за фиксированную плату каждый месяц. Без поиска фрилансеров, без сюрпризов в счетах.</p>
+
+        <div class="hero__metrics">
+          <div class="hero__metric">
+            <div class="hero__metric-icon">📱</div>
+            <div>
+              <div class="hero__metric-num">8 соцсетей</div>
+              <div class="hero__metric-label">Instagram, ВК, Telegram, TikTok и др.</div>
+            </div>
+          </div>
+          <div class="hero__metric">
+            <div class="hero__metric-icon">🎯</div>
+            <div>
+              <div class="hero__metric-num">4 платформы</div>
+              <div class="hero__metric-label">VK Ads, Яндекс, MyTarget, Telegram Ads</div>
+            </div>
+          </div>
+          <div class="hero__metric">
+            <div class="hero__metric-icon">⏱️</div>
+            <div>
+              <div class="hero__metric-num">1 200 часов</div>
+              <div class="hero__metric-label">Команды работают на ваш проект</div>
+            </div>
+          </div>
+        </div>
+
         <div class="hero__cta">
-          <a href="/book-demo.html" class="btn btn-dark btn-lg">Записаться на демо</a>
-          <a href="/pricing.html" class="btn btn-outline btn-lg">Посмотреть тарифы</a>
+          <a href="/pricing.html" class="btn btn-primary btn-lg">Посмотреть тарифы</a>
+          <a href="/book-demo.html" class="btn btn-outline btn-lg">Записаться на демо</a>
         </div>
-        <div class="hero__trust">
-          <span>★★★★★ 4,9 — средний рейтинг клиентов</span>
-          <span>·</span>
-          <span>10 000+ проектов с 2020</span>
-        </div>
+        <p class="muted small mt-4">✓ Старт за 14 дней · Деньги вернём, если не подойдём · Отмена в любой момент</p>
       </div>
-      <div class="hero__visual" aria-hidden="true">
-        <div>
-          <span class="badge badge-dark">Сегодня в работе</span>
-          <h3 class="mt-4">Карусель Instagram · «Кофейня у дома»</h3>
-          <p class="mt-3 small" style="color: var(--ink-soft)">Статус: на согласовании · Дедлайн: пятница</p>
-        </div>
-        <div class="flex gap-3">
-          <div class="card" style="background: var(--white); padding: 16px; flex: 1;">
-            <p class="xsmall muted">Опубликовано</p>
-            <p style="font-size: 1.5rem; font-weight: 800;">128</p>
-          </div>
-          <div class="card" style="background: var(--white); padding: 16px; flex: 1;">
-            <p class="xsmall muted">Охват</p>
-            <p style="font-size: 1.5rem; font-weight: 800;">94k</p>
-          </div>
-        </div>
+
+      <!-- Мокап продукта (placeholder под скриншоты интерфейса) -->
+      <div class="hero__mockup" aria-hidden="true">
+        <div class="hero__mockup-tile" style="background: linear-gradient(135deg, #FFDD2D, #F2C800);"><span>Карусель Instagram</span></div>
+        <div class="hero__mockup-tile" style="background: #1B1B1B; color: #FFDD2D;"><span style="background: rgba(255,221,45,.2); color: #FFDD2D;">Reels · 0:30</span></div>
+        <div class="hero__mockup-tile" style="background: #FFF1A6;"><span>Сторис</span></div>
+        <div class="hero__mockup-tile" style="background: #4361EE; color: #FFFFFF;"><span style="background: rgba(255,255,255,.2); color: #FFFFFF;">Креатив VK Ads</span></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ================= УСЛУГИ ================= -->
-<section class="section bg-soft">
+<!-- ============== 2. ТАБ-СЕКЦИЯ «Что нужно?» ============== -->
+<section class="section-sm">
   <div class="container">
-    <div class="text-center" style="max-width: 720px; margin: 0 auto var(--sp-7);">
-      <span class="badge">Услуги</span>
-      <h2 class="mt-4">Всё, что нужно для роста в соцсетях — в одной команде</h2>
-      <p class="lead mt-4">Не нужно собирать фрилансеров и согласовывать стилистику. Мы закрываем продакшен, дизайн, копирайт и таргет.</p>
+    <div class="text-center mb-6">
+      <h2>С чем вам помочь?</h2>
+      <p class="lead mt-3">Выберите направление — покажем подходящие услуги и тарифы.</p>
     </div>
 
-    <div class="features">
-      <div class="feature feature--wide feature--yellow">
-        <div class="feature__icon">📱</div>
-        <h3>Контент для соцсетей</h3>
-        <p class="mt-3">Дизайн постов, сторис и каруселей под Instagram, ВКонтакте и Telegram. План на месяц, согласование в одном окне, публикация по расписанию.</p>
-      </div>
-      <div class="feature feature--narrow feature--dark">
-        <div class="feature__icon">🎬</div>
-        <h3>Короткие видео</h3>
-        <p class="mt-3 muted">Reels и Shorts: сценарий, монтаж, субтитры, обложки.</p>
-      </div>
+    <div class="tabs" role="tablist">
+      <button class="tab" role="tab" aria-selected="true" data-tab="smm">📱 Соцсети</button>
+      <button class="tab" role="tab" aria-selected="false" data-tab="ads">📣 Реклама</button>
+      <button class="tab" role="tab" aria-selected="false" data-tab="creative">🎨 Креативы</button>
+      <button class="tab" role="tab" aria-selected="false" data-tab="email">✉️ Email-маркетинг</button>
+      <button class="tab" role="tab" aria-selected="false" data-tab="seo">🔍 SEO</button>
+    </div>
 
-      <div class="feature feature--narrow">
-        <div class="feature__icon">🎨</div>
-        <h3>Логотип и фирстиль</h3>
-        <p class="mt-3 muted">Логотип за 3 дня с проверкой на уникальность. Гайдлайны для команды.</p>
+    <div class="tab-panel is-active" data-tab-panel="smm">
+      <div class="portfolio-grid">
+        <div class="portfolio-card"><div class="portfolio-card__cover" style="background: linear-gradient(135deg, #FFF1A6, #FFDD2D);">Кофейня</div><div class="portfolio-card__overlay"><div class="portfolio-card__avatar"></div><div><div class="portfolio-card__profile-name">cafesoroka</div><div class="muted xsmall">Лента Instagram</div></div></div></div>
+        <div class="portfolio-card"><div class="portfolio-card__cover" style="background: #1B1B1B; color: #FFDD2D;">IT</div><div class="portfolio-card__overlay"><div class="portfolio-card__avatar"></div><div><div class="portfolio-card__profile-name">universum</div><div class="muted xsmall">Карусели VK</div></div></div></div>
+        <div class="portfolio-card"><div class="portfolio-card__cover" style="background: #FFDD2D;">Зоо</div><div class="portfolio-card__overlay"><div class="portfolio-card__avatar"></div><div><div class="portfolio-card__profile-name">woof_shop</div><div class="muted xsmall">Сторис</div></div></div></div>
+        <div class="portfolio-card"><div class="portfolio-card__cover" style="background: #4361EE; color: #FFFFFF;">Школа</div><div class="portfolio-card__overlay"><div class="portfolio-card__avatar"></div><div><div class="portfolio-card__profile-name">starling_school</div><div class="muted xsmall">Лента</div></div></div></div>
       </div>
-      <div class="feature feature--wide">
-        <div class="feature__icon">📣</div>
-        <h3>Рекламные креативы и таргет</h3>
-        <p class="mt-3">Статика, видео и UGC под VK Ads и Яндекс. Настройка кампаний, A/B-тесты, отчёт по ROAS каждую неделю.</p>
+    </div>
+    <div class="tab-panel" data-tab-panel="ads">
+      <div class="portfolio-grid">
+        <div class="portfolio-card"><div class="portfolio-card__cover" style="background: #E5484D; color: #FFF;">VK Ads</div><div class="portfolio-card__overlay"><div class="portfolio-card__avatar"></div><div><div class="portfolio-card__profile-name">ILO</div><div class="muted xsmall">Креатив ROAS 4,8</div></div></div></div>
+        <div class="portfolio-card"><div class="portfolio-card__cover" style="background: #2EB872; color: #FFF;">Яндекс</div><div class="portfolio-card__overlay"><div class="portfolio-card__avatar"></div><div><div class="portfolio-card__profile-name">flame_rest</div><div class="muted xsmall">Статика</div></div></div></div>
+        <div class="portfolio-card"><div class="portfolio-card__cover" style="background: #1B1B1B; color: #FFDD2D;">TG Ads</div><div class="portfolio-card__overlay"><div class="portfolio-card__avatar"></div><div><div class="portfolio-card__profile-name">universum</div><div class="muted xsmall">Промо-канал</div></div></div></div>
+        <div class="portfolio-card"><div class="portfolio-card__cover" style="background: #FFDD2D;">UGC</div><div class="portfolio-card__overlay"><div class="portfolio-card__avatar"></div><div><div class="portfolio-card__profile-name">ilo_brand</div><div class="muted xsmall">Видео-отзыв</div></div></div></div>
       </div>
-
-      <div class="feature feature--full">
-        <div class="feature__icon">🛠️</div>
-        <h3>Лендинги и сайты</h3>
-        <p class="mt-3">Промо-страницы и многостраничники под продукт. Подключаем аналитику, формы и интеграции с CRM.</p>
+    </div>
+    <div class="tab-panel" data-tab-panel="creative">
+      <div class="portfolio-grid">
+        <div class="portfolio-card"><div class="portfolio-card__cover" style="background: linear-gradient(135deg, #FFDD2D, #F2C800);">Flame</div><div class="portfolio-card__overlay"><div class="portfolio-card__avatar"></div><div><div class="portfolio-card__profile-name">Логотип</div></div></div></div>
+        <div class="portfolio-card"><div class="portfolio-card__cover" style="background: #1B1B1B; color: #FFDD2D;">Щегол</div><div class="portfolio-card__overlay"><div class="portfolio-card__avatar"></div><div><div class="portfolio-card__profile-name">Фирстиль</div></div></div></div>
+        <div class="portfolio-card"><div class="portfolio-card__cover" style="background: #FFF1A6;">SEVER</div><div class="portfolio-card__overlay"><div class="portfolio-card__avatar"></div><div><div class="portfolio-card__profile-name">Брендбук</div></div></div></div>
+        <div class="portfolio-card"><div class="portfolio-card__cover" style="background: #4361EE; color: #FFFFFF;">Grace</div><div class="portfolio-card__overlay"><div class="portfolio-card__avatar"></div><div><div class="portfolio-card__profile-name">Айдентика</div></div></div></div>
+      </div>
+    </div>
+    <div class="tab-panel" data-tab-panel="email">
+      <div class="portfolio-grid">
+        <div class="portfolio-card"><div class="portfolio-card__cover" style="background: #FFF1A6;">Welcome</div><div class="portfolio-card__overlay"><div class="portfolio-card__avatar"></div><div><div class="portfolio-card__profile-name">Письмо</div></div></div></div>
+        <div class="portfolio-card"><div class="portfolio-card__cover" style="background: #FFDD2D;">Промо</div><div class="portfolio-card__overlay"><div class="portfolio-card__avatar"></div><div><div class="portfolio-card__profile-name">Рассылка</div></div></div></div>
+        <div class="portfolio-card"><div class="portfolio-card__cover" style="background: #1B1B1B; color: #FFDD2D;">Brand</div><div class="portfolio-card__overlay"><div class="portfolio-card__avatar"></div><div><div class="portfolio-card__profile-name">Триггерное</div></div></div></div>
+        <div class="portfolio-card"><div class="portfolio-card__cover" style="background: #2EB872; color: #FFF;">Sale</div><div class="portfolio-card__overlay"><div class="portfolio-card__avatar"></div><div><div class="portfolio-card__profile-name">Распродажа</div></div></div></div>
+      </div>
+    </div>
+    <div class="tab-panel" data-tab-panel="seo">
+      <div class="portfolio-grid">
+        <div class="portfolio-card"><div class="portfolio-card__cover" style="background: #FFDD2D;">Статья</div><div class="portfolio-card__overlay"><div class="portfolio-card__avatar"></div><div><div class="portfolio-card__profile-name">SEO-блог</div></div></div></div>
+        <div class="portfolio-card"><div class="portfolio-card__cover" style="background: #1B1B1B; color: #FFDD2D;">Ссылки</div><div class="portfolio-card__overlay"><div class="portfolio-card__avatar"></div><div><div class="portfolio-card__profile-name">Backlinks</div></div></div></div>
+        <div class="portfolio-card"><div class="portfolio-card__cover" style="background: #4361EE; color: #FFFFFF;">Аудит</div><div class="portfolio-card__overlay"><div class="portfolio-card__avatar"></div><div><div class="portfolio-card__profile-name">Технический</div></div></div></div>
+        <div class="portfolio-card"><div class="portfolio-card__cover" style="background: #FFF1A6;">Ядро</div><div class="portfolio-card__overlay"><div class="portfolio-card__avatar"></div><div><div class="portfolio-card__profile-name">Семантика</div></div></div></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ================= КАК РАБОТАЕМ ================= -->
+<!-- ============== 3. ЛЕНТА КЛИЕНТОВ ============== -->
+<section class="clients-strip">
+  <div class="container">
+    <div class="clients-strip__inner">
+      <div class="clients-strip__num">
+        <div class="clients-strip__num-big">10 000+</div>
+        <div class="clients-strip__num-label">Проектов с 2020 года</div>
+      </div>
+      <div class="clients-strip__logos">
+        <div class="clients-strip__logo">FLAME</div>
+        <div class="clients-strip__logo">Щегол</div>
+        <div class="clients-strip__logo">UNIVERSUM</div>
+        <div class="clients-strip__logo">SEVER</div>
+        <div class="clients-strip__logo">WOOF!</div>
+        <div class="clients-strip__logo">Starling</div>
+        <div class="clients-strip__logo">ILO</div>
+        <div class="clients-strip__logo">Grace</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== 4. ПОРТФОЛИО С ТАБАМИ ============== -->
 <section class="section">
   <div class="container">
-    <div class="text-center" style="max-width: 720px; margin: 0 auto var(--sp-7);">
-      <span class="badge">Как мы работаем</span>
-      <h2 class="mt-4">Понятный процесс за 4 шага</h2>
+    <div class="text-center mb-5">
+      <h2>Примеры работ</h2>
+      <p class="lead mt-3">Реальные кейсы. Видео и статика заменимы — это placeholder-блоки.</p>
     </div>
-    <div class="grid grid-4">
-      <div class="card card-soft">
-        <span class="badge badge-dark">1</span>
-        <h3 class="mt-4">Бриф</h3>
-        <p class="mt-3 muted">30-минутный звонок: задачи, аудитория, тон бренда, бюджет.</p>
+
+    <div class="tabs" role="tablist">
+      <button class="tab" role="tab" aria-selected="true" data-tab="featured">★ Избранные</button>
+      <button class="tab" role="tab" aria-selected="false" data-tab="posts">Посты</button>
+      <button class="tab" role="tab" aria-selected="false" data-tab="videos">Видео</button>
+      <button class="tab" role="tab" aria-selected="false" data-tab="ugc">UGC</button>
+    </div>
+
+    <div class="tab-panel is-active" data-tab-panel="featured">
+      <div class="portfolio-grid">
+        <div class="portfolio-card"><div class="portfolio-card__cover" style="background: #1B1B1B; color: #FFDD2D;">Щегол</div><div class="portfolio-card__overlay"><div class="portfolio-card__avatar"></div><div><div class="portfolio-card__profile-name">Фирстиль пекарни</div></div></div></div>
+        <div class="portfolio-card"><div class="portfolio-card__cover" style="background: linear-gradient(135deg, #FFDD2D, #F2C800);">Flame</div><div class="portfolio-card__overlay"><div class="portfolio-card__avatar"></div><div><div class="portfolio-card__profile-name">Логотип ресторана</div></div></div></div>
+        <div class="portfolio-card"><div class="portfolio-card__cover" style="background: #FFF1A6;">Sorока</div><div class="portfolio-card__overlay"><div class="portfolio-card__avatar"></div><div><div class="portfolio-card__profile-name">SMM кофейни</div></div></div></div>
+        <div class="portfolio-card"><div class="portfolio-card__cover" style="background: #4361EE; color: #FFFFFF;">Starling</div><div class="portfolio-card__overlay"><div class="portfolio-card__avatar"></div><div><div class="portfolio-card__profile-name">12 Reels · 1,2M</div></div></div></div>
       </div>
-      <div class="card card-soft">
-        <span class="badge badge-dark">2</span>
-        <h3 class="mt-4">План</h3>
-        <p class="mt-3 muted">Контент-план и рубрикатор на месяц. Согласуем за 2 дня.</p>
+    </div>
+    <div class="tab-panel" data-tab-panel="posts">
+      <div class="portfolio-grid">
+        <div class="portfolio-card"><div class="portfolio-card__cover" style="background: #FFDD2D;">Пост 1</div><div class="portfolio-card__overlay"><div class="portfolio-card__avatar"></div><div><div class="portfolio-card__profile-name">Карусель</div></div></div></div>
+        <div class="portfolio-card"><div class="portfolio-card__cover" style="background: #1B1B1B; color: #FFDD2D;">Пост 2</div><div class="portfolio-card__overlay"><div class="portfolio-card__avatar"></div><div><div class="portfolio-card__profile-name">Лента</div></div></div></div>
+        <div class="portfolio-card"><div class="portfolio-card__cover" style="background: #2EB872; color: #FFF;">Пост 3</div><div class="portfolio-card__overlay"><div class="portfolio-card__avatar"></div><div><div class="portfolio-card__profile-name">Промо</div></div></div></div>
+        <div class="portfolio-card"><div class="portfolio-card__cover" style="background: #FFF1A6;">Пост 4</div><div class="portfolio-card__overlay"><div class="portfolio-card__avatar"></div><div><div class="portfolio-card__profile-name">Анонс</div></div></div></div>
       </div>
-      <div class="card card-soft">
-        <span class="badge badge-dark">3</span>
-        <h3 class="mt-4">Продакшен</h3>
-        <p class="mt-3 muted">Дизайн, тексты, видео. Правки по фиксированным итерациям.</p>
+    </div>
+    <div class="tab-panel" data-tab-panel="videos">
+      <div class="video-grid">
+        <div class="video-card" style="background: linear-gradient(135deg, #FFDD2D, #F2C800);">Reels 1</div>
+        <div class="video-card" style="background: #1B1B1B;">Reels 2</div>
+        <div class="video-card" style="background: #4361EE;">Shorts 1</div>
+        <div class="video-card" style="background: #2EB872;">Shorts 2</div>
       </div>
-      <div class="card card-soft">
-        <span class="badge badge-dark">4</span>
-        <h3 class="mt-4">Публикация и отчёт</h3>
-        <p class="mt-3 muted">Постинг и сводка по метрикам каждую неделю. Корректируем.</p>
+    </div>
+    <div class="tab-panel" data-tab-panel="ugc">
+      <div class="video-grid">
+        <div class="video-card" style="background: #FFF1A6; color: #1B1B1B;">UGC 1</div>
+        <div class="video-card" style="background: #1B1B1B;">UGC 2</div>
+        <div class="video-card" style="background: #E5484D;">UGC 3</div>
+        <div class="video-card" style="background: #FFDD2D; color: #1B1B1B;">UGC 4</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ================= ПРИМЕРЫ КЕЙСОВ ================= -->
-<section class="section bg-soft">
+<!-- ============== 5. VIDEO ADS ============== -->
+<section class="section-sm bg-soft">
   <div class="container">
-    <div class="flex-between mb-6" style="flex-wrap: wrap; gap: 24px;">
+    <div class="section-header-row">
       <div>
-        <span class="badge">Кейсы</span>
-        <h2 class="mt-4">Что мы делали для клиентов</h2>
+        <span class="badge">Видео-реклама</span>
+        <h3 class="mt-3">Видео-креативы для соцсетей</h3>
       </div>
-      <a href="/examples.html" class="btn btn-outline">Все примеры →</a>
+      <a href="/pricing.html" class="section-header-row__sub">Цены от 7 000 ₽/ролик →</a>
     </div>
-    <div class="case-grid">
-      <a href="/examples.html" class="case-card">
-        <div class="case-card__cover" style="background: linear-gradient(135deg, #FFDD2D, #F2C800);">Flame</div>
-        <div class="case-card__body">
-          <p class="case-card__cat">Логотип · Ресторан</p>
-          <p class="case-card__title">Огненный знак и упаковка меню для гастро-проекта</p>
-        </div>
-      </a>
-      <a href="/examples.html" class="case-card">
-        <div class="case-card__cover" style="background: #1B1B1B; color: #FFDD2D;">Щегол</div>
-        <div class="case-card__body">
-          <p class="case-card__cat">Фирстиль · Пекарня</p>
-          <p class="case-card__title">Айдентика и упаковка для крафтовой пекарни</p>
-        </div>
-      </a>
-      <a href="/examples.html" class="case-card">
-        <div class="case-card__cover" style="background: #FFF1A6;">WOOF!</div>
-        <div class="case-card__body">
-          <p class="case-card__cat">SMM · Зоомагазин</p>
-          <p class="case-card__title">Контент-план и таргет, +210% подписчиков за квартал</p>
-        </div>
-      </a>
+    <div class="video-grid video-grid--paired">
+      <div class="video-card" style="background: linear-gradient(135deg, #FFDD2D, #F2C800);">Видео-реклама 1</div>
+      <div class="video-card" style="background: #1B1B1B;">Видео-реклама 2</div>
     </div>
   </div>
 </section>
 
-<!-- ================= ОТЗЫВЫ ================= -->
+<section class="section-sm bg-soft">
+  <div class="container">
+    <div class="section-header-row">
+      <div>
+        <span class="badge">Статика</span>
+        <h3 class="mt-3">Баннеры и креативы</h3>
+      </div>
+      <a href="/pricing.html" class="section-header-row__sub">Цены от 1 500 ₽/креатив →</a>
+    </div>
+    <div class="portfolio-grid">
+      <div class="portfolio-card"><div class="portfolio-card__cover" style="background: #FFDD2D;">VK Ads</div><div class="portfolio-card__overlay"><div class="portfolio-card__avatar"></div><div><div class="portfolio-card__profile-name">Креатив 1080×1080</div></div></div></div>
+      <div class="portfolio-card"><div class="portfolio-card__cover" style="background: #1B1B1B; color: #FFDD2D;">Яндекс</div><div class="portfolio-card__overlay"><div class="portfolio-card__avatar"></div><div><div class="portfolio-card__profile-name">Баннер 1200×628</div></div></div></div>
+      <div class="portfolio-card"><div class="portfolio-card__cover" style="background: #4361EE; color: #FFFFFF;">Telegram</div><div class="portfolio-card__overlay"><div class="portfolio-card__avatar"></div><div><div class="portfolio-card__profile-name">Промо-пост</div></div></div></div>
+      <div class="portfolio-card"><div class="portfolio-card__cover" style="background: #FFF1A6;">Story Ad</div><div class="portfolio-card__overlay"><div class="portfolio-card__avatar"></div><div><div class="portfolio-card__profile-name">Сторис-реклама</div></div></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section-sm bg-soft">
+  <div class="container">
+    <div class="section-header-row">
+      <div>
+        <span class="badge">UGC</span>
+        <h3 class="mt-3">Видео с реальными клиентами</h3>
+      </div>
+      <a href="/pricing.html" class="section-header-row__sub">Цены от 12 000 ₽/ролик →</a>
+    </div>
+    <div class="video-grid">
+      <div class="video-card" style="background: #1B1B1B;">UGC 1</div>
+      <div class="video-card" style="background: #FFDD2D; color: #1B1B1B;">UGC 2</div>
+      <div class="video-card" style="background: #4361EE;">UGC 3</div>
+      <div class="video-card" style="background: #2EB872;">UGC 4</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== 6. ПОЛОСА ФИЧ ============== -->
+<div class="container">
+  <div class="features-strip-row">
+    <span class="features-strip-item">Маркетологи и креаторы</span>
+    <span class="features-strip-item">Реальные люди</span>
+    <span class="features-strip-item">Команда РФ + СНГ</span>
+    <span class="features-strip-item">Быстрые сроки</span>
+    <span class="features-strip-item">От 49 900 ₽/мес</span>
+    <span class="features-strip-item">Отмена в любой момент</span>
+  </div>
+</div>
+
+<!-- ============== 7. RISK-FREE GUARANTEE ============== -->
 <section class="section">
   <div class="container">
-    <div class="text-center" style="max-width: 720px; margin: 0 auto var(--sp-7);">
-      <span class="badge">Отзывы</span>
-      <h2 class="mt-4">Клиенты, которые остаются</h2>
-    </div>
-    <div class="grid grid-3">
-      <div class="review-card">
-        <div class="review__stars" aria-label="5 из 5">★★★★★</div>
-        <p class="review__quote">«За месяц закрыли весь продакшен и сняли с меня операционку. Контент пошёл стабильно, охваты в Reels выросли в 3 раза.»</p>
-        <div class="review__author">
-          <div class="review__avatar">А</div>
-          <div>
-            <p class="review__name">Анна Колесникова</p>
-            <p class="review__role">Основатель, кофейня «Сорока»</p>
+    <div class="risk-free">
+      <div>
+        <span class="badge">Без риска · 14 дней</span>
+        <h2 class="mt-4">Не нравится первая партия? <span class="highlight">Вернём деньги</span></h2>
+        <p class="lead mt-4">Уверены в работе команды — поэтому подкрепляем подписку гарантией 14 дней. Если не подойдём, вернём оплату без вопросов.</p>
+        <div class="risk-free__points">
+          <div class="risk-free__point">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="5,12 10,17 19,8"/></svg>
+            <span><b>14 дней</b> на оценку первой партии материалов</span>
+          </div>
+          <div class="risk-free__point">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="5,12 10,17 19,8"/></svg>
+            <span>Минимум <b>2 круга правок</b> — чтобы вы оценили результат</span>
+          </div>
+          <div class="risk-free__point">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="5,12 10,17 19,8"/></svg>
+            <span>Возврат <b>без вычетов</b> — если не подходим друг другу</span>
           </div>
         </div>
-      </div>
-      <div class="review-card">
-        <div class="review__stars">★★★★★</div>
-        <p class="review__quote">«Сделали логотип за 3 дня и сразу — гайдлайны. Команда не «спрашивает что хочет», а предлагает варианты. Удобно.»</p>
-        <div class="review__author">
-          <div class="review__avatar">Д</div>
-          <div>
-            <p class="review__name">Денис Морозов</p>
-            <p class="review__role">CEO, IT-стартап Universum</p>
-          </div>
+        <div class="mt-6 flex gap-3" style="flex-wrap: wrap;">
+          <a href="/pricing.html" class="btn btn-dark btn-lg">Начать сейчас</a>
+          <a href="/book-demo.html" class="btn btn-outline btn-lg">Задать вопрос</a>
         </div>
       </div>
-      <div class="review-card">
-        <div class="review__stars">★★★★★</div>
-        <p class="review__quote">«Таргет окупается с первой недели. Креативы тестят по 3-4 варианта, сразу видно что работает лучше.»</p>
-        <div class="review__author">
-          <div class="review__avatar">М</div>
-          <div>
-            <p class="review__name">Мария Шевцова</p>
-            <p class="review__role">Маркетолог, ILO</p>
-          </div>
+      <div>
+        <div class="risk-free__circle">
+          <div class="risk-free__circle-num">14</div>
+          <div class="risk-free__circle-label">дней</div>
+          <p class="muted xsmall mt-3" style="text-align: center;">Гарантия<br>удовлетворённости</p>
         </div>
       </div>
-    </div>
-    <div class="text-center mt-7">
-      <a href="/reviews.html" class="btn btn-outline">Читать все отзывы</a>
     </div>
   </div>
 </section>
 
-<!-- ================= ПРАЙС-ПРЕВЬЮ ================= -->
+<!-- ============== 8. ALL SERVICES (сетка карточек) ============== -->
 <section class="section bg-soft">
   <div class="container">
-    <div class="text-center" style="max-width: 720px; margin: 0 auto var(--sp-7);">
-      <span class="badge">Тарифы</span>
-      <h2 class="mt-4">Простой прайс. Без сюрпризов.</h2>
-      <p class="lead mt-4">Фиксированная стоимость в месяц. Без счетов за «дополнительные правки».</p>
+    <div class="text-center mb-7">
+      <h2>Все услуги</h2>
+      <p class="lead mt-3">Фиксированные цены. Без эстимейтов и сюрпризов.</p>
     </div>
-    <div class="pricing-grid">
-      <div class="pricing-card">
-        <p class="pricing__name">Старт</p>
-        <div class="pricing__price">
-          <span class="pricing__price-num">49 900 ₽</span>
-          <span class="muted">/ в месяц</span>
+
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-card__icon">📱</div>
+        <h4 class="service-card__name">Посты для соцсетей</h4>
+        <p class="service-card__desc">Лента и сторис: дизайн, тексты, контент-план.</p>
+        <div class="service-card__price">от 49 900 ₽<span class="service-card__price-period"> /мес</span></div>
+        <div class="service-card__actions">
+          <a href="/pricing.html" class="btn btn-primary">Заказать</a>
+          <a href="/pricing.html" class="btn btn-outline">Подробнее</a>
         </div>
-        <p class="muted small">Для микро-бизнеса: 1 соцсеть, базовый контент.</p>
-        <a href="/pricing.html" class="btn btn-outline btn-block mt-4">Подробнее</a>
       </div>
-      <div class="pricing-card pricing-card--featured">
-        <span class="pricing-card__badge">Популярно</span>
-        <p class="pricing__name">Рост</p>
-        <div class="pricing__price">
-          <span class="pricing__price-num">119 900 ₽</span>
-          <span class="muted">/ в месяц</span>
+      <div class="service-card">
+        <div class="service-card__icon">🎬</div>
+        <h4 class="service-card__name">Короткие видео</h4>
+        <p class="service-card__desc">Reels и Shorts: сценарий, монтаж, субтитры.</p>
+        <div class="service-card__price">от 28 000 ₽<span class="service-card__price-period"> /мес</span></div>
+        <div class="service-card__actions">
+          <a href="/pricing.html" class="btn btn-primary">Заказать</a>
+          <a href="/pricing.html" class="btn btn-outline">Подробнее</a>
         </div>
-        <p class="muted small">Полноценный SMM + таргет + 4 Reels в месяц.</p>
-        <a href="/book-demo.html" class="btn btn-primary btn-block mt-4">Записаться на демо</a>
       </div>
-      <div class="pricing-card">
-        <p class="pricing__name">Бренд</p>
-        <div class="pricing__price">
-          <span class="pricing__price-num">от 249 000 ₽</span>
-          <span class="muted">/ в месяц</span>
+      <div class="service-card">
+        <div class="service-card__icon">✉️</div>
+        <h4 class="service-card__name">Email-дизайн</h4>
+        <p class="service-card__desc">Рассылки, триггерные письма, дайджесты.</p>
+        <div class="service-card__price">от 14 900 ₽<span class="service-card__price-period"> /мес</span></div>
+        <div class="service-card__actions">
+          <a href="/pricing.html" class="btn btn-primary">Заказать</a>
+          <a href="/pricing.html" class="btn btn-outline">Подробнее</a>
         </div>
-        <p class="muted small">Полный цикл: SMM, видео, реклама, лендинги.</p>
-        <a href="/pricing.html" class="btn btn-outline btn-block mt-4">Подробнее</a>
+      </div>
+      <div class="service-card">
+        <div class="service-card__icon">📝</div>
+        <h4 class="service-card__name">SEO-статьи</h4>
+        <p class="service-card__desc">Экспертные тексты для блога с проверкой уникальности.</p>
+        <div class="service-card__price">от 9 900 ₽<span class="service-card__price-period"> /мес</span></div>
+        <div class="service-card__actions">
+          <a href="/pricing.html" class="btn btn-primary">Заказать</a>
+          <a href="/pricing.html" class="btn btn-outline">Подробнее</a>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-card__icon">🎨</div>
+        <h4 class="service-card__name">Логотип и фирстиль</h4>
+        <p class="service-card__desc">Знак за 3 дня, гайдлайны, упаковка.</p>
+        <div class="service-card__price">от 39 000 ₽<span class="service-card__price-period"> /проект</span></div>
+        <div class="service-card__actions">
+          <a href="/pricing.html" class="btn btn-primary">Заказать</a>
+          <a href="/pricing.html" class="btn btn-outline">Подробнее</a>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-card__icon">📣</div>
+        <h4 class="service-card__name">Таргет VK / Яндекс</h4>
+        <p class="service-card__desc">Настройка кампаний, A/B-тесты, отчёты по ROAS.</p>
+        <div class="service-card__price">от 34 900 ₽<span class="service-card__price-period"> /мес</span></div>
+        <div class="service-card__actions">
+          <a href="/pricing.html" class="btn btn-primary">Заказать</a>
+          <a href="/pricing.html" class="btn btn-outline">Подробнее</a>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-card__icon">🎥</div>
+        <h4 class="service-card__name">UGC-видео</h4>
+        <p class="service-card__desc">Ролики с реальными клиентами для рекламы.</p>
+        <div class="service-card__price">от 12 000 ₽<span class="service-card__price-period"> /ролик</span></div>
+        <div class="service-card__actions">
+          <a href="/pricing.html" class="btn btn-primary">Заказать</a>
+          <a href="/pricing.html" class="btn btn-outline">Подробнее</a>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-card__icon">📈</div>
+        <h4 class="service-card__name">Instagram-рост</h4>
+        <p class="service-card__desc">Рост подписчиков, охватов и вовлечённости.</p>
+        <div class="service-card__price">от 39 900 ₽<span class="service-card__price-period"> /мес</span></div>
+        <div class="service-card__actions">
+          <a href="/pricing.html" class="btn btn-primary">Заказать</a>
+          <a href="/pricing.html" class="btn btn-outline">Подробнее</a>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-card__icon">🔗</div>
+        <h4 class="service-card__name">SEO-ссылки</h4>
+        <p class="service-card__desc">Естественные обратные ссылки для блога.</p>
+        <div class="service-card__price">от 7 900 ₽<span class="service-card__price-period"> /мес</span></div>
+        <div class="service-card__actions">
+          <a href="/pricing.html" class="btn btn-primary">Заказать</a>
+          <a href="/pricing.html" class="btn btn-outline">Подробнее</a>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-card__icon">🌐</div>
+        <h4 class="service-card__name">Лендинг</h4>
+        <p class="service-card__desc">Промо-страница с формами и интеграциями.</p>
+        <div class="service-card__price">от 59 000 ₽<span class="service-card__price-period"> /проект</span></div>
+        <div class="service-card__actions">
+          <a href="/pricing.html" class="btn btn-primary">Заказать</a>
+          <a href="/pricing.html" class="btn btn-outline">Подробнее</a>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-card__icon">🛠️</div>
+        <h4 class="service-card__name">Managed SEO</h4>
+        <p class="service-card__desc">Аудит, семантика, контент, продвижение.</p>
+        <div class="service-card__price">от 89 000 ₽<span class="service-card__price-period"> /мес</span></div>
+        <div class="service-card__actions">
+          <a href="/pricing.html" class="btn btn-primary">Заказать</a>
+          <a href="/pricing.html" class="btn btn-outline">Подробнее</a>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-card__icon">📦</div>
+        <h4 class="service-card__name">Полный бренд</h4>
+        <p class="service-card__desc">Логотип + фирстиль + SMM + реклама.</p>
+        <div class="service-card__price">от 249 000 ₽<span class="service-card__price-period"> /мес</span></div>
+        <div class="service-card__actions">
+          <a href="/pricing.html" class="btn btn-primary">Заказать</a>
+          <a href="/pricing.html" class="btn btn-outline">Подробнее</a>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ================= FAQ ================= -->
+<!-- ============== 9. RESELLER BANNER ============== -->
+<section class="section-sm">
+  <div class="container">
+    <div class="reseller-banner">
+      <div class="reseller-banner__text">
+        <span class="badge badge-dark" style="background: var(--yellow); color: var(--ink);">Для агентств</span>
+        <h3 class="mt-3">Перепродавайте наши услуги клиентам</h3>
+        <p class="mt-3" style="color: rgba(255,255,255,.7);">White-label программа: вы клиентам, мы — производство. Реферальные комиссии до 25%.</p>
+      </div>
+      <a href="/book-demo.html" class="btn btn-primary btn-lg">Стать партнёром</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============== 10. WHAT YOU GET (2 кол) ============== -->
+<section class="section">
+  <div class="container">
+    <div class="what-you-get">
+      <div>
+        <span class="badge">Что вы получаете каждый месяц</span>
+        <h2 class="mt-4">Команда, процесс и результат</h2>
+        <p class="lead mt-4">Подписка на Лимон Медиа — это не просто пакет файлов. Это процесс, в котором всегда понятно, что происходит и кто за что отвечает.</p>
+      </div>
+      <div class="what-you-get__items">
+        <div class="what-you-get__item">
+          <div class="what-you-get__icon">🤝</div>
+          <h4>Онбординг-встреча</h4>
+          <p class="muted small">Час разбора задач, аудитории, тон-оф-войс и бизнес-метрик.</p>
+        </div>
+        <div class="what-you-get__item">
+          <div class="what-you-get__icon">🗺️</div>
+          <h4>Стратегия и план</h4>
+          <p class="muted small">Контент-план на месяц с рубрикатором и расписанием.</p>
+        </div>
+        <div class="what-you-get__item">
+          <div class="what-you-get__icon">📦</div>
+          <h4>Производство</h4>
+          <p class="muted small">Дизайн, тексты, видео и реклама — по плану, в срок.</p>
+        </div>
+        <div class="what-you-get__item">
+          <div class="what-you-get__icon">📊</div>
+          <h4>Месячный отчёт</h4>
+          <p class="muted small">Сводка по метрикам и рекомендации на следующий месяц.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== 11. REVIEWS (большая сетка) ============== -->
+<section class="section bg-soft">
+  <div class="container">
+    <div class="text-center mb-7">
+      <span class="badge">800+ отзывов</span>
+      <h2 class="mt-4">Что говорят клиенты</h2>
+      <div class="hero__rating mt-4" style="display: inline-flex;">
+        <span class="hero__rating-stars">★★★★★</span>
+        4,9 из 5 · средняя оценка работы
+      </div>
+    </div>
+
+    <div class="reviews-grid">
+      <div class="review-mini">
+        <div class="review-mini__photo" style="background: linear-gradient(135deg, #FFDD2D, #F2C800);">А</div>
+        <div class="review-mini__stars">★★★★★</div>
+        <p class="review-mini__quote">«За месяц закрыли весь продакшен и сняли с меня операционку. Уже год работаем.»</p>
+        <div>
+          <div class="review-mini__name">Анна К.</div>
+          <div class="review-mini__src">Кофейня «Сорока»</div>
+        </div>
+      </div>
+      <div class="review-mini">
+        <div class="review-mini__photo" style="background: #1B1B1B; color: #FFDD2D;">Д</div>
+        <div class="review-mini__stars">★★★★★</div>
+        <p class="review-mini__quote">«Логотип за 3 дня, гайдлайны на 38 страниц. Прошли проверку патентов.»</p>
+        <div>
+          <div class="review-mini__name">Денис М.</div>
+          <div class="review-mini__src">IT-стартап Universum</div>
+        </div>
+      </div>
+      <div class="review-mini">
+        <div class="review-mini__photo" style="background: #4361EE; color: #FFF;">М</div>
+        <div class="review-mini__stars">★★★★★</div>
+        <p class="review-mini__quote">«Таргет окупается с первой недели. ROAS 4,8 за два месяца.»</p>
+        <div>
+          <div class="review-mini__name">Мария Ш.</div>
+          <div class="review-mini__src">ILO</div>
+        </div>
+      </div>
+      <div class="review-mini">
+        <div class="review-mini__photo" style="background: #FFF1A6;">К</div>
+        <div class="review-mini__stars">★★★★★</div>
+        <p class="review-mini__quote">«12 Reels — 1,2 млн просмотров за 2 месяца. Заявки удвоились.»</p>
+        <div>
+          <div class="review-mini__name">Карина Л.</div>
+          <div class="review-mini__src">Языковой центр Starling</div>
+        </div>
+      </div>
+      <div class="review-mini">
+        <div class="review-mini__photo" style="background: #2EB872; color: #FFF;">П</div>
+        <div class="review-mini__stars">★★★★★</div>
+        <p class="review-mini__quote">«Брендбук на 38 страниц. Менеджеры пользуются до сих пор.»</p>
+        <div>
+          <div class="review-mini__name">Павел З.</div>
+          <div class="review-mini__src">SEVER термопанели</div>
+        </div>
+      </div>
+      <div class="review-mini">
+        <div class="review-mini__photo" style="background: #E5484D; color: #FFF;">Е</div>
+        <div class="review-mini__stars">★★★★★</div>
+        <p class="review-mini__quote">«Каждая публикация авторская. Без шаблонов из стоков.»</p>
+        <div>
+          <div class="review-mini__name">Елена С.</div>
+          <div class="review-mini__src">Зоомагазин WOOF!</div>
+        </div>
+      </div>
+      <div class="review-mini">
+        <div class="review-mini__photo" style="background: #FFDD2D;">Р</div>
+        <div class="review-mini__stars">★★★★★</div>
+        <p class="review-mini__quote">«Начали с тарифа Старт, через 3 месяца перешли на Рост.»</p>
+        <div>
+          <div class="review-mini__name">Роман Г.</div>
+          <div class="review-mini__src">Квесты «Легендариум»</div>
+        </div>
+      </div>
+      <div class="review-mini">
+        <div class="review-mini__photo" style="background: #1B1B1B; color: #FFDD2D;">С</div>
+        <div class="review-mini__stars">★★★★★</div>
+        <p class="review-mini__quote">«Год работаю — ни одного срыва дедлайна.»</p>
+        <div>
+          <div class="review-mini__name">Сергей Б.</div>
+          <div class="review-mini__src">Ресторан Flame</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center mt-7">
+      <a href="/reviews.html" class="btn btn-outline btn-lg">Посмотреть все 800+ отзывов</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============== 12. SOCIAL GRID GALLERY ============== -->
+<section class="section">
+  <div class="container">
+    <div class="social-gallery">
+      <div class="text-center mb-5">
+        <span class="badge">Более 10 000 работ</span>
+        <h2 class="mt-3">Лента примеров по нишам</h2>
+        <p class="lead mt-3">Покажем образцы в стилистике вашего бизнеса.</p>
+      </div>
+
+      <div class="social-tabs">
+        <button class="tab" aria-selected="true">Все</button>
+        <button class="tab" aria-selected="false">Кофейни</button>
+        <button class="tab" aria-selected="false">Beauty</button>
+        <button class="tab" aria-selected="false">Недвижимость</button>
+        <button class="tab" aria-selected="false">Клиники</button>
+        <button class="tab" aria-selected="false">Food</button>
+        <button class="tab" aria-selected="false">Йога</button>
+      </div>
+
+      <div class="social-grid">
+        <div class="social-post">
+          <div class="social-post__head"><div class="social-post__head-avatar"></div><div><b>cafesoroka</b> · 2 дня</div></div>
+          <div class="social-post__media" style="background: linear-gradient(135deg, #FFDD2D, #F2C800);">Кофе</div>
+          <div class="social-post__actions">♡ 248 · 💬 12 · 🔖</div>
+        </div>
+        <div class="social-post">
+          <div class="social-post__head"><div class="social-post__head-avatar"></div><div><b>woof_shop</b> · 3 дня</div></div>
+          <div class="social-post__media" style="background: #1B1B1B; color: #FFDD2D;">Зоо</div>
+          <div class="social-post__actions">♡ 412 · 💬 31 · 🔖</div>
+        </div>
+        <div class="social-post">
+          <div class="social-post__head"><div class="social-post__head-avatar"></div><div><b>flame_rest</b> · 5 дней</div></div>
+          <div class="social-post__media" style="background: #E5484D; color: #FFF;">Меню</div>
+          <div class="social-post__actions">♡ 184 · 💬 8 · 🔖</div>
+        </div>
+        <div class="social-post">
+          <div class="social-post__head"><div class="social-post__head-avatar"></div><div><b>grace_clean</b> · 1 нед.</div></div>
+          <div class="social-post__media" style="background: #FFF1A6;">До/После</div>
+          <div class="social-post__actions">♡ 326 · 💬 22 · 🔖</div>
+        </div>
+        <div class="social-post">
+          <div class="social-post__head"><div class="social-post__head-avatar"></div><div><b>starling_school</b> · 1 нед.</div></div>
+          <div class="social-post__media" style="background: #4361EE; color: #FFF;">Урок</div>
+          <div class="social-post__actions">♡ 511 · 💬 47 · 🔖</div>
+        </div>
+        <div class="social-post">
+          <div class="social-post__head"><div class="social-post__head-avatar"></div><div><b>shchegol_bakery</b> · 2 нед.</div></div>
+          <div class="social-post__media" style="background: #2EB872; color: #FFF;">Хлеб</div>
+          <div class="social-post__actions">♡ 295 · 💬 18 · 🔖</div>
+        </div>
+        <div class="social-post">
+          <div class="social-post__head"><div class="social-post__head-avatar"></div><div><b>universum_app</b> · 2 нед.</div></div>
+          <div class="social-post__media" style="background: #FFDD2D;">App</div>
+          <div class="social-post__actions">♡ 174 · 💬 9 · 🔖</div>
+        </div>
+        <div class="social-post">
+          <div class="social-post__head"><div class="social-post__head-avatar"></div><div><b>ilo_brand</b> · 3 нед.</div></div>
+          <div class="social-post__media" style="background: #1B1B1B; color: #FFDD2D;">Промо</div>
+          <div class="social-post__actions">♡ 628 · 💬 54 · 🔖</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== 13. BEFORE/AFTER comparison ============== -->
+<section class="section bg-soft">
+  <div class="container">
+    <div class="text-center mb-7">
+      <h2>Маркетинг под ключ <br>для малого бизнеса</h2>
+    </div>
+
+    <div class="before-after">
+      <div class="ba-card ba-card--before">
+        <div class="ba-card__title">До Лимон Медиа</div>
+        <ul class="ba-list">
+          <li>Дорогие агентства с долгими договорами</li>
+          <li>Поиск и тестирование фрилансеров</li>
+          <li>Несогласованная стилистика разных подрядчиков</li>
+          <li>Срывы дедлайнов и пропавшие исполнители</li>
+          <li>Невозможность фокусироваться на бизнесе</li>
+        </ul>
+      </div>
+      <div class="ba-card ba-card--after">
+        <div class="ba-card__title">С Лимон Медиа</div>
+        <ul class="ba-list">
+          <li>Авторский контент каждый месяц</li>
+          <li>Фиксированная стоимость без сюрпризов</li>
+          <li>Быстрые сроки производства</li>
+          <li>Закреплённая команда из специалистов</li>
+          <li>Время на ваш бизнес — а не на подрядчиков</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== 14. DEMO VIDEO ============== -->
+<section class="section">
+  <div class="container">
+    <div class="demo-video">
+      <h2>Демо-видео: как мы работаем</h2>
+      <p class="lead mt-3">5 минут о процессе: онбординг, согласования, отчёты.</p>
+      <div class="demo-video__player" aria-label="Демо-видео процесса работы"></div>
+
+      <div class="demo-video__cta-row">
+        <div class="demo-video__cta-card">
+          <div class="feature__icon" style="background: var(--yellow);">📞</div>
+          <h4>Записаться на созвон</h4>
+          <p class="muted small mt-3">30 минут о ваших задачах. Бесплатно, без обязательств.</p>
+          <a href="/book-demo.html" class="btn btn-dark btn-block mt-4">Записаться</a>
+        </div>
+        <div class="demo-video__cta-card">
+          <div class="feature__icon">🚀</div>
+          <h4>Начать сейчас</h4>
+          <p class="muted small mt-3">Подписаться на план — старт уже через 14 дней.</p>
+          <a href="/pricing.html" class="btn btn-primary btn-block mt-4">Тарифы</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== 15. BETTER WAY (4 крупные карточки) ============== -->
+<section class="section bg-soft">
+  <div class="container">
+    <div class="text-center mb-7">
+      <span class="badge">Лучший способ</span>
+      <h2 class="mt-4">Команда, технологии и формат подписки</h2>
+      <p class="lead mt-4">Три вещи, которые делают Лимон Медиа не похожим на классические агентства.</p>
+    </div>
+
+    <div class="better-grid">
+      <div class="better-card better-card--yellow">
+        <span class="badge badge-dark">Команда</span>
+        <h3 class="mt-4">Топ-1% маркетологов и креаторов</h3>
+        <p class="mt-3">Каждый специалист проходит 4-этапный отбор. Половина команды — с опытом 5+ лет в крупных агентствах.</p>
+      </div>
+      <div class="better-card">
+        <span class="badge">Минусы агентств</span>
+        <h3 class="mt-4">Прощайте</h3>
+        <div class="better-card__list">
+          <div class="better-card__list-item"><span class="better-card__list-item-dot"></span><span>Часовая ставка по 5 000 ₽</span></div>
+          <div class="better-card__list-item"><span class="better-card__list-item-dot"></span><span>Договоры на год</span></div>
+          <div class="better-card__list-item"><span class="better-card__list-item-dot"></span><span>«Согласуем у владельца»</span></div>
+          <div class="better-card__list-item"><span class="better-card__list-item-dot"></span><span>Невнятные отчёты</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="better-grid better-grid--bottom">
+      <div class="better-card better-card--dark">
+        <span class="badge" style="background: var(--yellow);">Технологии</span>
+        <h3 class="mt-4">Платформа для совместной работы</h3>
+        <p class="mt-3" style="color: rgba(255,255,255,.7);">Все правки, согласования и архив — в одном кабинете. Не нужно искать переписку в Telegram.</p>
+      </div>
+      <div class="better-card better-card--yellow">
+        <span class="badge badge-dark">Формат</span>
+        <h3 class="mt-4">Гибкая подписка</h3>
+        <p class="mt-3">Меняйте тариф, ставьте на паузу или возобновляйте — всё с одной кнопки. Без переоформления.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== 16. FAQ + sticky CTA ============== -->
 <section class="section">
   <div class="container">
     <div class="text-center mb-7">
       <span class="badge">FAQ</span>
-      <h2 class="mt-4">Частые вопросы</h2>
+      <h2 class="mt-4">Часто задаваемые вопросы</h2>
     </div>
-    <div class="faq">
-      <details class="faq__item">
-        <summary class="faq__q">Как быстро вы начинаете работу?</summary>
-        <div class="faq__a">Стартуем в течение 2 рабочих дней после оплаты. Первый контент-план готовим за 5-7 дней.</div>
-      </details>
-      <details class="faq__item">
-        <summary class="faq__q">Сколько правок включено?</summary>
-        <div class="faq__a">До 3 итераций правок на каждый материал. Если нужно больше — обсудим, но это редкость.</div>
-      </details>
-      <details class="faq__item">
-        <summary class="faq__q">Можно подписаться без долгого договора?</summary>
-        <div class="faq__a">Да, минимальный срок — 1 месяц. Дальше — продление по желанию, без автопродления.</div>
-      </details>
-      <details class="faq__item">
-        <summary class="faq__q">Работаете с малым бизнесом?</summary>
-        <div class="faq__a">Конечно. У нас есть тариф «Старт» специально для микро-бизнеса и сольных предпринимателей.</div>
-      </details>
-      <details class="faq__item">
-        <summary class="faq__q">Кто будет вести мой проект?</summary>
-        <div class="faq__a">Закреплённая команда: проект-менеджер, дизайнер, копирайтер. При необходимости — таргетолог и видеомейкер.</div>
-      </details>
-      <details class="faq__item">
-        <summary class="faq__q">Что входит в отчёты?</summary>
-        <div class="faq__a">Еженедельно — короткая сводка: что выпустили, охваты, реакции, выводы. Ежемесячно — расширенный отчёт с рекомендациями.</div>
-      </details>
-    </div>
-  </div>
-</section>
 
-<!-- ================= CTA ================= -->
-<section class="section-sm">
-  <div class="container">
-    <div class="cta-banner">
-      <h2>Готовы посмотреть на работу команды?</h2>
-      <p class="lead" style="color: rgba(255,255,255,.85); max-width: 580px; margin: 0 auto;">30 минут — и вы поймёте, как мы можем закрыть SMM и креативы под ваш бренд. Без обязательств.</p>
-      <div class="mt-6">
-        <a href="/book-demo.html" class="btn btn-primary btn-lg">Записаться на демо</a>
+    <div class="faq-with-cta">
+      <div class="faq">
+        <details class="faq__item">
+          <summary class="faq__q">Сколько стоит подписка на Лимон Медиа?</summary>
+          <div class="faq__a">Минимальный тариф — от 49 900 ₽/мес. Полный SMM + таргет + видео — от 119 900 ₽/мес. Полный бренд — от 249 000 ₽/мес.</div>
+        </details>
+        <details class="faq__item">
+          <summary class="faq__q">Какие соцсети вы ведёте?</summary>
+          <div class="faq__a">Instagram, ВКонтакте, Telegram, TikTok, YouTube. Можно добавить любую другую — обсудим.</div>
+        </details>
+        <details class="faq__item">
+          <summary class="faq__q">Можно комбинировать услуги?</summary>
+          <div class="faq__a">Да. Любые услуги внутри одного тарифа сочетаются. Например, SMM + Reels + таргет — стандартный пакет «Рост».</div>
+        </details>
+        <details class="faq__item">
+          <summary class="faq__q">Заключаете договор?</summary>
+          <div class="faq__a">Да, работаем по договору. Акты и счёт-фактуры выдаём ежемесячно для юрлиц и ИП.</div>
+        </details>
+        <details class="faq__item">
+          <summary class="faq__q">Что если мне не понравится контент?</summary>
+          <div class="faq__a">3 итерации правок включены. Если за 14 дней не подойдём — вернём оплату без вопросов.</div>
+        </details>
+        <details class="faq__item">
+          <summary class="faq__q">Как начать работу?</summary>
+          <div class="faq__a">Заполните бриф, оплатите первый месяц — мы стартуем в течение 2 рабочих дней. Первый контент-план готов за 5-7 дней.</div>
+        </details>
+        <details class="faq__item">
+          <summary class="faq__q">Как быстро я получу материалы?</summary>
+          <div class="faq__a">Каждый материал — по согласованному графику. Reels — за 5 рабочих дней, посты — за 2 дня, статика — день в день.</div>
+        </details>
+        <details class="faq__item">
+          <summary class="faq__q">Как происходит коммуникация?</summary>
+          <div class="faq__a">Через закреплённого менеджера в Telegram, плюс кабинет с архивом и статусами задач.</div>
+        </details>
+        <details class="faq__item">
+          <summary class="faq__q">Какие условия возврата?</summary>
+          <div class="faq__a">14 дней — гарантия удовлетворённости. Если за это время мы не подошли — вернём оплату без вычетов.</div>
+        </details>
+        <details class="faq__item">
+          <summary class="faq__q">Где находится команда?</summary>
+          <div class="faq__a">Россия и СНГ. Работаем по московскому времени, общение на русском.</div>
+        </details>
       </div>
+
+      <aside class="faq-with-cta__cta">
+        <h3>Начните с бесплатной стратегической сессии</h3>
+        <p style="color: rgba(255,255,255,.75);">30 минут — и у вас будет план на ближайший месяц. Без презентаций и продажи.</p>
+        <a href="/book-demo.html" class="btn btn-primary btn-block btn-lg mt-5">Записаться на демо →</a>
+      </aside>
     </div>
   </div>
 </section>
 
 </main>
 
-<!-- ================= ПОДВАЛ ================= -->
+<!-- ============== ПОДВАЛ ============== -->
 <footer class="footer">
   <div class="container">
     <div class="footer__top">
-      <div class="footer__col footer__about">
-        <img src="/assets/img/logo.svg" alt="Лимон Медиа" style="height: 40px; filter: brightness(0) invert(1);">
-        <p>Студия полного цикла: логотипы, фирменный стиль, контент для соцсетей, реклама и видео. С 2020 года.</p>
-      </div>
       <div class="footer__col">
-        <h4>Сайт</h4>
+        <h4>Лимон Медиа</h4>
         <ul>
-          <li><a href="/">Главная</a></li>
+          <li><a href="/about.html">О компании</a></li>
           <li><a href="/pricing.html">Тарифы</a></li>
-          <li><a href="/examples.html">Примеры</a></li>
+          <li><a href="/examples.html">Наши работы</a></li>
           <li><a href="/reviews.html">Отзывы</a></li>
-          <li><a href="/about.html">О нас</a></li>
+          <li><a href="/book-demo.html">Записаться на демо</a></li>
+          <li><a href="#">Демо-видео</a></li>
+          <li><a href="#">Блог</a></li>
+          <li><a href="#">Глоссарий</a></li>
         </ul>
       </div>
       <div class="footer__col">
         <h4>Услуги</h4>
         <ul>
-          <li><a href="/pricing.html">Контент для соцсетей</a></li>
+          <li><a href="/pricing.html">Соцсети</a></li>
+          <li><a href="/pricing.html">Короткие видео</a></li>
+          <li><a href="/pricing.html">Email-дизайн</a></li>
+          <li><a href="/pricing.html">SEO-статьи</a></li>
+          <li><a href="/pricing.html">SEO-ссылки</a></li>
           <li><a href="/pricing.html">Логотип и фирстиль</a></li>
-          <li><a href="/pricing.html">Видео и Reels</a></li>
-          <li><a href="/pricing.html">Реклама и таргет</a></li>
-          <li><a href="/pricing.html">Лендинги</a></li>
+          <li><a href="/pricing.html">Instagram-рост</a></li>
         </ul>
       </div>
       <div class="footer__col">
-        <h4>Контакты</h4>
+        <h4>Сравнение</h4>
         <ul>
-          <li><a href="mailto:hello@lemon-media.ru">hello@lemon-media.ru</a></li>
-          <li><a href="https://lemon-media.ru" target="_blank" rel="noopener">lemon-media.ru</a></li>
-          <li>Часы работы: 9:00–18:00 МСК</li>
+          <li><a href="#">vs Фриланс</a></li>
+          <li><a href="#">vs Inhouse</a></li>
+          <li><a href="#">vs Агентство</a></li>
+          <li><a href="#">vs Биржи</a></li>
+          <li><a href="#">vs ИИ-сервисы</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Ресурсы</h4>
+        <ul>
+          <li><a href="#">Регистрация</a></li>
+          <li><a href="#">Вход</a></li>
+          <li><a href="#">Реферальная программа</a></li>
+          <li><a href="#">Партнёрство</a></li>
+          <li><a href="#">Помощь</a></li>
+          <li><a href="#">Правила использования</a></li>
+          <li><a href="#">Политика возврата</a></li>
+          <li><a href="#">Политика конфиденциальности</a></li>
         </ul>
       </div>
     </div>
+
+    <div class="footer__cta-row">
+      <img src="/assets/img/logo.svg" alt="Лимон Медиа" style="height: 36px; filter: brightness(0) invert(1);">
+      <div class="flex gap-3" style="align-items: center;">
+        <span style="color: rgba(255,255,255,.85);">Готовы попробовать?</span>
+        <a href="/book-demo.html" class="btn btn-primary">Записаться на демо →</a>
+      </div>
+    </div>
+
     <div class="footer__bottom">
-      <span>© <span data-year>2026</span> Лимон Медиа. Все права защищены.</span>
-      <div class="footer__socials">
-        <a href="#" aria-label="Telegram">TG</a>
-        <a href="#" aria-label="ВКонтакте">VK</a>
-        <a href="#" aria-label="YouTube">YT</a>
+      <div>
+        <p style="color: rgba(255,255,255,.65); font-size: var(--fs-sm); max-width: 580px;">Лимон Медиа — студия полного цикла. С 2020 года помогаем брендам говорить понятно и красиво. 10 000+ проектов, 340+ постоянных клиентов.</p>
+        <div class="footer__socials mt-4">
+          <a href="#" aria-label="Telegram">TG</a>
+          <a href="#" aria-label="ВКонтакте">VK</a>
+          <a href="#" aria-label="YouTube">YT</a>
+          <a href="#" aria-label="Instagram">IG</a>
+        </div>
+      </div>
+      <div style="text-align: right;">
+        <span class="footer__status">Все сервисы работают</span>
+        <p class="mt-3" style="color: rgba(255,255,255,.5); font-size: var(--fs-xs);">© <span data-year>2026</span> Лимон Медиа. Все права защищены.</p>
       </div>
     </div>
   </div>

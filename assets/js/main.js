@@ -113,4 +113,22 @@
     el.textContent = new Date().getFullYear();
   });
 
+  /* ---------- 7. ТАБ-СИСТЕМЫ ---------- */
+  /* Каждая группа табов идёт парой: .tabs[role=tablist] и набор .tab-panel
+     с data-tab-panel="<имя>", совпадающим с data-tab="<имя>" в кнопке. */
+  document.querySelectorAll('.tabs[role="tablist"]').forEach((tablist) => {
+    const tabs = tablist.querySelectorAll('.tab');
+    // ищем панели — в ближайшем общем родителе (секция/контейнер)
+    const scope = tablist.closest('section, .container, body');
+    tabs.forEach((tab) => {
+      tab.addEventListener('click', () => {
+        const key = tab.dataset.tab;
+        tabs.forEach((t) => t.setAttribute('aria-selected', t === tab ? 'true' : 'false'));
+        scope.querySelectorAll('[data-tab-panel]').forEach((panel) => {
+          panel.classList.toggle('is-active', panel.dataset.tabPanel === key);
+        });
+      });
+    });
+  });
+
 })();
