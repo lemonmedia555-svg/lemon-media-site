@@ -1,278 +1,63 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Примеры работ — Лимон Медиа</title>
-<meta name="description" content="Кейсы Лимон Медиа: логотипы, фирменный стиль, SMM, видео и рекламные креативы. Реальные проекты с метриками и результатами.">
-<link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap">
-<link rel="stylesheet" href="/assets/css/main.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Примеры постов, каруселей и мини-прогревов lemonmedia.">
+  <title>Работы — lemonmedia</title>
+  <link rel="stylesheet" href="assets/css/prototype.css">
 </head>
 <body>
+  <div class="prototype-strip prototype-only"><div class="container"><p><strong>Прототип портфолио.</strong> Страница рассчитана на сотни реальных работ и кейсы по нишам.</p><button class="text-button" type="button" data-notes-toggle>Скрыть заметки</button></div></div>
+  <header class="site-header"><div class="container header-row"><a class="brand" href="index.html"><span class="brand-dot"></span>lemonmedia</a><button class="menu-button" type="button" aria-expanded="false" data-menu-toggle>Меню</button><nav class="main-nav" aria-label="Основная навигация"><a href="examples.html" aria-current="page">Работы</a><a href="process.html">Как работаем</a><a href="pricing.html">Цены</a><a href="reviews.html">Отзывы</a><a href="about.html">О компании</a><a href="articles.html">Статьи</a><a class="btn btn-small btn-accent" href="start.html">Начать работу</a></nav></div></header>
 
-<header class="header">
-  <div class="container header__inner">
-    <a href="/" class="header__logo" aria-label="Лимон Медиа — на главную">
-      <img src="/assets/img/logo.svg" alt="Лимон Медиа">
-    </a>
-    <nav class="nav" aria-label="Основная навигация">
-      <a href="/about.html" class="nav__link" data-nav="about.html">О компании</a>
-      <a href="/pricing.html" class="nav__link" data-nav="pricing.html">Услуги</a>
-      <a href="/examples.html" class="nav__link" data-nav="examples.html">Примеры</a>
-      <a href="/pricing.html" class="nav__link" data-nav="pricing.html">Тарифы</a>
-    </nav>
-    <div class="header__cta">
-      <a href="#" class="nav__link">Войти</a>
-      <a href="/book-demo.html" class="btn btn-outline btn-sm">Записаться на демо</a>
-      <a href="/pricing.html" class="btn btn-primary btn-sm">Начать сейчас</a>
-      <button class="burger" aria-label="Открыть меню" aria-expanded="false">
-        <span class="burger__lines"></span>
-      </button>
-    </div>
-  </div>
-</header>
+  <main>
+    <section class="page-hero"><div class="container"><aside class="logic-note"><strong>Задача страницы:</strong> человек должен быстро найти работу из похожей ниши и увидеть не одну красивую картинку, а связанный набор публикаций.</aside><p class="eyebrow">Реальные работы</p><h1>Как выглядит контент для разных бизнесов</h1><p class="lead">Посты, карусели и мини‑прогревы. На готовом сайте у каждой работы будут ниша, формат, задача и ссылка на подробный кейс.</p></div></section>
 
-<nav class="mobile-nav" aria-label="Мобильная навигация">
-  <a href="/about.html" class="mobile-nav__link">О компании</a>
-  <a href="/pricing.html" class="mobile-nav__link">Услуги</a>
-  <a href="/examples.html" class="mobile-nav__link">Примеры</a>
-  <a href="/pricing.html" class="mobile-nav__link">Тарифы</a>
-  <a href="/reviews.html" class="mobile-nav__link">Отзывы</a>
-  <a href="/book-demo.html" class="btn btn-outline btn-lg btn-block mt-4">Записаться на демо</a>
-  <a href="/pricing.html" class="btn btn-primary btn-lg btn-block">Начать сейчас</a>
-</nav>
-
-<main>
-
-<section class="section">
-  <div class="container text-center" style="max-width: 760px; margin: 0 auto;">
-    <span class="badge">Кейсы</span>
-    <h1 class="mt-4">Что мы сделали — и что из этого получилось</h1>
-    <p class="lead mt-5">Более 10 000 проектов с 2020 года: рестораны, IT-стартапы, локальные бренды, e-com. Ниже — подборка с метриками.</p>
-  </div>
-</section>
-
-<section class="section-sm">
-  <div class="container">
-
-    <!-- Фильтры -->
-    <div class="filters" role="group" aria-label="Фильтр кейсов по категориям">
-      <button class="filter-btn" data-filter="all" aria-pressed="true">Все</button>
-      <button class="filter-btn" data-filter="logo" aria-pressed="false">Логотипы</button>
-      <button class="filter-btn" data-filter="brand" aria-pressed="false">Фирстиль</button>
-      <button class="filter-btn" data-filter="smm" aria-pressed="false">SMM</button>
-      <button class="filter-btn" data-filter="video" aria-pressed="false">Видео</button>
-      <button class="filter-btn" data-filter="ads" aria-pressed="false">Реклама</button>
-    </div>
-
-    <!-- Сетка кейсов -->
-    <div class="case-grid">
-
-      <article class="case-card" data-case-category="logo">
-        <div class="case-card__cover" style="background: linear-gradient(135deg, #FFDD2D, #F2C800);">Flame</div>
-        <div class="case-card__body">
-          <p class="case-card__cat">Логотип · Ресторан</p>
-          <p class="case-card__title">Огненный знак и упаковка меню для гастро-проекта</p>
-          <p class="muted small mt-3">3 концепции, выбран минималистичный знак с акцентом на пламя. Узнаваемость +40% по опросу гостей.</p>
+    <section class="section section-soft">
+      <div class="container">
+        <aside class="logic-note"><strong>Фильтры растут вместе с портфолио:</strong> сначала 5–7 ключевых ниш, позже — поиск, формат, площадка и стиль.</aside>
+        <div class="filter-row" data-filter-group data-filter-target="#portfolio [data-category]">
+          <button class="filter-button active" type="button" data-filter="all">Все работы</button>
+          <button class="filter-button" type="button" data-filter="services">Услуги</button>
+          <button class="filter-button" type="button" data-filter="food">Общепит</button>
+          <button class="filter-button" type="button" data-filter="education">Образование</button>
+          <button class="filter-button" type="button" data-filter="experts">Эксперты</button>
+          <button class="filter-button" type="button" data-filter="retail">Ритейл</button>
         </div>
-      </article>
-
-      <article class="case-card" data-case-category="brand">
-        <div class="case-card__cover" style="background: #1B1B1B; color: #FFDD2D;">Щегол</div>
-        <div class="case-card__body">
-          <p class="case-card__cat">Фирстиль · Пекарня</p>
-          <p class="case-card__title">Айдентика и упаковка для крафтовой пекарни</p>
-          <p class="muted small mt-3">Логотип, паттерн, упаковка хлеба и круассанов, навигация в зале. Гайдлайны на 38 страниц.</p>
+        <div class="work-grid" id="portfolio" style="margin-top:24px;">
+          <figure class="work-card" data-category="services"><img src="assets/img/home/example-post-massage.webp" alt="Пост для сферы услуг"><figcaption><strong>Сфера услуг</strong><br>Одиночный пост · задача: доверие</figcaption></figure>
+          <figure class="work-card" data-category="food retail"><img src="assets/img/home/example-post-salim.webp" alt="Пост для локального бизнеса"><figcaption><strong>Локальный бизнес</strong><br>Одиночный пост · задача: продукт</figcaption></figure>
+          <figure class="work-card" data-category="education"><img src="assets/img/home/example-post-kindergarten.webp" alt="Пост для детского центра"><figcaption><strong>Образование</strong><br>Одиночный пост · задача: вовлечение</figcaption></figure>
+          <figure class="work-card" data-category="experts"><img src="assets/img/home/example-post-lawyer.webp" alt="Пост для эксперта"><figcaption><strong>Экспертные услуги</strong><br>Одиночный пост · задача: объяснение</figcaption></figure>
+          <figure class="work-card" data-category="services"><img src="assets/img/home/example-post-deadlift.webp" alt="Пост для фитнеса"><figcaption><strong>Фитнес</strong><br>Одиночный пост · задача: польза</figcaption></figure>
+          <figure class="work-card" data-category="experts"><img src="assets/img/home/example-post-johnny.webp" alt="Пост для персонального бренда"><figcaption><strong>Персональный бренд</strong><br>Одиночный пост · задача: позиция</figcaption></figure>
+          <figure class="work-card" data-category="retail"><img src="assets/img/home/ex-1.webp" alt="Пример оформления поста"><figcaption><strong>Ритейл</strong><br>Одиночный пост · задача: предложение</figcaption></figure>
+          <figure class="work-card" data-category="food"><img src="assets/img/home/ex-2.webp" alt="Пример оформления поста"><figcaption><strong>Общепит</strong><br>Одиночный пост · задача: атмосфера</figcaption></figure>
+          <article class="placeholder" data-category="services">Место для реального набора из 9 постов одной компании</article>
+          <article class="placeholder" data-category="experts">Место для реальной карусели: показать все слайды</article>
+          <article class="placeholder" data-category="food">Место для реального мини‑прогрева из 5 сторис</article>
+          <article class="placeholder" data-category="retail">Место для реального кейса «до / после» без выдуманных метрик</article>
         </div>
-      </article>
-
-      <article class="case-card" data-case-category="smm">
-        <div class="case-card__cover" style="background: #FFF1A6;">WOOF!</div>
-        <div class="case-card__body">
-          <p class="case-card__cat">SMM · Зоомагазин</p>
-          <p class="case-card__title">Контент-план и таргет: +210% подписчиков за квартал</p>
-          <p class="muted small mt-3">3 рубрики, 18 постов в месяц, Reels по сценариям с собаками клиентов. CPC по таргету 12 ₽.</p>
-        </div>
-      </article>
-
-      <article class="case-card" data-case-category="logo">
-        <div class="case-card__cover" style="background: #4361EE; color: #FFFFFF;">Universum</div>
-        <div class="case-card__body">
-          <p class="case-card__cat">Логотип · IT-стартап</p>
-          <p class="case-card__title">Знак-«монограмма» для образовательной платформы</p>
-          <p class="muted small mt-3">Стартап на seed-раунде: нужен был быстрый узнаваемый знак. Сдали за 3 дня.</p>
-        </div>
-      </article>
-
-      <article class="case-card" data-case-category="video">
-        <div class="case-card__cover" style="background: #2EB872; color: #FFFFFF;">Starling</div>
-        <div class="case-card__body">
-          <p class="case-card__cat">Видео · Языковой центр</p>
-          <p class="case-card__title">12 Reels с педагогами: 1,2 млн просмотров за 2 месяца</p>
-          <p class="muted small mt-3">Сценарии, съёмка, монтаж и продвижение. Заявки в школу +180%.</p>
-        </div>
-      </article>
-
-      <article class="case-card" data-case-category="ads">
-        <div class="case-card__cover" style="background: #E5484D; color: #FFFFFF;">ILO</div>
-        <div class="case-card__body">
-          <p class="case-card__cat">Реклама · Производство</p>
-          <p class="case-card__title">UGC-кампания на VK Ads, ROAS 4,8</p>
-          <p class="muted small mt-3">Сняли 8 UGC-роликов с реальными клиентами. Окупаемость рекламы в 4,8 раза за 2 месяца.</p>
-        </div>
-      </article>
-
-      <article class="case-card" data-case-category="brand">
-        <div class="case-card__cover" style="background: #FFDD2D; color: #1B1B1B;">SEVER</div>
-        <div class="case-card__body">
-          <p class="case-card__cat">Фирстиль · Промышленность</p>
-          <p class="case-card__title">Брендбук для производителя термопанелей</p>
-          <p class="muted small mt-3">Палитра, типографика, шаблоны коммерческих и презентаций для B2B-продаж.</p>
-        </div>
-      </article>
-
-      <article class="case-card" data-case-category="smm">
-        <div class="case-card__cover" style="background: #1B1B1B; color: #FFFFFF;">Сорока</div>
-        <div class="case-card__body">
-          <p class="case-card__cat">SMM · Кофейня</p>
-          <p class="case-card__title">Полный SMM с нуля: рост охватов в 3 раза</p>
-          <p class="muted small mt-3">3 соцсети, ежедневные сторис, 4 Reels в месяц. Подписчики выросли с 800 до 3 400.</p>
-        </div>
-      </article>
-
-      <article class="case-card" data-case-category="logo">
-        <div class="case-card__cover" style="background: #FFF1A6;">Grace</div>
-        <div class="case-card__body">
-          <p class="case-card__cat">Логотип · Клининг</p>
-          <p class="case-card__title">Знак и фирменная палитра для премиум-клининга</p>
-          <p class="muted small mt-3">Минималистичный знак, тёплая палитра. Прошёл проверку патентного бюро.</p>
-        </div>
-      </article>
-
-      <article class="case-card" data-case-category="video">
-        <div class="case-card__cover" style="background: #F2C800;">Легендариум</div>
-        <div class="case-card__body">
-          <p class="case-card__cat">Видео · Квесты</p>
-          <p class="case-card__title">Промо-ролик и серия Reels для квест-комнат</p>
-          <p class="muted small mt-3">Динамичный монтаж, актёрская съёмка. Конверсия с Reels — 8% (норма по нише — 2%).</p>
-        </div>
-      </article>
-
-      <article class="case-card" data-case-category="ads">
-        <div class="case-card__cover" style="background: #4361EE; color: #FFFFFF;">Flame Ads</div>
-        <div class="case-card__body">
-          <p class="case-card__cat">Реклама · Ресторан</p>
-          <p class="case-card__title">Статика и видео для Яндекс Директа</p>
-          <p class="muted small mt-3">12 креативов в A/B-тесте. Лучший связка дала CPM ниже на 38%.</p>
-        </div>
-      </article>
-
-      <article class="case-card" data-case-category="brand">
-        <div class="case-card__cover" style="background: #FFDD2D;">ILO Brand</div>
-        <div class="case-card__body">
-          <p class="case-card__cat">Фирстиль · Производство</p>
-          <p class="case-card__title">Ребрендинг производственной компании</p>
-          <p class="muted small mt-3">Новый знак, типографика, шаблоны коммерческих, упаковка продукции.</p>
-        </div>
-      </article>
-
-    </div>
-  </div>
-</section>
-
-<!-- ============== ЦИФРЫ ============== -->
-<section class="section bg-soft">
-  <div class="container">
-    <div class="text-center mb-7">
-      <span class="badge">Цифры</span>
-      <h2 class="mt-4">В сумме за все годы</h2>
-    </div>
-    <div class="stats">
-      <div class="stat">
-        <p class="stat__num">10 000+</p>
-        <p class="stat__label">Реализованных проектов</p>
       </div>
-      <div class="stat">
-        <p class="stat__num">340+</p>
-        <p class="stat__label">Постоянных клиентов</p>
-      </div>
-      <div class="stat">
-        <p class="stat__num">4,9 / 5</p>
-        <p class="stat__label">Средняя оценка работы</p>
-      </div>
-      <div class="stat">
-        <p class="stat__num">5 лет</p>
-        <p class="stat__label">На рынке с 2020 года</p>
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<!-- ============== CTA ============== -->
-<section class="section-sm">
-  <div class="container">
-    <div class="cta-banner">
-      <h2>Ваш проект может быть следующим</h2>
-      <p class="lead" style="color: rgba(255,255,255,.85); max-width: 580px; margin: 0 auto;">Покажем кейсы из вашей ниши и предложим стратегию под ваш бюджет.</p>
-      <div class="mt-6">
-        <a href="/book-demo.html" class="btn btn-primary btn-lg">Записаться на демо</a>
+    <section class="section">
+      <div class="container">
+        <aside class="logic-note"><strong>Приём конкурентов:</strong> показывать целые ленты, а не только лучшие отдельные посты. Так клиент видит стабильность качества в масштабе месяца.</aside>
+        <div class="section-head"><div><p class="eyebrow">Полный набор</p><h2>Один бизнес. Несколько публикаций. Единая логика</h2></div><p>Этот шаблон повторяется для каждого сильного кейса.</p></div>
+        <div class="grid-2">
+          <article class="card"><span class="tag">Кейс [реальное название]</span><h3 style="margin-top:20px;">Контекст и задача</h3><p>Что было у клиента, для какой аудитории создавался контент и какой объём он заказал.</p><h3 style="margin-top:24px;">Что сделали</h3><p>Темы месяца, принципы текста, логика дизайна, число постов и усилений.</p><h3 style="margin-top:24px;">Результат работы</h3><p>Показать именно поставленный результат: готовый и опубликованный комплект. Бизнес‑метрики — только если есть подтверждение и методика.</p></article>
+          <div class="work-grid" style="grid-template-columns:repeat(3,1fr);"><div class="placeholder">Пост 1</div><div class="placeholder">Пост 2</div><div class="placeholder">Пост 3</div><div class="placeholder">Пост 4</div><div class="placeholder">Пост 5</div><div class="placeholder">Пост 6</div></div>
+        </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-</main>
+    <section class="section section-accent"><div class="container"><aside class="logic-note"><strong>Масштабирование:</strong> после наполнения создаём отдельные SEO‑страницы по нишам: «посты для стоматологии», «контент для кафе» и так далее.</aside><div class="section-head"><div><p class="eyebrow">Каталог будущего</p><h2>Каждая ниша получит свою витрину</h2></div><p>Не выдуманные шаблоны, а подборка реальных работ, типовых задач и ответов на отраслевые вопросы.</p></div><div class="grid-3"><article class="card"><h3>Общепит</h3><p>Кафе, рестораны, доставка, локальные продукты.</p></article><article class="card"><h3>Красота и здоровье</h3><p>Салоны, клиники, частные практики, фитнес.</p></article><article class="card"><h3>Услуги и эксперты</h3><p>Юристы, консультанты, образование, локальные сервисы.</p></article></div></div></section>
 
-<footer class="footer">
-  <div class="container">
-    <div class="footer__top">
-      <div class="footer__col footer__about">
-        <img src="/assets/img/logo.svg" alt="Лимон Медиа" style="height: 40px; filter: brightness(0) invert(1);">
-        <p>Студия полного цикла: логотипы, фирменный стиль, контент для соцсетей, реклама и видео. С 2020 года.</p>
-      </div>
-      <div class="footer__col">
-        <h4>Сайт</h4>
-        <ul>
-          <li><a href="/">Главная</a></li>
-          <li><a href="/pricing.html">Тарифы</a></li>
-          <li><a href="/examples.html">Примеры</a></li>
-          <li><a href="/reviews.html">Отзывы</a></li>
-          <li><a href="/about.html">О нас</a></li>
-        </ul>
-      </div>
-      <div class="footer__col">
-        <h4>Услуги</h4>
-        <ul>
-          <li><a href="/pricing.html">Контент для соцсетей</a></li>
-          <li><a href="/pricing.html">Логотип и фирстиль</a></li>
-          <li><a href="/pricing.html">Видео и Reels</a></li>
-          <li><a href="/pricing.html">Реклама и таргет</a></li>
-          <li><a href="/pricing.html">Лендинги</a></li>
-        </ul>
-      </div>
-      <div class="footer__col">
-        <h4>Контакты</h4>
-        <ul>
-          <li><a href="mailto:hello@lemon-media.ru">hello@lemon-media.ru</a></li>
-          <li><a href="https://lemon-media.ru" target="_blank" rel="noopener">lemon-media.ru</a></li>
-          <li>Часы работы: 9:00–18:00 МСК</li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer__bottom">
-      <span>© <span data-year>2026</span> Лимон Медиа. Все права защищены.</span>
-      <div class="footer__socials">
-        <a href="#" aria-label="Telegram">TG</a>
-        <a href="#" aria-label="ВКонтакте">VK</a>
-        <a href="#" aria-label="YouTube">YT</a>
-      </div>
-    </div>
-  </div>
-</footer>
-
-<script src="/assets/js/main.js"></script>
+    <section class="final-cta"><div class="container"><p class="eyebrow">Следующий шаг</p><h2>Хотите такой же связный месяц контента?</h2><p class="lead">Начните с 10 постов за 4 990 ₽.</p><div class="section-actions" style="margin-top:24px;"><a class="btn btn-accent" href="start.html">Начать работу</a><a class="btn btn-secondary" href="pricing.html" style="border-color:#fff;color:#fff;">Посмотреть цены</a></div></div></section>
+  </main>
+  <footer class="site-footer"><div class="container footer-grid"><div><a class="brand" href="index.html"><span class="brand-dot"></span>lemonmedia</a><p class="footer-note">Подписка на регулярный контент для российского малого и среднего бизнеса.</p></div><div class="footer-column"><strong>Продукт</strong><a href="pricing.html">Цены</a><a href="process.html">Как работаем</a><a href="examples.html">Работы</a></div><div class="footer-column"><strong>Компания</strong><a href="about.html">О нас</a><a href="reviews.html">Отзывы</a><a href="articles.html">Статьи</a></div><div class="footer-column"><strong>Документы</strong><a href="#">Оферта [нужна]</a><a href="#">Гарантия [нужна]</a><a href="#">Конфиденциальность [нужна]</a></div></div></footer>
+  <script src="assets/js/prototype.js"></script>
 </body>
 </html>
