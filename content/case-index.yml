@@ -4,10 +4,10 @@ language: ru
 
 counting:
   rule: "Считаются уникальные публикации. Слайды каруселей и размещения одного материала на разных площадках не считаются отдельными работами."
-  public_cases: 20
-  verified_publications_in_registry: 225
-  publishable_visualized_publications: 215
-  note: "У фонда «Доброе сердце» один макет не прошёл финальный QA. В кейсе Ольги Андреевой четыре готовых поста оставлены вне публичной галереи до медицинской и юридической проверки формулировок. В кейсе Dava Life публично показаны пять макетов, которых не касался последний список правок; исправленный экспорт остальных материалов в доступной папке не найден."
+  public_cases: 23
+  verified_publications_in_registry: 289
+  publishable_visualized_publications: 279
+  note: "Подарочные карусели считаются отдельными уникальными публикациями, но не подменяют основные календарные слоты. У фонда «Доброе сердце» один макет не прошёл финальный QA. В кейсе Ольги Андреевой четыре готовых поста оставлены вне публичной галереи до медицинской и юридической проверки формулировок. В кейсе Dava Life публично показаны пять макетов, которых не касался последний список правок. Новый цикл Colorplast и кейс Налог Эксперт показаны с честными незавершёнными этапами."
 
 cases:
   - id: saratov-kitchens-2026-08
@@ -867,3 +867,141 @@ cases:
       - "Фактический выход исправленного комплекта, прямые ссылки и бизнес-метрики не подтверждены."
       - "Новый заказ принят в очередь, но ещё не выполнен."
       - "Продуктовые тезисы клиента не являются медицинскими заявлениями lemonmedia."
+
+  - id: colorplast
+    slug: colorplast
+    public_title: "Colorplast — продление с ростом пакета с 10 до 20 публикаций"
+    client_display_name: "Colorplast"
+    period: two-cycles
+    release_window: null
+    niche: home-and-interior
+    subniche: windows-doors-and-glazing
+    formats:
+      - static-post
+      - carousel
+      - renewal
+    scope:
+      publications: 32
+      main_publications: 30
+      bonus_publications: 2
+      previous_cycle_publications: 11
+      current_cycle_publications: 21
+      carousel_publications: 9
+      carousel_slides: 63
+      visual_files: 86
+      current_draft_platform_count: 3
+      current_draft_platform_ids:
+        - vk
+        - instagram
+        - threads
+    featured_goals:
+      - explain-technical-product
+      - remove-window-myths
+      - show-solutions
+      - explain-process
+      - build-local-trust
+      - lead-to-measurement
+    data:
+      case: "cases/colorplast/case.yml"
+      plan: "cases/colorplast/plan.yml"
+    public_page: "case-colorplast.html"
+    media_status: media-ready-two-cycles
+    portfolio_permission_status: permission-confirmed
+    publishable: true
+    publish_blockers: []
+    evidence_limitations:
+      - "Продление и рост пакета подтверждены, но не доказывают рост продаж, заявок или охватов."
+      - "В новом цикле 13 текстов дополнительно сокращаются для Threads."
+      - "20 черновиков не выдаются за опубликованные материалы."
+      - "Стоковые и иллюстративные сцены не называются реальными объектами Colorplast."
+
+  - id: moscow-padel
+    slug: moscow-padel
+    public_title: "MoscowPadel — контент-система для сложного B2B-продукта"
+    client_display_name: "MoscowPadel"
+    period: "2026-08"
+    release_window: "2026-08-06/2026-08-25"
+    niche: sport-infrastructure
+    subniche: padel-court-construction-and-supply
+    formats:
+      - static-post
+      - carousel
+      - full-month
+    scope:
+      publications: 21
+      main_publications: 20
+      bonus_publications: 1
+      static_posts: 10
+      carousel_publications: 11
+      carousel_slides: 77
+      visual_files: 87
+      confirmed_draft_platform_count: 2
+      confirmed_draft_platform_ids:
+        - vk
+        - instagram
+    featured_goals:
+      - explain-expensive-product
+      - remove-technical-uncertainty
+      - show-objects-and-cases
+      - help-budgeting
+      - build-b2b-trust
+      - lead-to-calculation
+    data:
+      case: "cases/moscow-padel/case.yml"
+      plan: "cases/moscow-padel/plan.yml"
+    public_page: "case-moscow-padel.html"
+    media_status: media-ready-drafts-confirmed
+    portfolio_permission_status: permission-confirmed
+    publishable: true
+    publish_blockers: []
+    evidence_limitations:
+      - "Подтверждены черновики только во ВКонтакте и Instagram."
+      - "Фактический выход публикаций, прямые ссылки и бизнес-метрики не подтверждены."
+      - "Технические характеристики, цены и расчёты внутри макетов не являются гарантиями lemonmedia."
+
+  - id: nalog-expert
+    slug: nalog-expert
+    public_title: "Налог Эксперт — сложные темы как понятный месяц контента"
+    client_display_name: "Налог Эксперт"
+    period: "2026-07/2026-08"
+    release_window: null
+    niche: professional-services
+    subniche: accounting-and-tax-support
+    formats:
+      - static-post
+      - carousel
+      - stories-sequence
+    scope:
+      publications: 11
+      main_publications: 10
+      bonus_publications: 1
+      static_posts: 8
+      carousel_publications: 3
+      carousel_slides: 21
+      stories_sequences: 2
+      stories_frames: 10
+      visual_files: 39
+      prepared_platform_count: 3
+      prepared_platform_ids:
+        - vk
+        - instagram
+        - telegram
+    featured_goals:
+      - restore-regular-content
+      - explain-current-topics
+      - demonstrate-expertise
+      - remove-tax-service-myths
+      - generate-saves
+      - lead-to-consultation
+    data:
+      case: "cases/nalog-expert/case.yml"
+      plan: "cases/nalog-expert/plan.yml"
+    public_page: "case-nalog-expert.html"
+    media_status: media-ready-awaiting-typography-response
+    portfolio_permission_status: permission-confirmed
+    publishable: true
+    publish_blockers: []
+    evidence_limitations:
+      - "Комплект отправлен клиенту, но финальный ответ по размеру шрифтов не зафиксирован."
+      - "Фактический запуск публикаций, прямые ссылки и бизнес-метрики не подтверждены."
+      - "Налоговые тезисы внутри макетов не являются консультацией lemonmedia."

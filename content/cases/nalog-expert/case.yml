@@ -1,0 +1,71 @@
+version: 1
+brand: lemonmedia
+case:
+  id: nalog-expert
+  slug: nalog-expert
+  public_name: "Налог Эксперт"
+  page: "case-nalog-expert.html"
+  status: published-production-stage
+  case_type: ordinary-with-full-product-preview
+  period: "2026-07/2026-08"
+  release_window: null
+  niche: professional-services
+  subniche: accounting-and-tax-support
+
+summary:
+  short: "Действующий экспертный аккаунт получил месяц контента: актуальные поводы, практические разборы, мифы и мягкие предложения."
+  content_task: "Вернуть аккаунту регулярность, объяснять сложные темы простым языком и связывать пользу с понятным следующим шагом."
+  result_wording: "Собраны 10 публикаций, две серии историй и подарочная карусель. После внутренней проверки комплект доработан и отправлен клиенту на согласование; финальное подтверждение типографики и запуск не зафиксированы."
+
+scope:
+  publications: 10
+  static_posts: 8
+  carousel_publications: 2
+  carousel_frames: 14
+  bonus_carousels: 1
+  bonus_carousel_frames: 7
+  stories_sequences: 2
+  stories_frames: 10
+  final_visual_files: 39
+  public_visual_files: 39
+  prepared_platform_count: 3
+  prepared_platform_ids:
+    - vk
+    - instagram
+    - telegram
+
+featured_goals:
+  - restore-regular-content
+  - explain-current-topics
+  - demonstrate-expertise
+  - remove-tax-service-myths
+  - generate-saves
+  - lead-to-consultation
+
+evidence:
+  confirmed:
+    - "Контент-план содержит 10 публикаций: восемь статичных и две карусели."
+    - "Подготовлены две серии историй по пять кадров и подарочная карусель из семи слайдов."
+    - "Тексты рассчитаны на ВКонтакте, Instagram и Telegram."
+    - "После внутренней проверки визуал дорабатывался и был экспортирован 31 июля 2026 года."
+    - "Клиент положительно отметил цветовую систему и задал вопрос о размере шрифтов."
+  not_claimed:
+    - "Финальное утверждение типографики и всего визуального комплекта."
+    - "Фактический запуск публикаций и прямые ссылки."
+    - "Охваты, обращения, продажи или коммерческий эффект."
+    - "Юридическая или налоговая корректность клиентских материалов от имени lemonmedia."
+  public_links: null
+  direct_publication_links: null
+  analytics: null
+
+publication_control:
+  portfolio_permission: confirmed_by_project_owner
+  client_copy_approval: confirmed
+  client_visual_approval: awaiting-final-typography-response
+  transferred_to_client: confirmed
+  publication_launch: not-confirmed
+  publishable: true
+  display_notes:
+    - "Показывать материалы как версию, отправленную на согласование."
+    - "Не называть проект опубликованным или полностью утверждённым."
+    - "Не пересказывать налоговые тезисы как консультацию lemonmedia."

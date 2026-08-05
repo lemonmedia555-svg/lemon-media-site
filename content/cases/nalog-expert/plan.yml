@@ -1,0 +1,101 @@
+version: 1
+brand: lemonmedia
+case_id: nalog-expert
+period: "2026-07/2026-08"
+language: ru
+
+scope:
+  publications: 10
+  static_posts: 8
+  carousel_publications: 2
+  carousel_frames: 14
+  bonus_carousel_frames: 7
+  stories_sequences: 2
+  stories_frames: 10
+
+claim_rule: "Материалы показывают работу над контентом и дизайном клиентского проекта. Они не являются налоговой или юридической консультацией lemonmedia и не доказывают коммерческий результат."
+
+strategy:
+  sequence:
+    - establish-relevance
+    - answer-practical-questions
+    - demonstrate-expertise
+    - remove-myths
+    - offer-low-friction-next-step
+  rubrics:
+    current-topics: 3
+    useful-content: 3
+    myth-review: 2
+    offer: 2
+
+content_plan:
+  - number: 1
+    format: static
+    role: current-topic
+    title: "Изменение налогового порога"
+  - number: 2
+    format: static
+    role: current-topic
+    title: "Обязательные взносы директора"
+  - number: 3
+    format: static
+    role: useful-content
+    title: "Как выбрать налоговый режим"
+  - number: 4
+    format: static
+    role: myth-review
+    title: "Оптимизация — это всегда серые схемы?"
+  - number: 5
+    format: static
+    role: offer
+    title: "Экспресс-аудит бизнеса"
+  - number: 6
+    format: carousel
+    role: useful-content
+    title: "Первый сотрудник: 6 шагов"
+    frames: 7
+  - number: 7
+    format: static
+    role: myth-review
+    title: "Маленькому бизнесу бухгалтер не нужен?"
+  - number: 8
+    format: static
+    role: current-topic
+    title: "Календарь отчётности и платежей"
+  - number: 9
+    format: carousel
+    role: useful-content
+    title: "Требование из налоговой: 6 шагов"
+    frames: 7
+  - number: 10
+    format: static
+    role: offer
+    title: "Бухгалтерия под ключ"
+
+bonus:
+  format: carousel
+  title: "ИП или ООО: 8 вопросов перед выбором"
+  frames: 7
+
+stories:
+  - id: audit-warm-up
+    frame_count: 5
+    title: "Сколько бизнес теряет незаметно"
+    goals: [raise-problem-awareness, lead-to-audit]
+  - id: requirement-warm-up
+    frame_count: 5
+    title: "Что делать с требованием из налоговой"
+    goals: [remove-panic, lead-to-carousel]
+
+distribution:
+  prepared_for:
+    - vk
+    - instagram
+    - telegram
+  publication_launch: not-confirmed
+  status: sent-for-client-review
+
+asset_display_notes:
+  post_dimensions: "720 × 900"
+  story_dimensions: "720 × 1280"
+  crop: false

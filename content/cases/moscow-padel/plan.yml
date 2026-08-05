@@ -1,0 +1,53 @@
+version: 1
+brand: lemonmedia
+case_id: moscow-padel
+period: "2026-08"
+language: ru
+
+claim_rule: "Цели описывают маркетинговую задачу материалов, а не доказанный коммерческий результат. Подтверждены утверждение комплекта и загрузка черновиков для VK и Instagram; фактический выход публикаций и метрики не подтверждены."
+
+schedule:
+  starts_at: "2026-08-06 10:00"
+  ends_at: "2026-08-25 10:00"
+  cadence: daily
+  publication_time: "10:00"
+  planned_platforms: [vk, instagram, telegram, max]
+  confirmed_draft_platforms: [vk, instagram]
+  status: drafts-uploaded-publication-not-yet-started
+
+rubrics:
+  - { id: useful-and-expert, count: 5, purpose: "Объяснить устройство, стоимость, подготовку и обслуживание." }
+  - { id: objects-and-cases, count: 4, purpose: "Показать продукт в разных сценариях и объектах." }
+  - { id: offers, count: 4, purpose: "Дать понятный следующий шаг после полезной части." }
+  - { id: myths, count: 3, purpose: "Снять опасные упрощения и сомнения." }
+  - { id: engagement, count: 2, purpose: "Включить аудиторию в разговор о продукте." }
+  - { id: topical, count: 2, purpose: "Связать продукт с текущим контекстом и сезоном." }
+
+publications:
+  - { number: 1, date: "2026-08-06", format: carousel, slide_count: 7, rubric: useful-and-expert, title: "Из каких систем собран профессиональный падел-корт", assets: "assets/cases/moscow-padel/carousels/01/{01..07}.jpg" }
+  - { number: 2, date: "2026-08-07", format: static-post, rubric: topical, title: "Падел как быстро растущий вид спорта", asset: "assets/cases/moscow-padel/posts/02.jpg" }
+  - { number: 3, date: "2026-08-08", format: carousel, slide_count: 7, rubric: objects-and-cases, title: "Четыре корта для спортивной академии", assets: "assets/cases/moscow-padel/carousels/03/{01..07}.jpg" }
+  - { number: 4, date: "2026-08-09", format: carousel, slide_count: 7, rubric: myths, title: "Почему падел-корт — не просто площадка с сеткой", assets: "assets/cases/moscow-padel/carousels/04/{01..07}.jpg" }
+  - { number: 5, date: "2026-08-10", format: static-post, rubric: offers, title: "Бесплатный предварительный расчёт под площадку", asset: "assets/cases/moscow-padel/posts/05.jpg" }
+  - { number: 6, date: "2026-08-11", format: carousel, slide_count: 7, rubric: useful-and-expert, title: "Из чего складывается стоимость корта", assets: "assets/cases/moscow-padel/carousels/06/{01..07}.jpg" }
+  - { number: 7, date: "2026-08-12", format: carousel, slide_count: 7, rubric: objects-and-cases, title: "Частный корт как пример решения", assets: "assets/cases/moscow-padel/carousels/07/{01..07}.jpg" }
+  - { number: 8, date: "2026-08-13", format: static-post, rubric: engagement, title: "Где аудитория поставила бы свой корт", asset: "assets/cases/moscow-padel/posts/08.jpg" }
+  - { number: 9, date: "2026-08-14", format: carousel, slide_count: 7, rubric: useful-and-expert, title: "Чек-лист до начала строительства", assets: "assets/cases/moscow-padel/carousels/09/{01..07}.jpg" }
+  - { number: 10, date: "2026-08-15", format: carousel, slide_count: 7, rubric: offers, title: "Четыре комплектации корта и выбор между ними", assets: "assets/cases/moscow-padel/carousels/10/{01..07}.jpg" }
+  - { number: 11, date: "2026-08-16", format: carousel, slide_count: 7, rubric: myths, title: "На чём нельзя экономить", assets: "assets/cases/moscow-padel/carousels/11/{01..07}.jpg" }
+  - { number: 12, date: "2026-08-17", format: carousel, slide_count: 7, rubric: objects-and-cases, title: "Три корта как бизнес-проект", assets: "assets/cases/moscow-padel/carousels/12/{01..07}.jpg" }
+  - { number: 13, date: "2026-08-18", format: static-post, rubric: topical, title: "Почему лето подходит для строительства", asset: "assets/cases/moscow-padel/posts/13.jpg" }
+  - { number: 14, date: "2026-08-19", format: carousel, slide_count: 7, rubric: useful-and-expert, title: "Корт как источник дохода: что надо рассчитать", assets: "assets/cases/moscow-padel/carousels/14/{01..07}.jpg" }
+  - { number: 15, date: "2026-08-20", format: static-post, rubric: offers, title: "Предложение по отсрочке платежа", asset: "assets/cases/moscow-padel/posts/15.jpg" }
+  - { number: 16, date: "2026-08-21", format: static-post, rubric: myths, title: "Возражение «не успеем построить в этом сезоне»", asset: "assets/cases/moscow-padel/posts/16.jpg" }
+  - { number: 17, date: "2026-08-22", format: static-post, rubric: objects-and-cases, title: "Объект в Ижевске и работа по России", asset: "assets/cases/moscow-padel/posts/17.jpg" }
+  - { number: 18, date: "2026-08-23", format: static-post, rubric: engagement, title: "Падел и теннис — в чём различие", asset: "assets/cases/moscow-padel/posts/18.jpg" }
+  - { number: 19, date: "2026-08-24", format: static-post, rubric: useful-and-expert, title: "Обслуживание корта", asset: "assets/cases/moscow-padel/posts/19.jpg" }
+  - { number: 20, date: "2026-08-25", format: static-post, rubric: offers, title: "Предложение построить корт в текущем сезоне", asset: "assets/cases/moscow-padel/posts/20.jpg" }
+
+gift:
+  format: carousel
+  slide_count: 7
+  title: "Падел: 7 фактов, после которых хочется попробовать"
+  assets: "assets/cases/moscow-padel/gift/{01..07}.jpg"
+  in_main_calendar: false
