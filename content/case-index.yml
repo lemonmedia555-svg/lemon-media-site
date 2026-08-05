@@ -4,9 +4,9 @@ language: ru
 
 counting:
   rule: "Считаются уникальные публикации. Слайды каруселей и размещения одного материала на разных площадках не считаются отдельными работами."
-  public_cases: 26
-  verified_publications_in_registry: 320
-  publishable_visualized_publications: 310
+  public_cases: 27
+  verified_publications_in_registry: 340
+  publishable_visualized_publications: 330
   note: "Подарочные карусели считаются отдельными уникальными публикациями, но не подменяют основные календарные слоты. У фонда «Доброе сердце» один макет не прошёл финальный QA. В кейсе Ольги Андреевой четыре готовых поста оставлены вне публичной галереи до медицинской и юридической проверки формулировок. В кейсе Dava Life публично показаны пять макетов, которых не касался последний список правок. Новый цикл Colorplast и кейс Налог Эксперт показаны с честными незавершёнными этапами. В INARI внутренние слайды с несверенными ценами и условиями не опубликованы."
 
 cases:
@@ -1137,3 +1137,48 @@ cases:
       - "Продление подтверждено, но визуал следующего месяца ещё не утверждён."
       - "Охваты, заявки, продажи и медицинский эффект не заявляются."
       - "Условия и скидка на макетах относятся к периоду кампании."
+
+  - id: sergey-glibin
+    slug: sergey-glibin
+    public_title: "Сергей Глибин — контент для ведущего мероприятий"
+    client_display_name: "Сергей Глибин"
+    period: "2026-07"
+    release_window: null
+    niche: personal-brand
+    subniche: event-host
+    formats:
+      - static-post
+      - carousel
+      - stories-sequence
+    scope:
+      publications: 20
+      static_posts: 15
+      carousel_publications: 5
+      carousel_slides: 33
+      stories_sequences: 1
+      stories_frames: 5
+      visual_files: 53
+      planned_platform_count: 3
+      planned_platform_ids:
+        - instagram
+        - vk
+        - telegram
+    featured_goals:
+      - refresh-active-profile
+      - build-premium-image
+      - explain-host-selection
+      - remove-event-myths
+      - show-real-events
+      - lead-to-date-booking
+    data:
+      case: "cases/sergey-glibin/case.yml"
+      plan: "cases/sergey-glibin/plan.yml"
+    public_page: "case-sergey-glibin.html"
+    media_status: media-ready-approved-to-publication
+    portfolio_permission_status: permission-confirmed
+    publishable: true
+    publish_blockers: []
+    evidence_limitations:
+      - "Визуал согласован и материалы переданы в публикационный процесс, но фактическое размещение всех двадцати публикаций не подтверждено."
+      - "Охваты, заявки, продажи и количество забронированных дат не заявляются."
+      - "Сезонные предложения внутри материалов относятся к периоду кампании."
