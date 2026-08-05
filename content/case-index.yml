@@ -4,9 +4,9 @@ language: ru
 
 counting:
   rule: "Считаются уникальные публикации. Слайды каруселей и размещения одного материала на разных площадках не считаются отдельными работами."
-  public_cases: 6
-  verified_publications_in_registry: 61
-  publishable_visualized_publications: 60
+  public_cases: 7
+  verified_publications_in_registry: 71
+  publishable_visualized_publications: 70
   note: "У фонда «Доброе сердце» одна из 10 утверждённых публикаций не входит в визуальную галерею: доступный макет не прошёл финальный QA."
 
 cases:
@@ -254,3 +254,48 @@ cases:
       - "Прямое клиентское утверждение финального дизайна не найдено."
       - "Публикация и бизнес-метрики не подтверждены."
       - "Плановые площадки нельзя выдавать за подтверждённое размещение."
+
+  - id: orange-style
+    slug: orange-style
+    public_title: "Orange Style — контент-система для фитнес-клуба"
+    client_display_name: "Orange Style"
+    period: first-month
+    release_window: null
+    niche: fitness-and-wellness
+    subniche: fitness-club
+    formats:
+      - static-post
+      - stories-sequence
+      - vk-widget
+    scope:
+      publications: 10
+      static_posts: 10
+      carousel_publications: 0
+      carousel_slides: 0
+      stories_sequences: 1
+      stories_frames: 5
+      vk_widgets: 3
+      visual_files: 18
+      prepared_platform_count: 1
+      prepared_platform_ids:
+        - vk
+    featured_goals:
+      - retain-existing-clients
+      - encourage-saves
+      - build-expertise
+      - remove-fears
+      - collect-feedback
+      - promote-personal-training
+      - lead-renewal
+    data:
+      case: "cases/orange-style/case.yml"
+      plan: "cases/orange-style/plan.yml"
+    public_page: "case-orange-style.html"
+    media_status: media-ready
+    portfolio_permission_status: permission-confirmed
+    publishable: true
+    publish_blockers: []
+    evidence_limitations:
+      - "Материалы загружены в систему публикации, но точный выход каждого поста не подтверждён."
+      - "Бизнес-метрики и прямые ссылки на публикации не найдены."
+      - "Следующий заказ на 15 постов и 10 историй находится в производстве и не считается готовым результатом."
