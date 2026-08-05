@@ -1778,14 +1778,14 @@ body.hide-notes .prototype-only { display: none !important; }
 
 .case-quick-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 10px;
   margin: 0 0 24px;
 }
 
 .case-quick-grid > a {
   display: grid;
-  grid-template-columns: 86px 1fr;
+  grid-template-columns: 72px 1fr;
   align-items: center;
   min-width: 0;
   gap: 13px;
@@ -1799,7 +1799,7 @@ body.hide-notes .prototype-only { display: none !important; }
 }
 
 .case-quick-grid > a:hover { border-color: var(--ink); transform: translateY(-3px); }
-.case-quick-grid img { width: 86px; aspect-ratio: 4 / 5; border-radius: 10px; object-fit: cover; }
+.case-quick-grid img { width: 72px; aspect-ratio: 4 / 5; border-radius: 10px; object-fit: cover; }
 .case-quick-grid span { display: grid; min-width: 0; gap: 5px; }
 .case-quick-grid small { color: var(--muted); font-size: 9px; font-weight: 800; text-transform: uppercase; }
 .case-quick-grid strong { font-size: 16px; line-height: 1.1; }

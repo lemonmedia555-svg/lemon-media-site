@@ -4,9 +4,9 @@ language: ru
 
 counting:
   rule: "Считаются уникальные публикации. Слайды каруселей и размещения одного материала на разных площадках не считаются отдельными работами."
-  public_cases: 4
-  verified_publications_in_registry: 41
-  publishable_visualized_publications: 40
+  public_cases: 5
+  verified_publications_in_registry: 51
+  publishable_visualized_publications: 50
   note: "У фонда «Доброе сердце» одна из 10 утверждённых публикаций не входит в визуальную галерею: доступный макет не прошёл финальный QA."
 
 cases:
@@ -167,3 +167,47 @@ cases:
     publish_blockers: []
     optional_follow_up:
       - "Добавить результат продления 30/10 только после завершения производства."
+
+  - id: chebusser
+    slug: chebusser
+    public_title: "ЧЕБУССЭР — контент-система для локальной чебуречной"
+    client_display_name: "ЧЕБУССЭР"
+    period: "2026-08"
+    release_window: null
+    niche: food-and-hospitality
+    subniche: local-street-food
+    formats:
+      - static-post
+      - carousel
+      - stories-sequence
+    scope:
+      publications: 10
+      static_posts: 8
+      carousel_publications: 2
+      carousel_slides: 14
+      stories_sequences: 1
+      stories_frames: 5
+      visual_files: 27
+      planned_platform_count: 2
+      planned_platform_ids:
+        - vk
+        - telegram
+    featured_goals:
+      - create-purchase-desire
+      - encourage-saves
+      - build-trust
+      - help-choice
+      - differentiate-offer
+      - lead-request
+    data:
+      case: "cases/chebusser/case.yml"
+      plan: "cases/chebusser/plan.yml"
+    public_page: "case-chebusser.html"
+    media_status: media-ready
+    portfolio_permission_status: permission-confirmed
+    publishable: true
+    publish_blockers: []
+    evidence_limitations:
+      - "Прямое клиентское утверждение финального дизайна не найдено."
+      - "Публикация и бизнес-метрики не подтверждены."
+      - "Коммерческие условия внутри макетов относятся к периоду проекта."

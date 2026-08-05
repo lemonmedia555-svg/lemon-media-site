@@ -1,0 +1,99 @@
+version: 1
+brand: lemonmedia
+id: chebusser
+slug: chebusser
+language: ru
+
+identity:
+  public_title: "ЧЕБУССЭР — контент-система для локальной чебуречной"
+  client_display_name: "ЧЕБУССЭР"
+  period: "2026-08"
+  release_window: null
+  niche: food-and-hospitality
+  subniche: local-street-food
+  geography: kemerovo
+
+summary:
+  short: "Десять публикаций вокруг ассортимента, свежести, удобства и первого заказа — в фирменной красно-жёлтой системе."
+  content_task: "Оживить профиль регулярным профессиональным контентом, показать 13 начинок, снять сомнения о продукте и привести прогретого читателя к первому заказу."
+  result_wording: "Утверждены контент-план и тексты. Подготовлены 8 одиночных постов, 2 карусели по 7 слайдов и мини-прогрев из 5 сторис — всего 27 финальных изображений. Визуал прошёл внутреннюю проверку и был передан клиенту; прямое клиентское утверждение дизайна, публикации и метрики не подтверждены."
+
+scope:
+  publications: 10
+  static_posts: 8
+  carousel_publications: 2
+  carousel_slides: 14
+  stories_sequences: 1
+  stories_frames: 5
+  visual_files: 27
+  planned_platform_count: 2
+  planned_platform_ids:
+    - vk
+    - telegram
+  platform_status: named-in-approved-plan-publication-not-independently-verified
+
+source_rubric_distribution:
+  product-showcase: 2
+  engagement: 2
+  useful: 2
+  myths: 2
+  offer: 2
+
+category_distribution:
+  product-showcase: 3
+  useful: 2
+  myths: 2
+  offer: 3
+
+featured_goals:
+  - create-purchase-desire
+  - encourage-saves
+  - build-trust
+  - help-choice
+  - differentiate-offer
+  - lead-request
+
+evidence:
+  confirmed:
+    - "Публичное название бренда: ЧЕБУССЭР."
+    - "Утверждённый план содержит 10 публикаций: 8 одиночных постов и 2 карусели."
+    - "Каждая карусель состоит из 7 слайдов; всего подготовлено 14 слайдов."
+    - "Дополнительно подготовлена цепочка из 5 статичных сторис."
+    - "Всего в финальной выгрузке 27 изображений: 22 формата 4:5 и 5 формата 9:16."
+    - "Контент-план и тексты утверждены."
+    - "Визуал прошёл внутреннюю проверку, после правок финальная папка передана клиенту."
+  not_claimed:
+    - "Прямое клиентское утверждение финального дизайна."
+    - "Публикация материалов во ВКонтакте или Telegram."
+    - "Охваты, вовлечённость, заказы, продажи, выручка и окупаемость."
+    - "Причинная связь между контентом и бизнес-показателями."
+    - "Актуальность скидок, подарков и других условий внутри исторических макетов."
+  public_links:
+    - label: "Сообщество ЧЕБУССЭР ВКонтакте"
+      url: "https://vk.ru/chebusser"
+      verification_status: provided-in-work-task
+  direct_publication_links: null
+  analytics: null
+  client_review: null
+
+publication_control:
+  portfolio_permission: confirmed_by_project_owner
+  final_media: ready
+  direct_publication_links: unavailable
+  client_visual_approval: not-recorded
+  visual_internal_review: confirmed
+  final_visual_handover: confirmed
+  recognizable_people_assets:
+    - "carousels/03/01.jpg"
+  recognizable_people_use_basis: confirmed_by_project_owner
+  historical_terms_visible_in_assets:
+    - "posts/05.jpg"
+    - "posts/08.jpg"
+    - "posts/10.jpg"
+  display_notes:
+    - "Посты и карусели имеют формат 4:5 и должны показываться без обрезки."
+    - "Сторис имеют формат 9:16 и должны показываться без обрезки."
+    - "Скидки, подарки и механика промокода внутри макетов относятся к периоду проекта и не являются текущим предложением."
+    - "Не представлять плановые площадки как подтверждённые публикации."
+    - "Не добавлять количественные результаты без отдельного источника аналитики."
+  publishable: true
