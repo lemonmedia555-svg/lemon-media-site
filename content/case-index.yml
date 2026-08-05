@@ -4,10 +4,10 @@ language: ru
 
 counting:
   rule: "Считаются уникальные публикации. Слайды каруселей и размещения одного материала на разных площадках не считаются отдельными работами."
-  public_cases: 27
-  verified_publications_in_registry: 340
-  publishable_visualized_publications: 330
-  note: "Подарочные карусели считаются отдельными уникальными публикациями, но не подменяют основные календарные слоты. У фонда «Доброе сердце» один макет не прошёл финальный QA. В кейсе Ольги Андреевой четыре готовых поста оставлены вне публичной галереи до медицинской и юридической проверки формулировок. В кейсе Dava Life публично показаны пять макетов, которых не касался последний список правок. Новый цикл Colorplast и кейс Налог Эксперт показаны с честными незавершёнными этапами. В INARI внутренние слайды с несверенными ценами и условиями не опубликованы."
+  public_cases: 28
+  verified_publications_in_registry: 351
+  publishable_visualized_publications: 338
+  note: "Подарочные карусели считаются отдельными уникальными публикациями, но не подменяют основные календарные слоты. У фонда «Доброе сердце» один макет не прошёл финальный QA. В кейсе Ольги Андреевой четыре готовых поста оставлены вне публичной галереи до медицинской и юридической проверки формулировок. В кейсе Dava Life публично показаны пять макетов, которых не касался последний список правок. Новый цикл Colorplast и кейс Налог Эксперт показаны с честными незавершёнными этапами. В INARI внутренние слайды с несверенными ценами и условиями не опубликованы. В кейсе «Атерис» макеты с именами и узнаваемыми сотрудниками исключены из публичной подборки."
 
 cases:
   - id: saratov-kitchens-2026-08
@@ -1182,3 +1182,46 @@ cases:
       - "Визуал согласован и материалы переданы в публикационный процесс, но фактическое размещение всех двадцати публикаций не подтверждено."
       - "Охваты, заявки, продажи и количество забронированных дат не заявляются."
       - "Сезонные предложения внутри материалов относятся к периоду кампании."
+
+  - id: ateris
+    slug: ateris
+    public_title: "Атерис — контент для центра здоровья животных"
+    client_display_name: "Атерис"
+    period: "2026-08"
+    release_window: "2026-08-06/2026-08-24"
+    niche: local-services
+    subniche: animal-health-center
+    formats:
+      - static-post
+      - carousel
+    scope:
+      publications: 11
+      main_publications: 10
+      bonus_publications: 1
+      static_posts: 8
+      carousel_publications: 3
+      carousel_slides: 21
+      source_visual_files: 29
+      publishable_visual_files: 21
+      publishable_visualized_publications: 8
+      planned_platform_count: 1
+      planned_platform_ids:
+        - vk
+    featured_goals:
+      - give-saveable-guides
+      - explain-specialist-choice
+      - remove-care-myths
+      - show-exotic-animal-expertise
+      - lead-to-booking
+    data:
+      case: "cases/ateris/case.yml"
+      plan: "cases/ateris/plan.yml"
+    public_page: "case-ateris.html"
+    media_status: media-ready-safe-selection
+    portfolio_permission_status: permission-confirmed
+    publishable: true
+    publish_blockers: []
+    evidence_limitations:
+      - "Десять публикаций загружены в черновики, но их фактический выход не подтверждён."
+      - "Макеты с именами и узнаваемыми сотрудниками исключены из публичной подборки."
+      - "Охваты, записи, продажи и медицинский эффект не заявляются."

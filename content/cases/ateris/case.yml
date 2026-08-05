@@ -1,0 +1,95 @@
+version: 1
+brand: lemonmedia
+id: ateris
+slug: ateris
+language: ru
+
+identity:
+  public_title: "Атерис — контент для центра здоровья животных"
+  client_display_name: "Атерис"
+  period: "2026-08"
+  niche: veterinary-services
+  subniche: animal-health-center
+  client_type: new-client
+
+summary:
+  short: "10 постов для ВКонтакте: полезные памятки, экспертные темы, разборы мифов и предложения записаться. Две основные карусели и одна бонусная."
+  content_task: "Привлечь новую аудиторию, объяснить сложные ветеринарные темы простым языком и показать отличие центра — работу в том числе с экзотическими животными."
+  result_wording: "Подготовили и согласовали 10 постов, включая 2 карусели, и бонусную карусель. Комплект загрузили в черновики. Фактический выход материалов и метрики на момент проверки ещё не подтверждены."
+
+scope:
+  publications: 10
+  static_posts: 8
+  carousel_publications: 2
+  bonus_carousels: 1
+  slides_per_carousel: 7
+  source_visual_files: 29
+  public_web_visual_files: 21
+  source_dimensions: "1080 × 1350"
+  web_dimensions: "864 × 1080"
+  aspect_ratio: "4:5"
+  planned_platform_count: 1
+
+marketing_logic:
+  premise: "Владелец животного должен не только увидеть услугу. Контент помогает заметить проблему, понять следующий шаг и доверить питомца специалистам."
+  sequence:
+    - useful-saveable-content
+    - expert-differentiation
+    - myth-removal
+    - reason-to-book
+  rubric_distribution:
+    useful-content: 3
+    expertise-and-work: 3
+    myth-busting: 2
+    offers: 2
+
+workflow:
+  brief_completed: true
+  content_plan_completed: true
+  text_completed: true
+  factual_correction_rounds: 1
+  visual_completed: true
+  visual_corrections_completed: true
+  final_package_approved: true
+  loaded_as_drafts: true
+  draft_publication_count: 10
+  actual_publication_confirmed: false
+
+schedule:
+  status: scheduled-drafts-publication-unverified
+  planned_period: "2026-08-06/2026-08-24"
+  planned_platforms: [vk]
+  confirmed_published_platforms: []
+
+evidence:
+  confirmed:
+    - "Пакет содержит 10 публикаций: 8 одиночных постов и 2 карусели."
+    - "Дополнительно подготовлена бонусная карусель."
+    - "Контент-план рассчитан на ВКонтакте."
+    - "После проверки фактов прошёл один содержательный круг правок."
+    - "Финальный комплект согласован и загружен в черновики."
+  not_claimed:
+    - "Фактический выход всех публикаций."
+    - "Охваты, просмотры, сохранения и вовлечённость."
+    - "Записи, заявки, продажи и рост аудитории."
+    - "Медицинский эффект материалов."
+  analytics: null
+  client_review: null
+
+publication_control:
+  portfolio_permission: confirmed_by_project_owner
+  final_media: ready
+  publishable: true
+  privacy_mode: safe-public-selection
+  display_notes:
+    - "Публично показывать только визуалы без имён и узнаваемых сотрудников."
+    - "Не называть загрузку в черновики фактической публикацией."
+    - "Не добавлять метрики без отдельной аналитики."
+    - "Не публиковать приватные данные, внутренние ссылки и название сделки."
+
+assets:
+  root: "assets/cases/ateris"
+  safe_posts: "posts/{publication_number_2d}.jpg"
+  carousel_01: "carousels/01/{slide_number_2d}.jpg"
+  bonus_carousel: "gift/{slide_number_2d}.jpg"
+

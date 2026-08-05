@@ -1,0 +1,100 @@
+version: 1
+brand: lemonmedia
+case_id: ateris
+period: "2026-08"
+language: ru
+
+claim_rule: "Цели ниже описывают задачу материалов, а не доказанный эффект. Подтверждены готовый комплект, согласование и загрузка в черновики; фактический выход и метрики не подтверждены."
+
+channels:
+  planned: [vk]
+  confirmed_published: []
+
+rubrics:
+  - id: useful-content
+    count: 3
+    purpose: "Дать владельцу животного сохраняемую и применимую подсказку."
+  - id: expertise-and-work
+    count: 3
+    purpose: "Показать компетенции центра и объяснить, к какому специалисту обращаться."
+  - id: myth-busting
+    count: 2
+    purpose: "Исправить бытовые заблуждения, которые мешают вовремя обратиться за помощью."
+  - id: offers
+    count: 2
+    purpose: "Перевести интерес в понятную причину записаться."
+
+publications:
+  - number: 1
+    format: carousel
+    rubric: useful-content
+    title: "Как безопасно перевезти птицу или другого питомца к ветеринару"
+    purpose: "Снизить тревогу перед поездкой и дать пошаговую памятку."
+    slide_count: 7
+    public_asset: "assets/cases/ateris/carousels/01/01.jpg"
+  - number: 2
+    format: static-post
+    rubric: expertise-and-work
+    title: "Когда питомцу нужен ветеринарный дерматолог"
+    purpose: "Помочь заметить симптомы и выбрать профильного специалиста."
+    public_asset: null
+    privacy_note: "Макет не включён в публичную подборку из-за данных сотрудника."
+  - number: 3
+    format: static-post
+    rubric: myth-busting
+    title: "Пять мифов об уходе за черепахами"
+    purpose: "Разобрать распространённые ошибки содержания."
+    public_asset: "assets/cases/ateris/posts/03.jpg"
+  - number: 4
+    format: static-post
+    rubric: useful-content
+    title: "Признаки боли, которые владелец может не заметить"
+    purpose: "Научить внимательнее следить за изменениями в поведении питомца."
+    public_asset: "assets/cases/ateris/posts/04.jpg"
+  - number: 5
+    format: static-post
+    rubric: offers
+    title: "Первый приём щенка или котёнка"
+    purpose: "Объяснить ценность раннего осмотра и следующий шаг."
+    public_asset: "assets/cases/ateris/posts/05.jpg"
+  - number: 6
+    format: carousel
+    rubric: expertise-and-work
+    title: "Уход за зубами питомца и профессиональная чистка"
+    purpose: "Показать проблему, домашнюю профилактику и роль специалиста."
+    slide_count: 7
+    public_asset: null
+    privacy_note: "Полная карусель не включена в публичную подборку из-за данных сотрудника на отдельных слайдах."
+  - number: 7
+    format: static-post
+    rubric: myth-busting
+    title: "Миф: домашнему питомцу не нужен ветеринар"
+    purpose: "Объяснить пользу профилактических осмотров."
+    public_asset: "assets/cases/ateris/posts/07.jpg"
+  - number: 8
+    format: static-post
+    rubric: useful-content
+    title: "Когда перед приёмом нужна голодная выдержка"
+    purpose: "Подготовить владельца к визиту без лишней путаницы."
+    public_asset: "assets/cases/ateris/posts/08.jpg"
+  - number: 9
+    format: static-post
+    rubric: expertise-and-work
+    title: "Кто лечит экзотических животных"
+    purpose: "Показать ключевую специализацию центра."
+    public_asset: null
+    privacy_note: "Макет не включён в публичную подборку из-за узнаваемого человека."
+  - number: 10
+    format: static-post
+    rubric: offers
+    title: "Запись к специалисту по экзотическим животным"
+    purpose: "Дать конкретную причину обратиться в центр."
+    public_asset: "assets/cases/ateris/posts/10.jpg"
+
+bonus_carousel:
+  title: "Скрытые опасности для питомца дома"
+  format: carousel
+  slide_count: 7
+  purpose: "Дать дополнительную сохраняемую памятку и усилить ценность пакета."
+  asset_pattern: "assets/cases/ateris/gift/{slide_number_2d}.jpg"
+
