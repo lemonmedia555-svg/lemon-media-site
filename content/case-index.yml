@@ -4,9 +4,9 @@ language: ru
 
 counting:
   rule: "Считаются уникальные публикации. Слайды каруселей и размещения одного материала на разных площадках не считаются отдельными работами."
-  public_cases: 12
-  verified_publications_in_registry: 143
-  publishable_visualized_publications: 142
+  public_cases: 13
+  verified_publications_in_registry: 154
+  publishable_visualized_publications: 153
   note: "У фонда «Доброе сердце» одна из 10 утверждённых публикаций не входит в визуальную галерею: доступный макет не прошёл финальный QA."
 
 cases:
@@ -514,3 +514,47 @@ cases:
       - "Подтверждена загрузка черновиков, а не выход всех материалов во ВКонтакте."
       - "Установка трёх виджетов, бизнес-метрики и прямой отзыв не подтверждены."
       - "Образовательные результаты учеников нельзя приписывать работе lemonmedia."
+
+  - id: achinsk-begovoy
+    slug: achinsk-begovoy
+    public_title: "Ачинск Беговой — месяц контента перед городским забегом"
+    client_display_name: "Ачинск Беговой"
+    period: "2026-08"
+    release_window: "2026-08-01/2026-08-28"
+    niche: sport-and-events
+    subniche: running-club-and-local-race
+    formats:
+      - static-post
+      - carousel
+    scope:
+      publications: 11
+      scheduled_publications: 10
+      bonus_publications: 1
+      static_posts: 8
+      carousel_publications: 3
+      carousel_slides: 21
+      visual_files: 29
+      draft_platform_count: 3
+      draft_platform_ids:
+        - vk
+        - max
+        - ok
+    featured_goals:
+      - build-event-awareness
+      - remove-beginner-fears
+      - explain-event-conditions
+      - show-community-atmosphere
+      - build-trust
+      - lead-to-registration
+    data:
+      case: "cases/achinsk-begovoy/case.yml"
+      plan: "cases/achinsk-begovoy/plan.yml"
+    public_page: "case-achinsk-begovoy.html"
+    media_status: media-ready
+    portfolio_permission_status: permission-confirmed
+    publishable: true
+    publish_blockers: []
+    evidence_limitations:
+      - "Загружены черновики для трёх площадок; фактический выход публикаций не подтверждён."
+      - "Отдельное финальное утверждение дизайна клиентом не найдено."
+      - "Охваты, регистрации, продажи мест и другие бизнес-метрики не подтверждены."
