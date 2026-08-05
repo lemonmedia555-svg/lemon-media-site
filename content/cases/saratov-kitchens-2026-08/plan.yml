@@ -1,0 +1,191 @@
+version: 1
+brand: lemonmedia
+case_id: saratov-kitchens-2026-08
+period: "2026-08"
+language: ru
+
+scope:
+  publications: 15
+  static_posts: 10
+  carousel_publications: 5
+  carousel_slides: 34
+  stories_sequences: 1
+  stories_frames: 5
+  platform_count: 5
+
+claim_rule: "Все цели ниже описывают задачу материала, а не уже достигнутый бизнес-результат."
+
+schedule:
+  start_date: "2026-08-05"
+  end_date: "2026-09-02"
+  cadence_days: 2
+  time_local: "21:47"
+  timezone_status: not-recorded
+  status: planned_from_work_task
+
+publications:
+  - number: 1
+    id: publication-01
+    scheduled_at_local: "2026-08-05T21:47:00"
+    format: static-post
+    category: useful
+    title: "Как выбрать кухню и не переделывать через год"
+    goals:
+      - build-trust
+      - encourage-saves
+
+  - number: 2
+    id: publication-02
+    scheduled_at_local: "2026-08-07T21:47:00"
+    format: static-post
+    category: work-showcase
+    title: "Двухцветная классика на годы"
+    goals:
+      - reduce-result-uncertainty
+
+  - number: 3
+    id: publication-03
+    scheduled_at_local: "2026-08-09T21:47:00"
+    format: static-post
+    category: product-showcase
+    title: "Модель Beverly — тёплая классика"
+    goals:
+      - create-purchase-desire
+
+  - number: 4
+    id: publication-04
+    scheduled_at_local: "2026-08-11T21:47:00"
+    format: static-post
+    category: myths
+    title: "Кухня на заказ = переплата"
+    goals:
+      - differentiate-offer
+
+  - number: 5
+    id: publication-05
+    scheduled_at_local: "2026-08-13T21:47:00"
+    format: static-post
+    category: offer
+    title: "Бесплатный замер и 3D-проект"
+    goals:
+      - measurement-request
+    related_stories_sequence: stories-01
+
+  - number: 6
+    id: publication-06
+    scheduled_at_local: "2026-08-15T21:47:00"
+    format: carousel
+    slide_count: 7
+    category: work-showcase
+    title: "Маленькая кухня-студия"
+    goals:
+      - reduce-space-fit-uncertainty
+
+  - number: 7
+    id: publication-07
+    scheduled_at_local: "2026-08-17T21:47:00"
+    format: carousel
+    slide_count: 6
+    category: useful
+    title: "Что проверить перед заказом кухни"
+    goals:
+      - encourage-saves
+      - show-expertise
+
+  - number: 8
+    id: publication-08
+    scheduled_at_local: "2026-08-19T21:47:00"
+    format: static-post
+    category: product-showcase
+    title: "Кухня без ручек с профилем Gola"
+    goals:
+      - create-purchase-desire
+
+  - number: 9
+    id: publication-09
+    scheduled_at_local: "2026-08-21T21:47:00"
+    format: static-post
+    category: work-showcase
+    title: "Серая угловая кухня с барной стойкой"
+    goals:
+      - reduce-layout-uncertainty
+
+  - number: 10
+    id: publication-10
+    scheduled_at_local: "2026-08-23T21:47:00"
+    format: carousel
+    slide_count: 7
+    category: myths
+    title: "Мифы о кухнях на заказ"
+    goals:
+      - differentiate-offer
+
+  - number: 11
+    id: publication-11
+    scheduled_at_local: "2026-08-25T21:47:00"
+    format: carousel
+    slide_count: 7
+    category: product-showcase
+    title: "Модели, которые выбирают чаще всего"
+    goals:
+      - create-purchase-desire
+
+  - number: 12
+    id: publication-12
+    scheduled_at_local: "2026-08-27T21:47:00"
+    format: static-post
+    category: useful
+    title: "Из чего делают фасады кухни"
+    goals:
+      - help-choice
+      - build-trust
+
+  - number: 13
+    id: publication-13
+    scheduled_at_local: "2026-08-29T21:47:00"
+    format: carousel
+    slide_count: 7
+    category: work-showcase
+    title: "Зелёная кухня без страха цвета"
+    goals:
+      - reduce-color-fatigue-uncertainty
+
+  - number: 14
+    id: publication-14
+    scheduled_at_local: "2026-08-31T21:47:00"
+    format: static-post
+    category: product-showcase
+    title: "Модель Provence — светлая классика"
+    goals:
+      - create-purchase-desire
+
+  - number: 15
+    id: publication-15
+    scheduled_at_local: "2026-09-02T21:47:00"
+    format: static-post
+    category: offer
+    title: "Кухня в рассрочку 0%"
+    goals:
+      - lead-request
+
+stories_sequences:
+  - id: stories-01
+    related_publication_id: publication-05
+    frame_count: 5
+    goal: measurement-request
+    frames:
+      - number: 1
+        role: hook
+        topic: "Зацепка"
+      - number: 2
+        role: explanation
+        topic: "Выезд замерщика"
+      - number: 3
+        role: proof
+        topic: "3D-проект"
+      - number: 4
+        role: terms
+        topic: "Цена сразу"
+      - number: 5
+        role: repost-placeholder
+        topic: "Место для репоста публикации"

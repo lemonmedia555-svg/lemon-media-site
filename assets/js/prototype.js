@@ -339,4 +339,170 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
+  document.querySelectorAll('[data-format-guide]').forEach((guide) => {
+    const buttons = Array.from(guide.querySelectorAll('[data-format-option]'));
+    const title = guide.querySelector('[data-format-guide-title]');
+    const copy = guide.querySelector('[data-format-guide-copy]');
+    const image = guide.querySelector('[data-format-guide-image]');
+    const label = guide.querySelector('[data-format-guide-label]');
+
+    const activate = (button) => {
+      buttons.forEach((item) => {
+        const active = item === button;
+        item.classList.toggle('active', active);
+        item.setAttribute('aria-selected', String(active));
+      });
+      if (title) title.textContent = button.getAttribute('data-title') || '';
+      if (copy) copy.textContent = button.getAttribute('data-copy') || '';
+      if (label) label.textContent = button.getAttribute('data-label') || '';
+      if (image instanceof HTMLImageElement) {
+        image.src = button.getAttribute('data-image') || image.src;
+        image.alt = button.getAttribute('data-alt') || '';
+      }
+    };
+
+    buttons.forEach((button) => button.addEventListener('click', () => activate(button)));
+  });
+
+  document.querySelectorAll('[data-walkthrough]').forEach((walkthrough) => {
+    const buttons = Array.from(walkthrough.querySelectorAll('[data-walkthrough-chapter]'));
+    const panels = Array.from(walkthrough.querySelectorAll('[data-walkthrough-panel]'));
+
+    const activate = (key) => {
+      buttons.forEach((button) => {
+        const active = button.getAttribute('data-walkthrough-chapter') === key;
+        button.classList.toggle('active', active);
+        button.setAttribute('aria-selected', String(active));
+      });
+      panels.forEach((panel) => {
+        panel.hidden = panel.getAttribute('data-walkthrough-panel') !== key;
+      });
+    };
+
+    buttons.forEach((button) => {
+      button.addEventListener('click', () => activate(button.getAttribute('data-walkthrough-chapter') || 'brief'));
+    });
+  });
+
+  document.querySelectorAll('[data-case-tabs]').forEach((tabs) => {
+    const buttons = Array.from(tabs.querySelectorAll('[data-case-tab]'));
+    const scope = tabs.closest('[data-case-explorer]') || document;
+    const panels = Array.from(scope.querySelectorAll('[data-case-panel]'));
+
+    const activate = (key, focus = false, reveal = false) => {
+      buttons.forEach((button) => {
+        const active = button.getAttribute('data-case-tab') === key;
+        button.classList.toggle('active', active);
+        button.setAttribute('aria-selected', String(active));
+        button.tabIndex = active ? 0 : -1;
+        if (active && focus) button.focus();
+      });
+      panels.forEach((panel) => {
+        panel.hidden = panel.getAttribute('data-case-panel') !== key;
+      });
+
+      if (reveal) {
+        window.requestAnimationFrame(() => {
+          tabs.scrollIntoView({
+            behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth',
+            block: 'start'
+          });
+        });
+      }
+    };
+
+    buttons.forEach((button, index) => {
+      button.addEventListener('click', () => activate(button.getAttribute('data-case-tab') || '', false, true));
+      button.addEventListener('keydown', (event) => {
+        if (!['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(event.key)) return;
+        event.preventDefault();
+        let nextIndex = event.key === 'Home' ? 0 : event.key === 'End' ? buttons.length - 1 : index + (event.key === 'ArrowRight' ? 1 : -1);
+        nextIndex = (nextIndex + buttons.length) % buttons.length;
+        activate(buttons[nextIndex].getAttribute('data-case-tab') || '', true, true);
+      });
+    });
+
+    const initial = buttons.find((button) => button.classList.contains('active')) || buttons[0];
+    if (initial) activate(initial.getAttribute('data-case-tab') || '');
+  });
+
+  document.querySelectorAll('[data-case-carousel]').forEach((carousel) => {
+    const slides = Array.from(carousel.querySelectorAll('[data-case-slide]'));
+    const previous = carousel.querySelector('[data-case-prev]');
+    const next = carousel.querySelector('[data-case-next]');
+    const thumbs = carousel.querySelector('[data-case-thumbs]');
+    const counter = carousel.querySelector('[data-case-counter]');
+    let current = 0;
+
+    if (thumbs && !thumbs.children.length) {
+      slides.forEach((slide, index) => {
+        const button = document.createElement('button');
+        const image = document.createElement('img');
+        button.type = 'button';
+        button.setAttribute('aria-label', `Открыть слайд ${index + 1}`);
+        image.src = slide.getAttribute('src') || '';
+        image.alt = '';
+        button.append(image);
+        thumbs.append(button);
+      });
+    }
+
+    thumbs?.querySelectorAll('button').forEach((button, index) => {
+      button.addEventListener('click', () => {
+        current = Number(button.getAttribute('data-case-thumb') || index);
+        renderCaseCarousel();
+      });
+    });
+
+    const renderCaseCarousel = () => {
+      slides.forEach((slide, index) => { slide.hidden = index !== current; });
+      thumbs?.querySelectorAll('button').forEach((button, index) => {
+        button.classList.toggle('active', index === current);
+        button.setAttribute('aria-current', index === current ? 'true' : 'false');
+      });
+      if (counter) counter.textContent = `${current + 1} / ${slides.length}`;
+    };
+
+    previous?.addEventListener('click', () => {
+      current = (current - 1 + slides.length) % slides.length;
+      renderCaseCarousel();
+    });
+    next?.addEventListener('click', () => {
+      current = (current + 1) % slides.length;
+      renderCaseCarousel();
+    });
+    if (slides.length) renderCaseCarousel();
+  });
+
+  const caseDialog = document.querySelector('[data-case-dialog]');
+  if (caseDialog instanceof HTMLDialogElement) {
+    const dialogImage = caseDialog.querySelector('[data-case-dialog-image]');
+    const dialogTitle = caseDialog.querySelector('[data-case-dialog-title]');
+    const dialogMeta = caseDialog.querySelector('[data-case-dialog-meta]');
+    const dialogGoal = caseDialog.querySelector('[data-case-dialog-goal]');
+
+    document.querySelectorAll('[data-case-open], [data-case-dialog-open]').forEach((button) => {
+      button.addEventListener('click', () => {
+        const sourceImage = button.querySelector('img');
+        const source = button.getAttribute('data-image') || button.getAttribute('data-case-dialog-src') || sourceImage?.getAttribute('src') || '';
+        const title = button.getAttribute('data-title') || button.getAttribute('data-case-dialog-alt') || sourceImage?.getAttribute('alt') || 'Публикация';
+        if (dialogImage instanceof HTMLImageElement) {
+          dialogImage.src = source;
+          dialogImage.alt = title;
+        }
+        if (dialogTitle) dialogTitle.textContent = title;
+        if (dialogMeta) dialogMeta.textContent = button.getAttribute('data-meta') || '';
+        if (dialogGoal) dialogGoal.textContent = button.getAttribute('data-goal') || '';
+        caseDialog.showModal();
+      });
+    });
+
+    caseDialog.querySelectorAll('[data-case-dialog-close]').forEach((button) => {
+      button.addEventListener('click', () => caseDialog.close());
+    });
+    caseDialog.addEventListener('click', (event) => {
+      if (event.target === caseDialog) caseDialog.close();
+    });
+  }
 });

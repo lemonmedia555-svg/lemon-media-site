@@ -1,0 +1,95 @@
+version: 1
+brand: lemonmedia
+id: saratov-kitchens-2026-08
+slug: saratov-kitchens-2026-08
+language: ru
+
+identity:
+  public_title: "Саратов Кухни — контент-месяц августа 2026"
+  client_display_name: "Саратов Кухни"
+  period: "2026-08"
+  release_window: "2026-08-05/2026-09-02"
+  niche: home-and-interior
+  subniche: custom-kitchens
+
+summary:
+  short: "Связный месяц контента о выборе кухни, готовых решениях, возражениях и предложениях бренда."
+  content_task: "Помочь аудитории разобраться в выборе кухни, показать реальные решения и подвести к обращению без обещаний коммерческого результата."
+  result_wording: "Подготовлен контент-план из 15 публикаций: 10 обычных постов, 5 каруселей, 4 готовых экрана сторис и 1 экран под репост публикации. Материалы подготовлены для размещения на 5 площадках."
+
+scope:
+  publications: 15
+  static_posts: 10
+  carousel_publications: 5
+  carousel_slides: 34
+  stories_sequences: 1
+  stories_frames: 5
+  platform_count: 5
+  platform_ids:
+    - vk
+    - instagram
+    - max
+    - pinterest
+    - odnoklassniki
+  platform_names_status: verified_from_work_task
+
+schedule:
+  start_date: "2026-08-05"
+  end_date: "2026-09-02"
+  cadence_days: 2
+  time_local: "21:47"
+  timezone_status: not-recorded
+  status: planned_from_work_task
+
+category_distribution:
+  useful: 3
+  work-showcase: 4
+  product-showcase: 4
+  myths: 2
+  offer: 2
+
+featured_goals:
+  - build-trust
+  - encourage-saves
+  - reduce-result-uncertainty
+  - create-purchase-desire
+  - differentiate-offer
+  - measurement-request
+  - lead-request
+
+stories:
+  sequence_id: stories-01
+  related_publication_id: publication-05
+  frames: 5
+  narrative: "Зацепка → выезд замерщика → 3D-проект → цена сразу → подготовленное место для репоста публикации."
+
+evidence:
+  confirmed:
+    - "Клиент: Саратов Кухни."
+    - "Контент-месяц: август 2026; плановый выход материалов — с 5 августа по 2 сентября."
+    - "В плане 15 публикаций."
+    - "Пять публикаций выполнены в формате карусели."
+    - "К публикации 05 подготовлены четыре экрана сторис и один экран под репост публикации."
+    - "Материалы подготовлены для ВКонтакте, Instagram, MAX, Pinterest и Одноклассников."
+    - "В рабочей задаче указан плановый ритм: каждые два дня в 21:47."
+  not_claimed:
+    - "Продажи, заявки, выручка и окупаемость."
+    - "Рост охватов, подписчиков и вовлечённости."
+    - "Причинная связь между контентом и бизнес-показателями."
+  public_links:
+    - label: "Сайт клиента"
+      url: "https://sk-saratov.ru"
+    - label: "Проект ВКонтакте"
+      url: "https://vk.ru/sk.saratov"
+  analytics: null
+  client_review: null
+
+publication_control:
+  portfolio_permission: confirmed_by_project_owner
+  final_media: ready
+  public_links: verified
+  recognizable_people_assets:
+    - "stories/04.webp"
+    - "posts/14.webp"
+  recognizable_people_use_basis: confirmed_by_project_owner
+  publishable: true

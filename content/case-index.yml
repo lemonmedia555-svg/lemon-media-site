@@ -1,0 +1,53 @@
+version: 1
+brand: lemonmedia
+language: ru
+
+counting:
+  rule: "Считаются уникальные публикации. Слайды каруселей и размещения одного материала на разных площадках не считаются отдельными работами."
+  public_cases: 1
+  verified_publications_in_registry: 15
+
+cases:
+  - id: saratov-kitchens-2026-08
+    slug: saratov-kitchens-2026-08
+    public_title: "Саратов Кухни — контент-месяц августа 2026"
+    client_display_name: "Саратов Кухни"
+    period: "2026-08"
+    release_window: "2026-08-05/2026-09-02"
+    niche: home-and-interior
+    subniche: custom-kitchens
+    formats:
+      - full-month
+      - static-post
+      - carousel
+      - stories-sequence
+    scope:
+      publications: 15
+      static_posts: 10
+      carousel_publications: 5
+      carousel_slides: 34
+      stories_sequences: 1
+      stories_frames: 5
+      platform_count: 5
+      platform_ids:
+        - vk
+        - instagram
+        - max
+        - pinterest
+        - odnoklassniki
+    featured_goals:
+      - build-trust
+      - reduce-result-uncertainty
+      - create-purchase-desire
+      - measurement-request
+      - lead-request
+    data:
+      case: "cases/saratov-kitchens-2026-08/case.yml"
+      plan: "cases/saratov-kitchens-2026-08/plan.yml"
+    public_page: "case-saratov-kitchens.html"
+    media_status: media-ready
+    portfolio_permission_status: permission-confirmed
+    publishable: true
+    publish_blockers: []
+    optional_follow_up:
+      - "Добавить прямые ссылки на отдельные живые публикации, если они будут показаны."
