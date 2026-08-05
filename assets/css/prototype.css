@@ -1679,6 +1679,13 @@ body.hide-notes .prototype-only { display: none !important; }
 
 .case-catalog-head { margin-top: 82px; }
 
+.case-catalog-filters {
+  margin: 0 0 18px;
+  padding: 14px 16px;
+}
+
+.case-catalog-filters .filter-row { margin-top: 0; }
+
 .case-catalog-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));

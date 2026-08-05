@@ -32,8 +32,11 @@
           <div><p class="eyebrow">Ещё десять реальных серий</p><h2>Разные ниши. Та же глубина работы</h2></div>
           <p>У каждого кейса свой уровень доказательств. Мы отдельно показываем, что завершено, что уже запущено и где пока нет аналитики.</p>
         </div>
-        <div class="case-catalog-grid">
-          <article class="case-catalog-card">
+        <div class="portfolio-filters case-catalog-filters" data-filter-group data-filter-target="#case-catalog [data-category]" aria-label="Фильтр кейсов по сфере">
+          <div><strong>Показать кейсы</strong><div class="filter-row"><button class="filter-button active" type="button" data-filter="all">Все</button><button class="filter-button" type="button" data-filter="product">Еда и товары</button><button class="filter-button" type="button" data-filter="services">Услуги</button><button class="filter-button" type="button" data-filter="experts">Эксперты</button><button class="filter-button" type="button" data-filter="sport">Спорт</button><button class="filter-button" type="button" data-filter="social">Социальные</button><button class="filter-button" type="button" data-filter="local">Локальный бизнес</button></div></div>
+        </div>
+        <div class="case-catalog-grid" id="case-catalog">
+          <article class="case-catalog-card" data-category="services experts">
             <a class="case-catalog-preview" href="case-borodulina-tape.html" aria-label="Открыть кейс BORODULINA TAPE">
               <img src="assets/cases/borodulina-tape/posts/01.webp" alt="Сезонная публикация BORODULINA TAPE" loading="lazy">
               <img src="assets/cases/borodulina-tape/posts/03.webp" alt="Карусель об ошибках в тейпировании" loading="lazy">
@@ -48,7 +51,7 @@
             </div>
           </article>
 
-          <article class="case-catalog-card">
+          <article class="case-catalog-card" data-category="social">
             <a class="case-catalog-preview" href="case-dobroe-serdtse.html" aria-label="Открыть кейс фонда Доброе сердце">
               <img src="assets/cases/dobroe-serdtse/posts/01.webp" alt="Публикация фонда Доброе сердце" loading="lazy">
               <img src="assets/cases/dobroe-serdtse/carousels/02/01.webp" alt="Обложка карусели о помощи фонду" loading="lazy">
@@ -63,7 +66,7 @@
             </div>
           </article>
 
-          <article class="case-catalog-card">
+          <article class="case-catalog-card" data-category="product local">
             <a class="case-catalog-preview" href="case-yagodny-ray.html" aria-label="Открыть кейс Ягодный Рай">
               <img src="assets/cases/yagodny-ray/posts/01.jpg" alt="Публикация о фермерском проекте Ягодный Рай" loading="lazy">
               <img src="assets/cases/yagodny-ray/posts/03.jpg" alt="Публикация о клубнике и сезонном продукте" loading="lazy">
@@ -78,7 +81,7 @@
             </div>
           </article>
 
-          <article class="case-catalog-card">
+          <article class="case-catalog-card" data-category="product local">
             <a class="case-catalog-preview" href="case-chebusser.html" aria-label="Открыть кейс ЧЕБУССЭР">
               <img src="assets/cases/chebusser/posts/01.jpg" alt="Публикация ЧЕБУССЭР о тринадцати начинках" loading="lazy">
               <img src="assets/cases/chebusser/carousels/03/01.jpg" alt="Обложка полезной карусели ЧЕБУССЭР" loading="lazy">
@@ -93,7 +96,7 @@
             </div>
           </article>
 
-          <article class="case-catalog-card">
+          <article class="case-catalog-card" data-category="services experts">
             <a class="case-catalog-preview" href="case-silny-parus.html" aria-label="Открыть кейс Сильный Парус">
               <img src="assets/cases/silny-parus/carousels/01/01.jpg" alt="Обложка карусели о коллекторах" loading="lazy">
               <img src="assets/cases/silny-parus/carousels/09/01.jpg" alt="Обложка карусели о выборе юриста" loading="lazy">
@@ -108,7 +111,7 @@
             </div>
           </article>
 
-          <article class="case-catalog-card">
+          <article class="case-catalog-card" data-category="sport local">
             <a class="case-catalog-preview" href="case-orange-style.html" aria-label="Открыть кейс Orange Style">
               <img src="assets/cases/orange-style/posts/01.jpg" alt="Пост Orange Style о тренировках летом" loading="lazy">
               <img src="assets/cases/orange-style/posts/05.jpg" alt="Пост Orange Style о семейном фитнесе" loading="lazy">
@@ -123,7 +126,7 @@
             </div>
           </article>
 
-          <article class="case-catalog-card">
+          <article class="case-catalog-card" data-category="sport local">
             <a class="case-catalog-preview" href="case-dan-gun.html" aria-label="Открыть кейс Дан-Гун">
               <img src="assets/cases/dan-gun/posts/01.jpg" alt="Пост Дан-Гун о мифе про агрессию" loading="lazy">
               <img src="assets/cases/dan-gun/carousels/07/01.jpg" alt="Обложка карусели о пути ученика" loading="lazy">
@@ -138,7 +141,7 @@
             </div>
           </article>
 
-          <article class="case-catalog-card">
+          <article class="case-catalog-card" data-category="sport product experts">
             <a class="case-catalog-preview" href="case-sidcobra.html" aria-label="Открыть кейс SIDCOBRA">
               <img src="assets/cases/sidcobra/posts/01.jpg" alt="Публикация SIDCOBRA о работе тренера" loading="lazy">
               <img src="assets/cases/sidcobra/carousels/03/01.jpg" alt="Обложка экспертной карусели SIDCOBRA" loading="lazy">
@@ -153,7 +156,7 @@
             </div>
           </article>
 
-          <article class="case-catalog-card">
+          <article class="case-catalog-card" data-category="experts services">
             <a class="case-catalog-preview" href="case-roman-sedov.html" aria-label="Открыть кейс ведущего Романа Седова">
               <img src="assets/cases/roman-sedov/posts/01.jpg" alt="Карусель Романа Седова о тайминге свадьбы" loading="lazy">
               <img src="assets/cases/roman-sedov/posts/03.jpg" alt="Карусель Романа Седова об организации юбилея" loading="lazy">
@@ -168,7 +171,7 @@
             </div>
           </article>
 
-          <article class="case-catalog-card">
+          <article class="case-catalog-card" data-category="services local">
             <a class="case-catalog-preview" href="case-electric-monchegorsk.html" aria-label="Открыть кейс Электрик Мончегорск">
               <img src="assets/cases/electric-monchegorsk/posts/01.jpg" alt="Публикация Электрик Мончегорск" loading="lazy">
               <img src="assets/cases/electric-monchegorsk/carousels/04/01.jpg" alt="Обложка чек-листа приёмки электромонтажа" loading="lazy">
