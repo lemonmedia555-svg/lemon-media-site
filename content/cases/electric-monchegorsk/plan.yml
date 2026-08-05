@@ -1,0 +1,228 @@
+version: 1
+brand: lemonmedia
+case_id: electric-monchegorsk
+period: "2026-07/08"
+language: ru
+
+scope:
+  publications: 10
+  static_posts: 8
+  carousel_publications: 2
+  carousel_slides: 14
+  stories_sequences: 1
+  stories_frames: 5
+  visual_files: 27
+  platform_count: 1
+
+claim_rule: "Цели ниже описывают маркетинговую задачу материалов. Подтверждены утверждение визуала и запуск календаря ВКонтакте, но метрики и коммерческий эффект не зафиксированы."
+
+schedule:
+  platform: vk
+  starts_at: "2026-07-30 08:00"
+  ends_at: "2026-08-17 08:00"
+  frequency: every-two-days
+  publication_time: "08:00"
+  status: launched-and-confirmed
+
+publications:
+  - number: 1
+    id: publication-01
+    format: static-post
+    category: useful
+    title: "Как выбрать электрика без переделок"
+    asset: "assets/cases/electric-monchegorsk/posts/01.jpg"
+    goals:
+      - reduce-choice-risk
+      - demonstrate-expertise
+
+  - number: 2
+    id: publication-02
+    format: static-post
+    category: work-showcase
+    title: "Бредова, 19: замена аварийной проводки"
+    asset: "assets/cases/electric-monchegorsk/posts/02.jpg"
+    goals:
+      - show-real-work
+      - build-trust
+
+  - number: 3
+    id: publication-03
+    format: static-post
+    category: myth-busting
+    title: "Старую проводку можно не менять?"
+    asset: "assets/cases/electric-monchegorsk/posts/03.jpg"
+    goals:
+      - explain-risk
+      - demonstrate-expertise
+
+  - number: 4
+    id: publication-04
+    format: carousel
+    slide_count: 7
+    category: useful
+    title: "Как принять работу электрика: чек-лист"
+    goals:
+      - reduce-choice-risk
+      - encourage-saves
+    slides:
+      - number: 1
+        role: cover
+        topic: "Чек-лист приёмки работы электрика"
+        asset: "assets/cases/electric-monchegorsk/carousels/04/01.jpg"
+      - number: 2
+        role: check
+        topic: "Проверить результат до закрытия стен"
+        asset: "assets/cases/electric-monchegorsk/carousels/04/02.jpg"
+      - number: 3
+        role: check
+        topic: "Проверить каждую розетку и группу света"
+        asset: "assets/cases/electric-monchegorsk/carousels/04/03.jpg"
+      - number: 4
+        role: check
+        topic: "Подписать автоматы по зонам"
+        asset: "assets/cases/electric-monchegorsk/carousels/04/04.jpg"
+      - number: 5
+        role: check
+        topic: "Проверить кабель и сечение по нагрузке"
+        asset: "assets/cases/electric-monchegorsk/carousels/04/05.jpg"
+      - number: 6
+        role: proof
+        topic: "Получить объяснение каждой линии"
+        asset: "assets/cases/electric-monchegorsk/carousels/04/06.jpg"
+      - number: 7
+        role: call-to-action
+        topic: "Сохранить чек-лист до приёмки"
+        asset: "assets/cases/electric-monchegorsk/carousels/04/07.jpg"
+
+  - number: 5
+    id: publication-05
+    format: static-post
+    category: offer
+    title: "Бесплатный замер и фиксированная смета"
+    asset: "assets/cases/electric-monchegorsk/posts/05.jpg"
+    historical_terms: true
+    goals:
+      - lead-request
+      - reduce-choice-risk
+
+  - number: 6
+    id: publication-06
+    format: static-post
+    category: useful
+    title: "Проводка в деревянном доме: скрытая или наружная"
+    asset: "assets/cases/electric-monchegorsk/posts/06.jpg"
+    goals:
+      - demonstrate-expertise
+      - help-choice
+
+  - number: 7
+    id: publication-07
+    format: carousel
+    slide_count: 7
+    category: work-showcase
+    title: "Гараж под мастерскую: было и стало"
+    quality_control_note: "Фотографии другого объекта заменены на материалы нужного гаража до утверждения."
+    goals:
+      - show-real-work
+      - build-trust
+    slides:
+      - number: 1
+        role: cover
+        topic: "Гараж под мастерскую: было и стало"
+        asset: "assets/cases/electric-monchegorsk/carousels/07/01.jpg"
+      - number: 2
+        role: problem
+        topic: "Старого щитка не хватало даже на несколько розеток и свет"
+        asset: "assets/cases/electric-monchegorsk/carousels/07/02.jpg"
+      - number: 3
+        role: before
+        topic: "Одна линия на весь гараж"
+        asset: "assets/cases/electric-monchegorsk/carousels/07/03.jpg"
+      - number: 4
+        role: need
+        topic: "Нужна одновременная работа сварочника и компрессора"
+        asset: "assets/cases/electric-monchegorsk/carousels/07/04.jpg"
+      - number: 5
+        role: after
+        topic: "Увеличенный щит с запасом под мастерскую"
+        asset: "assets/cases/electric-monchegorsk/carousels/07/05.jpg"
+      - number: 6
+        role: after
+        topic: "Линии разведены без перегруза"
+        asset: "assets/cases/electric-monchegorsk/carousels/07/06.jpg"
+      - number: 7
+        role: call-to-action
+        topic: "Приглашение спланировать мастерскую в гараже"
+        asset: "assets/cases/electric-monchegorsk/carousels/07/07.jpg"
+
+  - number: 8
+    id: publication-08
+    format: static-post
+    category: myth-busting
+    title: "Выбивает автомат? Не ставьте мощнее"
+    asset: "assets/cases/electric-monchegorsk/posts/08.jpg"
+    goals:
+      - explain-risk
+      - demonstrate-expertise
+
+  - number: 9
+    id: publication-09
+    format: static-post
+    category: useful
+    title: "Сколько розеток нужно на самом деле"
+    asset: "assets/cases/electric-monchegorsk/posts/09.jpg"
+    goals:
+      - encourage-saves
+      - help-planning
+
+  - number: 10
+    id: publication-10
+    format: static-post
+    category: offer
+    title: "Материал наш — оплата после работ"
+    asset: "assets/cases/electric-monchegorsk/posts/10.jpg"
+    historical_terms: true
+    goals:
+      - reduce-choice-risk
+      - lead-request
+
+stories:
+  - id: stories-01
+    format: stories-sequence
+    frame_count: 5
+    related_publication_id: publication-05
+    title: "Почему смету фиксируют после замера"
+    historical_terms: true
+    frames:
+      - number: 1
+        role: hook
+        topic: "Согласовали смету — почему она вырастает к концу"
+        asset: "assets/cases/electric-monchegorsk/stories/01.jpg"
+      - number: 2
+        role: problem
+        topic: "Предварительная цена часто заметно вырастает"
+        asset: "assets/cases/electric-monchegorsk/stories/02.jpg"
+      - number: 3
+        role: explanation
+        topic: "Рост появляется из-за оценки на глаз без выезда"
+        asset: "assets/cases/electric-monchegorsk/stories/03.jpg"
+      - number: 4
+        role: explanation
+        topic: "Незамеченные заранее работы увеличивают итог"
+        asset: "assets/cases/electric-monchegorsk/stories/04.jpg"
+      - number: 5
+        role: resolution
+        topic: "Сумму называют после замера и фиксируют"
+        asset: "assets/cases/electric-monchegorsk/stories/05.jpg"
+
+asset_display_notes:
+  post_and_carousel_aspect_ratio: "4:5"
+  stories_aspect_ratio: "9:16"
+  crop: false
+  web_post_and_carousel_dimensions: "1080 × 1350"
+  web_stories_dimensions: "1080 × 1920"
+  source_post_dimensions:
+    - "1620 × 2025"
+    - "2160 × 2700"
+  source_stories_dimensions: "1620 × 2880"
+  historical_commercial_terms: "Условия бесплатного замера, фиксированной сметы и оплаты после работ относятся к периоду проекта; не представлять их как текущую оферту."

@@ -4,9 +4,9 @@ language: ru
 
 counting:
   rule: "Считаются уникальные публикации. Слайды каруселей и размещения одного материала на разных площадках не считаются отдельными работами."
-  public_cases: 10
-  verified_publications_in_registry: 122
-  publishable_visualized_publications: 121
+  public_cases: 11
+  verified_publications_in_registry: 132
+  publishable_visualized_publications: 131
   note: "У фонда «Доброе сердце» одна из 10 утверждённых публикаций не входит в визуальную галерею: доступный макет не прошёл финальный QA."
 
 cases:
@@ -430,3 +430,45 @@ cases:
       - "Подтверждена загрузка черновиков, а не выход всех материалов в пяти сетях."
       - "Прямое клиентское утверждение финального дизайна не найдено."
       - "Продление №2 находится в производстве; метрик результата нет."
+
+  - id: electric-monchegorsk
+    slug: electric-monchegorsk
+    public_title: "Электрик Мончегорск — первый месяц контента для локального специалиста"
+    client_display_name: "Электрик Мончегорск"
+    period: "2026-07/2026-08"
+    release_window: "2026-07-30/2026-08-17"
+    niche: local-services
+    subniche: electrical-services
+    formats:
+      - static-post
+      - carousel
+      - stories-sequence
+    scope:
+      publications: 10
+      static_posts: 8
+      carousel_publications: 2
+      carousel_slides: 14
+      stories_sequences: 1
+      stories_frames: 5
+      visual_files: 27
+      confirmed_launch_platform_count: 1
+      confirmed_launch_platform_ids:
+        - vk
+    featured_goals:
+      - explain-service
+      - build-local-trust
+      - show-real-work
+      - remove-price-fears
+      - lead-measurement-request
+    data:
+      case: "cases/electric-monchegorsk/case.yml"
+      plan: "cases/electric-monchegorsk/plan.yml"
+    public_page: "case-electric-monchegorsk.html"
+    media_status: media-ready
+    portfolio_permission_status: permission-confirmed
+    publishable: true
+    publish_blockers: []
+    evidence_limitations:
+      - "Запуск подтверждён только во ВКонтакте."
+      - "Охваты, обращения, продажи и публичный отзыв не найдены."
+      - "Коммерческие условия внутри макетов относятся к периоду проекта."
