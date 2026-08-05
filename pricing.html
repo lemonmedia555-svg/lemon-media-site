@@ -25,7 +25,13 @@
         <aside class="logic-note"><strong>Задача страницы:</strong> дать точную цену, объяснить состав и перевести в заказ. Демо и обязательный разговор не нужны.</aside>
         <p class="eyebrow">Цены без запроса менеджеру</p>
         <h1>Вы платите за объём контента, а не за число соцсетей</h1>
-        <p class="lead">Один пост публикуется во всех подключённых площадках без доплаты. Выберите 10, 15, 20 или 30 постов и при желании добавьте карусели.</p>
+        <p class="lead">Один пост публикуется во всех подключённых площадках без доплаты. Точная сумма сразу считается для 10, 15, 20 или 30 постов и выбранных каруселей.</p>
+        <div class="deliverable-equation" style="margin-top:32px;">
+          <div><strong>10</strong><span>готовых постов</span></div><b>×</b>
+          <div><strong>до 5</strong><span>площадок</span></div><b>=</b>
+          <div><strong>до 50</strong><span>размещений</span></div><b>за</b>
+          <div><strong>4 990 ₽</strong><span>за месяц</span></div>
+        </div>
       </div>
     </section>
 
@@ -34,7 +40,7 @@
         <aside class="logic-note"><strong>Продуктовая логика:</strong> сначала базовый объём, потом точечные усиления. Это проще и честнее большого каталога услуг.</aside>
         <div class="section-head">
           <div><p class="eyebrow">Калькулятор</p><h2>Соберите свой месяц</h2></div>
-          <p>Стоимость мини‑прогрева пока не включена: её нужно утвердить до запуска.</p>
+          <p>Сначала выбираете базовый объём, затем усиливаете нужные публикации. Итог виден до заявки.</p>
         </div>
         <div class="calculator">
           <div class="calculator-panel">
@@ -46,21 +52,26 @@
               <button class="plan-button" type="button" data-plan data-posts="30" data-price="14990">30 · 14 990 ₽</button>
             </div>
             <div class="calculator-row">
-              <div><h3>2. Сколько постов сделать каруселями?</h3><p>Каждая карусель — апгрейд выбранного поста за +250 ₽.</p></div>
-              <input type="number" value="0" min="0" max="10" aria-label="Количество каруселей" data-carousel-count>
+              <div><h3>2. Сколько постов сделать каруселями?</h3><p>Каждая карусель — апгрейд выбранного поста до 7 слайдов за +250 ₽.</p></div>
+              <input type="number" value="0" min="0" max="10" step="1" inputmode="numeric" aria-label="Количество каруселей" data-carousel-count>
             </div>
             <div class="calculator-row">
-              <div><h3>3. Добавить мини‑прогрев?</h3><p>5 связанных сторис под одну тему, акцию или публикацию.</p></div>
-              <span class="status">Цена не утверждена</span>
+              <div><h3>3. Отметить интерес к мини‑прогреву?</h3><p>5 связанных сторис под одну тему. Пока цена не утверждена, выбор не входит в сумму.</p></div>
+              <select aria-label="Интерес к мини-прогреву" data-story-interest><option value="0">Не нужен</option><option value="1">Интересует 1 мини‑прогрев</option><option value="2">Интересуют 2 мини‑прогрева</option><option value="4">Интересуют 4 мини‑прогрева</option></select>
             </div>
           </div>
           <aside class="calculator-total">
             <p class="eyebrow">Итого за месяц</p>
             <output data-total-output>4 990 ₽</output>
+            <div class="bundle-visual" aria-live="polite">
+              <div class="bundle-slots" data-bundle-slots aria-label="Состав пакета по постам"></div>
+              <div class="bundle-story-stack" data-bundle-stories hidden></div>
+            </div>
             <p><strong><span data-posts-output>10</span> постов:</strong> <span data-base-output>4 990 ₽</span></p>
             <p><strong>Карусели:</strong> <span data-carousel-output>0 ₽</span></p>
-            <p class="legal-note">Мини‑прогрев не включён в расчёт.</p>
-            <a class="btn btn-accent" href="start.html" style="width: 100%; margin-top: 18px;">Перейти к началу работы</a>
+            <p data-story-output><strong>Мини‑прогревы:</strong> не выбраны</p>
+            <p class="legal-note">Итог выше точный для базы и каруселей. Интерес к сторис передаётся менеджеру отдельно и ничего не добавляет без согласия.</p>
+            <a class="btn btn-accent" href="start.html?plan=10" data-order-link style="width: 100%; margin-top: 18px;">Продолжить с этим пакетом</a>
           </aside>
         </div>
       </div>
@@ -73,7 +84,7 @@
         <div class="grid-3">
           <article class="card"><h3>До дизайна</h3><ul class="check-list compact"><li>бриф и материалы;</li><li>темы и контент‑план;</li><li>тексты;</li><li>согласование текстов.</li></ul></article>
           <article class="card"><h3>Производство</h3><ul class="check-list compact"><li>дизайн в стиле бренда;</li><li>адаптация к площадкам;</li><li>два пакета правок;</li><li>менеджер на связи.</li></ul></article>
-          <article class="card"><h3>После согласования</h3><ul class="check-list compact"><li>публикация по графику;</li><li>во все подключённые соцсети;</li><li>отчёт о выполнении;</li><li>14 дней на первую партию.</li></ul></article>
+          <article class="card"><h3>После согласования</h3><ul class="check-list compact"><li>публикация по графику;</li><li>во все подключённые соцсети;</li><li>менеджер и статусы работы;</li><li>отчёт о выполнении;</li><li>14 дней на первую партию.</li></ul></article>
         </div>
       </div>
     </section>
@@ -96,7 +107,7 @@
     </section>
   </main>
 
-  <footer class="site-footer"><div class="container footer-grid"><div><a class="brand" href="index.html"><span class="brand-dot"></span>lemonmedia</a><p class="footer-note">Подписка на регулярный контент для российского малого и среднего бизнеса.</p></div><div class="footer-column"><strong>Продукт</strong><a href="pricing.html">Цены</a><a href="process.html">Как работаем</a><a href="examples.html">Работы</a></div><div class="footer-column"><strong>Компания</strong><a href="about.html">О нас</a><a href="reviews.html">Отзывы</a><a href="articles.html">Статьи</a></div><div class="footer-column"><strong>Документы</strong><a href="#">Оферта [нужна]</a><a href="#">Гарантия [нужна]</a><a href="#">Конфиденциальность [нужна]</a></div></div></footer>
+  <footer class="site-footer"><div class="container footer-grid"><div><a class="brand" href="index.html"><span class="brand-dot"></span>lemonmedia</a><p class="footer-note">Подписка на регулярный контент для российского малого и среднего бизнеса.</p></div><div class="footer-column"><strong>Продукт</strong><a href="pricing.html">Цены</a><a href="process.html">Как работаем</a><a href="examples.html">Работы</a></div><div class="footer-column"><strong>Компания</strong><a href="about.html">О нас</a><a href="reviews.html">Отзывы</a><a href="articles.html">Статьи</a></div><div class="footer-column"><strong>Документы</strong><a href="legal.html#offer">Статус оферты</a><a href="guarantee.html">Условия гарантии</a><a href="legal.html#privacy">Статус политики</a></div></div></footer>
   <script src="assets/js/prototype.js"></script>
 </body>
 </html>

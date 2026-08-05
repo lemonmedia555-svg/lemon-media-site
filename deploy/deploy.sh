@@ -7,6 +7,7 @@
 #   3. Тестирует конфиг и делает graceful reload
 # Требования:
 #   - sshpass (brew install hudochenkov/sshpass/sshpass на macOS)
+#   - переменная окружения LEMON_VPS_PASS
 #   - rsync (есть в системе по умолчанию)
 # =====================================================================
 set -euo pipefail
@@ -14,7 +15,7 @@ set -euo pipefail
 # Конфиг
 SSH_HOST="5.182.86.152"
 SSH_USER="root"
-SSH_PASS="${LEMON_VPS_PASS:-VqX4EHaW2tr9}"   # лучше задать в env
+SSH_PASS="${LEMON_VPS_PASS:?Перед запуском задайте LEMON_VPS_PASS}"
 REMOTE_ROOT="/var/www/lemon-media"
 REMOTE_NGINX_CONF="/etc/nginx/sites-available/lemon-media"
 REMOTE_NGINX_LINK="/etc/nginx/sites-enabled/lemon-media"
@@ -34,7 +35,7 @@ command -v sshpass >/dev/null || { err "sshpass не установлен. brew 
 command -v rsync   >/dev/null || { err "rsync не установлен"; exit 1; }
 
 SSHPASS_CMD="sshpass -p $SSH_PASS"
-SSH_OPTS="-o StrictHostKeyChecking=no -o ConnectTimeout=15"
+SSH_OPTS="-o StrictHostKeyChecking=accept-new -o ConnectTimeout=15"
 
 # ============= 1. Готовим каталоги на сервере =============
 log "Создаём $REMOTE_ROOT на сервере (если нет)…"
@@ -77,7 +78,7 @@ $SSHPASS_CMD ssh $SSH_OPTS "$SSH_USER@$SSH_HOST" "
 
 # ============= 5. Smoke-тест =============
 log "Smoke-тест: проверяем коды ответа…"
-for path in / /pricing.html /book-demo.html /examples.html /reviews.html /about.html; do
+for path in / /pricing.html /start.html /audit.html /examples.html /reviews.html /about.html; do
   code=$(curl -s -o /dev/null -w '%{http_code}' "http://$SSH_HOST$path") || code='--'
   if [ "$code" = "200" ]; then
     echo "  ✓ $path → $code"
