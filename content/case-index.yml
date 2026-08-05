@@ -4,9 +4,9 @@ language: ru
 
 counting:
   rule: "Считаются уникальные публикации. Слайды каруселей и размещения одного материала на разных площадках не считаются отдельными работами."
-  public_cases: 11
-  verified_publications_in_registry: 132
-  publishable_visualized_publications: 131
+  public_cases: 12
+  verified_publications_in_registry: 143
+  publishable_visualized_publications: 142
   note: "У фонда «Доброе сердце» одна из 10 утверждённых публикаций не входит в визуальную галерею: доступный макет не прошёл финальный QA."
 
 cases:
@@ -472,3 +472,45 @@ cases:
       - "Запуск подтверждён только во ВКонтакте."
       - "Охваты, обращения, продажи и публичный отзыв не найдены."
       - "Коммерческие условия внутри макетов относятся к периоду проекта."
+
+  - id: olga-pravdyuk
+    slug: olga-pravdyuk
+    public_title: "Ольга Правдюк — понятный месяц контента о профориентации"
+    client_display_name: "Ольга Правдюк — «Профориентация — путь в профессию»"
+    period: "2026-07/2026-08"
+    release_window: "2026-07-29/2026-08-25"
+    niche: education
+    subniche: career-guidance
+    formats:
+      - static-post
+      - carousel
+    scope:
+      publications: 11
+      scheduled_publications: 10
+      bonus_publications: 1
+      static_posts: 8
+      carousel_publications: 3
+      carousel_slides: 21
+      visual_files: 29
+      confirmed_draft_platform_count: 1
+      confirmed_draft_platform_ids:
+        - vk
+    featured_goals:
+      - explain-service
+      - remove-myths
+      - reduce-parent-anxiety
+      - show-expertise
+      - answer-questions
+      - lead-to-consultation
+    data:
+      case: "cases/olga-pravdyuk/case.yml"
+      plan: "cases/olga-pravdyuk/plan.yml"
+    public_page: "case-olga-pravdyuk.html"
+    media_status: media-ready
+    portfolio_permission_status: permission-confirmed
+    publishable: true
+    publish_blockers: []
+    evidence_limitations:
+      - "Подтверждена загрузка черновиков, а не выход всех материалов во ВКонтакте."
+      - "Установка трёх виджетов, бизнес-метрики и прямой отзыв не подтверждены."
+      - "Образовательные результаты учеников нельзя приписывать работе lemonmedia."
