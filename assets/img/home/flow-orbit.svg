@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 560" fill="none">
+  <defs>
+    <linearGradient id="flow" x1="72" y1="70" x2="486" y2="492" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#7047EB"/>
+      <stop offset=".48" stop-color="#FF6657"/>
+      <stop offset="1" stop-color="#E8F653"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientTransform="translate(280 280) rotate(90) scale(224)">
+      <stop stop-color="#fff" stop-opacity=".88"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="blur" x="-80" y="-80" width="720" height="720" filterUnits="userSpaceOnUse">
+      <feGaussianBlur stdDeviation="28"/>
+    </filter>
+  </defs>
+  <circle cx="280" cy="280" r="216" stroke="url(#flow)" stroke-width="28" opacity=".38" filter="url(#blur)"/>
+  <circle cx="280" cy="280" r="196" stroke="url(#flow)" stroke-width="2" stroke-dasharray="9 13" opacity=".7"/>
+  <circle cx="280" cy="280" r="142" fill="url(#glow)"/>
+  <path d="M110 194C165 92 302 48 413 116C507 174 521 307 459 399C400 488 266 518 167 451C70 385 48 294 110 194Z" stroke="url(#flow)" stroke-width="4"/>
+  <circle cx="111" cy="194" r="15" fill="#7047EB"/>
+  <circle cx="459" cy="399" r="15" fill="#E8F653"/>
+  <circle cx="413" cy="116" r="11" fill="#FF6657"/>
+  <circle cx="167" cy="451" r="11" fill="#34D5E5"/>
+</svg>
