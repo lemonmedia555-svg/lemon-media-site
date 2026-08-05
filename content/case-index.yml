@@ -4,10 +4,10 @@ language: ru
 
 counting:
   rule: "Считаются уникальные публикации. Слайды каруселей и размещения одного материала на разных площадках не считаются отдельными работами."
-  public_cases: 34
-  verified_publications_in_registry: 415
-  publishable_visualized_publications: 395
-  note: "Подарочные карусели считаются отдельными уникальными публикациями, но не подменяют основные календарные слоты. У фонда «Доброе сердце» один макет не прошёл финальный QA. В кейсе Ольги Андреевой четыре готовых поста оставлены вне публичной галереи до медицинской и юридической проверки формулировок. В кейсе Dava Life публично показаны пять макетов, которых не касался последний список правок. Новый цикл Colorplast, кейсы Налог Эксперт и «Кристалл» показаны с честными незавершёнными этапами. В INARI внутренние слайды с несверенными ценами и условиями не опубликованы. В кейсе «Атерис» макеты с именами и узнаваемыми сотрудниками исключены из публичной подборки. В кейсе «ЭЛЕКТРОНИКС» один слайд с крупным лицом исключён из публичной версии. В Oh! Beauty опубликована только нейтральная выборка без имён, чувствительных кадров, старых акций и медицинских обещаний."
+  public_cases: 36
+  verified_publications_in_registry: 437
+  publishable_visualized_publications: 410
+  note: "Подарочные карусели считаются отдельными уникальными публикациями, но не подменяют основные календарные слоты. У фонда «Доброе сердце» один макет не прошёл финальный QA. В кейсе Ольги Андреевой четыре готовых поста оставлены вне публичной галереи до медицинской и юридической проверки формулировок. В кейсе Dava Life публично показаны пять макетов, которых не касался последний список правок. Новый цикл Colorplast, кейсы Налог Эксперт и «Кристалл» показаны с честными незавершёнными этапами. В INARI внутренние слайды с несверенными ценами и условиями не опубликованы. В кейсе «Атерис» макеты с именами и узнаваемыми сотрудниками исключены из публичной подборки. В кейсе «ЭЛЕКТРОНИКС» один слайд с крупным лицом исключён из публичной версии. В Oh! Beauty опубликована только нейтральная выборка без имён, чувствительных кадров, старых акций и медицинских обещаний. В кейсе кардиолога показана только нейтральная выборка без списков симптомов, лекарственных тезисов, диагнозов, пациентов и исторических цен."
 
 cases:
   - id: saratov-kitchens-2026-08
@@ -1483,3 +1483,88 @@ cases:
     evidence_limitations:
       - "Фактический выход публикаций, охваты, обращения, продажи и окупаемость не заявляются."
       - "Коммерческие условия и сезонные сроки внутри материалов относятся к периоду проекта."
+
+  - id: lipniki
+    slug: lipniki
+    public_title: "Липники — контент-месяц для локального продуктового магазина"
+    client_display_name: "Липники"
+    period: "2026-08"
+    release_window: null
+    niche: local-retail
+    subniche: grocery-store
+    formats:
+      - static-post
+      - carousel
+    scope:
+      publications: 11
+      main_publications: 10
+      bonus_publications: 1
+      static_posts: 8
+      carousel_publications: 3
+      carousel_slides: 20
+      visual_files: 28
+      planned_platform_count: 1
+      planned_platform_ids:
+        - max
+    featured_goals:
+      - show-fresh-assortment
+      - build-local-trust
+      - help-product-choice
+      - encourage-comments
+      - encourage-saves
+      - lead-to-messages-and-store
+    data:
+      case: "cases/lipniki/case.yml"
+      plan: "cases/lipniki/plan.yml"
+    public_page: "case-lipniki.html"
+    media_status: media-ready-complete-package
+    portfolio_permission_status: permission-confirmed
+    publishable: true
+    publish_blockers: []
+    evidence_limitations:
+      - "Пакет подготовлен к загрузке; фактический выход публикаций и коммерческие метрики не заявляются."
+      - "Исторические цены из плана не перенесены в публичный кейс."
+
+  - id: lisitsinsky
+    slug: lisitsinsky
+    public_title: "Кардиолог Александр Лисицинский — экспертная контент-система"
+    client_display_name: "Александр Лисицинский"
+    period: "2026-07"
+    release_window: null
+    niche: healthcare
+    subniche: cardiology
+    formats:
+      - static-post
+      - carousel
+    scope:
+      publications: 11
+      main_publications: 10
+      bonus_publications: 1
+      static_posts: 8
+      carousel_publications: 3
+      carousel_slides: 21
+      source_visual_files: 29
+      publishable_visual_files: 5
+      publishable_visualized_publications: 4
+      planned_platform_count: 2
+      planned_platform_ids:
+        - vk
+        - telegram
+    featured_goals:
+      - reduce-information-overload
+      - set-self-diagnosis-boundary
+      - explain-doctor-process
+      - build-expert-trust
+      - lead-to-consultation
+    data:
+      case: "cases/lisitsinsky/case.yml"
+      plan: "cases/lisitsinsky/plan.yml"
+    public_page: "case-lisitsinsky.html"
+    media_status: media-ready-safe-selection
+    portfolio_permission_status: permission-confirmed
+    publishable: true
+    publish_blockers: []
+    evidence_limitations:
+      - "Публично показаны три нейтральных поста и два безопасных слайда одной карусели."
+      - "Списки симптомов, лекарственные тезисы, диагностические выводы, пациенты и исторические цены исключены."
+      - "Публикация, охваты, обращения, продажи и медицинский эффект не заявляются."
