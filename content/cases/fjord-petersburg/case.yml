@@ -1,0 +1,121 @@
+version: 1
+brand: lemonmedia
+id: fjord-petersburg
+slug: fjord-petersburg
+language: ru
+
+identity:
+  public_title: "Fjord-Petersburg — контент для водных прогулок в Санкт-Петербурге"
+  client_display_name: "Fjord-Petersburg"
+  period: "2026-07/2026-08"
+  niche: tourism-and-leisure
+  subniche: boat-rental-and-water-trips
+  geography: saint-petersburg
+  client_type: new-client
+
+summary:
+  short: "10 основных публикаций для VK: маршруты, выбор судна, сценарии событий, ответы на сомнения и предложения. Две карусели вошли в пакет, ещё одна сделана подарком."
+  content_task: "Наполнить готовую страницу системным контентом, показать услуги и преимущества, помочь выбрать судно и маршрут и перевести интерес в сообщение."
+  result_wording: "Подготовлены и утверждены 10 основных публикаций, включая две карусели, и подарочная карусель. В финальном комплекте 29 PNG. Десять основных публикаций загружены в PostMyPost как черновики VK."
+
+scope:
+  main_publications: 10
+  bonus_publications: 1
+  total_content_units: 11
+  static_posts: 8
+  main_carousels: 2
+  bonus_carousels: 1
+  total_carousels: 3
+  slides_per_carousel: 7
+  carousel_slides: 21
+  source_visual_files: 29
+  public_safe_visual_files: 15
+  excluded_people_visual_files: 14
+  source_dimensions: "4320 × 5400"
+  web_dimensions: "864 × 1080"
+  aspect_ratio: "4:5"
+  planned_platforms: [vk]
+
+marketing_logic:
+  premise: "Клиенту водной прогулки нужно выбрать не только судно. Сначала он выбирает повод, маршрут, атмосферу и формат отдыха — контент должен сделать этот выбор простым."
+  sequence:
+    - imagine-the-occasion
+    - understand-the-options
+    - remove-rental-myths
+    - choose-vessel-and-route
+    - send-a-message
+  rubric_distribution:
+    company-and-work: 2
+    useful-content: 2
+    myth-busting: 2
+    engagement: 2
+    offers: 2
+
+workflow:
+  brief_completed: true
+  content_plan_completed: true
+  copy_completed: true
+  visual_completed: true
+  client_visual_approval: confirmed
+  loaded_as_drafts: true
+  draft_publication_count: 10
+  draft_platform: vk
+  source_final_folder_file_count: 29
+
+draft_calendar_evidence:
+  prepared_publication_count: 10
+  platform: vk
+  public_wording: "Десять основных материалов загружены в календарь VK как черновики. Фактический выход каждого поста отдельно не заявляется."
+
+evidence:
+  confirmed:
+    - "Пакет содержит 10 основных публикаций: 8 одиночных постов и 2 карусели."
+    - "Дополнительно подготовлена подарочная карусель из 7 слайдов."
+    - "В трёх каруселях 21 слайд, а во всём финальном комплекте 29 PNG."
+    - "Контент-план и тексты утверждены."
+    - "Финальный визуал утверждён клиентом."
+    - "Десять основных публикаций загружены в PostMyPost как черновики VK."
+  not_claimed:
+    - "Фактический выход всех десяти публикаций."
+    - "Охваты, просмотры, сохранения, обращения, продажи и окупаемость."
+    - "Текущая актуальность сезонных предложений, свободных дат и исторических цен."
+    - "Независимая проверка лицензий, реестра и страхования, упомянутых в клиентских текстах."
+  analytics: null
+  client_review: null
+
+publication_control:
+  portfolio_permission: confirmed_by_project_owner
+  final_media: ready
+  publishable: true
+  privacy_mode: safe-public-selection
+  recognizable_people_release: not-found
+  selection_rule: "Показывать только финальные макеты без узнаваемых людей. Допустимы дальние фигуры, у которых невозможно различить лицо."
+  excluded_reason: "Четырнадцать финальных файлов не включены в публичную галерею из-за людей в кадре, даже если часть фигур небольшая."
+  display_notes:
+    - "Полный объём проекта всегда указывать отдельно от публичной выборки: 29 финальных PNG и 15 показанных безопасных файлов."
+    - "Не называть загрузку черновиков фактической публикацией."
+    - "Не добавлять метрики без отдельной аналитики."
+    - "Не переносить в публичный кейс телефон, почту, внутренние ссылки и данные сделки."
+    - "Цены и сезонные условия в исходном плане считать историческими."
+
+assets:
+  root: "assets/cases/fjord-petersburg"
+  safe_static_posts:
+    - "posts/01.jpg"
+    - "posts/05.jpg"
+  safe_carousel_03:
+    - "carousels/03/01.jpg"
+    - "carousels/03/03.jpg"
+    - "carousels/03/04.jpg"
+    - "carousels/03/06.jpg"
+    - "carousels/03/07.jpg"
+  safe_carousel_06:
+    - "carousels/06/02.jpg"
+    - "carousels/06/03.jpg"
+    - "carousels/06/04.jpg"
+    - "carousels/06/05.jpg"
+  safe_bonus_carousel:
+    - "carousels/bonus/02.jpg"
+    - "carousels/bonus/04.jpg"
+    - "carousels/bonus/05.jpg"
+    - "carousels/bonus/06.jpg"

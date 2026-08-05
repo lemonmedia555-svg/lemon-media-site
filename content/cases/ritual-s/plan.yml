@@ -1,0 +1,237 @@
+version: 1
+brand: lemonmedia
+case_id: ritual-s
+period: "2026-07"
+language: ru
+
+claim_rule: "Цели описывают роль контента, а не доказанный коммерческий результат. Подтверждены контент-план, финальный визуальный пакет и утверждение визуала; публикация и метрики не заявляются."
+
+distribution:
+  prepared_for:
+    - vk
+    - telegram
+    - max
+  primary_platform: vk
+
+rubric_balance:
+  useful_content: 4
+  product_showcase: 4
+  completed_work: 3
+  offer: 3
+  backstage: 2
+  trust_and_reviews: 2
+  myth_busting: 2
+
+publications:
+  - number: 1
+    id: publication-01
+    format: carousel
+    category: useful-content
+    title: "Гранит или мрамор: что выбрать"
+    slide_count: 7
+    goals: [reduce-choice-anxiety, explain-product-differences, encourage-saves]
+    assets:
+      - "assets/cases/ritual-s/carousels/01/01.webp"
+      - "assets/cases/ritual-s/carousels/01/02.webp"
+      - "assets/cases/ritual-s/carousels/01/03.webp"
+      - "assets/cases/ritual-s/carousels/01/04.webp"
+      - "assets/cases/ritual-s/carousels/01/05.webp"
+      - "assets/cases/ritual-s/carousels/01/06.webp"
+      - "assets/cases/ritual-s/carousels/01/07.webp"
+
+  - number: 2
+    id: publication-02
+    format: static-post
+    category: completed-work
+    title: "Семейный комплекс"
+    public_asset: false
+    withheld_reason: personal-portraits-and-inscriptions
+    goals: [show-complete-solution, build-trust]
+
+  - number: 3
+    id: publication-03
+    format: carousel
+    category: completed-work
+    title: "Семейный комплекс: от задачи до решения"
+    slide_count: 7
+    public_asset: false
+    withheld_reason: personal-portraits-inscriptions-and-cemetery-scenes
+    goals: [show-process, show-complete-solution, build-trust]
+
+  - number: 4
+    id: publication-04
+    format: static-post
+    category: backstage
+    title: "Свой камень и собственное производство"
+    asset: "assets/cases/ritual-s/posts/04.webp"
+    goals: [show-production-system, build-trust]
+
+  - number: 5
+    id: publication-05
+    format: static-post
+    category: offer
+    title: "Старт линейки эконом-моделей"
+    asset: "assets/cases/ritual-s/posts/05.webp"
+    goals: [show-accessible-option, lead-to-messages]
+
+  - number: 6
+    id: publication-06
+    format: static-post
+    category: useful-content
+    title: "Когда устанавливать памятник"
+    public_asset: false
+    withheld_reason: sensitive-cemetery-scene
+    goals: [answer-timing-question, reduce-choice-anxiety]
+
+  - number: 7
+    id: publication-07
+    format: static-post
+    category: trust-and-reviews
+    title: "Отзыв о семейном заказе"
+    asset: "assets/cases/ritual-s/posts/07.webp"
+    goals: [build-trust, reduce-choice-anxiety]
+
+  - number: 8
+    id: publication-08
+    format: carousel
+    category: product-showcase
+    title: "Почему один памятник дороже другого"
+    slide_count: 7
+    goals: [explain-product-differences, explain-price-factors, encourage-saves]
+    assets:
+      - "assets/cases/ritual-s/carousels/08/01.webp"
+      - "assets/cases/ritual-s/carousels/08/02.webp"
+      - "assets/cases/ritual-s/carousels/08/03.webp"
+      - "assets/cases/ritual-s/carousels/08/04.webp"
+      - "assets/cases/ritual-s/carousels/08/05.webp"
+      - "assets/cases/ritual-s/carousels/08/06.webp"
+      - "assets/cases/ritual-s/carousels/08/07.webp"
+
+  - number: 9
+    id: publication-09
+    format: static-post
+    category: myth-busting
+    title: "Три мифа о памятниках"
+    asset: "assets/cases/ritual-s/posts/09.webp"
+    goals: [reduce-choice-anxiety, build-trust]
+
+  - number: 10
+    id: publication-10
+    format: static-post
+    category: completed-work
+    title: "Индивидуальный проект"
+    public_asset: false
+    withheld_reason: portrait-and-identifying-inscription
+    goals: [show-custom-solution, build-trust]
+
+  - number: 11
+    id: publication-11
+    format: static-post
+    category: product-showcase
+    title: "Мраморный комплект"
+    public_asset: false
+    withheld_reason: concrete-historical-price
+    goals: [show-complete-solution, lead-to-messages]
+
+  - number: 12
+    id: publication-12
+    format: carousel
+    category: useful-content
+    title: "Какую форму выбрать"
+    slide_count: 7
+    goals: [explain-product-differences, reduce-choice-anxiety, encourage-saves]
+    assets:
+      - "assets/cases/ritual-s/carousels/12/01.webp"
+      - "assets/cases/ritual-s/carousels/12/02.webp"
+      - "assets/cases/ritual-s/carousels/12/03.webp"
+      - "assets/cases/ritual-s/carousels/12/04.webp"
+      - "assets/cases/ritual-s/carousels/12/05.webp"
+      - "assets/cases/ritual-s/carousels/12/06.webp"
+      - "assets/cases/ritual-s/carousels/12/07.webp"
+
+  - number: 13
+    id: publication-13
+    format: static-post
+    category: product-showcase
+    title: "Портрет и барельеф"
+    public_asset: false
+    withheld_reason: portraits-and-identifying-inscriptions
+    goals: [show-personalization-options, explain-product-differences]
+
+  - number: 14
+    id: publication-14
+    format: static-post
+    category: backstage
+    title: "Шоурум: больше 30 образцов"
+    public_asset: false
+    withheld_reason: portraits-visible-in-showroom
+    goals: [show-product-range, lead-to-offline-choice]
+
+  - number: 15
+    id: publication-15
+    format: static-post
+    category: trust-and-reviews
+    title: "Отзыв о работе"
+    asset: "assets/cases/ritual-s/posts/15.webp"
+    goals: [build-trust, reduce-choice-anxiety]
+
+  - number: 16
+    id: publication-16
+    format: static-post
+    category: myth-busting
+    title: "Правда ли, что самому дешевле"
+    asset: "assets/cases/ritual-s/posts/16.webp"
+    goals: [explain-process-value, reduce-choice-anxiety]
+
+  - number: 17
+    id: publication-17
+    format: carousel
+    category: offer
+    title: "Линейка эконом-памятников"
+    slide_count: 7
+    goals: [show-accessible-option, explain-product-differences, lead-to-messages]
+    assets:
+      - "assets/cases/ritual-s/carousels/17/01.webp"
+      - "assets/cases/ritual-s/carousels/17/02.webp"
+      - "assets/cases/ritual-s/carousels/17/03.webp"
+      - "assets/cases/ritual-s/carousels/17/04.webp"
+      - "assets/cases/ritual-s/carousels/17/05.webp"
+      - "assets/cases/ritual-s/carousels/17/06.webp"
+      - "assets/cases/ritual-s/carousels/17/07.webp"
+
+  - number: 18
+    id: publication-18
+    format: static-post
+    category: useful-content
+    title: "Уход за памятником"
+    public_asset: false
+    withheld_reason: portraits-and-identifying-inscriptions
+    goals: [provide-aftercare-guidance, encourage-saves]
+
+  - number: 19
+    id: publication-19
+    format: static-post
+    category: product-showcase
+    title: "Благоустройство"
+    public_asset: false
+    withheld_reason: portrait-and-identifying-inscription
+    goals: [show-complete-solution, lead-to-messages]
+
+  - number: 20
+    id: publication-20
+    format: static-post
+    category: offer
+    title: "Сезонное предложение"
+    public_asset: false
+    withheld_reason: portrait-and-identifying-inscription
+    goals: [seasonal-demand, lead-to-messages]
+
+asset_display_notes:
+  aspect_ratio: "4:5"
+  source_dimensions: "1080 × 1350"
+  web_dimensions: "864 × 1080"
+  crop: false
+  public_asset_count: 34
+  internal_asset_count: 50
+  excluded_assets: "16 кадров исключены из-за лиц, имён, дат жизни, чувствительных сцен или конкретной цены."
+  stories: "Пять историй указаны в плане, но отсутствуют в финальной папке и не входят в публичный кейс."

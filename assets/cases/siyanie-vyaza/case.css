@@ -1,0 +1,127 @@
+.siyanie-case {
+  --wood: #9a633c;
+  --wood-dark: #4b2d1e;
+  --wood-soft: #efe1d2;
+}
+
+.siyanie-case .case-full-hero {
+  background:
+    radial-gradient(circle at 86% 16%, rgba(154, 99, 60, .27), transparent 34%),
+    linear-gradient(145deg, #faf5ee 0%, var(--paper) 72%);
+}
+
+.siyanie-case .case-hero-media {
+  box-shadow: 8px 8px 0 var(--wood);
+}
+
+.siyanie-case .case-metric-grid article {
+  border-color: rgba(75, 45, 30, .35);
+}
+
+.siyanie-case .case-metric-grid strong {
+  color: var(--wood-dark);
+}
+
+.siyanie-case .case-rubrics article {
+  background: linear-gradient(145deg, #fff 0%, #f8eee4 100%);
+}
+
+.siyanie-case .case-tab-list button[aria-selected="true"] {
+  background: #d2a87e;
+  color: #21140f;
+}
+
+.siyanie-carousel-flow {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  padding: 0;
+  margin: 24px 0 0;
+  list-style: none;
+}
+
+.siyanie-carousel-flow figure {
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid #454545;
+  border-radius: 16px;
+  background: #292929;
+}
+
+.siyanie-carousel-flow button {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: zoom-in;
+}
+
+.siyanie-carousel-flow img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  object-fit: contain;
+  transition: transform .2s ease;
+}
+
+.siyanie-carousel-flow button:hover img {
+  transform: scale(1.02);
+}
+
+.siyanie-carousel-flow figcaption {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 3px 8px;
+  padding: 13px;
+  color: #aaa;
+  font-size: 11px;
+}
+
+.siyanie-carousel-flow figcaption span {
+  grid-row: 1 / span 2;
+  color: #d2a87e;
+  font-weight: 800;
+}
+
+.siyanie-carousel-flow figcaption strong {
+  color: #fff;
+  font-size: 14px;
+}
+
+.siyanie-carousel-flow figcaption small {
+  font-size: 11px;
+}
+
+@media (max-width: 900px) {
+  .siyanie-carousel-flow {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .siyanie-case .case-hero-media {
+    box-shadow: 5px 5px 0 var(--wood);
+  }
+
+  .siyanie-case .case-tab-list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    overflow: visible;
+    border-radius: 16px;
+  }
+
+  .siyanie-case .case-tab-list button {
+    min-width: 0;
+    padding-inline: 8px;
+  }
+}
+
+@media (max-width: 520px) {
+  .siyanie-carousel-flow {
+    grid-template-columns: 1fr;
+    max-width: 360px;
+    margin-inline: auto;
+  }
+}

@@ -1,0 +1,155 @@
+version: 1
+brand: lemonmedia
+case_id: fjord-petersburg
+period: "2026-07/2026-08"
+language: ru
+
+claim_rule: "Цели ниже описывают роль контента, а не доказанный бизнес-результат. Подтверждены готовый комплект, согласование и загрузка десяти основных публикаций в черновики VK."
+
+scope:
+  main_publications: 10
+  bonus_publications: 1
+  static_posts: 8
+  main_carousels: 2
+  bonus_carousels: 1
+  carousel_slides: 21
+  source_visual_files: 29
+  public_safe_visual_files: 15
+  public_excluded_people_visual_files: 14
+
+rubrics:
+  - id: company-and-work
+    count: 2
+    purpose: "Показать, как проходят прогулки и как команда собирает маршрут под задачу."
+  - id: useful-content
+    count: 2
+    purpose: "Помочь выбрать судно, формат и пакет без перегруза."
+  - id: myth-busting
+    count: 2
+    purpose: "Снять ошибочные ожидания об аренде и одинаковости судов."
+  - id: engagement
+    count: 2
+    purpose: "Вовлечь через выбор повода и маршрута."
+  - id: offers
+    count: 2
+    purpose: "Перевести интерес к прогулке в сообщение и бронь."
+
+publications:
+  - number: 1
+    format: static-post
+    rubric: company-and-work
+    title: "Что видно с воды и как строится маршрут"
+    purpose: "Показать ценность водного ракурса и объяснить, что маршрут собирается под гостя."
+    public_assets:
+      - "assets/cases/fjord-petersburg/posts/01.jpg"
+
+  - number: 2
+    format: static-post
+    rubric: myth-busting
+    title: "Три мифа про аренду катера"
+    purpose: "Снять типичные сомнения до первого обращения."
+    public_assets: []
+    privacy_note: "Финальный макет не показан из-за человека в кадре."
+
+  - number: 3
+    format: carousel
+    rubric: company-and-work
+    title: "Лето на воде: как проходят наши прогулки"
+    purpose: "Показать разные сценарии — событие, атмосфера, виды и комплектацию."
+    slide_count: 7
+    public_safe_slide_count: 5
+    public_assets:
+      - "assets/cases/fjord-petersburg/carousels/03/01.jpg"
+      - "assets/cases/fjord-petersburg/carousels/03/03.jpg"
+      - "assets/cases/fjord-petersburg/carousels/03/04.jpg"
+      - "assets/cases/fjord-petersburg/carousels/03/06.jpg"
+      - "assets/cases/fjord-petersburg/carousels/03/07.jpg"
+    excluded_slides: [2, 5]
+
+  - number: 4
+    format: static-post
+    rubric: engagement
+    title: "Ради какого повода вы вышли бы на воду?"
+    purpose: "Помочь аудитории примерить продукт на собственную ситуацию."
+    public_assets: []
+    privacy_note: "Финальный макет не показан из-за узнаваемых людей."
+
+  - number: 5
+    format: static-post
+    rubric: offers
+    title: "Пик сезона: лучшие даты уходят первыми"
+    purpose: "Объяснить сезонный спрос и предложить заранее выбрать дату."
+    historical_terms: true
+    public_assets:
+      - "assets/cases/fjord-petersburg/posts/05.jpg"
+
+  - number: 6
+    format: carousel
+    rubric: useful-content
+    title: "Как выбрать судно под ваш повод"
+    purpose: "Разложить выбор по размеру компании, поводу, погоде и формату отдыха."
+    slide_count: 7
+    public_safe_slide_count: 4
+    public_assets:
+      - "assets/cases/fjord-petersburg/carousels/06/02.jpg"
+      - "assets/cases/fjord-petersburg/carousels/06/03.jpg"
+      - "assets/cases/fjord-petersburg/carousels/06/04.jpg"
+      - "assets/cases/fjord-petersburg/carousels/06/05.jpg"
+    excluded_slides: [1, 6, 7]
+
+  - number: 7
+    format: static-post
+    rubric: myth-busting
+    title: "Все катера одинаковые — почему нет?"
+    purpose: "Показать различия судов и ценность подбора под задачу."
+    public_assets: []
+    privacy_note: "Финальный макет не показан из-за людей в кадре."
+
+  - number: 8
+    format: static-post
+    rubric: offers
+    title: "Девичник на борту — яркие эмоции и атмосфера праздника на воде"
+    purpose: "Показать конкретный сценарий события и подвести к сообщению."
+    public_assets: []
+    privacy_note: "Финальный макет не показан из-за узнаваемых людей."
+
+  - number: 9
+    format: static-post
+    rubric: engagement
+    title: "Центр или залив — куда бы вы поехали на катере?"
+    purpose: "Вовлечь через понятный выбор двух маршрутов."
+    public_assets: []
+    privacy_note: "Финальный макет не показан из-за людей в кадре."
+
+  - number: 10
+    format: static-post
+    rubric: useful-content
+    title: "Цены и пакеты в одном месте"
+    purpose: "Собрать варианты в понятную точку выбора."
+    historical_terms: true
+    public_assets: []
+    privacy_note: "Финальный макет не показан из-за человека в кадре; цены относятся к периоду проекта."
+
+bonus:
+  - number: 11
+    format: carousel
+    rubric: useful-content
+    title: "Петербург, который видно только с воды"
+    purpose: "Дать сохраняемую подборку водных ракурсов города и мягко пригласить написать."
+    slide_count: 7
+    public_safe_slide_count: 4
+    public_assets:
+      - "assets/cases/fjord-petersburg/carousels/bonus/02.jpg"
+      - "assets/cases/fjord-petersburg/carousels/bonus/04.jpg"
+      - "assets/cases/fjord-petersburg/carousels/bonus/05.jpg"
+      - "assets/cases/fjord-petersburg/carousels/bonus/06.jpg"
+    excluded_slides: [1, 3, 7]
+    calendar_status: bonus-not-counted-among-ten-main-publications
+
+public_selection:
+  rule: "Только финальные материалы без узнаваемых лиц. Если люди попали в дальний план, лицо должно быть неразличимо."
+  shown_files: 15
+  excluded_files: 14
+  crop: false
+  dimensions: "864 × 1080"
+  format: jpeg

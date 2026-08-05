@@ -4,10 +4,10 @@ language: ru
 
 counting:
   rule: "Считаются уникальные публикации. Слайды каруселей и размещения одного материала на разных площадках не считаются отдельными работами."
-  public_cases: 36
-  verified_publications_in_registry: 437
-  publishable_visualized_publications: 410
-  note: "Подарочные карусели считаются отдельными уникальными публикациями, но не подменяют основные календарные слоты. У фонда «Доброе сердце» один макет не прошёл финальный QA. В кейсе Ольги Андреевой четыре готовых поста оставлены вне публичной галереи до медицинской и юридической проверки формулировок. В кейсе Dava Life публично показаны пять макетов, которых не касался последний список правок. Новый цикл Colorplast, кейсы Налог Эксперт и «Кристалл» показаны с честными незавершёнными этапами. В INARI внутренние слайды с несверенными ценами и условиями не опубликованы. В кейсе «Атерис» макеты с именами и узнаваемыми сотрудниками исключены из публичной подборки. В кейсе «ЭЛЕКТРОНИКС» один слайд с крупным лицом исключён из публичной версии. В Oh! Beauty опубликована только нейтральная выборка без имён, чувствительных кадров, старых акций и медицинских обещаний. В кейсе кардиолога показана только нейтральная выборка без списков симптомов, лекарственных тезисов, диагнозов, пациентов и исторических цен."
+  public_cases: 39
+  verified_publications_in_registry: 478
+  publishable_visualized_publications: 434
+  note: "Подарочные карусели считаются отдельными уникальными публикациями, но не подменяют основные календарные слоты. У фонда «Доброе сердце» один макет не прошёл финальный QA. В кейсе Ольги Андреевой четыре готовых поста оставлены вне публичной галереи до медицинской и юридической проверки формулировок. В кейсе Dava Life публично показаны пять макетов, которых не касался последний список правок. Новый цикл Colorplast, кейсы Налог Эксперт и «Кристалл» показаны с честными незавершёнными этапами. В INARI внутренние слайды с несверенными ценами и условиями не опубликованы. В кейсе «Атерис» макеты с именами и узнаваемыми сотрудниками исключены из публичной подборки. В кейсе «ЭЛЕКТРОНИКС» один слайд с крупным лицом исключён из публичной версии. В Oh! Beauty опубликована только нейтральная выборка без имён, чувствительных кадров, старых акций и медицинских обещаний. В кейсе кардиолога показана только нейтральная выборка без списков симптомов, лекарственных тезисов, диагнозов, пациентов и исторических цен. В Fjord-Petersburg показаны только кадры без узнаваемых людей. В «Сиянии вяза» исключены спорная по условиям карусель и три вертикальных кадра с несоответствием плану. В «Ритуал-С» исключены лица, имена, даты, документы, адреса, конкретные цены и чувствительные ритуальные сцены."
 
 cases:
   - id: saratov-kitchens-2026-08
@@ -1568,3 +1568,137 @@ cases:
       - "Публично показаны три нейтральных поста и два безопасных слайда одной карусели."
       - "Списки симптомов, лекарственные тезисы, диагностические выводы, пациенты и исторические цены исключены."
       - "Публикация, охваты, обращения, продажи и медицинский эффект не заявляются."
+
+  - id: fjord-petersburg
+    slug: fjord-petersburg
+    public_title: "Fjord-Petersburg — контент для водных прогулок в Санкт-Петербурге"
+    client_display_name: "Fjord-Petersburg"
+    period: "2026-07/2026-08"
+    release_window: null
+    niche: tourism-and-leisure
+    subniche: boat-rental-and-water-trips
+    formats:
+      - static-post
+      - carousel
+    scope:
+      publications: 11
+      main_publications: 10
+      bonus_publications: 1
+      static_posts: 8
+      carousel_publications: 3
+      carousel_slides: 21
+      source_visual_files: 29
+      publishable_visual_files: 15
+      publishable_visualized_publications: 5
+      planned_platform_count: 1
+      planned_platform_ids:
+        - vk
+    featured_goals:
+      - simplify-choice
+      - show-routes-and-vessels
+      - handle-rental-objections
+      - create-occasion-desire
+      - lead-to-messages
+    data:
+      case: "cases/fjord-petersburg/case.yml"
+      plan: "cases/fjord-petersburg/plan.yml"
+    public_page: "case-fjord-petersburg.html"
+    media_status: media-ready-safe-selection
+    portfolio_permission_status: permission-confirmed
+    publishable: true
+    publish_blockers: []
+    evidence_limitations:
+      - "Четырнадцать макетов с узнаваемыми людьми исключены из публичной версии."
+      - "Загрузка десяти материалов как черновиков VK не называется фактической публикацией."
+      - "Охваты, обращения, продажи и актуальность исторических предложений не заявляются."
+
+  - id: siyanie-vyaza
+    slug: siyanie-vyaza
+    public_title: "Сияние вяза — контент для мастерской авторской мебели"
+    client_display_name: "Мастерская Юлии Якунович"
+    period: "2026-07"
+    release_window: null
+    niche: furniture
+    subniche: handcrafted-wood-and-resin-furniture
+    formats:
+      - static-post
+      - carousel
+      - stories-sequence
+    scope:
+      publications: 10
+      static_posts: 8
+      carousel_publications: 2
+      carousel_slides: 18
+      stories_frames: 3
+      source_visual_files: 29
+      publishable_visual_files: 12
+      publishable_visualized_publications: 9
+      planned_platform_count: 4
+      planned_platform_ids:
+        - vk
+        - telegram
+        - max
+        - instagram
+    featured_goals:
+      - show-craftsmanship
+      - help-product-choice
+      - explain-materials
+      - build-maker-trust
+      - lead-to-dialogue
+    data:
+      case: "cases/siyanie-vyaza/case.yml"
+      plan: "cases/siyanie-vyaza/plan.yml"
+    public_page: "case-siyanie-vyaza.html"
+    media_status: media-ready-safe-selection
+    portfolio_permission_status: permission-confirmed
+    publishable: true
+    publish_blockers: []
+    evidence_limitations:
+      - "Одна карусель исключена из публичной выборки из-за исторических условий и правок."
+      - "Три вертикальных кадра не показаны из-за несоответствия названий содержанию плана."
+      - "Фактическая публикация, охваты, обращения, продажи и окупаемость не заявляются."
+
+  - id: ritual-s
+    slug: ritual-s
+    public_title: "Ритуал-С — спокойный контент для сложного выбора"
+    client_display_name: "Ритуал-С"
+    period: "2026-07"
+    release_window: null
+    niche: services
+    subniche: ritual-services
+    formats:
+      - static-post
+      - carousel
+    scope:
+      publications: 20
+      static_posts: 15
+      carousel_publications: 5
+      carousel_slides: 35
+      source_visual_files: 50
+      publishable_visual_files: 34
+      publishable_visualized_publications: 10
+      planned_stories: 5
+      confirmed_story_files: 0
+      planned_platform_count: 3
+      planned_platform_ids:
+        - vk
+        - telegram
+        - max
+    featured_goals:
+      - reduce-choice-anxiety
+      - explain-product-differences
+      - show-production-system
+      - build-trust
+      - lead-to-messages
+    data:
+      case: "cases/ritual-s/case.yml"
+      plan: "cases/ritual-s/plan.yml"
+    public_page: "case-ritual-s.html"
+    media_status: media-ready-safe-selection
+    portfolio_permission_status: permission-confirmed
+    publishable: true
+    publish_blockers: []
+    evidence_limitations:
+      - "Шестнадцать кадров с лицами, именами, датами, документами, адресами, конкретными ценами или чувствительными сценами исключены."
+      - "Пять историй были запланированы, но файлов нет в финальной папке, поэтому они не считаются готовыми."
+      - "Фактический выход публикаций, охваты, обращения, продажи и окупаемость не заявляются."
