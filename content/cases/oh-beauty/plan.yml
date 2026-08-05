@@ -1,0 +1,134 @@
+version: 1
+brand: lemonmedia
+case_id: oh-beauty
+period: "2026-07"
+language: ru
+
+claim_rule: "Роли публикаций описывают маркетинговую задачу контента, а не медицинский или бизнес-результат. Публичные формулировки не должны превращаться в рекомендации по лечению или обещания эффекта."
+
+scope:
+  publications: 10
+  static_posts: 10
+  gift_carousels: 1
+  carousel_slides: 7
+  visual_files: 17
+
+publications:
+  - number: 1
+    id: publication-01
+    category: useful
+    public_title: "Подготовка к визиту"
+    source_topic: "Подготовка к лазерной эпиляции"
+    asset: "assets/cases/oh-beauty/posts/01.jpg"
+    public_asset: true
+    goals: [reduce-uncertainty, encourage-saves]
+
+  - number: 2
+    id: publication-02
+    category: objection
+    public_title: "Главный вопрос о безопасности"
+    source_topic: "Разбор вопроса о влиянии лазера на кожу"
+    asset: "assets/cases/oh-beauty/posts/02.jpg"
+    public_asset: true
+    goals: [surface-concern, lead-to-consultation]
+    medical_copy_public: false
+
+  - number: 3
+    id: publication-03
+    category: process
+    public_title: "Карта клиента и контроль динамики"
+    source_topic: "Как студия ведёт результат клиента"
+    asset: "assets/cases/oh-beauty/posts/03.jpg"
+    public_asset: true
+    goals: [show-process, build-trust]
+
+  - number: 4
+    id: publication-04
+    category: social-proof
+    public_title: "Опыт клиента"
+    source_topic: "Отзыв и впечатление от результата"
+    asset: null
+    public_asset: false
+    withholding_reason: contains-client-name
+    goals: [build-trust]
+
+  - number: 5
+    id: publication-05
+    category: offer
+    public_title: "Предложение периода проекта"
+    source_topic: "Комплексы услуг со скидкой"
+    asset: null
+    public_asset: false
+    withholding_reason: historical-commercial-terms
+    goals: [lead-to-dialogue]
+
+  - number: 6
+    id: publication-06
+    category: useful
+    public_title: "Как поддерживать регулярность между визитами"
+    source_topic: "LPG между визитами"
+    asset: null
+    public_asset: false
+    withholding_reason: medical-and-efficacy-context
+    goals: [educate, build-expertise]
+
+  - number: 7
+    id: publication-07
+    category: expectation
+    public_title: "Честный разговор об ожиданиях"
+    source_topic: "Можно ли похудеть от LPG"
+    asset: null
+    public_asset: false
+    withholding_reason: sensitive-body-visual-and-efficacy-context
+    goals: [set-expectations, remove-misconceptions]
+
+  - number: 8
+    id: publication-08
+    category: sensitive-topic
+    public_title: "Деликатная тема восстановления"
+    source_topic: "Тело после родов"
+    asset: null
+    public_asset: false
+    withholding_reason: sensitive-health-context
+    goals: [build-empathy]
+
+  - number: 9
+    id: publication-09
+    category: social-proof
+    public_title: "Почему клиенты возвращаются"
+    source_topic: "Отзыв постоянного клиента"
+    asset: null
+    public_asset: false
+    withholding_reason: contains-client-name
+    goals: [build-trust, support-retention]
+
+  - number: 10
+    id: publication-10
+    category: offer
+    public_title: "Курс как следующий шаг"
+    source_topic: "Предложение курса LPG"
+    asset: null
+    public_asset: false
+    withholding_reason: historical-commercial-terms-and-efficacy-context
+    goals: [lead-to-dialogue]
+
+gift_carousel:
+  id: gift-carousel-01
+  title: "Как выбрать студию лазерной эпиляции"
+  slide_count: 7
+  purpose: "Дать человеку критерии выбора и закончить приглашением задать вопросы."
+  public_frames:
+    - number: 1
+      role: hook
+      asset: "assets/cases/oh-beauty/carousel/01.jpg"
+    - number: 7
+      role: summary-and-next-step
+      asset: "assets/cases/oh-beauty/carousel/07.jpg"
+  withheld_frames: [2, 3, 4, 5, 6]
+  withholding_reason: "Внутри есть медицинский и аппаратный контекст, который нельзя публиковать в кейсе как универсальный совет без отдельной верификации."
+
+asset_display_notes:
+  aspect_ratio: "4:5"
+  crop: false
+  posts_dimensions: "1200 × 1500"
+  carousel_dimensions: "1080 × 1350"

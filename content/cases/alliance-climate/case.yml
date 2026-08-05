@@ -1,0 +1,72 @@
+version: 1
+brand: lemonmedia
+case:
+  id: alliance-climate
+  slug: alliance-climate
+  public_name: "Альянс Климат"
+  page: "case-alliance-climate.html"
+  status: complete-package
+  case_type: expanded
+  period: "2026-08"
+  release_window: "2026-08"
+  niche: home-services
+  subniche: air-conditioning-sales-and-installation
+
+summary:
+  short: "Сложную техническую услугу превратили в понятный контент-месяц: выбор, монтаж, ошибки, доказательства, гарантия и обслуживание."
+  content_task: "Оживить группу ВКонтакте регулярным профессиональным контентом, снять страхи перед выбором и установкой и привести аудиторию к сообщениям."
+  result_wording: "Собран полный комплект: 10 постов и серия из 5 историй — 15 финальных визуальных макетов."
+
+scope:
+  platform_count: 1
+  platform_ids:
+    - vk
+  publications: 10
+  static_posts: 10
+  carousel_publications: 0
+  story_sequences: 1
+  story_frames: 5
+  visual_files: 15
+  public_media_files: 15
+  private_exclusions: 0
+
+featured_goals:
+  - build-expert-trust
+  - explain-service-choice
+  - handle-objections
+  - show-work-quality
+  - demonstrate-warranty
+  - lead-to-messages
+
+evidence:
+  confirmed:
+    - "Контент-план содержит 10 публикаций для ВКонтакте."
+    - "Баланс плана: по 2 темы на пользу, наши работы, разбор мифов, отзывы и результаты, предложение."
+    - "Подарок — связанная серия из 5 историй к публикации о монтаже."
+    - "Финальный визуальный комплект содержит 10 макетов 1080 × 1350 и 5 макетов 1080 × 1920."
+    - "Все 15 финальных визуальных файлов доступны для публичного показа."
+    - "Имя и аватар автора отзыва в финальном макете скрыты."
+  not_claimed:
+    - "Фактический выход публикаций."
+    - "Охваты, реакции, обращения, продажи и окупаемость."
+    - "Текущая актуальность коммерческих условий из исторического контент-плана."
+  public_links: null
+  direct_publication_links: null
+  analytics: null
+
+quality_control:
+  client_copy_approval: confirmed
+  final_media_package: confirmed
+  publication_launch: not-confirmed
+  privacy_review: passed
+  public_exclusions: []
+
+publication_control:
+  portfolio_permission: confirmed_by_project_owner
+  publishable_as_case: true
+  display_notes:
+    - "Использовать нейтральную формулировку «собрали полный комплект»."
+    - "Не называть материалы опубликованными."
+    - "Не добавлять бизнес-метрики без отдельной аналитики."
+    - "Не показывать внутренние ссылки, имена сотрудников и служебные статусы."
+    - "Коммерческие условия из плана не выдавать за актуальные."

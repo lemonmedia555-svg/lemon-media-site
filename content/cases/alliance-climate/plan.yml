@@ -1,0 +1,135 @@
+version: 1
+brand: lemonmedia
+case_id: alliance-climate
+period: "2026-08"
+language: ru
+
+claim_rule: "Цели описывают роль контента, а не доказанный коммерческий результат. Подтверждены готовый контент-план и полный визуальный пакет; публикация и метрики не заявляются."
+
+distribution:
+  prepared_for:
+    - vk
+  primary_platform: vk
+  calendar_dates: not-defined-in-approved-plan
+  publication_status: not-confirmed
+
+rubric_balance:
+  useful_content: 2
+  myth_busting: 2
+  work_showcase: 2
+  reviews_and_results: 2
+  offer: 2
+
+publications:
+  - number: 1
+    id: publication-01
+    format: static-post
+    category: useful-content
+    title: "Как подобрать мощность кондиционера под комнату"
+    asset: "assets/cases/alliance-climate/posts/01.webp"
+    goals: [explain-service-choice, build-expert-trust, encourage-saves]
+
+  - number: 2
+    id: publication-02
+    format: static-post
+    category: work-showcase
+    title: "Как выглядит наш монтаж"
+    asset: "assets/cases/alliance-climate/posts/02.webp"
+    goals: [show-work-quality, handle-objections, lead-to-messages]
+
+  - number: 3
+    id: publication-03
+    format: static-post
+    category: myth-busting
+    title: "Три ошибки при выборе кондиционера"
+    asset: "assets/cases/alliance-climate/posts/03.webp"
+    goals: [explain-service-choice, handle-objections, build-expert-trust]
+
+  - number: 4
+    id: publication-04
+    format: static-post
+    category: reviews-and-results
+    title: "«Подошли с душой» — о культуре работы"
+    asset: "assets/cases/alliance-climate/posts/04.webp"
+    privacy: "review author name and avatar hidden"
+    goals: [social-proof, build-expert-trust, lead-to-messages]
+
+  - number: 5
+    id: publication-05
+    format: static-post
+    category: offer
+    title: "Монтаж за один день с гарантией"
+    asset: "assets/cases/alliance-climate/posts/05.webp"
+    historical_terms_in_copy: true
+    goals: [demonstrate-warranty, seasonal-demand, lead-to-messages]
+
+  - number: 6
+    id: publication-06
+    format: static-post
+    category: useful-content
+    title: "Зачем чистить кондиционер"
+    asset: "assets/cases/alliance-climate/posts/06.webp"
+    goals: [build-expert-trust, encourage-saves, service-demand]
+
+  - number: 7
+    id: publication-07
+    format: static-post
+    category: work-showcase
+    title: "Подбор под сложную планировку"
+    asset: "assets/cases/alliance-climate/posts/07.webp"
+    goals: [show-work-quality, explain-service-choice, lead-to-messages]
+
+  - number: 8
+    id: publication-08
+    format: static-post
+    category: myth-busting
+    title: "Почему дешёвый монтаж обходится дороже"
+    asset: "assets/cases/alliance-climate/posts/08.webp"
+    goals: [handle-objections, explain-price, build-expert-trust]
+
+  - number: 9
+    id: publication-09
+    format: static-post
+    category: reviews-and-results
+    title: "Что мы делаем, если попался брак"
+    asset: "assets/cases/alliance-climate/posts/09.webp"
+    goals: [demonstrate-warranty, handle-objections, build-expert-trust]
+
+  - number: 10
+    id: publication-10
+    format: static-post
+    category: offer
+    title: "Обслуживание перед пиком жары"
+    asset: "assets/cases/alliance-climate/posts/10.webp"
+    goals: [service-demand, seasonal-demand, lead-to-messages]
+
+stories:
+  - id: warmup-01
+    format: story-sequence
+    linked_publication: publication-05
+    title: "Почему качественный монтаж стоит ожидания"
+    frame_count: 5
+    goals: [handle-objections, explain-process, lead-to-publication]
+    assets:
+      - "assets/cases/alliance-climate/stories/01.webp"
+      - "assets/cases/alliance-climate/stories/02.webp"
+      - "assets/cases/alliance-climate/stories/03.webp"
+      - "assets/cases/alliance-climate/stories/04.webp"
+      - "assets/cases/alliance-climate/stories/05.webp"
+    narrative:
+      - "Честно обозначить сезонную очередь и создать интригу."
+      - "Объяснить разницу между поспешной и качественной установкой."
+      - "Показать замер по фото и выезд на сложный объект."
+      - "Дать конкретику по процессу и гарантии."
+      - "Перевести читателя в пост о монтаже."
+
+asset_display_notes:
+  post_aspect_ratio: "4:5"
+  post_source_dimensions: "1080 × 1350"
+  post_web_dimensions: "864 × 1080"
+  story_aspect_ratio: "9:16"
+  story_source_dimensions: "1080 × 1920"
+  story_web_dimensions: "720 × 1280"
+  crop: false
+  public_asset_count: 15
+  internal_asset_count: 15
