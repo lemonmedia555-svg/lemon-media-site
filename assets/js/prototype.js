@@ -41,11 +41,49 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  document.querySelectorAll('[data-portfolio-filters]').forEach((panel) => {
+    const targetSelector = panel.getAttribute('data-filter-target');
+    const items = document.querySelectorAll(targetSelector || '#portfolio [data-category]');
+    const categoryButtons = panel.querySelectorAll('[data-portfolio-category]');
+    const formatButtons = panel.querySelectorAll('[data-portfolio-format]');
+    let activeCategory = 'all';
+    let activeFormat = 'all';
+
+    const applyPortfolioFilters = () => {
+      items.forEach((item) => {
+        const categories = (item.getAttribute('data-category') || '').split(' ');
+        const format = item.getAttribute('data-format') || '';
+        const matchesCategory = activeCategory === 'all' || categories.includes(activeCategory);
+        const matchesFormat = activeFormat === 'all' || format === activeFormat;
+        item.hidden = !matchesCategory || !matchesFormat;
+      });
+    };
+
+    categoryButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        activeCategory = button.getAttribute('data-portfolio-category') || 'all';
+        categoryButtons.forEach((item) => item.classList.toggle('active', item === button));
+        applyPortfolioFilters();
+      });
+    });
+
+    formatButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        activeFormat = button.getAttribute('data-portfolio-format') || 'all';
+        formatButtons.forEach((item) => item.classList.toggle('active', item === button));
+        applyPortfolioFilters();
+      });
+    });
+  });
+
   const calculator = document.querySelector('[data-calculator]');
   if (calculator) {
     const planButtons = calculator.querySelectorAll('[data-plan]');
-    const carouselInput = calculator.querySelector('[data-carousel-count]');
+    const carouselCounter = calculator.querySelector('[data-carousel-counter]');
+    const carouselDecrease = calculator.querySelector('[data-carousel-decrease]');
+    const carouselIncrease = calculator.querySelector('[data-carousel-increase]');
     const storyInterest = calculator.querySelector('[data-story-interest]');
+    const storyButtons = calculator.querySelectorAll('[data-story-value]');
     const baseOutput = calculator.querySelector('[data-base-output]');
     const carouselOutput = calculator.querySelector('[data-carousel-output]');
     const totalOutput = calculator.querySelector('[data-total-output]');
@@ -61,46 +99,62 @@ document.addEventListener('DOMContentLoaded', () => {
       [20, 9990],
       [30, 14990],
     ]);
+    const topicRoles = [
+      'Знакомство', 'Проблема', 'Продукт', 'Решение', 'Кейс',
+      'Возражение', 'Процесс', 'Команда', 'Польза', 'Предложение',
+      'Отзыв', 'Ошибка', 'Сравнение', 'Инструкция', 'Вопросы',
+      'До и после', 'Факт', 'Сценарий', 'Подборка', 'Закулисье',
+      'Миф', 'Чек-лист', 'Совет', 'История', 'Новость',
+      'Ценность', 'Выбор', 'Гарантия', 'Напоминание', 'Действие',
+    ];
     const queryPlan = Number(new URLSearchParams(window.location.search).get('plan'));
     let selected = planMap.has(queryPlan)
       ? { posts: queryPlan, price: planMap.get(queryPlan) }
       : { posts: 10, price: 4990 };
+    const queryCarousels = Math.max(0, Math.min(selected.posts, Math.floor(Number(new URLSearchParams(window.location.search).get('carousels') || 0))));
+    let carouselPosts = new Set(Array.from({ length: queryCarousels }, (_, index) => index));
+    const queryStories = Number(new URLSearchParams(window.location.search).get('stories') || 0);
+    if (storyInterest && [0, 1, 2, 4].includes(queryStories)) storyInterest.value = String(queryStories);
 
     const format = (value) => `${new Intl.NumberFormat('ru-RU').format(value)} ₽`;
 
     const render = () => {
-      const carouselCount = Math.max(0, Math.min(selected.posts, Math.floor(Number(carouselInput?.value || 0))));
-      if (carouselInput) {
-        carouselInput.max = String(selected.posts);
-        carouselInput.value = String(carouselCount);
-      }
+      carouselPosts = new Set([...carouselPosts].filter((index) => index < selected.posts));
+      const carouselCount = carouselPosts.size;
+      if (carouselCounter) carouselCounter.textContent = String(carouselCount);
+      if (carouselDecrease) carouselDecrease.disabled = carouselCount === 0;
+      if (carouselIncrease) carouselIncrease.disabled = carouselCount === selected.posts;
       if (baseOutput) baseOutput.textContent = format(selected.price);
       if (carouselOutput) carouselOutput.textContent = format(carouselCount * 250);
       if (totalOutput) totalOutput.textContent = format(selected.price + carouselCount * 250);
       if (postsOutput) postsOutput.textContent = String(selected.posts);
       if (placementOutput) placementOutput.textContent = `До ${selected.posts * 5} размещений`;
       const stories = Number(storyInterest?.value || 0);
+      storyButtons.forEach((button) => button.classList.toggle('active', Number(button.getAttribute('data-story-value')) === stories));
       if (bundleSlots) {
-        const visiblePosts = Math.min(selected.posts, 10);
         bundleSlots.replaceChildren();
-        for (let index = 0; index < visiblePosts; index += 1) {
-          const slot = document.createElement('span');
-          slot.className = index < carouselCount ? 'bundle-slot is-carousel' : 'bundle-slot';
-          slot.textContent = String(index + 1);
-          slot.title = index < carouselCount ? `Пост ${index + 1}: карусель до 7 слайдов` : `Пост ${index + 1}`;
+        for (let index = 0; index < selected.posts; index += 1) {
+          const isCarousel = carouselPosts.has(index);
+          const slot = document.createElement('button');
+          slot.type = 'button';
+          slot.className = isCarousel ? 'bundle-slot is-carousel' : 'bundle-slot';
+          slot.innerHTML = `<span>${index + 1}</span><small>${topicRoles[index]}</small><em>${isCarousel ? 'до 7 слайдов' : '1 пост'}</em>`;
+          slot.title = isCarousel ? `Пост ${index + 1}: убрать усиление каруселью` : `Пост ${index + 1}: усилить каруселью до 7 слайдов`;
+          slot.setAttribute('aria-label', `${topicRoles[index]}. ${isCarousel ? 'Карусель до 7 слайдов' : 'Обычный пост'}`);
+          slot.setAttribute('aria-pressed', String(isCarousel));
+          slot.addEventListener('click', () => {
+            if (carouselPosts.has(index)) carouselPosts.delete(index);
+            else carouselPosts.add(index);
+            render();
+          });
           bundleSlots.append(slot);
-        }
-        if (selected.posts > visiblePosts) {
-          const rest = document.createElement('span');
-          rest.className = 'bundle-slot bundle-slot-more';
-          rest.textContent = `+${selected.posts - visiblePosts}`;
-          rest.title = `Ещё ${selected.posts - visiblePosts} постов`;
-          bundleSlots.append(rest);
         }
       }
       if (bundleStories) {
         bundleStories.hidden = stories === 0;
-        bundleStories.textContent = stories ? `${stories} × мини‑прогрев по 5 сторис` : '';
+        bundleStories.innerHTML = stories
+          ? `<div class="story-chain-mini" aria-hidden="true"><i>1</i><i>2</i><i>3</i><i>4</i><i>5</i></div><strong>${stories} × мини‑прогрев по 5 сторис</strong>`
+          : '';
       }
       if (storyOutput) {
         storyOutput.innerHTML = stories
@@ -129,8 +183,22 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
 
-    carouselInput?.addEventListener('input', render);
-    storyInterest?.addEventListener('change', render);
+    carouselDecrease?.addEventListener('click', () => {
+      const last = [...carouselPosts].sort((a, b) => b - a)[0];
+      if (last !== undefined) carouselPosts.delete(last);
+      render();
+    });
+    carouselIncrease?.addEventListener('click', () => {
+      const next = Array.from({ length: selected.posts }, (_, index) => index).find((index) => !carouselPosts.has(index));
+      if (next !== undefined) carouselPosts.add(next);
+      render();
+    });
+    storyButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        if (storyInterest) storyInterest.value = button.getAttribute('data-story-value') || '0';
+        render();
+      });
+    });
     planButtons.forEach((button) => {
       button.classList.toggle('active', Number(button.getAttribute('data-posts')) === selected.posts);
     });
@@ -214,6 +282,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const totalOutput = document.querySelector('[data-start-total]');
     const summaryOutput = document.querySelector('[data-start-summary]');
     const placementsOutput = document.querySelector('[data-start-placements]');
+    const startSlots = document.querySelector('[data-start-slots]');
+    const startStories = document.querySelector('[data-start-story-stack]');
     const prices = { 10: 4990, 15: 7490, 20: 9990, 30: 14990 };
     if (planSelect) planSelect.value = plan;
     if (carouselInput) carouselInput.value = carousels;
@@ -236,6 +306,21 @@ document.addEventListener('DOMContentLoaded', () => {
         summaryOutput.innerHTML = `<strong>${posts} постов</strong> · ${carouselText} · ${storyText}`;
       }
       if (placementsOutput) placementsOutput.textContent = `До ${posts * 5} размещений`;
+      if (startSlots) {
+        startSlots.replaceChildren();
+        for (let index = 0; index < posts; index += 1) {
+          const slot = document.createElement('span');
+          slot.className = index < carouselCount ? 'bundle-slot is-carousel' : 'bundle-slot';
+          slot.innerHTML = `<span>${index + 1}</span><small>${index < carouselCount ? 'Карусель' : 'Пост'}</small>`;
+          startSlots.append(slot);
+        }
+      }
+      if (startStories) {
+        startStories.hidden = storyCount === 0;
+        startStories.innerHTML = storyCount
+          ? `<div class="story-chain-mini" aria-hidden="true"><i>1</i><i>2</i><i>3</i><i>4</i><i>5</i></div><strong>${storyCount} × мини‑прогрев</strong>`
+          : '';
+      }
     };
 
     planSelect?.addEventListener('change', renderOrder);
@@ -250,7 +335,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const message = form.querySelector('[data-form-message]');
       if (message) {
         message.hidden = false;
-        message.textContent = 'Это прототип: заявка пока не отправляется. Перед запуском сюда нужно подключить CRM и уведомление клиенту.';
+        message.textContent = 'В рабочей версии менеджер получит эту сборку, уточнит задачу бизнеса и согласует с вами содержание месяца.';
       }
     });
   });

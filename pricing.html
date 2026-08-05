@@ -46,22 +46,22 @@
           <div class="calculator-panel">
             <h3>1. Сколько постов нужно в месяц?</h3>
             <div class="plan-options" style="margin: 18px 0 26px;">
-              <button class="plan-button active" type="button" data-plan data-posts="10" data-price="4990">10 · 4 990 ₽</button>
-              <button class="plan-button" type="button" data-plan data-posts="15" data-price="7490">15 · 7 490 ₽</button>
-              <button class="plan-button" type="button" data-plan data-posts="20" data-price="9990">20 · 9 990 ₽</button>
-              <button class="plan-button" type="button" data-plan data-posts="30" data-price="14990">30 · 14 990 ₽</button>
+              <button class="plan-button active" type="button" data-plan data-posts="10" data-price="4990"><strong>10 постов</strong><span>Спокойный старт</span><b>4 990 ₽</b></button>
+              <button class="plan-button" type="button" data-plan data-posts="15" data-price="7490"><strong>15 постов</strong><span>Стабильный ритм</span><b>7 490 ₽</b></button>
+              <button class="plan-button" type="button" data-plan data-posts="20" data-price="9990"><strong>20 постов</strong><span>Активное присутствие</span><b>9 990 ₽</b></button>
+              <button class="plan-button" type="button" data-plan data-posts="30" data-price="14990"><strong>30 постов</strong><span>Почти каждый день</span><b>14 990 ₽</b></button>
             </div>
             <div class="calculator-row">
-              <div><h3>2. Сколько постов сделать каруселями?</h3><p>Каждая карусель — апгрейд выбранного поста до 7 слайдов за +250 ₽.</p></div>
-              <input type="number" value="0" min="0" max="10" step="1" inputmode="numeric" aria-label="Количество каруселей" data-carousel-count>
+              <div><h3>2. Какие посты раскрыть каруселями?</h3><p>Нажимайте на кубики справа. Выбранный пост превратится в карусель до 7 слайдов за +250 ₽.</p></div>
+              <div class="carousel-counter" aria-label="Количество каруселей"><button type="button" data-carousel-decrease aria-label="Убрать одну карусель">−</button><output data-carousel-counter>0</output><button type="button" data-carousel-increase aria-label="Добавить одну карусель">+</button></div>
             </div>
-            <div class="calculator-row">
-              <div><h3>3. Отметить интерес к мини‑прогреву?</h3><p>5 связанных сторис под одну тему. Пока цена не утверждена, выбор не входит в сумму.</p></div>
-              <select aria-label="Интерес к мини-прогреву" data-story-interest><option value="0">Не нужен</option><option value="1">Интересует 1 мини‑прогрев</option><option value="2">Интересуют 2 мини‑прогрева</option><option value="4">Интересуют 4 мини‑прогрева</option></select>
+            <div class="calculator-row story-builder-row">
+              <div><h3>3. Добавить мини‑прогрев?</h3><p>Пять сторис: интерес → проблема → решение → доказательство → действие. Пока отмечаем интерес отдельно от суммы.</p></div>
+              <div class="story-choice"><button class="active" type="button" data-story-value="0">Без сторис</button><button type="button" data-story-value="1">1 × 5</button><button type="button" data-story-value="2">2 × 5</button><button type="button" data-story-value="4">4 × 5</button><input type="hidden" value="0" data-story-interest></div>
             </div>
           </div>
           <aside class="calculator-total">
-            <p class="eyebrow">Итого за месяц</p>
+            <p class="eyebrow">Ваш контент‑месяц</p>
             <output data-total-output>4 990 ₽</output>
             <div class="bundle-visual" aria-live="polite">
               <div class="bundle-slots" data-bundle-slots aria-label="Состав пакета по постам"></div>
@@ -70,8 +70,12 @@
             <p><strong><span data-posts-output>10</span> постов:</strong> <span data-base-output>4 990 ₽</span></p>
             <p><strong>Карусели:</strong> <span data-carousel-output>0 ₽</span></p>
             <p data-story-output><strong>Мини‑прогревы:</strong> не выбраны</p>
-            <p class="legal-note">Итог выше точный для базы и каруселей. Интерес к сторис передаётся менеджеру отдельно и ничего не добавляет без согласия.</p>
-            <a class="btn btn-accent" href="start.html?plan=10" data-order-link style="width: 100%; margin-top: 18px;">Продолжить с этим пакетом</a>
+            <div class="placement-counter"><strong data-placement-output>До 50 размещений</strong><span>если подключены все 5 площадок</span></div>
+            <div class="bundle-platforms"><span>ВКонтакте</span><span>Instagram</span><span>Telegram</span><span>MAX</span><span>Threads</span></div>
+            <p class="builder-instruction">Нажмите на любой кубик поста, чтобы превратить его в карусель.</p>
+            <p class="legal-note">Названия кубиков показывают роли контента в месяце. Точные темы маркетолог соберёт после знакомства с бизнесом.</p>
+            <p class="legal-note">Подтверждённая сумма включает базовый пакет и выбранные карусели. Сторис отмечаются отдельно.</p>
+            <a class="btn btn-accent" href="start.html?plan=10" data-order-link style="width: 100%; margin-top: 18px;">Продолжить с этим составом</a>
           </aside>
         </div>
       </div>
@@ -91,13 +95,13 @@
 
     <section class="section section-accent">
       <div class="container">
-        <aside class="logic-note"><strong>До публикации:</strong> этот блок нельзя прятать в мелком шрифте. Он защищает и клиента, и компанию.</aside>
-        <div class="section-head"><div><p class="eyebrow">Нужно закрепить</p><h2>Условия, которых пока нет в документах</h2></div><p>Страница цен станет публичной только после ответа на эти вопросы.</p></div>
-        <div class="grid-2">
-          <article class="card"><h3>Мини‑прогрев</h3><p>Цена, число цепочек в месяц, площадки и объём правок.</p></article>
-          <article class="card"><h3>Продление и отмена</h3><p>Дата списания, срок предупреждения об отмене и правила паузы.</p></article>
-          <article class="card"><h3>Дополнительные правки</h3><p>Что считается пакетом и что происходит после двух пакетов.</p></article>
-          <article class="card"><h3>Аккаунты и права</h3><p>Сколько аккаунтов одного бизнеса входит и кому принадлежат материалы.</p></article>
+        <aside class="logic-note"><strong>Помогаем выбрать, а не продаём максимум:</strong> объём объясняется через реальный ритм бизнеса. Усиления добавляются только к тем темам, которым они действительно нужны.</aside>
+        <div class="section-head"><div><p class="eyebrow">Как выбрать объём</p><h2>От спокойного старта до ежедневного присутствия</h2></div><p>Качество команды и процесса не меняется. Меняется только темп вашего контент‑месяца.</p></div>
+        <div class="grid-4">
+          <article class="card"><span class="tag">10 постов</span><h3 style="margin-top:18px;">Начать регулярно</h3><p>Подходит, если соцсети давно не велись или нужен спокойный стабильный ритм.</p></article>
+          <article class="card"><span class="tag">15 постов</span><h3 style="margin-top:18px;">Быть заметнее</h3><p>Публикации выходят примерно через день и закрывают больше тем бизнеса.</p></article>
+          <article class="card"><span class="tag">20 постов</span><h3 style="margin-top:18px;">Поддерживать активность</h3><p>Для нескольких направлений, частых новостей, продуктов и экспертных тем.</p></article>
+          <article class="card"><span class="tag">30 постов</span><h3 style="margin-top:18px;">Почти каждый день</h3><p>Для бизнеса с большим количеством предложений и постоянным потоком инфоповодов.</p></article>
         </div>
       </div>
     </section>

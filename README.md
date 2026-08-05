@@ -10,6 +10,7 @@
 - `start.html` — прототип начала заказа;
 - `docs/MARKETING_PROTOTYPE.md` — полная логика сайта и решения до запуска;
 - `docs/MARKETING_LOGIC_11.md` — маркетинговая проверка;
+- `docs/MARKETING_ARCHITECTURE.md` — смысл, визуал и поведение каждого блока и страницы;
 - `docs/SITE_AUDIT.md` — оценка по маркетингу, конкурентам и полноте сайта;
 - `docs/EXPERIENCE_AND_MEDIA.md` — план изображений, видео и интерактива.
 
