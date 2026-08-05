@@ -4,9 +4,9 @@ language: ru
 
 counting:
   rule: "Считаются уникальные публикации. Слайды каруселей и размещения одного материала на разных площадках не считаются отдельными работами."
-  public_cases: 5
-  verified_publications_in_registry: 51
-  publishable_visualized_publications: 50
+  public_cases: 6
+  verified_publications_in_registry: 61
+  publishable_visualized_publications: 60
   note: "У фонда «Доброе сердце» одна из 10 утверждённых публикаций не входит в визуальную галерею: доступный макет не прошёл финальный QA."
 
 cases:
@@ -211,3 +211,46 @@ cases:
       - "Прямое клиентское утверждение финального дизайна не найдено."
       - "Публикация и бизнес-метрики не подтверждены."
       - "Коммерческие условия внутри макетов относятся к периоду проекта."
+
+  - id: silny-parus
+    slug: silny-parus
+    public_title: "Сильный Парус — 10 юридических тем в формате каруселей"
+    client_display_name: "Сильный Парус"
+    period: "2026-07"
+    release_window: null
+    niche: legal-services
+    subniche: personal-bankruptcy-and-debt-law
+    formats:
+      - carousel
+      - stories-sequence
+    scope:
+      publications: 10
+      static_posts: 0
+      carousel_publications: 10
+      carousel_slides: 66
+      stories_sequences: 3
+      stories_frames: 15
+      visual_files: 81
+      planned_platform_count: 2
+      planned_platform_ids:
+        - vk
+        - max
+    featured_goals:
+      - explain-complex-topics
+      - build-trust
+      - remove-fears
+      - encourage-saves
+      - show-expertise
+      - lead-to-consultation
+    data:
+      case: "cases/silny-parus/case.yml"
+      plan: "cases/silny-parus/plan.yml"
+    public_page: "case-silny-parus.html"
+    media_status: media-ready
+    portfolio_permission_status: permission-confirmed
+    publishable: true
+    publish_blockers: []
+    evidence_limitations:
+      - "Прямое клиентское утверждение финального дизайна не найдено."
+      - "Публикация и бизнес-метрики не подтверждены."
+      - "Плановые площадки нельзя выдавать за подтверждённое размещение."
