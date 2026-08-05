@@ -4,9 +4,9 @@ language: ru
 
 counting:
   rule: "Считаются уникальные публикации. Слайды каруселей и размещения одного материала на разных площадках не считаются отдельными работами."
-  public_cases: 17
-  verified_publications_in_registry: 195
-  publishable_visualized_publications: 190
+  public_cases: 18
+  verified_publications_in_registry: 205
+  publishable_visualized_publications: 200
   note: "У фонда «Доброе сердце» один макет не прошёл финальный QA. В кейсе Ольги Андреевой четыре готовых поста оставлены вне публичной галереи до медицинской и юридической проверки формулировок."
 
 cases:
@@ -734,3 +734,48 @@ cases:
       - "Фактический выход, полный календарь и бизнес-метрики не подтверждены."
       - "Четыре публикации исключены из публичной галереи до проверки медицинских формулировок."
       - "Контент нельзя представлять как лечение, гарантированный эффект или замену медицинской помощи."
+
+  - id: dava-holding
+    slug: dava-holding
+    public_title: "Dava Holding — сложная идеология как понятный месяц контента"
+    client_display_name: "Dava Holding"
+    period: first-month
+    release_window: "2026-08-07/2026-09-03"
+    niche: business-and-economics
+    subniche: corporate-ideology
+    formats:
+      - static-post
+      - stories-sequence
+    scope:
+      publications: 10
+      static_posts: 10
+      stories_sequences: 1
+      stories_frames: 5
+      final_visual_files: 15
+      visual_concepts: 3
+      web_visual_files: 18
+      draft_platform_count: 1
+      draft_platform_ids:
+        - vk
+      auto_matched_post_visuals: 8
+      auto_matched_story_visuals: 3
+    featured_goals:
+      - explain-complex-idea
+      - introduce-brand-worldview
+      - remove-stereotypes
+      - show-model-pillars
+      - encourage-discussion
+      - build-systemic-understanding
+    data:
+      case: "cases/dava-holding/case.yml"
+      plan: "cases/dava-holding/plan.yml"
+    public_page: "case-dava-holding.html"
+    media_status: media-ready-with-calendar-qa-gap
+    portfolio_permission_status: permission-confirmed
+    publishable: true
+    publish_blockers: []
+    evidence_limitations:
+      - "Автоматическая загрузка сопоставила не все финальные визуалы; ручное исправление не подтверждено."
+      - "Фактический выход всего месяца и бизнес-метрики не подтверждены."
+      - "Идеологические тезисы принадлежат клиентскому проекту, а не lemonmedia."
+      - "Повторный заказ принят в производство, но ещё не выполнен."
