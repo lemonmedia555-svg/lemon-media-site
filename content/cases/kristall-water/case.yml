@@ -1,0 +1,88 @@
+version: 1
+brand: lemonmedia
+id: kristall-water
+slug: kristall-water
+language: ru
+
+identity:
+  public_title: "Буровая компания «Кристалл» — контент для сложной инженерной услуги"
+  client_display_name: "Кристалл"
+  niche: drilling-and-autonomous-water-supply
+  geography: "Челябинск и Челябинская область"
+  relationship: first-month
+
+summary:
+  short: "Для буровой компании собрали 10 публикаций и подарочную карусель из 7 слайдов: объяснили состав цены, выбор кессона, зимнее обустройство, комплекс работ и предложение для застройщиков."
+  content_task: "Повышать узнаваемость, доверие и интерес к расчёту через понятное объяснение сложной услуги для частных клиентов и компаний."
+  result_wording: "Тексты утверждены после пяти этапов правок. Доступны 17 визуальных материалов, переданных на проверку, но визуальная задача возвращена в стадию правок; финальное утверждение и публикация не подтверждены."
+
+scope:
+  publications: 10
+  static_posts: 10
+  bonus_carousels: 1
+  bonus_carousel_slides: 7
+  available_visual_files: 17
+  source_dimensions: "1620 × 2025; пост 10 — 2160 × 2700"
+  web_dimensions: "720 × 900"
+  crop: false
+
+platforms:
+  primary: vk
+  all: [vk, max]
+  publication_preparation: unconfirmed
+  actual_full_publication: unconfirmed
+
+audience:
+  segments:
+    - "Владельцы частных домов и участков"
+    - "Компании и застройщики"
+  geography: "Челябинск и область"
+
+content_logic:
+  central_positioning: "Одна компания объясняет и собирает весь комплекс автономного водоснабжения и водоотведения."
+  roles:
+    behind_the_scenes: 1
+    useful: 3
+    portfolio: 2
+    social_proof: 1
+    engagement: 1
+    offer: 2
+  historical_terms_note: "Предложения и сроки на макетах относятся к периоду кампании и не являются текущей офертой."
+  historical_metric_note: "Цифра на макете социального доказательства относится к утверждённым материалам периода; её актуальность сегодня не заявляется."
+
+quality_control:
+  brief_review: confirmed
+  text_correction_rounds: 5
+  texts_approved: confirmed
+  visual_concept_prepared: confirmed
+  visual_corrections_received: confirmed
+  final_visual_approved: false
+  current_visual_stage: corrections
+
+evidence:
+  confirmed:
+    - "Публичное название: буровая компания «Кристалл»."
+    - "Контент-план включает 10 публикаций и подарочную карусель из 7 слайдов."
+    - "Тексты утверждены после пяти этапов правок."
+    - "В доступной версии 17 изображений формата 4:5."
+    - "Материалы планировались для ВКонтакте и MAX."
+    - "Визуальная концепция была передана на проверку и получила подробный список правок."
+  not_claimed:
+    - "Финальное утверждение визуального пакета."
+    - "Фактическая публикация материалов."
+    - "Охваты, подписчики, заявки, продажи или прибыль."
+    - "Текущая актуальность скидок и сроков, указанных на исторических макетах."
+    - "Текущая актуальность цифры объектов из исторического макета."
+  analytics: null
+
+publication_control:
+  portfolio_permission: confirmed_by_project_owner
+  final_media: unavailable
+  available_media_status: design-version-under-revision
+  publishable: true_with_status_disclosure
+  display_notes:
+    - "Не называть показанные 17 файлов финальными."
+    - "Ясно указывать, что визуал возвращён на правки."
+    - "Не писать, что публикации уже вышли."
+    - "Условия на постах 5 и 10 считать историческими."
+    - "Цифру на посте 7 не выдавать за актуальную метрику."

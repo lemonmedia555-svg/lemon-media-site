@@ -4,10 +4,10 @@ language: ru
 
 counting:
   rule: "Считаются уникальные публикации. Слайды каруселей и размещения одного материала на разных площадках не считаются отдельными работами."
-  public_cases: 28
-  verified_publications_in_registry: 351
-  publishable_visualized_publications: 338
-  note: "Подарочные карусели считаются отдельными уникальными публикациями, но не подменяют основные календарные слоты. У фонда «Доброе сердце» один макет не прошёл финальный QA. В кейсе Ольги Андреевой четыре готовых поста оставлены вне публичной галереи до медицинской и юридической проверки формулировок. В кейсе Dava Life публично показаны пять макетов, которых не касался последний список правок. Новый цикл Colorplast и кейс Налог Эксперт показаны с честными незавершёнными этапами. В INARI внутренние слайды с несверенными ценами и условиями не опубликованы. В кейсе «Атерис» макеты с именами и узнаваемыми сотрудниками исключены из публичной подборки."
+  public_cases: 29
+  verified_publications_in_registry: 362
+  publishable_visualized_publications: 349
+  note: "Подарочные карусели считаются отдельными уникальными публикациями, но не подменяют основные календарные слоты. У фонда «Доброе сердце» один макет не прошёл финальный QA. В кейсе Ольги Андреевой четыре готовых поста оставлены вне публичной галереи до медицинской и юридической проверки формулировок. В кейсе Dava Life публично показаны пять макетов, которых не касался последний список правок. Новый цикл Colorplast, кейсы Налог Эксперт и «Кристалл» показаны с честными незавершёнными этапами. В INARI внутренние слайды с несверенными ценами и условиями не опубликованы. В кейсе «Атерис» макеты с именами и узнаваемыми сотрудниками исключены из публичной подборки."
 
 cases:
   - id: saratov-kitchens-2026-08
@@ -1225,3 +1225,46 @@ cases:
       - "Десять публикаций загружены в черновики, но их фактический выход не подтверждён."
       - "Макеты с именами и узнаваемыми сотрудниками исключены из публичной подборки."
       - "Охваты, записи, продажи и медицинский эффект не заявляются."
+
+  - id: kristall-water
+    slug: kristall-water
+    public_title: "Буровая компания «Кристалл» — сложная услуга простым контентом"
+    client_display_name: "Кристалл"
+    period: "2026-07"
+    release_window: null
+    niche: local-services
+    subniche: drilling-and-autonomous-water-supply
+    formats:
+      - static-post
+      - carousel
+    scope:
+      publications: 11
+      main_publications: 10
+      bonus_publications: 1
+      static_posts: 10
+      carousel_publications: 1
+      carousel_slides: 7
+      available_visual_files: 17
+      planned_platform_count: 2
+      planned_platform_ids:
+        - vk
+        - max
+    featured_goals:
+      - explain-complex-service
+      - unpack-project-price
+      - remove-winter-risks
+      - show-complete-system
+      - address-private-and-b2b-buyers
+      - lead-to-estimate
+    data:
+      case: "cases/kristall-water/case.yml"
+      plan: "cases/kristall-water/plan.yml"
+    public_page: "case-kristall-water.html"
+    media_status: design-version-under-revision
+    portfolio_permission_status: permission-confirmed
+    publishable: true
+    publish_blockers: []
+    evidence_limitations:
+      - "Тексты утверждены, но визуальная версия возвращена на правки и не называется финальной."
+      - "Фактическая публикация, охваты, заявки и продажи не подтверждены."
+      - "Акции, сроки и цифра объектов внутри макетов относятся к периоду кампании и не выдаются за актуальные сегодня."
