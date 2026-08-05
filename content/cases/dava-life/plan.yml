@@ -1,0 +1,84 @@
+version: 1
+brand: lemonmedia
+case_id: dava-life
+period: "2026-08"
+language: ru
+
+scope:
+  publications: 10
+  static_posts: 10
+  stories_sequences: 1
+  stories_frames: 5
+  public_post_visuals: 5
+
+claim_rule: "Кейс доказывает готовый маркетинговый план, согласование и дизайн-процесс. Он не доказывает свойства продукции, здоровье аудитории или коммерческий результат."
+
+strategy:
+  sequence:
+    - explain-category
+    - handle-skepticism
+    - show-product-line
+    - connect-useful-topics-to-products
+    - explain-choice
+    - remove-order-barrier
+  rubrics:
+    useful-content: 5
+    myth-review: 3
+    product-showcase: 2
+
+distribution:
+  prepared_for:
+    - vk
+  primary_platform: vk
+  calendar: not-confirmed-after-final-revision
+  status: transferred-to-posting
+
+public_gallery:
+  - number: 1
+    role: education
+    title: "Пептиды простыми словами"
+    asset: "assets/cases/dava-life/posts/01.jpg"
+    goals: [explain-category, remove-complexity]
+
+  - number: 2
+    role: objection-handling
+    title: "Три мифа о пептидах"
+    asset: "assets/cases/dava-life/posts/02.jpg"
+    goals: [handle-skepticism, encourage-reading]
+
+  - number: 3
+    role: product-showcase
+    title: "Линейка Adaptanium"
+    asset: "assets/cases/dava-life/posts/03.jpg"
+    goals: [show-product-line, show-price]
+
+  - number: 6
+    role: useful-content
+    title: "Суставы и кости с возрастом"
+    asset: "assets/cases/dava-life/posts/06.jpg"
+    goals: [connect-topic-to-audience, build-interest]
+
+  - number: 9
+    role: objection-handling
+    title: "Из чего складывается цена"
+    asset: "assets/cases/dava-life/posts/09.jpg"
+    goals: [handle-price-objection, explain-positioning]
+
+stories:
+  - id: product-line-warm-up
+    frame_count: 5
+    related_publication: 3
+    title: "От сложности выбора к разбору линейки"
+    goals: [raise-confusion, simplify-choice, lead-to-publication]
+    public_assets: withheld-until-corrected-export
+
+revision_story:
+  text_topics_reworked: [5, 7, 8]
+  visuals_synchronized: [4, 5, 7, 8, 10]
+  stories_updated: 1
+  final_approval: confirmed
+
+asset_display_notes:
+  post_dimensions: "720 × 900"
+  crop: false
+

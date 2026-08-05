@@ -1,0 +1,110 @@
+version: 1
+brand: lemonmedia
+id: refix
+slug: refix
+language: ru
+
+identity:
+  public_title: "REFIX — контент, который снимает страх перед ремонтом техники"
+  client_display_name: "REFIX"
+  period: "2026-08"
+  niche: repair-service
+  subniche: consumer-electronics-and-electric-scooters
+  geography: small-city-russia
+
+summary:
+  short: "Месяц спокойного контента для сервисного центра: объяснить диагностику, согласование цены, сроки, детали и первые действия при аварийной ситуации."
+  content_task: "Привлечь новую аудиторию и снизить недоверие до первого обращения в сервис."
+  result_wording: "Утверждены тексты и визуал. Подготовлены 10 публикаций, включая две карусели по 7 слайдов, 15 историй и полный комплект из 37 PNG. Для ВКонтакте подтверждены календарь и запуск. Бизнес-метрики не заявляются."
+
+scope:
+  publications: 10
+  static_posts: 8
+  carousel_publications: 2
+  carousel_slides: 14
+  main_story_series: 2
+  bonus_story_series: 1
+  story_frames: 15
+  post_visual_files: 22
+  source_visual_files: 37
+  web_visual_files: 37
+  post_dimensions: "1080 × 1350"
+  story_dimensions: "1080 × 1920"
+
+featured_goals:
+  - remove-repair-fears
+  - explain-diagnostics-and-price-approval
+  - explain-timing-and-parts
+  - provide-emergency-guidance
+  - show-service-breadth
+  - lead-to-message
+
+marketing_logic:
+  customer_barriers:
+    - "Вдруг после осмотра выставят неожиданный счёт."
+    - "Непонятно, сколько займёт ремонт."
+    - "Могут поставить дешёвую деталь без согласования."
+    - "Неясно, что происходит с устройством после приёмки."
+    - "Страшно сделать поломку хуже до визита в сервис."
+  response_sequence:
+    - useful-prevention
+    - familiar-repair-scenario
+    - myth-busting
+    - transparent-process
+    - clear-entry-offer
+    - emergency-guidance
+    - service-breadth
+    - parts-choice
+    - timing-explanation
+    - seasonal-service
+
+fact_correction:
+  topic: diagnostics
+  status: corrected-before-visual-production
+  historical_period: "2026 campaign"
+  wording:
+    general: "Диагностика бесплатная для большинства устройств."
+    liquid_damage: "Для залитой техники — от 1 500 ₽, потому что мастер сразу проводит чистку и расходует материалы."
+    large_devices: "Для крупной техники, например телевизоров, — от 500 до 1 500 ₽."
+  public_note: "Это условия кампании 2026 года, а не текущая оферта REFIX."
+
+evidence:
+  confirmed:
+    - "Публичное название проекта: REFIX."
+    - "Контент-план и тексты утверждены после уточнения условий диагностики."
+    - "Визуал утверждён и передан к публикации."
+    - "Финальный пакет содержит 8 статичных постов и 2 карусели по 7 слайдов."
+    - "Подготовлены 10 основных историй и 5 дополнительных историй."
+    - "Все 37 PNG открываются и соответствуют форматам 4:5 и 9:16."
+    - "Пакет подготовлен для ВКонтакте, Instagram и YouTube."
+    - "Для ВКонтакте подтверждены загрузка 10 постов и 15 историй, календарь и запуск публикаций."
+  not_claimed:
+    - "Запуск публикаций в Instagram и YouTube."
+    - "Охваты, просмотры, вовлечённость или рост подписчиков."
+    - "Заявки, продажи, выручка или другой коммерческий результат."
+    - "Публичный отзыв клиента."
+    - "Повторный заказ."
+    - "Документальность изображений в рубрике «Наши работы»: по заданию допускались генерация и фотостоки."
+  public_links: null
+  analytics: null
+  client_review: null
+
+publication_control:
+  portfolio_permission: confirmed_by_project_owner
+  final_media: ready
+  platform_package:
+    - vk
+    - instagram
+    - youtube
+  confirmed_calendar_platforms:
+    - vk
+  confirmed_launch_platforms:
+    - vk
+  publishable: true
+  display_notes:
+    - "Показывать все 37 финальных файлов без обрезки."
+    - "Условия и цены внутри макетов обозначать как исторические условия кампании 2026 года."
+    - "Не называть Instagram и YouTube запущенными площадками."
+    - "Не добавлять бизнес-метрики без отдельной аналитики."
+    - "Не выдавать изображения ремонтных сценариев за документальные фото конкретных работ клиента."
+

@@ -1,0 +1,173 @@
+version: 1
+brand: lemonmedia
+case_id: refix
+period: "2026-08"
+language: ru
+
+scope:
+  publications: 10
+  static_posts: 8
+  carousel_publications: 2
+  carousel_slides: 14
+  story_series: 3
+  story_frames: 15
+  visual_files: 37
+
+claim_rule: "Результат lemonmedia — утверждённый контент и подтверждённый запуск календаря ВКонтакте. Коммерческий эффект не измерен и не заявляется."
+
+schedule:
+  package_platforms: [vk, instagram, youtube]
+  confirmed_calendar_platforms: [vk]
+  confirmed_launch_platforms: [vk]
+  starts_at: "2026-08-05 10:00"
+  automated_post_schedule_ends_at: "2026-08-23 10:00"
+  manager_last_material_date: "2026-08-27"
+  cadence: every-two-days
+  publication_time: "10:00"
+  instagram_launch: unconfirmed
+  youtube_launch: unconfirmed
+
+publications:
+  - number: 1
+    id: publication-01
+    format: carousel
+    category: useful
+    title: "5 ошибок, из-за которых техника ломается раньше времени"
+    goals: [provide-prevention, lead-to-service]
+    slides:
+      - { number: 1, role: cover, topic: "5 ошибок, из-за которых техника ломается раньше времени", asset: "assets/cases/refix/carousels/01/01.png" }
+      - { number: 2, role: mistake, topic: "Зарядка телефона всю ночь", asset: "assets/cases/refix/carousels/01/02.png" }
+      - { number: 3, role: mistake, topic: "Пыль и перегрев ноутбука или компьютера", asset: "assets/cases/refix/carousels/01/03.png" }
+      - { number: 4, role: mistake, topic: "Телефон без защиты", asset: "assets/cases/refix/carousels/01/04.png" }
+      - { number: 5, role: mistake, topic: "Некачественная зарядка", asset: "assets/cases/refix/carousels/01/05.png" }
+      - { number: 6, role: mistake, topic: "Откладывание мелкой поломки", asset: "assets/cases/refix/carousels/01/06.png" }
+      - { number: 7, role: call-to-action, topic: "Проверить технику до дорогого ремонта", asset: "assets/cases/refix/carousels/01/07.png" }
+
+  - number: 2
+    id: publication-02
+    format: static-post
+    category: repair-scenario
+    title: "Пролил кофе на ноутбук"
+    asset: "assets/cases/refix/posts/02.png"
+    documentary_photo: false
+    goals: [remove-fear, explain-liquid-damage]
+
+  - number: 3
+    id: publication-03
+    format: static-post
+    category: myth-busting
+    title: "3 мифа о ремонте техники"
+    asset: "assets/cases/refix/posts/03.png"
+    goals: [remove-objections, prevent-delay]
+
+  - number: 4
+    id: publication-04
+    format: carousel
+    category: process
+    title: "Как проходит ремонт в REFIX"
+    goals: [show-transparency, explain-control]
+    slides:
+      - { number: 1, role: cover, topic: "Как проходит ремонт в REFIX", asset: "assets/cases/refix/carousels/04/01.png" }
+      - { number: 2, role: introduction, topic: "Пять понятных шагов", asset: "assets/cases/refix/carousels/04/02.png" }
+      - { number: 3, role: step, topic: "Приёмка устройства", asset: "assets/cases/refix/carousels/04/03.png" }
+      - { number: 4, role: step, topic: "Диагностика и цена заранее", asset: "assets/cases/refix/carousels/04/04.png" }
+      - { number: 5, role: step, topic: "Согласование до ремонта", asset: "assets/cases/refix/carousels/04/05.png" }
+      - { number: 6, role: step, topic: "Ремонт и проверка", asset: "assets/cases/refix/carousels/04/06.png" }
+      - { number: 7, role: step-and-call-to-action, topic: "Выдача с гарантией", asset: "assets/cases/refix/carousels/04/07.png" }
+
+  - number: 5
+    id: publication-05
+    format: static-post
+    category: offer
+    title: "Диагностика и её условия"
+    asset: "assets/cases/refix/posts/05.png"
+    historical_terms: true
+    goals: [explain-entry-service, lead-to-message]
+
+  - number: 6
+    id: publication-06
+    format: static-post
+    category: useful
+    title: "Что делать, если залили устройство водой"
+    asset: "assets/cases/refix/posts/06.png"
+    goals: [provide-emergency-guidance, encourage-save]
+
+  - number: 7
+    id: publication-07
+    format: static-post
+    category: service-scenario
+    title: "Приставка шумит, как самолёт?"
+    asset: "assets/cases/refix/posts/07.png"
+    documentary_photo: false
+    goals: [show-service-breadth, explain-maintenance]
+
+  - number: 8
+    id: publication-08
+    format: static-post
+    category: myth-busting
+    title: "Оригинал или аналог?"
+    asset: "assets/cases/refix/posts/08.png"
+    goals: [explain-parts-choice, build-trust]
+
+  - number: 9
+    id: publication-09
+    format: static-post
+    category: process
+    title: "Сколько ждать ремонт?"
+    asset: "assets/cases/refix/posts/09.png"
+    goals: [explain-timing, remove-uncertainty]
+
+  - number: 10
+    id: publication-10
+    format: static-post
+    category: seasonal-offer
+    title: "Ремонт электросамокатов"
+    asset: "assets/cases/refix/posts/10.png"
+    historical_terms: true
+    goals: [show-service-breadth, lead-to-message]
+
+story_series:
+  - number: 1
+    id: diagnostics
+    status: main-package
+    leads_to_publication: 5
+    title: "Почему диагностика не должна пугать"
+    frames:
+      - { number: 1, role: hook, topic: "Страх лишнего счёта", asset: "assets/cases/refix/stories/01/01.png" }
+      - { number: 2, role: recognition, topic: "Плата за один осмотр", asset: "assets/cases/refix/stories/01/02.png" }
+      - { number: 3, role: tension, topic: "Цена, когда неудобно отказаться", asset: "assets/cases/refix/stories/01/03.png" }
+      - { number: 4, role: answer, topic: "Сначала причина, потом решение клиента", asset: "assets/cases/refix/stories/01/04.png" }
+      - { number: 5, role: transition, topic: "Переход к посту об условиях диагностики", asset: "assets/cases/refix/stories/01/05.png" }
+
+  - number: 2
+    id: liquid-damaged-laptop
+    status: main-package
+    leads_to_publication: 2
+    title: "Что делать после кофе на ноутбуке"
+    frames:
+      - { number: 1, role: hook, topic: "Кажется, что ноутбук уже потерян", asset: "assets/cases/refix/stories/02/01.png" }
+      - { number: 2, role: mistake, topic: "Попытка включить устройство", asset: "assets/cases/refix/stories/02/02.png" }
+      - { number: 3, role: consequence, topic: "Почему включение опасно", asset: "assets/cases/refix/stories/02/03.png" }
+      - { number: 4, role: hope, topic: "Шанс спасти устройство", asset: "assets/cases/refix/stories/02/04.png" }
+      - { number: 5, role: transition, topic: "Переход к посту о залитом ноутбуке", asset: "assets/cases/refix/stories/02/05.png" }
+
+  - number: 3
+    id: electric-scooters
+    status: bonus
+    leads_to_publication: 10
+    title: "Самокат сломался в разгар сезона"
+    frames:
+      - { number: 1, role: hook, topic: "Самокат встал в сезон", asset: "assets/cases/refix/stories/03/01.png" }
+      - { number: 2, role: symptoms, topic: "Типичные неисправности", asset: "assets/cases/refix/stories/03/02.png" }
+      - { number: 3, role: barrier, topic: "Сложно найти подходящий сервис", asset: "assets/cases/refix/stories/03/03.png" }
+      - { number: 4, role: answer, topic: "Диагностика и цена до ремонта", asset: "assets/cases/refix/stories/03/04.png" }
+      - { number: 5, role: transition, topic: "Переход к посту о самокатах", asset: "assets/cases/refix/stories/03/05.png" }
+
+asset_display_notes:
+  post_aspect_ratio: "4:5"
+  story_aspect_ratio: "9:16"
+  crop: false
+  post_dimensions: "1080 × 1350"
+  story_dimensions: "1080 × 1920"
+  historical_terms: "Цены и условия внутри макетов относятся к кампании 2026 года и не являются текущей офертой."
+  generated_or_stock_note: "Сценарные изображения ремонта не следует называть документальными фотографиями конкретных работ REFIX."

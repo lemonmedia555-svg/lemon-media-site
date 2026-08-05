@@ -4,10 +4,10 @@ language: ru
 
 counting:
   rule: "Считаются уникальные публикации. Слайды каруселей и размещения одного материала на разных площадках не считаются отдельными работами."
-  public_cases: 18
-  verified_publications_in_registry: 205
-  publishable_visualized_publications: 200
-  note: "У фонда «Доброе сердце» один макет не прошёл финальный QA. В кейсе Ольги Андреевой четыре готовых поста оставлены вне публичной галереи до медицинской и юридической проверки формулировок."
+  public_cases: 20
+  verified_publications_in_registry: 225
+  publishable_visualized_publications: 215
+  note: "У фонда «Доброе сердце» один макет не прошёл финальный QA. В кейсе Ольги Андреевой четыре готовых поста оставлены вне публичной галереи до медицинской и юридической проверки формулировок. В кейсе Dava Life публично показаны пять макетов, которых не касался последний список правок; исправленный экспорт остальных материалов в доступной папке не найден."
 
 cases:
   - id: saratov-kitchens-2026-08
@@ -779,3 +779,91 @@ cases:
       - "Фактический выход всего месяца и бизнес-метрики не подтверждены."
       - "Идеологические тезисы принадлежат клиентскому проекту, а не lemonmedia."
       - "Повторный заказ принят в производство, но ещё не выполнен."
+
+  - id: refix
+    slug: refix
+    public_title: "REFIX — контент, который снимает страх перед ремонтом техники"
+    client_display_name: "REFIX"
+    period: "2026-08"
+    release_window: "2026-08-05/2026-08-27"
+    niche: repair-service
+    subniche: consumer-electronics-and-electric-scooters
+    formats:
+      - static-post
+      - carousel
+      - stories-sequence
+    scope:
+      publications: 10
+      static_posts: 8
+      carousel_publications: 2
+      carousel_slides: 14
+      stories_sequences: 3
+      stories_frames: 15
+      visual_files: 37
+      confirmed_launch_platform_count: 1
+      confirmed_launch_platform_ids:
+        - vk
+    featured_goals:
+      - remove-repair-fears
+      - explain-diagnostics-and-price-approval
+      - explain-timing-and-parts
+      - provide-emergency-guidance
+      - show-service-breadth
+      - lead-to-message
+    data:
+      case: "cases/refix/case.yml"
+      plan: "cases/refix/plan.yml"
+    public_page: "case-refix.html"
+    media_status: media-ready-with-historical-terms
+    portfolio_permission_status: permission-confirmed
+    publishable: true
+    publish_blockers: []
+    evidence_limitations:
+      - "Запуск подтверждён только для ВКонтакте; Instagram и YouTube указаны как подготовленные площадки."
+      - "Охваты, обращения, продажи и повторный заказ не подтверждены."
+      - "Цены и условия внутри макетов относятся к кампании 2026 года."
+      - "Сценарные изображения ремонта не выдаются за документальные фотографии конкретных работ."
+
+  - id: dava-life
+    slug: dava-life
+    public_title: "Dava Life — сложная продуктовая линейка как понятный месяц контента"
+    client_display_name: "Dava Life"
+    period: "2026-07/2026-08"
+    release_window: null
+    niche: health-and-wellness-products
+    subniche: peptide-and-wellness-products
+    formats:
+      - static-post
+      - stories-sequence
+    scope:
+      publications: 10
+      static_posts: 10
+      stories_sequences: 1
+      stories_frames: 5
+      source_visual_files: 15
+      publishable_post_visuals: 5
+      publishable_visual_files: 5
+      prepared_platform_count: 1
+      prepared_platform_ids:
+        - vk
+    featured_goals:
+      - explain-complex-product
+      - build-category-understanding
+      - handle-skepticism
+      - show-product-line
+      - help-product-choice
+      - remove-order-barrier
+    data:
+      case: "cases/dava-life/case.yml"
+      plan: "cases/dava-life/plan.yml"
+    public_page: "case-dava-life.html"
+    media_status: media-ready-with-version-control
+    portfolio_permission_status: permission-confirmed
+    publishable: true
+    publish_blockers: []
+    evidence_limitations:
+      - "Финальная версия утверждена в Figma, но исправленный экспорт не найден в доступной папке Битрикс."
+      - "Публично показываются только пять макетов, которых не касался последний список изменений."
+      - "Фактический выход исправленного комплекта, прямые ссылки и бизнес-метрики не подтверждены."
+      - "Новый заказ принят в очередь, но ещё не выполнен."
+      - "Продуктовые тезисы клиента не являются медицинскими заявлениями lemonmedia."
