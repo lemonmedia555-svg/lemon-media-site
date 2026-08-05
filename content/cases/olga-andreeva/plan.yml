@@ -1,0 +1,98 @@
+version: 1
+brand: lemonmedia
+case_id: olga-andreeva
+period: first-month
+language: ru
+
+scope:
+  publications: 10
+  stories_sequences: 1
+  stories_frames: 5
+  source_visual_files: 15
+  public_post_visuals: 6
+  public_story_visuals: 5
+
+claim_rule: "Публикации раскрывают позицию эксперта и ведут к продукту, но не доказывают лечение, изменение состояния аудитории или коммерческий результат."
+
+strategy:
+  sequence:
+    - introduce-project
+    - build-personal-trust
+    - raise-self-reflection
+    - explain-expert-position
+    - warm-up-to-closed-club
+    - lead-to-consultation
+  rubrics:
+    useful-expert: 3
+    myth-review: 1
+    personal: 2
+    engagement: 2
+    offer: 2
+
+distribution:
+  prepared_for:
+    - vk
+    - telegram
+    - max
+  primary_platform: vk
+  calendar: not-confirmed
+  status: transferred-to-publication
+
+public_gallery:
+  - number: 1
+    role: introduction
+    title: "Меня зовут Ольга, и у меня новый проект"
+    asset: "assets/cases/olga-andreeva/posts/01.jpg"
+    goals: [introduce-new-project, build-personal-trust]
+
+  - number: 3
+    role: self-reflection
+    title: "Куда утекает ваша энергия"
+    asset: "assets/cases/olga-andreeva/posts/03.jpg"
+    goals: [encourage-self-reflection, build-personal-trust]
+
+  - number: 5
+    role: offer
+    title: "Анонс закрытого клуба"
+    asset: "assets/cases/olga-andreeva/posts/05.jpg"
+    goals: [warm-up-to-club, lead-to-product]
+
+  - number: 7
+    role: personal-story
+    title: "Почему я выбрала самую тяжёлую тему"
+    asset: "assets/cases/olga-andreeva/posts/07.jpg"
+    goals: [show-expert-position, build-personal-trust]
+
+  - number: 9
+    role: engagement
+    title: "Вы держите всё на себе"
+    asset: "assets/cases/olga-andreeva/posts/09.jpg"
+    goals: [encourage-self-reflection, encourage-dialogue]
+
+  - number: 10
+    role: consultation
+    title: "С чего начать, если тяжело"
+    asset: "assets/cases/olga-andreeva/posts/10.jpg"
+    goals: [remove-contact-fear, lead-to-consultation]
+
+stories:
+  - id: closed-club-warm-up
+    frame_count: 5
+    related_role: offer
+    title: "От усталости на автопилоте к анонсу закрытого клуба"
+    goals: [raise-problem, build-empathy, warm-up-to-club]
+    assets:
+      - "assets/cases/olga-andreeva/stories/01.jpg"
+      - "assets/cases/olga-andreeva/stories/02.jpg"
+      - "assets/cases/olga-andreeva/stories/03.jpg"
+      - "assets/cases/olga-andreeva/stories/04.jpg"
+      - "assets/cases/olga-andreeva/stories/05.jpg"
+
+editorial_exclusions:
+  publication_numbers: [2, 4, 6, 8]
+  reason: "Не показывать до отдельной медицинской и юридической проверки формулировок."
+
+asset_display_notes:
+  post_dimensions: "720 × 900"
+  story_dimensions: "720 × 1280"
+  crop: false

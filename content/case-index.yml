@@ -4,10 +4,10 @@ language: ru
 
 counting:
   rule: "Считаются уникальные публикации. Слайды каруселей и размещения одного материала на разных площадках не считаются отдельными работами."
-  public_cases: 16
-  verified_publications_in_registry: 185
-  publishable_visualized_publications: 184
-  note: "У фонда «Доброе сердце» одна из 10 утверждённых публикаций не входит в визуальную галерею: доступный макет не прошёл финальный QA."
+  public_cases: 17
+  verified_publications_in_registry: 195
+  publishable_visualized_publications: 190
+  note: "У фонда «Доброе сердце» один макет не прошёл финальный QA. В кейсе Ольги Андреевой четыре готовых поста оставлены вне публичной галереи до медицинской и юридической проверки формулировок."
 
 cases:
   - id: saratov-kitchens-2026-08
@@ -688,3 +688,49 @@ cases:
       - "Цифры ×3 и ×5 внутри каруселей относятся к кейсам самого клиента, а не к работе lemonmedia."
       - "Недостающий седьмой слайд и истории добавлены после основного утверждения; отдельное повторное подтверждение не найдено."
       - "Охваты, заявки, продажи и окупаемость не подтверждены."
+
+  - id: olga-andreeva
+    slug: olga-andreeva
+    public_title: "Ольга Андреева — система мягкого перезапуска экспертного проекта"
+    client_display_name: "Ольга Андреева"
+    period: first-month
+    release_window: null
+    niche: expert-and-wellness
+    subniche: psychological-wellness-project
+    formats:
+      - static-post
+      - stories-sequence
+    scope:
+      publications: 10
+      static_posts: 10
+      stories_sequences: 1
+      stories_frames: 5
+      source_visual_files: 15
+      publishable_post_visuals: 6
+      publishable_story_visuals: 5
+      publishable_visual_files: 11
+      editorially_withheld_post_visuals: 4
+      prepared_platform_count: 3
+      prepared_platform_ids:
+        - vk
+        - telegram
+        - max
+    featured_goals:
+      - introduce-new-project
+      - build-personal-trust
+      - show-expert-position
+      - encourage-self-reflection
+      - warm-up-to-club
+      - lead-to-consultation
+    data:
+      case: "cases/olga-andreeva/case.yml"
+      plan: "cases/olga-andreeva/plan.yml"
+    public_page: "case-olga-andreeva.html"
+    media_status: media-ready-with-editorial-exclusions
+    portfolio_permission_status: permission-confirmed
+    publishable: true
+    publish_blockers: []
+    evidence_limitations:
+      - "Фактический выход, полный календарь и бизнес-метрики не подтверждены."
+      - "Четыре публикации исключены из публичной галереи до проверки медицинских формулировок."
+      - "Контент нельзя представлять как лечение, гарантированный эффект или замену медицинской помощи."
