@@ -1,0 +1,109 @@
+version: 1
+brand: lemonmedia
+id: narfkis
+slug: narfkis
+language: ru
+
+identity:
+  public_title: "NARFKiS — контент для инклюзивных спортивных событий"
+  client_display_name: "NARFKiS"
+  period: "2026-07"
+  niche: inclusive-sport
+  subniche: public-sport-events
+  client_type: new-client-with-confirmed-continuation
+
+summary:
+  short: "10 постов и мини-прогрев из 5 сторис: анонсы событий, объяснение новых игр, разбор барьеров, отчётные материалы и история бренда."
+  content_task: "Не ограничиваться афишами: помочь аудитории понять формат игр, увидеть доступность участия и сформировать доверие к организатору."
+  result_wording: "Первый пакет из 10 постов и 5 сторис утверждён и передан в процесс публикации для ВКонтакте и MAX. Фактический выход каждого материала и метрики после публикации не подтверждены."
+
+scope:
+  publications: 10
+  static_posts: 10
+  carousel_publications: 0
+  story_frames: 5
+  story_series: 1
+  source_visual_files: 15
+  web_visual_files: 15
+  source_post_dimensions:
+    post_01: "1200 × 1500"
+    posts_02_10: "1080 × 1350"
+  source_story_dimensions: "1080 × 1920"
+  web_post_dimensions: "864 × 1080"
+  web_story_dimensions: "720 × 1280"
+  post_aspect_ratio: "4:5"
+  story_aspect_ratio: "9:16"
+  planned_platform_count: 2
+
+marketing_logic:
+  premise: "Новую спортивную игру надо не только анонсировать. Контент должен объяснить механику, снять страх участия, показать реальные события и закрепить доверие к организатору."
+  sequence:
+    - event-hook
+    - game-explanation
+    - barrier-removal
+    - real-project-proof
+    - brand-trust
+  rubric_distribution:
+    event-announcements: 2
+    useful-explainers: 2
+    myth-busting: 2
+    client-projects: 2
+    brand-story: 2
+
+workflow:
+  priority_post_created_before_main_package: true
+  content_plan_completed: true
+  text_completed: true
+  visual_completed: true
+  light_and_dark_variants_reviewed: true
+  partner_logo_correction_added: true
+  final_package_approved: true
+  handed_to_publication: true
+  actual_publication_confirmed: false
+
+schedule:
+  status: handed-to-publication-publication-unverified
+  period: "2026-07"
+  planned_platforms: [vk, max]
+  confirmed_published_platforms: []
+
+continuation:
+  confirmed_repeat_order: true
+  status: text-approval-in-progress
+  included_in_this_case_result: false
+  public_wording: "Клиент подтвердил следующий заказ; новый пакет ещё согласуется и не показывается как готовый."
+
+evidence:
+  confirmed:
+    - "Первый пакет содержит 10 одиночных постов и 5 сторис."
+    - "Контент-план рассчитан на ВКонтакте и MAX."
+    - "Срочный анонс подготовлен раньше основного пакета."
+    - "В один из макетов добавлен партнёрский логотип по замечанию."
+    - "Финальный пакет утверждён и передан в публикационный процесс."
+    - "Подтверждён следующий заказ, который ещё находится на согласовании."
+  not_claimed:
+    - "Фактический выход всех публикаций."
+    - "Охваты, просмотры, вовлечённость или рост аудитории."
+    - "Заявки, участники мероприятий, продажи или другие бизнес-метрики."
+    - "Спортивные мероприятия и грантовые проекты клиента как результат lemonmedia."
+    - "Второй пакет как завершённая работа."
+  public_links: null
+  analytics: null
+  client_review: null
+
+publication_control:
+  portfolio_permission: confirmed_by_project_owner
+  final_media: ready
+  publishable: true
+  display_notes:
+    - "Показывать все 10 постов без обрезки в формате 4:5."
+    - "Показывать сторис отдельной связной серией 9:16."
+    - "Не называть передачу в публикацию фактической публикацией."
+    - "Не добавлять бизнес-метрики без отдельной аналитики."
+    - "Не приписывать lemonmedia результаты спортивных проектов клиента."
+    - "Повторный заказ упоминать только как продолжение, которое ещё согласуется."
+
+assets:
+  root: "assets/cases/narfkis"
+  posts: "posts/{publication_number_2d}.jpg"
+  stories: "stories/{frame_number_2d}.jpg"

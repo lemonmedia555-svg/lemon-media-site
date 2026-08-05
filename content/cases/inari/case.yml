@@ -1,0 +1,116 @@
+version: 1
+brand: lemonmedia
+id: inari
+slug: inari
+language: ru
+
+identity:
+  public_title: "INARI — контент-система для локальной доставки еды"
+  client_display_name: "INARI"
+  period: "2026-08"
+  niche: food-delivery
+  subniche: rolls-pizza-and-ready-food
+  client_type: new-client
+
+summary:
+  short: "Десять публикаций и мини-прогрев из пяти сторис: товарная витрина, кухня, помощь с выбором и вовлекающие темы в единой системе."
+  content_task: "Не ограничиваться показом меню, а снять сомнения о свежести, познакомить с процессом, облегчить выбор и вовлечь местную аудиторию."
+  result_wording: "Контент-план и визуал утверждены. Подготовлены 8 одиночных постов, 2 карусели по 7 слайдов и 5 сторис — 27 финальных изображений. Пакет загружен черновиками только для ВКонтакте на 4–22 августа 2026 года. Фактический выход публикаций не подтверждён."
+
+scope:
+  publications: 10
+  static_posts: 8
+  carousel_publications: 2
+  slides_per_carousel: 7
+  carousel_slides: 14
+  story_frames: 5
+  source_visual_files: 27
+  public_visual_files: 15
+  public_static_posts: 8
+  public_carousel_covers: 2
+  public_story_frames: 5
+  post_dimensions: "1080 × 1350"
+  story_dimensions: "1080 × 1920"
+  public_post_dimensions: "864 × 1080"
+  public_story_dimensions: "675 × 1200"
+
+marketing_logic:
+  rubric_distribution:
+    product-showcase: 3
+    behind-the-scenes: 3
+    useful: 2
+    engagement: 2
+  sequence:
+    - create-appetite
+    - help-choice
+    - build-kitchen-trust
+    - invite-dialogue
+
+schedule:
+  status: drafts-uploaded-publication-unconfirmed
+  starts_at: "2026-08-04 10:00"
+  ends_at: "2026-08-22 10:00"
+  cadence: every-two-days
+  publication_time: "10:00"
+  planned_platforms: [vk, instagram, telegram, max]
+  confirmed_draft_platforms: [vk]
+  confirmed_published_platforms: []
+
+quality_control:
+  text_revision_rounds_recorded: 1
+  visual_brand_name_correction: "Латинское написание заменено на кириллическое."
+  final_visual_approval: confirmed
+  draft_calendar: confirmed
+  publication_launch: unconfirmed
+
+repeat_order:
+  created_at: "2026-08-05"
+  marked_as: renewal
+  scope: "10 публикаций, включая 2 карусели"
+  status: waiting-for-launch-and-additional-inputs
+  public_wording: "Повторный заказ подтверждён, но второй пакет ещё не выполнен и не входит в результат кейса."
+
+public_selection:
+  rule: "Показывать только 8 одиночных постов, обложки двух каруселей и 5 сторис."
+  excluded:
+    - "Внутренние слайды карусели №3 с ценами и составами до сверки с клиентом."
+    - "Внутренние слайды карусели №7 с условиями доставки и служебной строкой."
+  reason: "В источниках есть расхождения по ценам и порогам доставки; фактическое удаление служебной строки не подтверждено."
+
+evidence:
+  confirmed:
+    - "Публичное название проекта: INARI."
+    - "Первый пакет создан для нового клиента."
+    - "Контент-план содержит 10 публикаций: 8 одиночных постов и 2 карусели по 7 слайдов."
+    - "Дополнительно подготовлены 5 сторис."
+    - "Финальная папка содержит 27 изображений."
+    - "После замены написания названия визуал утверждён."
+    - "Черновики загружены только для ВКонтакте с 4 по 22 августа в 10:00."
+    - "5 августа создан новый заказ с отметкой «продление»."
+  not_claimed:
+    - "Фактический выход публикаций."
+    - "Загрузка или публикация в Instagram, Telegram и MAX."
+    - "Охваты, вовлечённость, заказы, продажи или рост аудитории."
+    - "Актуальность цен, составов и порогов доставки внутри непубличных слайдов."
+    - "Съёмка всех фотографий клиентом."
+    - "Выполнение второго пакета."
+  public_links: null
+  analytics: null
+  client_review: null
+
+publication_control:
+  portfolio_permission: confirmed_by_project_owner
+  final_media: ready
+  publishable: true
+  display_notes:
+    - "Показывать посты в формате 4:5, сторис — 9:16, без обрезки."
+    - "Не переносить спорные внутренние слайды каруселей в публичные assets."
+    - "Называть загрузку черновиками только для ВКонтакте."
+    - "Не называть черновики опубликованными материалами."
+    - "Не выдавать повторный заказ за выполненный второй пакет."
+
+assets:
+  root: "assets/cases/inari"
+  static_posts: "posts/{publication_number_2d}.jpg"
+  carousel_covers: "carousel-covers/{publication_number_2d}.jpg"
+  stories: "stories/{story_number_2d}.jpg"

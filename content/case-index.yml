@@ -4,10 +4,10 @@ language: ru
 
 counting:
   rule: "Считаются уникальные публикации. Слайды каруселей и размещения одного материала на разных площадках не считаются отдельными работами."
-  public_cases: 23
-  verified_publications_in_registry: 289
-  publishable_visualized_publications: 279
-  note: "Подарочные карусели считаются отдельными уникальными публикациями, но не подменяют основные календарные слоты. У фонда «Доброе сердце» один макет не прошёл финальный QA. В кейсе Ольги Андреевой четыре готовых поста оставлены вне публичной галереи до медицинской и юридической проверки формулировок. В кейсе Dava Life публично показаны пять макетов, которых не касался последний список правок. Новый цикл Colorplast и кейс Налог Эксперт показаны с честными незавершёнными этапами."
+  public_cases: 25
+  verified_publications_in_registry: 309
+  publishable_visualized_publications: 299
+  note: "Подарочные карусели считаются отдельными уникальными публикациями, но не подменяют основные календарные слоты. У фонда «Доброе сердце» один макет не прошёл финальный QA. В кейсе Ольги Андреевой четыре готовых поста оставлены вне публичной галереи до медицинской и юридической проверки формулировок. В кейсе Dava Life публично показаны пять макетов, которых не касался последний список правок. Новый цикл Colorplast и кейс Налог Эксперт показаны с честными незавершёнными этапами. В INARI внутренние слайды с несверенными ценами и условиями не опубликованы."
 
 cases:
   - id: saratov-kitchens-2026-08
@@ -1005,3 +1005,88 @@ cases:
       - "Комплект отправлен клиенту, но финальный ответ по размеру шрифтов не зафиксирован."
       - "Фактический запуск публикаций, прямые ссылки и бизнес-метрики не подтверждены."
       - "Налоговые тезисы внутри макетов не являются консультацией lemonmedia."
+
+  - id: narfkis
+    slug: narfkis
+    public_title: "NARFKiS — контент для инклюзивных спортивных событий"
+    client_display_name: "NARFKiS"
+    period: "2026-07"
+    release_window: null
+    niche: inclusive-sport
+    subniche: public-sport-events
+    formats:
+      - static-post
+      - stories-sequence
+    scope:
+      publications: 10
+      static_posts: 10
+      stories_sequences: 1
+      stories_frames: 5
+      visual_files: 15
+      planned_platform_count: 2
+      planned_platform_ids:
+        - vk
+        - max
+    featured_goals:
+      - explain-new-sports
+      - announce-events
+      - remove-participation-barriers
+      - show-real-events
+      - build-organizer-trust
+    data:
+      case: "cases/narfkis/case.yml"
+      plan: "cases/narfkis/plan.yml"
+    public_page: "case-narfkis.html"
+    media_status: media-ready-approved
+    portfolio_permission_status: permission-confirmed
+    publishable: true
+    publish_blockers: []
+    evidence_limitations:
+      - "Финальный пакет утверждён и передан в публикационный процесс, но фактический выход не подтверждён."
+      - "Охваты, участники мероприятий, заявки и другие метрики не подтверждены."
+      - "Повторный заказ подтверждён, но новый пакет ещё согласуется и не считается готовым."
+
+  - id: inari
+    slug: inari
+    public_title: "INARI — контент-система для локальной доставки еды"
+    client_display_name: "INARI"
+    period: "2026-08"
+    release_window: "2026-08-04/2026-08-22"
+    niche: food-and-hospitality
+    subniche: rolls-pizza-and-ready-food
+    formats:
+      - static-post
+      - carousel
+      - stories-sequence
+    scope:
+      publications: 10
+      static_posts: 8
+      carousel_publications: 2
+      carousel_slides: 14
+      stories_sequences: 1
+      stories_frames: 5
+      source_visual_files: 27
+      publishable_visual_files: 15
+      confirmed_draft_platform_count: 1
+      confirmed_draft_platform_ids:
+        - vk
+    featured_goals:
+      - create-appetite
+      - help-menu-choice
+      - show-kitchen-process
+      - remove-freshness-concerns
+      - engage-local-audience
+      - lead-to-order
+    data:
+      case: "cases/inari/case.yml"
+      plan: "cases/inari/plan.yml"
+    public_page: "case-inari.html"
+    media_status: media-ready-with-pricing-exclusions
+    portfolio_permission_status: permission-confirmed
+    publishable: true
+    publish_blockers: []
+    evidence_limitations:
+      - "Черновики подтверждены только для ВКонтакте; фактический выход не доказан."
+      - "Внутренние слайды каруселей с несверенными ценами, порогами доставки и служебной строкой исключены."
+      - "Повторный заказ создан, но второй пакет ещё не выполнен."
+      - "Охваты, заказы, продажи и рост аудитории не подтверждены."
