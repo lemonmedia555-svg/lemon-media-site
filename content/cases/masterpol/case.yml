@@ -1,0 +1,98 @@
+version: 1
+brand: lemonmedia
+id: masterpol
+slug: masterpol
+language: ru
+
+identity:
+  public_title: "МастерПол — контент-месяц июля–августа 2026"
+  client_display_name: "МастерПол"
+  period: "2026-07/2026-08"
+  planned_release_window: "2026-07-28/2026-08-15"
+  niche: home-improvement
+  subniche: flooring-installation
+  geography: ekaterinburg
+
+summary:
+  short: "Контент-месяц для услуг по укладке пола: реальные работы, выбор материалов, разбор возражений, процесс и предложения."
+  content_task: "Привлечь новую аудиторию, заранее снять вопросы о качестве и цене и подвести потенциального заказчика к замеру."
+  result_wording: "Подготовлены и утверждены 10 публикаций: 8 одиночных постов, 2 карусели по 7 слайдов и мини-прогрев из 5 историй. Комплект загружен во ВКонтакте как черновики; публикационный период был запланирован с 28 июля по 15 августа 2026 года."
+
+scope:
+  publications: 10
+  static_posts: 8
+  carousel_publications: 2
+  carousel_slides: 14
+  stories_sequences: 1
+  stories_frames: 5
+  final_media_files: 27
+  confirmed_draft_platform_count: 1
+  confirmed_draft_platform_ids:
+    - vk
+
+schedule:
+  start_date: "2026-07-28"
+  end_date: "2026-08-15"
+  cadence_days: 2
+  time_local: "10:00"
+  timezone_status: not-recorded
+  status: drafts-loaded-publication-not-confirmed
+
+category_distribution:
+  portfolio: 2
+  useful: 2
+  objections-and-myths: 2
+  process: 2
+  offer: 2
+
+featured_goals:
+  - attract-new-audience
+  - build-trust
+  - explain-material-choice
+  - demonstrate-work
+  - handle-price-objections
+  - show-process
+  - lead-measurement-request
+
+stories:
+  sequence_id: stories-01
+  related_publication_id: publication-05
+  frames: 5
+  narrative: "Вопрос о цене → зависимость от основания → честный расчёт → зачёт стоимости замера → переход к публикации."
+
+continuation:
+  confirmed: true
+  next_cycle_publications: 10
+  marketing_status: completed
+  visual_status: in-production
+  public_wording: "После первого комплекта клиент заказал ещё 10 публикаций. Маркетинговая часть следующего цикла завершена, визуал находится в производстве."
+
+evidence:
+  confirmed:
+    - "Публичное название проекта: МастерПол."
+    - "Финальный пакет содержит 10 публикаций, включая две карусели по семь слайдов."
+    - "К публикации о замере подготовлена связная серия из пяти историй."
+    - "Финальная папка содержит 27 изображений."
+    - "Клиент утвердил визуалы."
+    - "Комплект загружен во ВКонтакте как черновики."
+    - "Публикационный период был запланирован с 28 июля по 15 августа 2026 года, через день в 10:00."
+    - "Подтверждено продолжение работы ещё на 10 публикаций; визуал второго цикла пока не готов."
+  not_claimed:
+    - "Публикация каждого материала по запланированному календарю."
+    - "Продажи, заявки, выручка и окупаемость."
+    - "Рост охватов, подписчиков и вовлечённости."
+    - "Актуальность коммерческих условий внутри клиентских макетов."
+    - "Готовый результат второго цикла."
+  public_links:
+    - label: "Сайт клиента"
+      url: "https://master-pol96.ru/"
+  analytics: null
+  client_review: null
+
+publication_control:
+  portfolio_permission: confirmed_by_project_owner
+  final_media: ready
+  public_links: partially-verified
+  recognizable_people_assets: []
+  publishable: true
+

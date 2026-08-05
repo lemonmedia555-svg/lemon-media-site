@@ -1,0 +1,149 @@
+version: 1
+brand: lemonmedia
+case_id: electronics-cherepovets
+period: "2026-07/2026-08"
+language: ru
+
+claim_rule: "Цели описывают роль контента, а не доказанный коммерческий результат. Подтверждены готовые тексты и полный визуальный пакет; публикация и метрики не заявляются."
+
+distribution:
+  prepared_for:
+    - vk
+  primary_platform: vk
+  calendar_dates: not-defined-in-approved-plan
+  publication_status: client-review-pending
+
+rubric_balance:
+  product_showcase: 2
+  useful_content: 2
+  myth_busting: 2
+  offer: 2
+  engagement: 2
+
+publications:
+  - number: 1
+    id: publication-01
+    format: carousel
+    category: useful-content
+    title: "Стекло или гидрогель — как выбрать защиту экрана"
+    slide_count: 7
+    public_slide_count: 6
+    goals: [help-product-choice, build-expert-trust, encourage-saves]
+    public_assets:
+      - "assets/cases/electronics-cherepovets/carousels/01/01.webp"
+      - "assets/cases/electronics-cherepovets/carousels/01/03.webp"
+      - "assets/cases/electronics-cherepovets/carousels/01/04.webp"
+      - "assets/cases/electronics-cherepovets/carousels/01/05.webp"
+      - "assets/cases/electronics-cherepovets/carousels/01/06.webp"
+      - "assets/cases/electronics-cherepovets/carousels/01/07.webp"
+    omitted_slide: 2
+    omission_reason: "Крупное изображение лица."
+
+  - number: 2
+    id: publication-02
+    format: static-post
+    category: engagement
+    title: "Сколько зарядок живёт у вас дома"
+    asset: "assets/cases/electronics-cherepovets/posts/02.webp"
+    goals: [encourage-comments, learn-audience]
+
+  - number: 3
+    id: publication-03
+    format: static-post
+    category: myth-busting
+    title: "Три мифа о защите смартфона"
+    asset: "assets/cases/electronics-cherepovets/posts/03.webp"
+    goals: [handle-objections, build-expert-trust]
+
+  - number: 4
+    id: publication-04
+    format: carousel
+    category: product-showcase
+    title: "Пять вещей для нового смартфона к учёбе"
+    slide_count: 7
+    goals: [show-products, seasonal-demand, lead-to-messages]
+    assets:
+      - "assets/cases/electronics-cherepovets/carousels/04/01.webp"
+      - "assets/cases/electronics-cherepovets/carousels/04/02.webp"
+      - "assets/cases/electronics-cherepovets/carousels/04/03.webp"
+      - "assets/cases/electronics-cherepovets/carousels/04/04.webp"
+      - "assets/cases/electronics-cherepovets/carousels/04/05.webp"
+      - "assets/cases/electronics-cherepovets/carousels/04/06.webp"
+      - "assets/cases/electronics-cherepovets/carousels/04/07.webp"
+
+  - number: 5
+    id: publication-05
+    format: static-post
+    category: offer
+    title: "Учебный год: защитим телефон школьника"
+    asset: "assets/cases/electronics-cherepovets/posts/05.webp"
+    historical_terms_visible: true
+    goals: [seasonal-demand, lead-to-messages]
+
+  - number: 6
+    id: publication-06
+    format: static-post
+    category: useful-content
+    title: "Какая ТВ-антенна поймает сигнал"
+    asset: "assets/cases/electronics-cherepovets/posts/06.webp"
+    goals: [help-product-choice, build-expert-trust, encourage-saves]
+
+  - number: 7
+    id: publication-07
+    format: static-post
+    category: product-showcase
+    title: "Беспроводные наушники Hoco W50"
+    asset: "assets/cases/electronics-cherepovets/posts/07.webp"
+    historical_price_visible: true
+    goals: [show-products, lead-to-messages]
+
+  - number: 8
+    id: publication-08
+    format: static-post
+    category: engagement
+    title: "Что решает при выборе наушников"
+    asset: "assets/cases/electronics-cherepovets/posts/08.webp"
+    goals: [encourage-comments, learn-audience]
+
+  - number: 9
+    id: publication-09
+    format: static-post
+    category: myth-busting
+    title: "Мифы об интернете и тарифах"
+    asset: "assets/cases/electronics-cherepovets/posts/09.webp"
+    historical_terms_visible: true
+    goals: [handle-objections, lead-to-messages]
+
+  - number: 10
+    id: publication-10
+    format: static-post
+    category: offer
+    title: "Видеорегистратор Viper Orion Duo по акции"
+    asset: "assets/cases/electronics-cherepovets/posts/10.webp"
+    historical_price_visible: true
+    goals: [show-products, lead-to-messages]
+
+gift:
+  - id: gift-carousel-01
+    format: carousel
+    category: useful-content
+    title: "Шпаргалка: какая батарейка под что"
+    slide_count: 7
+    goals: [build-expert-trust, encourage-saves, lead-to-messages]
+    assets:
+      - "assets/cases/electronics-cherepovets/gift/01.webp"
+      - "assets/cases/electronics-cherepovets/gift/02.webp"
+      - "assets/cases/electronics-cherepovets/gift/03.webp"
+      - "assets/cases/electronics-cherepovets/gift/04.webp"
+      - "assets/cases/electronics-cherepovets/gift/05.webp"
+      - "assets/cases/electronics-cherepovets/gift/06.webp"
+      - "assets/cases/electronics-cherepovets/gift/07.webp"
+
+asset_display_notes:
+  aspect_ratio: "4:5"
+  source_dimensions: "1080 × 1350"
+  web_dimensions: "864 × 1080"
+  crop: false
+  public_asset_count: 28
+  internal_asset_count: 29
+  historical_terms: "Цены и условия внутри макетов относятся к августу 2026 года."
