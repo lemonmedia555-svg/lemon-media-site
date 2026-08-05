@@ -4,9 +4,9 @@ language: ru
 
 counting:
   rule: "Считаются уникальные публикации. Слайды каруселей и размещения одного материала на разных площадках не считаются отдельными работами."
-  public_cases: 31
-  verified_publications_in_registry: 383
-  publishable_visualized_publications: 370
+  public_cases: 32
+  verified_publications_in_registry: 394
+  publishable_visualized_publications: 381
   note: "Подарочные карусели считаются отдельными уникальными публикациями, но не подменяют основные календарные слоты. У фонда «Доброе сердце» один макет не прошёл финальный QA. В кейсе Ольги Андреевой четыре готовых поста оставлены вне публичной галереи до медицинской и юридической проверки формулировок. В кейсе Dava Life публично показаны пять макетов, которых не касался последний список правок. Новый цикл Colorplast, кейсы Налог Эксперт и «Кристалл» показаны с честными незавершёнными этапами. В INARI внутренние слайды с несверенными ценами и условиями не опубликованы. В кейсе «Атерис» макеты с именами и узнаваемыми сотрудниками исключены из публичной подборки. В кейсе «ЭЛЕКТРОНИКС» один слайд с крупным лицом исключён из публичной версии."
 
 cases:
@@ -1355,3 +1355,52 @@ cases:
       - "Один слайд с крупным лицом исключён из публичной версии; основной смысл карусели сохранён."
       - "Фактический выход публикаций, охваты, обращения, продажи и окупаемость не подтверждены."
       - "Цены и акции внутри макетов относятся к периоду проекта."
+
+  - id: invest-management
+    slug: invest-management
+    public_title: "Invest Management — контент для сложного инвестиционного продукта"
+    client_display_name: "Invest Management"
+    period: "2026-07"
+    release_window: null
+    niche: commercial-real-estate
+    subniche: commercial-property-sublease
+    formats:
+      - static-post
+      - carousel
+      - stories-sequence
+      - pinned-post
+    scope:
+      publications: 11
+      main_publications: 10
+      additional_pinned_publications: 1
+      static_posts: 9
+      carousel_publications: 2
+      carousel_slides: 14
+      stories_sequences: 1
+      stories_frames: 5
+      visual_files: 28
+      planned_platform_count: 4
+      planned_platform_ids:
+        - telegram
+        - vk
+        - instagram
+        - max
+    featured_goals:
+      - explain-product-mechanics
+      - build-founder-trust
+      - demonstrate-cases
+      - handle-risk-objections
+      - show-expertise
+      - lead-expert-analysis-request
+    data:
+      case: "cases/invest-management/case.yml"
+      plan: "cases/invest-management/plan.yml"
+    public_page: "case-invest-management.html"
+    media_status: media-ready-approved
+    portfolio_permission_status: permission-confirmed
+    publishable: true
+    publish_blockers: []
+    evidence_limitations:
+      - "Цифры, ставки, суммы и условия внутри макетов относятся к июлю 2026 года и могут быть неактуальны."
+      - "Материалы не являются финансовым советом, офертой или гарантией lemonmedia."
+      - "Публикация, заявки, привлечённые инвесторы, доходность и другие бизнес-метрики не заявляются."
