@@ -1,0 +1,72 @@
+version: 1
+brand: lemonmedia
+case_id: taplife
+language: ru
+
+claim_rule: "Подтверждены финальный визуальный пакет, утверждение и продление. Метрики, медицинский эффект и полный фактический выход публикаций не заявляются."
+
+web_assets:
+  format: jpeg
+  dimensions: "720 × 900"
+  aspect_ratio: "4:5"
+  crop: false
+
+package:
+  publications: 10
+  static_posts: 8
+  main_carousels: 2
+  bonus_carousels: 1
+  visual_files: 28
+  platforms: [vk, instagram, telegram, max, threads]
+
+publications:
+  - { number: 1, format: static-post, role: brand-story, title: "Массаж, на который можно прийти с ребёнком", asset: "assets/cases/taplife/posts/01.jpg" }
+  - number: 2
+    format: carousel
+    role: useful
+    title: "Детский массаж: с какого возраста и зачем"
+    slides:
+      - { number: 1, asset: "assets/cases/taplife/carousels/02/01.jpg" }
+      - { number: 2, asset: "assets/cases/taplife/carousels/02/02.jpg" }
+      - { number: 3, asset: "assets/cases/taplife/carousels/02/03.jpg" }
+      - { number: 4, asset: "assets/cases/taplife/carousels/02/04.jpg" }
+      - { number: 5, asset: "assets/cases/taplife/carousels/02/05.jpg" }
+      - { number: 6, asset: "assets/cases/taplife/carousels/02/06.jpg" }
+      - { number: 7, asset: "assets/cases/taplife/carousels/02/07.jpg" }
+  - { number: 3, format: static-post, role: team-trust, title: "Кто будет работать с вашим телом", asset: "assets/cases/taplife/posts/03.jpg" }
+  - number: 4
+    format: carousel
+    role: myth-busting
+    title: "Здоровому ребёнку массаж ни к чему"
+    slides:
+      - { number: 1, asset: "assets/cases/taplife/carousels/04/01.jpg" }
+      - { number: 2, asset: "assets/cases/taplife/carousels/04/02.jpg" }
+      - { number: 3, asset: "assets/cases/taplife/carousels/04/03.jpg" }
+      - { number: 4, asset: "assets/cases/taplife/carousels/04/04.jpg" }
+      - { number: 5, asset: "assets/cases/taplife/carousels/04/05.jpg" }
+      - { number: 6, asset: "assets/cases/taplife/carousels/04/06.jpg" }
+  - { number: 5, format: static-post, role: offer, title: "Первый визит со скидкой периода", asset: "assets/cases/taplife/posts/05.jpg", historical_terms: true }
+  - { number: 6, format: static-post, role: behind-the-scenes, title: "Пока вы на кушетке — чем занят ребёнок", asset: "assets/cases/taplife/posts/06.jpg" }
+  - { number: 7, format: static-post, role: useful, title: "Спина и шея уставшего родителя", asset: "assets/cases/taplife/posts/07.jpg" }
+  - { number: 8, format: static-post, role: visit-scenario, title: "Как проходит семейный визит", asset: "assets/cases/taplife/posts/08.jpg" }
+  - { number: 9, format: static-post, role: engagement, title: "А вы бы взяли ребёнка с собой?", asset: "assets/cases/taplife/posts/09.jpg" }
+  - { number: 10, format: static-post, role: occasion, title: "Каникулы: дети дома, спина не отдыхает", asset: "assets/cases/taplife/posts/10.jpg" }
+
+bonus:
+  format: carousel
+  title: "Шесть сигналов, что телу пора выдохнуть"
+  slide_count: 7
+  separate_calendar_slot: unconfirmed
+  slides:
+    - { number: 1, asset: "assets/cases/taplife/carousels/bonus/01.jpg" }
+    - { number: 2, asset: "assets/cases/taplife/carousels/bonus/02.jpg" }
+    - { number: 3, asset: "assets/cases/taplife/carousels/bonus/03.jpg" }
+    - { number: 4, asset: "assets/cases/taplife/carousels/bonus/04.jpg" }
+    - { number: 5, asset: "assets/cases/taplife/carousels/bonus/05.jpg" }
+    - { number: 6, asset: "assets/cases/taplife/carousels/bonus/06.jpg" }
+    - { number: 7, asset: "assets/cases/taplife/carousels/bonus/07.jpg" }
+
+display_notes:
+  - "Все 28 изображений показываются в пропорции 4:5 без обрезки."
+  - "Подарочная карусель показана отдельно от десяти основных публикаций."
+  - "Скидка на макете относится к периоду кампании и не является текущей офертой."

@@ -1,0 +1,95 @@
+version: 1
+brand: lemonmedia
+id: taplife
+slug: taplife
+language: ru
+
+identity:
+  public_title: "TapLife — семейный массажный кабинет: контент вокруг барьеров родителей"
+  client_display_name: "TapLife"
+  niche: family-massage-studio
+  geography: ulyanovsk
+  relationship: renewal
+
+summary:
+  short: "Для семейного массажного кабинета собрали 10 публикаций, две основные карусели и подарочную карусель. Контент объясняет семейный формат, знакомит с командой, снимает возражения и показывает сценарий визита."
+  content_task: "Повышать узнаваемость и доверие через реальное преимущество кабинета: возможность прийти с ребёнком."
+  result_wording: "Подтверждены утверждение первого визуального пакета, 28 финальных изображений, передача материалов на пять площадок и следующий заказ из 10 публикаций. Метрики и фактический выход всего календаря не заявляются."
+
+scope:
+  publications: 10
+  static_posts: 8
+  main_carousels: 2
+  bonus_carousels: 1
+  main_carousel_slides: 13
+  bonus_carousel_slides: 7
+  final_visual_files: 28
+  source_dimensions: "1080 × 1350"
+  web_dimensions: "720 × 900"
+  crop: false
+
+platforms:
+  primary: vk
+  all: [vk, instagram, telegram, max, threads]
+  publication_preparation: confirmed
+  actual_full_publication: unconfirmed
+
+content_logic:
+  central_positioning: "Забота о себе без необходимости оставлять ребёнка за пределами визита."
+  roles:
+    - brand-story
+    - useful
+    - team-trust
+    - myth-busting
+    - offer
+    - behind-the-scenes
+    - visit-scenario
+    - engagement
+    - occasion
+  legal_boundary: "Не использовать обещания лечения и медицинского результата; упоминать противопоказания там, где это необходимо."
+
+quality_control:
+  brief_review: confirmed
+  text_corrections: confirmed
+  texts_approved: confirmed
+  design_corrections: confirmed
+  final_visual_approved: confirmed
+  client_materials_used: confirmed
+
+renewal:
+  confirmed: true
+  next_package:
+    publications: 10
+    carousels: 2
+    platforms: [vk, instagram, telegram, max, threads]
+    texts_approved: true
+    final_visual_approved: false
+  claim_boundary: "Продление подтверждает продолжение сотрудничества, но не доказывает рост продаж, охватов или аудитории."
+
+evidence:
+  confirmed:
+    - "Публичное название проекта: TapLife."
+    - "Первый пакет: 10 публикаций, 2 основные карусели и подарочная карусель."
+    - "В финальной папке 28 изображений размером 1080 × 1350."
+    - "Тексты и визуал первого пакета утверждены."
+    - "Материалы подготовлены для ВКонтакте, Instagram, Telegram, MAX и Threads."
+    - "Следующий заказ содержит 10 публикаций, включая 2 карусели."
+  not_claimed:
+    - "Охваты, подписчики, заявки, продажи или прибыль."
+    - "Фактический выход всех 10 публикаций на каждой площадке."
+    - "Лечебный или иной медицинский эффект услуг клиента."
+    - "Актуальность исторической скидки после периода кампании."
+    - "Успешность отдельного эксперимента с AI-видео."
+    - "Утверждение визуала следующего месяца до получения подтверждения."
+  analytics: null
+
+publication_control:
+  portfolio_permission: confirmed_by_project_owner
+  final_media: ready
+  publishable: true
+  display_notes:
+    - "Показывать первый пакет как завершённый и утверждённый."
+    - "Показывать следующий заказ только как подтверждённое продление."
+    - "Не писать, что все публикации уже вышли."
+    - "Условия и акции внутри макетов считать историческими."
+    - "Не включать AI-видео в успешный результат кейса."

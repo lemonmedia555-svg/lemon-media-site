@@ -4,9 +4,9 @@ language: ru
 
 counting:
   rule: "Считаются уникальные публикации. Слайды каруселей и размещения одного материала на разных площадках не считаются отдельными работами."
-  public_cases: 25
-  verified_publications_in_registry: 309
-  publishable_visualized_publications: 299
+  public_cases: 26
+  verified_publications_in_registry: 320
+  publishable_visualized_publications: 310
   note: "Подарочные карусели считаются отдельными уникальными публикациями, но не подменяют основные календарные слоты. У фонда «Доброе сердце» один макет не прошёл финальный QA. В кейсе Ольги Андреевой четыре готовых поста оставлены вне публичной галереи до медицинской и юридической проверки формулировок. В кейсе Dava Life публично показаны пять макетов, которых не касался последний список правок. Новый цикл Colorplast и кейс Налог Эксперт показаны с честными незавершёнными этапами. В INARI внутренние слайды с несверенными ценами и условиями не опубликованы."
 
 cases:
@@ -1090,3 +1090,50 @@ cases:
       - "Внутренние слайды каруселей с несверенными ценами, порогами доставки и служебной строкой исключены."
       - "Повторный заказ создан, но второй пакет ещё не выполнен."
       - "Охваты, заказы, продажи и рост аудитории не подтверждены."
+
+  - id: taplife
+    slug: taplife
+    public_title: "TapLife — контент вокруг главного барьера родителей"
+    client_display_name: "TapLife"
+    period: null
+    release_window: null
+    niche: local-services
+    subniche: family-massage-studio
+    formats:
+      - static-post
+      - carousel
+    scope:
+      publications: 11
+      main_publications: 10
+      bonus_publications: 1
+      static_posts: 8
+      carousel_publications: 3
+      carousel_slides: 20
+      visual_files: 28
+      prepared_platform_count: 5
+      prepared_platform_ids:
+        - vk
+        - instagram
+        - telegram
+        - max
+        - threads
+    featured_goals:
+      - explain-family-format
+      - remove-childcare-barrier
+      - build-team-trust
+      - answer-age-questions
+      - show-visit-scenario
+      - lead-to-booking
+    data:
+      case: "cases/taplife/case.yml"
+      plan: "cases/taplife/plan.yml"
+    public_page: "case-taplife.html"
+    media_status: media-ready-approved
+    portfolio_permission_status: permission-confirmed
+    publishable: true
+    publish_blockers: []
+    evidence_limitations:
+      - "Пакет передан на публикацию, но фактический выход всех десяти материалов на каждой площадке не подтверждён."
+      - "Продление подтверждено, но визуал следующего месяца ещё не утверждён."
+      - "Охваты, заявки, продажи и медицинский эффект не заявляются."
+      - "Условия и скидка на макетах относятся к периоду кампании."
