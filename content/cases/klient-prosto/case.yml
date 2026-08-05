@@ -1,0 +1,71 @@
+slug: klient-prosto
+public_name: "Клиент Просто"
+title: "Контент-система для B2B-веб-студии"
+sector: "Разработка и продвижение сайтов"
+service: "Контент на месяц"
+status: "Готовый комплект передан на публикацию"
+summary: >-
+  Упаковали сложные услуги, кейсы, статьи и внутреннюю работу веб-студии
+  в понятную систему из 10 публикаций, двух каруселей и пяти историй.
+
+proof:
+  publications: 10
+  static_posts: 8
+  carousels: 2
+  slides_per_carousel: 7
+  carousel_screens: 14
+  stories: 5
+  final_images: 27
+  channels: 4
+  cadence: "раз в три дня"
+
+confirmed:
+  - "согласованы тексты и основное визуальное направление"
+  - "подготовлен полный комплект из 27 финальных изображений"
+  - "10 публикаций добавлены в календарь для четырех каналов"
+  - "публикации распределены с шагом в три дня"
+
+evidence_limits:
+  - "Нет подтвержденных данных об охватах, заявках, продажах или росте аудитории."
+  - "Цифры ×3 и ×5 внутри двух каруселей относятся к кейсам самого клиента, а не к результатам lemonmedia."
+  - "Недостающий седьмой слайд одной карусели и пять историй добавлены после основного утверждения направления."
+  - "Отдельное повторное сообщение клиента об утверждении этих дополнений не найдено."
+
+public_angle: >-
+  Как превратить сложный набор B2B-услуг и кейсов веб-студии в понятную
+  контент-систему на месяц: 10 публикаций, две карусели, пять историй,
+  единый визуальный язык и календарь в четырех каналах.
+
+assets:
+  static_posts:
+    - "/assets/cases/klient-prosto/posts/01.png"
+    - "/assets/cases/klient-prosto/posts/02.png"
+    - "/assets/cases/klient-prosto/posts/03.png"
+    - "/assets/cases/klient-prosto/posts/05.png"
+    - "/assets/cases/klient-prosto/posts/07.png"
+    - "/assets/cases/klient-prosto/posts/08.png"
+    - "/assets/cases/klient-prosto/posts/09.png"
+    - "/assets/cases/klient-prosto/posts/10.png"
+  carousel_04:
+    - "/assets/cases/klient-prosto/carousels/04/post-04-slide-01-cover.png"
+    - "/assets/cases/klient-prosto/carousels/04/post-04-slide-02.png"
+    - "/assets/cases/klient-prosto/carousels/04/post-04-slide-03.png"
+    - "/assets/cases/klient-prosto/carousels/04/post-04-slide-04.png"
+    - "/assets/cases/klient-prosto/carousels/04/post-04-slide-05.png"
+    - "/assets/cases/klient-prosto/carousels/04/post-04-slide-06.png"
+    - "/assets/cases/klient-prosto/carousels/04/post-04-slide-07.png"
+  carousel_06:
+    - "/assets/cases/klient-prosto/carousels/06/post-06-slide-01-cover.png"
+    - "/assets/cases/klient-prosto/carousels/06/post-06-slide-02.png"
+    - "/assets/cases/klient-prosto/carousels/06/post-06-slide-03.png"
+    - "/assets/cases/klient-prosto/carousels/06/post-06-slide-04.png"
+    - "/assets/cases/klient-prosto/carousels/06/post-06-slide-05.png"
+    - "/assets/cases/klient-prosto/carousels/06/post-06-slide-06.png"
+    - "/assets/cases/klient-prosto/carousels/06/post-06-slide-07.png"
+  stories:
+    - "/assets/cases/klient-prosto/stories/story-01.jpg"
+    - "/assets/cases/klient-prosto/stories/story-02.jpg"
+    - "/assets/cases/klient-prosto/stories/story-03.jpg"
+    - "/assets/cases/klient-prosto/stories/story-04.jpg"
+    - "/assets/cases/klient-prosto/stories/story-05.jpg"
+

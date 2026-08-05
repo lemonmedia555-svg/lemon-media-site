@@ -1,0 +1,91 @@
+version: 1
+brand: lemonmedia
+id: casahitto
+slug: casahitto
+language: ru
+
+identity:
+  public_title: "CasaHitto — контент-система для выбора загородного дома"
+  client_display_name: "CasaHitto"
+  period: "2026-07"
+  release_window: null
+  niche: travel-and-hospitality
+  subniche: country-cottage-rental
+  geography: saint-petersburg-and-leningrad-region
+
+summary:
+  short: "Десять публикаций для знакомства с тремя коттеджами и отдельная карусель-помощник для выбора дома."
+  content_task: "Показать различия между объектами, снять вопросы о правилах и подготовке к отдыху, дать поводы для бронирования и помочь выбрать подходящий дом."
+  result_wording: "Утверждены контент-план, тексты и финальный визуал: 10 основных публикаций и подарочная карусель, всего 29 изображений. Комплект передан в публикацию во ВКонтакте; календарь, фактический выход постов и бизнес-метрики не подтверждены."
+
+scope:
+  core_publications: 10
+  bonus_publications: 1
+  total_content_units: 11
+  static_posts: 8
+  core_carousel_publications: 2
+  bonus_carousel_publications: 1
+  total_carousel_publications: 3
+  carousel_slides: 21
+  source_visual_files: 29
+  web_visual_files: 29
+  source_dimensions: "1080 × 1350"
+  web_dimensions: "720 × 900"
+  confirmed_handoff_platform_count: 1
+  confirmed_handoff_platform_ids:
+    - vk
+  publication_status: handed-off-publication-unconfirmed
+
+featured_goals:
+  - show-three-properties
+  - help-property-choice
+  - remove-rule-objections
+  - explain-preparation
+  - build-trust
+  - lead-to-booking
+
+evidence:
+  confirmed:
+    - "Публичное название проекта: CasaHitto."
+    - "Первый месяц работы относится к июлю 2026 года."
+    - "Контент-план и тексты были утверждены до запуска визуала."
+    - "Основной пакет содержит 10 публикаций: 8 статичных постов и 2 карусели по 7 слайдов."
+    - "Дополнительно подготовлена подарочная карусель из 7 слайдов."
+    - "Финальный комплект содержит 29 изображений размером 1080 × 1350 px."
+    - "После предметных правок финальный визуал был утверждён клиентом и передан в публикацию во ВКонтакте."
+  not_claimed:
+    - "Календарь с конкретными датами и временем выхода."
+    - "Фактический выход публикаций и прямые ссылки на них."
+    - "Публикация на площадках, кроме ВКонтакте."
+    - "Охваты, вовлечённость, обращения, бронирования, продажи или окупаемость."
+    - "Актуальность предложений и условий внутри исторических макетов после периода проекта."
+  public_links: null
+  direct_publication_links: null
+  analytics: null
+  client_review: null
+
+quality_control:
+  content_plan_approval: confirmed
+  client_copy_approval: confirmed
+  client_visual_approval: confirmed
+  final_corrections:
+    - "Формулировки в чек-листе."
+    - "Изображение собаки."
+    - "Фотография бани."
+    - "Ограничение по числу гостей."
+    - "Подписи в подарочной карусели."
+  publication_handoff: confirmed
+  actual_publication: unconfirmed
+
+publication_control:
+  portfolio_permission: confirmed_by_project_owner
+  final_media: ready
+  confirmed_handoff_platforms:
+    - vk
+  publishable: true
+  display_notes:
+    - "Все веб-изображения приведены к формату 4:5 и должны показываться без дополнительной обрезки."
+    - "Подарочную карусель отделять от десяти основных публикаций."
+    - "Не называть комплект опубликованным без прямых ссылок или календаря фактического выхода."
+    - "Не добавлять количественные бизнес-результаты без отдельной аналитики."
+    - "Предложения и условия внутри макетов относятся к июлю 2026 года и не являются текущей офертой."

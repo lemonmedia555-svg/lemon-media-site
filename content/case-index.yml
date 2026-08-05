@@ -4,9 +4,9 @@ language: ru
 
 counting:
   rule: "Считаются уникальные публикации. Слайды каруселей и размещения одного материала на разных площадках не считаются отдельными работами."
-  public_cases: 13
-  verified_publications_in_registry: 154
-  publishable_visualized_publications: 153
+  public_cases: 16
+  verified_publications_in_registry: 185
+  publishable_visualized_publications: 184
   note: "У фонда «Доброе сердце» одна из 10 утверждённых публикаций не входит в визуальную галерею: доступный макет не прошёл финальный QA."
 
 cases:
@@ -558,3 +558,133 @@ cases:
       - "Загружены черновики для трёх площадок; фактический выход публикаций не подтверждён."
       - "Отдельное финальное утверждение дизайна клиентом не найдено."
       - "Охваты, регистрации, продажи мест и другие бизнес-метрики не подтверждены."
+
+  - id: casahitto
+    slug: casahitto
+    public_title: "CasaHitto — система выбора загородного дома"
+    client_display_name: "CasaHitto"
+    period: "2026-07"
+    release_window: null
+    niche: travel-and-hospitality
+    subniche: countryside-cottages
+    formats:
+      - static-post
+      - carousel
+    scope:
+      publications: 11
+      scheduled_publications: 10
+      bonus_publications: 1
+      static_posts: 8
+      carousel_publications: 3
+      carousel_slides: 21
+      visual_files: 29
+      prepared_platform_count: 1
+      prepared_platform_ids:
+        - vk
+    featured_goals:
+      - explain-cottage-choice
+      - remove-booking-doubts
+      - show-properties
+      - prepare-for-stay
+      - compare-options
+      - lead-to-booking
+    data:
+      case: "cases/casahitto/case.yml"
+      plan: "cases/casahitto/plan.yml"
+    public_page: "case-casahitto.html"
+    media_status: media-ready
+    portfolio_permission_status: permission-confirmed
+    publishable: true
+    publish_blockers: []
+    evidence_limitations:
+      - "Подтверждены утверждение комплекта и передача в публикацию во ВКонтакте."
+      - "Календарь, фактический выход постов и прямые ссылки не подтверждены."
+      - "Охваты, обращения и бронирования не подтверждены."
+
+  - id: fr-moto
+    slug: fr-moto
+    public_title: "FR-moto — точный контент для инженерного эндуро-продукта"
+    client_display_name: "FR-moto"
+    period: "2026-07/2026-08"
+    release_window: null
+    niche: automotive-and-motorsport
+    subniche: enduro-and-motocross-parts
+    formats:
+      - static-post
+      - carousel
+      - stories-sequence
+    scope:
+      publications: 10
+      static_posts: 8
+      carousel_publications: 2
+      carousel_slides: 12
+      stories_sequences: 1
+      stories_frames: 5
+      visual_files: 25
+      prepared_platform_count: 4
+      prepared_platform_ids:
+        - vk
+        - instagram
+        - telegram
+        - max
+    featured_goals:
+      - explain-technical-product
+      - show-own-production
+      - handle-price-objection
+      - help-product-choice
+      - build-rider-trust
+      - lead-to-order
+    data:
+      case: "cases/fr-moto/case.yml"
+      plan: "cases/fr-moto/plan.yml"
+    public_page: "case-fr-moto.html"
+    media_status: media-ready-after-domain-qa
+    portfolio_permission_status: permission-confirmed
+    publishable: true
+    publish_blockers: []
+    evidence_limitations:
+      - "Подтверждены клиентское утверждение исправленного комплекта и передача на этап публикации."
+      - "Подготовка для четырёх площадок не выдаётся за подтверждённый выход во всех четырёх."
+      - "Календарь, прямые ссылки, охваты, обращения и продажи не подтверждены."
+
+  - id: klient-prosto
+    slug: klient-prosto
+    public_title: "Клиент Просто — контент-система для B2B-веб-студии"
+    client_display_name: "Клиент Просто"
+    period: first-month
+    release_window: null
+    niche: b2b-services
+    subniche: web-development-and-promotion
+    formats:
+      - static-post
+      - carousel
+      - stories-sequence
+    scope:
+      publications: 10
+      static_posts: 8
+      carousel_publications: 2
+      carousel_slides: 14
+      stories_sequences: 1
+      stories_frames: 5
+      visual_files: 27
+      calendar_channel_count: 4
+      cadence: every-3-days
+    featured_goals:
+      - explain-complex-services
+      - show-client-cases
+      - build-b2b-trust
+      - show-process
+      - provide-useful-diagnostics
+      - remove-post-launch-fears
+    data:
+      case: "cases/klient-prosto/case.yml"
+      plan: "cases/klient-prosto/plan.yml"
+    public_page: "case-klient-prosto.html"
+    media_status: media-ready-with-attribution-notes
+    portfolio_permission_status: permission-confirmed
+    publishable: true
+    publish_blockers: []
+    evidence_limitations:
+      - "Цифры ×3 и ×5 внутри каруселей относятся к кейсам самого клиента, а не к работе lemonmedia."
+      - "Недостающий седьмой слайд и истории добавлены после основного утверждения; отдельное повторное подтверждение не найдено."
+      - "Охваты, заявки, продажи и окупаемость не подтверждены."

@@ -1,0 +1,83 @@
+version: 1
+brand: lemonmedia
+case:
+  id: fr-moto
+  slug: fr-moto
+  public_name: "FR-moto"
+  page: "case-fr-moto.html"
+  status: published
+  case_type: expanded
+  period: "2026-07/2026-08"
+  release_window: null
+  niche: automotive-and-motorsport
+  subniche: enduro-and-motocross-parts
+
+summary:
+  short: "Инженерный продукт для эндуро переведён в понятный контент без потери технической точности."
+  content_task: "Объяснить отличия собственных разработок, показать производство, ответить на вопрос цены и помочь подобрать продукт."
+  result_wording: "Утверждены 10 публикаций, две карусели и мини-прогрев из 5 историй — 25 финальных изображений. Контент подготовлен для четырёх площадок; факт выхода и метрики не зафиксированы."
+
+scope:
+  publications: 10
+  static_posts: 8
+  carousel_publications: 2
+  carousel_slides: 12
+  stories_sequences: 1
+  stories_frames: 5
+  visual_files: 25
+  prepared_platform_count: 4
+  prepared_platform_ids:
+    - vk
+    - instagram
+    - telegram
+    - max
+
+featured_goals:
+  - explain-technical-product
+  - show-own-production
+  - handle-price-objection
+  - help-product-choice
+  - build-rider-trust
+  - lead-to-order
+
+evidence:
+  confirmed:
+    - "Публичное название проекта: FR-moto."
+    - "Первый пакет содержит 10 публикаций: 8 статичных постов и 2 карусели."
+    - "Карусель №3 содержит 7 слайдов, карусель №9 — 5 слайдов."
+    - "Дополнительно подготовлен мини-прогрев из 5 историй."
+    - "Всего в финальном комплекте 25 изображений."
+    - "После отраслевых правок в финале используются правильный логотип, эндуро- и кросс-мотоциклы, релевантные товары и формулировка «авиационный алюминий 7075»."
+    - "Исправленный комплект утверждён клиентом 5 августа 2026 года."
+    - "После утверждения проект передан на этап публикации и добавлен в систему постинга."
+  not_claimed:
+    - "Фактический выход всех материалов на четырёх площадках."
+    - "Календарные даты публикаций."
+    - "Охваты, вовлечённость, заявки, продажи и окупаемость."
+    - "Ранние концепции с неверной техникой или неточными товарами."
+    - "Актуальность цен и условий внутри исторических макетов."
+  public_links: null
+  direct_publication_links: null
+  analytics: null
+  client_review: null
+
+quality_control:
+  client_copy_approval: confirmed
+  client_visual_approval: confirmed
+  final_approval_date: "2026-08-05"
+  transferred_to_publication: confirmed
+  publication_launch: not-confirmed
+  excluded_versions:
+    - early-concept-2026-07-22
+    - early-concept-2026-07-27
+
+publication_control:
+  portfolio_permission: confirmed_by_project_owner
+  final_media: ready
+  publishable: true
+  display_notes:
+    - "Показывать только финальные папки после правок от 4 августа."
+    - "Пост 7 дополнен полями до 4:5 без растягивания исходника."
+    - "Истории 1 и 3 использовать только в исправленных версиях."
+    - "Не называть подготовку для четырёх площадок подтверждённой публикацией."
+    - "Не добавлять бизнес-метрики без отдельной аналитики."

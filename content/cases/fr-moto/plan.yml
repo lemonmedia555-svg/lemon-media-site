@@ -1,0 +1,148 @@
+version: 1
+brand: lemonmedia
+case_id: fr-moto
+period: "2026-07/2026-08"
+language: ru
+
+scope:
+  publications: 10
+  static_posts: 8
+  carousel_publications: 2
+  carousel_slides: 12
+  stories_sequences: 1
+  stories_frames: 5
+  visual_files: 25
+
+claim_rule: "Цели описывают роль контента, а не доказанный коммерческий результат. Подтверждены финальный комплект, утверждение и передача на этап публикации; выход постов и метрики не подтверждены."
+
+distribution:
+  prepared_for:
+    - vk
+    - instagram
+    - telegram
+    - max
+  primary_platform: telegram
+  calendar_dates: not-defined-in-approved-plan
+  publication_status: transferred-to-publication-unconfirmed-launch
+
+publications:
+  - number: 1
+    id: publication-01
+    format: static-post
+    category: production
+    title: "Сделано в России: от идеи и чертежа до хард-теста"
+    asset: "assets/cases/fr-moto/posts/01.jpg"
+    goals: [show-own-production, build-rider-trust]
+
+  - number: 2
+    id: publication-02
+    format: static-post
+    category: product
+    title: "Защита, которую не жалко проверить двойной курвой"
+    asset: "assets/cases/fr-moto/posts/02.jpg"
+    technical_fact: "авиационный алюминий 7075"
+    goals: [explain-technical-product, build-rider-trust]
+
+  - number: 3
+    id: publication-03
+    format: carousel
+    slide_count: 7
+    category: guide
+    title: "Как выбрать защиту рук для эндуро"
+    goals: [help-product-choice, encourage-saves]
+    assets:
+      - "assets/cases/fr-moto/carousels/03/01.jpg"
+      - "assets/cases/fr-moto/carousels/03/02.jpg"
+      - "assets/cases/fr-moto/carousels/03/03.jpg"
+      - "assets/cases/fr-moto/carousels/03/04.jpg"
+      - "assets/cases/fr-moto/carousels/03/05.jpg"
+      - "assets/cases/fr-moto/carousels/03/06.jpg"
+      - "assets/cases/fr-moto/carousels/03/07.jpg"
+
+  - number: 4
+    id: publication-04
+    format: static-post
+    category: objection
+    title: "Защита рук — а чего так дорого?"
+    asset: "assets/cases/fr-moto/posts/04.jpg"
+    historical_price_visible: true
+    goals: [handle-price-objection, explain-technical-product]
+
+  - number: 5
+    id: publication-05
+    format: static-post
+    category: product
+    title: "Руль, который не сломается"
+    asset: "assets/cases/fr-moto/posts/05.jpg"
+    historical_price_visible: true
+    goals: [explain-technical-product, lead-to-order]
+
+  - number: 6
+    id: publication-06
+    format: static-post
+    category: offer
+    title: "Заказал сегодня — уехало завтра"
+    asset: "assets/cases/fr-moto/posts/06.jpg"
+    historical_terms_visible: true
+    goals: [remove-purchase-friction, lead-to-order]
+
+  - number: 7
+    id: publication-07
+    format: static-post
+    category: proof
+    title: "Гонщики выбирают FR-moto"
+    asset: "assets/cases/fr-moto/posts/07.jpg"
+    goals: [build-rider-trust, show-real-use]
+
+  - number: 8
+    id: publication-08
+    format: static-post
+    category: compatibility
+    title: "Встаёт на любой эндуро и кросс: подберём версию"
+    asset: "assets/cases/fr-moto/posts/08.jpg"
+    goals: [help-product-choice, lead-to-order]
+
+  - number: 9
+    id: publication-09
+    format: carousel
+    slide_count: 5
+    category: product-showcase
+    title: "Три собственные разработки FR-moto"
+    goals: [show-products, explain-technical-product, lead-to-order]
+    assets:
+      - "assets/cases/fr-moto/carousels/09/01.jpg"
+      - "assets/cases/fr-moto/carousels/09/02.jpg"
+      - "assets/cases/fr-moto/carousels/09/03.jpg"
+      - "assets/cases/fr-moto/carousels/09/04.jpg"
+      - "assets/cases/fr-moto/carousels/09/05.jpg"
+
+  - number: 10
+    id: publication-10
+    format: static-post
+    category: engagement
+    title: "Признавайся: на чём катаешь?"
+    asset: "assets/cases/fr-moto/posts/10.jpg"
+    goals: [learn-audience, encourage-comments]
+
+stories:
+  - id: stories-01
+    format: stories-sequence
+    frame_count: 5
+    related_publication: publication-04
+    title: "Почему защита рук стоит дороже дешёвой дуги"
+    goals: [raise-problem, handle-price-objection, lead-to-post]
+    assets:
+      - "assets/cases/fr-moto/stories/01.jpg"
+      - "assets/cases/fr-moto/stories/02.jpg"
+      - "assets/cases/fr-moto/stories/03.jpg"
+      - "assets/cases/fr-moto/stories/04.jpg"
+      - "assets/cases/fr-moto/stories/05.jpg"
+
+asset_display_notes:
+  post_aspect_ratio: "4:5"
+  story_aspect_ratio: "9:16"
+  crop: false
+  standard_post_dimensions: "720 × 900"
+  story_dimensions: "720 × 1280"
+  post_07_treatment: "Исходник 939 × 1350 сохранён без растягивания и дополнен полями до 720 × 900."
+  historical_terms: "Цены и условия внутри макетов относятся к периоду проекта."
