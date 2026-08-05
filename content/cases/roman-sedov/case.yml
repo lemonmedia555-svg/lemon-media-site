@@ -1,0 +1,95 @@
+version: 1
+brand: lemonmedia
+id: roman-sedov
+slug: roman-sedov
+language: ru
+
+identity:
+  public_title: "Ведущий Роман Седов — контент-пакет августа 2026"
+  client_display_name: "Ведущий Роман Седов"
+  period: "2026-08"
+  initial_calendar_window: "2026-08-01/2026-08-28"
+  niche: events
+  subniche: wedding-and-anniversary-host
+  geography: not-published
+
+summary:
+  short: "Личный бренд ведущего: 10 полезных публикаций, журнальная визуальная система и один календарь черновиков для пяти площадок."
+  content_task: "Перевести опыт ведущего в темы, которые помогают подготовиться к свадьбе или юбилею, показывают невидимую часть работы и мягко ведут к бронированию даты."
+  result_wording: "Подготовлены 10 публикаций: 8 статичных постов и 2 карусели по 7 слайдов. Готовый пакет загружен черновиками в календарь для пяти площадок."
+
+scope:
+  publications: 10
+  static_posts: 8
+  carousel_publications: 2
+  carousel_slides: 14
+  source_images: 22
+  source_dimensions_px: "1200x1500"
+  draft_platform_count: 5
+  draft_platform_ids:
+    - vk
+    - instagram
+    - telegram
+    - threads
+    - max
+
+schedule:
+  initial_start_date: "2026-08-01"
+  initial_end_date: "2026-08-28"
+  dates: 10
+  cadence_days: 3
+  time_local: "10:00"
+  timezone_status: not-recorded
+  status: uploaded-as-drafts
+  later_manager_note: "После первичной раскладки менеджер отметил, что текущий контент клиента стоит в календаре до 12 сентября. Поэтому публично показывается принцип первой раскладки, а не заявляется окончательный срок выхода всего контента."
+
+featured_goals:
+  - show-expertise
+  - answer-client-questions
+  - reveal-backstage-work
+  - build-trust
+  - handle-objections
+  - encourage-engagement
+  - lead-to-booking
+
+creative_system:
+  direction: "Светлая журнальная система с фактурой бумаги, рамками, крупной типографикой и реальными фотографиями с мероприятий."
+  source_basis: "Фотографии клиента с мероприятий."
+  carousel_topics:
+    - "Тайминг свадьбы: что успеть за 5 часов"
+    - "Юбилей, который боялись делать как у всех"
+
+evidence:
+  confirmed:
+    - "Публичное имя: ведущий Роман Седов."
+    - "Завершённый пакет содержит 10 публикаций: 8 статичных постов и 2 карусели по 7 слайдов."
+    - "В финальной папке 22 изображения размером 1200 × 1500 px."
+    - "Тексты к 10 публикациям были согласованы до передачи в дизайн."
+    - "Дизайн прошёл внутренние правки, после финальной выгрузки проект передали к публикации."
+    - "Черновики загрузили в календарь для ВКонтакте, Instagram, Telegram, Threads и MAX."
+    - "Первая раскладка содержит 10 дат с 1 по 28 августа, раз в 3 дня, в 10:00."
+    - "Следующий заказ помечен как «продление 2» и принят в производство."
+  not_claimed:
+    - "Прямое утверждение финального дизайна клиентом."
+    - "Факт выхода всех материалов во всех пяти площадках."
+    - "Охваты, заявки, продажи, выручка и окупаемость."
+    - "Завершение или результат продления №2."
+    - "Независимая проверка числовых утверждений внутри клиентских макетов."
+  public_links: []
+  analytics: null
+  client_review: null
+
+renewal:
+  status: in-production
+  label: "Продление 2"
+  included_in_completed_scope: false
+
+publication_control:
+  portfolio_permission: confirmed_by_project_owner
+  final_media: ready
+  final_design_direct_client_approval: not-found
+  recognizable_people_assets:
+    - "posts/*.jpg"
+    - "carousels/**/*.jpg"
+  recognizable_people_use_basis: confirmed_by_project_owner
+  publishable: true

@@ -4,9 +4,9 @@ language: ru
 
 counting:
   rule: "Считаются уникальные публикации. Слайды каруселей и размещения одного материала на разных площадках не считаются отдельными работами."
-  public_cases: 7
-  verified_publications_in_registry: 71
-  publishable_visualized_publications: 70
+  public_cases: 10
+  verified_publications_in_registry: 122
+  publishable_visualized_publications: 121
   note: "У фонда «Доброе сердце» одна из 10 утверждённых публикаций не входит в визуальную галерею: доступный макет не прошёл финальный QA."
 
 cases:
@@ -299,3 +299,134 @@ cases:
       - "Материалы загружены в систему публикации, но точный выход каждого поста не подтверждён."
       - "Бизнес-метрики и прямые ссылки на публикации не найдены."
       - "Следующий заказ на 15 постов и 10 историй находится в производстве и не считается готовым результатом."
+
+  - id: dan-gun
+    slug: dan-gun
+    public_title: "Дан-Гун — контент для набора в клуб единоборств"
+    client_display_name: "Дан-Гун"
+    period: "2026-07/2026-08"
+    release_window: "2026-07-30/2026-08-17"
+    niche: sport-and-fitness
+    subniche: martial-arts-club
+    formats:
+      - static-post
+      - carousel
+    scope:
+      publications: 11
+      scheduled_publications: 10
+      bonus_publications: 1
+      static_posts: 8
+      carousel_publications: 3
+      carousel_slides: 21
+      visual_files: 29
+      confirmed_upload_platform_count: 1
+      confirmed_upload_platform_ids:
+        - vk
+      planned_but_unconfirmed_platform_ids:
+        - telegram
+        - max
+    featured_goals:
+      - attract-new-audience
+      - answer-parent-questions
+      - remove-fears
+      - build-trust
+      - show-real-club-life
+      - lead-to-enrollment
+    data:
+      case: "cases/dan-gun/case.yml"
+      plan: "cases/dan-gun/plan.yml"
+    public_page: "case-dan-gun.html"
+    media_status: media-ready
+    portfolio_permission_status: permission-confirmed
+    publishable: true
+    publish_blockers: []
+    evidence_limitations:
+      - "Подтверждена загрузка только 10 основных публикаций во ВКонтакте."
+      - "Подарочная карусель не входит в подтверждённый календарь."
+      - "Telegram, MAX, бизнес-метрики и выполнение следующего заказа не подтверждены."
+
+  - id: sidcobra
+    slug: sidcobra
+    public_title: "SIDCOBRA — контент-система для тренера и бренда спорттоваров"
+    client_display_name: "SIDCOBRA"
+    period: "2026-07/2026-10"
+    release_window: "2026-07-29/2026-10-05"
+    niche: sport-and-fitness
+    subniche: strength-coaching-and-sports-goods
+    formats:
+      - static-post
+      - carousel
+    scope:
+      publications: 30
+      static_posts: 24
+      carousel_publications: 6
+      carousel_slides: 42
+      visual_files: 66
+      confirmed_launch_platform_count: 2
+      confirmed_launch_platform_ids:
+        - vk
+        - telegram
+      planned_but_unconfirmed_platform_ids:
+        - instagram
+    featured_goals:
+      - build-expert-trust
+      - explain-training-method
+      - remove-strength-training-fears
+      - show-student-proof
+      - introduce-owned-products
+      - lead-training-request
+    data:
+      case: "cases/sidcobra/case.yml"
+      plan: "cases/sidcobra/plan.yml"
+    public_page: "case-sidcobra.html"
+    media_status: media-ready
+    portfolio_permission_status: permission-confirmed
+    publishable: true
+    publish_blockers: []
+    evidence_limitations:
+      - "Instagram упоминался в плане, но его запуск не подтверждён."
+      - "Охваты, заявки, продажи и публичный отзыв не найдены."
+      - "Коммерческие условия внутри макетов относятся к периоду проекта."
+
+  - id: roman-sedov
+    slug: roman-sedov
+    public_title: "Роман Седов — экспертный контент для личного бренда ведущего"
+    client_display_name: "Роман Седов"
+    period: "2026-08"
+    release_window: "2026-08-01/2026-08-28"
+    niche: events-and-entertainment
+    subniche: event-host
+    formats:
+      - static-post
+      - carousel
+    scope:
+      publications: 10
+      static_posts: 8
+      carousel_publications: 2
+      carousel_slides: 14
+      visual_files: 22
+      draft_platform_count: 5
+      draft_platform_ids:
+        - vk
+        - instagram
+        - telegram
+        - threads
+        - max
+    featured_goals:
+      - explain-invisible-work
+      - build-personal-trust
+      - answer-client-questions
+      - show-event-expertise
+      - lead-date-booking
+    data:
+      case: "cases/roman-sedov/case.yml"
+      plan: "cases/roman-sedov/plan.yml"
+    public_page: "case-roman-sedov.html"
+    media_status: media-ready
+    portfolio_permission_status: permission-confirmed
+    publishable: true
+    publish_blockers: []
+    evidence_limitations:
+      - "Подтверждена загрузка черновиков, а не выход всех материалов в пяти сетях."
+      - "Прямое клиентское утверждение финального дизайна не найдено."
+      - "Продление №2 находится в производстве; метрик результата нет."

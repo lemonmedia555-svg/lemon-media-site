@@ -1,0 +1,148 @@
+version: 1
+brand: lemonmedia
+case_id: roman-sedov
+period: "2026-08"
+language: ru
+
+scope:
+  publications: 10
+  static_posts: 8
+  carousel_publications: 2
+  carousel_slides: 14
+  source_images: 22
+  draft_platform_count: 5
+
+claim_rule: "Цели ниже описывают задачу каждого материала, а не достигнутый бизнес-результат. Подтверждена загрузка черновиков в пять площадок; выход всех публикаций и метрики не подтверждены."
+
+schedule:
+  initial_start_date: "2026-08-01"
+  initial_end_date: "2026-08-28"
+  cadence_days: 3
+  time_local: "10:00"
+  timezone_status: not-recorded
+  status: uploaded-as-drafts
+
+platforms:
+  - id: vk
+    status: draft-upload-confirmed
+  - id: instagram
+    status: draft-upload-confirmed
+  - id: telegram
+    status: draft-upload-confirmed
+  - id: threads
+    status: draft-upload-confirmed
+  - id: max
+    status: draft-upload-confirmed
+
+publications:
+  - number: 1
+    id: publication-01
+    scheduled_at_local: "2026-08-01T10:00:00"
+    format: carousel
+    slide_count: 7
+    category: expert-planning
+    title: "Тайминг свадьбы: что успеть за 5 часов"
+    goals:
+      - answer-client-questions
+      - show-expertise
+      - encourage-saves
+
+  - number: 2
+    id: publication-02
+    scheduled_at_local: "2026-08-04T10:00:00"
+    format: static-post
+    category: backstage
+    title: "Работа, которую вы не видите"
+    goals:
+      - reveal-backstage-work
+      - build-trust
+
+  - number: 3
+    id: publication-03
+    scheduled_at_local: "2026-08-07T10:00:00"
+    format: carousel
+    slide_count: 7
+    category: case-story
+    title: "Юбилей, который боялись делать как у всех"
+    goals:
+      - show-approach
+      - build-trust
+      - handle-objections
+
+  - number: 4
+    id: publication-04
+    scheduled_at_local: "2026-08-10T10:00:00"
+    format: static-post
+    category: availability
+    title: "Сентябрь: остались даты"
+    goals:
+      - create-urgency
+      - lead-to-booking
+
+  - number: 5
+    id: publication-05
+    scheduled_at_local: "2026-08-13T10:00:00"
+    format: static-post
+    category: objection-handling
+    title: "Три мифа о юбилеях"
+    goals:
+      - handle-objections
+      - show-expertise
+
+  - number: 6
+    id: publication-06
+    scheduled_at_local: "2026-08-16T10:00:00"
+    format: static-post
+    category: trust
+    title: "Опыт ведущего в цифрах"
+    goals:
+      - build-trust
+    note: "Макет содержит клиентское утверждение «300+ довольных клиентов»; оно не заявляется lemonmedia как независимо проверенная метрика."
+
+  - number: 7
+    id: publication-07
+    scheduled_at_local: "2026-08-19T10:00:00"
+    format: static-post
+    category: expert-advice
+    title: "Как разговорить зал"
+    goals:
+      - show-expertise
+      - answer-client-questions
+
+  - number: 8
+    id: publication-08
+    scheduled_at_local: "2026-08-22T10:00:00"
+    format: static-post
+    category: engagement
+    title: "Классика или сюрприз"
+    goals:
+      - encourage-engagement
+      - learn-audience-preferences
+
+  - number: 9
+    id: publication-09
+    scheduled_at_local: "2026-08-25T10:00:00"
+    format: static-post
+    category: expert-explanation
+    title: "Ведущий и диджей — зачем оба?"
+    goals:
+      - answer-client-questions
+      - explain-service
+
+  - number: 10
+    id: publication-10
+    scheduled_at_local: "2026-08-28T10:00:00"
+    format: static-post
+    category: seasonal-offer
+    title: "Бронируем декабрь"
+    goals:
+      - lead-to-booking
+      - create-urgency
+
+carousels:
+  - publication_id: publication-01
+    frame_count: 7
+    narrative: "Вопрос о пяти часах → роль ведущего → примерная логика вечера → предложение обсудить свой тайминг."
+  - publication_id: publication-03
+    frame_count: 7
+    narrative: "Страх банального юбилея → семейная задача → решение через историю именинницы → живой вечер → реакция клиента."

@@ -1,0 +1,91 @@
+version: 1
+brand: lemonmedia
+id: dan-gun
+slug: dan-gun
+language: ru
+
+identity:
+  public_title: "Дан-Гун — контент для набора в клуб единоборств"
+  client_display_name: "Дан-Гун"
+  period: "2026-07/2026-08"
+  release_window: "2026-07-30/2026-08-17"
+  niche: sport-and-fitness
+  subniche: martial-arts-club
+  geography: null
+
+summary:
+  short: "Десять публикаций для набора в группы плюс отдельная подарочная карусель с вопросами родителей."
+  content_task: "Вернуть профилю системность, показать пользу тхэквондо, ответить на сомнения родителей и подвести к записи в новый сезон."
+  result_wording: "Утверждён и загружен во ВКонтакте основной пакет из 10 публикаций. Дополнительно подготовлена подарочная карусель. Всего в финале 29 изображений; бизнес-метрики не зафиксированы."
+
+scope:
+  scheduled_publications: 10
+  bonus_publications: 1
+  total_content_units: 11
+  static_posts: 8
+  carousel_publications: 3
+  scheduled_carousel_publications: 2
+  bonus_carousel_publications: 1
+  carousel_slides: 21
+  visual_files: 29
+  confirmed_upload_platform_count: 1
+  confirmed_upload_platform_ids:
+    - vk
+  planned_but_unconfirmed_platform_ids:
+    - telegram
+    - max
+
+featured_goals:
+  - attract-new-audience
+  - answer-parent-questions
+  - remove-fears
+  - build-trust
+  - show-real-club-life
+  - lead-to-enrollment
+
+next_order:
+  status: ordered-in-production
+  publications: 10
+  carousel_publications: 2
+  public_wording: "Клиент оформил следующий пакет, но он ещё находится в производстве и не входит в готовый результат этого кейса."
+
+evidence:
+  confirmed:
+    - "Публичное название: клуб единоборств «Дан-Гун»."
+    - "Основной пакет содержит 10 публикаций: 8 статичных постов и 2 карусели."
+    - "Дополнительно сделана подарочная карусель из 7 слайдов."
+    - "Всего в финальном комплекте 29 изображений."
+    - "Текстовый контент-план был утверждён до дизайна."
+    - "После правок по комплектности, нумерации и выравниванию проект перевели к публикации."
+    - "Во ВКонтакте загружены 10 основных публикаций с 30 июля по 17 августа, раз в 2 дня в 10:00."
+    - "Клиент оформил следующий пакет на 10 публикаций и 2 карусели; он находится в производстве."
+  not_claimed:
+    - "Публикация основного пакета в Telegram или MAX."
+    - "Выход подарочной карусели по подтверждённому календарю."
+    - "Охваты, вовлечённость, обращения, записи, продажи и окупаемость."
+    - "Выполнение следующего заказа."
+    - "Актуальность цены и условий внутри исторических макетов."
+  public_links: null
+  direct_publication_links: null
+  analytics: null
+  client_review: null
+
+publication_control:
+  portfolio_permission: confirmed_by_project_owner
+  final_media: ready
+  client_copy_approval: confirmed
+  client_visual_approval: confirmed-in-project
+  confirmed_upload_platforms:
+    - vk
+  recognizable_people_assets: "all-assets-use-real-club-photos"
+  recognizable_people_use_basis: confirmed_by_project_owner
+  historical_terms_visible_in_assets:
+    - "posts/05.jpg"
+    - "posts/10.jpg"
+  display_notes:
+    - "Все веб-изображения приведены к формату 4:5 и должны показываться без дополнительной обрезки."
+    - "Подарочная карусель отделяется от календаря 10 основных публикаций."
+    - "Telegram и MAX нельзя выдавать за подтверждённую загрузку."
+    - "Цена семейного абонемента и другие условия относятся к периоду проекта."
+    - "Не добавлять количественные бизнес-результаты без отдельной аналитики."
+  publishable: true

@@ -1,0 +1,151 @@
+version: 1
+brand: lemonmedia
+case_id: dan-gun
+period: "2026-07/2026-08"
+language: ru
+
+scope:
+  scheduled_publications: 10
+  bonus_publications: 1
+  static_posts: 8
+  carousel_publications: 3
+  carousel_slides: 21
+  visual_files: 29
+
+claim_rule: "Цели описывают задачу контента, а не доказанный бизнес-результат. Основные 10 публикаций загружены во ВКонтакте; подарочная карусель и плановые Telegram/MAX не выдаются за подтверждённый выход."
+
+schedule:
+  platform: vk
+  start_date: "2026-07-30"
+  end_date: "2026-08-17"
+  time: "10:00"
+  cadence: every-2-days
+  scheduled_publications: 10
+  bonus_carousel_in_calendar: false
+
+publications:
+  - number: 1
+    id: publication-01
+    format: static-post
+    category: myth
+    title: "Единоборства делают ребёнка агрессивным?"
+    asset: "assets/cases/dan-gun/posts/01.jpg"
+    goals: [remove-fears, build-trust]
+
+  - number: 2
+    id: publication-02
+    format: carousel
+    slide_count: 7
+    category: useful
+    title: "Что тхэквондо даёт ребёнку, кроме умения постоять за себя"
+    goals: [explain-value, encourage-saves]
+    assets:
+      - "assets/cases/dan-gun/carousels/02/01.jpg"
+      - "assets/cases/dan-gun/carousels/02/02.jpg"
+      - "assets/cases/dan-gun/carousels/02/03.jpg"
+      - "assets/cases/dan-gun/carousels/02/04.jpg"
+      - "assets/cases/dan-gun/carousels/02/05.jpg"
+      - "assets/cases/dan-gun/carousels/02/06.jpg"
+      - "assets/cases/dan-gun/carousels/02/07.jpg"
+
+  - number: 3
+    id: publication-03
+    format: static-post
+    category: proof
+    title: "185 наград за один сезон"
+    asset: "assets/cases/dan-gun/posts/03.jpg"
+    goals: [show-real-work, build-trust]
+
+  - number: 4
+    id: publication-04
+    format: static-post
+    category: engagement
+    title: "Помогите нам одним ответом"
+    asset: "assets/cases/dan-gun/posts/04.jpg"
+    goals: [collect-feedback, encourage-comments]
+
+  - number: 5
+    id: publication-05
+    format: static-post
+    category: offer
+    title: "Старт сезона: первая неделя бесплатно"
+    asset: "assets/cases/dan-gun/posts/05.jpg"
+    historical_terms: true
+    goals: [lead-to-enrollment]
+
+  - number: 6
+    id: publication-06
+    format: static-post
+    category: faq
+    title: "С какого возраста и в какую группу?"
+    asset: "assets/cases/dan-gun/posts/06.jpg"
+    goals: [answer-parent-questions, help-choice]
+
+  - number: 7
+    id: publication-07
+    format: carousel
+    slide_count: 7
+    category: proof
+    title: "Путь ученика: от первого шага в зал до медали"
+    goals: [show-real-work, build-trust]
+    assets:
+      - "assets/cases/dan-gun/carousels/07/01.jpg"
+      - "assets/cases/dan-gun/carousels/07/02.jpg"
+      - "assets/cases/dan-gun/carousels/07/03.jpg"
+      - "assets/cases/dan-gun/carousels/07/04.jpg"
+      - "assets/cases/dan-gun/carousels/07/05.jpg"
+      - "assets/cases/dan-gun/carousels/07/06.jpg"
+      - "assets/cases/dan-gun/carousels/07/07.jpg"
+
+  - number: 8
+    id: publication-08
+    format: static-post
+    category: myth
+    title: "Поздно начинать? Разбираем"
+    asset: "assets/cases/dan-gun/posts/08.jpg"
+    goals: [remove-fears, lead-to-enrollment]
+
+  - number: 9
+    id: publication-09
+    format: static-post
+    category: engagement
+    title: "Какой спорт вы бросили в детстве?"
+    asset: "assets/cases/dan-gun/posts/09.jpg"
+    goals: [encourage-comments, build-community]
+
+  - number: 10
+    id: publication-10
+    format: static-post
+    category: offer
+    title: "Семейный абонемент"
+    asset: "assets/cases/dan-gun/posts/10.jpg"
+    historical_terms: true
+    goals: [lead-to-enrollment]
+
+bonus:
+  - id: bonus-carousel-01
+    format: carousel
+    slide_count: 7
+    category: faq
+    title: "7 честных вопросов родителя о тхэквондо"
+    calendar_status: not-in-confirmed-calendar
+    goals: [answer-parent-questions, encourage-saves, build-trust]
+    assets:
+      - "assets/cases/dan-gun/carousels/bonus/01.jpg"
+      - "assets/cases/dan-gun/carousels/bonus/02.jpg"
+      - "assets/cases/dan-gun/carousels/bonus/03.jpg"
+      - "assets/cases/dan-gun/carousels/bonus/04.jpg"
+      - "assets/cases/dan-gun/carousels/bonus/05.jpg"
+      - "assets/cases/dan-gun/carousels/bonus/06.jpg"
+      - "assets/cases/dan-gun/carousels/bonus/07.jpg"
+
+next_order:
+  status: ordered-in-production
+  publications: 10
+  carousel_publications: 2
+
+asset_display_notes:
+  aspect_ratio: "4:5"
+  crop: false
+  dimensions: "720 × 900"
+  historical_commercial_terms: "Цена и условия на отдельных макетах относятся к периоду проекта и не являются текущим предложением клуба."
