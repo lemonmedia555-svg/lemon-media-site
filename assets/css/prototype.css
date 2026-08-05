@@ -1677,6 +1677,134 @@ body.hide-notes .prototype-only { display: none !important; }
   object-fit: cover;
 }
 
+.case-catalog-head { margin-top: 82px; }
+
+.case-catalog-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.case-catalog-card {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  overflow: hidden;
+  border: 1px solid var(--ink);
+  border-radius: 22px;
+  background: #fff;
+  box-shadow: 0 12px 40px rgba(25, 25, 25, .06);
+}
+
+.case-catalog-preview {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 5px;
+  padding: 6px;
+  overflow: hidden;
+  border-bottom: 1px solid var(--ink);
+  background: var(--ink);
+}
+
+.case-catalog-preview img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  border-radius: 9px;
+  object-fit: cover;
+  transition: transform .25s ease;
+}
+
+.case-catalog-preview:hover img:nth-child(1) { transform: translateY(-4px); }
+.case-catalog-preview:hover img:nth-child(2) { transform: translateY(4px); }
+.case-catalog-preview:hover img:nth-child(3) { transform: translateY(-4px); }
+
+.case-catalog-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 20px;
+}
+
+.case-catalog-copy h3 { font-size: clamp(24px, 2.5vw, 34px); }
+.case-catalog-copy > p { margin: 0; color: var(--muted); font-size: 14px; }
+
+.case-catalog-status {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 10px;
+  color: var(--muted);
+  font-size: 10px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.case-catalog-status .tag { color: var(--ink); }
+
+.case-catalog-facts {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  list-style: none;
+}
+
+.case-catalog-facts li {
+  min-width: 0;
+  padding: 10px;
+  border-right: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 9px;
+}
+
+.case-catalog-facts li:last-child { border-right: 0; }
+.case-catalog-facts strong { display: block; color: var(--ink); font-size: 20px; line-height: 1; }
+
+.case-catalog-link {
+  margin-top: auto;
+  color: var(--ink);
+  font-size: 13px;
+  font-weight: 850;
+  text-decoration: none;
+}
+
+.case-catalog-link:hover { text-decoration: underline; }
+
+.case-quick-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin: 0 0 24px;
+}
+
+.case-quick-grid > a {
+  display: grid;
+  grid-template-columns: 86px 1fr;
+  align-items: center;
+  min-width: 0;
+  gap: 13px;
+  padding: 9px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: #fff;
+  color: var(--ink);
+  text-decoration: none;
+  transition: border-color .2s ease, transform .2s ease;
+}
+
+.case-quick-grid > a:hover { border-color: var(--ink); transform: translateY(-3px); }
+.case-quick-grid img { width: 86px; aspect-ratio: 4 / 5; border-radius: 10px; object-fit: cover; }
+.case-quick-grid span { display: grid; min-width: 0; gap: 5px; }
+.case-quick-grid small { color: var(--muted); font-size: 9px; font-weight: 800; text-transform: uppercase; }
+.case-quick-grid strong { font-size: 16px; line-height: 1.1; }
+.case-quick-grid b { color: var(--muted); font-size: 10px; font-weight: 650; }
+
 .series-grid.one-card { grid-template-columns: 1fr; }
 
 .case-hero {
@@ -2242,6 +2370,7 @@ body.hide-notes .prototype-only { display: none !important; }
   .work-collage { max-width: 620px; }
   .grid-4,
   .work-grid,
+  .case-catalog-grid,
   .price-list,
   .evidence-strip { grid-template-columns: repeat(2, 1fr); }
   .evidence-item:nth-child(2) { border-right: 0; }
@@ -2252,6 +2381,7 @@ body.hide-notes .prototype-only { display: none !important; }
   .guarantee { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: repeat(2, 1fr); }
   .series-grid,
+  .case-quick-grid,
   .featured-month,
   .case-hero-grid,
   .case-full-hero-grid,
@@ -2347,6 +2477,8 @@ body.hide-notes .prototype-only { display: none !important; }
   .brand-system-demo { grid-template-columns: 1fr; }
   .brand-swatches { grid-column: auto; }
   .case-gallery { grid-template-columns: repeat(2, 1fr); }
+  .case-catalog-grid { grid-template-columns: 1fr; }
+  .case-catalog-head { margin-top: 58px; }
   .case-mini-grid { grid-template-columns: repeat(2, 1fr); }
   .month-topic-grid { grid-template-columns: 1fr; }
   .touch-demo-roles { grid-template-columns: 1fr; }

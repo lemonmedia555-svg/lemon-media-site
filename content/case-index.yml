@@ -4,8 +4,10 @@ language: ru
 
 counting:
   rule: "Считаются уникальные публикации. Слайды каруселей и размещения одного материала на разных площадках не считаются отдельными работами."
-  public_cases: 1
-  verified_publications_in_registry: 15
+  public_cases: 4
+  verified_publications_in_registry: 41
+  publishable_visualized_publications: 40
+  note: "У фонда «Доброе сердце» одна из 10 утверждённых публикаций не входит в визуальную галерею: доступный макет не прошёл финальный QA."
 
 cases:
   - id: saratov-kitchens-2026-08
@@ -51,3 +53,117 @@ cases:
     publish_blockers: []
     optional_follow_up:
       - "Добавить прямые ссылки на отдельные живые публикации, если они будут показаны."
+
+  - id: borodulina-tape
+    slug: borodulina-tape
+    public_title: "BORODULINA TAPE — контент-месяц июля–августа 2026"
+    client_display_name: "BORODULINA TAPE"
+    period: "2026-07/2026-08"
+    release_window: "2026-07-31/2026-08-18"
+    niche: beauty-and-wellness
+    subniche: taping-massage-kinesiofitness
+    formats:
+      - full-month
+      - static-post
+      - carousel
+      - stories-sequence
+    scope:
+      publications: 10
+      static_posts: 8
+      carousel_publications: 2
+      carousel_slides: 14
+      stories_sequences: 1
+      stories_frames: 5
+      confirmed_launch_platform_count: 1
+      confirmed_launch_platform_ids:
+        - vk
+    featured_goals:
+      - attract-new-audience
+      - build-trust
+      - show-expertise
+      - collect-feedback
+      - lead-request
+    data:
+      case: "cases/borodulina-tape/case.yml"
+      plan: "cases/borodulina-tape/plan.yml"
+    public_page: "case-borodulina-tape.html"
+    media_status: media-ready
+    portfolio_permission_status: permission-confirmed
+    publishable: true
+    publish_blockers: []
+    optional_follow_up:
+      - "Добавить прямые ссылки на опубликованные материалы и аналитику, если появятся."
+
+  - id: dobroe-serdtse
+    slug: dobroe-serdtse
+    public_title: "БФ «Доброе сердце» — контент о помощи, доверии и участии"
+    client_display_name: "БФ «Доброе сердце»"
+    period: "2026-07/2026-08"
+    release_window: "2026-07-17/2026-08-04"
+    niche: nonprofit-and-charity
+    subniche: charity-foundation
+    formats:
+      - static-post
+      - carousel
+    scope:
+      publications: 10
+      static_posts: 8
+      publishable_static_post_visuals: 7
+      carousel_publications: 2
+      carousel_slides: 14
+      publishable_visual_files: 21
+      excluded_visual_files: 1
+    featured_goals:
+      - attract-new-audience
+      - build-trust
+      - show-real-work
+      - encourage-participation
+      - lead-request
+    data:
+      case: "cases/dobroe-serdtse/case.yml"
+      plan: "cases/dobroe-serdtse/plan.yml"
+    public_page: "case-dobroe-serdtse.html"
+    media_status: media-ready-with-explicit-exclusions
+    portfolio_permission_status: permission-confirmed
+    publishable: true
+    publish_blockers: []
+    optional_follow_up:
+      - "Заменить исключённый макет публикации №9 после получения исправленной версии."
+      - "Не возвращать истории в кейс до проверки исправленного финала."
+
+  - id: yagodny-ray
+    slug: yagodny-ray
+    public_title: "Ягодный Рай — 5 постов и подарочная карусель"
+    client_display_name: "Ягодный Рай"
+    period: "2026-07"
+    release_window: "2026-07-31/2026-08-08"
+    niche: food-and-hospitality
+    subniche: berries-and-farm-products
+    formats:
+      - static-post
+      - carousel
+    scope:
+      publications: 6
+      static_posts: 5
+      carousel_publications: 1
+      carousel_slides: 6
+      platform_count: 2
+      platform_ids:
+        - vk
+        - odnoklassniki
+    featured_goals:
+      - build-trust
+      - show-product
+      - encourage-saves
+      - create-purchase-desire
+      - lead-request
+    data:
+      case: "cases/yagodny-ray/case.yml"
+      plan: "cases/yagodny-ray/plan.yml"
+    public_page: "case-yagodny-ray.html"
+    media_status: media-ready
+    portfolio_permission_status: permission-confirmed
+    publishable: true
+    publish_blockers: []
+    optional_follow_up:
+      - "Добавить результат продления 30/10 только после завершения производства."

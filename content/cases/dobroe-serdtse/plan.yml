@@ -1,0 +1,203 @@
+version: 1
+brand: lemonmedia
+case_id: dobroe-serdtse
+period: "2026-07/2026-08"
+language: ru
+
+scope:
+  publications: 10
+  static_posts: 8
+  carousel_publications: 2
+  carousel_slides: 14
+  publishable_static_post_visuals: 7
+  stories_sequences: 0
+  stories_frames: 0
+  excluded_stories_sequences: 1
+  excluded_stories_frames: 5
+  visual_files: 21
+  excluded_visual_files: 1
+  planned_platform_count: 3
+
+claim_rule: "Цели ниже описывают задачу материала, а не уже достигнутый результат. Публикация на всех трёх площадках, прямые ссылки и метрики не подтверждены."
+
+schedule:
+  moved_to_publication: "2026-07-17"
+  requested_completion_by: "2026-08-04"
+  exact_publication_dates: null
+  exact_publication_times: null
+  status: publication-stage-from-work-task
+
+publications:
+  - number: 1
+    id: publication-01
+    format: static-post
+    category: work-showcase
+    source_rubric: real-work
+    title: "Благотворительный кинопоказ"
+    asset: "assets/cases/dobroe-serdtse/posts/01.webp"
+    goals:
+      - build-trust
+
+  - number: 2
+    id: publication-02
+    format: carousel
+    slide_count: 7
+    category: useful
+    source_rubric: useful
+    title: "Как проверить благотворительный фонд за 5 минут"
+    goals:
+      - build-trust
+      - encourage-saves
+      - help-choice
+    slides:
+      - number: 1
+        role: cover
+        asset: "assets/cases/dobroe-serdtse/carousels/02/01.webp"
+      - number: 2
+        role: explanation
+        asset: "assets/cases/dobroe-serdtse/carousels/02/02.webp"
+      - number: 3
+        role: explanation
+        asset: "assets/cases/dobroe-serdtse/carousels/02/03.webp"
+      - number: 4
+        role: explanation
+        asset: "assets/cases/dobroe-serdtse/carousels/02/04.webp"
+      - number: 5
+        role: explanation
+        asset: "assets/cases/dobroe-serdtse/carousels/02/05.webp"
+      - number: 6
+        role: explanation
+        asset: "assets/cases/dobroe-serdtse/carousels/02/06.webp"
+      - number: 7
+        role: call-to-action
+        asset: "assets/cases/dobroe-serdtse/carousels/02/07.webp"
+
+  - number: 3
+    id: publication-03
+    format: static-post
+    category: useful
+    source_rubric: engagement
+    title: "С чего начинается доброта"
+    asset: "assets/cases/dobroe-serdtse/posts/03.webp"
+    goals:
+      - build-trust
+
+  - number: 4
+    id: publication-04
+    format: static-post
+    category: offer
+    source_rubric: help-offer
+    title: "Сбор на ортопедические матрасы"
+    asset: "assets/cases/dobroe-serdtse/posts/04.webp"
+    goals:
+      - lead-request
+
+  - number: 5
+    id: publication-05
+    format: static-post
+    category: work-showcase
+    source_rubric: real-work
+    title: "Писатель передал фонду тираж книги"
+    asset: "assets/cases/dobroe-serdtse/posts/05.webp"
+    goals:
+      - build-trust
+
+  - number: 6
+    id: publication-06
+    format: static-post
+    category: offer
+    source_rubric: event
+    title: "Благотворительный забег «Кольцо времени»"
+    asset: "assets/cases/dobroe-serdtse/posts/06.webp"
+    goals:
+      - lead-request
+
+  - number: 7
+    id: publication-07
+    format: carousel
+    slide_count: 7
+    category: useful
+    source_rubric: useful
+    title: "5 способов помочь без денег"
+    goals:
+      - encourage-saves
+      - help-choice
+    slides:
+      - number: 1
+        role: cover
+        asset: "assets/cases/dobroe-serdtse/carousels/07/01.webp"
+      - number: 2
+        role: explanation
+        asset: "assets/cases/dobroe-serdtse/carousels/07/02.webp"
+      - number: 3
+        role: explanation
+        asset: "assets/cases/dobroe-serdtse/carousels/07/03.webp"
+      - number: 4
+        role: explanation
+        asset: "assets/cases/dobroe-serdtse/carousels/07/04.webp"
+      - number: 5
+        role: explanation
+        asset: "assets/cases/dobroe-serdtse/carousels/07/05.webp"
+      - number: 6
+        role: explanation
+        asset: "assets/cases/dobroe-serdtse/carousels/07/06.webp"
+      - number: 7
+        role: call-to-action
+        asset: "assets/cases/dobroe-serdtse/carousels/07/07.webp"
+
+  - number: 8
+    id: publication-08
+    format: static-post
+    category: offer
+    source_rubric: help-offer
+    title: "Что сейчас нужно фонду"
+    asset: "assets/cases/dobroe-serdtse/posts/08.webp"
+    goals:
+      - lead-request
+
+  - number: 9
+    id: publication-09
+    format: static-post
+    category: product-showcase
+    source_rubric: event
+    title: "Что получит участник «Кольца времени»"
+    asset: null
+    asset_status: excluded-after-qa
+    display: false
+    exclusion_reason: "В доступном макете осталось «Колеса времени» вместо утверждённой формы «Кольца времени»."
+    goals:
+      - differentiate-offer
+      - lead-request
+
+  - number: 10
+    id: publication-10
+    format: static-post
+    category: useful
+    source_rubric: engagement
+    title: "О чём рассказать дальше"
+    asset: "assets/cases/dobroe-serdtse/posts/10.webp"
+    goals:
+      - build-trust
+
+excluded_materials:
+  - id: publication-09-visual
+    format: static-post-visual
+    related_publication_id: publication-09
+    file_count: 1
+    status: excluded
+    reason: "В доступном макете осталось «Колеса времени» вместо утверждённой формы «Кольца времени»."
+
+  - id: stories-01
+    format: stories-sequence
+    frame_count: 5
+    related_publication_id: publication-06
+    status: excluded
+    reason: "В последнем доступном экране осталось старое название «Колесо времени». Исправленную серию проверить не удалось."
+
+asset_display_notes:
+  preserve_aspect_ratio: "4:5"
+  crop: false
+  source_dimensions: "1080 × 1350"
+  web_dimensions: "720 × 900"
+  publication_09_visual: "Не включён в публичную галерею до получения исправленной версии."
+  stories: "Не включены в публичный пакет до получения исправленной финальной версии."

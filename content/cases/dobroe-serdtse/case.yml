@@ -1,0 +1,129 @@
+version: 1
+brand: lemonmedia
+id: dobroe-serdtse
+slug: dobroe-serdtse
+language: ru
+
+identity:
+  public_title: "БФ «Доброе сердце» — контент о помощи, доверии и участии"
+  client_display_name: "БФ «Доброе сердце»"
+  period: "2026-07/2026-08"
+  release_window: "2026-07-17/2026-08-04"
+  niche: services
+  subniche: nonprofit-and-charity
+  geography: saint-petersburg
+
+summary:
+  short: "Связный контент-план для благотворительного фонда: реальные дела, понятные способы помочь, мероприятие и диалог с аудиторией."
+  content_task: "Привлечь новую аудиторию, укрепить доверие к фонду и подвести читателей к посильному участию без давления и без обещаний результата."
+  result_wording: "Подготовлены и утверждены 10 публикаций: 8 одиночных постов и 2 карусели по 7 слайдов. После визуальной проверки для публичного кейса отобрано 21 изображение. Макет поста №9 и серия из 5 историй исключены из показа из-за старой формулировки названия мероприятия."
+
+scope:
+  publications: 10
+  static_posts: 8
+  carousel_publications: 2
+  carousel_slides: 14
+  publishable_static_post_visuals: 7
+  stories_sequences: 0
+  stories_frames: 0
+  excluded_stories_sequences: 1
+  excluded_stories_frames: 5
+  visual_files: 21
+  excluded_visual_files: 1
+  planned_platform_count: 3
+  planned_platform_ids:
+    - vk
+    - telegram
+    - max
+  platform_status: named-in-brief-publication-not-independently-verified
+
+schedule:
+  content_plan_and_texts_delivered: "2026-07-09"
+  visual_approved: "2026-07-16"
+  moved_to_publication: "2026-07-17"
+  requested_completion_by: "2026-08-04"
+  task_closed: "2026-07-25"
+  exact_publication_dates: null
+  status: publication-stage-confirmed-exact-dates-not-recorded
+
+source_rubric_distribution:
+  real-work: 2
+  useful: 2
+  help-offer: 2
+  event: 2
+  engagement: 2
+
+category_distribution:
+  useful: 4
+  work-showcase: 2
+  product-showcase: 1
+  offer: 3
+
+featured_goals:
+  - build-trust
+  - encourage-saves
+  - help-choice
+  - show-expertise
+  - differentiate-offer
+  - lead-request
+
+excluded_materials:
+  publication_09_visual:
+    files: 1
+    reason: "В доступном макете написано «Колеса времени» вместо утверждённой формы «Кольца времени»."
+    publishable: false
+  stories:
+    sequences: 1
+    frames: 5
+    reason: "Последний доступный экран содержит старое название «Колесо времени». Исправленная серия не была доступна для проверки."
+    publishable: false
+
+evidence:
+  confirmed:
+    - "Публичное название клиента: Благотворительный фонд «Доброе сердце»."
+    - "Финальный план содержит 10 публикаций: 8 одиночных постов и 2 карусели."
+    - "Каждая карусель состоит из 7 слайдов; всего подготовлено 14 слайдов."
+    - "В задаче зафиксировано подтверждение утверждения визуала."
+    - "Финальный пост №6 содержит исправленное название «Кольцо времени»."
+    - "Материалы планировались для ВКонтакте, Telegram и MAX."
+    - "После визуальной проверки для публичного кейса подготовлено 21 изображение формата 4:5."
+  not_claimed:
+    - "Охваты, пожертвования, регистрации, заявки и рост аудитории."
+    - "Продажи, выручка, окупаемость или причинная связь контента с бизнес-показателями."
+    - "Размещение всех десяти публикаций на каждой из трёх площадок."
+    - "Наличие прямых публичных ссылок на все публикации."
+    - "Наличие исправленного публичного макета публикации №9."
+    - "Готовность и актуальность серии историй."
+  public_links:
+    - label: "Официальный сайт фонда"
+      url: "https://бфдоброесердце.рф"
+      verification_status: verified
+    - label: "Telegram фонда"
+      url: "https://t.me/dobroecerdse"
+      verification_status: verified
+    - label: "Сообщество фонда ВКонтакте"
+      url: "https://vk.com/bfdobroeserdce"
+      verification_status: provided-in-work-task
+  direct_publication_links: null
+  analytics: null
+  client_review: null
+
+publication_control:
+  portfolio_permission: confirmed_by_project_owner
+  final_media: ready-with-explicit-exclusions
+  public_links: partially-verified
+  direct_publication_links: unavailable
+  stories_assets: excluded-until-corrected
+  excluded_assets:
+    - "publication-09-visual"
+  recognizable_people_assets:
+    - "posts/*.webp"
+    - "carousels/**/*.webp"
+  recognizable_people_use_basis: confirmed_by_project_owner
+  display_notes:
+    - "Все изображения имеют формат 4:5 и должны показываться без обрезки."
+    - "Не представлять плановые площадки как подтверждённые размещения."
+    - "Не добавлять количественные результаты без отдельного источника аналитики."
+    - "Не показывать макет публикации №9 до получения исправленной версии."
+    - "Не использовать старую серию историй с ошибочным названием мероприятия."
+  publishable: true
