@@ -43,18 +43,18 @@ body.hv {
 .hz {
   position: relative;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1.08fr);
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   min-height: 640px;
   overflow: hidden;
 }
 /* фоновые зоны — тянутся до краёв окна */
 .hz__bg-left, .hz__bg-right { position: absolute; top: 0; bottom: 0; z-index: 0; }
-.hz__bg-left { left: 0; right: 48%; }
-.hz__bg-right { left: 48%; right: 0; }
+.hz__bg-left { left: 0; right: 50%; }
+.hz__bg-right { left: 50%; right: 0; }
 
 .hz__copy {
   position: relative; z-index: 2;
-  padding: 72px 56px 64px max(24px, calc((100vw - 1240px) / 2 + 24px));
+  padding: 116px 36px 56px max(24px, calc((100vw - 1240px) / 2 + 24px));
   display: flex; flex-direction: column; justify-content: center;
 }
 .hz__stage { position: relative; z-index: 1; overflow: hidden; }
@@ -70,7 +70,9 @@ body.hv {
   font-weight: 800; line-height: 1.04; letter-spacing: -0.032em;
 }
 .hz h1 em { font-style: normal; }
-.hz__checks { list-style: none; margin: 38px 0 0; padding: 0; }
+.hz__lead { margin-top: 18px; font-size: 15.5px; line-height: 1.55; color: var(--lm-color-muted); max-width: 52ch; }
+.hz__note { margin-top: 18px; font-size: 12.5px; color: var(--lm-color-muted-2); }
+.hz__checks { list-style: none; margin: 30px 0 0; padding: 0; }
 .hz__checks li { display: flex; gap: 11px; align-items: flex-start; margin-bottom: 11px; font-size: 15px; }
 .hz__checks li b { font-weight: 800; }
 .hz__tick {
@@ -79,7 +81,8 @@ body.hv {
   background: var(--lm-surface-lemon); color: var(--lm-text-on-lemon);
   display: flex; align-items: center; justify-content: center;
 }
-.hz__actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 28px; }
+.hz__actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 26px; }
+.hz__actions .lm-btn { font-size: 14px; padding: 13px 18px; }
 .hz__guarantee {
   margin-top: 16px; display: inline-flex; align-items: center; gap: 9px;
   background: rgba(255,255,255,.75); border: 1px solid var(--hz-line);
@@ -88,25 +91,6 @@ body.hv {
 .hz__guarantee .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--lm-color-success); }
 .hz__guarantee b { font-weight: 800; }
 
-/* чипсы форматов (приём Feedbird «What do you need help with?») */
-.hz__needs { margin-top: 34px; }
-.hz__needs small {
-  display: block; margin-bottom: 12px;
-  font: 700 12px/1 var(--lm-font-sans); letter-spacing: .09em; text-transform: uppercase;
-  color: var(--lm-color-muted-2);
-}
-.hz__chips { display: flex; gap: 8px; flex-wrap: wrap; }
-.hz__chip {
-  display: inline-flex; align-items: center; gap: 7px;
-  background: var(--lm-color-neutral-000);
-  border: 1px solid var(--hz-line);
-  border-radius: 100px; padding: 9px 15px;
-  font: 700 13.5px/1 var(--lm-font-sans);
-  cursor: default;
-  transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
-}
-.hz__chip:hover { transform: translateY(-2px); box-shadow: var(--lm-shadow-card); border-color: var(--lm-color-lemon-500); }
-.hz__chip .ic { font-size: 14px; line-height: 1; }
 
 /* ============================================================
    ВИТРИНА: вертикальные колонки живой ленты
@@ -244,13 +228,26 @@ body.hv {
 }
 .hz-strip__in {
   max-width: 1240px; margin-inline: auto; padding-inline: 24px;
-  display: flex; align-items: center; gap: 40px; flex-wrap: wrap;
+  display: flex; align-items: center; justify-content: space-between; gap: 32px; flex-wrap: wrap;
 }
-.hz-strip__num { display: flex; flex-direction: column; }
-.hz-strip__num b { font: 800 28px/1 var(--lm-font-sans); letter-spacing: -0.02em; }
-.hz-strip__num span { font-size: 12.5px; color: rgba(255,255,255,.6); margin-top: 4px; }
-.hz-strip__logos { display: flex; gap: 36px; flex-wrap: wrap; align-items: center; flex: 1; justify-content: space-around; }
-.hz-strip__logos span { font: 800 16px/1 var(--lm-font-sans); color: rgba(255,255,255,.55); }
+.hz-strip__in strong { font-size: 16px; font-weight: 800; }
+.hz-strip__nets { display: flex; gap: 26px; flex-wrap: wrap; align-items: center; }
+.net { display: inline-flex; align-items: center; gap: 10px; }
+.net__ic {
+  width: 40px; height: 40px; border-radius: 13px;
+  display: flex; align-items: center; justify-content: center;
+  color: #fff; flex: 0 0 auto;
+  transition: transform .18s ease;
+}
+.net:hover .net__ic { transform: translateY(-3px) scale(1.06); }
+.net__ic svg { width: 21px; height: 21px; }
+.net__ic b { font: 800 12px/1 var(--lm-font-sans); }
+.net__n { font: 700 13.5px/1 var(--lm-font-sans); color: rgba(255,255,255,.82); }
+.net--vk .net__ic { background: #0077FF; }
+.net--ig .net__ic { background: radial-gradient(120% 120% at 30% 110%, #FEDA75 0%, #FA7E1E 30%, #D62976 55%, #962FBF 78%, #4F5BD5 100%); }
+.net--tg .net__ic { background: #229ED9; }
+.net--max .net__ic { background: linear-gradient(135deg, #7D00EA, #4E4CF5); }
+.net--more .net__ic { background: rgba(255,255,255,.14); }
 
 /* ============================================================
    ЦВЕТОВЫЕ СХЕМЫ ВАРИАНТОВ
@@ -259,25 +256,12 @@ body.hv {
 .hz--a .hz__bg-left { background: var(--hz-cool); }
 .hz--a .hz__bg-right { background: var(--hz-lav); }
 
-/* B — свет + тьма */
+/* Пара 2 — светло-серый + фирменный жёлтый */
 .hz--b .hz__bg-left { background: var(--hz-cool); }
-.hz--b .hz__bg-right { background: var(--lm-grad-space); }
-.hz--b .hz__stage::before {
-  content: ""; position: absolute; z-index: 0; width: 560px; aspect-ratio: 1;
-  background: var(--lm-glowspot-lemon); top: -18%; right: -14%; pointer-events: none;
-}
-/* в тёмном варианте меньше колонок и больше воздуха — иначе тьма не читается */
-.hz--b .hz__cols {
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px; padding: 0 40px 0 40px;
-  -webkit-mask-image: linear-gradient(180deg, transparent, #000 14%, #000 84%, transparent);
-  mask-image: linear-gradient(180deg, transparent, #000 14%, #000 84%, transparent);
-}
-.hz--b .fx { box-shadow: 0 14px 34px -10px rgba(0, 0, 0, .75); }
-.hz--b .hz__pin { background: rgba(255,255,255,.96); }
+.hz--b .hz__bg-right { background: var(--hz-lemon); }
+.hz--b .hz__guarantee { background: rgba(255,255,255,.8); border-color: #EFE4BC; }
 
-/* C — голубой + лимонный (светлое + светлое) */
-.hz--c .hz__bg-left { background: var(--hz-blue); }
+/* Пара 3 — лавандовый + жёлтый: обе зоны в фирменных цветах */
+.hz--c .hz__bg-left { background: #EFEAFB; }
 .hz--c .hz__bg-right { background: var(--hz-lemon); }
-.hz--c .hz__guarantee { background: rgba(255,255,255,.8); border-color: #E7DFB8; }
-.hz--c .hz__chip { border-color: #E7DFB8; }
+.hz--c .hz__guarantee { background: rgba(255,255,255,.8); border-color: #E3D9F7; }
