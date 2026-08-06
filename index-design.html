@@ -112,6 +112,10 @@
       <div class="lms-proofbar__item"><strong data-count="200" data-suffix="+">0</strong><span>отзывов на Яндекс Картах</span></div>
       <div class="lms-proofbar__item"><strong>5,0</strong><span>рейтинг по отзывам</span></div>
     </div>
+    <div class="dz-links rv">
+      <a href="reviews.html">Посмотреть отзывы и источники →</a>
+      <a href="examples.html">Найти работы своей ниши →</a>
+    </div>
   </div>
 </section>
 
@@ -188,6 +192,10 @@
       <div class="lms-band__item"><span>Вместо вечеров с контентом</span><strong>Темы, тексты и дизайн на нас</strong></div>
       <div class="lms-band__item"><span>Вместо ручных напоминаний</span><strong>Публикации выходят по графику</strong></div>
     </div>
+    <div class="dz-actions rv">
+      <a class="lm-btn lm-btn--primary" href="start.html?plan=10">Собрать пакет из 10 постов</a>
+      <a class="lm-btn lm-btn--ghost" href="audit.html">Сначала получить разбор соцсетей</a>
+    </div>
   </div>
 </section>
 
@@ -229,7 +237,8 @@
     <div class="dz-guide rv">
       <div class="dz-guide__person">
         <div class="dz-guide__photo"><img src="assets/img/people/ksyusha-guide.jpeg" alt="Ксюша — AI-ведущая lemonmedia"></div>
-        <span class="lm-eyebrow">Ксюша · AI-ведущая lemonmedia</span>
+        <span class="lm-eyebrow">Ксюша · AI-ведущая lemonmedia · вымышленный персонаж</span>
+        <p style="font-size:12.5px;color:var(--lm-color-muted-2)">Ксюша объясняет форматы контента</p>
         <h3 id="guide-title">Пост — основа контент-месяца</h3>
         <p id="guide-copy">Одна задача, готовый текст и основной визуал. Уже включает работу маркетолога, дизайнера, менеджера и публикацию.</p>
       </div>
@@ -262,7 +271,8 @@
       </div>
     </div>
   </div>
-</section>
+    <p class="dz-note rv"><b>Один обычный пост:</b> одна тема, один текст и один основной визуал. Карусель — усиление выбранного поста последовательностью до 7 слайдов, а не дополнительная публикация.</p>
+  </section>
 
 <!-- ЦЕНЫ -->
 <section class="dz-section" id="prices">
@@ -270,58 +280,71 @@
     <div class="lms-section__head rv">
       <span class="lm-eyebrow">Соберите свой месяц</span>
       <h2>Сначала ритм. Затем усиления</h2>
-      <p>Карусель — усиление поста за +250 ₽. Сторис — пакетами 10 / 20 / 30 за 3 490 / 5 490 / 7 490 ₽.</p>
+      <p>Выберите число постов, нажмите на темы, которые нужно раскрыть каруселью, и при желании добавьте пакет сторис.</p>
     </div>
-    <div class="lms-pricing rv">
-      <div class="lms-price-card">
-        <div class="lms-price-card__plan">10 постов</div>
-        <div class="lms-price-card__price">4 990 ₽<small> /мес</small></div>
-        <div class="lms-price-card__per">Спокойный старт</div>
-        <ul class="lms-price-card__list">
-          <li>Темы, тексты, дизайн</li>
-          <li>Публикация на 5 площадках</li>
-          <li>2 + 2 круга правок</li>
-        </ul>
-        <a class="lm-btn lm-btn--ghost" href="start.html?plan=10">Выбрать</a>
+
+    <div class="dz-calc rv" data-calc>
+      <div class="dz-calc__panel">
+        <div class="dz-calc__step">
+          <small>Шаг 1 · выберите объём</small>
+          <div class="dz-plans" role="group" aria-label="Объём постов">
+            <button class="dz-plan is-active" data-plan="10" data-price="4990"><strong>10 постов</strong><span>Спокойный старт</span><b>4 990 ₽</b></button>
+            <button class="dz-plan" data-plan="15" data-price="7490"><strong>15 постов</strong><span>Стабильный ритм</span><b>7 490 ₽</b></button>
+            <button class="dz-plan" data-plan="20" data-price="9990"><strong>20 постов</strong><span>Активное присутствие</span><b>9 990 ₽</b></button>
+            <button class="dz-plan" data-plan="30" data-price="14990"><strong>30 постов</strong><span>Почти каждый день</span><b>14 990 ₽</b></button>
+          </div>
+          <p class="dz-note"><b>Основа месяца готова.</b> Контент-план, тексты, дизайн, менеджер и публикация на подключённых площадках уже входят.</p>
+        </div>
+
+        <div class="dz-calc__step">
+          <small>Шаг 2 · усильте нужные темы</small>
+          <div class="dz-calc__row">
+            <div>
+              <h3>Какие посты раскрыть каруселью?</h3>
+              <p>Нажимайте на кубики. Выбранный пост превратится в карусель до 7 слайдов за +250 ₽.</p>
+            </div>
+            <div class="dz-counter" aria-label="Количество каруселей">
+              <button type="button" data-car-dec aria-label="Убрать одну карусель">−</button>
+              <output data-car-out>0</output>
+              <button type="button" data-car-inc aria-label="Добавить одну карусель">+</button>
+            </div>
+          </div>
+          <div class="dz-cubes" data-cubes aria-label="Состав пакета по постам"></div>
+        </div>
+
+        <div class="dz-calc__step">
+          <small>Шаг 3 · добавьте сторис</small>
+          <div class="dz-calc__row">
+            <div>
+              <h3>Сколько сторис подготовить?</h3>
+              <p>Собираем их в мини-прогревы по 5 кадров: интерес → проблема → решение → доказательство → действие.</p>
+            </div>
+            <div class="dz-stories" role="group" aria-label="Пакет сторис">
+              <button class="is-active" data-story="0" data-sprice="0">Без сторис</button>
+              <button data-story="10" data-sprice="3490">10 · 3 490 ₽</button>
+              <button data-story="20" data-sprice="5490">20 · 5 490 ₽</button>
+              <button data-story="30" data-sprice="7490">30 · 7 490 ₽</button>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="lms-price-card">
-        <div class="lms-price-card__plan">15 постов</div>
-        <div class="lms-price-card__price">7 490 ₽<small> /мес</small></div>
-        <div class="lms-price-card__per">Стабильный ритм</div>
-        <ul class="lms-price-card__list">
-          <li>Темы, тексты, дизайн</li>
-          <li>Публикация на 5 площадках</li>
-          <li>2 + 2 круга правок</li>
+
+      <aside class="dz-calc__total">
+        <span class="lm-eyebrow">Ваш контент-месяц</span>
+        <div class="dz-calc__sum" data-total>4 990 ₽</div>
+        <ul class="dz-calc__lines">
+          <li><span><b data-posts-line>10 постов</b></span><b data-base-line>4 990 ₽</b></li>
+          <li><span>Карусели</span><b data-car-line>0 ₽</b></li>
+          <li><span>Сторис</span><b data-story-line>не выбраны</b></li>
         </ul>
-        <a class="lm-btn lm-btn--ghost" href="start.html?plan=15">Выбрать</a>
-      </div>
-      <div class="lms-price-card lms-price-card--featured">
-        <span class="lm-badge lm-badge--lemon lms-price-card__flag">Популярный</span>
-        <div class="lms-price-card__plan">20 постов</div>
-        <div class="lms-price-card__price">9 990 ₽<small> /мес</small></div>
-        <div class="lms-price-card__per">Активное присутствие</div>
-        <ul class="lms-price-card__list">
-          <li>Темы, тексты, дизайн</li>
-          <li>Публикация на 5 площадках</li>
-          <li>2 + 2 круга правок</li>
-        </ul>
-        <a class="lm-btn lm-btn--primary" href="start.html?plan=20">Выбрать</a>
-      </div>
-      <div class="lms-price-card">
-        <div class="lms-price-card__plan">30 постов</div>
-        <div class="lms-price-card__price">14 990 ₽<small> /мес</small></div>
-        <div class="lms-price-card__per">Почти каждый день</div>
-        <ul class="lms-price-card__list">
-          <li>Темы, тексты, дизайн</li>
-          <li>Публикация на 5 площадках</li>
-          <li>2 + 2 круга правок</li>
-        </ul>
-        <a class="lm-btn lm-btn--ghost" href="start.html?plan=30">Выбрать</a>
-      </div>
+        <div class="dz-calc__place"><span data-place>До 50 размещений</span> — если подключены все 5 площадок</div>
+        <div class="dz-calc__nets"><span>ВКонтакте</span><span>Instagram</span><span>Telegram</span><span>MAX</span><span>+ ещё одна</span></div>
+        <a class="lm-btn lm-btn--primary" href="start.html?plan=10" data-order>Продолжить с этим пакетом</a>
+        <p class="dz-calc__note">Названия кубиков показывают роли контента в месяце. Точные темы маркетолог соберёт после знакомства с бизнесом. Итоговая сумма включает посты, выбранные карусели и пакет сторис.</p>
+      </aside>
     </div>
-    <div class="rv" style="margin-top:20px;text-align:center">
-      <a class="lm-btn lm-btn--purple" href="pricing.html">Собрать пакет в конструкторе</a>
-    </div>
+
+    <div class="dz-actions rv"><a class="lm-btn lm-btn--ghost" href="pricing.html">Рассчитать пакет подробно</a></div>
   </div>
 </section>
 
@@ -385,7 +408,8 @@
       <div class="dz-model__item"><strong>Отлаженный маршрут</strong><span>Сначала тексты, затем дизайн — меньше дорогих переделок.</span></div>
       <div class="dz-model__item"><strong>Технологии для рутины</strong><span>ИИ ускоряет операции, но решения принимают и проверяют люди.</span></div>
     </div>
-    <div class="dz-mission rv">
+    <p class="dz-note rv"><b>Поэтому цена ниже классического агентства:</b> вы оплачиваете нужный объём регулярного контента, а не большой индивидуальный маркетинговый проект и не ставку сотрудника.</p>
+    <div class="dz-mission rv" style="margin-top:18px">
       <span class="lm-badge lm-badge--dark">Не удешевляем смысл</span>
       <span class="lm-badge lm-badge--purple">Не заменяем людей шаблоном</span>
       <span class="lm-badge lm-badge--lemon">Удешевляем сам процесс</span>
@@ -413,6 +437,7 @@
         </tbody>
       </table>
     </div>
+    <div class="dz-actions rv"><a class="lm-btn lm-btn--ghost" href="compare.html">Сравнить варианты подробно</a></div>
   </div>
 </section>
 
@@ -425,9 +450,10 @@
         <span class="lm-eyebrow">Гарантия первой партии</span>
         <h2>Если после включённых правок первая партия не подойдёт — вернём оплату за неё</h2>
         <ul class="lms-split__list">
-          <li>14 дней на проверку первой партии</li>
-          <li>2 круга правок по контент-плану и текстам + 2 круга по визуалу</li>
-          <li>Возврат оплаты за первую партию по опубликованным условиям</li>
+          <li>У вас есть 14 дней на проверку первой партии.</li>
+          <li>Включено 2 круга правок по контент-плану и текстам.</li>
+          <li>Отдельно включено 2 круга правок по визуалу.</li>
+          <li>Если после этих правок первая партия не подошла, возвращаем оплату именно за первую партию.</li>
         </ul>
         <a class="lm-btn lm-btn--ghost" style="margin-top:18px" href="guarantee.html">Прочитать условия гарантии</a>
       </div>
@@ -508,6 +534,7 @@
         <div class="lms-faq__body">14 дней на проверку первой партии, по 2 круга правок на тексты и визуал. Если после них первая партия не подошла — возвращаем оплату за неё по опубликованным условиям.</div>
       </details>
     </div>
+    <div class="dz-actions rv" style="justify-content:center"><a class="lm-btn lm-btn--ghost" href="faq.html">Открыть все вопросы</a></div>
   </div>
 </section>
 
@@ -690,6 +717,52 @@ for (let c = 0; c < COLS; c++) {
     });
   }, { threshold: .6 });
   document.querySelectorAll('[data-count]').forEach(el => cio.observe(el));
+
+  // ---- Калькулятор пакета ----
+  (() => {
+    const root = document.querySelector('[data-calc]');
+    if (!root) return;
+    const state = { posts: 10, base: 4990, cars: 0, story: 0, sprice: 0 };
+    const $ = s => root.querySelector(s);
+    const fmtr = n => n.toLocaleString('ru-RU');
+    const cubes = $('[data-cubes]');
+
+    function renderCubes() {
+      cubes.innerHTML = '';
+      for (let i = 0; i < 30; i++) {
+        const b = document.createElement('button');
+        b.type = 'button';
+        b.className = 'dz-cube' + (i >= state.posts ? ' is-off' : (i < state.cars ? ' is-carousel' : ''));
+        b.setAttribute('aria-label', i < state.posts ? 'Пост ' + (i + 1) : 'Не входит в пакет');
+        if (i < state.posts) b.addEventListener('click', () => { state.cars = (i < state.cars) ? i : i + 1; render(); });
+        cubes.appendChild(b);
+      }
+    }
+    function render() {
+      const carSum = state.cars * 250;
+      $('[data-total]').textContent = fmtr(state.base + carSum + state.sprice) + ' ₽';
+      $('[data-posts-line]').textContent = state.posts + ' постов';
+      $('[data-base-line]').textContent = fmtr(state.base) + ' ₽';
+      $('[data-car-line]').textContent = state.cars ? state.cars + ' × 250 = ' + fmtr(carSum) + ' ₽' : '0 ₽';
+      $('[data-story-line]').textContent = state.story ? state.story + ' шт · ' + fmtr(state.sprice) + ' ₽' : 'не выбраны';
+      $('[data-place]').textContent = 'До ' + state.posts * 5 + ' размещений';
+      $('[data-car-out]').textContent = state.cars;
+      $('[data-order]').href = 'start.html?plan=' + state.posts;
+      renderCubes();
+    }
+    root.querySelectorAll('[data-plan]').forEach(btn => btn.addEventListener('click', () => {
+      root.querySelectorAll('[data-plan]').forEach(b => b.classList.toggle('is-active', b === btn));
+      state.posts = +btn.dataset.plan; state.base = +btn.dataset.price;
+      state.cars = Math.min(state.cars, state.posts); render();
+    }));
+    $('[data-car-inc]').addEventListener('click', () => { if (state.cars < state.posts) { state.cars++; render(); } });
+    $('[data-car-dec]').addEventListener('click', () => { if (state.cars > 0) { state.cars--; render(); } });
+    root.querySelectorAll('[data-story]').forEach(btn => btn.addEventListener('click', () => {
+      root.querySelectorAll('[data-story]').forEach(b => b.classList.toggle('is-active', b === btn));
+      state.story = +btn.dataset.story; state.sprice = +btn.dataset.sprice; render();
+    }));
+    render();
+  })();
 </script>
 
 </body>
