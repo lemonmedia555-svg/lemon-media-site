@@ -7,8 +7,7 @@
   <title>Цены — lemonmedia</title>
   <link rel="stylesheet" href="assets/css/prototype.css">
 </head>
-<body class="hide-notes">
-  <div class="prototype-strip prototype-only"><div class="container"><p><strong>Прототип страницы цен.</strong> Здесь человек собирает пакет без звонка и скрытых условий.</p><button class="text-button" type="button" data-notes-toggle>Скрыть заметки</button></div></div>
+<body>
   <header class="site-header">
     <div class="container header-row">
       <a class="brand" href="index.html"><span class="brand-dot"></span>lemonmedia</a>
@@ -22,10 +21,10 @@
   <main>
     <section class="page-hero">
       <div class="container">
-        <aside class="logic-note"><strong>Задача страницы:</strong> дать точную цену, объяснить состав и перевести в заказ. Демо и обязательный разговор не нужны.</aside>
+
         <p class="eyebrow">Цены без запроса менеджеру</p>
         <h1>Вы платите за объём контента, а не за число соцсетей</h1>
-        <p class="lead">Один пост публикуется во всех подключённых площадках без доплаты. Точная сумма сразу считается для 10, 15, 20 или 30 постов и выбранных каруселей.</p>
+        <p class="lead">Один пост публикуется во всех подключённых площадках без доплаты. Калькулятор сразу считает посты, карусели и сторис.</p>
         <div class="deliverable-equation" style="margin-top:32px;">
           <div><strong>10</strong><span>готовых постов</span></div><b>×</b>
           <div><strong>до 5</strong><span>площадок</span></div><b>=</b>
@@ -37,7 +36,7 @@
 
     <section class="section section-soft">
       <div class="container" data-calculator>
-        <aside class="logic-note"><strong>Продуктовая логика:</strong> сначала базовый объём, потом точечные усиления. Это проще и честнее большого каталога услуг.</aside>
+
         <div class="section-head">
           <div><p class="eyebrow">Калькулятор</p><h2>Соберите свой месяц</h2></div>
           <p>Сначала выбираете базовый объём, затем усиливаете нужные публикации. Итог виден до заявки.</p>
@@ -56,8 +55,8 @@
               <div class="carousel-counter" aria-label="Количество каруселей"><button type="button" data-carousel-decrease aria-label="Убрать одну карусель">−</button><output data-carousel-counter>0</output><button type="button" data-carousel-increase aria-label="Добавить одну карусель">+</button></div>
             </div>
             <div class="calculator-row story-builder-row">
-              <div><h3>3. Добавить мини‑прогрев?</h3><p>Пять сторис: интерес → проблема → решение → доказательство → действие. Пока отмечаем интерес отдельно от суммы.</p></div>
-              <div class="story-choice"><button class="active" type="button" data-story-value="0">Без сторис</button><button type="button" data-story-value="1">1 × 5</button><button type="button" data-story-value="2">2 × 5</button><button type="button" data-story-value="4">4 × 5</button><input type="hidden" value="0" data-story-interest></div>
+              <div><h3>3. Добавить сторис?</h3><p>Собираем их в мини‑прогревы по 5 кадров: интерес → проблема → решение → доказательство → действие.</p></div>
+              <div class="story-choice"><button class="active" type="button" data-story-value="0">Без сторис</button><button type="button" data-story-value="10">10 · 3 490 ₽</button><button type="button" data-story-value="20">20 · 5 490 ₽</button><button type="button" data-story-value="30">30 · 7 490 ₽</button><input type="hidden" value="0" data-story-interest></div>
             </div>
           </div>
           <aside class="calculator-total">
@@ -69,12 +68,12 @@
             </div>
             <p><strong><span data-posts-output>10</span> постов:</strong> <span data-base-output>4 990 ₽</span></p>
             <p><strong>Карусели:</strong> <span data-carousel-output>0 ₽</span></p>
-            <p data-story-output><strong>Мини‑прогревы:</strong> не выбраны</p>
+            <p data-story-output><strong>Сторис:</strong> не выбраны</p>
             <div class="placement-counter"><strong data-placement-output>До 50 размещений</strong><span>если подключены все 5 площадок</span></div>
             <div class="bundle-platforms" aria-label="Пример набора площадок"><span>ВКонтакте</span><span>Instagram</span><span>Telegram</span><span>MAX</span><span>+ ещё одна</span></div>
             <p class="builder-instruction">Нажмите на любой кубик поста, чтобы превратить его в карусель.</p>
             <p class="legal-note">Названия кубиков показывают роли контента в месяце. Точные темы маркетолог соберёт после знакомства с бизнесом.</p>
-            <p class="legal-note">Подтверждённая сумма включает базовый пакет и выбранные карусели. Сторис отмечаются отдельно.</p>
+            <p class="legal-note">Итоговая сумма включает посты, выбранные карусели и пакет сторис.</p>
             <a class="btn btn-accent" href="start.html?plan=10" data-order-link style="width: 100%; margin-top: 18px;">Продолжить с этим составом</a>
           </aside>
         </div>
@@ -83,8 +82,8 @@
 
     <section class="section">
       <div class="container">
-        <aside class="logic-note"><strong>Закрывает вопрос:</strong> чем отличаются тарифы? Только количеством постов — качество процесса не урезается на входном плане.</aside>
-        <div class="section-head"><div><p class="eyebrow">Во всех пакетах</p><h2>Одинаковая команда и полный цикл</h2></div><p>Не делаем «дешёвый пакет без менеджера» или доплату за каждую соцсеть.</p></div>
+
+        <div class="section-head"><div><p class="eyebrow">Во всех пакетах</p><h2>Одинаковая команда и полный цикл</h2></div><p>В каждом пакете работают маркетолог, дизайнер и менеджер. Публикация на подключённых площадках уже входит в цену.</p></div>
         <div class="grid-3">
           <article class="card"><h3>До дизайна</h3><ul class="check-list compact"><li>бриф и материалы;</li><li>темы и контент‑план;</li><li>тексты;</li><li>согласование текстов.</li></ul></article>
           <article class="card"><h3>Производство</h3><ul class="check-list compact"><li>дизайн в стиле бренда;</li><li>адаптация к площадкам;</li><li>по 2 круга правок на тексты и визуал;</li><li>менеджер на связи.</li></ul></article>
@@ -95,7 +94,7 @@
 
     <section class="section section-accent">
       <div class="container">
-        <aside class="logic-note"><strong>Помогаем выбрать, а не продаём максимум:</strong> объём объясняется через реальный ритм бизнеса. Усиления добавляются только к тем темам, которым они действительно нужны.</aside>
+
         <div class="section-head"><div><p class="eyebrow">Как выбрать объём</p><h2>От спокойного старта до ежедневного присутствия</h2></div><p>Качество команды и процесса не меняется. Меняется только темп вашего контент‑месяца.</p></div>
         <div class="grid-4">
           <article class="card"><span class="tag">10 постов</span><h3 style="margin-top:18px;">Начать регулярно</h3><p>Подходит, если соцсети давно не велись или нужен спокойный стабильный ритм.</p></article>
@@ -111,7 +110,7 @@
     </section>
   </main>
 
-  <footer class="site-footer"><div class="container footer-grid"><div><a class="brand" href="index.html"><span class="brand-dot"></span>lemonmedia</a><p class="footer-note">Регулярный контент под ключ для российского малого и среднего бизнеса.</p></div><div class="footer-column"><strong>Продукт</strong><a href="pricing.html">Цены</a><a href="process.html">Как работаем</a><a href="examples.html">Работы</a></div><div class="footer-column"><strong>Компания</strong><a href="about.html">О нас</a><a href="reviews.html">Отзывы</a><a href="articles.html">Статьи</a></div><div class="footer-column"><strong>Документы</strong><a href="legal.html#offer">Статус оферты</a><a href="guarantee.html">Условия гарантии</a><a href="legal.html#privacy">Статус политики</a></div></div></footer>
+  <footer class="site-footer"><div class="container footer-grid"><div><a class="brand" href="index.html"><span class="brand-dot"></span>lemonmedia</a><p class="footer-note">Регулярный контент под ключ для российского малого и среднего бизнеса.</p></div><div class="footer-column"><strong>Продукт</strong><a href="pricing.html">Цены</a><a href="process.html">Как работаем</a><a href="examples.html">Работы</a></div><div class="footer-column"><strong>Компания</strong><a href="about.html">О нас</a><a href="reviews.html">Отзывы</a><a href="articles.html">Статьи</a></div><div class="footer-column"><strong>Документы</strong><a href="legal.html#offer">Условия работы</a><a href="guarantee.html">Гарантия</a><a href="legal.html#privacy">Конфиденциальность</a></div></div></footer>
   <script src="assets/js/prototype.js"></script>
 </body>
 </html>

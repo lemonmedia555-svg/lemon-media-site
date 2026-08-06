@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   const body = document.body;
   const menuButton = document.querySelector('[data-menu-toggle]');
-  const notesButton = document.querySelector('[data-notes-toggle]');
 
   menuButton?.addEventListener('click', () => {
     const isOpen = body.classList.toggle('nav-open');
@@ -15,11 +14,6 @@ document.addEventListener('DOMContentLoaded', () => {
       menuButton?.setAttribute('aria-expanded', 'false');
       if (menuButton) menuButton.textContent = 'Меню';
     });
-  });
-
-  notesButton?.addEventListener('click', () => {
-    const hidden = body.classList.toggle('hide-notes');
-    notesButton.textContent = hidden ? 'Показать заметки' : 'Скрыть заметки';
   });
 
   document.querySelectorAll('[data-filter-group]').forEach((group) => {
@@ -99,6 +93,12 @@ document.addEventListener('DOMContentLoaded', () => {
       [20, 9990],
       [30, 14990],
     ]);
+    const storyPriceMap = new Map([
+      [0, 0],
+      [10, 3490],
+      [20, 5490],
+      [30, 7490],
+    ]);
     const topicRoles = [
       'Знакомство', 'Проблема', 'Продукт', 'Решение', 'Кейс',
       'Возражение', 'Процесс', 'Команда', 'Польза', 'Предложение',
@@ -114,7 +114,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const queryCarousels = Math.max(0, Math.min(selected.posts, Math.floor(Number(new URLSearchParams(window.location.search).get('carousels') || 0))));
     let carouselPosts = new Set(Array.from({ length: queryCarousels }, (_, index) => index));
     const queryStories = Number(new URLSearchParams(window.location.search).get('stories') || 0);
-    if (storyInterest && [0, 1, 2, 4].includes(queryStories)) storyInterest.value = String(queryStories);
+    if (storyInterest && storyPriceMap.has(queryStories)) storyInterest.value = String(queryStories);
 
     const format = (value) => `${new Intl.NumberFormat('ru-RU').format(value)} ₽`;
 
@@ -126,10 +126,11 @@ document.addEventListener('DOMContentLoaded', () => {
       if (carouselIncrease) carouselIncrease.disabled = carouselCount === selected.posts;
       if (baseOutput) baseOutput.textContent = format(selected.price);
       if (carouselOutput) carouselOutput.textContent = format(carouselCount * 250);
-      if (totalOutput) totalOutput.textContent = format(selected.price + carouselCount * 250);
+      const stories = Number(storyInterest?.value || 0);
+      const storyPrice = storyPriceMap.get(stories) || 0;
+      if (totalOutput) totalOutput.textContent = format(selected.price + carouselCount * 250 + storyPrice);
       if (postsOutput) postsOutput.textContent = String(selected.posts);
       if (placementOutput) placementOutput.textContent = `До ${selected.posts * 5} размещений`;
-      const stories = Number(storyInterest?.value || 0);
       storyButtons.forEach((button) => button.classList.toggle('active', Number(button.getAttribute('data-story-value')) === stories));
       if (bundleSlots) {
         bundleSlots.replaceChildren();
@@ -153,13 +154,13 @@ document.addEventListener('DOMContentLoaded', () => {
       if (bundleStories) {
         bundleStories.hidden = stories === 0;
         bundleStories.innerHTML = stories
-          ? `<div class="story-chain-mini" aria-hidden="true"><i>1</i><i>2</i><i>3</i><i>4</i><i>5</i></div><strong>${stories} × мини‑прогрев по 5 сторис</strong>`
+          ? `<div class="story-chain-mini" aria-hidden="true"><i>1</i><i>2</i><i>3</i><i>4</i><i>5</i></div><strong>${stories} сторис · ${stories / 5} мини‑прогрева</strong>`
           : '';
       }
       if (storyOutput) {
         storyOutput.innerHTML = stories
-          ? `<strong>Интерес к мини‑прогревам:</strong> ${stories} × 5 сторис · не входит в сумму`
-          : '<strong>Мини‑прогревы:</strong> не выбраны';
+          ? `<strong>Сторис:</strong> ${stories} · ${format(storyPrice)}`
+          : '<strong>Сторис:</strong> не выбраны';
       }
       if (orderLink) {
         const params = new URLSearchParams({
@@ -285,6 +286,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const startSlots = document.querySelector('[data-start-slots]');
     const startStories = document.querySelector('[data-start-story-stack]');
     const prices = { 10: 4990, 15: 7490, 20: 9990, 30: 14990 };
+    const storyPrices = { 0: 0, 10: 3490, 20: 5490, 30: 7490 };
     if (planSelect) planSelect.value = plan;
     if (carouselInput) carouselInput.value = carousels;
     if (storySelect) storySelect.value = stories;
@@ -297,12 +299,12 @@ document.addEventListener('DOMContentLoaded', () => {
         carouselInput.max = String(posts);
         carouselInput.value = String(carouselCount);
       }
-      const total = (prices[posts] || prices[10]) + carouselCount * 250;
+      const total = (prices[posts] || prices[10]) + carouselCount * 250 + (storyPrices[storyCount] || 0);
       const formatted = new Intl.NumberFormat('ru-RU').format(total);
       if (totalOutput) totalOutput.textContent = `${formatted} ₽`;
       if (summaryOutput) {
         const carouselText = carouselCount ? `${carouselCount} карусел${carouselCount === 1 ? 'ь' : carouselCount < 5 ? 'и' : 'ей'}` : 'без каруселей';
-        const storyText = storyCount ? `интерес: ${storyCount} мини‑прогрев${storyCount === 1 ? '' : storyCount < 5 ? 'а' : 'ов'} (не в сумме)` : 'без мини‑прогревов';
+        const storyText = storyCount ? `${storyCount} сторис` : 'без сторис';
         summaryOutput.innerHTML = `<strong>${posts} постов</strong> · ${carouselText} · ${storyText}`;
       }
       if (placementsOutput) placementsOutput.textContent = `До ${posts * 5} размещений`;
@@ -318,7 +320,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (startStories) {
         startStories.hidden = storyCount === 0;
         startStories.innerHTML = storyCount
-          ? `<div class="story-chain-mini" aria-hidden="true"><i>1</i><i>2</i><i>3</i><i>4</i><i>5</i></div><strong>${storyCount} × мини‑прогрев</strong>`
+          ? `<div class="story-chain-mini" aria-hidden="true"><i>1</i><i>2</i><i>3</i><i>4</i><i>5</i></div><strong>${storyCount} сторис · ${storyCount / 5} мини‑прогрева</strong>`
           : '';
       }
     };
@@ -329,13 +331,13 @@ document.addEventListener('DOMContentLoaded', () => {
     renderOrder();
   }
 
-  document.querySelectorAll('[data-prototype-form]').forEach((form) => {
+  document.querySelectorAll('[data-lead-form]').forEach((form) => {
     form.addEventListener('submit', (event) => {
       event.preventDefault();
       const message = form.querySelector('[data-form-message]');
       if (message) {
         message.hidden = false;
-        message.textContent = 'В рабочей версии менеджер получит эту сборку, уточнит задачу бизнеса и согласует с вами содержание месяца.';
+        message.textContent = form.getAttribute('data-success-message') || 'Спасибо! Заявка отправлена. Менеджер свяжется с вами по указанному контакту.';
       }
     });
   });

@@ -7,38 +7,37 @@
   <title>Начать работу — lemonmedia</title>
   <link rel="stylesheet" href="assets/css/prototype.css">
 </head>
-<body class="hide-notes">
-  <div class="prototype-strip prototype-only"><div class="container"><p><strong>Маркетинговый прототип заказа.</strong> Проверяем, понятен ли собранный продукт и следующий шаг.</p><button class="text-button" type="button" data-notes-toggle>Скрыть заметки</button></div></div>
+<body>
   <header class="site-header"><div class="container header-row"><a class="brand" href="index.html"><span class="brand-dot"></span>lemonmedia</a><button class="menu-button" type="button" aria-expanded="false" data-menu-toggle>Меню</button><nav class="main-nav"><a href="examples.html">Работы</a><a href="process.html">Как работаем</a><a href="pricing.html">Цены</a><a href="reviews.html">Отзывы</a><a href="about.html">О компании</a><a href="articles.html">Статьи</a><a class="btn btn-small btn-accent" href="start.html" aria-current="page">Начать работу</a></nav></div></header>
   <main>
-    <section class="page-hero"><div class="container"><aside class="logic-note"><strong>Задача страницы:</strong> не «оставьте телефон», а последний понятный шаг покупки. Выбранный пакет переносится сюда, человек видит точную цену базы и каруселей, состав и следующий шаг.</aside><p class="eyebrow">Начало работы</p><h1>Соберите пакет и получите точные условия до оплаты</h1><p class="lead">Звонок не обязателен. Оставьте контакт — менеджер подтвердит состав, отдельно назовёт цену сторис, если они интересуют, и пришлёт условия первой партии.</p></div></section>
+    <section class="page-hero"><div class="container"><p class="eyebrow">Начало работы</p><h1>Соберите пакет и начните работу</h1><p class="lead">Звонок не обязателен. Выберите объём постов, карусели и сторис — менеджер подтвердит состав и пришлёт всё необходимое для старта.</p></div></section>
     <section class="section section-soft">
       <div class="container">
         <div class="calculator">
-          <form class="calculator-panel" data-prototype-form data-order-form>
+          <form class="calculator-panel" data-lead-form data-order-form data-success-message="Спасибо! Заявка отправлена. Менеджер свяжется с вами, подтвердит пакет и поможет начать работу.">
             <div class="form-grid">
               <div class="field"><label for="plan">Базовый пакет</label><select id="plan" name="plan" data-plan-select><option value="10">10 постов — 4 990 ₽</option><option value="15">15 постов — 7 490 ₽</option><option value="20">20 постов — 9 990 ₽</option><option value="30">30 постов — 14 990 ₽</option></select></div>
               <div class="field"><label for="carousels">Сколько постов усилить каруселью до 7 слайдов</label><input id="carousels" name="carousels" type="number" min="0" step="1" inputmode="numeric" value="0" data-start-carousels></div>
-              <div class="field"><label for="stories">Интерес к мини‑прогревам по 5 сторис</label><select id="stories" name="story_interest" data-start-stories><option value="0">Не нужны</option><option value="1">Интересует 1 мини‑прогрев</option><option value="2">Интересуют 2 мини‑прогрева</option><option value="4">Интересуют 4 мини‑прогрева</option></select></div>
+              <div class="field"><label for="stories">Пакет сторис</label><select id="stories" name="stories" data-start-stories><option value="0">Без сторис</option><option value="10">10 сторис — 3 490 ₽</option><option value="20">20 сторис — 5 490 ₽</option><option value="30">30 сторис — 7 490 ₽</option></select></div>
               <div class="field"><label for="business">Чем занимается бизнес</label><input id="business" name="business" placeholder="Например, стоматология" required></div>
               <div class="field"><label for="name">Как к вам обращаться</label><input id="name" name="name" placeholder="Имя" autocomplete="name" required></div>
               <div class="field"><label for="contact">Телефон или Telegram</label><input id="contact" name="contact" placeholder="Контакт для связи" required></div>
               <div class="field field-wide"><label for="comment">Ссылки на соцсети и что важно учесть</label><textarea id="comment" name="comment" placeholder="Площадки, ближайшая акция, вопросы"></textarea></div>
             </div>
-            <button class="btn btn-accent" type="submit" style="margin-top:22px;">Отправить состав</button>
-            <p class="legal-note">Это ещё не оплата и не начало работы.</p>
+            <button class="btn btn-accent" type="submit" style="margin-top:22px;">Отправить заявку</button>
+            <p class="legal-note">После заявки менеджер пришлёт итоговый состав и порядок старта.</p>
             <p data-form-message hidden class="prototype-warning" style="margin-top:16px;"></p>
           </form>
           <aside class="calculator-total order-summary">
             <p class="eyebrow">Ваш пакет</p>
             <output data-start-total>4 990 ₽</output>
-            <p data-start-summary><strong>10 постов</strong> · без каруселей · без мини‑прогревов</p>
+            <p data-start-summary><strong>10 постов</strong> · без каруселей · без сторис</p>
             <div class="bundle-visual" aria-label="Визуальный состав выбранного пакета"><div class="bundle-slots" data-start-slots></div><div class="bundle-story-stack" data-start-story-stack hidden></div></div>
             <p><strong data-start-placements>До 50 размещений</strong> на пяти подключённых площадках без доплаты.</p>
             <div class="bundle-platforms" aria-label="Пример набора площадок"><span>ВКонтакте</span><span>Instagram</span><span>Telegram</span><span>MAX</span><span>+ ещё одна</span></div>
             <hr>
             <p class="eyebrow">Что будет дальше</p>
-            <ol class="next-steps"><li><strong>Менеджер проверит состав.</strong><br>Если отмечен интерес к сторис, отдельно назовёт их цену.</li><li><strong>Вы получите условия до оплаты.</strong><br>Состав, сроки, правки и гарантию.</li><li><strong>После старта заполните бриф.</strong><br>Расскажете о бизнесе и подключите площадки.</li><li><strong>Начнём с плана и текстов.</strong><br>2 дня на смысл, затем после согласования 2 дня на визуал. <a href="process.html">Посмотреть весь процесс</a>.</li></ol>
+            <ol class="next-steps"><li><strong>Менеджер подтвердит заказ.</strong><br>Вы получите состав, цену, сроки, правила правок и гарантию.</li><li><strong>Заполните бриф.</strong><br>Расскажете о бизнесе и подключите площадки.</li><li><strong>Начнём с плана и текстов.</strong><br>2 дня на смысл, затем после согласования 2 дня на визуал. <a href="process.html">Посмотреть весь процесс</a>.</li></ol>
             <a href="pricing.html" style="display:inline-block;margin-top:18px;">Изменить состав →</a>
           </aside>
         </div>
@@ -46,17 +45,17 @@
     </section>
     <section class="section">
       <div class="container">
-        <div class="section-head"><div><p class="eyebrow">После старта</p><h2>Так будет выглядеть работа с вашим заказом</h2></div><p>Показываем настоящий проект. У вас будут свои темы, стиль и даты — логика контроля останется такой же.</p></div>
+        <div class="section-head"><div><p class="eyebrow">После старта</p><h2>Так будет выглядеть работа с вашим заказом</h2></div><p>Показываем интерфейс проекта клиента. У вас будут свои темы, стиль и даты — логика контроля останется такой же.</p></div>
         <div class="product-inside-grid">
           <figure class="real-product-screen"><button type="button" data-case-dialog-open data-case-dialog-src="assets/img/product-inside/real-publication-card-electric.png" data-case-dialog-alt="Карточка готовой публикации"><img src="assets/img/product-inside/real-publication-card-electric.png" width="990" height="520" loading="lazy" alt="Карточка публикации с текстом и визуалом"><span>Открыть крупно ↗</span></button><figcaption><b>Сначала — готовый материал</b><span>Текст, визуал и дата в одной карточке</span></figcaption></figure>
           <figure class="real-product-screen"><button type="button" data-case-dialog-open data-case-dialog-src="assets/img/product-inside/real-calendar-electric.png" data-case-dialog-alt="Календарь реального проекта"><img src="assets/img/product-inside/real-calendar-electric.png" width="990" height="620" loading="lazy" alt="Календарь с запланированными публикациями"><span>Открыть крупно ↗</span></button><figcaption><b>После согласования — график выпуска</b><span>Весь месяц на одном экране</span></figcaption></figure>
         </div>
       </div>
     </section>
-    <section class="section"><div class="container"><aside class="logic-note"><strong>Три маршрута:</strong> готовый клиент собирает пакет; выбирающий смотрит работы; холодный получает разбор. Обязательного демо нет.</aside><div class="section-head"><div><p class="eyebrow">Если пока не готовы</p><h2>Сначала проверьте качество или получите разбор</h2></div><p>Следующий шаг зависит от вашей готовности, а не от навязанного сценария продаж.</p></div><div class="grid-3"><article class="card"><h3>Посмотреть похожую нишу</h3><p>Оцените связанные серии публикаций, а не один удачный макет.</p><a class="btn btn-secondary" href="examples.html">Смотреть работы</a></article><article class="card"><h3>Разобрать процесс</h3><p>Посмотрите сроки, своё участие, правки и границу результата.</p><a class="btn btn-secondary" href="process.html">Как мы работаем</a></article><article class="card"><h3>Получить бесплатный разбор</h3><p>Узнайте, что сейчас мешает соцсетям выглядеть живыми и понятными.</p><a class="btn btn-secondary" href="audit.html">Получить разбор</a></article></div></div></section>
+    <section class="section"><div class="container"><div class="section-head"><div><p class="eyebrow">Выберите удобный следующий шаг</p><h2>Посмотрите качество, изучите процесс или получите разбор</h2></div><p>Все материалы доступны без обязательного звонка.</p></div><div class="grid-3"><article class="card"><h3>Посмотреть похожую нишу</h3><p>Оцените связанные серии публикаций, а не один удачный макет.</p><a class="btn btn-secondary" href="examples.html">Смотреть работы</a></article><article class="card"><h3>Разобрать процесс</h3><p>Посмотрите сроки, своё участие, правки и границу результата.</p><a class="btn btn-secondary" href="process.html">Как мы работаем</a></article><article class="card"><h3>Получить бесплатный разбор</h3><p>Узнайте, что сейчас мешает соцсетям выглядеть живыми и понятными.</p><a class="btn btn-secondary" href="audit.html">Получить разбор</a></article></div></div></section>
   </main>
   <dialog class="case-dialog product-inside-dialog" data-case-dialog aria-labelledby="start-dialog-title"><div class="case-dialog-bar"><strong id="start-dialog-title" data-case-dialog-title>Реальный экран проекта</strong><button type="button" aria-label="Закрыть изображение" data-case-dialog-close>Закрыть ×</button></div><img src="assets/img/product-inside/real-calendar-electric.png" width="990" height="620" alt="" data-case-dialog-image></dialog>
-  <footer class="site-footer"><div class="container footer-grid"><div><a class="brand" href="index.html"><span class="brand-dot"></span>lemonmedia</a><p class="footer-note">Регулярный контент под ключ для российского малого и среднего бизнеса.</p></div><div class="footer-column"><strong>Продукт</strong><a href="pricing.html">Цены</a><a href="process.html">Как работаем</a><a href="examples.html">Работы</a></div><div class="footer-column"><strong>Компания</strong><a href="about.html">О нас</a><a href="reviews.html">Отзывы</a><a href="articles.html">Статьи</a></div><div class="footer-column"><strong>Документы</strong><a href="legal.html#offer">Статус оферты</a><a href="guarantee.html">Условия гарантии</a><a href="legal.html#privacy">Статус политики</a></div></div></footer>
+  <footer class="site-footer"><div class="container footer-grid"><div><a class="brand" href="index.html"><span class="brand-dot"></span>lemonmedia</a><p class="footer-note">Регулярный контент под ключ для российского малого и среднего бизнеса.</p></div><div class="footer-column"><strong>Продукт</strong><a href="pricing.html">Цены</a><a href="process.html">Как работаем</a><a href="examples.html">Работы</a></div><div class="footer-column"><strong>Компания</strong><a href="about.html">О нас</a><a href="reviews.html">Отзывы</a><a href="articles.html">Статьи</a></div><div class="footer-column"><strong>Документы</strong><a href="legal.html#offer">Условия работы</a><a href="guarantee.html">Условия гарантии</a><a href="legal.html#privacy">Конфиденциальность</a></div></div></footer>
   <script src="assets/js/prototype.js"></script>
 </body>
 </html>
