@@ -8,7 +8,21 @@
   <link rel="stylesheet" href="assets/css/prototype.css">
 </head>
 <body>
-  <header class="site-header"><div class="container header-row"><a class="brand" href="index.html"><span class="brand-dot"></span>lemonmedia</a><button class="menu-button" type="button" aria-expanded="false" data-menu-toggle>Меню</button><nav class="main-nav"><a href="examples.html">Работы</a><a href="process.html">Как работаем</a><a href="pricing.html">Цены</a><a href="reviews.html">Отзывы</a><a href="about.html">О компании</a><a href="articles.html">Статьи</a><a class="btn btn-small btn-accent" href="start.html">Начать работу</a></nav></div></header>
+  <header class="site-header">
+    <div class="container header-row">
+      <a class="brand" href="index.html" aria-label="lemonmedia — главная"><span class="brand-dot" aria-hidden="true"></span>lemonmedia</a>
+      <button class="menu-button" type="button" aria-expanded="false" data-menu-toggle>Меню</button>
+      <nav class="main-nav" aria-label="Основная навигация">
+        <a href="examples.html">Работы</a>
+        <a href="process.html">Как работаем</a>
+        <a href="pricing.html">Цены</a>
+        <a href="reviews.html">Отзывы</a>
+        <a href="about.html">О компании</a>
+        <a href="articles.html">Статьи</a>
+        <a class="btn btn-small btn-accent" href="start.html">Начать работу</a>
+      </nav>
+    </div>
+  </header>
 
   <main>
     <section class="page-hero"><div class="container"><p class="eyebrow">Разовые услуги</p><h1>Создайте основу бренда и выпускайте контент системно</h1><p class="lead">Логотип с дизайн‑системой, AI‑аватар или полное оформление социальных сетей. Каждая услуга решает отдельную задачу и заказывается отдельно от контент‑пакета.</p></div></section>
@@ -39,7 +53,17 @@
     <section class="section section-accent" id="service-request"><div class="container"><div class="calculator"><form class="calculator-panel" data-lead-form data-success-message="Спасибо! Заявка отправлена. Менеджер свяжется с вами, уточнит задачу и подготовит состав работы."><p class="eyebrow">Выбрать разовую услугу</p><div class="form-grid"><div class="field"><label for="service">Что нужно</label><select id="service" name="service"><option>Логотип и дизайн‑система</option><option>AI‑аватар</option><option>Оформление социальных сетей</option><option>Нужна рекомендация</option></select></div><div class="field"><label for="service-link">Ссылка на бизнес</label><input id="service-link" name="business_url" type="url" placeholder="Сайт или соцсеть"></div><div class="field"><label for="service-name">Как к вам обращаться</label><input id="service-name" name="name" placeholder="Имя" autocomplete="name" required></div><div class="field"><label for="service-contact">Контакт</label><input id="service-contact" name="contact" placeholder="Telegram или телефон" required></div><div class="field field-wide"><label for="service-comment">Что уже есть</label><textarea id="service-comment" name="comment" placeholder="Логотип, фирменные цвета, фотографии, профиль"></textarea></div></div><button class="btn" type="submit" style="margin-top:20px;">Получить состав и цену</button><p data-form-message hidden class="prototype-warning" style="margin-top:16px;"></p></form><aside class="calculator-total"><p class="eyebrow">Что уточним</p><ul class="check-list"><li>какой результат нужен бизнесу;</li><li>какие материалы уже есть;</li><li>какой объём работы подойдёт;</li><li>срок и итоговую стоимость;</li><li>как использовать результат в контенте.</li></ul></aside></div></div></section>
   </main>
 
-  <footer class="site-footer"><div class="container footer-grid"><div><a class="brand" href="index.html"><span class="brand-dot"></span>lemonmedia</a><p class="footer-note">Разовая основа бренда и регулярный контент под ключ.</p></div><div class="footer-column"><strong>Контент</strong><a href="pricing.html">Цены</a><a href="examples.html">Работы</a><a href="process.html">Процесс</a></div><div class="footer-column"><strong>Разовые услуги</strong><a href="#service-request">Логотип</a><a href="#service-request">AI‑аватар</a><a href="#service-request">Оформление соцсетей</a></div><div class="footer-column"><strong>Начать</strong><a href="start.html">Собрать контент‑пакет</a><a href="audit.html">Бесплатный разбор</a><a href="partners.html">Партнёрам</a></div></div></footer>
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="brand" href="index.html" aria-label="lemonmedia — главная"><span class="brand-dot" aria-hidden="true"></span>lemonmedia</a>
+        <p class="footer-note">Регулярный контент под ключ для российского малого и среднего бизнеса. Команда lemonmedia работает с 2020 года.</p>
+      </div>
+      <div class="footer-column"><strong>Выбрать</strong><a href="pricing.html">Цены и конструктор</a><a href="examples.html">Работы</a><a href="process.html">Как работаем</a><a href="compare.html">Сравнение</a></div>
+      <div class="footer-column"><strong>Узнать больше</strong><a href="reviews.html">Отзывы</a><a href="about.html">О компании</a><a href="services.html">Разовые услуги</a><a href="partners.html">Партнёрам</a><a href="articles.html">Статьи</a><a href="faq.html">Все вопросы</a></div>
+      <div class="footer-column"><strong>Начать</strong><a href="start.html">Собрать пакет</a><a href="audit.html">Бесплатный разбор</a><a href="guarantee.html">Условия гарантии</a><a href="legal.html#offer">Условия работы</a><a href="legal.html#privacy">Конфиденциальность</a></div>
+    </div>
+  </footer>
   <script src="assets/js/prototype.js"></script>
 </body>
 </html>

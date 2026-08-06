@@ -1242,6 +1242,17 @@ body {
   font-size: .7rem;
 }
 
+@media (max-width: 1180px) {
+  .header .nav,
+  .header .header__cta .btn {
+    display: none;
+  }
+
+  .header .burger {
+    display: flex;
+  }
+}
+
 .kp-dialog {
   width: min(920px, calc(100% - 24px));
   max-height: calc(100vh - 24px);
@@ -1380,11 +1391,7 @@ body {
   }
 
   .kp-footer__grid {
-    grid-template-columns: 1.5fr 1fr 1fr;
-  }
-
-  .kp-footer__grid > nav:last-child {
-    display: none;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -1550,10 +1557,6 @@ body {
 
   .kp-footer__grid > div {
     grid-column: auto;
-  }
-
-  .kp-footer__grid > nav:nth-of-type(2) {
-    display: none;
   }
 
   .kp-footer__bottom {
