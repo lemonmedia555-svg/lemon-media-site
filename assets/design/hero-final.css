@@ -18,13 +18,14 @@ body.hf {
   -webkit-font-smoothing: antialiased;
 }
 .hf * { box-sizing: border-box; }
-.hf h1, .hf h2, .hf h3, .hf p, .hf ul, .hf figure { margin: 0; }
+.hf :where(h1, h2, h3, p, ul, figure) { margin: 0; }
 
 /* ============================================================
    HERO
    ============================================================ */
 .hf-hero {
   position: relative;
+  margin-top: -82px;   /* хедер-капсула плавает поверх, без белой полосы сверху */
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   overflow: hidden;
@@ -36,75 +37,59 @@ body.hf {
 /* --- левая колонка: композиция по вертикальной шкале --- */
 .hf-copy {
   position: relative; z-index: 2;
-  padding: 132px 40px 72px max(24px, calc((100vw - 1240px) / 2 + 24px));
+  padding: 118px 40px 64px max(24px, calc((100vw - 1240px) / 2 + 24px));
   display: flex; flex-direction: column; justify-content: center;
 }
-.hf-copy__inner { max-width: 580px; }
+.hf-copy__inner { max-width: 600px; }
 
 .hf-rating {
-  display: inline-flex; align-items: center; gap: 9px;
-  background: var(--lm-color-neutral-000);
-  border-radius: 100px; padding: 8px 15px;
-  box-shadow: 0 1px 2px rgba(20,26,44,.05);
+  font: 600 13.5px/1 var(--lm-font-sans);
+  color: var(--lm-color-muted);
 }
-.hf-rating .stars { color: var(--lm-color-lemon-500); font-size: 14px; letter-spacing: 1.5px; }
-.hf-rating b { font: 800 13.5px/1 var(--lm-font-sans); }
-.hf-rating span { font: 600 13px/1 var(--lm-font-sans); color: var(--lm-color-muted); }
+.hf-rating .stars { color: var(--lm-color-lemon-500); font-size: 14px; letter-spacing: 1.5px; margin-right: 4px; }
+.hf-rating b { font-weight: 800; color: var(--lm-text-primary); }
 
-.hf-eyebrow {
-  display: block; margin-top: 30px;
+.hf-kicker {
+  display: block; margin-top: 26px;
   font: 700 12.5px/1 var(--lm-font-sans);
   letter-spacing: .1em; text-transform: uppercase;
   color: var(--lm-color-purple-600);
 }
 .hf-h1 {
-  margin-top: 18px;
-  font-size: clamp(30px, 3.9vw, 56px);
+  margin-top: 14px;
+  font-size: clamp(30px, 3.3vw, 47px);
   font-weight: 800; line-height: 1.06; letter-spacing: -0.032em;
 }
-/* жёлтый маркер под ценой — фирменный акцент в светлой зоне */
-.hf-mark {
-  position: relative; display: inline-block; white-space: nowrap;
-  padding: 0 6px;
-}
-.hf-mark::before {
-  content: ""; position: absolute; z-index: -1;
-  left: 0; right: 0; bottom: .08em; height: .38em;
-  background: var(--lm-color-lemon-500);
-  border-radius: 4px;
-}
+.hf-h1 em { font-style: normal; color: var(--lm-color-purple-600); display: inline-block; }
 .hf-lead {
-  margin-top: 46px;
-  font-size: 16px; line-height: 1.6;
+  margin-top: 30px;
+  font-size: 16px; line-height: 1.7;
   color: var(--lm-color-muted);
-  max-width: 48ch;
+  max-width: 46ch;
 }
-.hf-list { list-style: none; margin: 34px 0 0; padding: 0; display: grid; gap: 14px; }
-.hf-list li { display: flex; gap: 12px; align-items: flex-start; font-size: 15px; line-height: 1.4; }
+.hf-list {
+  list-style: none; margin: 40px 0 0; padding: 0;
+  display: grid; gap: 15px;
+}
+.hf-list li { display: flex; gap: 12px; align-items: center; font-size: 15px; line-height: 1.45; }
 .hf-tick {
   flex: 0 0 auto; width: 22px; height: 22px; border-radius: 8px;
   background: var(--lm-color-lemon-500); color: var(--lm-color-neutral-1000);
   font: 800 11px/1 var(--lm-font-sans);
   display: flex; align-items: center; justify-content: center;
 }
-.hf-actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 36px; }
+.hf-actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 44px; }
 .hf-actions .lm-btn { font-size: 14px; padding: 13px 18px; }
 
-/* гарантия + сроки: одной аккуратной строкой */
-.hf-meta {
-  margin-top: 22px; padding-top: 20px;
-  border-top: 1px solid var(--hf-line);
-  display: flex; flex-wrap: wrap; gap: 10px 26px;
+.hf-note {
+  margin-top: 26px;
+  display: flex; flex-wrap: wrap; gap: 8px 22px;
+  font-size: 12.5px; line-height: 1.5;
+  color: var(--lm-color-muted-2);
 }
-.hf-meta__item { display: inline-flex; align-items: center; gap: 9px; font-size: 13px; color: var(--lm-color-muted); }
-.hf-meta__item b { font-weight: 800; color: var(--lm-text-primary); }
-.hf-meta__ic {
-  width: 22px; height: 22px; border-radius: 50%;
-  background: var(--lm-color-neutral-000);
-  display: flex; align-items: center; justify-content: center;
-  font-size: 11px;
-  box-shadow: 0 1px 2px rgba(20,26,44,.08);
-}
+.hf-note span { display: inline-flex; align-items: center; gap: 7px; }
+.hf-note b { font-weight: 800; color: var(--lm-text-primary); }
+.hf-note i { font-style: normal; opacity: .5; }
 
 /* --- правая колонка: витрина --- */
 .hf-stage { position: relative; z-index: 1; overflow: hidden; }
@@ -184,7 +169,21 @@ body.hf {
   border-radius: 100px; padding: 4px 9px;
   font: 800 10.5px/1 var(--lm-font-sans);
 }
-.w__next {
+.w__nav {
+  position: absolute; z-index: 4; top: 50%; transform: translateY(-50%);
+  width: 30px; height: 30px; border-radius: 50%; border: 0; padding: 0;
+  background: rgba(255,255,255,.96); color: #000; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  font: 800 15px/1 var(--lm-font-sans);
+  box-shadow: 0 4px 14px -4px rgba(20,26,44,.5);
+  opacity: 0; transition: opacity .16s ease, transform .16s ease;
+}
+.w:hover .w__nav { opacity: 1; }
+.w__nav:hover { transform: translateY(-50%) scale(1.1); }
+.w__nav:disabled { opacity: 0 !important; }
+.w__nav--prev { left: 8px; }
+.w__nav--next { right: 8px; }
+.w__hint {
   position: absolute; z-index: 3; right: 8px; top: 50%; transform: translateY(-50%);
   width: 28px; height: 28px; border-radius: 50%;
   background: var(--lm-color-neutral-000);
@@ -194,6 +193,7 @@ body.hf {
   animation: hf-nudge 2.4s ease-in-out infinite;
 }
 @keyframes hf-nudge { 0%,100% { transform: translateY(-50%) translateX(0); } 50% { transform: translateY(-50%) translateX(4px); } }
+.w:hover .w__hint { opacity: 0; }
 
 /* сторис: 9:16 + полоски + стрелка */
 .w--story img { aspect-ratio: 9/16; object-fit: cover; }
@@ -201,6 +201,7 @@ body.hf {
 .w__bars { position: absolute; top: 8px; left: 8px; right: 8px; z-index: 3; display: flex; gap: 3px; }
 .w__bars i { flex: 1; height: 3px; border-radius: 2px; background: rgba(255,255,255,.45); }
 .w__bars i.on { background: #fff; }
+.w__count, .w__bars i { transition: background .2s ease; }
 
 @media (max-width: 1000px) {
   .hf-hero { grid-template-columns: minmax(0, 1fr); }
