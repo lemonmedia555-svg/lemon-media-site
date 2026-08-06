@@ -52,7 +52,7 @@
 
   <div class="hf-copy">
     <div class="hf-copy__inner">
-      <p class="hf-rating"><span class="stars">★★★★★</span> <b>5,0</b> и 200+ отзывов на Яндекс Картах</p>
+      <p class="hf-rating"><span class="stars">★★★★★</span> <b>5,0</b> и 200+ отзывов на Яндекс&nbsp;Картах</p>
 
       <span class="hf-kicker">Контент для соцсетей под ключ</span>
       <h1 class="hf-h1">Контент для социальных сетей — <em>10 постов за 4&nbsp;990&nbsp;₽</em></h1>
@@ -642,19 +642,34 @@ function makeCard(it) {
 }
 
 const feed = document.getElementById('feed');
-const COLS = 4, SPEEDS = ['74s', '92s', '80s', '104s'];
-for (let c = 0; c < COLS; c++) {
-  const col = document.createElement('div');
-  col.className = 'hf-col' + (c % 2 ? ' hf-col--down' : '');
-  const track = document.createElement('div');
-  track.className = 'hf-track';
-  track.style.setProperty('--sp', SPEEDS[c]);
-  const items = WORKS.filter((_, i) => i % COLS === c);
-  items.forEach(it => track.appendChild(makeCard(it)));
-  items.forEach(it => { const d = makeCard(it); d.setAttribute('aria-hidden', 'true'); track.appendChild(d); });
-  col.appendChild(track);
-  feed.appendChild(col);
+const SPEEDS = ['74s', '92s', '80s', '104s', '86s'];
+// Чем шире экран, тем больше колонок — карточка мельче, работ видно больше
+const colCount = () => innerWidth <= 1000 ? 3 : (innerWidth >= 1500 ? 5 : 4);
+let builtWith = 0;
+
+function buildFeed() {
+  const COLS = colCount();
+  if (COLS === builtWith) return;
+  builtWith = COLS;
+  feed.textContent = '';
+  feed.style.gridTemplateColumns = `repeat(${COLS}, 1fr)`;
+  for (let c = 0; c < COLS; c++) {
+    const col = document.createElement('div');
+    col.className = 'hf-col' + (c % 2 ? ' hf-col--down' : '');
+    const track = document.createElement('div');
+    track.className = 'hf-track';
+    track.style.setProperty('--sp', SPEEDS[c]);
+    const items = WORKS.filter((_, i) => i % COLS === c);
+    items.forEach(it => track.appendChild(makeCard(it)));
+    items.forEach(it => { const d = makeCard(it); d.setAttribute('aria-hidden', 'true'); track.appendChild(d); });
+    col.appendChild(track);
+    feed.appendChild(col);
+  }
 }
+
+buildFeed();
+let feedTimer;
+addEventListener('resize', () => { clearTimeout(feedTimer); feedTimer = setTimeout(buildFeed, 200); });
 </script>
 
 <!-- Лайтбокс -->
