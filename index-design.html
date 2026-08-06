@@ -12,8 +12,9 @@
   <link rel="stylesheet" href="assets/design/components.css">
   <link rel="stylesheet" href="assets/design/sections.css">
   <link rel="stylesheet" href="assets/design/page.css">
+  <link rel="stylesheet" href="assets/design/hero-final.css">
 </head>
-<body class="dz">
+<body class="dz hf">
 
 <!-- ХЕДЕР -->
 <header class="lms-header">
@@ -24,10 +25,10 @@
       <a href="process.html">Как работаем</a>
       <a href="pricing.html">Цены</a>
       <a href="reviews.html">Отзывы</a>
+      <a href="about.html">О компании</a>
       <a href="articles.html">Статьи</a>
     </nav>
     <div class="lms-header__spacer"></div>
-    <a class="lm-btn lm-btn--ghost lm-btn--pill lms-header__ghost" href="audit.html">Бесплатный разбор</a>
     <a class="lm-btn lm-btn--primary lm-btn--pill" href="start.html">Начать работу</a>
     <button class="lms-header__burger" aria-label="Меню" onclick="document.getElementById('mnav').classList.add('is-open')">☰</button>
   </div>
@@ -44,37 +45,42 @@
 
 <main>
 
-<!-- HERO 2.0 -->
-<section class="dz-hero">
-  <div class="lm-container">
-    <div class="dz-hero__grid">
-      <div class="rv">
-        <span class="dz-hero__eyebrow"><span class="star">★ 5,0</span> · 200+ отзывов на Яндекс Картах</span>
-        <h1>Контент для соцсетей — <em>10 постов за 4 990 ₽</em></h1>
-        <p class="dz-hero__lead">Чтобы соцсети бизнеса не выглядели заброшенными, а вы не тратили вечера на контент. Придумываем темы, пишем, оформляем и публикуем — вы рассказываете о бизнесе и утверждаете материалы.</p>
-        <ul class="lms-split__list">
-          <li>Маркетолог, дизайнер и личный менеджер</li>
-          <li>Один пост — во все подключённые соцсети без доплаты</li>
-          <li>Понятный план выпуска и статусы по каждому посту</li>
-        </ul>
-        <div class="dz-hero__actions">
-          <a class="lm-btn lm-btn--primary" href="start.html?plan=10">Собрать пакет: 10 постов · 4 990 ₽</a>
-          <a class="lm-btn lm-btn--ghost" href="examples.html">Посмотреть реальные работы</a>
-        </div>
-        <p class="dz-hero__note">2 дня на план и тексты · 2 дня на визуал · до 2 дней на каждое согласование</p>
+<!-- HERO (утверждён) -->
+<section class="hf-hero">
+  <div class="hf-hero__bg-l"></div>
+  <div class="hf-hero__bg-r"></div>
+
+  <div class="hf-copy">
+    <div class="hf-copy__inner">
+      <p class="hf-rating"><span class="stars">★★★★★</span> <b>5,0</b> и 200+ отзывов на Яндекс Картах</p>
+
+      <span class="hf-kicker">Контент для соцсетей под ключ</span>
+      <h1 class="hf-h1">Контент для социальных сетей — <em>10 постов за 4&nbsp;990&nbsp;₽</em></h1>
+      <p class="hf-lead">Чтобы соцсети бизнеса не выглядели заброшенными, а вы не тратили вечера на контент. Готовим 10–30 постов на один контент-месяц: придумываем темы, оформляем и публикуем. Вы рассказываете о бизнесе и утверждаете материалы.</p>
+
+      <ul class="hf-list">
+        <li><span class="hf-tick">✓</span><span>Маркетолог, дизайнер и личный менеджер</span></li>
+        <li><span class="hf-tick">✓</span><span>Один пост — во все подключённые соцсети без доплаты</span></li>
+        <li><span class="hf-tick">✓</span><span>Темы, тексты, оформление, публикация и статусы</span></li>
+        <li><span class="hf-tick">✓</span><span>Понятный план выпуска и один менеджер на весь процесс</span></li>
+      </ul>
+
+      <div class="hf-actions">
+        <a class="lm-btn lm-btn--primary lm-btn--pill" href="start.html?plan=10">Собрать пакет: 10 постов · 4 990 ₽</a>
+        <a class="lm-btn lm-btn--ghost lm-btn--pill" href="examples.html">Посмотреть реальные работы</a>
       </div>
-      <div class="dz-hero__panel rv" style="--rv-d:.12s">
-        <span class="dz-hero__chip dz-hero__chip--rating"><span class="star">★ 5,0</span> Яндекс Карты</span>
-        <div class="dz-hero__collage" aria-label="Примеры работ lemonmedia">
-          <img class="lms-zoomable" src="assets/img/home/example-post-massage.webp" alt="Пример поста для сферы услуг">
-          <img class="lms-zoomable" src="assets/img/home/example-post-salim.webp" alt="Пример поста для бизнеса">
-          <img class="lms-zoomable" src="assets/img/home/example-post-kindergarten.webp" alt="Пример поста для детского центра">
-          <img class="lms-zoomable" src="assets/img/home/example-post-deadlift.webp" alt="Пример поста для фитнеса">
-        </div>
-        <span class="dz-hero__chip dz-hero__chip--years">Работаем с 2020 года</span>
-        <p class="dz-hero__panel-note">Это <b>реальные работы</b> — нажмите, чтобы рассмотреть</p>
-      </div>
+
+      <p class="hf-note">
+        <span><i>🛡</i><b>14 дней</b> на проверку первой партии</span>
+        <span><i>⏱</i>2 дня на план и тексты · 2 дня на визуал</span>
+      </p>
     </div>
+  </div>
+
+  <div class="hf-stage">
+    <span class="hf-pin hf-pin--top">🔥 <span>Выходит каждый месяц</span></span>
+    <div class="hf-cols" id="feed"></div>
+    <span class="hf-pin hf-pin--bottom"><span class="num">10 000+</span> <span>проектов сделано</span></span>
   </div>
 </section>
 
@@ -564,6 +570,65 @@
     </div>
   </div>
 </footer>
+
+<script>
+const WORKS = [{"t":"post","src":"assets/cases/saratov-kitchens-2026-08/posts/02.webp","n":"Кухни","a":"Пост · Кухни"},{"t":"post","src":"assets/cases/chebusser/posts/02.jpg","n":"Общепит","a":"Пост · Общепит"},{"t":"carousel","src":"assets/cases/saratov-kitchens-2026-08/carousels/06/01.webp","slides":["assets/cases/saratov-kitchens-2026-08/carousels/06/01.webp","assets/cases/saratov-kitchens-2026-08/carousels/06/02.webp","assets/cases/saratov-kitchens-2026-08/carousels/06/03.webp","assets/cases/saratov-kitchens-2026-08/carousels/06/04.webp","assets/cases/saratov-kitchens-2026-08/carousels/06/05.webp","assets/cases/saratov-kitchens-2026-08/carousels/06/06.webp","assets/cases/saratov-kitchens-2026-08/carousels/06/07.webp"],"n":"Кухни","a":"Карусель · Кухни"},{"t":"post","src":"assets/cases/moscow-padel/posts/05.jpg","n":"Спорт","a":"Пост · Спорт"},{"t":"story","src":"assets/cases/saratov-kitchens-2026-08/stories/01.webp","slides":["assets/cases/saratov-kitchens-2026-08/stories/01.webp","assets/cases/saratov-kitchens-2026-08/stories/02.webp","assets/cases/saratov-kitchens-2026-08/stories/03.webp","assets/cases/saratov-kitchens-2026-08/stories/04.webp","assets/cases/saratov-kitchens-2026-08/stories/05.webp"],"n":"Кухни","a":"Сторис · Кухни"},{"t":"post","src":"assets/cases/nalog-expert/posts/02.jpg","n":"Налоги","a":"Пост · Налоги"},{"t":"post","src":"assets/cases/refix/posts/03.png","n":"Ремонт техники","a":"Пост · Ремонт техники"},{"t":"carousel","src":"assets/cases/borodulina-tape/carousels/03/01.webp","slides":["assets/cases/borodulina-tape/carousels/03/01.webp","assets/cases/borodulina-tape/carousels/03/02.webp","assets/cases/borodulina-tape/carousels/03/03.webp","assets/cases/borodulina-tape/carousels/03/04.webp","assets/cases/borodulina-tape/carousels/03/05.webp","assets/cases/borodulina-tape/carousels/03/06.webp","assets/cases/borodulina-tape/carousels/03/07.webp"],"n":"Здоровье","a":"Карусель · Здоровье"},{"t":"post","src":"assets/cases/fr-moto/posts/02.jpg","n":"Мото","a":"Пост · Мото"},{"t":"story","src":"assets/cases/nalog-expert/stories/01-01.jpg","slides":["assets/cases/nalog-expert/stories/01-01.jpg","assets/cases/nalog-expert/stories/01-02.jpg","assets/cases/nalog-expert/stories/01-03.jpg","assets/cases/nalog-expert/stories/01-04.jpg","assets/cases/nalog-expert/stories/01-05.jpg","assets/cases/nalog-expert/stories/02-01.jpg","assets/cases/nalog-expert/stories/02-02.jpg","assets/cases/nalog-expert/stories/02-03.jpg","assets/cases/nalog-expert/stories/02-04.jpg","assets/cases/nalog-expert/stories/02-05.jpg"],"n":"Налоги","a":"Сторис · Налоги"},{"t":"post","src":"assets/cases/inari/posts/02.jpg","n":"Красота","a":"Пост · Красота"},{"t":"post","src":"assets/cases/orange-style/posts/02.jpg","n":"Стиль","a":"Пост · Стиль"},{"t":"carousel","src":"assets/cases/dobroe-serdtse/carousels/02/01.webp","slides":["assets/cases/dobroe-serdtse/carousels/02/01.webp","assets/cases/dobroe-serdtse/carousels/02/02.webp","assets/cases/dobroe-serdtse/carousels/02/03.webp","assets/cases/dobroe-serdtse/carousels/02/04.webp","assets/cases/dobroe-serdtse/carousels/02/05.webp","assets/cases/dobroe-serdtse/carousels/02/06.webp","assets/cases/dobroe-serdtse/carousels/02/07.webp"],"n":"Фонд","a":"Карусель · Фонд"},{"t":"post","src":"assets/cases/kristall-water/posts/02.jpg","n":"Вода","a":"Пост · Вода"},{"t":"story","src":"assets/cases/borodulina-tape/stories/01.webp","slides":["assets/cases/borodulina-tape/stories/01.webp","assets/cases/borodulina-tape/stories/02.webp","assets/cases/borodulina-tape/stories/03.webp","assets/cases/borodulina-tape/stories/04.webp","assets/cases/borodulina-tape/stories/05.webp"],"n":"Здоровье","a":"Сторис · Здоровье"},{"t":"post","src":"assets/cases/electric-monchegorsk/posts/02.jpg","n":"Электрика","a":"Пост · Электрика"},{"t":"post","src":"assets/cases/alliance-climate/posts/02.webp","n":"Климат","a":"Пост · Климат"},{"t":"carousel","src":"assets/cases/moscow-padel/carousels/01/01.jpg","slides":["assets/cases/moscow-padel/carousels/01/01.jpg","assets/cases/moscow-padel/carousels/01/02.jpg","assets/cases/moscow-padel/carousels/01/03.jpg","assets/cases/moscow-padel/carousels/01/04.jpg","assets/cases/moscow-padel/carousels/01/05.jpg","assets/cases/moscow-padel/carousels/01/06.jpg","assets/cases/moscow-padel/carousels/01/07.jpg"],"n":"Спорт","a":"Карусель · Спорт"},{"t":"post","src":"assets/cases/casahitto/posts/02.jpg","n":"Интерьер","a":"Пост · Интерьер"},{"t":"story","src":"assets/cases/chebusser/stories/01.jpg","slides":["assets/cases/chebusser/stories/01.jpg","assets/cases/chebusser/stories/02.jpg","assets/cases/chebusser/stories/03.jpg","assets/cases/chebusser/stories/04.jpg","assets/cases/chebusser/stories/05.jpg"],"n":"Общепит","a":"Сторис · Общепит"},{"t":"post","src":"assets/cases/dan-gun/posts/03.jpg","n":"Ресторан","a":"Пост · Ресторан"},{"t":"post","src":"assets/cases/narfkis/posts/02.jpg","n":"Образование","a":"Пост · Образование"},{"t":"carousel","src":"assets/cases/chebusser/carousels/03/01.jpg","slides":["assets/cases/chebusser/carousels/03/01.jpg","assets/cases/chebusser/carousels/03/02.jpg","assets/cases/chebusser/carousels/03/03.jpg","assets/cases/chebusser/carousels/03/04.jpg","assets/cases/chebusser/carousels/03/05.jpg","assets/cases/chebusser/carousels/03/06.jpg","assets/cases/chebusser/carousels/03/07.jpg"],"n":"Общепит","a":"Карусель · Общепит"},{"t":"post","src":"assets/cases/dava-holding/posts/02.jpg","n":"Бизнес","a":"Пост · Бизнес"},{"t":"story","src":"assets/cases/fr-moto/stories/01.jpg","slides":["assets/cases/fr-moto/stories/01.jpg","assets/cases/fr-moto/stories/02.jpg","assets/cases/fr-moto/stories/03.jpg","assets/cases/fr-moto/stories/04.jpg","assets/cases/fr-moto/stories/05.jpg"],"n":"Мото","a":"Сторис · Мото"},{"t":"post","src":"assets/cases/lipniki/posts/02.webp","n":"Загород","a":"Пост · Загород"},{"t":"post","src":"assets/cases/achinsk-begovoy/posts/03.jpg","n":"Спорт","a":"Пост · Спорт"},{"t":"carousel","src":"assets/cases/refix/carousels/01/01.png","slides":["assets/cases/refix/carousels/01/01.png","assets/cases/refix/carousels/01/02.png","assets/cases/refix/carousels/01/03.png","assets/cases/refix/carousels/01/04.png","assets/cases/refix/carousels/01/05.png","assets/cases/refix/carousels/01/06.png","assets/cases/refix/carousels/01/07.png"],"n":"Ремонт техники","a":"Карусель · Ремонт техники"},{"t":"post","src":"assets/cases/klient-prosto/posts/02.png","n":"Услуги","a":"Пост · Услуги"},{"t":"story","src":"assets/cases/narfkis/stories/01.jpg","slides":["assets/cases/narfkis/stories/01.jpg","assets/cases/narfkis/stories/02.jpg","assets/cases/narfkis/stories/03.jpg","assets/cases/narfkis/stories/04.jpg","assets/cases/narfkis/stories/05.jpg"],"n":"Образование","a":"Сторис · Образование"},{"t":"carousel","src":"assets/cases/olga-pravdyuk/carousels/02/01.jpg","slides":["assets/cases/olga-pravdyuk/carousels/02/01.jpg","assets/cases/olga-pravdyuk/carousels/02/02.jpg","assets/cases/olga-pravdyuk/carousels/02/03.jpg","assets/cases/olga-pravdyuk/carousels/02/04.jpg","assets/cases/olga-pravdyuk/carousels/02/05.jpg","assets/cases/olga-pravdyuk/carousels/02/06.jpg","assets/cases/olga-pravdyuk/carousels/02/07.jpg"],"n":"","a":"Карусель · olga-pravdyuk"},{"t":"story","src":"assets/cases/inari/stories/01.jpg","slides":["assets/cases/inari/stories/01.jpg","assets/cases/inari/stories/02.jpg","assets/cases/inari/stories/03.jpg","assets/cases/inari/stories/04.jpg","assets/cases/inari/stories/05.jpg"],"n":"Красота","a":"Сторис · Красота"},{"t":"carousel","src":"assets/cases/casahitto/carousels/06/01.jpg","slides":["assets/cases/casahitto/carousels/06/01.jpg","assets/cases/casahitto/carousels/06/02.jpg","assets/cases/casahitto/carousels/06/03.jpg","assets/cases/casahitto/carousels/06/04.jpg","assets/cases/casahitto/carousels/06/05.jpg","assets/cases/casahitto/carousels/06/06.jpg","assets/cases/casahitto/carousels/06/07.jpg"],"n":"Интерьер","a":"Карусель · Интерьер"}];
+const LABEL = { post: 'Пост', carousel: 'Карусель', story: 'Сторис' };
+
+function makeCard(it) {
+  const f = document.createElement('figure');
+  f.className = 'w w--' + it.t;
+  const slides = it.slides || [it.src];
+  f.dataset.pos = 0;
+  let inner = `<img src="${it.src}" alt="${it.a}" loading="lazy">`;
+  if (slides.length > 1) {
+    if (it.t === 'story') {
+      inner = `<span class="w__bars">${slides.map((_, i) => `<i class="${i === 0 ? 'on' : ''}"></i>`).join('')}</span>` + inner;
+    } else {
+      inner += `<span class="w__count">1 / ${slides.length}</span>`;
+    }
+    inner += `<span class="w__hint">›</span>`;
+    inner += `<button class="w__nav w__nav--prev" type="button" aria-label="Назад" disabled>‹</button>`;
+    inner += `<button class="w__nav w__nav--next" type="button" aria-label="Вперёд">›</button>`;
+  }
+  inner += `<span class="w__label"><span class="d"></span>${LABEL[it.t]}</span>`;
+  if (it.n) inner += `<span class="w__niche">${it.n}</span>`;
+  f.innerHTML = inner;
+  if (slides.length > 1) {
+    const img = f.querySelector('img');
+    const prev = f.querySelector('.w__nav--prev'), next = f.querySelector('.w__nav--next');
+    const count = f.querySelector('.w__count'), bars = f.querySelectorAll('.w__bars i');
+    const go = (d, e) => {
+      e.stopPropagation(); e.preventDefault();
+      let pos = Math.min(slides.length - 1, Math.max(0, +f.dataset.pos + d));
+      f.dataset.pos = pos;
+      img.src = slides[pos];
+      if (count) count.textContent = `${pos + 1} / ${slides.length}`;
+      bars.forEach((b, i) => b.classList.toggle('on', i <= pos));
+      prev.disabled = pos === 0;
+      next.disabled = pos === slides.length - 1;
+    };
+    prev.addEventListener('click', e => go(-1, e));
+    next.addEventListener('click', e => go(1, e));
+  }
+  return f;
+}
+
+const feed = document.getElementById('feed');
+const COLS = 4, SPEEDS = ['74s', '92s', '80s', '104s'];
+for (let c = 0; c < COLS; c++) {
+  const col = document.createElement('div');
+  col.className = 'hf-col' + (c % 2 ? ' hf-col--down' : '');
+  const track = document.createElement('div');
+  track.className = 'hf-track';
+  track.style.setProperty('--sp', SPEEDS[c]);
+  const items = WORKS.filter((_, i) => i % COLS === c);
+  items.forEach(it => track.appendChild(makeCard(it)));
+  items.forEach(it => { const d = makeCard(it); d.setAttribute('aria-hidden', 'true'); track.appendChild(d); });
+  col.appendChild(track);
+  feed.appendChild(col);
+}
+</script>
 
 <!-- Лайтбокс -->
 <dialog class="lms-lightbox" id="lightbox">

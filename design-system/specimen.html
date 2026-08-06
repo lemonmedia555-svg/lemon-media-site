@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>lemonmedia — дизайн-система</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="tokens.css">
+<link rel="stylesheet" href="components.css">
+<style>
+  * { box-sizing: border-box; margin: 0; }
+  body {
+    font-family: var(--lm-font-sans);
+    font-size: var(--lm-fs-body);
+    line-height: var(--lm-lh-body);
+    color: var(--lm-text-primary);
+    background: var(--lm-color-surface);
+  }
+  .wrap { max-width: 1200px; margin-inline: auto; padding: 0 24px; }
+
+  /* ---- шапка ---- */
+  .hero {
+    background: var(--lm-grad-brand-dark);
+    color: #fff;
+    padding: 72px 0 64px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: ""; position: absolute; width: 720px; aspect-ratio: 1;
+    background: var(--lm-glowspot-lemon); top: -40%; right: -8%; pointer-events: none;
+  }
+  .hero .wrap { position: relative; }
+  .hero-logo { height: 40px; display: block; margin-bottom: 40px;
+    background: var(--lm-color-neutral-000); padding: 10px 18px; border-radius: var(--lm-radius-sm); }
+  .hero h1 { font-size: var(--lm-fs-h1); font-weight: 800; letter-spacing: -0.02em; line-height: 1.05; max-width: 720px; }
+  .hero p { margin-top: 20px; max-width: 640px; color: var(--lm-color-overlay-white-80); font-size: var(--lm-fs-lead); }
+  .hero-meta { margin-top: 32px; display: flex; gap: 10px; flex-wrap: wrap; }
+
+  /* ---- секции ---- */
+  section { padding: 64px 0 8px; }
+  .sec-head { display: flex; align-items: baseline; gap: 16px; margin-bottom: 8px; }
+  .sec-num { font-weight: 800; color: var(--lm-color-purple-600); font-size: 15px; letter-spacing: .08em; }
+  h2.sec-title { font-size: clamp(28px, 3.4vw, 40px); font-weight: 800; letter-spacing: -0.02em; }
+  .sec-sub { color: var(--lm-color-muted); max-width: 760px; margin: 10px 0 28px; }
+  h3.group-title { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: .08em;
+    color: var(--lm-color-purple-600); margin: 28px 0 14px; }
+
+  /* ---- свотчи ---- */
+  .swatch-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 14px; }
+  .swatch { background: var(--lm-color-neutral-000); border: 1px solid var(--lm-color-border); border-radius: var(--lm-radius-md); padding: 10px; }
+  .swatch-chip { height: 64px; border-radius: 10px; margin-bottom: 10px; border: 1px solid rgba(0,0,0,.06); }
+  .swatch b { display: block; font-size: 13px; font-weight: 700; }
+  .swatch span { font-size: 12px; color: var(--lm-color-muted-2); }
+
+  /* ---- пары ---- */
+  .pair-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 14px; }
+  .pair { border-radius: var(--lm-radius-md); padding: 18px 16px; border: 1px solid rgba(0,0,0,.05); }
+  .pair b { display: block; font-size: 14px; font-weight: 800; margin-bottom: 4px; }
+  .pair span { font-size: 12px; opacity: .75; }
+
+  /* ---- запреты ---- */
+  .rules { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; }
+  .rule { border-radius: var(--lm-radius-md); padding: 18px; font-weight: 700; position: relative; }
+  .rule small { display: block; font-weight: 400; font-size: 13px; margin-top: 6px; opacity: .8; }
+  .rule--bad { outline: 2px dashed var(--lm-color-danger); outline-offset: 3px; }
+  .rule-flag { position: absolute; top: -12px; right: 12px; font-size: 11px; font-weight: 800;
+    padding: 4px 10px; border-radius: 100px; text-transform: uppercase; letter-spacing: .05em; }
+  .rule-flag--no { background: var(--lm-color-danger); color: #fff; }
+  .rule-flag--yes { background: var(--lm-color-success); color: #fff; }
+
+  /* ---- типографика ---- */
+  .type-card { background: var(--lm-color-neutral-000); border: 1px solid var(--lm-color-border); border-radius: var(--lm-radius-lg);
+    padding: 28px 32px; display: grid; grid-template-columns: 150px 1fr; gap: 20px; align-items: baseline;
+    margin-bottom: 12px; }
+  .type-spec { font-size: 12px; color: var(--lm-color-muted-2); line-height: 1.5; }
+  .type-sample { overflow-wrap: anywhere; }
+  .smm-table { width: 100%; border-collapse: collapse; background: var(--lm-color-neutral-000); border-radius: var(--lm-radius-md);
+    overflow: hidden; border: 1px solid var(--lm-color-border); font-size: 14px; }
+  .smm-table th { background: var(--lm-color-neutral-100); text-align: left; padding: 10px 16px; font-size: 12px;
+    text-transform: uppercase; letter-spacing: .06em; }
+  .smm-table td { padding: 10px 16px; border-top: 1px solid var(--lm-color-border); }
+  .smm-table td:first-child { font-weight: 700; }
+
+  /* ---- геометрия ---- */
+  .geo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; }
+  .radius-demo { display: flex; gap: 14px; flex-wrap: wrap; }
+  .radius-box { width: 108px; height: 84px; background: var(--lm-color-purple-050);
+    border: 2px solid var(--lm-color-purple-400); display: flex; align-items: end; justify-content: center;
+    padding-bottom: 8px; font-size: 12px; font-weight: 700; color: var(--lm-color-purple-600); }
+  .space-row { display: flex; align-items: center; gap: 14px; margin-bottom: 8px; font-size: 13px; }
+  .space-bar { height: 12px; background: var(--lm-color-purple-500); border-radius: 6px; }
+
+  /* ---- градиенты ---- */
+  .grad-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 14px; }
+  .grad { height: 130px; border-radius: var(--lm-radius-md); position: relative; overflow: hidden;
+    border: 1px solid rgba(0,0,0,.06); }
+  .grad em { position: absolute; left: 12px; bottom: 10px; font-style: normal; font-size: 12px; font-weight: 700;
+    background: rgba(255,255,255,.9); color: #000; padding: 3px 9px; border-radius: 100px; }
+  .shadow-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 20px; }
+  .shadow-card-demo { background: var(--lm-color-neutral-000); border-radius: var(--lm-radius-md); height: 110px;
+    display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700; text-align: center; }
+  .glow-stage { background: #0B0912; border-radius: var(--lm-radius-md); height: 110px; position: relative;
+    display: flex; align-items: center; justify-content: center; overflow: hidden; }
+  .glow-ball { width: 52px; height: 52px; border-radius: 50%; }
+  .glow-label { position: absolute; left: 12px; bottom: 10px; color: #fff; font-size: 12px; font-weight: 700; opacity: .85; }
+
+  /* ---- компоненты ---- */
+  .demo-row { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; margin-bottom: 20px; }
+  .cards-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 16px; }
+
+  /* ---- принципы ---- */
+  .princ { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; }
+  .princ ul { margin: 12px 0 0; padding-left: 20px; }
+  .princ li { margin-bottom: 8px; }
+
+  /* ---- ксюша ---- */
+  .ksusha { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
+
+  /* ---- qa ---- */
+  .qa { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 16px; }
+  .qa-num { font-size: 40px; font-weight: 800; line-height: 1; margin-bottom: 10px; }
+
+  footer { margin-top: 72px; background: var(--lm-color-neutral-1000); color: #fff; padding: 40px 0 48px; }
+  footer code { background: rgba(255,255,255,.12); padding: 2px 8px; border-radius: 6px; font-size: 13px; }
+  footer p { margin-top: 10px; color: rgba(255,255,255,.7); font-size: 14px; }
+  .foot-files { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 16px; }
+
+  /* ---- логотип ---- */
+  .logo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; }
+  .logo-tile { border-radius: var(--lm-radius-md); height: 150px; display: flex; align-items: center;
+    justify-content: center; position: relative; overflow: hidden; }
+  .logo-tile img { width: 62%; max-width: 300px; display: block; }
+  .logo-tile em { position: absolute; left: 14px; bottom: 10px; font-style: normal; font-size: 12px;
+    font-weight: 700; color: var(--lm-color-muted-2); }
+  .logo-plate { background: var(--lm-color-neutral-000); border-radius: 12px; padding: 12px 20px; box-shadow: var(--lm-shadow-card); }
+  .logo-plate img { width: 200px; }
+
+  /* ---- ксюша фото ---- */
+  .ksusha-photos { display: grid; grid-template-columns: 2fr 1fr; gap: 16px; margin-bottom: 16px; }
+  .ksusha-master { position: relative; border-radius: var(--lm-radius-lg); overflow: hidden; background: #000; }
+  .ksusha-master img { width: 100%; display: block; }
+  .ksusha-master .tag-row { position: absolute; left: 16px; bottom: 14px; display: flex; gap: 8px; flex-wrap: wrap; }
+  .ksusha-work { border-radius: var(--lm-radius-lg); overflow: hidden; position: relative; }
+  .ksusha-work img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: top; display: block; }
+  @media (max-width: 760px) { .ksusha-work { aspect-ratio: 1/1; } }
+  .ksusha-work em { position: absolute; left: 14px; bottom: 12px; font-style: normal; font-size: 12px; font-weight: 700;
+    background: rgba(255,255,255,.92); padding: 4px 10px; border-radius: 100px; }
+  @media (max-width: 760px) { .ksusha-photos { grid-template-columns: 1fr; } }
+
+  @media (max-width: 640px) {
+    .type-card { grid-template-columns: 1fr; gap: 8px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <img class="hero-logo" src="../logo-dark.svg" alt="lemonmedia">
+    <h1>Дизайн-система lemonmedia</h1>
+    <p>Один источник стиля для сайта, интерфейсов, SMM-контента и генераций Claude. Канон значений — Figma «LM • SMM DESIGN SYSTEM — v1», этот пакет — канон для кода.</p>
+    <div class="hero-meta">
+      <span class="lm-badge lm-badge--lemon">v1 · 06.08.2026</span>
+      <span class="lm-badge lm-badge--purple">Manrope</span>
+      <span class="lm-badge lm-badge--dark">#EECB03</span>
+    </div>
+  </div>
+</header>
+
+<!-- ============ 01 ЛОГОТИП ============ -->
+<section>
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">01</span><h2 class="sec-title">Логотип</h2></div>
+    <p class="sec-sub">Тёмная версия — на светлом, белая — на тёмном. На жёлтой заливке символ-лимон пропадает — там логотип ставится на белой плашке (или текстовая версия без символа). Охранное поле — высота символа-лимона, минимальная ширина 120px. Не перекрашивать, без теней и обводок.</p>
+    <div class="logo-grid">
+      <div class="logo-tile" style="background:#fff;border:1px solid var(--lm-color-border)">
+        <img src="../logo-dark.svg" alt="тёмный логотип на белом"><em>на белом — тёмный</em>
+      </div>
+      <div class="logo-tile" style="background:#000">
+        <img src="../logo-white.svg" alt="белый логотип на чёрном"><em style="color:rgba(255,255,255,.65)">на чёрном — белый</em>
+      </div>
+      <div class="logo-tile" style="background:var(--lm-grad-space)">
+        <img src="../logo-white.svg" alt="белый логотип на космосе"><em style="color:rgba(255,255,255,.65)">на «космосе» — белый</em>
+      </div>
+      <div class="logo-tile" style="background:var(--lm-color-lemon-500)">
+        <div class="logo-plate"><img src="../logo-dark.svg" alt="логотип на плашке на жёлтом"></div>
+        <em style="color:rgba(0,0,0,.55)">на жёлтом — белая плашка</em>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 02 ЦВЕТ ============ -->
+<section>
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">02</span><h2 class="sec-title">Цвет</h2></div>
+    <p class="sec-sub">Основа — чёрный + жёлтый + белый. Фиолетовый — второй акцент. В макетах используем только утверждённые пары «поверхность × текст», базовые цвета — через токены.</p>
+
+    <h3 class="group-title">Нейтрали</h3>
+    <div class="swatch-grid">
+      <div class="swatch"><div class="swatch-chip" style="background:#FFFFFF"></div><b>neutral/000</b><span>#FFFFFF</span></div>
+      <div class="swatch"><div class="swatch-chip" style="background:#EFEFEF"></div><b>neutral/100</b><span>#EFEFEF</span></div>
+      <div class="swatch"><div class="swatch-chip" style="background:#262626"></div><b>neutral/800</b><span>#262626</span></div>
+      <div class="swatch"><div class="swatch-chip" style="background:#1E1E1E"></div><b>neutral/900</b><span>#1E1E1E</span></div>
+      <div class="swatch"><div class="swatch-chip" style="background:#020202"></div><b>neutral/950</b><span>#020202 · текст</span></div>
+      <div class="swatch"><div class="swatch-chip" style="background:#000000"></div><b>neutral/1000</b><span>#000000</span></div>
+    </div>
+
+    <h3 class="group-title">Лимон и фиолетовый</h3>
+    <div class="swatch-grid">
+      <div class="swatch"><div class="swatch-chip" style="background:#FFF3C4"></div><b>lemon/100</b><span>#FFF3C4 · подложка</span></div>
+      <div class="swatch"><div class="swatch-chip" style="background:#FFDB4E"></div><b>lemon/300</b><span>#FFDB4E</span></div>
+      <div class="swatch"><div class="swatch-chip" style="background:#EECB03"></div><b>lemon/500 ★</b><span>#EECB03 · канон</span></div>
+      <div class="swatch"><div class="swatch-chip" style="background:#D9B900"></div><b>lemon/600</b><span>#D9B900 · hover</span></div>
+      <div class="swatch"><div class="swatch-chip" style="background:#F4E8FF"></div><b>purple/050</b><span>#F4E8FF · подложка</span></div>
+      <div class="swatch"><div class="swatch-chip" style="background:#DFCCFF"></div><b>purple/200</b><span>#DFCCFF</span></div>
+      <div class="swatch"><div class="swatch-chip" style="background:#C582FF"></div><b>purple/300</b><span>#C582FF</span></div>
+      <div class="swatch"><div class="swatch-chip" style="background:#AF53FF"></div><b>purple/400</b><span>#AF53FF</span></div>
+      <div class="swatch"><div class="swatch-chip" style="background:#9747FF"></div><b>purple/500</b><span>#9747FF · SMM</span></div>
+      <div class="swatch"><div class="swatch-chip" style="background:#7D00EA"></div><b>purple/600</b><span>#7D00EA · веб</span></div>
+    </div>
+
+    <h3 class="group-title">Веб-нейтрали и статусы</h3>
+    <div class="swatch-grid">
+      <div class="swatch"><div class="swatch-chip" style="background:#5E5E66"></div><b>muted</b><span>#5E5E66 · второй текст</span></div>
+      <div class="swatch"><div class="swatch-chip" style="background:#8A8A93"></div><b>muted-2</b><span>#8A8A93 · подписи</span></div>
+      <div class="swatch"><div class="swatch-chip" style="background:#F6F6F7"></div><b>surface</b><span>#F6F6F7 · фон секций</span></div>
+      <div class="swatch"><div class="swatch-chip" style="background:#EBEBEE"></div><b>border</b><span>#EBEBEE</span></div>
+      <div class="swatch"><div class="swatch-chip" style="background:#2EB872"></div><b>success</b><span>#2EB872</span></div>
+      <div class="swatch"><div class="swatch-chip" style="background:#E5484D"></div><b>danger</b><span>#E5484D</span></div>
+    </div>
+
+    <h3 class="group-title">Утверждённые пары — только эти шесть</h3>
+    <div class="pair-grid">
+      <div class="pair" style="background:#fff;border-color:var(--lm-color-border)"><b>DEFAULT</b><span>белый × neutral/950</span></div>
+      <div class="pair" style="background:#EECB03;color:#000"><b>LEMON</b><span>lemon/500 × чёрный</span></div>
+      <div class="pair" style="background:#7D00EA;color:#fff"><b>PURPLE</b><span>purple/600 × белый</span></div>
+      <div class="pair" style="background:#000;color:#fff"><b>INVERSE</b><span>чёрный × белый</span></div>
+      <div class="pair" style="background:#FFF3C4"><b>LEMON SOFT</b><span>lemon/100 × neutral/950</span></div>
+      <div class="pair" style="background:#F4E8FF"><b>PURPLE SOFT</b><span>purple/050 × neutral/950</span></div>
+    </div>
+
+    <h3 class="group-title">Контраст: можно / нельзя</h3>
+    <div class="rules">
+      <div class="rule rule--bad" style="background:#EECB03;color:#fff">
+        <span class="rule-flag rule-flag--no">Запрещено</span>
+        Белый текст на лимоне
+        <small style="color:#fff">Слабый контраст — не читается</small>
+      </div>
+      <div class="rule" style="background:#EECB03;color:#000">
+        <span class="rule-flag rule-flag--yes">Канон</span>
+        Чёрный текст на лимоне
+        <small>Единственный текст на lemon/500</small>
+      </div>
+      <div class="rule rule--bad" style="background:linear-gradient(150deg,#FFFFFF,#EECB03);color:#000">
+        <span class="rule-flag rule-flag--no">Deprecated</span>
+        Градиент white → yellow
+        <small>Не использовать в новых макетах</small>
+      </div>
+      <div class="rule" style="background:#000;color:#fff">
+        <span class="rule-flag rule-flag--yes">Канон</span>
+        Белый / <span style="color:#EECB03">лимон</span> на чёрном
+        <small style="color:rgba(255,255,255,.75)">+ локальный glow жёлтый или фиолетовый</small>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 03 ТИПОГРАФИКА ============ -->
+<section>
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">03</span><h2 class="sec-title">Типографика</h2></div>
+    <p class="sec-sub">Manrope — единственная гарнитура системы. Заголовки — 800, сжатие −0.02em. Один смысловой удар на заголовок, без висячих слов.</p>
+
+    <h3 class="group-title">Веб-шкала</h3>
+    <div class="type-card"><div class="type-spec">Display<br>clamp(44–72px) · 800</div><div class="type-sample" style="font-size:var(--lm-fs-display);font-weight:800;letter-spacing:-0.02em;line-height:1.05">25 000+</div></div>
+    <div class="type-card"><div class="type-spec">H1<br>clamp(40–56px) · 800</div><div class="type-sample" style="font-size:var(--lm-fs-h1);font-weight:800;letter-spacing:-0.02em;line-height:1.05">Ведём ваши соцсети под ключ</div></div>
+    <div class="type-card"><div class="type-spec">H2<br>clamp(32–54px) · 800</div><div class="type-sample" style="font-size:var(--lm-fs-h2);font-weight:800;letter-spacing:-0.02em;line-height:1.08">Контент, которому верят</div></div>
+    <div class="type-card"><div class="type-spec">H3<br>clamp(22–28px) · 800</div><div class="type-sample" style="font-size:var(--lm-fs-h3);font-weight:800;line-height:1.15">Делают живые люди, а не нейросеть</div></div>
+    <div class="type-card"><div class="type-spec">Lead · 18px · 400</div><div class="type-sample lm-lead">Клиент платит фикс и получает готовый опубликованный контент - остаётся только согласовывать.</div></div>
+    <div class="type-card"><div class="type-spec">Body · 16px · 400 · lh 1.6</div><div class="type-sample">Мы продаём предсказуемость: понятная цена, понятный объём, понятный результат каждый месяц.</div></div>
+    <div class="type-card"><div class="type-spec">Eyebrow · 13px · 700</div><div class="type-sample lm-eyebrow">Экспертный пост</div></div>
+
+    <h3 class="group-title">SMM-шкала (канвас 1080×1350, стили LM/* в Figma)</h3>
+    <table class="smm-table">
+      <tr><th>Стиль</th><th>Вес</th><th>Размер</th><th>Интерлиньяж</th></tr>
+      <tr><td>Display/Numeric</td><td>ExtraBold</td><td>200</td><td>100%</td></tr>
+      <tr><td>Display/Hero</td><td>SemiBold</td><td>160</td><td>100%</td></tr>
+      <tr><td>Heading/XL · L</td><td>SemiBold</td><td>100 · 90</td><td>100%</td></tr>
+      <tr><td>Heading/M</td><td>SemiBold</td><td>80</td><td>105%</td></tr>
+      <tr><td>Heading/S</td><td>Bold</td><td>70</td><td>105%</td></tr>
+      <tr><td>Body/XL · L · M</td><td>Regular</td><td>50 · 45 · 40</td><td>115%</td></tr>
+      <tr><td>Label/L</td><td>Bold</td><td>35</td><td>110%</td></tr>
+      <tr><td>Label/S</td><td>SemiBold</td><td>30</td><td>110%</td></tr>
+    </table>
+  </div>
+</section>
+
+<!-- ============ 04 ГЕОМЕТРИЯ ============ -->
+<section>
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">04</span><h2 class="sec-title">Геометрия</h2></div>
+    <p class="sec-sub">Крупные скругления — фирменная пластика. Блочная система: каждый смысл — отдельная карточка, много воздуха.</p>
+
+    <div class="geo-grid">
+      <div class="lm-card">
+        <h3 class="group-title" style="margin-top:0">Радиусы (веб)</h3>
+        <div class="radius-demo">
+          <div class="radius-box" style="border-radius:10px">10 · sm</div>
+          <div class="radius-box" style="border-radius:16px">16 · md</div>
+          <div class="radius-box" style="border-radius:24px">24 · lg</div>
+          <div class="radius-box" style="border-radius:42px">pill</div>
+        </div>
+        <p style="font-size:13px;color:var(--lm-color-muted);margin-top:14px">Кнопки/теги — 10 · медиа и вложенные — 16 · карточки и секции — 24 · бейджи — pill. SMM: 0–100 и full.</p>
+      </div>
+      <div class="lm-card">
+        <h3 class="group-title" style="margin-top:0">Отступы (веб)</h3>
+        <div class="space-row"><div class="space-bar" style="width:16px"></div>16 — внутри мелких блоков</div>
+        <div class="space-row"><div class="space-bar" style="width:24px"></div>24 — паддинг карточки</div>
+        <div class="space-row"><div class="space-bar" style="width:48px"></div>48 — между группами</div>
+        <div class="space-row"><div class="space-bar" style="width:96px"></div>96–128 — между секциями</div>
+        <p style="font-size:13px;color:var(--lm-color-muted);margin-top:14px">Контейнер 1200px. SMM-шкала: 20 / 30 / 40 / 60 / 80 / 100 / 120 / 160.</p>
+      </div>
+      <div class="lm-card lm-card--inverse">
+        <h3 class="group-title" style="margin-top:0;color:var(--lm-color-lemon-500)">Сетка SMM</h3>
+        <p style="font-weight:800;font-size:22px">1080 × 1350</p>
+        <p style="font-size:14px;margin-top:8px;color:rgba(255,255,255,.8)">Safe margin 60px · рабочее поле 960×1230 · 12 колонок · gutter 20px.</p>
+        <p style="font-size:14px;margin-top:12px;background:var(--lm-color-lemon-500);color:#000;border-radius:12px;padding:10px 14px;font-weight:700">Текст, цифры и лицо — внутри safe area. Декор и свет могут выходить наружу.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 05 АТМОСФЕРА ============ -->
+<section>
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">05</span><h2 class="sec-title">Атмосфера</h2></div>
+    <p class="sec-sub">Свет — локальный и смысловой: подсвечивает главный объект или акцент. Один доминирующий glow, второй — только поддерживающий.</p>
+
+    <h3 class="group-title">Тени и свечения</h3>
+    <div class="shadow-grid">
+      <div class="shadow-card-demo" style="box-shadow:var(--lm-shadow-soft)">Shadow / Soft</div>
+      <div class="shadow-card-demo" style="box-shadow:var(--lm-shadow-card)">Shadow / Card</div>
+      <div class="shadow-card-demo" style="box-shadow:var(--lm-shadow-pop)">Shadow / Pop</div>
+      <div class="glow-stage"><div class="glow-ball" style="background:var(--lm-color-lemon-500);box-shadow:0 0 60px 24px rgba(238,203,3,.55)"></div><span class="glow-label">Glow / Yellow</span></div>
+      <div class="glow-stage"><div class="glow-ball" style="background:var(--lm-color-purple-500);box-shadow:0 0 60px 24px rgba(151,71,255,.55)"></div><span class="glow-label">Glow / Purple</span></div>
+      <div class="glow-stage"><div class="glow-ball" style="background:var(--lm-color-neutral-000);box-shadow:0 0 44px 16px rgba(238,203,3,.5), 0 0 90px 40px rgba(151,71,255,.4)"></div><span class="glow-label">Glow / Dual</span></div>
+    </div>
+
+    <h3 class="group-title">Градиенты</h3>
+    <div class="grad-grid">
+      <div class="grad" style="background:var(--lm-grad-hero-light)"><em>hero-light</em></div>
+      <div class="grad" style="background:var(--lm-grad-lemon-soft)"><em>lemon-soft</em></div>
+      <div class="grad" style="background:var(--lm-grad-purple-soft)"><em>purple-soft</em></div>
+      <div class="grad" style="background:var(--lm-grad-lemon)"><em>lemon</em></div>
+      <div class="grad" style="background:var(--lm-grad-purple)"><em>purple</em></div>
+      <div class="grad" style="background:var(--lm-grad-space)"><em>space</em></div>
+      <div class="grad" style="background:var(--lm-grad-brand-dark)"><em>brand-dark</em></div>
+      <div class="grad" style="background:#0B0912"><div style="position:absolute;inset:0;background:var(--lm-glowspot-lemon);transform:translate(30%,-30%)"></div><em>glowspot-lemon</em></div>
+      <div class="grad" style="background:#0B0912"><div style="position:absolute;inset:0;background:var(--lm-glowspot-purple);transform:translate(-25%,25%)"></div><em>glowspot-purple</em></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 06 КОМПОНЕНТЫ ============ -->
+<section>
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">06</span><h2 class="sec-title">Компоненты</h2></div>
+    <p class="sec-sub">Базовый словарь интерфейса. Одна жёлтая primary-кнопка на экран.</p>
+
+    <h3 class="group-title">Кнопки</h3>
+    <div class="demo-row">
+      <button class="lm-btn lm-btn--primary">Получить бесплатно</button>
+      <button class="lm-btn lm-btn--purple">Попробовать AI</button>
+      <button class="lm-btn lm-btn--dark">Узнать больше</button>
+      <button class="lm-btn lm-btn--ghost">Посмотреть примеры</button>
+      <button class="lm-btn lm-btn--primary lm-btn--pill">От 4990 ₽/мес</button>
+    </div>
+
+    <h3 class="group-title">Бейджи и чипсы</h3>
+    <div class="demo-row">
+      <span class="lm-badge lm-badge--lemon">Позиция</span>
+      <span class="lm-badge lm-badge--purple">Экспертный пост</span>
+      <span class="lm-badge lm-badge--dark">Диагностика</span>
+      <span class="lm-chip"><span>📣</span><span>Мессенджер</span></span>
+      <span class="lm-chip"><span>🤝</span><span>Совместная работа</span></span>
+      <span class="lm-chip"><span>⚡</span><span>CRM</span></span>
+    </div>
+
+    <h3 class="group-title">Карточки</h3>
+    <div class="cards-3">
+      <div class="lm-card">
+        <span class="lm-eyebrow">Default</span>
+        <h3 style="font-size:20px;font-weight:800;margin:10px 0 8px">Белая карточка</h3>
+        <p style="font-size:14px;color:var(--lm-color-muted)">Радиус 24, бордер, мягкая тень. Живой скриншот — с радиусом 16:</p>
+        <div class="lm-card__media" style="margin-top:14px;height:84px;background:var(--lm-grad-hero-light);display:flex;align-items:center;justify-content:center;font-size:13px;color:var(--lm-color-muted-2)">место под скриншот</div>
+      </div>
+      <div class="lm-card lm-card--soft-lemon">
+        <span class="lm-eyebrow" style="color:var(--lm-text-primary)">Lemon soft</span>
+        <h3 style="font-size:20px;font-weight:800;margin:10px 0 8px">Тёплая подложка</h3>
+        <p style="font-size:14px">Для акцентных блоков и выделений в документах. Текст — только тёмный.</p>
+        <div style="margin-top:14px"><span class="lm-badge lm-badge--dark">Сохрани</span></div>
+      </div>
+      <div class="lm-card lm-card--space">
+        <span class="lm-eyebrow" style="color:var(--lm-color-lemon-300)">Space</span>
+        <div class="lm-metric" style="margin-top:10px">
+          <div class="lm-metric__value">10 000+</div>
+          <div class="lm-metric__label">клиентов с 2020 года</div>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="group-title">Тёмная секция с локальным свечением</h3>
+    <div class="lm-section--dark" style="padding:40px 36px">
+      <span class="lm-badge lm-badge--lemon">Разбор</span>
+      <h3 style="font-size:clamp(24px,3vw,34px);font-weight:800;letter-spacing:-0.02em;max-width:560px;margin:16px 0 10px">Не надо кричать. Сильная позиция слышна и <span class="lm-mark-lemon">без шума</span>.</h3>
+      <p style="max-width:520px;color:var(--lm-color-overlay-white-80);font-size:15px">Фон — «космос», свет — одно доминирующее пятно за главным объектом. Ключевое слово — лимоном.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 07 ПРИНЦИПЫ ============ -->
+<section>
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">07</span><h2 class="sec-title">Принципы подачи</h2></div>
+    <p class="sec-sub">Из разбора референсов: Битрикс24, Яндекс Алиса, Postmypost — как ориентиры; Wazzup — как антипример иллюстраций.</p>
+    <div class="princ">
+      <div class="lm-card" style="border-top:4px solid var(--lm-color-success)">
+        <b style="font-size:17px">Делаем</b>
+        <ul style="font-size:14.5px">
+          <li><b>Блочная система</b> — каждый смысл в своём скруглённом блоке, сразу видно, куда смотреть</li>
+          <li><b>Живые скриншоты и лица</b> — продукт, реальные работы, видео, мокапы устройств</li>
+          <li><b>Интерактив</b> — hover-эффекты, анимации, можно нажать и что-то запустится</li>
+          <li><b>Яркость</b> — мы про контент, цветные подложки в каждом блоке</li>
+          <li><b>Воздух</b> — читаемые заголовки, подзаголовки, ничего не слипается</li>
+          <li><b>Показываем, а не рассказываем</b> — каждое обещание подтверждено картинкой</li>
+        </ul>
+      </div>
+      <div class="lm-card" style="border-top:4px solid var(--lm-color-danger)">
+        <b style="font-size:17px">Не делаем</b>
+        <ul style="font-size:14.5px">
+          <li>Рисованные мультяшные иллюстрации и стоковые векторные человечки</li>
+          <li>Мелкие «документные» скругления — пластика у нас крупная</li>
+          <li>Белый текст на жёлтом, градиент white→yellow</li>
+          <li>Два конкурирующих glow в одном кадре</li>
+          <li>«Плавающие» жёлтые из легаси — только #EECB03</li>
+          <li>Серые простыни текста без блоков и воздуха</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 08 КСЮША ============ -->
+<section>
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">08</span><h2 class="sec-title">Ксюша — аватар бренда</h2></div>
+    <p class="sec-sub">Постоянный визуальный носитель бренда: рыжие кудри, живая эмоция. Лицо и идентичность неизменны, контекст меняется по смыслу поста. Ассеты — в design-system/assets/.</p>
+    <div class="ksusha-photos">
+      <div class="ksusha-master">
+        <img src="assets/ksusha-master-web.jpg" alt="Ксюша — master reference, 5 ракурсов">
+        <div class="tag-row">
+          <span class="lm-badge lm-badge--lemon">Master reference</span>
+          <span class="lm-badge lm-badge--dark">5 ракурсов</span>
+          <span class="lm-badge lm-badge--purple">Face identity locked</span>
+        </div>
+      </div>
+      <div class="ksusha-work">
+        <img src="assets/ksusha-workplace.jpg" alt="Ксюша-дизайнер за работой">
+        <em>образ «за работой»</em>
+      </div>
+    </div>
+    <div class="ksusha">
+      <div class="lm-card lm-card--soft-lemon">
+        <b>Можно менять</b>
+        <ul style="padding-left:20px;margin-top:10px;font-size:14.5px">
+          <li>одежду и аксессуары</li>
+          <li>эмоции и мимику</li>
+          <li>позу и жесты</li>
+          <li>свет, сцену, окружение</li>
+        </ul>
+      </div>
+      <div class="lm-card" style="background:var(--lm-color-purple-600);color:#fff;border-color:transparent">
+        <b>Нельзя менять</b>
+        <ul style="padding-left:20px;margin-top:10px;font-size:14.5px">
+          <li>геометрию и пропорции лица</li>
+          <li>форму и цвет волос — рыжие кудри</li>
+          <li>возраст и комплекцию</li>
+        </ul>
+      </div>
+      <div class="lm-card lm-card--inverse">
+        <b style="color:var(--lm-color-lemon-500)">Протокол генерации</b>
+        <ol style="padding-left:20px;margin-top:10px;font-size:14.5px;line-height:1.7">
+          <li><b>Master first</b> — старт всегда с эталона (5 ракурсов в Figma)</li>
+          <li><b>Prompt</b> — описываем контекст вокруг лица, лицо не трогаем</li>
+          <li><b>QA</b> — сверка с master reference перед публикацией</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 09 QA ============ -->
+<section>
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">09</span><h2 class="sec-title">QA-гейт арт-директора</h2></div>
+    <p class="sec-sub">Каждый макет перед выпуском. PASS = 3/3, иначе — правка и повторная проверка.</p>
+    <div class="qa">
+      <div class="lm-card"><div class="qa-num" style="color:var(--lm-color-lemon-500)">01</div><b>Геометрия</b><p style="font-size:14px;color:var(--lm-color-muted);margin-top:8px">Канвас и safe area точные, поля одинаковые, всё на сетке, случайных обрезок нет.</p></div>
+      <div class="lm-card"><div class="qa-num" style="color:var(--lm-color-purple-500)">02</div><b>Типографика</b><p style="font-size:14px;color:var(--lm-color-muted);margin-top:8px">Только системные стили, без случайных переносов и висячих слов, один текстовый уровень внимания.</p></div>
+      <div class="lm-card"><div class="qa-num">03</div><b>Визуал</b><p style="font-size:14px;color:var(--lm-color-muted);margin-top:8px">Контраст пар соблюдён, чистые зоны вокруг главного, лицо Ксюши = master, один доминирующий glow.</p></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <b style="font-size:18px">Файлы пакета</b>
+    <div class="foot-files">
+      <code>DESIGN.md</code><code>tokens.css</code><code>tokens.json</code><code>components.css</code><code>assets/</code><code>README.md</code><code>specimen.html</code>
+    </div>
+    <p>Папка: lemonmedia. SaaS / 06 Маркетинг lemonmedia / Бренд / design-system · Скилл для Claude: /lm-design · Канон визуала: Figma «LM • SMM DESIGN SYSTEM — v1»</p>
+  </div>
+</footer>
+
+</body>
+</html>

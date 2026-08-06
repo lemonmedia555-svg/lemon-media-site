@@ -14,7 +14,7 @@ body.hf {
   margin: 0;
   font-family: var(--lm-font-sans);
   color: var(--lm-text-primary);
-  background: var(--lm-color-neutral-000);
+  background: var(--lm-color-cool-050);
   -webkit-font-smoothing: antialiased;
 }
 .hf * { box-sizing: border-box; }

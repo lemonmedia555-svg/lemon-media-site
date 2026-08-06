@@ -9,12 +9,12 @@ body.dz {
   font-size: var(--lm-fs-body);
   line-height: var(--lm-lh-body);
   color: var(--lm-text-primary);
-  background: var(--lm-color-neutral-000);
+  background: var(--lm-color-cool-050);   /* холодный фон страницы */
   -webkit-font-smoothing: antialiased;
   margin: 0;
 }
 .dz * { box-sizing: border-box; }
-.dz h1, .dz h2, .dz h3, .dz p, .dz ul, .dz figure { margin: 0; }
+.dz :where(h1, h2, h3, p, ul, figure) { margin: 0; }
 .lm-container { max-width: var(--lm-container); margin-inline: auto; padding-inline: 20px; }
 .dz-section { padding: 84px 0 0; }
 .dz-section--tight { padding-top: 48px; }
