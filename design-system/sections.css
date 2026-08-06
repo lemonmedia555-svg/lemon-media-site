@@ -31,7 +31,7 @@
 .lms-header__logo { height: 26px; display: block; }
 .lms-header__nav { display: flex; gap: 22px; margin-left: 8px; }
 .lms-header__nav a {
-  font: 600 15px/1 var(--lm-font-sans);
+  font: 600 17px/1 var(--lm-font-sans);
   color: var(--lm-text-primary);
   text-decoration: none;
   padding: 8px 2px;
@@ -47,7 +47,7 @@
   background: var(--lm-color-neutral-000);
   cursor: pointer;
   align-items: center; justify-content: center;
-  font-size: 18px;
+  font-size: 20px;
 }
 @media (max-width: 900px) {
   .lms-header__nav, .lms-header__ghost { display: none; }
@@ -56,7 +56,7 @@
 @media (max-width: 640px) {
   .lms-header__bar { gap: 10px; padding: 8px 8px 8px 14px; }
   .lms-header__logo { height: 20px; }
-  .lms-header .lm-btn--primary { padding: 10px 13px; font-size: 13px; white-space: nowrap; }
+  .lms-header .lm-btn--primary { padding: 10px 13px; font-size: 14px; white-space: nowrap; }
   .lms-header__burger { width: 38px; height: 38px; flex: 0 0 auto; }
 }
 /* Мобильная панель */
@@ -69,13 +69,13 @@
 }
 .lms-mobilenav a {
   display: block;
-  font: 800 28px/1.2 var(--lm-font-sans);
+  font: 800 30px/1.2 var(--lm-font-sans);
   color: var(--lm-text-primary);
   text-decoration: none;
   padding: 14px 0;
   border-bottom: 1px solid var(--lm-color-border);
 }
-.lms-mobilenav__close { position: absolute; top: 20px; right: 20px; font-size: 26px; background: none; border: 0; cursor: pointer; }
+.lms-mobilenav__close { position: absolute; top: 20px; right: 20px; font-size: 28px; background: none; border: 0; cursor: pointer; }
 
 /* ---------- HERO СВЕТЛЫЙ (центральный, приём Битрикс24) ---------- */
 .lms-hero-light {
@@ -102,7 +102,7 @@
   margin: 20px auto 0;
 }
 .lms-hero-light__cta { display: flex; gap: 12px; justify-content: center; margin-top: 28px; flex-wrap: wrap; }
-.lms-hero-light__note { margin-top: 14px; font-size: 13px; color: var(--lm-color-muted-2); }
+.lms-hero-light__note { margin-top: 14px; font-size: 14px; color: var(--lm-color-muted-2); }
 
 /* Кружки живых лиц по бокам (как у Битрикс24) */
 .lms-face {
@@ -117,7 +117,7 @@
   width: 34px; height: 34px;
   border-radius: 50%;
   display: flex; align-items: center; justify-content: center;
-  font-size: 16px;
+  font-size: 18px;
   box-shadow: var(--lm-shadow-card);
 }
 @media (max-width: 1100px) { .lms-face, .lms-face--icon { display: none; } }
@@ -169,7 +169,7 @@
   margin-top: 16px;
   box-shadow: var(--lm-shadow-card);
 }
-.lms-hero-dark__card p { margin-top: 16px; font-size: 17px; font-weight: 600; }
+.lms-hero-dark__card p { margin-top: 16px; font-size: 19px; font-weight: 600; }
 .lms-hero-dark__media { position: relative; }
 .lms-hero-dark__media img {
   width: 100%;
@@ -184,7 +184,7 @@
   border-radius: var(--lm-radius-pill);
   padding: 10px 16px;
   display: inline-flex; align-items: center; gap: 8px;
-  font: 700 14px/1 var(--lm-font-sans);
+  font: 700 15.5px/1 var(--lm-font-sans);
   box-shadow: var(--lm-shadow-card);
 }
 @media (max-width: 900px) {
@@ -195,7 +195,7 @@
 .lms-logobar { padding: 40px 0; border-bottom: 1px solid var(--lm-color-border); }
 .lms-logobar__label {
   text-align: center;
-  font-size: 13px; font-weight: 700;
+  font-size: 14px; font-weight: 700;
   text-transform: uppercase; letter-spacing: .08em;
   color: var(--lm-color-muted-2);
   margin-bottom: 22px;
@@ -205,7 +205,7 @@
   filter: grayscale(1); opacity: .55;
 }
 .lms-logobar__row img { height: 28px; }
-.lms-logobar__row span { font: 800 20px/1 var(--lm-font-sans); color: var(--lm-color-muted); }
+.lms-logobar__row span { font: 800 22px/1 var(--lm-font-sans); color: var(--lm-color-muted); }
 
 /* ---------- БЕНТО-ФИЧИ (приём Postmypost) ---------- */
 .lms-bento {
@@ -224,8 +224,8 @@
 }
 .lms-bento__card:hover { transform: translateY(-2px); box-shadow: var(--lm-shadow-pop); }
 .lms-bento__card--wide { grid-column: span 2; }
-.lms-bento__card h3 { font-size: 24px; font-weight: 800; letter-spacing: -0.01em; }
-.lms-bento__card p { margin-top: 10px; font-size: 15px; max-width: 46ch; }
+.lms-bento__card h3 { font-size: 26px; font-weight: 800; letter-spacing: -0.01em; }
+.lms-bento__card p { margin-top: 10px; font-size: 17px; max-width: 46ch; }
 .lms-bento__media {
   margin-top: auto; padding-top: 20px;
 }
@@ -256,10 +256,10 @@
 .lms-split--reverse .lms-split__media { order: 1; }
 .lms-split__text .lm-eyebrow { display: inline-block; margin-bottom: 14px; }
 .lms-split__text h2 { font-size: var(--lm-fs-h2); font-weight: 800; letter-spacing: -0.02em; line-height: 1.08; }
-.lms-split__text p { margin-top: 16px; font-size: 16.5px; color: var(--lm-color-muted); max-width: 52ch; }
+.lms-split__text p { margin-top: 16px; font-size: 18px; color: var(--lm-color-muted); max-width: 52ch; }
 .lms-split__list { margin: 20px 0 0; padding: 0; list-style: none; }
 .lms-split__list li {
-  padding-left: 30px; position: relative; margin-bottom: 12px; font-size: 15.5px;
+  padding-left: 30px; position: relative; margin-bottom: 12px; font-size: 17px;
 }
 .lms-split__list li::before {
   content: "✓";
@@ -268,7 +268,7 @@
   background: var(--lm-surface-lemon);
   color: var(--lm-text-on-lemon);
   border-radius: 50%;
-  font-size: 12px; font-weight: 800;
+  font-size: 13px; font-weight: 800;
   display: flex; align-items: center; justify-content: center;
 }
 .lms-split__cta { margin-top: 26px; display: flex; gap: 12px; flex-wrap: wrap; }
@@ -297,7 +297,7 @@
   margin-left: 10px;
   background: var(--lm-color-neutral-000);
   border-radius: 8px;
-  font-size: 11.5px; color: var(--lm-color-muted-2);
+  font-size: 12.5px; color: var(--lm-color-muted-2);
   padding: 4px 12px;
 }
 .lms-browser__body img, .lms-browser__body .lms-shot { width: 100%; display: block; }
@@ -317,7 +317,7 @@
 .lms-shot {
   aspect-ratio: 16/10;
   display: flex; align-items: center; justify-content: center;
-  font: 600 13px/1.4 var(--lm-font-sans);
+  font: 600 14px/1.4 var(--lm-font-sans);
   color: var(--lm-color-muted-2);
   text-align: center;
   background:
@@ -339,14 +339,14 @@
   border-radius: 50%;
   background: var(--lm-surface-lemon);
   color: var(--lm-text-on-lemon);
-  font: 800 18px/1 var(--lm-font-sans);
+  font: 800 20px/1 var(--lm-font-sans);
   display: flex; align-items: center; justify-content: center;
   margin-bottom: 18px;
 }
 .lms-steps__item:nth-child(2) .lms-steps__num { background: var(--lm-surface-purple); color: var(--lm-text-on-purple); }
 .lms-steps__item:nth-child(3) .lms-steps__num { background: var(--lm-surface-inverse); color: var(--lm-text-inverse); }
-.lms-steps__item h3 { font-size: 20px; font-weight: 800; }
-.lms-steps__item p { margin-top: 8px; font-size: 15px; color: var(--lm-color-muted); }
+.lms-steps__item h3 { font-size: 22px; font-weight: 800; }
+.lms-steps__item p { margin-top: 8px; font-size: 17px; color: var(--lm-color-muted); }
 @media (max-width: 900px) { .lms-steps { grid-template-columns: 1fr; } }
 
 /* ---------- ПРАЙСИНГ ---------- */
@@ -361,13 +361,13 @@
   transition: transform .15s ease, box-shadow .15s ease;
 }
 .lms-price-card:hover { transform: translateY(-2px); box-shadow: var(--lm-shadow-soft); }
-.lms-price-card__plan { font-size: 15px; font-weight: 800; }
-.lms-price-card__price { margin-top: 12px; font-size: 34px; font-weight: 800; letter-spacing: -0.02em; }
-.lms-price-card__price small { font-size: 14px; font-weight: 600; color: var(--lm-color-muted-2); letter-spacing: 0; }
-.lms-price-card__per { font-size: 12.5px; color: var(--lm-color-muted-2); margin-top: 2px; }
+.lms-price-card__plan { font-size: 17px; font-weight: 800; }
+.lms-price-card__price { margin-top: 12px; font-size: 36px; font-weight: 800; letter-spacing: -0.02em; }
+.lms-price-card__price small { font-size: 15.5px; font-weight: 600; color: var(--lm-color-muted-2); letter-spacing: 0; }
+.lms-price-card__per { font-size: 13.5px; color: var(--lm-color-muted-2); margin-top: 2px; }
 .lms-price-card__list { list-style: none; margin: 18px 0 22px; padding: 0; flex: 1; }
 .lms-price-card__list li {
-  font-size: 14px; padding: 7px 0 7px 26px; position: relative;
+  font-size: 15.5px; padding: 7px 0 7px 26px; position: relative;
   border-bottom: 1px dashed var(--lm-color-border);
 }
 .lms-price-card__list li::before {
@@ -414,7 +414,7 @@
   color: var(--lm-color-lemon-500);
   position: relative;
 }
-.lms-metrics__label { margin-top: 6px; font-size: 14px; color: var(--lm-color-overlay-white-80); position: relative; }
+.lms-metrics__label { margin-top: 6px; font-size: 15.5px; color: var(--lm-color-overlay-white-80); position: relative; }
 @media (max-width: 760px) { .lms-metrics { grid-template-columns: repeat(2, 1fr); } }
 
 /* ---------- ОТЗЫВЫ ---------- */
@@ -426,21 +426,21 @@
   padding: 26px;
   display: flex; flex-direction: column; gap: 14px;
 }
-.lms-review__stars { color: var(--lm-color-lemon-500); font-size: 15px; letter-spacing: 2px; }
-.lms-review__text { font-size: 15px; line-height: 1.55; }
+.lms-review__stars { color: var(--lm-color-lemon-500); font-size: 17px; letter-spacing: 2px; }
+.lms-review__text { font-size: 17px; line-height: 1.55; }
 .lms-review__person { display: flex; align-items: center; gap: 12px; margin-top: auto; }
 .lms-review__ava {
   width: 44px; height: 44px; border-radius: 50%;
   object-fit: cover;
   display: flex; align-items: center; justify-content: center;
-  font: 800 16px/1 var(--lm-font-sans);
+  font: 800 18px/1 var(--lm-font-sans);
 }
-.lms-review__name { font-size: 14px; font-weight: 800; }
-.lms-review__role { font-size: 12.5px; color: var(--lm-color-muted-2); }
+.lms-review__name { font-size: 15.5px; font-weight: 800; }
+.lms-review__role { font-size: 13.5px; color: var(--lm-color-muted-2); }
 @media (max-width: 900px) { .lms-reviews { grid-template-columns: 1fr; } }
 
 /* ---------- FAQ (аккордеон) ---------- */
-.lms-faq { max-width: 760px; margin-inline: auto; }
+.lms-faq { max-width: 920px; margin-inline: auto; }
 .lms-faq details {
   background: var(--lm-color-neutral-000);
   border: 1px solid var(--lm-color-border);
@@ -453,7 +453,7 @@
   list-style: none;
   display: flex; align-items: center; justify-content: space-between; gap: 16px;
   padding: 18px 22px;
-  font: 700 16px/1.4 var(--lm-font-sans);
+  font: 700 18px/1.4 var(--lm-font-sans);
   transition: background .15s ease;
 }
 .lms-faq summary:hover { background: var(--lm-color-surface-2); }
@@ -465,12 +465,12 @@
   border-radius: 50%;
   background: var(--lm-surface-lemon);
   color: var(--lm-text-on-lemon);
-  font-weight: 800; font-size: 16px;
+  font-weight: 800; font-size: 18px;
   display: flex; align-items: center; justify-content: center;
   transition: transform .2s ease;
 }
 .lms-faq details[open] summary::after { transform: rotate(45deg); }
-.lms-faq__body { padding: 0 22px 20px; font-size: 15px; color: var(--lm-color-muted); max-width: 62ch; }
+.lms-faq__body { padding: 0 22px 20px; font-size: 17px; color: var(--lm-color-muted); max-width: 62ch; }
 
 /* ---------- CTA-ПОЛОСА ---------- */
 .lms-cta {
@@ -511,17 +511,17 @@
   gap: 40px;
 }
 .lms-footer__logo { height: 26px; margin-bottom: 16px; }
-.lms-footer__about { font-size: 14px; color: rgba(255,255,255,.65); max-width: 34ch; }
+.lms-footer__about { font-size: 15.5px; color: rgba(255,255,255,.65); max-width: 34ch; }
 .lms-footer__col b {
   display: block;
-  font-size: 13px; font-weight: 700;
+  font-size: 14px; font-weight: 700;
   text-transform: uppercase; letter-spacing: .07em;
   color: var(--lm-color-lemon-500);
   margin-bottom: 14px;
 }
 .lms-footer__col a {
   display: block;
-  font-size: 14.5px;
+  font-size: 16px;
   color: rgba(255,255,255,.8);
   text-decoration: none;
   padding: 5px 0;
@@ -535,7 +535,7 @@
   background: rgba(255,255,255,.1);
   color: var(--lm-text-inverse);
   display: flex; align-items: center; justify-content: center;
-  font: 700 12.5px/1 var(--lm-font-sans);
+  font: 700 13.5px/1 var(--lm-font-sans);
   text-decoration: none;
   transition: background .15s ease, transform .15s ease;
 }
@@ -545,17 +545,17 @@
   padding-top: 20px;
   border-top: 1px solid rgba(255,255,255,.12);
   display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap;
-  font-size: 12.5px; color: rgba(255,255,255,.5);
+  font-size: 13.5px; color: rgba(255,255,255,.5);
 }
 @media (max-width: 900px) { .lms-footer__grid { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 560px) { .lms-footer__grid { grid-template-columns: 1fr; } }
 
 /* ---------- ФОРМЫ ---------- */
 .lms-field { display: flex; flex-direction: column; gap: 7px; }
-.lms-field__label { font-size: 13.5px; font-weight: 700; }
-.lms-field__hint { font-size: 12.5px; color: var(--lm-color-muted-2); }
+.lms-field__label { font-size: 14.5px; font-weight: 700; }
+.lms-field__hint { font-size: 13.5px; color: var(--lm-color-muted-2); }
 .lms-input, .lms-select, .lms-textarea {
-  font: 400 15px/1.4 var(--lm-font-sans);
+  font: 400 17px/1.4 var(--lm-font-sans);
   color: var(--lm-text-primary);
   background: var(--lm-color-neutral-000);
   border: 1.5px solid var(--lm-color-border-2);
@@ -575,7 +575,7 @@
   border-color: var(--lm-color-danger);
   box-shadow: 0 0 0 3px rgba(229, 72, 77, .12);
 }
-.lms-field__error { font-size: 12.5px; color: var(--lm-color-danger); font-weight: 600; }
+.lms-field__error { font-size: 13.5px; color: var(--lm-color-danger); font-weight: 600; }
 .lms-input:disabled, .lms-select:disabled, .lms-textarea:disabled {
   background: var(--lm-color-surface);
   color: var(--lm-color-muted-2);
@@ -588,7 +588,7 @@
   background-position: right 14px center;
   padding-right: 38px;
 }
-.lms-check { display: flex; align-items: flex-start; gap: 10px; font-size: 14.5px; cursor: pointer; }
+.lms-check { display: flex; align-items: flex-start; gap: 10px; font-size: 16px; cursor: pointer; }
 .lms-check input {
   appearance: none;
   width: 20px; height: 20px; flex: 0 0 auto;
@@ -607,7 +607,7 @@
   content: "✓";
   position: absolute; inset: 0;
   display: flex; align-items: center; justify-content: center;
-  font: 800 12px/1 var(--lm-font-sans);
+  font: 800 13px/1 var(--lm-font-sans);
   color: var(--lm-text-on-lemon);
 }
 .lms-check input:focus-visible { box-shadow: 0 0 0 3px var(--lm-color-purple-050); border-color: var(--lm-color-purple-600); }
@@ -618,10 +618,10 @@
 
 /* ---------- ОБЩЕЕ ДЛЯ СЕКЦИЙ ВИТРИНЫ ---------- */
 .lms-section { padding: 72px 0 24px; }
-.lms-section__head { max-width: 680px; margin: 0 auto 40px; text-align: center; }
+.lms-section__head { max-width: 900px; margin: 0 auto 44px; text-align: center; }
 .lms-section__head .lm-eyebrow { display: inline-block; margin-bottom: 12px; }
 .lms-section__head h2 { font-size: var(--lm-fs-h2); font-weight: 800; letter-spacing: -0.02em; line-height: 1.08; }
-.lms-section__head p { margin-top: 14px; color: var(--lm-color-muted); font-size: 16.5px; }
+.lms-section__head p { margin-top: 16px; color: var(--lm-color-muted); font-size: 20px; max-width: 62ch; margin-inline: auto; }
 
 /* ============================================================
    МАСТЕРА ПО ПРОТОТИПУ ГЛАВНОЙ (lemon-media-site-prototype)
@@ -638,7 +638,7 @@
 }
 .lms-hero-split__eyebrow {
   display: inline-flex; align-items: center; gap: 8px;
-  font: 700 13px/1.3 var(--lm-font-sans);
+  font: 700 14px/1.3 var(--lm-font-sans);
   color: var(--lm-color-muted);
   background: var(--lm-color-neutral-000);
   border: 1px solid var(--lm-color-border);
@@ -653,10 +653,10 @@
   font-weight: 800; line-height: 1.04; letter-spacing: -0.025em;
 }
 .lms-hero-split h1 .lm-mark-purple { color: var(--lm-color-purple-600); }
-.lms-hero-split__lead { margin-top: 18px; font-size: 17px; color: var(--lm-color-muted); max-width: 54ch; }
+.lms-hero-split__lead { margin-top: 18px; font-size: 19px; color: var(--lm-color-muted); max-width: 54ch; }
 .lms-hero-split .lms-split__list { margin-top: 20px; }
 .lms-hero-split__actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 26px; }
-.lms-hero-split__note { margin-top: 14px; font-size: 13px; color: var(--lm-color-muted-2); }
+.lms-hero-split__note { margin-top: 14px; font-size: 14px; color: var(--lm-color-muted-2); }
 
 /* Коллаж реальных работ 2×2 с лёгким разворотом */
 .lms-collage {
@@ -687,10 +687,10 @@
 .lms-platforms__row {
   display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap;
 }
-.lms-platforms__row strong { font-size: 15px; }
+.lms-platforms__row strong { font-size: 17px; }
 .lms-platforms__list { display: flex; gap: 8px; flex-wrap: wrap; }
 .lms-platforms__list span {
-  font: 700 13px/1 var(--lm-font-sans);
+  font: 700 14px/1 var(--lm-font-sans);
   background: var(--lm-color-neutral-000);
   border: 1px solid var(--lm-color-border-2);
   border-radius: var(--lm-radius-pill);
@@ -706,8 +706,8 @@
   border-radius: var(--lm-radius-lg);
   box-shadow: var(--lm-shadow-soft);
 }
-.lms-proofbar__item strong { display: block; font-size: 30px; font-weight: 800; letter-spacing: -0.02em; }
-.lms-proofbar__item span { font-size: 13.5px; color: var(--lm-color-muted); }
+.lms-proofbar__item strong { display: block; font-size: 32px; font-weight: 800; letter-spacing: -0.02em; }
+.lms-proofbar__item span { font-size: 14.5px; color: var(--lm-color-muted); }
 @media (max-width: 760px) { .lms-proofbar { grid-template-columns: repeat(2, 1fr); } }
 
 /* ---------- ВИТРИНА КЕЙСА (featured) ---------- */
@@ -720,10 +720,10 @@
 }
 .lms-case-feature__copy .lm-badge { margin-bottom: 16px; }
 .lms-case-feature__copy h3 { font-size: clamp(22px, 2.4vw, 30px); font-weight: 800; letter-spacing: -0.015em; line-height: 1.12; }
-.lms-case-feature__copy p { margin-top: 12px; font-size: 15.5px; }
+.lms-case-feature__copy p { margin-top: 12px; font-size: 17px; }
 .lms-case-feature__stats { display: flex; gap: 18px; flex-wrap: wrap; margin-top: 18px; }
-.lms-case-feature__stats span { font-size: 13.5px; }
-.lms-case-feature__stats strong { font-size: 20px; font-weight: 800; margin-right: 4px; }
+.lms-case-feature__stats span { font-size: 14.5px; }
+.lms-case-feature__stats strong { font-size: 22px; font-weight: 800; margin-right: 4px; }
 .lms-case-feature__actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 22px; }
 .lms-case-feature__feed { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
 .lms-case-feature__feed img {
@@ -751,11 +751,11 @@
 .lms-case-card img { width: 100%; aspect-ratio: 1/1; object-fit: cover; display: block; }
 .lms-case-card__meta { padding: 14px 16px 16px; }
 .lms-case-card__meta small {
-  font-size: 11.5px; font-weight: 700; text-transform: uppercase; letter-spacing: .06em;
+  font-size: 12.5px; font-weight: 700; text-transform: uppercase; letter-spacing: .06em;
   color: var(--lm-color-purple-600);
 }
-.lms-case-card__meta strong { display: block; font-size: 16px; font-weight: 800; margin-top: 4px; }
-.lms-case-card__meta b { display: block; font-size: 12.5px; font-weight: 600; color: var(--lm-color-muted-2); margin-top: 6px; }
+.lms-case-card__meta strong { display: block; font-size: 18px; font-weight: 800; margin-top: 4px; }
+.lms-case-card__meta b { display: block; font-size: 13.5px; font-weight: 600; color: var(--lm-color-muted-2); margin-top: 6px; }
 @media (max-width: 1000px) { .lms-case-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 560px) { .lms-case-grid { grid-template-columns: 1fr; } }
 
@@ -768,9 +768,9 @@
   padding: 26px 32px;
 }
 .lms-equation__part { text-align: center; }
-.lms-equation__part strong { display: block; font-size: 34px; font-weight: 800; letter-spacing: -0.02em; }
-.lms-equation__part span { font-size: 13px; color: var(--lm-color-muted); }
-.lms-equation__op { font-size: 26px; font-weight: 800; color: var(--lm-color-lemon-600); }
+.lms-equation__part strong { display: block; font-size: 36px; font-weight: 800; letter-spacing: -0.02em; }
+.lms-equation__part span { font-size: 14px; color: var(--lm-color-muted); }
+.lms-equation__op { font-size: 28px; font-weight: 800; color: var(--lm-color-lemon-600); }
 .lms-equation__part--result strong { color: var(--lm-color-purple-600); }
 
 /* ---------- ПОЛОСА «ВМЕСТО → СТАЛО» ---------- */
@@ -783,8 +783,8 @@
   border-radius: var(--lm-radius-md);
   padding: 20px 22px;
 }
-.lms-band__item span { display: block; font-size: 12.5px; color: rgba(255,255,255,.55); text-decoration: line-through; }
-.lms-band__item strong { display: block; font-size: 16.5px; font-weight: 800; margin-top: 6px; color: var(--lm-color-lemon-500); }
+.lms-band__item span { display: block; font-size: 13.5px; color: rgba(255,255,255,.55); text-decoration: line-through; }
+.lms-band__item strong { display: block; font-size: 18px; font-weight: 800; margin-top: 6px; color: var(--lm-color-lemon-500); }
 @media (max-width: 760px) { .lms-band { grid-template-columns: 1fr; } }
 
 /* ---------- ТАБЫ (гид форматов / walkthrough) ---------- */
@@ -806,12 +806,12 @@
   flex: 0 0 auto;
   width: 34px; height: 34px; border-radius: 50%;
   background: var(--lm-color-surface);
-  font: 800 14px/1 var(--lm-font-sans);
+  font: 800 15.5px/1 var(--lm-font-sans);
   display: flex; align-items: center; justify-content: center;
   color: var(--lm-color-muted);
 }
-.lms-tabs__btn strong { display: block; font-size: 15.5px; font-weight: 800; }
-.lms-tabs__btn small { display: block; font-size: 12.5px; color: var(--lm-color-muted-2); margin-top: 2px; }
+.lms-tabs__btn strong { display: block; font-size: 17px; font-weight: 800; }
+.lms-tabs__btn small { display: block; font-size: 13.5px; color: var(--lm-color-muted-2); margin-top: 2px; }
 .lms-tabs__btn.is-active {
   border-color: var(--lm-color-purple-600);
   background: var(--lm-color-purple-050);
@@ -820,16 +820,16 @@
 .lms-tabs__panel { display: none; }
 .lms-tabs__panel.is-active { display: block; }
 .lms-tabs__panel figure { margin: 0; }
-.lms-tabs__panel figcaption { margin-top: 10px; font-size: 13px; color: var(--lm-color-muted-2); }
+.lms-tabs__panel figcaption { margin-top: 10px; font-size: 14px; color: var(--lm-color-muted-2); }
 @media (max-width: 900px) { .lms-tabs { grid-template-columns: 1fr; } .lms-tabs__nav { flex-direction: row; overflow-x: auto; } .lms-tabs__btn { min-width: 220px; } }
 
 /* ---------- СРАВНИТЕЛЬНАЯ ТАБЛИЦА ---------- */
 .lms-compare-wrap { overflow-x: auto; border-radius: var(--lm-radius-lg); border: 1px solid var(--lm-color-border); }
-.lms-compare { width: 100%; border-collapse: collapse; background: var(--lm-color-neutral-000); font-size: 14.5px; min-width: 720px; }
+.lms-compare { width: 100%; border-collapse: collapse; background: var(--lm-color-neutral-000); font-size: 16px; min-width: 720px; }
 .lms-compare th {
   background: var(--lm-color-neutral-100);
   text-align: left; padding: 14px 18px;
-  font-size: 12.5px; text-transform: uppercase; letter-spacing: .05em;
+  font-size: 13.5px; text-transform: uppercase; letter-spacing: .05em;
 }
 .lms-compare td { padding: 14px 18px; border-top: 1px solid var(--lm-color-border); vertical-align: top; }
 .lms-compare td:first-child { font-weight: 800; white-space: nowrap; }
@@ -858,7 +858,7 @@
   letter-spacing: -0.02em;
   box-shadow: var(--lm-glow-lemon);
 }
-.lms-guarantee__mark small { font-size: 15px; font-weight: 700; margin-top: 4px; }
+.lms-guarantee__mark small { font-size: 17px; font-weight: 700; margin-top: 4px; }
 .lms-guarantee__body h2 { font-size: clamp(24px, 3vw, 38px); font-weight: 800; letter-spacing: -0.02em; line-height: 1.1; }
 .lms-guarantee__body .lms-split__list { margin-top: 16px; }
 @media (max-width: 760px) {
@@ -873,12 +873,12 @@
 .lms-lightbox__bar {
   display: flex; align-items: center; justify-content: space-between; gap: 16px;
   padding: 12px 18px;
-  font: 700 14px/1.3 var(--lm-font-sans);
+  font: 700 15.5px/1.3 var(--lm-font-sans);
   border-bottom: 1px solid var(--lm-color-border);
 }
 .lms-lightbox__bar button {
   border: 0; background: var(--lm-color-surface); border-radius: var(--lm-radius-pill);
-  font: 700 13px/1 var(--lm-font-sans); padding: 8px 14px; cursor: pointer;
+  font: 700 14px/1 var(--lm-font-sans); padding: 8px 14px; cursor: pointer;
 }
 .lms-lightbox img { display: block; max-width: 100%; }
 .lms-zoomable { cursor: zoom-in; }
@@ -888,7 +888,7 @@
   display: inline-flex; align-items: center; justify-content: center;
   width: 34px; height: 34px; border-radius: 50%;
   background: var(--lm-color-surface);
-  font: 800 14px/1 var(--lm-font-sans);
+  font: 800 15.5px/1 var(--lm-font-sans);
   color: var(--lm-color-muted);
   margin-bottom: 14px;
 }
