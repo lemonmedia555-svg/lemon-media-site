@@ -369,20 +369,35 @@ document.addEventListener('DOMContentLoaded', () => {
     const buttons = Array.from(walkthrough.querySelectorAll('[data-walkthrough-chapter]'));
     const panels = Array.from(walkthrough.querySelectorAll('[data-walkthrough-panel]'));
 
-    const activate = (key) => {
+    const activate = (key, focus = false) => {
       buttons.forEach((button) => {
         const active = button.getAttribute('data-walkthrough-chapter') === key;
         button.classList.toggle('active', active);
         button.setAttribute('aria-selected', String(active));
+        button.tabIndex = active ? 0 : -1;
+        if (active && focus) button.focus();
       });
       panels.forEach((panel) => {
         panel.hidden = panel.getAttribute('data-walkthrough-panel') !== key;
       });
     };
 
-    buttons.forEach((button) => {
+    buttons.forEach((button, index) => {
       button.addEventListener('click', () => activate(button.getAttribute('data-walkthrough-chapter') || 'brief'));
+      button.addEventListener('keydown', (event) => {
+        if (!['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(event.key)) return;
+        event.preventDefault();
+        let nextIndex = index;
+        if (event.key === 'Home') nextIndex = 0;
+        else if (event.key === 'End') nextIndex = buttons.length - 1;
+        else nextIndex = index + (['ArrowDown', 'ArrowRight'].includes(event.key) ? 1 : -1);
+        nextIndex = (nextIndex + buttons.length) % buttons.length;
+        activate(buttons[nextIndex].getAttribute('data-walkthrough-chapter') || 'brief', true);
+      });
     });
+
+    const initial = buttons.find((button) => button.classList.contains('active')) || buttons[0];
+    if (initial) activate(initial.getAttribute('data-walkthrough-chapter') || 'brief');
   });
 
   document.querySelectorAll('[data-case-tabs]').forEach((tabs) => {
