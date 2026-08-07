@@ -80,10 +80,11 @@
     </div>
   </div>
 
+  <span class="hf-pin hf-pin--top">🔥 <span>Выходит каждый месяц</span></span>
+  <span class="hf-pin hf-pin--bottom"><span class="num">10 000+</span> <span>проектов сделано</span></span>
+
   <div class="hf-stage">
-    <span class="hf-pin hf-pin--top">🔥 <span>Выходит каждый месяц</span></span>
     <div class="hf-cols" id="feed"></div>
-    <span class="hf-pin hf-pin--bottom"><span class="num">10 000+</span> <span>проектов сделано</span></span>
   </div>
 </section>
 
@@ -740,7 +741,7 @@ addEventListener('resize', () => { clearTimeout(feedTimer); feedTimer = setTimeo
   (() => {
     const root = document.querySelector('[data-calc]');
     if (!root) return;
-    const state = { posts: 10, base: 4990, cars: 0, story: 0, sprice: 0 };
+    const state = { posts: 10, base: 4990, cars: 0, story: 0, sprice: 0, carSet: new Set() };
     const $ = s => root.querySelector(s);
     const fmtr = n => n.toLocaleString('ru-RU');
     const cubes = $('[data-cubes]');
@@ -755,16 +756,19 @@ addEventListener('resize', () => { clearTimeout(feedTimer); feedTimer = setTimeo
       for (let i = 0; i < 30; i++) {
         const b = document.createElement('button');
         b.type = 'button';
-        const isCarousel = i < state.cars;
-        b.className = 'dz-cube' + (i >= state.posts ? ' is-off' : (isCarousel ? ' is-carousel' : ''));
-        b.textContent = i < state.posts ? ROLES[i] : '';
-        b.setAttribute('aria-label', i < state.posts
-          ? 'Пост ' + (i + 1) + ' · ' + ROLES[i] + (isCarousel ? ' · карусель' : ' · сделать каруселью')
-          : 'Не входит в пакет');
+        const inPack = i < state.posts;
+        const isCarousel = state.carSet.has(i);
+        b.className = 'dz-cube' + (!inPack ? ' is-off' : (isCarousel ? ' is-carousel' : ''));
+        b.textContent = inPack ? ROLES[i] : '';
+        b.disabled = !inPack;
+        b.setAttribute('aria-label', inPack
+          ? 'Пост ' + (i + 1) + ' · ' + ROLES[i] + (isCarousel ? ' · карусель, нажмите чтобы убрать' : ' · сделать каруселью')
+          : 'Не входит в выбранный объём');
         b.setAttribute('aria-pressed', String(isCarousel));
-        // клик переключает ровно один пост, как и написано в подписи
-        if (i < state.posts) b.addEventListener('click', () => {
-          state.cars = isCarousel ? state.cars - 1 : state.cars + 1;
+        // нажали на конкретный пост — именно он и становится каруселью
+        if (inPack) b.addEventListener('click', () => {
+          if (state.carSet.has(i)) state.carSet.delete(i); else state.carSet.add(i);
+          state.cars = state.carSet.size;
           render();
         });
         cubes.appendChild(b);
@@ -785,10 +789,11 @@ addEventListener('resize', () => { clearTimeout(feedTimer); feedTimer = setTimeo
     root.querySelectorAll('[data-plan]').forEach(btn => btn.addEventListener('click', () => {
       root.querySelectorAll('[data-plan]').forEach(b => b.classList.toggle('is-active', b === btn));
       state.posts = +btn.dataset.plan; state.base = +btn.dataset.price;
-      state.cars = Math.min(state.cars, state.posts); render();
+      [...state.carSet].filter(i => i >= state.posts).forEach(i => state.carSet.delete(i));
+      state.cars = state.carSet.size; render();
     }));
-    $('[data-car-inc]').addEventListener('click', () => { if (state.cars < state.posts) { state.cars++; render(); } });
-    $('[data-car-dec]').addEventListener('click', () => { if (state.cars > 0) { state.cars--; render(); } });
+    $('[data-car-inc]').addEventListener('click', () => { for (let i = 0; i < state.posts; i++) { if (!state.carSet.has(i)) { state.carSet.add(i); break; } } state.cars = state.carSet.size; render(); });
+    $('[data-car-dec]').addEventListener('click', () => { const last = [...state.carSet].pop(); if (last !== undefined) state.carSet.delete(last); state.cars = state.carSet.size; render(); });
     root.querySelectorAll('[data-story]').forEach(btn => btn.addEventListener('click', () => {
       root.querySelectorAll('[data-story]').forEach(b => b.classList.toggle('is-active', b === btn));
       state.story = +btn.dataset.story; state.sprice = +btn.dataset.sprice; render();

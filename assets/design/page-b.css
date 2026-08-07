@@ -485,3 +485,116 @@ body.b .hf-stage .w__nav { transition: opacity .15s ease; }
   body.b .lms-section__head h2 { font-size: 28px; }
   body.b #formats .lms-tabs__panel { min-height: auto; }
 }
+
+/* ============================================================
+   ИТЕРАЦИЯ 3 — по отчёту приёмки
+   ============================================================ */
+
+/* --- кубики: не распирают строку на мобильной (был скролл 191px) --- */
+body.b .dz-cube {
+  min-width: 0; min-height: 0;
+  padding: 12px 4px;              /* тап-цель добираем паддингом, а не жёсткой шириной */
+  font-size: 10.5px;
+}
+/* «не входит в объём» должно отличаться от «свободного поста» */
+body.b .dz-cube.is-off {
+  background: repeating-linear-gradient(135deg, #F2F2F4 0 6px, #FBFBFC 6px 12px);
+  border-style: dashed; border-color: var(--lm-color-border-2);
+  color: transparent; opacity: .55;
+}
+body.b .dz-cube:not(.is-off):hover { border-color: var(--lm-color-lemon-500); }
+@media (max-width: 760px) {
+  body.b .dz-cubes { grid-template-columns: repeat(auto-fill, minmax(52px, 1fr)) !important; }
+}
+
+/* --- плашки hero: теперь вне .hf-stage, но фон должен быть плотным --- */
+body.b .hf-pin {
+  background: rgba(16, 12, 28, .88);
+  border-color: var(--b-border-2);
+}
+
+/* --- ссылки на тёмном: фиолетовый на чёрном давал 2,88:1 --- */
+body.b .dz-proof .dz-links a { color: var(--lm-color-lemon-500); }
+body.b .dz-proof .dz-links a:hover { color: var(--lm-color-lemon-300); }
+
+/* --- шапки секций: лид был смещён на 24px вправо от H2, --- */
+/* --- а сами шапки на 22px правее контента страницы     --- */
+body.b .lms-section__head { padding-left: 0; }
+body.b .lms-section__head::before { left: -22px; }
+body.b .lms-section__head > * { margin-left: 0; margin-right: 0; }
+body.b .lms-section__head p { margin-left: 0 !important; margin-right: 0 !important; }
+body.b #formats .lms-section__head > *,
+body.b #prices .lms-section__head > * { margin-left: auto; margin-right: auto; }
+
+/* --- контрасты, поднятые в отчёте --- */
+body.b .lm-eyebrow { color: var(--lm-color-muted); }         /* было muted-2: 2,91:1 */
+body.b #formats figcaption { color: var(--lm-color-muted); } /* было 3,42:1 */
+body.b #fit .lm-card__num { color: var(--lm-color-purple-300); }  /* было 1,25:1 — номера не было видно */
+
+/* --- фокус с клавиатуры: кольцо 1,09:1 не считается фокусом --- */
+body.b :is(a, button, summary, input, [tabindex]):focus-visible {
+  outline: 3px solid var(--lm-color-purple-600);
+  outline-offset: 2px; border-radius: var(--lm-radius-sm);
+}
+body.b .hf-copy :focus-visible,
+body.b #workspace :focus-visible,
+body.b .hf-stage :focus-visible { outline-color: var(--lm-color-lemon-500); }
+
+/* --- ритм светлого: было два почти одинаковых серых (разница 2/255) --- */
+body.b #works    { background: var(--lm-color-neutral-000); }
+body.b #fit      { background: var(--lm-color-cool-050); }
+body.b #included { background: var(--lm-color-neutral-000); }
+body.b #formats  { background: var(--lm-color-cool-050); }
+body.b #prices   { background: var(--lm-color-neutral-000); }
+body.b #why      { background: var(--lm-color-cool-050); }
+body.b #comparison { background: var(--lm-color-neutral-000); }
+body.b #guarantee  { background: var(--lm-color-cool-050); }
+body.b #reviews  { background: var(--lm-color-neutral-000); }
+body.b #faq      { background: var(--lm-color-cool-050); }
+
+/* --- стыки: та же лимонная линия на всех переходах в тёмное --- */
+body.b #prices { position: relative; }
+body.b #prices::after,
+body.b #workspace::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 4px;
+  background: linear-gradient(90deg, transparent, var(--lm-color-lemon-500) 22%,
+    var(--lm-color-lemon-500) 78%, transparent);
+}
+body.b #workspace { position: relative; }
+
+/* --- полосы пустоты между однотонными секциями --- */
+body.b #guarantee { padding-bottom: 96px; }
+body.b #reviews { padding-top: 96px; }
+body.b #faq { padding-bottom: 0; }
+body.b .lms-cta, body.b #cta { margin-bottom: 0; }
+body.b footer, body.b .lms-footer { margin-top: 0; }
+
+/* --- отзывы: аватары были трёх разных цветов инлайном --- */
+body.b .lms-review__ava {
+  background: var(--lm-surface-inverse) !important;
+  color: var(--lm-color-lemon-500);
+}
+body.b .lms-review { display: flex; flex-direction: column; }
+body.b .lms-review__person { margin-top: auto; padding-top: 16px; border-top: 1px solid var(--lm-color-border); }
+
+/* --- бейдж «чаще всего берут» упирался в подпись шага --- */
+body.b .dz-plans { margin-top: 18px; }
+body.b .dz-plan[data-plan="15"]::after { top: -13px; }
+
+/* --- радиусы: сводим оставшиеся 14/18/28/32/36 к канону --- */
+body.b .dz-calc__place { border-radius: var(--lm-radius-sm); }
+body.b .dz-social__icon, body.b .dz-plan { border-radius: var(--lm-radius-md); }
+body.b .dz-calc__total, body.b .lms-case-feature,
+body.b .lms-guarantee, body.b .dz-inside { border-radius: var(--lm-radius-lg); }
+
+/* --- движение: плашки качались даже при reduced-motion --- */
+@media (prefers-reduced-motion: reduce) {
+  body.b .hf-pin { animation: none; }
+}
+
+/* --- FAQ был сбит с оси на 162px --- */
+body.b #faq .lms-faq, body.b #faq details { margin-left: 0; margin-right: 0; max-width: 100%; }
+
+/* --- форматы: колонка табов не должна оставлять 300px пустоты --- */
+body.b #formats .lms-tabs { grid-template-columns: .8fr 1.2fr; }
+body.b #formats .lms-tabs__nav { position: sticky; top: 100px; }
