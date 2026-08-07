@@ -1,0 +1,214 @@
+/* ============================================================
+   ВАРИАНТ B — слой поверх page.css / hero-final.css
+   Подключается последним, только для index-design-b.html (body.b).
+   Что меняем:
+   1. Первый экран — тёмный, витрина работ во всю ширину экрана,
+      текст лежит поверх стеклянной карточкой слева.
+      Работы на тёмном светятся и читаются как главный герой.
+   2. Композиция текста плотнее: заголовок в две строки, лид короче
+      по ширине, преимущества — компактной сеткой без плашек.
+   3. Тёмный тянется через площадки и цифры, потом резкий выход
+      в свет — приём Битрикс24 «тяжёлый верх → светлое мясо».
+   4. Заголовки секций в два кегля (вторая строка приглушена).
+   Тексты не меняются нигде — только оформление.
+   ============================================================ */
+
+/* ============ 1. ТЁМНЫЙ ПЕРВЫЙ ЭКРАН ============ */
+
+body.b .hf-hero {
+  grid-template-columns: minmax(0, 1fr);
+  background: var(--lm-grad-space);
+  min-height: clamp(720px, 100vh, 1020px);
+  align-items: center;
+}
+body.b .hf-hero__bg-l,
+body.b .hf-hero__bg-r { display: none; }
+
+/* витрина — фоном на весь экран */
+body.b .hf-stage {
+  position: absolute; inset: 0; z-index: 1;
+  padding-left: 0;
+}
+body.b .hf-cols {
+  height: 100%;
+  gap: 14px;
+  padding: 0 14px;
+  -webkit-mask-image: linear-gradient(180deg, transparent, #000 9%, #000 91%, transparent);
+  mask-image: linear-gradient(180deg, transparent, #000 9%, #000 91%, transparent);
+}
+body.b .hf-track { gap: 14px; }
+/* работы на тёмном: мягкое свечение вместо тени, чуть приглушены под текстом */
+body.b .hf-stage .w {
+  box-shadow: 0 22px 50px -18px rgba(0, 0, 0, .75);
+  border-radius: 18px;
+}
+body.b .hf-stage .w:hover { box-shadow: 0 26px 60px -16px rgba(238, 203, 3, .28); }
+/* затемнение слева, чтобы текст читался, а работы не пропадали */
+body.b .hf-hero::before {
+  content: ""; position: absolute; inset: 0; z-index: 2; pointer-events: none;
+  background:
+    linear-gradient(96deg, #0B0912 0%, #0B0912 34%, rgba(11, 9, 18, .96) 42%, rgba(11, 9, 18, .62) 52%, rgba(11, 9, 18, .18) 64%, transparent 76%),
+    radial-gradient(70% 60% at 10% 42%, rgba(125, 0, 234, .30), transparent 70%);
+}
+
+/* лента растворяется в тёмном к низу — иначе на стыке с площадками обрыв */
+body.b .hf-hero::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 190px;
+  z-index: 2; pointer-events: none;
+  background: linear-gradient(0deg, #0B0912 0%, rgba(11, 9, 18, .75) 45%, transparent 100%);
+}
+
+/* текст поверх */
+body.b .hf-copy {
+  position: relative; z-index: 3;
+  padding: 132px 24px 74px max(24px, calc((100vw - var(--lm-container)) / 2 + 24px));
+  pointer-events: none;
+}
+body.b .hf-copy__inner { max-width: 640px; pointer-events: auto; }
+
+body.b .hf-rating { color: #B9BAC6; font-size: 15px; }
+body.b .hf-rating b { color: #fff; }
+
+body.b .hf-kicker {
+  margin-top: 20px;
+  color: var(--lm-color-lemon-500);
+  letter-spacing: .12em;
+}
+body.b .hf-h1 {
+  margin-top: 14px;
+  font-size: clamp(34px, 4.4vw, 62px);
+  line-height: 1.02;
+  letter-spacing: -.035em;
+  color: #fff;
+  max-width: 15ch;
+}
+/* цена — главный акцент экрана, лимон вместо фиолетового */
+body.b .hf-h1 em {
+  color: var(--lm-color-lemon-500);
+  display: block;
+}
+body.b .hf-lead {
+  margin-top: 20px;
+  font-size: 18px; line-height: 1.6;
+  color: #C3C4D0;
+  max-width: 52ch;
+}
+/* преимущества: две колонки без плашек — плотнее и не спорят с работами */
+body.b .hf-list {
+  margin-top: 26px;
+  gap: 12px 26px;
+}
+body.b .hf-list li {
+  background: none; border: 0; padding: 0;
+  font-size: 15.5px; line-height: 1.4;
+  color: #D5D6E0;
+}
+body.b .hf-tick {
+  width: 20px; height: 20px; border-radius: 7px;
+  background: rgba(238, 203, 3, .16);
+  color: var(--lm-color-lemon-500);
+  font-size: 11px;
+}
+body.b .hf-actions { margin-top: 32px; }
+body.b .hf-actions .lm-btn--primary { box-shadow: 0 14px 36px -10px rgba(238, 203, 3, .55); }
+body.b .hf-actions .lm-btn--ghost {
+  background: rgba(255, 255, 255, .07);
+  border-color: rgba(255, 255, 255, .26);
+  color: #fff;
+  backdrop-filter: blur(8px);
+}
+body.b .hf-note { color: #9A9BAA; margin-top: 20px; }
+body.b .hf-note b { color: #fff; }
+
+/* плашки-подсказки: тёмное стекло вместо белых пилюль */
+body.b .hf-pin {
+  background: rgba(255, 255, 255, .1);
+  border: 1px solid rgba(255, 255, 255, .16);
+  backdrop-filter: blur(10px);
+  color: #fff;
+  box-shadow: 0 16px 40px -16px rgba(0, 0, 0, .8);
+}
+body.b .hf-pin .num { color: var(--lm-color-lemon-500); }
+body.b .hf-pin--top { top: 118px; right: 34px; left: auto; }
+body.b .hf-pin--bottom { bottom: 42px; right: 40px; }
+
+/* подпись-подсказка, что работы живые */
+body.b .b-hint {
+  position: absolute; z-index: 6;
+  left: max(24px, calc((100vw - var(--lm-container)) / 2 + 24px));
+  bottom: clamp(34px, 9vh, 96px);
+  display: inline-flex; align-items: center; gap: 10px;
+  font: 700 13.5px/1 var(--lm-font-sans);
+  color: #E6E7EF;
+  background: rgba(28, 24, 44, .92);
+  border: 1px solid rgba(255, 255, 255, .18);
+  border-radius: 100px; padding: 11px 20px;
+  backdrop-filter: blur(14px);
+  box-shadow: 0 18px 44px -18px rgba(0, 0, 0, .9);
+}
+body.b .b-hint i {
+  font-style: normal; font-size: 16px;
+  color: var(--lm-color-neutral-1000);
+  background: var(--lm-color-lemon-500);
+  width: 20px; height: 20px; border-radius: 50%;
+  display: inline-flex; align-items: center; justify-content: center;
+}
+
+/* ============ 2. ТЁМНЫЙ ХВОСТ: ПЛОЩАДКИ + ЦИФРЫ ============ */
+
+body.b .dz-platforms {
+  background: #0B0912;
+  padding-top: 0;
+}
+body.b .dz-platforms__card {
+  background: rgba(255, 255, 255, .05);
+  border: 1px solid rgba(255, 255, 255, .12);
+  box-shadow: none;
+}
+body.b .dz-platforms__text strong { color: #fff; }
+body.b .dz-platforms__text span { color: #9A9BAA; }
+body.b .dz-social { color: #D5D6E0; }
+
+body.b .dz-proof {
+  background: linear-gradient(180deg, #0B0912 0%, #0B0912 58%, var(--lm-color-cool-050) 58%);
+}
+body.b .lms-proofbar {
+  background: rgba(255, 255, 255, .05);
+  border: 1px solid rgba(255, 255, 255, .12);
+  backdrop-filter: blur(8px);
+}
+body.b .lms-proofbar__item strong { color: var(--lm-color-lemon-500); font-size: clamp(30px, 3vw, 42px); }
+body.b .lms-proofbar__item span { color: #A8A9B6; }
+body.b .lms-proofbar__item + .lms-proofbar__item { border-left-color: rgba(255, 255, 255, .12); }
+
+/* ============ 3. ЗАГОЛОВКИ СЕКЦИЙ В ДВА КЕГЛЯ ============ */
+
+body.b .dz-section h2 .quiet,
+body.b .lms-sechead h2 .quiet { color: var(--lm-color-muted-2); display: block; }
+
+/* ============ 4. ГАРАНТИЯ — БАННЕР ВО ВСЮ ШИРИНУ ============ */
+
+body.b .dz-guarantee,
+body.b #guarantee .lms-guarantee {
+  background: var(--lm-grad-lemon);
+  color: var(--lm-text-on-lemon);
+  border: 0;
+}
+body.b #guarantee .lms-guarantee h2,
+body.b #guarantee .lms-guarantee strong { color: var(--lm-text-on-lemon); }
+body.b #guarantee .lms-guarantee p,
+body.b #guarantee .lms-guarantee li { color: #3A3200; }
+
+/* ============ 5. МОБИЛЬНАЯ ============ */
+
+@media (max-width: 1000px) {
+  body.b .hf-hero { min-height: auto; }
+  body.b .hf-hero::before {
+    background:
+      linear-gradient(180deg, #0B0912 0%, rgba(11, 9, 18, .9) 52%, rgba(11, 9, 18, .55) 100%);
+  }
+  body.b .hf-copy { padding: 118px 20px 42px; }
+  body.b .hf-stage { position: relative; height: 460px; inset: auto; }
+  body.b .hf-list { grid-template-columns: 1fr; }
+  body.b .b-hint { display: none; }
+}
