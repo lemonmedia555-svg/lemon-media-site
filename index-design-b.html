@@ -20,7 +20,7 @@
 <!-- ХЕДЕР -->
 <header class="lms-header">
   <div class="lms-header__bar">
-    <a href="index-design.html" aria-label="lemonmedia — главная"><img class="lms-header__logo" src="assets/design/logo-white.svg" alt="lemonmedia"></a>
+    <a href="index-design.html" aria-label="lemonmedia — главная"><img class="lms-header__logo" src="assets/design/logo-dark.svg" alt="lemonmedia"></a>
     <nav class="lms-header__nav" aria-label="Основная навигация">
       <a href="examples.html">Работы</a>
       <a href="process.html">Как работаем</a>
@@ -75,6 +75,8 @@
         <span><i>🛡</i><b>14 дней</b> на проверку первой партии</span>
         <span><i>⏱</i>2 дня на план и тексты · 2 дня на визуал</span>
       </p>
+
+      <span class="b-hint"><i>›</i> Карусели и сторис листаются прямо здесь — наведите на любую работу</span>
     </div>
   </div>
 
@@ -82,7 +84,6 @@
     <span class="hf-pin hf-pin--top">🔥 <span>Выходит каждый месяц</span></span>
     <div class="hf-cols" id="feed"></div>
     <span class="hf-pin hf-pin--bottom"><span class="num">10 000+</span> <span>проектов сделано</span></span>
-    <span class="b-hint"><i>›</i> Карусели и сторис листаются прямо здесь — наведите на любую работу</span>
   </div>
 </section>
 
@@ -646,7 +647,7 @@ function makeCard(it) {
 const feed = document.getElementById('feed');
 const SPEEDS = ['74s', '92s', '80s', '104s', '86s'];
 // Чем шире экран, тем больше колонок — карточка мельче, работ видно больше
-const colCount = () => innerWidth <= 1000 ? 3 : (innerWidth >= 1800 ? 7 : (innerWidth >= 1400 ? 6 : 5));
+const colCount = () => innerWidth <= 1000 ? 3 : (innerWidth >= 1500 ? 5 : 4);
 let builtWith = 0;
 
 function buildFeed() {

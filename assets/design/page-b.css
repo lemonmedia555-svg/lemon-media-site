@@ -40,7 +40,7 @@ body.b .hf-track { gap: 14px; }
 /* работы на тёмном: мягкое свечение вместо тени, чуть приглушены под текстом */
 body.b .hf-stage .w {
   box-shadow: 0 22px 50px -18px rgba(0, 0, 0, .75);
-  border-radius: 18px;
+  border-radius: var(--lm-radius-md);
 }
 body.b .hf-stage .w:hover { box-shadow: 0 26px 60px -16px rgba(238, 203, 3, .28); }
 /* затемнение слева, чтобы текст читался, а работы не пропадали */
@@ -104,7 +104,7 @@ body.b .hf-list li {
   color: #D5D6E0;
 }
 body.b .hf-tick {
-  width: 20px; height: 20px; border-radius: 7px;
+  width: 20px; height: 20px; border-radius: var(--lm-radius-sm);
   background: rgba(238, 203, 3, .16);
   color: var(--lm-color-lemon-500);
   font-size: 11px;
@@ -129,14 +129,16 @@ body.b .hf-pin {
   box-shadow: 0 16px 40px -16px rgba(0, 0, 0, .8);
 }
 body.b .hf-pin .num { color: var(--lm-color-lemon-500); }
-body.b .hf-pin--top { top: 118px; right: 34px; left: auto; }
-body.b .hf-pin--bottom { bottom: 42px; right: 40px; }
+/* обе плашки — выше слоя затемнения, иначе тонут в тумане */
+body.b .hf-pin { z-index: 6; }
+body.b .hf-pin--top { top: 122px; right: 30px; left: auto; }
+/* нижняя поднята над полосой затемнения (190px) */
+body.b .hf-pin--bottom { bottom: 214px; right: 30px; }
 
 /* подпись-подсказка, что работы живые */
 body.b .b-hint {
-  position: absolute; z-index: 6;
-  left: max(24px, calc((100vw - var(--lm-container)) / 2 + 24px));
-  bottom: clamp(34px, 9vh, 96px);
+  position: relative; z-index: 7;
+  margin-top: 20px;
   display: inline-flex; align-items: center; gap: 10px;
   font: 700 13.5px/1 var(--lm-font-sans);
   color: #E6E7EF;
@@ -169,8 +171,16 @@ body.b .dz-platforms__text strong { color: #fff; }
 body.b .dz-platforms__text span { color: #9A9BAA; }
 body.b .dz-social { color: #D5D6E0; }
 
+/* Тёмное кончается ПО ГРАНИЦЕ секции, а не ножом поперёк карточки.
+   Переход держит лимонная линия-разделитель. */
 body.b .dz-proof {
-  background: linear-gradient(180deg, #0B0912 0%, #0B0912 58%, var(--lm-color-cool-050) 58%);
+  background: #0B0912;
+  padding-bottom: 64px;
+  position: relative;
+}
+body.b .dz-proof::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 4px;
+  background: linear-gradient(90deg, transparent, var(--lm-color-lemon-500) 22%, var(--lm-color-lemon-500) 78%, transparent);
 }
 body.b .lms-proofbar {
   background: rgba(255, 255, 255, .05);
@@ -181,12 +191,7 @@ body.b .lms-proofbar__item strong { color: var(--lm-color-lemon-500); font-size:
 body.b .lms-proofbar__item span { color: #A8A9B6; }
 body.b .lms-proofbar__item + .lms-proofbar__item { border-left-color: rgba(255, 255, 255, .12); }
 
-/* ============ 3. ЗАГОЛОВКИ СЕКЦИЙ В ДВА КЕГЛЯ ============ */
-
-body.b .dz-section h2 .quiet,
-body.b .lms-sechead h2 .quiet { color: var(--lm-color-muted-2); display: block; }
-
-/* ============ 4. ГАРАНТИЯ — БАННЕР ВО ВСЮ ШИРИНУ ============ */
+/* ============ 3. ГАРАНТИЯ — БАННЕР ВО ВСЮ ШИРИНУ ============ */
 
 body.b .dz-guarantee,
 body.b #guarantee .lms-guarantee {
@@ -196,19 +201,47 @@ body.b #guarantee .lms-guarantee {
 }
 body.b #guarantee .lms-guarantee h2,
 body.b #guarantee .lms-guarantee strong { color: var(--lm-text-on-lemon); }
+/* на лимоне только чёрный — канон DESIGN.md §3, без изобретённых оливковых */
 body.b #guarantee .lms-guarantee p,
-body.b #guarantee .lms-guarantee li { color: #3A3200; }
+body.b #guarantee .lms-guarantee li,
+body.b #guarantee .lms-guarantee .lm-eyebrow { color: var(--lm-text-on-lemon); opacity: .72; }
+body.b #guarantee .lms-guarantee .lms-split__list li { color: var(--lm-text-on-lemon); opacity: .85; }
+/* медаль: жёлтый круг на жёлтом не читается — делаем чёрный диск */
+body.b #guarantee .lms-guarantee__mark,
+body.b #guarantee .guarantee-mark {
+  background: var(--lm-surface-inverse);
+  color: var(--lm-color-lemon-500);
+  box-shadow: 0 20px 50px -18px rgba(0, 0, 0, .45);
+}
 
 /* ============ 5. МОБИЛЬНАЯ ============ */
 
+/* ============ 4. ТАЧ: СТРЕЛКИ ЛИСТАНИЯ ВИДНЫ ВСЕГДА ============ */
+/* На тач-устройствах hover не наступает — главный приём страницы
+   (листание работ) без этого на телефоне не существует. */
+@media (hover: none) {
+  body.b .hf-stage .w__nav { opacity: 1; }
+  body.b .hf-stage .w__hint { opacity: .9; }
+}
+/* и клавиатура: стрелки проявляются при фокусе внутри карточки */
+body.b .hf-stage .w:focus-within .w__nav { opacity: 1; }
+
 @media (max-width: 1000px) {
   body.b .hf-hero { min-height: auto; }
+  /* затемнение только под текстом, витрина ниже остаётся яркой */
   body.b .hf-hero::before {
-    background:
-      linear-gradient(180deg, #0B0912 0%, rgba(11, 9, 18, .9) 52%, rgba(11, 9, 18, .55) 100%);
+    background: linear-gradient(180deg, #0B0912 0%, #0B0912 62%, rgba(11, 9, 18, .55) 82%, transparent 100%);
   }
-  body.b .hf-copy { padding: 118px 20px 42px; }
-  body.b .hf-stage { position: relative; height: 460px; inset: auto; }
+  body.b .hf-hero::after { display: none; }
+  body.b .hf-copy { padding: 118px 20px 34px; }
+  body.b .hf-stage { position: relative; height: 470px; inset: auto; }
+  body.b .hf-cols {
+    -webkit-mask-image: linear-gradient(180deg, #000 0%, #000 86%, transparent);
+    mask-image: linear-gradient(180deg, #000 0%, #000 86%, transparent);
+  }
   body.b .hf-list { grid-template-columns: 1fr; }
-  body.b .b-hint { display: none; }
+  /* подсказку про листание на телефоне не прячем — там она нужнее всего */
+  body.b .b-hint { font-size: 12.5px; padding: 9px 15px; }
+  body.b .hf-pin--top { top: 100px; right: 16px; left: auto; }
+  body.b .hf-pin--bottom { bottom: 16px; right: 16px; }
 }
