@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>lemonmedia — главная v2</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap">
+<link rel="stylesheet" href="../assets/css/tokens.css">
+<style>
+/* ============================================================
+   ГЛАВНАЯ v2 — одна страница, у каждого блока свой приём.
+   Композиции по порядку, чтобы ни один блок не повторял соседа:
+   1  раскол: текст слева / витрина справа        (наш первый экран)
+   2  тонкая строка + бегущая лента ниш            (Б24: логотипы)
+   3  контейнер с табами и живым демо              (Б24: Вайбкод)
+   4  бенто из карточек разного размера            (Б24: интеграции)
+   5  центр + горизонтальный таймлайн              (Б24: BitrixGPT)
+   6  тёмная сцена с мокапом и выносками           (Figma: сцена)
+   7  текст слева / полосы бюджета справа          (свой)
+   8  цитаты в шахматном ритме, разной высоты      (Б24: истории)
+   9  интерактивный ползунок объёма                (свой)
+   10 цветной баннер во всю ширину                 (Б24: баннер)
+   11 аккордеон в две колонки                      (свой)
+   12 тёмный финал по центру
+   Все значения — из tokens.css, ни одного цвета мимо канона.
+   ============================================================ */
+
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;font-family:var(--lm-font-sans);font-size:var(--lm-fs-body);line-height:var(--lm-lh-body);
+  color:var(--lm-text-primary);background:var(--lm-color-neutral-000);-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,h4,p,ul,figure{margin:0}
+ul{padding:0;list-style:none}
+button{font-family:inherit}
+.wrap{max-width:var(--lm-container);margin:0 auto;padding:0 var(--lm-space-24)}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-size:var(--lm-fs-ui);
+  font-weight:800;padding:var(--lm-btn-pad);border-radius:var(--lm-radius-pill);border:0;cursor:pointer;
+  transition:transform .15s ease,box-shadow .15s ease}
+.btn--primary{background:var(--lm-surface-lemon);color:var(--lm-text-on-lemon);box-shadow:var(--lm-glow-lemon)}
+.btn--primary:hover{transform:translateY(-2px);box-shadow:0 16px 34px -8px rgba(238,203,3,.55)}
+.btn--ghost{background:var(--lm-color-neutral-000);color:var(--lm-text-primary);border:1px solid var(--lm-color-border-2)}
+.btn--ghost:hover{transform:translateY(-2px);box-shadow:var(--lm-shadow-card)}
+.btn--dark{background:var(--lm-surface-inverse);color:var(--lm-text-inverse)}
+.btn--dark:hover{transform:translateY(-2px)}
+
+/* Заголовок секции: два кегля, второй приглушён — приём Figma */
+.h-block{max-width:900px}
+.h-block h2{font-size:var(--lm-fs-h2);font-weight:800;line-height:1.06;letter-spacing:var(--lm-ls-heading)}
+.h-block h2 span{color:var(--lm-color-muted-2);display:block}
+.h-block--center{margin:0 auto;text-align:center}
+.eyebrow{font-size:var(--lm-fs-eyebrow);font-weight:700;text-transform:uppercase;letter-spacing:.08em;
+  color:var(--lm-color-purple-600);margin-bottom:var(--lm-space-16)}
+
+/* ============ ХЕДЕР ============ */
+.hdr{position:sticky;top:0;z-index:50;background:rgba(244,246,250,.82);backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--lm-color-cool-100)}
+.hdr__in{display:flex;align-items:center;gap:var(--lm-space-32);padding:var(--lm-space-16) 0}
+.hdr__logo{height:24px}
+.hdr__nav{display:flex;align-items:center;gap:var(--lm-space-24);margin-left:auto;
+  font-size:var(--lm-fs-ui);font-weight:700}
+.hdr__nav a{transition:color .15s ease}
+.hdr__nav a:hover{color:var(--lm-color-purple-600)}
+
+/* ============ 1. HERO: РАСКОЛ ============ */
+.hero{background:linear-gradient(90deg,var(--lm-color-cool-050) 0 50%,var(--lm-color-lavender-100) 50% 100%);
+  overflow:hidden}
+.hero__in{display:grid;grid-template-columns:minmax(0,510px) minmax(0,1fr);gap:var(--lm-space-48);
+  align-items:center;padding:var(--lm-space-64) var(--lm-space-24) var(--lm-space-80)}
+.hero__rate{display:inline-flex;align-items:center;gap:10px;background:var(--lm-color-neutral-000);
+  border:1px solid var(--lm-color-border);border-radius:var(--lm-radius-pill);padding:7px 16px 7px 8px;
+  font-size:var(--lm-fs-small);font-weight:700;box-shadow:var(--lm-shadow-soft);margin-bottom:var(--lm-space-24)}
+.hero__rate b{background:var(--lm-surface-lemon);color:var(--lm-text-on-lemon);border-radius:var(--lm-radius-pill);
+  padding:3px 10px;font-size:13px}
+.hero__rate span{color:var(--lm-color-muted)}
+.hero h1{font-size:var(--lm-fs-h1);font-weight:800;line-height:var(--lm-lh-heading);
+  letter-spacing:var(--lm-ls-heading);margin-bottom:var(--lm-space-20)}
+.hero__lead{font-size:var(--lm-fs-lead);color:var(--lm-color-muted);margin-bottom:var(--lm-space-32)}
+.hero__cta{display:flex;gap:var(--lm-space-12);align-items:center;margin-bottom:var(--lm-space-20)}
+.hero__price{font-size:var(--lm-fs-small);color:var(--lm-color-muted)}
+.hero__price b{color:var(--lm-text-primary);font-size:var(--lm-fs-body)}
+.hero__ticks{display:grid;gap:10px;margin-top:var(--lm-space-24);font-size:var(--lm-fs-small);
+  color:var(--lm-color-muted)}
+.hero__ticks li{display:flex;gap:10px}
+.hero__ticks i{font-style:normal;color:var(--lm-color-purple-600);font-weight:800}
+.hero__ticks b{color:var(--lm-text-primary)}
+
+/* витрина справа: три колонки, средняя смещена, всё едет вверх */
+.showcase{position:relative;height:660px;margin-right:calc(var(--lm-space-24) * -1)}
+.showcase::before,.showcase::after{content:"";position:absolute;left:0;right:0;height:120px;z-index:3;
+  pointer-events:none}
+.showcase::before{top:0;background:linear-gradient(180deg,var(--lm-color-lavender-100),transparent)}
+.showcase::after{bottom:0;background:linear-gradient(0deg,var(--lm-color-lavender-100),transparent)}
+.showcase__cols{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--lm-space-16);height:100%}
+.sc-col{display:flex;flex-direction:column;gap:var(--lm-space-16);animation:up 40s linear infinite}
+.sc-col:nth-child(2){animation-duration:52s;margin-top:-56px}
+.sc-col:nth-child(3){animation-duration:46s;margin-top:26px}
+@keyframes up{from{transform:translateY(0)}to{transform:translateY(-50%)}}
+.shot{position:relative;border-radius:var(--lm-radius-md);overflow:hidden;box-shadow:var(--lm-shadow-card);
+  background:var(--lm-color-neutral-000);flex:0 0 auto}
+.shot img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.shot__tag{position:absolute;left:10px;bottom:10px;background:var(--lm-color-overlay-white-80);
+  backdrop-filter:blur(6px);border-radius:var(--lm-radius-pill);padding:4px 12px;font-size:12px;font-weight:800}
+/* карточка-счётчик поверх витрины */
+.showcase__meta{position:absolute;z-index:4;right:var(--lm-space-24);bottom:var(--lm-space-24);
+  background:var(--lm-color-neutral-000);border-radius:var(--lm-radius-lg);box-shadow:var(--lm-shadow-pop);
+  padding:var(--lm-space-20) var(--lm-space-24);display:flex;gap:var(--lm-space-24)}
+.showcase__meta b{display:block;font-size:22px;font-weight:800;line-height:1.1}
+.showcase__meta span{font-size:13px;color:var(--lm-color-muted-2)}
+
+/* ============ 2. ЛЕНТА НИШ ============ */
+.niches{border-bottom:1px solid var(--lm-color-border);padding:var(--lm-space-32) 0;overflow:hidden;
+  -webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);
+  mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.niches__lead{text-align:center;font-size:var(--lm-fs-small);color:var(--lm-color-muted);
+  margin-bottom:var(--lm-space-20)}
+.niches__lead b{color:var(--lm-text-primary)}
+.niches__track{display:flex;gap:var(--lm-space-12);width:max-content;animation:slide 38s linear infinite}
+.niche{border:1px solid var(--lm-color-border-2);border-radius:var(--lm-radius-pill);padding:9px 20px;
+  font-size:var(--lm-fs-small);font-weight:700;white-space:nowrap;color:var(--lm-color-muted)}
+.niche--hot{background:var(--lm-surface-lemon-soft);border-color:transparent;color:var(--lm-text-primary)}
+@keyframes slide{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ============ 3. КОНТЕЙНЕР С ТАБАМИ ============ */
+.feeds{padding:var(--lm-space-96) 0 var(--lm-space-64)}
+.panelbox{background:var(--lm-color-cool-050);border-radius:var(--lm-radius-lg);
+  padding:var(--lm-space-48);margin-top:var(--lm-space-40)}
+.panelbox__in{display:grid;grid-template-columns:minmax(0,420px) minmax(0,1fr);gap:var(--lm-space-48);
+  align-items:start}
+.ftabs{display:flex;flex-direction:column;gap:6px;margin-bottom:var(--lm-space-24)}
+.ftab{text-align:left;background:transparent;border:0;border-left:3px solid var(--lm-color-border-2);
+  padding:12px 18px;cursor:pointer;transition:.15s ease;border-radius:0 var(--lm-radius-sm) var(--lm-radius-sm) 0}
+.ftab b{display:block;font-size:17px;font-weight:800}
+.ftab span{font-size:14px;color:var(--lm-color-muted-2)}
+.ftab[aria-selected="true"]{border-left-color:var(--lm-color-lemon-500);background:var(--lm-color-neutral-000);
+  box-shadow:var(--lm-shadow-soft)}
+.fpane{display:none}
+.fpane[data-open="true"]{display:block}
+.fpane__txt{margin-bottom:var(--lm-space-20);color:var(--lm-color-muted)}
+.fpane__stat{display:flex;gap:var(--lm-space-32)}
+.fpane__stat b{display:block;font-size:24px;font-weight:800;line-height:1.1}
+.fpane__stat span{font-size:13px;color:var(--lm-color-muted-2)}
+.fgrid{display:none;grid-template-columns:repeat(3,1fr);gap:var(--lm-space-12)}
+.fgrid[data-open="true"]{display:grid;animation:rise .35s ease-out}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.fgrid img{border-radius:var(--lm-radius-md);aspect-ratio:4/5;object-fit:cover;box-shadow:var(--lm-shadow-soft);
+  transition:transform .15s ease}
+.fgrid img:hover{transform:translateY(-3px) scale(1.01)}
+
+/* ============ 4. БЕНТО ============ */
+.bento{padding:var(--lm-space-64) 0 var(--lm-space-96)}
+.bento__grid{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--lm-space-20);
+  margin-top:var(--lm-space-40)}
+.bx{border-radius:var(--lm-radius-lg);padding:var(--lm-space-32);border:1px solid var(--lm-color-border);
+  display:flex;flex-direction:column;transition:.15s ease;overflow:hidden;position:relative}
+.bx:hover{transform:translateY(-3px);box-shadow:var(--lm-shadow-pop)}
+.bx--wide{grid-column:span 2;background:var(--lm-surface-lemon-soft);border-color:transparent}
+.bx--purple{background:var(--lm-surface-purple-soft);border-color:transparent}
+.bx__tag{align-self:flex-start;font-size:var(--lm-fs-eyebrow);font-weight:700;text-transform:uppercase;
+  letter-spacing:.08em;padding:4px 12px;border-radius:var(--lm-radius-pill);margin-bottom:var(--lm-space-16);
+  background:var(--lm-color-neutral-000)}
+.bx h3{font-size:var(--lm-fs-h3);font-weight:800;margin-bottom:8px}
+.bx__price{font-size:var(--lm-fs-small);font-weight:700;color:var(--lm-color-purple-600);
+  margin-bottom:var(--lm-space-12)}
+.bx p{font-size:var(--lm-fs-small);color:var(--lm-color-muted);margin-bottom:var(--lm-space-20)}
+.bx__shots{display:flex;gap:10px;margin-top:auto}
+.bx__shots img{width:96px;border-radius:10px;box-shadow:var(--lm-shadow-card)}
+.bx--wide .bx__shots img{width:118px}
+.bx__list{margin-top:auto;display:grid;gap:8px;font-size:14px}
+.bx__list li{display:flex;gap:8px}
+.bx__list li::before{content:"✓";font-weight:800;color:var(--lm-color-purple-600)}
+
+/* ============ 5. ЦЕНТР + ТАЙМЛАЙН ============ */
+.month{background:var(--lm-color-surface);padding:var(--lm-space-96) 0}
+.rail{display:grid;grid-template-columns:repeat(5,1fr);gap:0;margin-top:var(--lm-space-48);
+  position:relative}
+.rail::before{content:"";position:absolute;left:6%;right:6%;top:26px;height:2px;
+  background:linear-gradient(90deg,var(--lm-color-border-2),var(--lm-color-lemon-500),var(--lm-color-border-2))}
+.rl{text-align:center;padding:0 var(--lm-space-12);position:relative}
+.rl__dot{width:54px;height:54px;border-radius:50%;background:var(--lm-color-neutral-000);
+  border:2px solid var(--lm-color-border-2);display:flex;align-items:center;justify-content:center;
+  font-weight:800;font-size:15px;margin:0 auto var(--lm-space-20);position:relative;z-index:2}
+.rl--us .rl__dot{background:var(--lm-surface-lemon);border-color:transparent;box-shadow:var(--lm-glow-lemon)}
+.rl h3{font-size:17px;font-weight:800;margin-bottom:6px}
+.rl p{font-size:14px;color:var(--lm-color-muted)}
+.rl__who{display:inline-block;margin-top:12px;font-size:12px;font-weight:800;padding:3px 12px;
+  border-radius:var(--lm-radius-pill);background:var(--lm-color-neutral-000);border:1px solid var(--lm-color-border)}
+
+/* ============ 6. ТЁМНАЯ СЦЕНА ============ */
+.stage{background:var(--lm-grad-space);color:var(--lm-text-inverse);padding:var(--lm-space-96) 0;
+  position:relative;overflow:hidden}
+.stage::after{content:"";position:absolute;width:820px;height:820px;left:50%;top:34%;
+  transform:translateX(-50%);background:var(--lm-glowspot-purple);pointer-events:none}
+.stage__in{position:relative;z-index:2}
+.stage .h-block h2 span{color:#9A9AAA}
+.stage__mock{margin-top:var(--lm-space-48);background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);
+  border-radius:var(--lm-radius-lg);padding:var(--lm-space-24);backdrop-filter:blur(6px)}
+.mock__bar{display:flex;align-items:center;gap:8px;padding-bottom:var(--lm-space-16);
+  border-bottom:1px solid rgba(255,255,255,.12);margin-bottom:var(--lm-space-20)}
+.mock__dot{width:9px;height:9px;border-radius:50%;background:rgba(255,255,255,.3)}
+.mock__ttl{margin-left:8px;font-size:14px;font-weight:700;color:#C6C6D2}
+.mock__grid{display:grid;grid-template-columns:1.1fr 1fr 1fr;gap:var(--lm-space-16)}
+.mcard{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.10);
+  border-radius:var(--lm-radius-md);padding:var(--lm-space-20)}
+.mcard__h{font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:#9A9AAA;
+  margin-bottom:var(--lm-space-16)}
+.mrow{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+.mrow img{width:44px;border-radius:8px}
+.mrow div{font-size:14px;line-height:1.3}
+.mrow small{display:block;color:#9A9AAA;font-size:12px}
+.mbtn{font-size:13px;font-weight:800;padding:8px 14px;border-radius:8px;border:0;cursor:pointer;
+  background:var(--lm-surface-lemon);color:var(--lm-text-on-lemon)}
+.mday{display:flex;justify-content:space-between;font-size:13px;padding:9px 0;
+  border-bottom:1px dashed rgba(255,255,255,.12)}
+.mday b{color:var(--lm-color-lemon-500);font-weight:800}
+.mnum{display:flex;justify-content:space-between;align-items:baseline;padding:10px 0;
+  border-bottom:1px dashed rgba(255,255,255,.12);font-size:13px;color:#9A9AAA}
+.mnum b{font-size:20px;font-weight:800;color:var(--lm-text-inverse)}
+.stage__notes{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--lm-space-24);
+  margin-top:var(--lm-space-40);font-size:var(--lm-fs-small);color:#C6C6D2}
+.stage__notes b{display:block;color:var(--lm-text-inverse);font-size:17px;font-weight:800;margin-bottom:6px}
+
+/* ============ 7. ПОЛОСЫ БЮДЖЕТА ============ */
+.math{padding:var(--lm-space-96) 0}
+.math__in{display:grid;grid-template-columns:minmax(0,430px) minmax(0,1fr);gap:var(--lm-space-64);
+  align-items:center}
+.math p{color:var(--lm-color-muted);margin-top:var(--lm-space-20)}
+.bars{display:grid;gap:var(--lm-space-20)}
+.bar__k{font-size:var(--lm-fs-small);font-weight:800;color:var(--lm-color-muted-2);margin-bottom:8px}
+.bar--us .bar__k{color:var(--lm-text-primary)}
+.bar__l{height:64px;border-radius:var(--lm-radius-md);display:flex;align-items:center;
+  padding:0 var(--lm-space-24);font-size:21px;font-weight:800;white-space:nowrap}
+.bar--us .bar__l{background:var(--lm-surface-lemon);width:24%;min-width:230px;box-shadow:var(--lm-glow-lemon)}
+.bar--fl .bar__l{background:var(--lm-color-cool-100);width:58%;color:var(--lm-color-muted)}
+.bar--ag .bar__l{background:var(--lm-color-cool-100);width:100%;color:var(--lm-color-muted)}
+.math__foot{margin-top:var(--lm-space-24);font-size:var(--lm-fs-small);color:var(--lm-color-muted-2)}
+
+/* ============ 8. ЦИТАТЫ ШАХМАТКОЙ ============ */
+.revs{padding:var(--lm-space-64) 0 var(--lm-space-96)}
+.revs__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--lm-space-20);
+  align-items:start;margin-top:var(--lm-space-40)}
+.rev{border-radius:var(--lm-radius-lg);padding:var(--lm-space-32);border:1px solid var(--lm-color-border)}
+.revs__grid .rev:nth-child(2){margin-top:var(--lm-space-40);background:var(--lm-surface-inverse);
+  color:var(--lm-text-inverse);border-color:transparent}
+.revs__grid .rev:nth-child(3){margin-top:var(--lm-space-20);background:var(--lm-surface-purple-soft);
+  border-color:transparent}
+.rev__q{font-size:22px;font-weight:800;line-height:1.35;letter-spacing:-.01em;margin-bottom:var(--lm-space-20)}
+.rev__w{font-size:14px;color:var(--lm-color-muted)}
+.revs__grid .rev:nth-child(2) .rev__w{color:#9A9AAA}
+.rev__st{color:var(--lm-color-lemon-600);margin-bottom:var(--lm-space-16);font-size:15px}
+
+/* ============ 9. ПОЛЗУНОК ТАРИФА ============ */
+.tariff{background:var(--lm-color-cool-050);padding:var(--lm-space-96) 0}
+.tbox{background:var(--lm-color-neutral-000);border-radius:var(--lm-radius-lg);box-shadow:var(--lm-shadow-pop);
+  padding:var(--lm-space-48);margin-top:var(--lm-space-40);display:grid;
+  grid-template-columns:minmax(0,1fr) 320px;gap:var(--lm-space-64);align-items:center}
+.steps{display:flex;gap:0;margin-bottom:var(--lm-space-32);border:1px solid var(--lm-color-border-2);
+  border-radius:var(--lm-radius-pill);padding:5px;background:var(--lm-color-surface-2)}
+.steps button{flex:1;border:0;background:transparent;padding:12px 0;border-radius:var(--lm-radius-pill);
+  font-size:var(--lm-fs-ui);font-weight:800;cursor:pointer;color:var(--lm-color-muted);transition:.15s ease}
+.steps button[aria-selected="true"]{background:var(--lm-surface-inverse);color:var(--lm-text-inverse)}
+.tinfo__name{font-size:var(--lm-fs-h3);font-weight:800;margin-bottom:8px}
+.tinfo__desc{color:var(--lm-color-muted);margin-bottom:var(--lm-space-24)}
+.tinfo__row{display:flex;gap:var(--lm-space-32);padding-top:var(--lm-space-20);
+  border-top:1px solid var(--lm-color-border)}
+.tinfo__row b{display:block;font-size:20px;font-weight:800}
+.tinfo__row span{font-size:13px;color:var(--lm-color-muted-2)}
+.tprice{text-align:center;background:var(--lm-color-cool-050);border-radius:var(--lm-radius-lg);
+  padding:var(--lm-space-32)}
+.tprice__num{font-size:46px;font-weight:800;line-height:1;letter-spacing:-.03em;
+  font-variant-numeric:tabular-nums}
+.tprice__per{font-size:14px;color:var(--lm-color-muted);margin:8px 0 var(--lm-space-24)}
+.tprice .btn{width:100%}
+.tprice__note{font-size:13px;color:var(--lm-color-muted-2);margin-top:var(--lm-space-16)}
+
+/* ============ 10. БАННЕР ГАРАНТИИ ============ */
+.gbanner{padding:var(--lm-space-64) 0}
+.gbanner__in{background:var(--lm-grad-lemon);border-radius:var(--lm-radius-lg);
+  padding:var(--lm-space-64) var(--lm-space-48);display:grid;grid-template-columns:1fr auto;
+  gap:var(--lm-space-48);align-items:center;position:relative;overflow:hidden}
+.gbanner h2{font-size:var(--lm-fs-h2);font-weight:800;line-height:1.06;letter-spacing:var(--lm-ls-heading);
+  color:var(--lm-text-on-lemon);margin-bottom:var(--lm-space-16);max-width:660px}
+.gbanner p{color:#3A3200;max-width:620px;font-size:var(--lm-fs-small)}
+.gbanner__num{font-size:130px;font-weight:800;line-height:.85;letter-spacing:-.04em;
+  color:var(--lm-text-on-lemon);opacity:.92;text-align:center}
+.gbanner__num span{display:block;font-size:15px;font-weight:800;letter-spacing:0;opacity:.7}
+
+/* ============ 11. FAQ ============ */
+.faq{padding:var(--lm-space-64) 0 var(--lm-space-96)}
+.faq__cols{display:grid;grid-template-columns:repeat(2,1fr);gap:0 var(--lm-space-48);
+  margin-top:var(--lm-space-40)}
+details{border-bottom:1px solid var(--lm-color-border);padding:var(--lm-space-20) 0}
+summary{list-style:none;cursor:pointer;font-weight:800;font-size:17px;display:flex;
+  justify-content:space-between;gap:var(--lm-space-16);align-items:center}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:22px;font-weight:400;color:var(--lm-color-muted-2)}
+details[open] summary::after{content:"−"}
+details p{margin-top:12px;font-size:var(--lm-fs-small);color:var(--lm-color-muted)}
+
+/* ============ 12. ФИНАЛ ============ */
+.final{background:var(--lm-grad-brand-dark);color:var(--lm-text-inverse);padding:var(--lm-space-96) 0;
+  text-align:center}
+.final h2{font-size:var(--lm-fs-h2);font-weight:800;line-height:1.06;letter-spacing:var(--lm-ls-heading);
+  max-width:880px;margin:0 auto var(--lm-space-20)}
+.final p{color:#D5D5DE;max-width:640px;margin:0 auto var(--lm-space-32)}
+
+@media (max-width:1100px){
+  .hero{background:var(--lm-color-cool-050)}
+  .hero__in,.panelbox__in,.math__in,.tbox,.gbanner__in{grid-template-columns:1fr}
+  .bento__grid{grid-template-columns:repeat(2,1fr)}
+  .bx--wide{grid-column:span 2}
+  .rail{grid-template-columns:repeat(2,1fr);gap:var(--lm-space-32)}
+  .rail::before{display:none}
+  .mock__grid,.stage__notes,.revs__grid,.faq__cols{grid-template-columns:1fr}
+  .revs__grid .rev{margin-top:0!important}
+  .showcase{height:520px;margin-right:0}
+}
+@media (prefers-reduced-motion:reduce){
+  .sc-col,.niches__track{animation:none}
+  *{transition:none!important;animation:none!important}
+}
+</style>
+</head>
+<body>
+
+<header class="hdr">
+  <div class="wrap hdr__in">
+    <img class="hdr__logo" src="../assets/img/home/logo-dark.svg" alt="lemonmedia">
+    <nav class="hdr__nav">
+      <a href="#feeds">Работы</a>
+      <a href="#month">Как работает</a>
+      <a href="#tariff">Тарифы</a>
+      <a href="#faq">Вопросы</a>
+      <a href="#tariff" class="btn btn--dark" style="padding:10px 20px">Начать</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ===== 1. HERO ===== -->
+<section class="hero">
+  <div class="wrap hero__in">
+    <div>
+      <div class="hero__rate"><b>5,0 ★</b><span>232+ отзыва на Яндекс Картах</span></div>
+      <h1>Ваши соцсети ведёт команда, а не вы по вечерам</h1>
+      <p class="hero__lead">Пишем, оформляем и публикуем посты за вас. Маркетолог, дизайнер и менеджер на проект. Вы только согласовываете — около 10 минут в неделю.</p>
+      <div class="hero__cta">
+        <a href="#tariff" class="btn btn--primary">Посмотреть цены</a>
+        <a href="#feeds" class="btn btn--ghost">Смотреть работы</a>
+      </div>
+      <div class="hero__price"><b>от 4 990 ₽/мес</b> за 10 постов — это ≈500 ₽ за пост</div>
+      <ul class="hero__ticks">
+        <li><i>✓</i><span><b>Живая команда</b> — ИИ ускоряет производство, но не заменяет людей</span></li>
+        <li><i>✓</i><span><b>Один пост — во все соцсети</b> без доплаты за каждую площадку</span></li>
+        <li><i>✓</i><span><b>14 дней гарантии</b> с настоящим возвратом, отмена в любой момент</span></li>
+      </ul>
+    </div>
+
+    <div class="showcase">
+      <div class="showcase__cols">
+        <div class="sc-col">
+          <figure class="shot"><img src="../assets/img/home/carousels/d1.webp" alt="Пост для юридической компании"><figcaption class="shot__tag">Юристы</figcaption></figure>
+          <figure class="shot"><img src="../assets/img/home/carousels/t2.webp" alt="Пост для доставки"><figcaption class="shot__tag">Доставка</figcaption></figure>
+          <figure class="shot"><img src="../assets/img/home/carousels/c3.webp" alt="Пост для студии"><figcaption class="shot__tag">Бьюти</figcaption></figure>
+          <figure class="shot"><img src="../assets/img/home/carousels/d1.webp" alt=""><figcaption class="shot__tag">Юристы</figcaption></figure>
+          <figure class="shot"><img src="../assets/img/home/carousels/t2.webp" alt=""><figcaption class="shot__tag">Доставка</figcaption></figure>
+          <figure class="shot"><img src="../assets/img/home/carousels/c3.webp" alt=""><figcaption class="shot__tag">Бьюти</figcaption></figure>
+        </div>
+        <div class="sc-col">
+          <figure class="shot"><img src="../assets/img/home/carousels/c1.webp" alt="Карусель для кофейни"><figcaption class="shot__tag">Кофейня</figcaption></figure>
+          <figure class="shot"><img src="../assets/img/home/carousels/d4.webp" alt="Пост для клиники"><figcaption class="shot__tag">Клиника</figcaption></figure>
+          <figure class="shot"><img src="../assets/img/home/carousels/t5.webp" alt="Пост для доставки"><figcaption class="shot__tag">Еда</figcaption></figure>
+          <figure class="shot"><img src="../assets/img/home/carousels/c1.webp" alt=""><figcaption class="shot__tag">Кофейня</figcaption></figure>
+          <figure class="shot"><img src="../assets/img/home/carousels/d4.webp" alt=""><figcaption class="shot__tag">Клиника</figcaption></figure>
+          <figure class="shot"><img src="../assets/img/home/carousels/t5.webp" alt=""><figcaption class="shot__tag">Еда</figcaption></figure>
+        </div>
+        <div class="sc-col">
+          <figure class="shot"><img src="../assets/img/home/carousels/t1.webp" alt="Пост для фитнеса"><figcaption class="shot__tag">Спорт</figcaption></figure>
+          <figure class="shot"><img src="../assets/img/home/carousels/d7.webp" alt="Пост для школы"><figcaption class="shot__tag">Дети</figcaption></figure>
+          <figure class="shot"><img src="../assets/img/home/carousels/c5.webp" alt="Пост для магазина"><figcaption class="shot__tag">Ритейл</figcaption></figure>
+          <figure class="shot"><img src="../assets/img/home/carousels/t1.webp" alt=""><figcaption class="shot__tag">Спорт</figcaption></figure>
+          <figure class="shot"><img src="../assets/img/home/carousels/d7.webp" alt=""><figcaption class="shot__tag">Дети</figcaption></figure>
+          <figure class="shot"><img src="../assets/img/home/carousels/c5.webp" alt=""><figcaption class="shot__tag">Ритейл</figcaption></figure>
+        </div>
+      </div>
+      <div class="showcase__meta">
+        <div><b>1,5 млн+</b><span>постов опубликовано</span></div>
+        <div><b>120+</b><span>ниш бизнеса</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 2. НИШИ ===== -->
+<section class="niches">
+  <div class="niches__lead"><b>10 000+ проектов</b> с 2020 года — вот в каких нишах мы уже знаем, что работает</div>
+  <div class="niches__track">
+    <span class="niche">Кофейни и общепит</span><span class="niche niche--hot">Юридические услуги</span>
+    <span class="niche">Доставка еды</span><span class="niche">Фитнес-клубы</span>
+    <span class="niche niche--hot">Салоны красоты</span><span class="niche">Стоматологии</span>
+    <span class="niche">Детские центры</span><span class="niche">Автосервисы</span>
+    <span class="niche niche--hot">Строительство</span><span class="niche">Зоомагазины</span>
+    <span class="niche">Квесты и развлечения</span><span class="niche">Массажные студии</span>
+    <span class="niche">Кофейни и общепит</span><span class="niche niche--hot">Юридические услуги</span>
+    <span class="niche">Доставка еды</span><span class="niche">Фитнес-клубы</span>
+    <span class="niche niche--hot">Салоны красоты</span><span class="niche">Стоматологии</span>
+    <span class="niche">Детские центры</span><span class="niche">Автосервисы</span>
+    <span class="niche niche--hot">Строительство</span><span class="niche">Зоомагазины</span>
+    <span class="niche">Квесты и развлечения</span><span class="niche">Массажные студии</span>
+  </div>
+</section>
+
+<!-- ===== 3. ЛЕНТЫ С ТАБАМИ ===== -->
+<section class="feeds" id="feeds">
+  <div class="wrap">
+    <div class="h-block">
+      <div class="eyebrow">Фирменные сетки</div>
+      <h2>Мы делаем не отдельные посты.<span>Мы собираем ленту целиком.</span></h2>
+    </div>
+
+    <div class="panelbox">
+      <div class="panelbox__in">
+        <div>
+          <div class="ftabs" role="tablist">
+            <button class="ftab" role="tab" aria-selected="true" data-feed="law">
+              <b>Юридическая компания</b><span>ВКонтакте + Telegram</span></button>
+            <button class="ftab" role="tab" aria-selected="false" data-feed="food">
+              <b>Доставка поке</b><span>ВКонтакте + Instagram</span></button>
+            <button class="ftab" role="tab" aria-selected="false" data-feed="beauty">
+              <b>Студия массажа</b><span>ВКонтакте + Telegram</span></button>
+          </div>
+
+          <div class="fpane" data-pane="law" data-open="true">
+            <p class="fpane__txt">Строго, но по-человечески: фирменный зелёный, чёткая типографика и советы, которые бизнес сохраняет себе. Такую ленту пересылают партнёрам со словами «посмотри, полезно».</p>
+            <div class="fpane__stat">
+              <div><b>412</b><span>постов сделано</span></div>
+              <div><b>9,2 тыс.</b><span>подписчиков</span></div>
+              <div><b>26 мес.</b><span>ведём ленту</span></div>
+            </div>
+          </div>
+          <div class="fpane" data-pane="food">
+            <p class="fpane__txt">Ярко, аппетитно, по делу: каждый пост — повод заказать. Акции, комбо, доставка, бонусы. Лента работает как витрина, а не как альбом красивых картинок.</p>
+            <div class="fpane__stat">
+              <div><b>780</b><span>постов сделано</span></div>
+              <div><b>14,6 тыс.</b><span>подписчиков</span></div>
+              <div><b>31 мес.</b><span>ведём ленту</span></div>
+            </div>
+          </div>
+          <div class="fpane" data-pane="beauty">
+            <p class="fpane__txt">Спокойный визуал, забота в интонации и понятные предложения. Лента снимает страх «а вдруг будет неловко» ещё до записи.</p>
+            <div class="fpane__stat">
+              <div><b>295</b><span>постов сделано</span></div>
+              <div><b>6,4 тыс.</b><span>подписчиков</span></div>
+              <div><b>18 мес.</b><span>ведём ленту</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="fgrid" data-grid="law" data-open="true">
+            <img src="../assets/img/home/carousels/d1.webp" alt=""><img src="../assets/img/home/carousels/d2.webp" alt="">
+            <img src="../assets/img/home/carousels/d3.webp" alt=""><img src="../assets/img/home/carousels/d4.webp" alt="">
+            <img src="../assets/img/home/carousels/d5.webp" alt=""><img src="../assets/img/home/carousels/d6.webp" alt="">
+            <img src="../assets/img/home/carousels/d7.webp" alt=""><img src="../assets/img/home/carousels/d8.webp" alt="">
+            <img src="../assets/img/home/carousels/d9.webp" alt="">
+          </div>
+          <div class="fgrid" data-grid="food">
+            <img src="../assets/img/home/carousels/t1.webp" alt=""><img src="../assets/img/home/carousels/t2.webp" alt="">
+            <img src="../assets/img/home/carousels/t3.webp" alt=""><img src="../assets/img/home/carousels/t4.webp" alt="">
+            <img src="../assets/img/home/carousels/t5.webp" alt=""><img src="../assets/img/home/carousels/t6.webp" alt="">
+            <img src="../assets/img/home/carousels/t7.webp" alt=""><img src="../assets/img/home/carousels/t1.webp" alt="">
+            <img src="../assets/img/home/carousels/t3.webp" alt="">
+          </div>
+          <div class="fgrid" data-grid="beauty">
+            <img src="../assets/img/home/carousels/c1.webp" alt=""><img src="../assets/img/home/carousels/c2.webp" alt="">
+            <img src="../assets/img/home/carousels/c3.webp" alt=""><img src="../assets/img/home/carousels/c4.webp" alt="">
+            <img src="../assets/img/home/carousels/c5.webp" alt=""><img src="../assets/img/home/carousels/c6.webp" alt="">
+            <img src="../assets/img/home/carousels/c7.webp" alt=""><img src="../assets/img/home/carousels/c2.webp" alt="">
+            <img src="../assets/img/home/carousels/c4.webp" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 4. БЕНТО: СОСТАВ ===== -->
+<section class="bento">
+  <div class="wrap">
+    <div class="h-block">
+      <div class="eyebrow">Состав подписки</div>
+      <h2>Посты — база.<span>Остальное усиливает их.</span></h2>
+    </div>
+    <div class="bento__grid">
+      <div class="bx bx--wide">
+        <span class="bx__tag">База подписки</span>
+        <h3>Посты</h3>
+        <div class="bx__price">от 4 990 ₽/мес за 10 постов — ≈500 ₽ за пост</div>
+        <p>Картинка + текст. Приводят новых клиентов и греют аудиторию. Идея, текст и дизайн — на нас, вы только согласовываете.</p>
+        <div class="bx__shots">
+          <img src="../assets/img/home/carousels/d2.webp" alt="">
+          <img src="../assets/img/home/carousels/t3.webp" alt="">
+          <img src="../assets/img/home/carousels/c2.webp" alt="">
+        </div>
+      </div>
+      <div class="bx bx--purple">
+        <span class="bx__tag">Апгрейд поста</span>
+        <h3>Карусели</h3>
+        <div class="bx__price">+250 ₽ к посту</div>
+        <p>Пост превращается в несколько слайдов — выше охват и сохранения.</p>
+        <ul class="bx__list">
+          <li>Число публикаций не меняется</li>
+          <li>Сохраняют как инструкцию</li>
+        </ul>
+      </div>
+      <div class="bx">
+        <span class="bx__tag">Добор</span>
+        <h3>Истории</h3>
+        <div class="bx__price">пакеты от 3 490 ₽</div>
+        <p>Серии из 5 историй вокруг события дня — держат внимание между постами.</p>
+        <ul class="bx__list">
+          <li>Сценарий и оформление на нас</li>
+          <li>Больше пакет — дешевле штука</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 5. МЕСЯЦ ПО ДНЯМ ===== -->
+<section class="month" id="month">
+  <div class="wrap">
+    <div class="h-block h-block--center">
+      <div class="eyebrow">Первый месяц</div>
+      <h2>От оплаты до автопубликаций — 14 дней.<span>Ваше участие — минуты, не часы.</span></h2>
+    </div>
+    <div class="rail">
+      <div class="rl"><div class="rl__dot">0</div><h3>Онбординг</h3>
+        <p>Короткая анкета о бренде и подключение соцсетей.</p><span class="rl__who">Вы · 15–30 мин</span></div>
+      <div class="rl rl--us"><div class="rl__dot">1–7</div><h3>Первая партия</h3>
+        <p>Маркетолог собирает план и тексты, дизайнер — визуал под бренд.</p><span class="rl__who">Мы</span></div>
+      <div class="rl"><div class="rl__dot">8–10</div><h3>Окно приёмки</h3>
+        <p>Смотрите месяц целиком, утверждаете или оставляете правки.</p><span class="rl__who">Вы · 5–10 мин</span></div>
+      <div class="rl rl--us"><div class="rl__dot">10–14</div><h3>Правки</h3>
+        <p>2 пакета правок, чтобы точно попасть в тон бренда.</p><span class="rl__who">Вместе</span></div>
+      <div class="rl rl--us"><div class="rl__dot">14+</div><h3>Публикации</h3>
+        <p>Посты выходят по графику. Следующая партия готовится заранее.</p><span class="rl__who">Мы · авто</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 6. ТЁМНАЯ СЦЕНА: КАБИНЕТ ===== -->
+<section class="stage">
+  <div class="wrap stage__in">
+    <div class="h-block">
+      <div class="eyebrow" style="color:var(--lm-color-lemon-500)">Прозрачный процесс</div>
+      <h2>Всё согласование — в одном кабинете.<span>Никаких «гляньте в чате, там где-то было».</span></h2>
+    </div>
+
+    <div class="stage__mock">
+      <div class="mock__bar">
+        <span class="mock__dot"></span><span class="mock__dot"></span><span class="mock__dot"></span>
+        <span class="mock__ttl">Кабинет клиента · август</span>
+      </div>
+      <div class="mock__grid">
+        <div class="mcard">
+          <div class="mcard__h">Нужно согласование</div>
+          <div class="mrow"><img src="../assets/img/home/carousels/d1.webp" alt="">
+            <div>Пост · вт, 10:30<small>«Три ошибки в договоре»</small></div></div>
+          <div class="mrow"><img src="../assets/img/home/carousels/t2.webp" alt="">
+            <div>Карусель · ср, 9:00<small>Комбо недели</small></div></div>
+          <button class="mbtn">✓ Утвердить всё</button>
+        </div>
+        <div class="mcard">
+          <div class="mcard__h">Календарь</div>
+          <div class="mday"><span>Пн, 9:00</span><b>ВКонтакте</b></div>
+          <div class="mday"><span>Пн, 9:00</span><b>Telegram</b></div>
+          <div class="mday"><span>Вт, 10:30</span><b>Instagram</b></div>
+          <div class="mday"><span>Ср, 9:00</span><b>MAX</b></div>
+          <div class="mday"><span>Чт, 12:00</span><b>ВКонтакте</b></div>
+        </div>
+        <div class="mcard">
+          <div class="mcard__h">Отчёт за месяц</div>
+          <div class="mnum"><span>Публикаций вышло</span><b>20 / 20</b></div>
+          <div class="mnum"><span>Охват</span><b>48 700</b></div>
+          <div class="mnum"><span>Сохранения</span><b>1 340</b></div>
+          <div class="mnum"><span>Новые подписчики</span><b>+412</b></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="stage__notes">
+      <div><b>Смотрите и утверждаете</b>Мы никогда не публикуем то, что вы не согласовали.</div>
+      <div><b>Видите всё наперёд</b>Календарь по всем каналам — никаких сюрпризов.</div>
+      <div><b>Получаете отчёт</b>В конце месяца видно, что вышло и как сработало.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 7. МАТЕМАТИКА ===== -->
+<section class="math">
+  <div class="wrap math__in">
+    <div>
+      <div class="h-block">
+        <div class="eyebrow">Математика</div>
+        <h2>Столько же контента —<span>за десятую часть бюджета.</span></h2>
+      </div>
+      <p>Агентство стоит как зарплата, фрилансер нестабилен, своими силами — съедает 10+ часов в неделю. С нами ваше участие — около 10 минут.</p>
+    </div>
+    <div>
+      <div class="bars">
+        <div class="bar bar--us"><div class="bar__k">lemonmedia</div><div class="bar__l">от 4 990 ₽/мес</div></div>
+        <div class="bar bar--fl"><div class="bar__k">Фрилансер</div><div class="bar__l">15–40 тыс ₽/мес</div></div>
+        <div class="bar bar--ag"><div class="bar__k">Агентство</div><div class="bar__l">50–150 тыс ₽/мес</div></div>
+      </div>
+      <div class="math__foot">При этом у нас команда из трёх ролей, 2 пакета правок и отсутствие годового договора.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 8. ОТЗЫВЫ ===== -->
+<section class="revs">
+  <div class="wrap">
+    <div class="h-block">
+      <div class="eyebrow">Отзывы</div>
+      <h2>340+ постоянных клиентов.<span>Средний срок сотрудничества — 14 месяцев.</span></h2>
+    </div>
+    <div class="revs__grid">
+      <div class="rev">
+        <div class="rev__st">★★★★★</div>
+        <div class="rev__q">«За месяц закрыли весь продакшен и сняли с меня операционку»</div>
+        <div class="rev__w">Контент пошёл стабильно. Уже год с командой — не пожалела ни дня.<br><br>Основатель, кофейня «Сорока» · общепит</div>
+      </div>
+      <div class="rev">
+        <div class="rev__st">★★★★★</div>
+        <div class="rev__q">«Закрыли мой главный страх — что контент будет шаблонный»</div>
+        <div class="rev__w">Каждая публикация авторская. И ребята отвечают быстро, не приходится напоминать.<br><br>Основатель, зоомагазин WOOF! · ритейл</div>
+      </div>
+      <div class="rev">
+        <div class="rev__st">★★★★★</div>
+        <div class="rev__q">«Команда сама предложила перейти на тариф выше — без впаривания»</div>
+        <div class="rev__w">Начали со Старта, через 3 месяца перешли на Рост, когда стало тесно. Доверяю.<br><br>Основатель, квесты «Легендариум» · развлечения</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 9. ТАРИФ-ПОЛЗУНОК ===== -->
+<section class="tariff" id="tariff">
+  <div class="wrap">
+    <div class="h-block">
+      <div class="eyebrow">Тарифы</div>
+      <h2>Платите за контент,<span>а не за ставку сотрудника.</span></h2>
+    </div>
+    <div class="tbox">
+      <div>
+        <div class="steps" role="tablist">
+          <button role="tab" aria-selected="true" data-plan="0">10 постов</button>
+          <button role="tab" aria-selected="false" data-plan="1">15 постов</button>
+          <button role="tab" aria-selected="false" data-plan="2">20 постов</button>
+          <button role="tab" aria-selected="false" data-plan="3">30 постов</button>
+        </div>
+        <div class="tinfo__name" id="t-name">Старт</div>
+        <div class="tinfo__desc" id="t-desc">2–3 поста в неделю. Хватает, чтобы лента перестала выглядеть заброшенной и начала приводить клиентов.</div>
+        <div class="tinfo__row">
+          <div><b id="t-week">2–3</b><span>поста в неделю</span></div>
+          <div><b>2 пакета</b><span>правок включено</span></div>
+          <div><b>Все соцсети</b><span>без доплаты</span></div>
+        </div>
+      </div>
+      <div class="tprice">
+        <div class="tprice__num" id="t-price">4 990 ₽</div>
+        <div class="tprice__per" id="t-per">≈499 ₽ за пост</div>
+        <a href="#" class="btn btn--primary">Выбрать тариф</a>
+        <div class="tprice__note">Менять тариф можно каждый месяц</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 10. ГАРАНТИЯ ===== -->
+<section class="gbanner">
+  <div class="wrap gbanner__in">
+    <div>
+      <h2>Не зайдёт — вернём деньги</h2>
+      <p>Если после двух пакетов правок контент не подошёл, полностью возвращаем оплату за первую партию. Возврат настоящий, а не плашка на лендинге. Без годовых договоров: отмена подписки в любой момент, личный менеджер на связи в течение дня.</p>
+    </div>
+    <div class="gbanner__num">14<span>дней гарантии</span></div>
+  </div>
+</section>
+
+<!-- ===== 11. FAQ ===== -->
+<section class="faq" id="faq">
+  <div class="wrap">
+    <div class="h-block">
+      <div class="eyebrow">Вопросы и ответы</div>
+      <h2>Собрали то, что спрашивают чаще всего.<span>На остальное ответим в переписке.</span></h2>
+    </div>
+    <div class="faq__cols">
+      <div>
+        <details open><summary>Как начать работу?</summary>
+          <p>Выбираете тариф, заполняете короткий бриф (15–30 минут) и даёте доступы к соцсетям. Дальше команда работает сама — первая партия контента будет готова за 7 рабочих дней.</p></details>
+        <details><summary>Как быстро выйдет первый контент?</summary>
+          <p>Первая партия — за 7 рабочих дней: около 3 дней на контент-план и тексты, около 4 на дизайн. Дальше посты выходят по графику без вашего участия.</p></details>
+        <details><summary>Нужно ли что-то делать самому?</summary>
+          <p>Минимум: бриф на старте, доступы и согласование раз в месяц — примерно 10 минут в неделю. Фото из бизнеса приветствуются, но мы умеем работать и без них.</p></details>
+      </div>
+      <div>
+        <details><summary>Мой бизнес слишком маленький?</summary>
+          <p>Наоборот — подписка и придумана для малого бизнеса. 10 постов в месяц закрывают базовую задачу: лента живая, клиент видит, что вы работаете.</p></details>
+        <details><summary>В какие соцсети публикуете?</summary>
+          <p>ВКонтакте, Telegram, Instagram, MAX и другие подключённые площадки. Один пост уходит во все — без доплаты за каждую.</p></details>
+        <details><summary>Что с правками и гарантией?</summary>
+          <p>В каждую партию включено 2 пакета правок. Если после них контент не подошёл — возвращаем оплату за первую партию в течение 14 дней.</p></details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 12. ФИНАЛ ===== -->
+<section class="final">
+  <div class="wrap">
+    <h2>Ваш следующий месяц постов — уже почти готов</h2>
+    <p>Начните с 10 постов за 4 990 ₽: первая партия за 7 рабочих дней, не зайдёт — вернём деньги. Соцсети работают, вы занимаетесь бизнесом.</p>
+    <a href="#tariff" class="btn btn--primary">Выбрать тариф</a>
+  </div>
+</section>
+
+<script>
+// ленты клиентов
+document.querySelectorAll('.ftab').forEach(function (t) {
+  t.addEventListener('click', function () {
+    document.querySelectorAll('.ftab').forEach(function (x) { x.setAttribute('aria-selected', 'false') })
+    t.setAttribute('aria-selected', 'true')
+    document.querySelectorAll('.fpane').forEach(function (p) {
+      p.setAttribute('data-open', String(p.dataset.pane === t.dataset.feed))
+    })
+    document.querySelectorAll('.fgrid').forEach(function (g) {
+      g.setAttribute('data-open', String(g.dataset.grid === t.dataset.feed))
+    })
+  })
+})
+
+// тариф
+var PLANS = [
+  { name: 'Старт',    price: '4 990 ₽',  per: '≈499 ₽ за пост', week: '2–3',
+    desc: '2–3 поста в неделю. Хватает, чтобы лента перестала выглядеть заброшенной и начала приводить клиентов.' },
+  { name: 'Ритм',     price: '7 490 ₽',  per: '≈499 ₽ за пост', week: '3–4',
+    desc: 'Пост через день. Аудитория привыкает видеть вас регулярно — это выбор большинства клиентов.' },
+  { name: 'Рост',     price: '9 990 ₽',  per: '≈500 ₽ за пост', week: '5',
+    desc: 'Пять постов в неделю. Хватает и на продажи, и на пользу, и на прогрев одновременно.' },
+  { name: 'Максимум', price: '14 990 ₽', per: '≈500 ₽ за пост', week: '7',
+    desc: 'Пост каждый день. Лента работает как медиа: вы всё время в поле зрения клиента.' }
+]
+document.querySelectorAll('.steps button').forEach(function (b) {
+  b.addEventListener('click', function () {
+    document.querySelectorAll('.steps button').forEach(function (x) { x.setAttribute('aria-selected', 'false') })
+    b.setAttribute('aria-selected', 'true')
+    var p = PLANS[+b.dataset.plan]
+    document.getElementById('t-name').textContent = p.name
+    document.getElementById('t-desc').textContent = p.desc
+    document.getElementById('t-price').textContent = p.price
+    document.getElementById('t-per').textContent = p.per
+    document.getElementById('t-week').textContent = p.week
+  })
+})
+</script>
+</body>
+</html>
