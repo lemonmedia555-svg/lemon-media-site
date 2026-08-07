@@ -4,77 +4,84 @@
    Структура: токены → reset → типографика → layout → компоненты → секции → адаптив
    ============================================================ */
 
-/* === ТОКЕНЫ ДИЗАЙН-СИСТЕМЫ === */
+/* === ТОКЕНЫ ДИЗАЙН-СИСТЕМЫ ===
+   Значения больше здесь НЕ живут. Единственный источник — tokens.css
+   (копия пакета «Бренд/design-system»). Ниже только алиасы: старые
+   имена переменных сайта отображены на канон --lm-*, чтобы вёрстка
+   шести страниц не переписывалась разом.
+   Новую вёрстку писать сразу на var(--lm-*), не на алиасы. */
+@import url("tokens.css");
+
 :root {
   /* Палитра — основные цвета */
-  --yellow: #FFDD2D;           /* основной акцентный жёлтый */
-  --yellow-hover: #F2C800;     /* потемнённый для :hover */
-  --yellow-soft: #FFF1A6;      /* подложка для выделений */
-  --yellow-bg: #FFFAE6;        /* очень светлый фон */
+  --yellow: var(--lm-color-lemon-500);        /* канон #EECB03, был #FFDD2D */
+  --yellow-hover: var(--lm-color-lemon-600);
+  --yellow-soft: var(--lm-color-lemon-100);
+  --yellow-bg: color-mix(in srgb, var(--lm-color-lemon-100) 45%, #fff);
 
-  --ink: #1B1B1B;              /* основной чёрный для текста */
-  --ink-soft: #2A2D32;         /* чуть мягче для UI */
+  --ink: var(--lm-text-primary);
+  --ink-soft: var(--lm-color-neutral-800);
 
   /* Серая шкала */
-  --gray-900: #2A2D32;
-  --gray-700: #5A5F66;
-  --gray-500: #8A8F95;
-  --gray-300: #D6D8DB;
-  --gray-200: #E6E7EA;
-  --gray-100: #F2F3F5;
-  --gray-50:  #F8F9FA;
-  --white:    #FFFFFF;
+  --gray-900: var(--lm-color-neutral-800);
+  --gray-700: var(--lm-color-muted);
+  --gray-500: var(--lm-color-muted-2);
+  --gray-300: var(--lm-color-border-2);
+  --gray-200: var(--lm-color-border);
+  --gray-100: var(--lm-color-surface);
+  --gray-50:  var(--lm-color-surface-2);
+  --white:    var(--lm-color-neutral-000);
 
   /* Семантические */
-  --success: #2EB872;
-  --danger:  #E5484D;
-  --info:    #4361EE;
+  --success: var(--lm-color-success);
+  --danger:  var(--lm-color-danger);
+  --info:    var(--lm-color-info);
 
   /* Радиусы */
-  --r-xs: 6px;
-  --r-sm: 10px;
-  --r-md: 16px;
-  --r-lg: 24px;
-  --r-xl: 32px;
-  --r-pill: 999px;
+  --r-xs: 6px;                          /* локальный, в каноне нет */
+  --r-sm: var(--lm-radius-sm);
+  --r-md: var(--lm-radius-md);
+  --r-lg: var(--lm-radius-lg);
+  --r-xl: 32px;                         /* локальный, в каноне нет */
+  --r-pill: var(--lm-radius-pill);
 
   /* Тени */
-  --shadow-sm: 0 1px 2px rgba(27,27,27,.06), 0 1px 1px rgba(27,27,27,.04);
-  --shadow-md: 0 4px 12px rgba(27,27,27,.08), 0 2px 4px rgba(27,27,27,.04);
-  --shadow-lg: 0 16px 40px rgba(27,27,27,.12), 0 4px 12px rgba(27,27,27,.06);
+  --shadow-sm: var(--lm-shadow-soft);
+  --shadow-md: var(--lm-shadow-card);
+  --shadow-lg: var(--lm-shadow-pop);
 
   /* Типографика */
-  --font-sans: "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  --fs-h1: clamp(2.25rem, 5vw, 4rem);
-  --fs-h2: clamp(1.75rem, 3.5vw, 2.75rem);
-  --fs-h3: clamp(1.25rem, 2.2vw, 1.75rem);
-  --fs-h4: 1.25rem;
-  --fs-lead: clamp(1.0625rem, 1.4vw, 1.25rem);
-  --fs-body: 1rem;
-  --fs-sm: 0.875rem;
-  --fs-xs: 0.75rem;
-  --lh-tight: 1.1;
-  --lh-snug: 1.25;
-  --lh-normal: 1.5;
-  --lh-relaxed: 1.65;
+  --font-sans: var(--lm-font-sans);
+  --fs-h1: var(--lm-fs-h1);
+  --fs-h2: var(--lm-fs-h2);
+  --fs-h3: var(--lm-fs-h3);
+  --fs-h4: var(--lm-fs-lead);
+  --fs-lead: var(--lm-fs-lead);
+  --fs-body: var(--lm-fs-body);
+  --fs-sm: var(--lm-fs-small);
+  --fs-xs: var(--lm-fs-eyebrow);
+  --lh-tight: var(--lm-lh-heading);
+  --lh-snug: 1.25;                      /* локальный */
+  --lh-normal: 1.5;                     /* локальный */
+  --lh-relaxed: var(--lm-lh-body);
 
   /* Спейсинг */
-  --sp-1: 4px;
-  --sp-2: 8px;
-  --sp-3: 12px;
-  --sp-4: 16px;
-  --sp-5: 24px;
-  --sp-6: 32px;
-  --sp-7: 48px;
-  --sp-8: 64px;
-  --sp-9: 96px;
-  --sp-10: 128px;
+  --sp-1: var(--lm-space-4);
+  --sp-2: var(--lm-space-8);
+  --sp-3: var(--lm-space-12);
+  --sp-4: var(--lm-space-16);
+  --sp-5: var(--lm-space-24);
+  --sp-6: var(--lm-space-32);
+  --sp-7: var(--lm-space-48);
+  --sp-8: var(--lm-space-64);
+  --sp-9: var(--lm-space-96);
+  --sp-10: var(--lm-space-128);
 
   /* Контейнер */
-  --container-max: 1240px;
-  --container-padding: 24px;
+  --container-max: var(--lm-container);
+  --container-padding: var(--lm-space-24);
 
-  /* Переходы */
+  /* Переходы (в каноне пока нет — локальные) */
   --t-fast: 120ms ease;
   --t-base: 200ms ease;
   --t-slow: 320ms ease;
