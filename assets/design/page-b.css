@@ -1,19 +1,34 @@
 /* ============================================================
-   ВАРИАНТ B — слой поверх page.css / hero-final.css
-   Подключается последним, только для index-design-b.html (body.b).
-   Что меняем:
-   1. Первый экран — тёмный, витрина работ во всю ширину экрана,
-      текст лежит поверх стеклянной карточкой слева.
-      Работы на тёмном светятся и читаются как главный герой.
-   2. Композиция текста плотнее: заголовок в две строки, лид короче
-      по ширине, преимущества — компактной сеткой без плашек.
-   3. Тёмный тянется через площадки и цифры, потом резкий выход
-      в свет — приём Битрикс24 «тяжёлый верх → светлое мясо».
-   4. Заголовки секций в два кегля (вторая строка приглушена).
-   Тексты не меняются нигде — только оформление.
+   ВАРИАНТ B — полный слой оформления страницы.
+   Подключается последним, работает только для body.b.
+   Тексты, состав и порядок блоков не трогаются — только вид.
+
+   Ритм страницы (три тёмные опоры, между ними светлое мясо):
+     ТЁМНОЕ  hero → площадки → цифры  ─ лимонная линия ─
+     СВЕТЛОЕ работы · ситуации · что входит · форматы · цены
+     ТЁМНОЕ  продукт изнутри
+     СВЕТЛОЕ почему цена · сравнение
+     ЛИМОН   гарантия
+     СВЕТЛОЕ отзывы · FAQ
+     ТЁМНОЕ  финальный CTA
    ============================================================ */
 
-/* ============ 1. ТЁМНЫЙ ПЕРВЫЙ ЭКРАН ============ */
+/* ---------- токены тёмной темы (вместо россыпи хардкодов) ---------- */
+body.b {
+  --b-surface:      #0B0912;   /* базовая тёмная поверхность */
+  --b-surface-2:    rgba(255, 255, 255, .05);
+  --b-surface-3:    rgba(255, 255, 255, .08);
+  --b-border:       rgba(255, 255, 255, .13);
+  --b-border-2:     rgba(255, 255, 255, .22);
+  --b-text:         #FFFFFF;
+  --b-text-2:       #C9CAD6;   /* основной текст на тёмном */
+  --b-muted:        #9A9BAA;   /* подписи на тёмном */
+  --b-shadow:       0 22px 50px -18px rgba(0, 0, 0, .75);
+}
+
+/* ============================================================
+   1. ПЕРВЫЙ ЭКРАН — витрина во всю ширину, текст поверх
+   ============================================================ */
 
 body.b .hf-hero {
   grid-template-columns: minmax(0, 1fr);
@@ -24,213 +39,433 @@ body.b .hf-hero {
 body.b .hf-hero__bg-l,
 body.b .hf-hero__bg-r { display: none; }
 
-/* витрина — фоном на весь экран */
-body.b .hf-stage {
-  position: absolute; inset: 0; z-index: 1;
-  padding-left: 0;
-}
+body.b .hf-stage { position: absolute; inset: 0; z-index: 1; padding-left: 0; }
 body.b .hf-cols {
-  height: 100%;
-  gap: 14px;
-  padding: 0 14px;
+  height: 100%; gap: 14px; padding: 0 14px;
   -webkit-mask-image: linear-gradient(180deg, transparent, #000 9%, #000 91%, transparent);
   mask-image: linear-gradient(180deg, transparent, #000 9%, #000 91%, transparent);
 }
 body.b .hf-track { gap: 14px; }
-/* работы на тёмном: мягкое свечение вместо тени, чуть приглушены под текстом */
 body.b .hf-stage .w {
-  box-shadow: 0 22px 50px -18px rgba(0, 0, 0, .75);
+  box-shadow: var(--b-shadow);
   border-radius: var(--lm-radius-md);
 }
 body.b .hf-stage .w:hover { box-shadow: 0 26px 60px -16px rgba(238, 203, 3, .28); }
-/* затемнение слева, чтобы текст читался, а работы не пропадали */
+
+/* шторка под текстом */
 body.b .hf-hero::before {
   content: ""; position: absolute; inset: 0; z-index: 2; pointer-events: none;
   background:
-    linear-gradient(96deg, #0B0912 0%, #0B0912 34%, rgba(11, 9, 18, .96) 42%, rgba(11, 9, 18, .62) 52%, rgba(11, 9, 18, .18) 64%, transparent 76%),
+    linear-gradient(96deg, var(--b-surface) 0%, var(--b-surface) 34%, rgba(11, 9, 18, .96) 42%,
+      rgba(11, 9, 18, .62) 52%, rgba(11, 9, 18, .18) 64%, transparent 76%),
     radial-gradient(70% 60% at 10% 42%, rgba(125, 0, 234, .30), transparent 70%);
 }
-
-/* лента растворяется в тёмном к низу — иначе на стыке с площадками обрыв */
 body.b .hf-hero::after {
   content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 190px;
   z-index: 2; pointer-events: none;
-  background: linear-gradient(0deg, #0B0912 0%, rgba(11, 9, 18, .75) 45%, transparent 100%);
+  background: linear-gradient(0deg, var(--b-surface) 0%, rgba(11, 9, 18, .75) 45%, transparent 100%);
 }
 
-/* текст поверх */
+/* текст: считаем отступ от контейнера, а не от 100vw — иначе съезжает с сетки */
 body.b .hf-copy {
   position: relative; z-index: 3;
-  padding: 132px 24px 74px max(24px, calc((100vw - var(--lm-container)) / 2 + 24px));
+  padding: 132px 24px 74px;
+  padding-left: max(20px, calc((100% - var(--lm-container)) / 2 + 20px));
   pointer-events: none;
 }
 body.b .hf-copy__inner { max-width: 640px; pointer-events: auto; }
 
-body.b .hf-rating { color: #B9BAC6; font-size: 15px; }
-body.b .hf-rating b { color: #fff; }
-
-body.b .hf-kicker {
-  margin-top: 20px;
-  color: var(--lm-color-lemon-500);
-  letter-spacing: .12em;
-}
+body.b .hf-rating { color: var(--b-text-2); font-size: 15px; }
+body.b .hf-rating b { color: var(--b-text); }
+body.b .hf-kicker { margin-top: 20px; color: var(--lm-color-lemon-500); letter-spacing: .12em; }
 body.b .hf-h1 {
   margin-top: 14px;
-  font-size: clamp(34px, 4.4vw, 62px);
-  line-height: 1.02;
-  letter-spacing: -.035em;
-  color: #fff;
-  max-width: 15ch;
+  font-size: clamp(34px, 4.4vw, 58px);
+  line-height: 1.03; letter-spacing: -.035em;
+  color: var(--b-text); max-width: 15ch;
 }
-/* цена — главный акцент экрана, лимон вместо фиолетового */
-body.b .hf-h1 em {
-  color: var(--lm-color-lemon-500);
-  display: block;
-}
+body.b .hf-h1 em { color: var(--lm-color-lemon-500); display: block; }
 body.b .hf-lead {
-  margin-top: 20px;
-  font-size: 18px; line-height: 1.6;
-  color: #C3C4D0;
-  max-width: 52ch;
+  margin-top: 20px; font-size: 18px; line-height: 1.6;
+  color: var(--b-text-2); max-width: 46ch;
 }
-/* преимущества: две колонки без плашек — плотнее и не спорят с работами */
-body.b .hf-list {
-  margin-top: 26px;
-  gap: 12px 26px;
-}
+body.b .hf-list { margin-top: 26px; gap: 12px 26px; }
 body.b .hf-list li {
   background: none; border: 0; padding: 0;
-  font-size: 15.5px; line-height: 1.4;
-  color: #D5D6E0;
+  font-size: 16px; line-height: 1.4; color: var(--b-text-2);
 }
 body.b .hf-tick {
   width: 20px; height: 20px; border-radius: var(--lm-radius-sm);
-  background: rgba(238, 203, 3, .16);
-  color: var(--lm-color-lemon-500);
-  font-size: 11px;
+  background: rgba(238, 203, 3, .16); color: var(--lm-color-lemon-500); font-size: 11px;
 }
 body.b .hf-actions { margin-top: 32px; }
 body.b .hf-actions .lm-btn--primary { box-shadow: 0 14px 36px -10px rgba(238, 203, 3, .55); }
 body.b .hf-actions .lm-btn--ghost {
-  background: rgba(255, 255, 255, .07);
-  border-color: rgba(255, 255, 255, .26);
-  color: #fff;
-  backdrop-filter: blur(8px);
+  background: var(--b-surface-3); border-color: var(--b-border-2);
+  color: var(--b-text); backdrop-filter: blur(8px);
 }
-body.b .hf-note { color: #9A9BAA; margin-top: 20px; }
-body.b .hf-note b { color: #fff; }
+body.b .hf-note { color: var(--b-muted); margin-top: 20px; max-width: 60ch; }
+body.b .hf-note b { color: var(--b-text); }
 
-/* плашки-подсказки: тёмное стекло вместо белых пилюль */
 body.b .hf-pin {
-  background: rgba(255, 255, 255, .1);
-  border: 1px solid rgba(255, 255, 255, .16);
-  backdrop-filter: blur(10px);
-  color: #fff;
+  z-index: 6;
+  background: var(--b-surface-3); border: 1px solid var(--b-border);
+  backdrop-filter: blur(10px); color: var(--b-text);
   box-shadow: 0 16px 40px -16px rgba(0, 0, 0, .8);
 }
 body.b .hf-pin .num { color: var(--lm-color-lemon-500); }
-/* обе плашки — выше слоя затемнения, иначе тонут в тумане */
-body.b .hf-pin { z-index: 6; }
 body.b .hf-pin--top { top: 122px; right: 30px; left: auto; }
-/* нижняя поднята над полосой затемнения (190px) */
 body.b .hf-pin--bottom { bottom: 214px; right: 30px; }
 
-/* подпись-подсказка, что работы живые */
 body.b .b-hint {
-  position: relative; z-index: 7;
-  margin-top: 20px;
+  position: relative; z-index: 7; margin-top: 20px;
   display: inline-flex; align-items: center; gap: 10px;
   font: 700 13.5px/1 var(--lm-font-sans);
   color: #E6E7EF;
-  background: rgba(28, 24, 44, .92);
-  border: 1px solid rgba(255, 255, 255, .18);
-  border-radius: 100px; padding: 11px 20px;
-  backdrop-filter: blur(14px);
-  box-shadow: 0 18px 44px -18px rgba(0, 0, 0, .9);
+  background: rgba(28, 24, 44, .92); border: 1px solid var(--b-border-2);
+  border-radius: var(--lm-radius-pill); padding: 11px 20px;
+  backdrop-filter: blur(14px); box-shadow: 0 18px 44px -18px rgba(0, 0, 0, .9);
 }
 body.b .b-hint i {
   font-style: normal; font-size: 16px;
-  color: var(--lm-color-neutral-1000);
-  background: var(--lm-color-lemon-500);
+  color: var(--lm-color-neutral-1000); background: var(--lm-color-lemon-500);
   width: 20px; height: 20px; border-radius: 50%;
   display: inline-flex; align-items: center; justify-content: center;
 }
 
-/* ============ 2. ТЁМНЫЙ ХВОСТ: ПЛОЩАДКИ + ЦИФРЫ ============ */
-
-body.b .dz-platforms {
-  background: #0B0912;
-  padding-top: 0;
-}
-body.b .dz-platforms__card {
-  background: rgba(255, 255, 255, .05);
-  border: 1px solid rgba(255, 255, 255, .12);
-  box-shadow: none;
-}
-body.b .dz-platforms__text strong { color: #fff; }
-body.b .dz-platforms__text span { color: #9A9BAA; }
-body.b .dz-social { color: #D5D6E0; }
-
-/* Тёмное кончается ПО ГРАНИЦЕ секции, а не ножом поперёк карточки.
-   Переход держит лимонная линия-разделитель. */
-body.b .dz-proof {
-  background: #0B0912;
-  padding-bottom: 64px;
-  position: relative;
-}
-body.b .dz-proof::after {
-  content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 4px;
-  background: linear-gradient(90deg, transparent, var(--lm-color-lemon-500) 22%, var(--lm-color-lemon-500) 78%, transparent);
-}
-body.b .lms-proofbar {
-  background: rgba(255, 255, 255, .05);
-  border: 1px solid rgba(255, 255, 255, .12);
-  backdrop-filter: blur(8px);
-}
-body.b .lms-proofbar__item strong { color: var(--lm-color-lemon-500); font-size: clamp(30px, 3vw, 42px); }
-body.b .lms-proofbar__item span { color: #A8A9B6; }
-body.b .lms-proofbar__item + .lms-proofbar__item { border-left-color: rgba(255, 255, 255, .12); }
-
-/* ============ 3. ГАРАНТИЯ — БАННЕР ВО ВСЮ ШИРИНУ ============ */
-
-body.b .dz-guarantee,
-body.b #guarantee .lms-guarantee {
-  background: var(--lm-grad-lemon);
-  color: var(--lm-text-on-lemon);
-  border: 0;
-}
-body.b #guarantee .lms-guarantee h2,
-body.b #guarantee .lms-guarantee strong { color: var(--lm-text-on-lemon); }
-/* на лимоне только чёрный — канон DESIGN.md §3, без изобретённых оливковых */
-body.b #guarantee .lms-guarantee p,
-body.b #guarantee .lms-guarantee li,
-body.b #guarantee .lms-guarantee .lm-eyebrow { color: var(--lm-text-on-lemon); opacity: .72; }
-body.b #guarantee .lms-guarantee .lms-split__list li { color: var(--lm-text-on-lemon); opacity: .85; }
-/* медаль: жёлтый круг на жёлтом не читается — делаем чёрный диск */
-body.b #guarantee .lms-guarantee__mark,
-body.b #guarantee .guarantee-mark {
-  background: var(--lm-surface-inverse);
-  color: var(--lm-color-lemon-500);
-  box-shadow: 0 20px 50px -18px rgba(0, 0, 0, .45);
-}
-
-/* ============ 5. МОБИЛЬНАЯ ============ */
-
-/* ============ 4. ТАЧ: СТРЕЛКИ ЛИСТАНИЯ ВИДНЫ ВСЕГДА ============ */
-/* На тач-устройствах hover не наступает — главный приём страницы
-   (листание работ) без этого на телефоне не существует. */
+/* стрелки листания: на тач и с клавиатуры — видны всегда */
 @media (hover: none) {
   body.b .hf-stage .w__nav { opacity: 1; }
   body.b .hf-stage .w__hint { opacity: .9; }
 }
-/* и клавиатура: стрелки проявляются при фокусе внутри карточки */
 body.b .hf-stage .w:focus-within .w__nav { opacity: 1; }
+@media (prefers-reduced-motion: reduce) {
+  body.b .w__hint { animation: none; }
+}
+
+/* ============================================================
+   2. ТЁМНЫЙ ХВОСТ: ПЛОЩАДКИ + ЦИФРЫ
+   ============================================================ */
+
+body.b .dz-platforms { background: var(--b-surface); padding-top: 0; }
+body.b .dz-platforms__card {
+  background: var(--b-surface-2); border: 1px solid var(--b-border); box-shadow: none;
+}
+body.b .dz-platforms__text strong { color: var(--b-text); }
+body.b .dz-platforms__text span { color: var(--b-muted); }
+body.b .dz-social { color: var(--b-text-2); }
+
+/* тёмное кончается по границе секции; переход держит лимонная линия */
+body.b .dz-proof { background: var(--b-surface); padding-bottom: 64px; position: relative; }
+body.b .dz-proof::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 4px;
+  background: linear-gradient(90deg, transparent, var(--lm-color-lemon-500) 22%,
+    var(--lm-color-lemon-500) 78%, transparent);
+}
+body.b .lms-proofbar {
+  background: var(--b-surface-2); border: 1px solid var(--b-border); backdrop-filter: blur(8px);
+}
+body.b .lms-proofbar__item strong { color: var(--lm-color-lemon-500); font-size: clamp(30px, 3vw, 42px); }
+body.b .lms-proofbar__item span { color: var(--b-muted); }
+body.b .lms-proofbar__item + .lms-proofbar__item { border-left-color: var(--b-border); }
+body.b .dz-links a { color: var(--lm-color-purple-600); font-weight: 700; }
+
+/* ============================================================
+   3. РИТМ И ШАПКИ СЕКЦИЙ
+   Девять одинаковых центрированных шапок — главная причина,
+   почему страница читалась как шеренга. Разводим по типам.
+   ============================================================ */
+
+body.b #works   { background: var(--lm-color-cool-050); }
+body.b #fit     { background: var(--lm-color-neutral-000); }
+body.b #included{ background: var(--lm-color-surface); }
+body.b #formats { background: var(--lm-color-neutral-000); }
+body.b #prices  { background: var(--lm-color-cool-050); }
+body.b #why     { background: var(--lm-color-neutral-000); }
+body.b #comparison { background: var(--lm-color-surface); }
+body.b #reviews { background: var(--lm-color-neutral-000); }
+body.b #faq     { background: var(--lm-color-cool-050); }
+
+/* дыхание секций: плотные и разреженные чередуются */
+body.b .dz-section { padding: 96px 0; }
+body.b #fit, body.b #why { padding: 76px 0; }
+body.b #workspace { padding: 104px 0; }
+
+/* шапка по умолчанию — слева, с лимонной чертой (а не по центру) */
+body.b .lms-section__head {
+  text-align: left; max-width: 900px; margin-left: 0;
+  position: relative; padding-left: 22px;
+}
+body.b .lms-section__head::before {
+  content: ""; position: absolute; left: 0; top: 6px; bottom: 6px; width: 4px;
+  border-radius: 4px; background: var(--lm-color-lemon-500);
+}
+body.b .lms-section__head h2 { font-size: clamp(30px, 3.4vw, 46px); line-height: 1.08; }
+body.b .lms-section__head p { max-width: 68ch; }
+/* центрированные — только там, где блок сам по себе симметричен */
+body.b #formats .lms-section__head,
+body.b #prices .lms-section__head {
+  text-align: center; margin: 0 auto; padding-left: 0;
+}
+body.b #formats .lms-section__head::before,
+body.b #prices .lms-section__head::before { display: none; }
+body.b #formats .lms-section__head p,
+body.b #prices .lms-section__head p { margin-left: auto; margin-right: auto; }
+/* надзаголовки: мелкий фиолетовый на белом канон запрещает */
+body.b .lm-eyebrow { color: var(--lm-color-muted-2); }
+body.b .lms-section__head .lm-eyebrow { color: var(--lm-color-muted); font-weight: 800; }
+
+/* ============================================================
+   4. РАБОТЫ
+   ============================================================ */
+
+/* CTA на лимонной подложке не должен быть лимонным */
+body.b .lms-case-feature .lm-btn--primary {
+  background: var(--lm-surface-inverse); color: var(--lm-text-inverse); box-shadow: none;
+}
+body.b .lms-case-feature .lm-btn--primary:hover { transform: translateY(-2px); }
+body.b .lms-case-card { transition: transform .15s ease, box-shadow .15s ease; }
+body.b .lms-case-card:hover { transform: translateY(-4px); box-shadow: var(--lm-shadow-pop); }
+
+/* ============================================================
+   5. СИТУАЦИИ — не четыре одинаковые карточки, а «список болей»
+   с крупным номером и цветной левой границей
+   ============================================================ */
+
+body.b #fit .cards-4 { grid-template-columns: repeat(2, 1fr) !important; gap: 14px !important; }
+body.b #fit .lm-card {
+  display: grid; grid-template-columns: 56px 1fr; column-gap: 20px; align-items: start;
+  padding: 26px 30px; border-left: 3px solid var(--lm-color-purple-300);
+  border-radius: 0 var(--lm-radius-lg) var(--lm-radius-lg) 0;
+  background: var(--lm-color-surface-2);
+}
+body.b #fit .lm-card__num {
+  font-size: 38px; font-weight: 800; line-height: 1;
+  color: var(--lm-color-border-2); grid-row: span 2;
+}
+body.b #fit .lm-card h3 { font-size: 20px !important; margin: 0; grid-column: 2; }
+body.b #fit .lm-card p { font-size: 15.5px !important; max-width: 46ch; grid-column: 2; margin-top: 8px !important; }
+/* «вместо → стало»: чёрные плашки с лимонным акцентом (базовый стиль),
+   без лимонной подложки — иначе чёрное на жёлтом слепит */
+body.b .lms-band { margin-top: 22px !important; }
+
+/* ============================================================
+   6. ЧТО ВХОДИТ — уравнение крупно, карточки строго 3×2
+   ============================================================ */
+
+body.b .lms-equation {
+  background: var(--lm-color-neutral-000); border-radius: var(--lm-radius-lg);
+  padding: 30px 28px; box-shadow: var(--lm-shadow-card);
+}
+body.b .lms-equation__part strong { font-size: clamp(28px, 3vw, 40px); }
+body.b .lms-equation__part--result strong { color: var(--lm-color-purple-600); }
+body.b .lms-equation__op { color: var(--lm-color-muted-2); font-size: 22px; }
+body.b #included > .lm-container > div:last-child {
+  grid-template-columns: repeat(3, 1fr) !important;
+}
+body.b #included .lm-card {
+  background: var(--lm-color-neutral-000); border: 1px solid var(--lm-color-border);
+  border-radius: var(--lm-radius-lg); padding: 26px;
+}
+body.b #included .lm-card__num {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 34px; height: 34px; border-radius: var(--lm-radius-sm);
+  background: var(--lm-surface-lemon-soft); color: var(--lm-text-primary);
+  font-size: 13px; font-weight: 800; margin-bottom: 14px;
+}
+body.b #included .lm-card b { font-size: 19px; display: block; }
+
+/* ============================================================
+   7. ФОРМАТЫ — колонки выровнены по верху, пустота убрана
+   ============================================================ */
+
+body.b .dz-guide { align-items: start; }
+body.b .dz-guide__photo img { border-radius: var(--lm-radius-lg); }
+body.b .dz-guide__person h3 { font-size: 22px; margin-top: 12px; }
+body.b .dz-guide__person > p { font-size: 15.5px; max-width: 42ch; }
+body.b #formats .lms-tabs { align-items: start; }
+body.b #formats .lms-tabs__panel { min-height: 560px; }
+body.b #formats .lms-tabs__panel figure { display: grid; justify-items: center; }
+body.b #formats figcaption { font-size: 13.5px; color: var(--lm-color-muted-2); margin-top: 12px; }
+body.b .dz-note {
+  max-width: 76ch; margin-left: auto; margin-right: auto;
+  padding-left: 24px; padding-right: 24px;
+}
+
+/* ============================================================
+   8. КАЛЬКУЛЯТОР — главный интерактив страницы
+   ============================================================ */
+
+body.b .dz-calc {
+  background: var(--lm-color-neutral-000); border-radius: var(--lm-radius-lg);
+  box-shadow: var(--lm-shadow-pop); padding: 34px;
+}
+body.b .dz-calc__step + .dz-calc__step { border-top: 1px solid var(--lm-color-border); padding-top: 26px; }
+body.b .dz-calc__step small {
+  color: var(--lm-color-purple-600); font-weight: 800; letter-spacing: .08em;
+}
+/* рекомендованный объём — точка входа для взгляда (приём /prices/ Битрикса) */
+body.b .dz-plan { position: relative; }
+body.b .dz-plan[data-plan="15"]::after {
+  content: "чаще всего берут";
+  position: absolute; top: -11px; left: 50%; transform: translateX(-50%);
+  background: var(--lm-surface-lemon); color: var(--lm-text-on-lemon);
+  font-size: 10.5px; font-weight: 800; text-transform: uppercase; letter-spacing: .06em;
+  padding: 3px 10px; border-radius: var(--lm-radius-pill); white-space: nowrap;
+}
+body.b .dz-plan.is-active { border-color: var(--lm-color-neutral-950); }
+/* кубики: один жёлтый вместо двух, роль подписана, тап-цель крупнее */
+body.b .dz-cubes { gap: 8px; }
+body.b .dz-cube {
+  min-width: 44px; min-height: 44px; border-radius: var(--lm-radius-sm);
+  font-size: 10px; font-weight: 800; line-height: 1.15;
+  display: flex; align-items: center; justify-content: center; text-align: center;
+  padding: 4px; color: var(--lm-color-muted);
+  background: var(--lm-color-surface); border: 1px solid var(--lm-color-border);
+}
+body.b .dz-cube.is-carousel,
+body.b .dz-cube.is-on {
+  background: var(--lm-surface-lemon); border-color: transparent;
+  color: var(--lm-text-on-lemon); box-shadow: var(--lm-glow-lemon);
+}
+body.b .dz-calc__sum { font-size: clamp(34px, 4vw, 52px); }
+body.b .dz-calc__note { max-width: 46ch; }
+
+/* ============================================================
+   9. ПРОДУКТ ИЗНУТРИ — вторая тёмная опора, тот же тёмный,
+   что и первый экран (а не свой отдельный)
+   ============================================================ */
+
+body.b #workspace { background: var(--lm-grad-space); }
+body.b .dz-inside { background: none; padding: 0; }
+body.b #workspace .lms-section__head::before { background: var(--lm-color-lemon-500); }
+body.b #workspace h2 { color: var(--b-text); }
+body.b #workspace .lms-section__head p { color: var(--b-text-2); }
+body.b #workspace .lms-tabs__btn {
+  background: var(--b-surface-2); border: 1px solid var(--b-border); color: var(--b-text-2);
+}
+body.b #workspace .lms-tabs__btn.is-active {
+  background: var(--b-surface-3); border-color: var(--lm-color-lemon-500); color: var(--b-text);
+}
+body.b #workspace .lms-tabs__btn small { color: var(--b-muted); }
+body.b #workspace figcaption { color: var(--b-muted); }
+body.b .dz-inside__facts article { background: var(--b-surface-2); border: 1px solid var(--b-border); }
+body.b .dz-inside__facts strong { color: var(--lm-color-lemon-500); }
+body.b .dz-inside__facts span { color: var(--b-muted); }
+body.b .dz-inside__shot { border-radius: var(--lm-radius-md); box-shadow: var(--b-shadow); }
+
+/* ============================================================
+   10. ПОЧЕМУ ЦЕНА — из четырёх абзацев в «разбор с номерами»
+   ============================================================ */
+
+body.b .dz-model { grid-template-columns: repeat(4, 1fr); gap: 14px; counter-reset: mdl; }
+body.b .dz-model__item {
+  background: var(--lm-color-surface); border-radius: var(--lm-radius-lg);
+  padding: 26px 24px 24px; border: 0; position: relative; counter-increment: mdl;
+}
+body.b .dz-model__item::before {
+  content: counter(mdl, decimal-leading-zero);
+  display: block; font-size: 12px; font-weight: 800; letter-spacing: .1em;
+  color: var(--lm-color-purple-600); margin-bottom: 12px;
+}
+body.b .dz-model__item strong { font-size: 19px; display: block; margin-bottom: 8px; }
+body.b .dz-model__item span { font-size: 15.5px; color: var(--lm-color-muted); }
+body.b #why .dz-note { max-width: 72ch; margin: 22px auto 0; text-align: center; }
+/* три плашки одного смысла — одним цветом, а не тремя */
+body.b .dz-mission { justify-content: center; }
+body.b .dz-mission .lm-badge {
+  background: var(--lm-surface-purple-soft); color: var(--lm-text-primary); border: 0;
+}
+
+/* ============================================================
+   11. СРАВНЕНИЕ
+   ============================================================ */
+
+body.b #comparison table { background: var(--lm-color-neutral-000); border-radius: var(--lm-radius-lg); overflow: hidden; }
+body.b #comparison tr.ours,
+body.b #comparison tr.lms-row--ours { background: var(--lm-surface-lemon-soft); }
+
+/* ============================================================
+   12. ГАРАНТИЯ — лимонный баннер
+   ============================================================ */
+
+body.b #guarantee { background: var(--lm-color-neutral-000); }
+body.b .lms-guarantee {
+  background: var(--lm-grad-lemon); color: var(--lm-text-on-lemon); border: 0;
+}
+body.b .lms-guarantee h2,
+body.b .lms-guarantee strong { color: var(--lm-text-on-lemon); }
+body.b .lms-guarantee p,
+body.b .lms-guarantee li { color: var(--lm-text-on-lemon); opacity: .85; }
+body.b .lms-guarantee .lm-eyebrow { color: var(--lm-text-on-lemon); opacity: .7; }
+body.b .lms-guarantee__mark {
+  background: var(--lm-surface-inverse); color: var(--lm-color-lemon-500);
+  box-shadow: 0 20px 50px -18px rgba(0, 0, 0, .45);
+}
+body.b .lms-guarantee .lm-btn--ghost {
+  background: var(--lm-color-neutral-000); border-color: transparent; color: var(--lm-text-primary);
+}
+
+/* ============================================================
+   13. ОТЗЫВЫ — карточки с аватаром и именем вместо анонимных
+   ============================================================ */
+
+body.b #reviews .lm-card { display: flex; flex-direction: column; }
+body.b #reviews .lm-card h3 { font-size: 20px; margin-top: 14px; }
+body.b #reviews .lm-card p { font-size: 15.5px; color: var(--lm-color-muted); }
+/* бейджи одного смысла — одним цветом */
+body.b #reviews .lm-badge {
+  background: var(--lm-surface-lemon-soft); color: var(--lm-text-primary); border: 0;
+}
+body.b .b-author {
+  display: flex; align-items: center; gap: 12px;
+  margin-top: auto; padding-top: 18px; border-top: 1px solid var(--lm-color-border);
+}
+body.b .b-author__ava {
+  width: 40px; height: 40px; border-radius: 50%; flex: 0 0 auto;
+  background: var(--lm-surface-inverse); color: var(--lm-color-lemon-500);
+  display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 14px;
+}
+body.b .b-author__name { font-size: 14px; font-weight: 800; display: block; }
+body.b .b-author__role { font-size: 12.5px; color: var(--lm-color-muted-2); }
+
+/* ============================================================
+   14. FAQ
+   ============================================================ */
+
+body.b #faq .lms-faq__item { background: var(--lm-color-neutral-000); }
+body.b #faq summary { font-size: 18px; }
+
+/* ============================================================
+   15. ФИНАЛ — третья тёмная опора
+   ============================================================ */
+
+body.b .dz-final,
+body.b .lms-final { background: var(--lm-grad-brand-dark); }
+
+/* ============================================================
+   ОБЩЕЕ: типографика и длина строк
+   ============================================================ */
+
+body.b p { text-wrap: pretty; }
+body.b h1, body.b h2, body.b h3 { text-wrap: balance; }
+body.b .lm-card p, body.b .dz-model__item span { max-width: 52ch; }
+
+/* доступность: невидимые стрелки не должны ловить табуляцию */
+body.b .hf-stage .w__nav { transition: opacity .15s ease; }
+@media (hover: hover) {
+  body.b .hf-stage .w:not(:hover):not(:focus-within) .w__nav { pointer-events: none; }
+}
+
+/* ============================================================
+   МОБИЛЬНАЯ
+   ============================================================ */
 
 @media (max-width: 1000px) {
   body.b .hf-hero { min-height: auto; }
-  /* затемнение только под текстом, витрина ниже остаётся яркой */
   body.b .hf-hero::before {
-    background: linear-gradient(180deg, #0B0912 0%, #0B0912 62%, rgba(11, 9, 18, .55) 82%, transparent 100%);
+    background: linear-gradient(180deg, var(--b-surface) 0%, var(--b-surface) 62%,
+      rgba(11, 9, 18, .55) 82%, transparent 100%);
   }
   body.b .hf-hero::after { display: none; }
   body.b .hf-copy { padding: 118px 20px 34px; }
@@ -240,8 +475,13 @@ body.b .hf-stage .w:focus-within .w__nav { opacity: 1; }
     mask-image: linear-gradient(180deg, #000 0%, #000 86%, transparent);
   }
   body.b .hf-list { grid-template-columns: 1fr; }
-  /* подсказку про листание на телефоне не прячем — там она нужнее всего */
   body.b .b-hint { font-size: 12.5px; padding: 9px 15px; }
   body.b .hf-pin--top { top: 100px; right: 16px; left: auto; }
   body.b .hf-pin--bottom { bottom: 16px; right: 16px; }
+  body.b .dz-section { padding: 64px 0; }
+  body.b #fit .cards-4,
+  body.b #included > .lm-container > div:last-child,
+  body.b .dz-model { grid-template-columns: 1fr !important; }
+  body.b .lms-section__head h2 { font-size: 28px; }
+  body.b #formats .lms-tabs__panel { min-height: auto; }
 }

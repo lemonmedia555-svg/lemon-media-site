@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="lemonmedia создаёт контент для социальных сетей под ключ: 10 постов за 4 990 ₽, публикация на пяти подключённых площадках без доплаты.">
-  <title>Вариант B — тёмный первый экран · lemonmedia</title>
+  <title>Контент для социальных сетей под ключ — lemonmedia</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -745,14 +745,28 @@ addEventListener('resize', () => { clearTimeout(feedTimer); feedTimer = setTimeo
     const fmtr = n => n.toLocaleString('ru-RU');
     const cubes = $('[data-cubes]');
 
+    // Роли контента в месяце — подпись под итогом обещает именно это.
+    const ROLES = ['польза', 'продукт', 'кейс', 'ответ', 'оффер', 'процесс', 'отзыв', 'польза',
+                   'подборка', 'вопрос', 'кейс', 'продукт', 'разбор', 'оффер', 'польза',
+                   'команда', 'ответ', 'кейс', 'сравнение', 'продукт', 'польза', 'отзыв',
+                   'инструкция', 'оффер', 'кейс', 'вопрос', 'продукт', 'польза', 'разбор', 'итог'];
     function renderCubes() {
       cubes.innerHTML = '';
       for (let i = 0; i < 30; i++) {
         const b = document.createElement('button');
         b.type = 'button';
-        b.className = 'dz-cube' + (i >= state.posts ? ' is-off' : (i < state.cars ? ' is-carousel' : ''));
-        b.setAttribute('aria-label', i < state.posts ? 'Пост ' + (i + 1) : 'Не входит в пакет');
-        if (i < state.posts) b.addEventListener('click', () => { state.cars = (i < state.cars) ? i : i + 1; render(); });
+        const isCarousel = i < state.cars;
+        b.className = 'dz-cube' + (i >= state.posts ? ' is-off' : (isCarousel ? ' is-carousel' : ''));
+        b.textContent = i < state.posts ? ROLES[i] : '';
+        b.setAttribute('aria-label', i < state.posts
+          ? 'Пост ' + (i + 1) + ' · ' + ROLES[i] + (isCarousel ? ' · карусель' : ' · сделать каруселью')
+          : 'Не входит в пакет');
+        b.setAttribute('aria-pressed', String(isCarousel));
+        // клик переключает ровно один пост, как и написано в подписи
+        if (i < state.posts) b.addEventListener('click', () => {
+          state.cars = isCarousel ? state.cars - 1 : state.cars + 1;
+          render();
+        });
         cubes.appendChild(b);
       }
     }
@@ -765,7 +779,7 @@ addEventListener('resize', () => { clearTimeout(feedTimer); feedTimer = setTimeo
       $('[data-story-line]').textContent = state.story ? state.story + ' шт · ' + fmtr(state.sprice) + ' ₽' : 'не выбраны';
       $('[data-place]').textContent = 'До ' + state.posts * 5 + ' размещений';
       $('[data-car-out]').textContent = state.cars;
-      $('[data-order]').href = 'start.html?plan=' + state.posts;
+      $('[data-order]').href = 'start.html?plan=' + state.posts + '&carousels=' + state.cars + '&stories=' + state.story;
       renderCubes();
     }
     root.querySelectorAll('[data-plan]').forEach(btn => btn.addEventListener('click', () => {
