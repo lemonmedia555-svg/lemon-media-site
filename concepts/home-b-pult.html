@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>lemonmedia — концепция B «Пульт»</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap">
+<link rel="stylesheet" href="../assets/css/tokens.css">
+<style>
+/* ============================================================
+   КОНЦЕПЦИЯ B — «ПУЛЬТ»
+   Тезис: продаём не картинки, а спокойствие. Первый экран —
+   раскол по канону (§3): слева обещание, справа живой кабинет,
+   в котором клиент утверждает, смотрит календарь и отчёт.
+   Signature: рабочий переключатель кабинета прямо в hero —
+   Согласование / Календарь / Отчёт, три реальных состояния.
+   Ритм: холодный, размеренный, с одной тёмной паузой.
+   ============================================================ */
+
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;font-family:var(--lm-font-sans);font-size:var(--lm-fs-body);
+  line-height:var(--lm-lh-body);color:var(--lm-text-primary);background:var(--lm-color-neutral-000)}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,h4,p,ul{margin:0}
+ul{padding:0;list-style:none}
+.wrap{max-width:var(--lm-container);margin:0 auto;padding:0 var(--lm-space-24)}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-size:var(--lm-fs-ui);
+  font-weight:800;padding:var(--lm-btn-pad);border-radius:var(--lm-radius-sm);border:0;cursor:pointer;
+  transition:transform .15s ease,box-shadow .15s ease}
+.btn--primary{background:var(--lm-surface-lemon);color:var(--lm-text-on-lemon);box-shadow:var(--lm-glow-lemon)}
+.btn--primary:hover{transform:translateY(-2px)}
+.btn--ghost{background:transparent;color:var(--lm-text-primary);border:1px solid var(--lm-color-border-2)}
+.btn--ghost:hover{background:var(--lm-color-neutral-000);box-shadow:var(--lm-shadow-soft)}
+.eyebrow{font-size:var(--lm-fs-eyebrow);font-weight:700;text-transform:uppercase;letter-spacing:.08em;
+  color:var(--lm-color-purple-600)}
+
+/* ============ ХЕДЕР ============ */
+.hdr{border-bottom:1px solid var(--lm-color-cool-100);background:var(--lm-color-cool-050)}
+.hdr__in{display:flex;align-items:center;gap:var(--lm-space-32);padding:var(--lm-space-16) 0}
+.hdr__logo{height:24px}
+.hdr__nav{display:flex;align-items:center;gap:var(--lm-space-24);margin-left:auto;
+  font-size:var(--lm-fs-ui);font-weight:700}
+
+/* ============ HERO: РАСКОЛ ============ */
+.hero{background:linear-gradient(90deg,var(--lm-color-cool-050) 0 52%,var(--lm-color-lavender-100) 52% 100%)}
+.hero__in{display:grid;grid-template-columns:minmax(0,470px) minmax(0,1fr);gap:var(--lm-space-64);
+  align-items:center;padding:var(--lm-space-80) var(--lm-space-24) var(--lm-space-96)}
+.hero h1{font-size:var(--lm-fs-h1);font-weight:800;line-height:var(--lm-lh-heading);
+  letter-spacing:var(--lm-ls-heading);margin:var(--lm-space-16) 0}
+.hero__lead{color:var(--lm-color-muted);font-size:var(--lm-fs-lead);margin-bottom:var(--lm-space-32)}
+.hero__cta{display:flex;gap:var(--lm-space-12);margin-bottom:var(--lm-space-24)}
+.hero__facts{display:grid;gap:10px;font-size:var(--lm-fs-small);color:var(--lm-color-muted)}
+.hero__facts b{color:var(--lm-text-primary)}
+.hero__facts li{display:flex;gap:10px}
+.hero__facts i{font-style:normal;color:var(--lm-color-purple-600);font-weight:800}
+
+/* --- ПУЛЬТ (signature) --- */
+.pult{background:var(--lm-color-neutral-000);border-radius:var(--lm-radius-lg);
+  box-shadow:var(--lm-shadow-pop);border:1px solid var(--lm-color-border);overflow:hidden}
+.pult__bar{display:flex;align-items:center;gap:8px;padding:14px var(--lm-space-20);
+  border-bottom:1px solid var(--lm-color-border);background:var(--lm-color-surface-2)}
+.pult__dot{width:10px;height:10px;border-radius:50%;background:var(--lm-color-border-2)}
+.pult__title{margin-left:8px;font-size:var(--lm-fs-small);font-weight:700;color:var(--lm-color-muted)}
+.pult__tabs{display:flex;gap:6px;padding:var(--lm-space-16) var(--lm-space-20) 0}
+.tab{font-size:var(--lm-fs-small);font-weight:800;padding:10px 16px;border-radius:var(--lm-radius-sm);
+  border:0;background:transparent;color:var(--lm-color-muted);cursor:pointer;transition:.15s ease}
+.tab[aria-selected="true"]{background:var(--lm-color-neutral-950);color:var(--lm-color-neutral-000)}
+.pult__body{padding:var(--lm-space-20);min-height:326px}
+.panel{display:none}
+.panel[data-open="true"]{display:block;animation:rise .3s ease-out}
+@keyframes rise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+
+.appr{display:grid;grid-template-columns:104px 1fr;gap:var(--lm-space-16);align-items:center;
+  border:1px solid var(--lm-color-border);border-radius:var(--lm-radius-md);padding:var(--lm-space-16);
+  margin-bottom:var(--lm-space-12)}
+.appr img{border-radius:10px;aspect-ratio:4/5;object-fit:cover;width:100%}
+.appr__st{font-size:var(--lm-fs-eyebrow);font-weight:700;text-transform:uppercase;letter-spacing:.08em;
+  color:var(--lm-color-purple-600);margin-bottom:6px}
+.appr h4{font-size:17px;font-weight:800;margin-bottom:4px}
+.appr p{font-size:var(--lm-fs-small);color:var(--lm-color-muted);margin-bottom:12px}
+.appr__row{display:flex;gap:8px}
+.mini{font-size:14px;font-weight:800;padding:8px 14px;border-radius:8px;border:1px solid var(--lm-color-border-2);
+  background:transparent;cursor:pointer}
+.mini--ok{background:var(--lm-surface-lemon);border-color:transparent;color:var(--lm-text-on-lemon)}
+
+.cal{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}
+.cal__h{font-size:var(--lm-fs-eyebrow);font-weight:700;text-transform:uppercase;letter-spacing:.08em;
+  color:var(--lm-color-muted-2);padding-bottom:6px}
+.cal__cell{border:1px solid var(--lm-color-border);border-radius:10px;padding:10px;min-height:78px;
+  font-size:13px;line-height:1.35}
+.cal__cell b{display:block;font-size:11px;color:var(--lm-color-muted-2);margin-bottom:6px}
+.cal__chip{display:block;border-radius:6px;padding:4px 6px;font-weight:700;margin-bottom:4px}
+.chip--vk{background:var(--lm-color-purple-050)}
+.chip--tg{background:var(--lm-color-lemon-100)}
+.chip--ig{background:var(--lm-color-cool-100)}
+
+.rep{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--lm-space-12)}
+.rep__c{border:1px solid var(--lm-color-border);border-radius:var(--lm-radius-md);padding:var(--lm-space-16)}
+.rep__c b{display:block;font-size:30px;font-weight:800;line-height:1.1}
+.rep__c span{font-size:var(--lm-fs-small);color:var(--lm-color-muted)}
+.rep__up{color:var(--lm-color-success);font-weight:800;font-size:14px}
+
+/* ============ ТЁМНАЯ ПАУЗА: ЦИФРЫ ============ */
+.dark{background:var(--lm-grad-brand-dark);color:var(--lm-text-inverse);padding:var(--lm-space-64) 0}
+.dark__grid{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--lm-space-24)}
+.dark b{display:block;font-size:34px;font-weight:800;line-height:1.1}
+.dark span{font-size:var(--lm-fs-small);color:#CFCFD8}
+
+/* ============ ТАЙМЛАЙН МЕСЯЦА ============ */
+.month{padding:var(--lm-space-96) 0;background:var(--lm-color-cool-050)}
+.sechead{max-width:720px;margin-bottom:var(--lm-space-48)}
+.sechead h2{font-size:var(--lm-fs-h2);font-weight:800;line-height:1.08;letter-spacing:var(--lm-ls-heading);
+  margin:var(--lm-space-12) 0 var(--lm-space-16)}
+.sechead p{color:var(--lm-color-muted);font-size:var(--lm-fs-lead)}
+.tl{display:grid;grid-template-columns:repeat(5,1fr);gap:var(--lm-space-16)}
+.tl__i{background:var(--lm-color-neutral-000);border:1px solid var(--lm-color-border);
+  border-radius:var(--lm-radius-lg);padding:var(--lm-space-24);position:relative}
+.tl__i::before{content:"";position:absolute;left:var(--lm-space-24);top:0;width:44px;height:4px;
+  background:var(--lm-color-lemon-500);border-radius:0 0 4px 4px}
+.tl__d{font-size:var(--lm-fs-eyebrow);font-weight:700;text-transform:uppercase;letter-spacing:.08em;
+  color:var(--lm-color-muted-2);margin-bottom:10px}
+.tl__i h3{font-size:18px;font-weight:800;margin-bottom:8px}
+.tl__i p{font-size:var(--lm-fs-small);color:var(--lm-color-muted);margin-bottom:12px}
+.tl__who{display:inline-block;font-size:12px;font-weight:800;padding:3px 10px;border-radius:var(--lm-radius-pill)}
+.who--you{background:var(--lm-color-purple-050);color:var(--lm-color-purple-600)}
+.who--us{background:var(--lm-color-lemon-100)}
+
+/* ============ СРАВНЕНИЕ ============ */
+.cmp{padding:var(--lm-space-96) 0}
+.cmp__t{width:100%;border-collapse:separate;border-spacing:0;font-size:var(--lm-fs-small)}
+.cmp__t th,.cmp__t td{padding:16px 18px;text-align:left;border-bottom:1px solid var(--lm-color-border)}
+.cmp__t thead th{font-size:var(--lm-fs-eyebrow);text-transform:uppercase;letter-spacing:.08em;
+  color:var(--lm-color-muted-2)}
+.cmp__t tbody td:first-child{font-weight:800}
+.cmp__t .own{background:var(--lm-color-lemon-100);font-weight:700}
+.cmp__t thead .own{background:var(--lm-surface-lemon);color:var(--lm-text-on-lemon);
+  border-radius:var(--lm-radius-md) var(--lm-radius-md) 0 0;font-size:15px;font-weight:800;
+  text-transform:none;letter-spacing:0}
+.cmp__t tbody tr:last-child .own{border-radius:0 0 var(--lm-radius-md) var(--lm-radius-md)}
+
+/* ============ ТАРИФЫ ============ */
+.plans{padding:var(--lm-space-96) 0;background:var(--lm-color-cool-050)}
+.plans__grid{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--lm-space-16)}
+.plan{background:var(--lm-color-neutral-000);border:1px solid var(--lm-color-border);
+  border-radius:var(--lm-radius-lg);padding:var(--lm-space-24);transition:.15s ease}
+.plan:hover{transform:translateY(-3px);box-shadow:var(--lm-shadow-pop)}
+.plan--hot{border-color:var(--lm-color-lemon-500);box-shadow:var(--lm-glow-lemon)}
+.plan h3{font-size:19px;font-weight:800}
+.plan__posts{font-size:var(--lm-fs-small);color:var(--lm-color-muted-2);margin-bottom:var(--lm-space-16)}
+.plan__price{font-size:32px;font-weight:800;line-height:1}
+.plan__per{font-size:13px;color:var(--lm-color-muted);margin-bottom:var(--lm-space-20)}
+.plan .btn{width:100%}
+
+/* ============ ФИНАЛ ============ */
+.final{padding:var(--lm-space-80) 0;background:var(--lm-color-neutral-000)}
+.final__in{background:var(--lm-surface-inverse);color:var(--lm-text-inverse);
+  border-radius:var(--lm-radius-lg);padding:var(--lm-space-64) var(--lm-space-48);
+  display:grid;grid-template-columns:1fr auto;gap:var(--lm-space-40);align-items:center}
+.final h2{font-size:var(--lm-fs-h3);font-weight:800;line-height:1.15;margin-bottom:10px}
+.final p{color:#C9C9D2;font-size:var(--lm-fs-small);max-width:560px}
+
+@media (max-width:1000px){
+  .hero{background:var(--lm-color-cool-050)}
+  .hero__in{grid-template-columns:1fr;padding-top:var(--lm-space-48)}
+  .dark__grid,.tl,.plans__grid{grid-template-columns:repeat(2,1fr)}
+  .final__in{grid-template-columns:1fr}
+  .cal{grid-template-columns:repeat(3,1fr)}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+
+<header class="hdr">
+  <div class="wrap hdr__in">
+    <img class="hdr__logo" src="../assets/img/home/logo-dark.svg" alt="lemonmedia">
+    <nav class="hdr__nav">
+      <a href="#month">Как проходит месяц</a>
+      <a href="#cmp">Сравнение</a>
+      <a href="#plans">Тарифы</a>
+      <a href="#plans" class="btn btn--primary" style="padding:10px 18px">Начать</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ===== HERO: раскол + пульт ===== -->
+<section class="hero">
+  <div class="wrap hero__in">
+    <div>
+      <div class="eyebrow">Подписка на соцсети</div>
+      <h1>Вы утверждаете. Дальше всё происходит само</h1>
+      <p class="hero__lead">Контент-план, тексты, дизайн и публикация — внутри команды. Ваше участие — около 10 минут в неделю.</p>
+      <div class="hero__cta">
+        <a href="#plans" class="btn btn--primary">Посмотреть тарифы</a>
+        <a href="#month" class="btn btn--ghost">Как проходит месяц</a>
+      </div>
+      <ul class="hero__facts">
+        <li><i>✓</i><span><b>Живая команда</b> — ИИ ускоряет производство, но не заменяет людей</span></li>
+        <li><i>✓</i><span><b>10–30 постов в месяц</b> — один пост во все соцсети без доплаты</span></li>
+        <li><i>✓</i><span><b>Без годовых договоров</b> — отмена подписки в любой момент</span></li>
+      </ul>
+    </div>
+
+    <div class="pult">
+      <div class="pult__bar">
+        <span class="pult__dot"></span><span class="pult__dot"></span><span class="pult__dot"></span>
+        <span class="pult__title">Кабинет клиента · август</span>
+      </div>
+      <div class="pult__tabs" role="tablist">
+        <button class="tab" role="tab" aria-selected="true" data-tab="appr">Согласование</button>
+        <button class="tab" role="tab" aria-selected="false" data-tab="cal">Календарь</button>
+        <button class="tab" role="tab" aria-selected="false" data-tab="rep">Отчёт</button>
+      </div>
+      <div class="pult__body">
+
+        <div class="panel" data-panel="appr" data-open="true">
+          <div class="appr">
+            <img src="../assets/img/home/carousels/d1.webp" alt="Пост на согласовании">
+            <div>
+              <div class="appr__st">Нужно согласование</div>
+              <h4>Пост · вторник, 10:30</h4>
+              <p>«Три ошибки в договоре, из-за которых бизнес теряет деньги»</p>
+              <div class="appr__row">
+                <button class="mini mini--ok">✓ Утвердить</button>
+                <button class="mini">Запросить правки</button>
+              </div>
+            </div>
+          </div>
+          <div class="appr">
+            <img src="../assets/img/home/carousels/t2.webp" alt="Карусель на согласовании">
+            <div>
+              <div class="appr__st">Нужно согласование</div>
+              <h4>Карусель · среда, 9:00</h4>
+              <p>Комбо недели: что берут чаще всего и почему</p>
+              <div class="appr__row">
+                <button class="mini mini--ok">✓ Утвердить</button>
+                <button class="mini">Запросить правки</button>
+              </div>
+            </div>
+          </div>
+          <p style="font-size:14px;color:var(--lm-color-muted-2)">Мы никогда не публикуем то, что вы не согласовали.</p>
+        </div>
+
+        <div class="panel" data-panel="cal">
+          <div class="cal">
+            <div class="cal__h">Пн</div><div class="cal__h">Вт</div><div class="cal__h">Ср</div>
+            <div class="cal__h">Чт</div><div class="cal__h">Пт</div>
+            <div class="cal__cell"><b>4 авг</b><span class="cal__chip chip--vk">9:00 ВК</span><span class="cal__chip chip--tg">9:00 TG</span></div>
+            <div class="cal__cell"><b>5 авг</b><span class="cal__chip chip--ig">10:30 Inst</span></div>
+            <div class="cal__cell"><b>6 авг</b><span class="cal__chip chip--vk">9:00 ВК</span></div>
+            <div class="cal__cell"><b>7 авг</b><span class="cal__chip chip--tg">12:00 TG</span></div>
+            <div class="cal__cell"><b>8 авг</b><span class="cal__chip chip--vk">9:00 ВК</span><span class="cal__chip chip--ig">18:00 Inst</span></div>
+            <div class="cal__cell"><b>11 авг</b><span class="cal__chip chip--tg">9:00 TG</span></div>
+            <div class="cal__cell"><b>12 авг</b><span class="cal__chip chip--vk">10:30 ВК</span></div>
+            <div class="cal__cell"><b>13 авг</b><span class="cal__chip chip--ig">9:00 Inst</span></div>
+            <div class="cal__cell"><b>14 авг</b><span class="cal__chip chip--vk">9:00 ВК</span><span class="cal__chip chip--tg">9:00 TG</span></div>
+            <div class="cal__cell"><b>15 авг</b><span class="cal__chip chip--ig">17:00 Inst</span></div>
+          </div>
+          <p style="font-size:14px;color:var(--lm-color-muted-2);margin-top:14px">Календарь по всем каналам — никаких сюрпризов.</p>
+        </div>
+
+        <div class="panel" data-panel="rep">
+          <div class="rep">
+            <div class="rep__c"><b>20 / 20</b><span>публикаций вышло</span></div>
+            <div class="rep__c"><b>48 700</b><span>охват <span class="rep__up">↑</span></span></div>
+            <div class="rep__c"><b>1 340</b><span>сохранения <span class="rep__up">↑</span></span></div>
+            <div class="rep__c"><b>+412</b><span>новых подписчиков</span></div>
+          </div>
+          <p style="font-size:14px;color:var(--lm-color-muted-2);margin-top:14px">В конце месяца видно, что вышло и как сработало.</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ТЁМНАЯ ПАУЗА ===== -->
+<section class="dark">
+  <div class="wrap dark__grid">
+    <div><b>10 000+</b><span>проектов выполнено</span></div>
+    <div><b>1,5 млн+</b><span>постов опубликовано командой</span></div>
+    <div><b>340+</b><span>постоянных клиентов</span></div>
+    <div><b>14 месяцев</b><span>средний срок сотрудничества</span></div>
+  </div>
+</section>
+
+<!-- ===== МЕСЯЦ ПО ДНЯМ ===== -->
+<section class="month" id="month">
+  <div class="wrap">
+    <div class="sechead">
+      <div class="eyebrow">Что вас ждёт</div>
+      <h2>Первый месяц — по дням</h2>
+      <p>От оплаты до автопубликаций. Ваше участие — минуты, не часы.</p>
+    </div>
+    <div class="tl">
+      <div class="tl__i"><div class="tl__d">День 0</div><h3>Онбординг и доступы</h3>
+        <p>Короткая анкета о бренде и подключение соцсетей. 15–30 минут.</p><span class="tl__who who--you">Вы</span></div>
+      <div class="tl__i"><div class="tl__d">Дни 1–7</div><h3>Первая партия</h3>
+        <p>Маркетолог собирает план и тексты, дизайнер — визуал под бренд.</p><span class="tl__who who--us">Мы</span></div>
+      <div class="tl__i"><div class="tl__d">Дни 8–10</div><h3>Окно приёмки</h3>
+        <p>Смотрите месяц целиком, утверждаете или оставляете правки. 5–10 минут.</p><span class="tl__who who--you">Вы</span></div>
+      <div class="tl__i"><div class="tl__d">Дни 10–14</div><h3>Правки под ваш голос</h3>
+        <p>2 пакета правок, чтобы точно попасть в тон бренда.</p><span class="tl__who who--us">Вместе</span></div>
+      <div class="tl__i"><div class="tl__d">День 14+</div><h3>Посты выходят сами</h3>
+        <p>Публикации идут по графику. Следующая партия готовится заранее.</p><span class="tl__who who--us">Мы</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== СРАВНЕНИЕ ===== -->
+<section class="cmp" id="cmp">
+  <div class="wrap">
+    <div class="sechead">
+      <div class="eyebrow">Математика</div>
+      <h2>Как мы смотримся на фоне альтернатив</h2>
+      <p>Агентство стоит как зарплата, фрилансер нестабилен, своими силами — съедает часы.</p>
+    </div>
+    <table class="cmp__t">
+      <thead><tr><th></th><th class="own">lemonmedia</th><th>Агентство</th><th>Фрилансер</th><th>Своими силами</th></tr></thead>
+      <tbody>
+        <tr><td>Стоимость</td><td class="own">от 4 990 ₽/мес</td><td>50–150 тыс ₽/мес</td><td>15–40 тыс ₽/мес</td><td>10+ часов в неделю</td></tr>
+        <tr><td>Команда</td><td class="own">Маркетолог + дизайнер + менеджер</td><td>Да, но дорого</td><td>Один человек на всё</td><td>Только вы</td></tr>
+        <tr><td>Публикаций в месяц</td><td class="own">10–30, по графику</td><td>По-разному</td><td>Как повезёт</td><td>Сколько успеете</td></tr>
+        <tr><td>Правки</td><td class="own">2 пакета включены</td><td>Со скрипом</td><td>Договоримся</td><td>Сами себе</td></tr>
+        <tr><td>Контракт</td><td class="own">Нет — отмена в любой момент</td><td>6–12 месяцев</td><td>Нет</td><td>—</td></tr>
+        <tr><td>Ваше время</td><td class="own">~10 минут в неделю</td><td>Созвоны и согласования</td><td>Постоянный контроль</td><td>6+ часов в неделю</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ===== ТАРИФЫ ===== -->
+<section class="plans" id="plans">
+  <div class="wrap">
+    <div class="sechead">
+      <div class="eyebrow">Тарифы</div>
+      <h2>Платите за контент, а не за ставку сотрудника</h2>
+      <p>Цена за пост одинаковая на всех тарифах — ≈500 ₽. Менять тариф можно каждый месяц.</p>
+    </div>
+    <div class="plans__grid">
+      <div class="plan"><h3>Старт</h3><div class="plan__posts">10 постов/мес</div>
+        <div class="plan__price">4 990 ₽</div><div class="plan__per">≈499 ₽ за пост · 2–3 в неделю</div>
+        <a href="#" class="btn btn--ghost">Выбрать</a></div>
+      <div class="plan plan--hot"><h3>Ритм</h3><div class="plan__posts">15 постов/мес · выбор клиентов</div>
+        <div class="plan__price">7 490 ₽</div><div class="plan__per">≈499 ₽ за пост · через день</div>
+        <a href="#" class="btn btn--primary">Выбрать</a></div>
+      <div class="plan"><h3>Рост</h3><div class="plan__posts">20 постов/мес</div>
+        <div class="plan__price">9 990 ₽</div><div class="plan__per">≈500 ₽ за пост · 5 в неделю</div>
+        <a href="#" class="btn btn--ghost">Выбрать</a></div>
+      <div class="plan"><h3>Максимум</h3><div class="plan__posts">30 постов/мес</div>
+        <div class="plan__price">14 990 ₽</div><div class="plan__per">≈500 ₽ за пост · каждый день</div>
+        <a href="#" class="btn btn--ghost">Выбрать</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ФИНАЛ ===== -->
+<section class="final">
+  <div class="wrap final__in">
+    <div>
+      <h2>14 дней гарантии. Не зайдёт — вернём деньги</h2>
+      <p>Если после двух пакетов правок контент не подошёл — полностью возвращаем оплату за первую партию. Возврат настоящий, а не плашка на лендинге.</p>
+    </div>
+    <a href="#plans" class="btn btn--primary">Выбрать тариф</a>
+  </div>
+</section>
+
+<script>
+document.querySelectorAll('.tab').forEach(function (t) {
+  t.addEventListener('click', function () {
+    document.querySelectorAll('.tab').forEach(function (x) { x.setAttribute('aria-selected', 'false') })
+    t.setAttribute('aria-selected', 'true')
+    document.querySelectorAll('.panel').forEach(function (p) {
+      p.setAttribute('data-open', String(p.dataset.panel === t.dataset.tab))
+    })
+  })
+})
+</script>
+</body>
+</html>
