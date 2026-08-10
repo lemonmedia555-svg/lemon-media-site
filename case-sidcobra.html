@@ -1,0 +1,468 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Кейс lemonmedia для SIDCOBRA: 30 публикаций, 6 каруселей, 66 финальных визуалов и календарь для VK и Telegram.">
+  <title>Кейс SIDCOBRA — lemonmedia</title>
+  <link rel="stylesheet" href="assets/css/prototype.css">
+  <style>
+    .sidcobra-hero { background: radial-gradient(circle at 82% 24%, rgba(229, 33, 45, .2), transparent 31%), var(--paper); }
+    .sidcobra-route { display: grid; grid-template-columns: repeat(5, 1fr); gap: 9px; margin-top: 16px; }
+    .sidcobra-route article { min-height: 190px; padding: 17px; border: 1px solid var(--line); border-radius: 15px; background: #fff; }
+    .sidcobra-route span { color: #c51f2d; font-size: 10px; font-weight: 900; }
+    .sidcobra-route h3 { margin-top: 34px; font-size: 18px; }
+    .sidcobra-route p { color: var(--muted); font-size: 12px; }
+    .sidcobra-revision-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+    .sidcobra-revision-card { display: grid; grid-template-columns: minmax(160px, .75fr) 1.25fr; gap: 18px; align-items: center; padding: 16px; border: 1px solid #454545; border-radius: 18px; background: #292929; }
+    .sidcobra-revision-card button { padding: 0; overflow: hidden; border: 0; border-radius: 14px; background: transparent; cursor: zoom-in; }
+    .sidcobra-revision-card img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; }
+    .sidcobra-revision-card p { color: #bdbdbd; }
+    .sidcobra-revision-card strong { color: var(--accent); }
+    .sidcobra-schedule-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
+    .sidcobra-schedule-month { padding: 16px; border: 1px solid #454545; border-radius: 16px; background: #292929; }
+    .sidcobra-schedule-month h3 { margin-bottom: 12px; }
+    .sidcobra-schedule-month ol { display: grid; gap: 7px; padding: 0; list-style: none; }
+    .sidcobra-schedule-month li { display: grid; grid-template-columns: 42px 1fr; gap: 9px; align-items: start; padding: 9px; border: 1px solid #484848; border-radius: 10px; background: #222; }
+    .sidcobra-schedule-month time { color: var(--accent); font-size: 11px; font-weight: 900; }
+    .sidcobra-schedule-month span { color: #d3d3d3; font-size: 10px; line-height: 1.25; }
+    .sidcobra-launch-note { margin-top: 16px; padding: 15px; border: 1px solid #4b4b4b; border-radius: 14px; color: #cfcfcf; }
+    @media (max-width: 980px) {
+      .sidcobra-route { grid-template-columns: repeat(3, 1fr); }
+      .sidcobra-schedule-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 700px) {
+      .sidcobra-route, .sidcobra-revision-grid, .sidcobra-schedule-grid { grid-template-columns: 1fr; }
+      .sidcobra-revision-card { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-row">
+      <a class="brand" href="index.html" aria-label="lemonmedia — главная"><span class="brand-dot" aria-hidden="true"></span>lemonmedia</a>
+      <button class="menu-button" type="button" aria-expanded="false" data-menu-toggle>Меню</button>
+      <nav class="main-nav" aria-label="Основная навигация">
+        <a href="examples.html" aria-current="page">Работы</a>
+        <a href="process.html">Как работаем</a>
+        <a href="pricing.html">Цены</a>
+        <a href="reviews.html">Отзывы</a>
+        <a href="about.html">О компании</a>
+        <a href="articles.html">Статьи</a>
+        <a class="btn btn-small btn-accent" href="start.html">Начать работу</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero case-full-hero sidcobra-hero">
+      <div class="container">
+        <div class="case-full-hero-grid">
+          <div>
+            <p class="eyebrow">Силовые тренировки + спорттовары · Санкт-Петербург и онлайн · июль–октябрь 2026</p>
+            <h1>Как соединить тренера и бренд спорттоваров в одной контент-системе</h1>
+            <p class="lead">Для SIDCOBRA собрали 30 связанных публикаций: экспертные разборы, истории учеников, услуги и товары работают на один образ — сильного тренера с собственной системой и продуктом.</p>
+            <div class="section-actions" style="margin-top:24px;">
+              <a class="btn btn-accent" href="#case-product">Посмотреть все 66 визуалов</a>
+              <a class="btn btn-secondary" href="start.html">Обсудить свой контент</a>
+            </div>
+            <p class="risk-note">Комплект утверждён, загружен во ВКонтакте и Telegram и поставлен в календарь.</p>
+          </div>
+          <div class="case-hero-media" aria-label="Примеры контента проекта SIDCOBRA">
+            <img src="assets/cases/sidcobra/posts/01.jpg" width="1080" height="1350" alt="Публикация SIDCOBRA День за кадром">
+            <img src="assets/cases/sidcobra/carousels/03/01.jpg" width="1080" height="1350" alt="Обложка карусели SIDCOBRA о страхе перекачаться">
+            <img src="assets/cases/sidcobra/posts/09.jpg" width="1080" height="1350" alt="Публикация SIDCOBRA с реальными товарами клиента">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft case-metrics" aria-label="Подтверждённый состав проекта">
+      <div class="container">
+        <div class="case-metric-grid">
+          <article><strong>30</strong><span>публикаций</span></article>
+          <article><strong>6</strong><span>каруселей · 42 слайда</span></article>
+          <article><strong>66</strong><span>финальных визуалов</span></article>
+          <article><strong>2</strong><span>площадки подтверждены</span></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Маркетинговая задача</p>
+            <h2>Не выбирать между личным брендом и магазином</h2>
+          </div>
+          <p>У SIDCOBRA две сильные линии: тренерские услуги и собственные товары. Если вести их раздельно, профиль распадается. Если постоянно продавать — теряется доверие. Поэтому мы связали обе линии через пользу и личный опыт.</p>
+        </div>
+        <div class="case-brief-grid">
+          <article class="card">
+            <h3>Что должен понять человек</h3>
+            <ul class="check-list">
+              <li>тренер объясняет сложное понятным языком;</li>
+              <li>работа строится на технике, системе и отслеживании прогресса;</li>
+              <li>можно заниматься лично в Санкт-Петербурге или онлайн;</li>
+              <li>товары SIDCOBRA используются в реальных тренировках;</li>
+              <li>за обещаниями стоят достижения и истории учеников.</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>Как удержали баланс</h3>
+            <p>Экспертные публикации создают доверие. Кейсы учеников дают доказательства. Товары появляются внутри тренировочного контекста, а услуги становятся естественным следующим шагом.</p>
+            <p><strong>Логика:</strong> интерес → польза → доказательства → знакомство с продуктом → выбор формата работы.</p>
+          </article>
+        </div>
+        <div class="sidcobra-route" aria-label="Пять ролей контента SIDCOBRA">
+          <article><span>12 публикаций</span><h3>Экспертиза</h3><p>Техника, восстановление, мифы и понятные разборы.</p></article>
+          <article><span>7 публикаций</span><h3>Товары</h3><p>Не витрина, а продукт в реальной тренировочной жизни.</p></article>
+          <article><span>5 публикаций</span><h3>Доказательства</h3><p>Достижения, ученики, прогресс и отзывы.</p></article>
+          <article><span>3 публикации</span><h3>Услуги</h3><p>Разбор целей, онлайн-ведение и личные тренировки.</p></article>
+          <article><span>3 публикации</span><h3>Бренд</h3><p>Закулисье, диалог с аудиторией и развитие SIDCOBRA.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-dark" id="case-product" data-case-tabs>
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Готовый продукт целиком</p>
+            <h2>Все 30 публикаций, 42 слайда и календарь</h2>
+          </div>
+          <p>Переключайте представления. В ленте видны все публикации, в каруселях — каждый слайд, а в календаре — подтверждённый ритм выхода.</p>
+        </div>
+
+        <div class="case-tab-list" role="tablist" aria-label="Представления кейса SIDCOBRA">
+          <button id="sidcobra-tab-plan" type="button" role="tab" aria-selected="true" aria-controls="sidcobra-panel-plan" data-case-tab="plan">План · 30</button>
+          <button id="sidcobra-tab-feed" type="button" role="tab" aria-selected="false" aria-controls="sidcobra-panel-feed" tabindex="-1" data-case-tab="feed">Лента · 30</button>
+          <button id="sidcobra-tab-carousels" type="button" role="tab" aria-selected="false" aria-controls="sidcobra-panel-carousels" tabindex="-1" data-case-tab="carousels">Карусели · 42</button>
+          <button id="sidcobra-tab-calendar" type="button" role="tab" aria-selected="false" aria-controls="sidcobra-panel-calendar" tabindex="-1" data-case-tab="calendar">Календарь</button>
+          <button id="sidcobra-tab-revisions" type="button" role="tab" aria-selected="false" aria-controls="sidcobra-panel-revisions" tabindex="-1" data-case-tab="revisions">Как правили</button>
+        </div>
+
+        <div id="sidcobra-panel-plan" class="case-tab-panel" role="tabpanel" aria-labelledby="sidcobra-tab-plan" data-case-panel="plan">
+          <div class="case-panel-intro">
+            <div><p class="eyebrow">30 связанных тем</p><h3>От знакомства с тренером до системы, товаров и заявок</h3></div>
+            <p>Карусели отмечены отдельно. Даты соответствуют подтверждённому календарю: понедельник, среда и пятница в 10:00.</p>
+          </div>
+          <ol class="case-plan-list">
+            <li><time>01 · 29.07</time><div><strong>День за кадром</strong><span>Личный бренд · пост</span></div></li>
+            <li><time>02 · 31.07</time><div><strong>Какой вес Ваш?</strong><span>Вовлечение · пост</span></div></li>
+            <li><time>03 · 03.08</time><div><strong>От штанги я стану перекачанной</strong><span>Миф · карусель</span></div></li>
+            <li><time>04 · 05.08</time><div><strong>Два рекорда России</strong><span>Доказательство · пост</span></div></li>
+            <li><time>05 · 07.08</time><div><strong>Разбор целей — бесплатно</strong><span>Вход в услугу · пост</span></div></li>
+            <li><time>06 · 10.08</time><div><strong>Разминка, а не трата времени</strong><span>Экспертиза · пост</span></div></li>
+            <li><time>07 · 12.08</time><div><strong>Бутылка SIDCOBRA</strong><span>Товар · пост</span></div></li>
+            <li><time>08 · 14.08</time><div><strong>Присед и колени</strong><span>Техника · пост</span></div></li>
+            <li><time>09 · 17.08</time><div><strong>Товары в деле</strong><span>Продукт в использовании · пост</span></div></li>
+            <li><time>10 · 19.08</time><div><strong>Сила растёт во сне</strong><span>Восстановление · пост</span></div></li>
+            <li><time>11 · 21.08</time><div><strong>Программа из интернета</strong><span>Позиционирование · пост</span></div></li>
+            <li><time>12 · 24.08</time><div><strong>Онлайн-ведение</strong><span>Услуга · пост</span></div></li>
+            <li><time>13 · 26.08</time><div><strong>Новичок в зале: с чего начать</strong><span>Гайд · карусель</span></div></li>
+            <li><time>14 · 28.08</time><div><strong>Ей отказывали другие тренеры</strong><span>История ученицы · пост</span></div></li>
+            <li><time>15 · 31.08</time><div><strong>Нужен ли протеин</strong><span>Ответ на вопрос · пост</span></div></li>
+            <li><time>16 · 02.09</time><div><strong>Что взять на тренировку</strong><span>Товарный гайд · карусель</span></div></li>
+            <li><time>17 · 04.09</time><div><strong>Выдох — на усилии</strong><span>Техника · пост</span></div></li>
+            <li><time>18 · 07.09</time><div><strong>Первая партия заканчивается</strong><span>Товар · пост</span></div></li>
+            <li><time>19 · 09.09</time><div><strong>Слово ученику</strong><span>Социальное доказательство · пост</span></div></li>
+            <li><time>20 · 11.09</time><div><strong>Много повторов сушат, мало — качают массу</strong><span>Миф · карусель</span></div></li>
+            <li><time>21 · 14.09</time><div><strong>Как расти, а не стоять</strong><span>Система прогресса · пост</span></div></li>
+            <li><time>22 · 16.09</time><div><strong>Два товара. Каждый проверен</strong><span>Продуктовое доказательство · пост</span></div></li>
+            <li><time>23 · 18.09</time><div><strong>14 месяцев онлайн-тренировок</strong><span>Кейс ученицы · карусель</span></div></li>
+            <li><time>24 · 21.09</time><div><strong>5 признаков перетренированности</strong><span>Самопроверка · карусель</span></div></li>
+            <li><time>25 · 23.09</time><div><strong>Лично в Питере</strong><span>Услуга · пост</span></div></li>
+            <li><time>26 · 25.09</time><div><strong>Штанга или тренажёр</strong><span>Экспертиза · пост</span></div></li>
+            <li><time>27 · 28.09</time><div><strong>Охлаждает, когда жарко</strong><span>Товар · пост</span></div></li>
+            <li><time>28 · 30.09</time><div><strong>Результат — это привычка</strong><span>Метод · пост</span></div></li>
+            <li><time>29 · 02.10</time><div><strong>SIDCOBRA. Скоро — свой зал</strong><span>Новость бренда · пост</span></div></li>
+            <li><time>30 · 05.10</time><div><strong>Футболки SIDCOBRA. Скоро</strong><span>Новость продукта · пост</span></div></li>
+          </ol>
+        </div>
+
+        <div id="sidcobra-panel-feed" class="case-tab-panel" role="tabpanel" aria-labelledby="sidcobra-tab-feed" data-case-panel="feed" hidden>
+          <div class="case-panel-intro">
+            <div><p class="eyebrow">Полная лента</p><h3>30 публикаций в единой чёрно-красной системе</h3></div>
+            <p>Нажмите на любой макет, чтобы открыть его без обрезки. Для шести каруселей здесь показаны обложки; все 42 слайда находятся в следующей вкладке.</p>
+          </div>
+          <div class="case-feed-grid">
+            <figure><button type="button" data-case-dialog-open data-case-dialog-src="assets/cases/sidcobra/posts/01.jpg" data-case-dialog-alt="01 · День за кадром"><img src="assets/cases/sidcobra/posts/01.jpg" width="1080" height="1350" loading="lazy" alt="SIDCOBRA, публикация 1: День за кадром"></button><figcaption>01 · День за кадром</figcaption></figure>
+            <figure><button type="button" data-case-dialog-open data-case-dialog-src="assets/cases/sidcobra/posts/02.jpg" data-case-dialog-alt="02 · Какой вес Ваш?"><img src="assets/cases/sidcobra/posts/02.jpg" width="1080" height="1350" loading="lazy" alt="SIDCOBRA, публикация 2: Какой вес Ваш"></button><figcaption>02 · Какой вес Ваш?</figcaption></figure>
+            <figure><button type="button" data-case-dialog-open data-case-dialog-src="assets/cases/sidcobra/carousels/03/01.jpg" data-case-dialog-alt="03 · От штанги я стану перекачанной"><img src="assets/cases/sidcobra/carousels/03/01.jpg" width="1080" height="1350" loading="lazy" alt="SIDCOBRA, обложка карусели 3 о страхе перекачаться"></button><figcaption>03 · Карусель о страхе перекачаться</figcaption></figure>
+            <figure><button type="button" data-case-dialog-open data-case-dialog-src="assets/cases/sidcobra/posts/04.jpg" data-case-dialog-alt="04 · Два рекорда России"><img src="assets/cases/sidcobra/posts/04.jpg" width="1080" height="1350" loading="lazy" alt="SIDCOBRA, публикация 4: Два рекорда России"></button><figcaption>04 · Два рекорда России</figcaption></figure>
+            <figure><button type="button" data-case-dialog-open data-case-dialog-src="assets/cases/sidcobra/posts/05.jpg" data-case-dialog-alt="05 · Разбор целей — бесплатно"><img src="assets/cases/sidcobra/posts/05.jpg" width="1080" height="1350" loading="lazy" alt="SIDCOBRA, публикация 5: бесплатный разбор целей"></button><figcaption>05 · Разбор целей</figcaption></figure>
+            <figure><button type="button" data-case-dialog-open data-case-dialog-src="assets/cases/sidcobra/posts/06.jpg" data-case-dialog-alt="06 · Разминка, а не трата времени"><img src="assets/cases/sidcobra/posts/06.jpg" width="1080" height="1350" loading="lazy" alt="SIDCOBRA, публикация 6 о разминке"></button><figcaption>06 · Разминка</figcaption></figure>
+            <figure><button type="button" data-case-dialog-open data-case-dialog-src="assets/cases/sidcobra/posts/07.jpg" data-case-dialog-alt="07 · Бутылка SIDCOBRA"><img src="assets/cases/sidcobra/posts/07.jpg" width="1080" height="1350" loading="lazy" alt="SIDCOBRA, публикация 7 о фирменной бутылке"></button><figcaption>07 · Бутылка SIDCOBRA</figcaption></figure>
+            <figure><button type="button" data-case-dialog-open data-case-dialog-src="assets/cases/sidcobra/posts/08.jpg" data-case-dialog-alt="08 · Присед и колени"><img src="assets/cases/sidcobra/posts/08.jpg" width="1080" height="1350" loading="lazy" alt="SIDCOBRA, публикация 8 о приседе и коленях"></button><figcaption>08 · Присед и колени</figcaption></figure>
+            <figure><button type="button" data-case-dialog-open data-case-dialog-src="assets/cases/sidcobra/posts/09.jpg" data-case-dialog-alt="09 · Товары в деле"><img src="assets/cases/sidcobra/posts/09.jpg" width="1080" height="1350" loading="lazy" alt="SIDCOBRA, публикация 9 с реальными товарами клиента"></button><figcaption>09 · Товары в деле</figcaption></figure>
+            <figure><button type="button" data-case-dialog-open data-case-dialog-src="assets/cases/sidcobra/posts/10.jpg" data-case-dialog-alt="10 · Сила растёт во сне"><img src="assets/cases/sidcobra/posts/10.jpg" width="1080" height="1350" loading="lazy" alt="SIDCOBRA, публикация 10 о сне и восстановлении"></button><figcaption>10 · Сила растёт во сне</figcaption></figure>
+            <figure><button type="button" data-case-dialog-open data-case-dialog-src="assets/cases/sidcobra/posts/11.jpg" data-case-dialog-alt="11 · Программа из интернета"><img src="assets/cases/sidcobra/posts/11.jpg" width="1080" height="1350" loading="lazy" alt="SIDCOBRA, публикация 11 о программе тренировок из интернета"></button><figcaption>11 · Программа из интернета</figcaption></figure>
+            <figure><button type="button" data-case-dialog-open data-case-dialog-src="assets/cases/sidcobra/posts/12.jpg" data-case-dialog-alt="12 · Онлайн-ведение"><img src="assets/cases/sidcobra/posts/12.jpg" width="1080" height="1350" loading="lazy" alt="SIDCOBRA, публикация 12 об онлайн-ведении"></button><figcaption>12 · Онлайн-ведение</figcaption></figure>
+            <figure><button type="button" data-case-dialog-open data-case-dialog-src="assets/cases/sidcobra/carousels/13/01.jpg" data-case-dialog-alt="13 · Новичок в зале"><img src="assets/cases/sidcobra/carousels/13/01.jpg" width="1080" height="1350" loading="lazy" alt="SIDCOBRA, обложка карусели 13 для новичка в зале"></button><figcaption>13 · Карусель для новичка</figcaption></figure>
+            <figure><button type="button" data-case-dialog-open data-case-dialog-src="assets/cases/sidcobra/posts/14.jpg" data-case-dialog-alt="14 · Ей отказывали другие тренеры"><img src="assets/cases/sidcobra/posts/14.jpg" width="1080" height="1350" loading="lazy" alt="SIDCOBRA, публикация 14 с историей ученицы"></button><figcaption>14 · История ученицы</figcaption></figure>
+            <figure><button type="button" data-case-dialog-open data-case-dialog-src="assets/cases/sidcobra/posts/15.jpg" data-case-dialog-alt="15 · Нужен ли протеин"><img src="assets/cases/sidcobra/posts/15.jpg" width="1080" height="1350" loading="lazy" alt="SIDCOBRA, публикация 15 о протеине"></button><figcaption>15 · Нужен ли протеин</figcaption></figure>
+            <figure><button type="button" data-case-dialog-open data-case-dialog-src="assets/cases/sidcobra/carousels/16/01.jpg" data-case-dialog-alt="16 · Что взять на тренировку"><img src="assets/cases/sidcobra/carousels/16/01.jpg" width="1080" height="1350" loading="lazy" alt="SIDCOBRA, обложка карусели 16 о вещах для тренировки"></button><figcaption>16 · Товарный гайд</figcaption></figure>
+            <figure><button type="button" data-case-dialog-open data-case-dialog-src="assets/cases/sidcobra/posts/17.jpg" data-case-dialog-alt="17 · Выдох — на усилии"><img src="assets/cases/sidcobra/posts/17.jpg" width="1080" height="1350" loading="lazy" alt="SIDCOBRA, публикация 17 о дыхании на усилии"></button><figcaption>17 · Выдох — на усилии</figcaption></figure>
+            <figure><button type="button" data-case-dialog-open data-case-dialog-src="assets/cases/sidcobra/posts/18.jpg" data-case-dialog-alt="18 · Первая партия заканчивается"><img src="assets/cases/sidcobra/posts/18.jpg" width="1080" height="1350" loading="lazy" alt="SIDCOBRA, публикация 18 о первой партии товаров"></button><figcaption>18 · Первая партия</figcaption></figure>
+            <figure><button type="button" data-case-dialog-open data-case-dialog-src="assets/cases/sidcobra/posts/19.jpg" data-case-dialog-alt="19 · Слово ученику"><img src="assets/cases/sidcobra/posts/19.jpg" width="1080" height="1350" loading="lazy" alt="SIDCOBRA, публикация 19 с отзывом ученика"></button><figcaption>19 · Слово ученику</figcaption></figure>
+            <figure><button type="button" data-case-dialog-open data-case-dialog-src="assets/cases/sidcobra/carousels/20/01.jpg" data-case-dialog-alt="20 · Много повторов сушат, мало — качают массу"><img src="assets/cases/sidcobra/carousels/20/01.jpg" width="1080" height="1350" loading="lazy" alt="SIDCOBRA, обложка карусели 20 о количестве повторов"></button><figcaption>20 · Карусель о повторах</figcaption></figure>
+            <figure><button type="button" data-case-dialog-open data-case-dialog-src="assets/cases/sidcobra/posts/21.jpg" data-case-dialog-alt="21 · Как расти, а не стоять"><img src="assets/cases/sidcobra/posts/21.jpg" width="1080" height="1350" loading="lazy" alt="SIDCOBRA, публикация 21 о дневнике тренировок"></button><figcaption>21 · Как расти, а не стоять</figcaption></figure>
+            <figure><button type="button" data-case-dialog-open data-case-dialog-src="assets/cases/sidcobra/posts/22.jpg" data-case-dialog-alt="22 · Два товара. Каждый проверен"><img src="assets/cases/sidcobra/posts/22.jpg" width="1080" height="1350" loading="lazy" alt="SIDCOBRA, публикация 22 о двух проверенных товарах"></button><figcaption>22 · Два товара</figcaption></figure>
+            <figure><button type="button" data-case-dialog-open data-case-dialog-src="assets/cases/sidcobra/carousels/23/01.jpg" data-case-dialog-alt="23 · 14 месяцев онлайн-тренировок"><img src="assets/cases/sidcobra/carousels/23/01.jpg" width="1080" height="1350" loading="lazy" alt="SIDCOBRA, обложка карусели 23 с кейсом ученицы"></button><figcaption>23 · Кейс ученицы</figcaption></figure>
+            <figure><button type="button" data-case-dialog-open data-case-dialog-src="assets/cases/sidcobra/carousels/24/01.jpg" data-case-dialog-alt="24 · 5 признаков перетренированности"><img src="assets/cases/sidcobra/carousels/24/01.jpg" width="1080" height="1350" loading="lazy" alt="SIDCOBRA, обложка карусели 24 о перетренированности"></button><figcaption>24 · Перетренированность</figcaption></figure>
+            <figure><button type="button" data-case-dialog-open data-case-dialog-src="assets/cases/sidcobra/posts/25.jpg" data-case-dialog-alt="25 · Лично в Питере"><img src="assets/cases/sidcobra/posts/25.jpg" width="1080" height="1350" loading="lazy" alt="SIDCOBRA, публикация 25 о личных тренировках в Санкт-Петербурге"></button><figcaption>25 · Лично в Питере</figcaption></figure>
+            <figure><button type="button" data-case-dialog-open data-case-dialog-src="assets/cases/sidcobra/posts/26.jpg" data-case-dialog-alt="26 · Штанга или тренажёр"><img src="assets/cases/sidcobra/posts/26.jpg" width="1080" height="1350" loading="lazy" alt="SIDCOBRA, публикация 26 о выборе штанги или тренажёра"></button><figcaption>26 · Штанга или тренажёр</figcaption></figure>
+            <figure><button type="button" data-case-dialog-open data-case-dialog-src="assets/cases/sidcobra/posts/27.jpg" data-case-dialog-alt="27 · Охлаждает, когда жарко"><img src="assets/cases/sidcobra/posts/27.jpg" width="1080" height="1350" loading="lazy" alt="SIDCOBRA, публикация 27 об охлаждающем полотенце"></button><figcaption>27 · Охлаждает, когда жарко</figcaption></figure>
+            <figure><button type="button" data-case-dialog-open data-case-dialog-src="assets/cases/sidcobra/posts/28.jpg" data-case-dialog-alt="28 · Результат — это привычка"><img src="assets/cases/sidcobra/posts/28.jpg" width="1080" height="1350" loading="lazy" alt="SIDCOBRA, публикация 28 о привычке и результате"></button><figcaption>28 · Результат — это привычка</figcaption></figure>
+            <figure><button type="button" data-case-dialog-open data-case-dialog-src="assets/cases/sidcobra/posts/29.jpg" data-case-dialog-alt="29 · SIDCOBRA. Скоро — свой зал"><img src="assets/cases/sidcobra/posts/29.jpg" width="1080" height="1350" loading="lazy" alt="SIDCOBRA, публикация 29 о будущем зале"></button><figcaption>29 · Скоро — свой зал</figcaption></figure>
+            <figure><button type="button" data-case-dialog-open data-case-dialog-src="assets/cases/sidcobra/posts/30.jpg" data-case-dialog-alt="30 · Футболки SIDCOBRA. Скоро"><img src="assets/cases/sidcobra/posts/30.jpg" width="1080" height="1350" loading="lazy" alt="SIDCOBRA, публикация 30 о фирменных футболках"></button><figcaption>30 · Футболки SIDCOBRA</figcaption></figure>
+          </div>
+        </div>
+
+        <div id="sidcobra-panel-carousels" class="case-tab-panel" role="tabpanel" aria-labelledby="sidcobra-tab-carousels" data-case-panel="carousels" hidden>
+          <div class="case-panel-intro">
+            <div><p class="eyebrow">6 каруселей · 42 слайда</p><h3>Глубокие форматы: мифы, гайды, кейс и самопроверка</h3></div>
+            <p>Каждая карусель — отдельный маршрут из семи экранов. Листайте стрелками или выбирайте миниатюру под макетом.</p>
+          </div>
+
+          <article class="case-carousel-block">
+            <div class="case-carousel-heading"><span class="tag">Публикация 03 · 7 слайдов</span><h3>От штанги я стану перекачанной</h3></div>
+            <div class="case-carousel" data-case-carousel aria-label="Карусель 03 о страхе перекачаться">
+              <div class="case-carousel-track">
+                <img src="assets/cases/sidcobra/carousels/03/01.jpg" width="1080" height="1350" loading="lazy" alt="Карусель 03, слайд 1: страх перекачаться" data-case-slide>
+                <img src="assets/cases/sidcobra/carousels/03/02.jpg" width="1080" height="1350" loading="lazy" alt="Карусель 03, слайд 2: страх держит многих женщин" data-case-slide>
+                <img src="assets/cases/sidcobra/carousels/03/03.jpg" width="1080" height="1350" loading="lazy" alt="Карусель 03, слайд 3: дело в гормонах" data-case-slide>
+                <img src="assets/cases/sidcobra/carousels/03/04.jpg" width="1080" height="1350" loading="lazy" alt="Карусель 03, слайд 4: рельефное тело и большие мышцы" data-case-slide>
+                <img src="assets/cases/sidcobra/carousels/03/05.jpg" width="1080" height="1350" loading="lazy" alt="Карусель 03, слайд 5: штанги и расход энергии" data-case-slide>
+                <img src="assets/cases/sidcobra/carousels/03/06.jpg" width="1080" height="1350" loading="lazy" alt="Карусель 03, слайд 6: силовые и женственность" data-case-slide>
+                <img src="assets/cases/sidcobra/carousels/03/07.jpg" width="1080" height="1350" loading="lazy" alt="Карусель 03, слайд 7: приглашение на программу" data-case-slide>
+              </div>
+              <div class="case-carousel-controls"><button type="button" aria-label="Предыдущий слайд карусели 03" data-case-prev>←</button><span data-case-counter>1 / 7</span><button type="button" aria-label="Следующий слайд карусели 03" data-case-next>→</button></div>
+              <div class="case-carousel-thumbs" data-case-thumbs aria-label="Слайды карусели 03"></div>
+            </div>
+          </article>
+
+          <article class="case-carousel-block">
+            <div class="case-carousel-heading"><span class="tag">Публикация 13 · 7 слайдов</span><h3>Новичок в зале: с чего начать</h3></div>
+            <div class="case-carousel" data-case-carousel aria-label="Карусель 13 для новичка в зале">
+              <div class="case-carousel-track">
+                <img src="assets/cases/sidcobra/carousels/13/01.jpg" width="1080" height="1350" loading="lazy" alt="Карусель 13, слайд 1: новичок в зале" data-case-slide>
+                <img src="assets/cases/sidcobra/carousels/13/02.jpg" width="1080" height="1350" loading="lazy" alt="Карусель 13, слайд 2: тренажёры и растерянность" data-case-slide>
+                <img src="assets/cases/sidcobra/carousels/13/03.jpg" width="1080" height="1350" loading="lazy" alt="Карусель 13, слайд 3: база движений" data-case-slide>
+                <img src="assets/cases/sidcobra/carousels/13/04.jpg" width="1080" height="1350" loading="lazy" alt="Карусель 13, слайд 4: изолирующие упражнения" data-case-slide>
+                <img src="assets/cases/sidcobra/carousels/13/05.jpg" width="1080" height="1350" loading="lazy" alt="Карусель 13, слайд 5: как начать без травм" data-case-slide>
+                <img src="assets/cases/sidcobra/carousels/13/06.jpg" width="1080" height="1350" loading="lazy" alt="Карусель 13, слайд 6: правильный объём нагрузки" data-case-slide>
+                <img src="assets/cases/sidcobra/carousels/13/07.jpg" width="1080" height="1350" loading="lazy" alt="Карусель 13, слайд 7: помощь тренера" data-case-slide>
+              </div>
+              <div class="case-carousel-controls"><button type="button" aria-label="Предыдущий слайд карусели 13" data-case-prev>←</button><span data-case-counter>1 / 7</span><button type="button" aria-label="Следующий слайд карусели 13" data-case-next>→</button></div>
+              <div class="case-carousel-thumbs" data-case-thumbs aria-label="Слайды карусели 13"></div>
+            </div>
+          </article>
+
+          <article class="case-carousel-block">
+            <div class="case-carousel-heading"><span class="tag">Публикация 16 · 7 слайдов</span><h3>Что реально нужно взять на тренировку</h3></div>
+            <div class="case-carousel" data-case-carousel aria-label="Карусель 16 о вещах для тренировки">
+              <div class="case-carousel-track">
+                <img src="assets/cases/sidcobra/carousels/16/01.jpg" width="1080" height="1350" loading="lazy" alt="Карусель 16, слайд 1: что взять на тренировку" data-case-slide>
+                <img src="assets/cases/sidcobra/carousels/16/02.jpg" width="1080" height="1350" loading="lazy" alt="Карусель 16, слайд 2: половина сумки не нужна" data-case-slide>
+                <img src="assets/cases/sidcobra/carousels/16/03.jpg" width="1080" height="1350" loading="lazy" alt="Карусель 16, слайд 3: бутылка SIDCOBRA" data-case-slide>
+                <img src="assets/cases/sidcobra/carousels/16/04.jpg" width="1080" height="1350" loading="lazy" alt="Карусель 16, слайд 4: охлаждающее полотенце" data-case-slide>
+                <img src="assets/cases/sidcobra/carousels/16/05.jpg" width="1080" height="1350" loading="lazy" alt="Карусель 16, слайд 5: бандажи" data-case-slide>
+                <img src="assets/cases/sidcobra/carousels/16/06.jpg" width="1080" height="1350" loading="lazy" alt="Карусель 16, слайд 6: хорошая экипировка" data-case-slide>
+                <img src="assets/cases/sidcobra/carousels/16/07.jpg" width="1080" height="1350" loading="lazy" alt="Карусель 16, слайд 7: набор SIDCOBRA" data-case-slide>
+              </div>
+              <div class="case-carousel-controls"><button type="button" aria-label="Предыдущий слайд карусели 16" data-case-prev>←</button><span data-case-counter>1 / 7</span><button type="button" aria-label="Следующий слайд карусели 16" data-case-next>→</button></div>
+              <div class="case-carousel-thumbs" data-case-thumbs aria-label="Слайды карусели 16"></div>
+            </div>
+          </article>
+
+          <article class="case-carousel-block">
+            <div class="case-carousel-heading"><span class="tag">Публикация 20 · 7 слайдов</span><h3>Много повторов сушат, мало — качают массу</h3></div>
+            <div class="case-carousel" data-case-carousel aria-label="Карусель 20 о количестве повторов">
+              <div class="case-carousel-track">
+                <img src="assets/cases/sidcobra/carousels/20/01.jpg" width="1080" height="1350" loading="lazy" alt="Карусель 20, слайд 1: миф о количестве повторов" data-case-slide>
+                <img src="assets/cases/sidcobra/carousels/20/02.jpg" width="1080" height="1350" loading="lazy" alt="Карусель 20, слайд 2: желание и режим занятий" data-case-slide>
+                <img src="assets/cases/sidcobra/carousels/20/03.jpg" width="1080" height="1350" loading="lazy" alt="Карусель 20, слайд 3: широкий диапазон повторов" data-case-slide>
+                <img src="assets/cases/sidcobra/carousels/20/04.jpg" width="1080" height="1350" loading="lazy" alt="Карусель 20, слайд 4: питание и рельеф" data-case-slide>
+                <img src="assets/cases/sidcobra/carousels/20/05.jpg" width="1080" height="1350" loading="lazy" alt="Карусель 20, слайд 5: рельеф и тренировки" data-case-slide>
+                <img src="assets/cases/sidcobra/carousels/20/06.jpg" width="1080" height="1350" loading="lazy" alt="Карусель 20, слайд 6: многоповторная работа" data-case-slide>
+                <img src="assets/cases/sidcobra/carousels/20/07.jpg" width="1080" height="1350" loading="lazy" alt="Карусель 20, слайд 7: вопрос о повторах и подходах" data-case-slide>
+              </div>
+              <div class="case-carousel-controls"><button type="button" aria-label="Предыдущий слайд карусели 20" data-case-prev>←</button><span data-case-counter>1 / 7</span><button type="button" aria-label="Следующий слайд карусели 20" data-case-next>→</button></div>
+              <div class="case-carousel-thumbs" data-case-thumbs aria-label="Слайды карусели 20"></div>
+            </div>
+          </article>
+
+          <article class="case-carousel-block">
+            <div class="case-carousel-heading"><span class="tag">Публикация 23 · 7 слайдов</span><h3>Как научиться приседать, жать и тянуть онлайн</h3></div>
+            <div class="case-carousel" data-case-carousel aria-label="Карусель 23 с кейсом онлайн-ученицы">
+              <div class="case-carousel-track">
+                <img src="assets/cases/sidcobra/carousels/23/01.jpg" width="1080" height="1350" loading="lazy" alt="Карусель 23, слайд 1: результат за 14 месяцев" data-case-slide>
+                <img src="assets/cases/sidcobra/carousels/23/02.jpg" width="1080" height="1350" loading="lazy" alt="Карусель 23, слайд 2: стартовая точка ученицы" data-case-slide>
+                <img src="assets/cases/sidcobra/carousels/23/03.jpg" width="1080" height="1350" loading="lazy" alt="Карусель 23, слайд 3: переход в онлайн-формат" data-case-slide>
+                <img src="assets/cases/sidcobra/carousels/23/04.jpg" width="1080" height="1350" loading="lazy" alt="Карусель 23, слайд 4: прогресс — не только цифры" data-case-slide>
+                <img src="assets/cases/sidcobra/carousels/23/05.jpg" width="1080" height="1350" loading="lazy" alt="Карусель 23, слайд 5: рост рабочих весов" data-case-slide>
+                <img src="assets/cases/sidcobra/carousels/23/06.jpg" width="1080" height="1350" loading="lazy" alt="Карусель 23, слайд 6: доказательство прогресса" data-case-slide>
+                <img src="assets/cases/sidcobra/carousels/23/07.jpg" width="1080" height="1350" loading="lazy" alt="Карусель 23, слайд 7: онлайн-тренировки из другого города" data-case-slide>
+              </div>
+              <div class="case-carousel-controls"><button type="button" aria-label="Предыдущий слайд карусели 23" data-case-prev>←</button><span data-case-counter>1 / 7</span><button type="button" aria-label="Следующий слайд карусели 23" data-case-next>→</button></div>
+              <div class="case-carousel-thumbs" data-case-thumbs aria-label="Слайды карусели 23"></div>
+            </div>
+          </article>
+
+          <article class="case-carousel-block">
+            <div class="case-carousel-heading"><span class="tag">Публикация 24 · 7 слайдов</span><h3>5 признаков, что Вы перетренировались</h3></div>
+            <div class="case-carousel" data-case-carousel aria-label="Карусель 24 о признаках перетренированности">
+              <div class="case-carousel-track">
+                <img src="assets/cases/sidcobra/carousels/24/01.jpg" width="1080" height="1350" loading="lazy" alt="Карусель 24, слайд 1: пять признаков перетренированности" data-case-slide>
+                <img src="assets/cases/sidcobra/carousels/24/02.jpg" width="1080" height="1350" loading="lazy" alt="Карусель 24, слайд 2: рабочие веса снижаются" data-case-slide>
+                <img src="assets/cases/sidcobra/carousels/24/03.jpg" width="1080" height="1350" loading="lazy" alt="Карусель 24, слайд 3: плохой сон и раздражительность" data-case-slide>
+                <img src="assets/cases/sidcobra/carousels/24/04.jpg" width="1080" height="1350" loading="lazy" alt="Карусель 24, слайд 4: нет желания тренироваться и постоянные боли" data-case-slide>
+                <img src="assets/cases/sidcobra/carousels/24/05.jpg" width="1080" height="1350" loading="lazy" alt="Карусель 24, слайд 5: пропал аппетит или участился пульс" data-case-slide>
+                <img src="assets/cases/sidcobra/carousels/24/06.jpg" width="1080" height="1350" loading="lazy" alt="Карусель 24, слайд 6: больше — не всегда лучше" data-case-slide>
+                <img src="assets/cases/sidcobra/carousels/24/07.jpg" width="1080" height="1350" loading="lazy" alt="Карусель 24, слайд 7: помощь в разборе нагрузки" data-case-slide>
+              </div>
+              <div class="case-carousel-controls"><button type="button" aria-label="Предыдущий слайд карусели 24" data-case-prev>←</button><span data-case-counter>1 / 7</span><button type="button" aria-label="Следующий слайд карусели 24" data-case-next>→</button></div>
+              <div class="case-carousel-thumbs" data-case-thumbs aria-label="Слайды карусели 24"></div>
+            </div>
+          </article>
+        </div>
+
+        <div id="sidcobra-panel-calendar" class="case-tab-panel" role="tabpanel" aria-labelledby="sidcobra-tab-calendar" data-case-panel="calendar" hidden>
+          <div class="case-panel-intro">
+            <div><p class="eyebrow">29 июля — 5 октября 2026</p><h3>Три публикации в неделю, всегда в 10:00</h3></div>
+            <p>Ритм простой для команды и понятный для аудитории: понедельник, среда и пятница. Все 30 материалов загружены в VK и Telegram.</p>
+          </div>
+          <div class="sidcobra-schedule-grid">
+            <article class="sidcobra-schedule-month"><h3>Июль</h3><ol>
+              <li><time>29.07</time><span>01 · День за кадром</span></li>
+              <li><time>31.07</time><span>02 · Какой вес Ваш?</span></li>
+            </ol></article>
+            <article class="sidcobra-schedule-month"><h3>Август</h3><ol>
+              <li><time>03.08</time><span>03 · Страх перекачаться</span></li>
+              <li><time>05.08</time><span>04 · Два рекорда</span></li>
+              <li><time>07.08</time><span>05 · Разбор целей</span></li>
+              <li><time>10.08</time><span>06 · Разминка</span></li>
+              <li><time>12.08</time><span>07 · Бутылка</span></li>
+              <li><time>14.08</time><span>08 · Присед и колени</span></li>
+              <li><time>17.08</time><span>09 · Товары в деле</span></li>
+              <li><time>19.08</time><span>10 · Сила растёт во сне</span></li>
+              <li><time>21.08</time><span>11 · Программа из интернета</span></li>
+              <li><time>24.08</time><span>12 · Онлайн-ведение</span></li>
+              <li><time>26.08</time><span>13 · Новичок в зале</span></li>
+              <li><time>28.08</time><span>14 · История ученицы</span></li>
+              <li><time>31.08</time><span>15 · Нужен ли протеин</span></li>
+            </ol></article>
+            <article class="sidcobra-schedule-month"><h3>Сентябрь</h3><ol>
+              <li><time>02.09</time><span>16 · Что взять в зал</span></li>
+              <li><time>04.09</time><span>17 · Выдох на усилии</span></li>
+              <li><time>07.09</time><span>18 · Первая партия</span></li>
+              <li><time>09.09</time><span>19 · Слово ученику</span></li>
+              <li><time>11.09</time><span>20 · Миф о повторах</span></li>
+              <li><time>14.09</time><span>21 · Как расти</span></li>
+              <li><time>16.09</time><span>22 · Два товара</span></li>
+              <li><time>18.09</time><span>23 · Кейс за 14 месяцев</span></li>
+              <li><time>21.09</time><span>24 · Перетренированность</span></li>
+              <li><time>23.09</time><span>25 · Лично в Питере</span></li>
+              <li><time>25.09</time><span>26 · Штанга или тренажёр</span></li>
+              <li><time>28.09</time><span>27 · Охлаждает в жару</span></li>
+              <li><time>30.09</time><span>28 · Результат — привычка</span></li>
+            </ol></article>
+            <article class="sidcobra-schedule-month"><h3>Октябрь</h3><ol>
+              <li><time>02.10</time><span>29 · Скоро свой зал</span></li>
+              <li><time>05.10</time><span>30 · Футболки SIDCOBRA</span></li>
+            </ol></article>
+          </div>
+          <p class="sidcobra-launch-note"><strong>Подтверждено:</strong> загрузка во ВКонтакте и Telegram. Instagram упоминался в плане, но подтверждения запуска на этой площадке нет.</p>
+        </div>
+
+        <div id="sidcobra-panel-revisions" class="case-tab-panel" role="tabpanel" aria-labelledby="sidcobra-tab-revisions" data-case-panel="revisions" hidden>
+          <div class="case-panel-intro">
+            <div><p class="eyebrow">Не «сгенерировали и отдали»</p><h3>Два примера, где финал стал точнее после правок</h3></div>
+            <p>Исходные версии не публикуем, поэтому показываем финал и только то решение, которое зафиксировано в истории проекта.</p>
+          </div>
+          <div class="sidcobra-revision-grid">
+            <article class="sidcobra-revision-card">
+              <button type="button" data-case-dialog-open data-case-dialog-src="assets/cases/sidcobra/posts/09.jpg" data-case-dialog-alt="Публикация 09 · Товары в деле"><img src="assets/cases/sidcobra/posts/09.jpg" width="1080" height="1350" loading="lazy" alt="Финальный пост SIDCOBRA с реальными фотографиями товаров"></button>
+              <div><p class="eyebrow">Публикация 09</p><h3>Товар остался настоящим</h3><p>Клиент попросил сохранить реальные фотографии и не изменять сами товары. Мы оставили продукт без вмешательства, а визуальную систему построили вокруг него.</p><p><strong>Итог:</strong> узнаваемый бренд без подмены реального товара.</p></div>
+            </article>
+            <article class="sidcobra-revision-card">
+              <button type="button" data-case-dialog-open data-case-dialog-src="assets/cases/sidcobra/posts/10.jpg" data-case-dialog-alt="Публикация 10 · Сила растёт во сне"><img src="assets/cases/sidcobra/posts/10.jpg" width="1080" height="1350" loading="lazy" alt="Финальный пост SIDCOBRA о сне с сохранённой идеей кота"></button>
+              <div><p class="eyebrow">Публикация 10</p><h3>Сохранили идею, поправили деталь</h3><p>Клиенту понравилась метафора сна с котом. Концепцию сохранили, а внешний вид полотенца переработали, чтобы финальный макет соответствовал задаче.</p><p><strong>Итог:</strong> не потеряли сильную идею из-за одной спорной детали.</p></div>
+            </article>
+          </div>
+          <div class="case-evidence" style="margin-top:16px;">
+            <b>✓</b>
+            <p>В финальный комплект добавили недостающий слайд карусели №13, визуал публикации №15 и завершили публикации №25–28.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Результат проекта</p>
+            <h2>Готовый результат проекта</h2>
+          </div>
+          <p>На странице видны объём, система, качество визуала и календарь выпуска.</p>
+        </div>
+        <div class="grid-2">
+          <article class="card">
+            <h3>Что сделали</h3>
+            <ul class="check-list">
+              <li>контент-план и тексты утверждены;</li>
+              <li>24 одиночных поста и 6 каруселей по 7 слайдов;</li>
+              <li>66 финальных изображений формата 4:5;</li>
+              <li>визуальный комплект утверждён;</li>
+              <li>загрузка в VK и Telegram;</li>
+              <li>календарь с 29 июля по 5 октября в 10:00.</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>Итог проекта</h3>
+            <p>Кейс показывает готовый комплект и календарь ВКонтакте и Telegram. Коммерческие показатели не измерялись.</p>
+            <p class="risk-note">Цены и условия внутри отдельных макетов относятся к периоду проекта и не являются текущим предложением.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="final-cta">
+      <div class="container">
+        <p class="eyebrow">У бизнеса несколько направлений?</p>
+        <h2>Соберём их в одну систему, а не в ленту из случайных постов</h2>
+        <p class="lead">Маркетолог строит план, авторы готовят тексты, дизайнер собирает визуал, а команда загружает готовый комплект в календарь.</p>
+        <div class="section-actions" style="margin-top:24px;">
+          <a class="btn btn-accent" href="start.html">Обсудить свой проект</a>
+          <a class="btn btn-secondary" href="examples.html" style="border-color:#fff;color:#fff;">Посмотреть другие работы</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <dialog class="case-dialog" data-case-dialog aria-labelledby="case-dialog-title">
+    <div class="case-dialog-bar">
+      <strong id="case-dialog-title" data-case-dialog-title>Работа проекта SIDCOBRA</strong>
+      <button type="button" aria-label="Закрыть изображение" data-case-dialog-close>Закрыть ×</button>
+    </div>
+    <img src="assets/cases/sidcobra/posts/01.jpg" width="1080" height="1350" alt="" data-case-dialog-image>
+  </dialog>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="brand" href="index.html" aria-label="lemonmedia — главная"><span class="brand-dot" aria-hidden="true"></span>lemonmedia</a>
+        <p class="footer-note">Регулярный контент под ключ для российского малого и среднего бизнеса. Команда lemonmedia работает с 2020 года.</p>
+      </div>
+      <div class="footer-column"><strong>Выбрать</strong><a href="pricing.html">Цены и конструктор</a><a href="examples.html">Работы</a><a href="process.html">Как работаем</a><a href="compare.html">Сравнение</a></div>
+      <div class="footer-column"><strong>Узнать больше</strong><a href="reviews.html">Отзывы</a><a href="about.html">О компании</a><a href="services.html">Разовые услуги</a><a href="partners.html">Партнёрам</a><a href="articles.html">Статьи</a><a href="faq.html">Все вопросы</a></div>
+      <div class="footer-column"><strong>Начать</strong><a href="start.html">Собрать пакет</a><a href="audit.html">Бесплатный разбор</a><a href="guarantee.html">Условия гарантии</a><a href="legal.html#offer">Условия работы</a><a href="legal.html#privacy">Конфиденциальность</a></div>
+    </div>
+  </footer>
+
+  <script src="assets/js/prototype.js"></script>
+</body>
+</html>

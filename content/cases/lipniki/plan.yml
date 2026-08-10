@@ -1,0 +1,145 @@
+version: 1
+brand: lemonmedia
+case_id: lipniki
+period: "2026-08"
+language: ru
+
+claim_rule: "Цели описывают роль контента, а не доказанный коммерческий результат. Подтверждены готовый контент-план и полный визуальный пакет; публикация и метрики не заявляются."
+
+distribution:
+  prepared_for:
+    - max
+  primary_platform: max
+  calendar_dates: not-defined-in-approved-plan
+  publication_status: not-confirmed
+
+rubric_balance:
+  product_showcase: 4
+  useful_content: 2
+  offer: 2
+  engagement: 2
+
+publications:
+  - number: 1
+    id: publication-01
+    format: static-post
+    category: product-showcase
+    title: "Свежий завоз в Липниках"
+    asset: "assets/cases/lipniki/posts/01.webp"
+    goals: [show-fresh-assortment, seasonal-demand, lead-to-messages-and-store]
+
+  - number: 2
+    id: publication-02
+    format: static-post
+    category: useful-content
+    title: "Как выбрать свежую рыбу"
+    asset: "assets/cases/lipniki/posts/02.webp"
+    goals: [help-product-choice, build-local-trust, encourage-saves]
+
+  - number: 3
+    id: publication-03
+    format: static-post
+    category: engagement
+    title: "Мясо, рыба или овощи-фрукты"
+    asset: "assets/cases/lipniki/posts/03.webp"
+    goals: [encourage-comments, learn-local-demand]
+
+  - number: 4
+    id: publication-04
+    format: static-post
+    category: product-showcase
+    title: "Мясо своё — всегда свежее"
+    asset: "assets/cases/lipniki/posts/04.webp"
+    goals: [show-fresh-assortment, build-local-trust, lead-to-messages-and-store]
+
+  - number: 5
+    id: publication-05
+    format: static-post
+    category: offer
+    title: "Хиты недели"
+    asset: "assets/cases/lipniki/posts/05.webp"
+    historical_prices_in_copy: true
+    prices_visible_in_asset: false
+    goals: [show-fresh-assortment, seasonal-demand, lead-to-messages-and-store]
+
+  - number: 6
+    id: publication-06
+    format: carousel
+    category: useful-content
+    title: "Быстрые ужины после смены"
+    slide_count: 6
+    goals: [encourage-saves, show-products-in-use, build-local-trust]
+    assets:
+      - "assets/cases/lipniki/carousels/06/01.webp"
+      - "assets/cases/lipniki/carousels/06/02.webp"
+      - "assets/cases/lipniki/carousels/06/03.webp"
+      - "assets/cases/lipniki/carousels/06/04.webp"
+      - "assets/cases/lipniki/carousels/06/05.webp"
+      - "assets/cases/lipniki/carousels/06/06.webp"
+
+  - number: 7
+    id: publication-07
+    format: static-post
+    category: engagement
+    title: "Шашлык или рыба на выходные"
+    asset: "assets/cases/lipniki/posts/07.webp"
+    goals: [encourage-comments, learn-local-demand, show-products-in-use]
+
+  - number: 8
+    id: publication-08
+    format: carousel
+    category: product-showcase
+    title: "Рыбный прилавок Липников"
+    slide_count: 7
+    goals: [show-fresh-assortment, help-product-choice, lead-to-messages-and-store]
+    assets:
+      - "assets/cases/lipniki/carousels/08/01.webp"
+      - "assets/cases/lipniki/carousels/08/02.webp"
+      - "assets/cases/lipniki/carousels/08/03.webp"
+      - "assets/cases/lipniki/carousels/08/04.webp"
+      - "assets/cases/lipniki/carousels/08/05.webp"
+      - "assets/cases/lipniki/carousels/08/06.webp"
+      - "assets/cases/lipniki/carousels/08/07.webp"
+
+  - number: 9
+    id: publication-09
+    format: static-post
+    category: offer
+    title: "Лето — режем арбузы"
+    asset: "assets/cases/lipniki/posts/09.webp"
+    historical_prices_in_copy: true
+    prices_visible_in_asset: false
+    goals: [seasonal-demand, lead-to-messages-and-store]
+
+  - number: 10
+    id: publication-10
+    format: static-post
+    category: product-showcase
+    title: "Быстрый ужин без хлопот"
+    asset: "assets/cases/lipniki/posts/10.webp"
+    goals: [show-products-in-use, help-product-choice, lead-to-messages-and-store]
+
+gift:
+  - id: gift-carousel-01
+    format: carousel
+    category: useful-content
+    title: "Список покупок на неделю"
+    slide_count: 7
+    goals: [encourage-saves, build-shopping-habit, lead-to-messages-and-store]
+    assets:
+      - "assets/cases/lipniki/gift/01.webp"
+      - "assets/cases/lipniki/gift/02.webp"
+      - "assets/cases/lipniki/gift/03.webp"
+      - "assets/cases/lipniki/gift/04.webp"
+      - "assets/cases/lipniki/gift/05.webp"
+      - "assets/cases/lipniki/gift/06.webp"
+      - "assets/cases/lipniki/gift/07.webp"
+
+asset_display_notes:
+  aspect_ratio: "4:5"
+  source_dimensions: "2160 × 2700; two static sources 4320 × 5400"
+  web_dimensions: "864 × 1080"
+  crop: false
+  public_asset_count: 28
+  internal_asset_count: 28
+  historical_prices: "Цены из контент-плана не показаны в финальных визуалах и не воспроизводятся на странице кейса."

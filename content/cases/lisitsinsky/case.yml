@@ -1,0 +1,97 @@
+version: 1
+brand: lemonmedia
+id: lisitsinsky
+slug: lisitsinsky
+language: ru
+
+identity:
+  public_title: "Кардиолог Александр Лисицинский — экспертная контент-система"
+  client_display_name: "Александр Лисицинский"
+  period: "2026-07"
+  niche: healthcare
+  subniche: cardiology
+  geography: "Санкт-Петербург"
+
+summary:
+  short: "Первый комплект для кардиолога: 10 публикаций, две карусели внутри плана и одна подарочная карусель — всего 29 финальных изображений."
+  content_task: "Собрать спокойный маршрут от узнаваемого вопроса к пониманию процесса и консультации, не подменяя врача медицинскими советами в ленте."
+  result_wording: "Контент-план и тексты утверждены; в финальной папке сохранены 8 одиночных макетов и 3 карусели по 7 слайдов. Публично показана безопасная выборка из пяти изображений."
+
+scope:
+  publications: 10
+  static_publications: 8
+  carousel_publications_in_plan: 2
+  gift_carousels: 1
+  total_carousels: 3
+  carousel_slides_each: 7
+  visual_files: 29
+  post_aspect_ratio: "4:5"
+  carousel_aspect_ratio: "4:5"
+  prepared_platform_count: 2
+  platforms_in_plan: [vk, telegram]
+  publication_status: not-publicly-confirmed
+
+content_mix:
+  useful: 4
+  myth_analysis: 2
+  doctor_approach: 2
+  offers: 2
+
+public_assets:
+  posts:
+    - "assets/cases/lisitsinsky/posts/02.jpg"
+    - "assets/cases/lisitsinsky/posts/03.jpg"
+    - "assets/cases/lisitsinsky/posts/05.jpg"
+  carousel_04:
+    - "assets/cases/lisitsinsky/carousel-04/01.jpg"
+    - "assets/cases/lisitsinsky/carousel-04/07.jpg"
+  public_asset_count: 5
+  selection_rule: "Только нейтральные макеты: без списков симптомов, лекарственных тезисов, медицинских норм, диагностических выводов, пациентов и цен."
+
+featured_goals:
+  - reduce-information-overload
+  - set-self-diagnosis-boundary
+  - explain-doctor-process
+  - build-expert-trust
+  - lead-to-consultation
+
+evidence:
+  source_marketing_task_id: 90430
+  source_visual_task_id: 90790
+  approved_plan_document_id: "1JDdJFw3OGModePCm7Wb2ht4rxZV1qo6JyN_Tje_LA0A"
+  final_visual_folder_date: "2026-08-04"
+  confirmed:
+    - "Маркетинговая задача завершена, в чате зафиксировано утверждение текста клиентом."
+    - "Утверждённый план содержит 10 публикаций."
+    - "План содержит 2 карусели по 7 слайдов и подарочную карусель по 7 слайдов."
+    - "Финальная папка визуала от 4 августа 2026 года содержит 8 одиночных макетов и 21 слайд каруселей."
+    - "Всего найдено 29 финальных изображений."
+    - "Визуальная задача завершена."
+  not_claimed:
+    - "Публикация материалов в социальных сетях."
+    - "Охваты, сохранения, заявки, продажи и окупаемость."
+    - "Медицинская эффективность, диагнозы или результаты лечения."
+    - "Актуальность исторических цен и условий консультации."
+  direct_publication_links: null
+  analytics: null
+  client_review: null
+
+publication_control:
+  portfolio_permission: confirmed_by_project_owner
+  content_plan_approval: confirmed
+  copy_approval: confirmed
+  final_media: ready
+  visual_task_status: completed
+  direct_publication_links: unavailable
+  recognizable_doctor_asset_public: true
+  recognizable_patient_assets_public: false
+  medical_advice_visible_public: false
+  medicine_claims_visible_public: false
+  historical_prices_visible_public: false
+  display_notes:
+    - "Показывать изображения полностью, без обрезки."
+    - "Портрет в посте 5 — публичный образ самого эксперта; пациентов не показывать."
+    - "Не пересказывать исходные медицинские тексты как универсальные советы."
+    - "Не использовать пост 10 как обещание решить все вопросы за один визит."
+    - "Не представлять подготовку для двух площадок как подтверждение фактической публикации."
+  publishable: true

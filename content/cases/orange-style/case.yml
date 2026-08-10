@@ -1,0 +1,103 @@
+version: 1
+brand: lemonmedia
+id: orange-style
+slug: orange-style
+language: ru
+
+identity:
+  public_title: "Orange Style — контент-система для фитнес-клуба"
+  client_display_name: "Orange Style"
+  period: first-month
+  release_window: null
+  niche: fitness-and-wellness
+  subniche: fitness-club
+  geography: bryansk
+
+summary:
+  short: "Первый контент-план для фитнес-клуба: пять маркетинговых рубрик, десять постов, мини-прогрев из пяти историй и три VK-виджета."
+  content_task: "Удерживать действующих клиентов клуба, поддерживать интерес к тренировкам и последовательно подводить аудиторию к персональным тренировкам, семейному фитнесу и продлению абонемента."
+  result_wording: "Подготовлены и утверждены 10 статичных постов, серия из 5 историй и 3 VK-виджета. Материалы загружены в систему публикации; точный выход каждого поста и бизнес-метрики отдельно не подтверждены."
+
+scope:
+  publications: 10
+  static_posts: 10
+  carousel_publications: 0
+  carousel_slides: 0
+  stories_sequences: 1
+  stories_frames: 5
+  vk_widgets: 3
+  visual_files: 18
+  prepared_platform_count: 1
+  prepared_platform_ids:
+    - vk
+  platform_status: uploaded-to-publication-system-exact-publication-not-verified
+
+source_rubric_distribution:
+  useful: 2
+  myths: 2
+  proof-and-work: 2
+  offer: 2
+  engagement: 2
+
+featured_goals:
+  - retain-existing-clients
+  - encourage-saves
+  - build-expertise
+  - remove-fears
+  - collect-feedback
+  - promote-personal-training
+  - lead-renewal
+
+next_order:
+  status: ordered-in-production
+  publications: 15
+  stories_frames: 10
+  public_wording: "После первого месяца клиент оформил следующий заказ. Новый комплект находится в производстве и не входит в результаты этого кейса."
+
+evidence:
+  confirmed:
+    - "Публичное название клиента: Orange Style."
+    - "Первый месяц содержит 10 утверждённых статичных постов."
+    - "Пять рубрик распределены поровну: по 2 поста на каждую."
+    - "К посту о семейном фитнесе подготовлен мини-прогрев из 5 историй."
+    - "Дополнительно подготовлены и отдельно утверждены 3 VK-виджета."
+    - "Всего сохранено 18 утверждённых изображений."
+    - "24 июля менеджер зафиксировал утверждение материалов и переход к публикации."
+    - "Материалы загружены в проект Orange Style в системе публикации."
+    - "Клиент оформил следующий заказ: 15 постов и 10 историй; он находится в производстве."
+  not_claimed:
+    - "Точные даты и время выхода каждого поста."
+    - "Прямые ссылки на опубликованные записи."
+    - "Охваты, вовлечённость, заявки, продажи, продления и окупаемость."
+    - "Выполнение следующего заказа на 15 постов и 10 историй."
+    - "Актуальность скидок, бонусов и других условий внутри исторических макетов."
+  public_links: null
+  direct_publication_links: null
+  analytics: null
+  client_review: null
+
+publication_control:
+  portfolio_permission: confirmed_by_project_owner
+  final_media: ready
+  client_visual_approval: confirmed
+  direct_publication_links: unavailable
+  recognizable_people_assets:
+    - "posts/03.jpg"
+    - "posts/04.jpg"
+    - "posts/05.jpg"
+    - "stories/*.jpg"
+    - "widgets/03.jpg"
+  recognizable_people_use_basis: confirmed_by_project_owner
+  historical_terms_visible_in_assets:
+    - "posts/05.jpg"
+    - "posts/10.jpg"
+    - "stories/*.jpg"
+    - "widgets/03.jpg"
+  display_notes:
+    - "Посты имеют формат 4:5 и должны показываться без обрезки."
+    - "Истории имеют формат 9:16 и должны показываться без обрезки."
+    - "VK-виджеты имеют формат 2:3 и должны показываться без обрезки."
+    - "Скидки и бонусы на изображениях относятся к периоду проекта и не являются текущим предложением клуба."
+    - "Не представлять загрузку в систему публикации как подтверждённый выход всех постов."
+    - "Не представлять повторный заказ как выполненный."
+  publishable: true

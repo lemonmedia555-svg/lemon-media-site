@@ -1,0 +1,225 @@
+version: 1
+brand: lemonmedia
+case_id: chebusser
+period: "2026-08"
+language: ru
+
+scope:
+  publications: 10
+  static_posts: 8
+  carousel_publications: 2
+  carousel_slides: 14
+  stories_sequences: 1
+  stories_frames: 5
+  visual_files: 27
+  planned_platform_count: 2
+
+claim_rule: "Цели ниже описывают маркетинговую задачу материалов, а не уже достигнутый результат. Контент-план и тексты утверждены; финальный визуал передан клиенту, но прямое клиентское утверждение дизайна, публикации и метрики не зафиксированы."
+
+schedule:
+  exact_publication_dates: null
+  exact_publication_times: null
+  status: final-visuals-handed-to-client-publication-not-verified
+
+publications:
+  - number: 1
+    id: publication-01
+    format: static-post
+    category: product-showcase
+    source_rubric: product-showcase
+    title: "13 начинок. Любимая — одна?"
+    asset: "assets/cases/chebusser/posts/01.jpg"
+    goals:
+      - create-purchase-desire
+      - help-choice
+
+  - number: 2
+    id: publication-02
+    format: static-post
+    category: product-showcase
+    source_rubric: product-showcase
+    title: "Наш хит: чебурек с говядиной"
+    asset: "assets/cases/chebusser/posts/02.jpg"
+    goals:
+      - create-purchase-desire
+
+  - number: 3
+    id: publication-03
+    format: carousel
+    slide_count: 7
+    category: useful
+    source_rubric: useful
+    title: "Как съесть чебурек и не испачкаться"
+    goals:
+      - encourage-saves
+      - show-expertise
+    slides:
+      - number: 1
+        role: cover
+        topic: "Как съесть чебурек и не испачкаться"
+        asset: "assets/cases/chebusser/carousels/03/01.jpg"
+      - number: 2
+        role: explanation
+        topic: "Подождать, пока продукт немного остынет"
+        asset: "assets/cases/chebusser/carousels/03/02.jpg"
+      - number: 3
+        role: explanation
+        topic: "Есть руками, а не приборами"
+        asset: "assets/cases/chebusser/carousels/03/03.jpg"
+      - number: 4
+        role: explanation
+        topic: "Держать чебурек вертикально"
+        asset: "assets/cases/chebusser/carousels/03/04.jpg"
+      - number: 5
+        role: explanation
+        topic: "Начинать с дальней стороны"
+        asset: "assets/cases/chebusser/carousels/03/05.jpg"
+      - number: 6
+        role: explanation
+        topic: "Оставить сок внутри"
+        asset: "assets/cases/chebusser/carousels/03/06.jpg"
+      - number: 7
+        role: call-to-action
+        topic: "Сохранить совет перед обедом"
+        asset: "assets/cases/chebusser/carousels/03/07.jpg"
+
+  - number: 4
+    id: publication-04
+    format: static-post
+    category: myths
+    source_rubric: myths
+    title: "Жарим только после заказа"
+    asset: "assets/cases/chebusser/posts/04.jpg"
+    goals:
+      - build-trust
+      - differentiate-offer
+
+  - number: 5
+    id: publication-05
+    format: static-post
+    category: offer
+    source_rubric: offer
+    title: "Первый заказ"
+    asset: "assets/cases/chebusser/posts/05.jpg"
+    historical_terms: true
+    goals:
+      - lead-request
+
+  - number: 6
+    id: publication-06
+    format: carousel
+    slide_count: 7
+    category: product-showcase
+    source_rubric: useful
+    title: "Чебурек, который вы не пробовали"
+    goals:
+      - create-purchase-desire
+      - help-choice
+    slides:
+      - number: 1
+        role: cover
+        topic: "Чебурек, который вы не пробовали"
+        asset: "assets/cases/chebusser/carousels/06/01.jpg"
+      - number: 2
+        role: explanation
+        topic: "Классический вариант с мясом"
+        asset: "assets/cases/chebusser/carousels/06/02.jpg"
+      - number: 3
+        role: product
+        topic: "Чебурек с шоколадом"
+        asset: "assets/cases/chebusser/carousels/06/03.jpg"
+      - number: 4
+        role: product
+        topic: "Чебурек с джемом"
+        asset: "assets/cases/chebusser/carousels/06/04.jpg"
+      - number: 5
+        role: product
+        topic: "Чебурек с красной рыбой"
+        asset: "assets/cases/chebusser/carousels/06/05.jpg"
+      - number: 6
+        role: product
+        topic: "Чебурек с сыром и зеленью"
+        asset: "assets/cases/chebusser/carousels/06/06.jpg"
+      - number: 7
+        role: call-to-action
+        topic: "Сохранить и выбрать начинку"
+        asset: "assets/cases/chebusser/carousels/06/07.jpg"
+
+  - number: 7
+    id: publication-07
+    format: static-post
+    category: useful
+    source_rubric: engagement
+    title: "Что добавить в меню?"
+    asset: "assets/cases/chebusser/posts/07.jpg"
+    goals:
+      - help-choice
+
+  - number: 8
+    id: publication-08
+    format: static-post
+    category: offer
+    source_rubric: engagement
+    title: "Как применить промокод"
+    asset: "assets/cases/chebusser/posts/08.jpg"
+    historical_terms: true
+    goals:
+      - lead-request
+
+  - number: 9
+    id: publication-09
+    format: static-post
+    category: myths
+    source_rubric: myths
+    title: "190 граммов — перекус?"
+    asset: "assets/cases/chebusser/posts/09.jpg"
+    goals:
+      - build-trust
+      - differentiate-offer
+
+  - number: 10
+    id: publication-10
+    format: static-post
+    category: offer
+    source_rubric: offer
+    title: "Подарок к первому заказу"
+    asset: "assets/cases/chebusser/posts/10.jpg"
+    historical_terms: true
+    goals:
+      - lead-request
+
+stories:
+  - id: stories-01
+    format: stories-sequence
+    frame_count: 5
+    related_publication_id: publication-02
+    title: "Мини-прогрев к знакомству с хитом меню"
+    frames:
+      - number: 1
+        role: hook
+        topic: "13 начинок — глаза разбегаются"
+        asset: "assets/cases/chebusser/stories/01.jpg"
+      - number: 2
+        role: explanation
+        topic: "Начать знакомство с самым популярным вариантом"
+        asset: "assets/cases/chebusser/stories/02.jpg"
+      - number: 3
+        role: proof
+        topic: "Классика, которую сложно испортить"
+        asset: "assets/cases/chebusser/stories/03.jpg"
+      - number: 4
+        role: proof
+        topic: "Мясной фарш, сочность и хрустящая корочка"
+        asset: "assets/cases/chebusser/stories/04.jpg"
+      - number: 5
+        role: call-to-action
+        topic: "Хит — чебурек с говядиной"
+        asset: "assets/cases/chebusser/stories/05.jpg"
+
+asset_display_notes:
+  post_and_carousel_aspect_ratio: "4:5"
+  stories_aspect_ratio: "9:16"
+  crop: false
+  post_and_carousel_dimensions: "1080 × 1350"
+  stories_dimensions: "1080 × 1920"
+  historical_commercial_terms: "Скидки, подарки и механика промокода на изображениях относятся к периоду производства кейса; не представлять их как актуальное предложение."

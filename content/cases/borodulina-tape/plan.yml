@@ -1,0 +1,147 @@
+version: 1
+brand: lemonmedia
+case_id: borodulina-tape
+period: "2026-07/2026-08"
+language: ru
+
+scope:
+  publications: 10
+  static_posts: 8
+  carousel_publications: 2
+  carousel_slides: 14
+  stories_sequences: 1
+  stories_frames: 5
+  confirmed_launch_platform_count: 1
+
+claim_rule: "Все цели ниже описывают задачу материала, а не уже достигнутый бизнес-результат. Запуск подтверждён только для VK."
+
+schedule:
+  start_date: "2026-07-31"
+  end_date: "2026-08-18"
+  cadence_days: 2
+  time_local: "10:00"
+  timezone_status: not-recorded
+  status: launched-from-crm
+
+publications:
+  - number: 1
+    id: publication-01
+    scheduled_at_local: "2026-07-31T10:00:00"
+    format: static-post
+    category: seasonal
+    title: "На что я смотрю летом: лицо и тело в жару"
+    goals:
+      - seasonal-relevance
+      - encourage-engagement
+    related_stories_sequence: stories-01
+
+  - number: 2
+    id: publication-02
+    scheduled_at_local: "2026-08-02T10:00:00"
+    format: static-post
+    category: expert-opinion
+    title: "Почему я против подхода «наклеил и побежал»"
+    goals:
+      - differentiate-approach
+      - build-trust
+
+  - number: 3
+    id: publication-03
+    scheduled_at_local: "2026-08-04T10:00:00"
+    format: carousel
+    slide_count: 7
+    category: expert-mistakes
+    title: "Три ошибки, из-за которых тейп на лице держится хуже"
+    goals:
+      - show-expertise
+      - encourage-saves
+
+  - number: 4
+    id: publication-04
+    scheduled_at_local: "2026-08-06T10:00:00"
+    format: static-post
+    category: expert-complex
+    title: "Как тейп, массаж и движение усиливают друг друга"
+    goals:
+      - show-expertise
+      - differentiate-approach
+
+  - number: 5
+    id: publication-05
+    scheduled_at_local: "2026-08-08T10:00:00"
+    format: static-post
+    category: expert
+    title: "Кинезиофитнес — это не обычный фитнес"
+    goals:
+      - show-expertise
+      - create-interest
+
+  - number: 6
+    id: publication-06
+    scheduled_at_local: "2026-08-10T10:00:00"
+    format: static-post
+    category: backstage
+    title: "Что всегда со мной на приёме: мой рабочий набор"
+    goals:
+      - build-trust
+
+  - number: 7
+    id: publication-07
+    scheduled_at_local: "2026-08-12T10:00:00"
+    format: carousel
+    slide_count: 7
+    category: expert-analysis
+    title: "Что я замечаю на диагностике, о чём вы не спрашиваете"
+    goals:
+      - show-expertise
+      - encourage-saves
+
+  - number: 8
+    id: publication-08
+    scheduled_at_local: "2026-08-14T10:00:00"
+    format: static-post
+    category: engagement
+    title: "Опрос: о чём рассказать подробнее"
+    goals:
+      - encourage-comments
+      - collect-feedback
+
+  - number: 9
+    id: publication-09
+    scheduled_at_local: "2026-08-16T10:00:00"
+    format: static-post
+    category: expert-question
+    title: "Можно ли использовать тейп в жару"
+    goals:
+      - show-expertise
+
+  - number: 10
+    id: publication-10
+    scheduled_at_local: "2026-08-18T10:00:00"
+    format: static-post
+    category: offer
+    title: "Летний повод начать"
+    goals:
+      - lead-request
+
+stories_sequences:
+  - id: stories-01
+    related_publication_id: publication-01
+    frame_count: 5
+    goal: warm-up-to-publication
+    frames:
+      - number: 1
+        role: hook
+        topic: "Летом тело ощущается иначе"
+      - number: 2
+        role: recognition
+        topic: "Отёки, тяжесть и вялость к вечеру"
+      - number: 3
+        role: barrier-removal
+        topic: "Сезонную реакцию можно спокойно разобрать"
+      - number: 4
+        role: intrigue
+        topic: "Обещание экспертного разбора"
+      - number: 5
+        role: publication-transition
+        topic: "Переход к первой публикации"

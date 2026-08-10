@@ -1,0 +1,80 @@
+version: 1
+brand: lemonmedia
+case:
+  id: ritual-s
+  slug: ritual-s
+  public_name: "Ритуал-С"
+  page: "case-ritual-s.html"
+  status: complete-package-with-public-exclusions
+  case_type: expanded
+  period: "2026-07"
+  release_window: "2026-07"
+  niche: services
+  subniche: ritual-services
+
+summary:
+  short: "Сложный и чувствительный выбор превратили в спокойный контент-план: материалы, формы, факторы стоимости, производство, уход и благоустройство."
+  content_task: "Снять основные вопросы до обращения, показать ассортимент и организованный процесс без давления и однотипных продаж."
+  result_wording: "Собран и утверждён визуальный комплект из 20 публикаций: 15 одиночных макетов и 5 каруселей по 7 слайдов — всего 50 изображений."
+
+scope:
+  platform_count: 3
+  platform_ids:
+    - vk
+    - telegram
+    - max
+  publications: 20
+  static_posts: 15
+  carousel_publications: 5
+  carousel_slides: 35
+  visual_files: 50
+  public_media_files: 34
+  publishable_visualized_publications: 10
+  private_exclusions: 16
+  planned_stories: 5
+  confirmed_story_files: 0
+
+featured_goals:
+  - reduce-choice-anxiety
+  - explain-product-differences
+  - show-production-system
+  - build-trust
+  - encourage-saves
+  - lead-to-messages
+
+evidence:
+  confirmed:
+    - "Публичное название проекта: Ритуал-С."
+    - "Контент-план содержит 20 публикаций для VK, Telegram и MAX."
+    - "Баланс плана: 4 полезных материала, 4 витрины продукта, 3 примера работ, 3 предложения, 2 материала о процессе, 2 отзыва и 2 разбора мифов."
+    - "Финальная папка содержит 15 одиночных PNG и 5 каруселей по 7 слайдов."
+    - "В полном финальном комплекте 50 изображений формата 4:5."
+    - "В задаче зафиксировано утверждение визуала и переход к публикации."
+    - "Для публичного показа отобраны 34 нейтральных кадра."
+  not_claimed:
+    - "Фактический выход всех публикаций."
+    - "Охваты, реакции, обращения, продажи и окупаемость."
+    - "Подготовка пяти историй: файлов нет в финальной папке."
+  public_links: null
+  direct_publication_links: null
+  analytics: null
+
+quality_control:
+  final_media_package: confirmed
+  visual_approval: confirmed
+  prepared_for_posting: confirmed
+  privacy_review: passed-with-exclusions
+  exact_prices_visible_in_public_media: false
+  public_exclusions:
+    - "9 одиночных макетов с лицами, именами, датами, кладбищенскими сценами или конкретной ценой."
+    - "Карусель №3 с персональными памятниками."
+
+publication_control:
+  portfolio_permission: confirmed_by_project_owner
+  publishable_as_case: true
+  display_notes:
+    - "Использовать только публичное название Ритуал-С; имя заказчика не показывать."
+    - "Не показывать лица умерших и родственников, имена, даты жизни, документы, адреса и конкретные цены."
+    - "Не называть материалы опубликованными."
+    - "Не добавлять бизнес-метрики без отдельной аналитики."
+    - "Не заявлять пять историй как готовый продукт."

@@ -1,0 +1,125 @@
+version: 1
+brand: lemonmedia
+case_id: siyanie-vyaza
+period: "2026-07"
+language: ru
+
+claim_rule: "Цели тем описывают маркетинговую задачу. Они не доказывают фактические сохранения, заявки, продажи или публикацию."
+
+scope:
+  publications: 10
+  static_publications: 8
+  carousel_publications: 2
+  carousel_slides_each: 9
+  additional_story_frames: 3
+  visual_files: 29
+
+publications:
+  - number: 1
+    id: publication-01
+    format: static
+    category: behind-the-scenes
+    public_title: "Стол под заказ начинается с комнаты"
+    source_topic: "Стол под заказ начинается не с дерева, а с комнаты"
+    asset: "assets/cases/siyanie-vyaza/posts/01.jpg"
+    public_asset: true
+    goals: [build-trust, start-dialogue]
+
+  - number: 2
+    id: publication-02
+    format: carousel
+    category: useful
+    public_title: "Три вопроса перед заказом журнального столика"
+    slide_count: 9
+    public_asset: partial
+    public_frames:
+      - {number: 1, role: cover, asset: "assets/cases/siyanie-vyaza/carousel-02/01.jpg"}
+      - {number: 3, role: define-use, asset: "assets/cases/siyanie-vyaza/carousel-02/03.jpg"}
+      - {number: 7, role: assemble-choice, asset: "assets/cases/siyanie-vyaza/carousel-02/07.jpg"}
+      - {number: 9, role: invitation-to-dialogue, asset: "assets/cases/siyanie-vyaza/carousel-02/09.jpg"}
+    goals: [help-choose, encourage-dialogue]
+
+  - number: 3
+    id: publication-03
+    format: static
+    category: materials
+    public_title: "Как цвет смолы меняет характер стола"
+    asset: "assets/cases/siyanie-vyaza/posts/03.jpg"
+    public_asset: true
+    goals: [show-material-options, start-dialogue]
+
+  - number: 4
+    id: publication-04
+    format: static
+    category: works
+    public_title: "Зеркало из дерева в интерьере"
+    asset: "assets/cases/siyanie-vyaza/posts/04.jpg"
+    public_asset: true
+    goals: [show-product-range, build-interest]
+
+  - number: 5
+    id: publication-05
+    format: static
+    category: offer
+    public_title: "Покажите интерьер — обсудим стол"
+    asset: "assets/cases/siyanie-vyaza/posts/05.jpg"
+    public_asset: true
+    goals: [reduce-brief-barrier, lead-to-dialogue]
+
+  - number: 6
+    id: publication-06
+    format: static
+    category: useful
+    public_title: "Когда стол без смолы — лучший вариант"
+    asset: "assets/cases/siyanie-vyaza/posts/06.jpg"
+    public_asset: true
+    goals: [set-expectations, show-expertise]
+
+  - number: 7
+    id: publication-07
+    format: carousel
+    category: behind-the-scenes
+    public_title: "Что можно менять в проекте"
+    slide_count: 9
+    asset: null
+    public_asset: false
+    withholding_reason: "Один из внутренних слайдов содержит историческое условие о стоимости изменений; карусель не показана публично без отдельной редакции."
+    goals: [show-customization, reduce-objections]
+
+  - number: 8
+    id: publication-08
+    format: static
+    category: works
+    public_title: "Обеденный стол, за которым хочется задержаться"
+    asset: "assets/cases/siyanie-vyaza/posts/08.jpg"
+    public_asset: true
+    goals: [show-product-in-life, build-interest]
+
+  - number: 9
+    id: publication-09
+    format: static
+    category: materials
+    public_title: "У дерева нет дублей"
+    asset: "assets/cases/siyanie-vyaza/posts/09.jpg"
+    public_asset: true
+    goals: [show-uniqueness, build-product-value]
+
+  - number: 10
+    id: publication-10
+    format: static
+    category: offer
+    public_title: "Ваш стол может начаться с одного сообщения"
+    asset: "assets/cases/siyanie-vyaza/posts/10.jpg"
+    public_asset: true
+    goals: [reduce-entry-barrier, lead-to-dialogue]
+
+additional_story_frames:
+  count: 3
+  public_asset: false
+  withholding_reason: "Финальные файлы безопасны визуально, но их тексты не полностью совпадают с бонусной мини-серией в плане; публично не показываем без уточнения состава."
+
+asset_display_notes:
+  post_dimensions: "1080 × 1350"
+  story_dimensions: "1080 × 1920"
+  crop: false
+  public_asset_count: 12

@@ -1,0 +1,140 @@
+version: 1
+brand: lemonmedia
+case_id: invest-management
+period: "2026-07"
+language: ru
+
+scope:
+  publications: 10
+  static_posts: 8
+  carousel_publications: 2
+  carousel_slides: 14
+  stories_sequences: 1
+  stories_frames: 5
+  additional_pinned_posts: 1
+  final_media_files: 28
+  planned_platform_count: 4
+
+claim_rule: "Цели материалов и расчёты внутри клиентского контента не являются уже достигнутыми результатами lemonmedia или гарантией инвестиционной доходности. Публикация на площадках не подтверждена."
+
+publications:
+  - number: 1
+    id: publication-01
+    format: static-post
+    category: useful
+    title: "Экономика субГАБа на модельном расчёте"
+    goals:
+      - explain-product-mechanics
+
+  - number: 2
+    id: publication-02
+    format: static-post
+    category: team
+    title: "Почему основатель выбрал субаренду"
+    goals:
+      - build-founder-trust
+
+  - number: 3
+    id: publication-03
+    format: carousel
+    slide_count: 7
+    category: portfolio
+    title: "Кейс: объект в Архангельске заселён за 30 дней"
+    goals:
+      - demonstrate-case
+      - explain-object-economics
+
+  - number: 4
+    id: publication-04
+    format: carousel
+    slide_count: 7
+    category: objections-and-myths
+    title: "Три мифа о субаренде"
+    goals:
+      - handle-entry-objections
+      - encourage-saves
+
+  - number: 5
+    id: publication-05
+    format: static-post
+    category: offer
+    title: "Бесплатный экспертный разбор"
+    goals:
+      - lead-expert-analysis-request
+    related_stories_sequence: stories-01
+
+  - number: 6
+    id: publication-06
+    format: static-post
+    category: useful
+    title: "Что выяснить у собственника до сделки"
+    goals:
+      - show-expertise
+      - encourage-saves
+
+  - number: 7
+    id: publication-07
+    format: static-post
+    category: portfolio
+    title: "Тест спроса: семь арендаторов за выходные"
+    goals:
+      - handle-demand-objection
+      - demonstrate-process
+
+  - number: 8
+    id: publication-08
+    format: static-post
+    category: team
+    title: "На чём строится экспертиза команды"
+    goals:
+      - show-expertise
+      - build-founder-trust
+
+  - number: 9
+    id: publication-09
+    format: static-post
+    category: objections-and-myths
+    title: "Что происходит, если один субарендатор съезжает"
+    goals:
+      - explain-risk-management
+
+  - number: 10
+    id: publication-10
+    format: static-post
+    category: offer
+    title: "Партнёрство без погружения в операционку"
+    goals:
+      - present-partnership-format
+      - lead-request
+
+stories_sequences:
+  - id: stories-01
+    related_publication_id: publication-05
+    frame_count: 5
+    goal: warm-up-to-expert-analysis
+    frames:
+      - number: 1
+        role: hook
+        topic: "Есть капитал, но он просто лежит"
+      - number: 2
+        role: comparison
+        topic: "Ограничения депозита и квартиры под сдачу"
+      - number: 3
+        role: explanation
+        topic: "Механика дохода на разнице ставок"
+      - number: 4
+        role: barrier-removal
+        topic: "Объект, договор и арендаторы требуют системы"
+      - number: 5
+        role: offer-transition
+        topic: "Переход к бесплатному экспертному разбору"
+
+additional_materials:
+  - id: pinned-post-01
+    format: static-post
+    category: onboarding
+    title: "С чего начать инвестору"
+    goals:
+      - explain-profile-value
+      - present-formats
+      - lead-expert-analysis-request

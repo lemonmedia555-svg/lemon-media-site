@@ -1,74 +1,50 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Страница не найдена — Лимон Медиа</title>
-<link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap">
-<link rel="stylesheet" href="/assets/css/main.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Страница не найдена — вернитесь на главную lemonmedia или откройте реальные работы.">
+  <meta name="robots" content="noindex">
+  <title>Страница не найдена — lemonmedia</title>
+  <link rel="stylesheet" href="assets/css/prototype.css">
 </head>
 <body>
-
-<header class="header">
-  <div class="container header__inner">
-    <a href="/" class="header__logo">
-      <img src="/assets/img/logo.svg" alt="Лимон Медиа">
-    </a>
-    <nav class="nav">
-      <a href="/" class="nav__link">Главная</a>
-      <a href="/pricing.html" class="nav__link">Тарифы</a>
-      <a href="/examples.html" class="nav__link">Примеры</a>
-      <a href="/reviews.html" class="nav__link">Отзывы</a>
-      <a href="/about.html" class="nav__link">О нас</a>
-    </nav>
-    <div class="header__cta">
-      <a href="/book-demo.html" class="btn btn-primary btn-sm">Записаться на демо</a>
-      <button class="burger" aria-label="Открыть меню" aria-expanded="false">
-        <span class="burger__lines"></span>
-      </button>
+  <header class="site-header">
+    <div class="container header-row">
+      <a class="brand" href="index.html" aria-label="lemonmedia — главная"><span class="brand-dot" aria-hidden="true"></span>lemonmedia</a>
+      <button class="menu-button" type="button" aria-expanded="false" data-menu-toggle>Меню</button>
+      <nav class="main-nav" aria-label="Основная навигация">
+        <a href="examples.html">Работы</a>
+        <a href="process.html">Как работаем</a>
+        <a href="pricing.html">Цены</a>
+        <a href="reviews.html">Отзывы</a>
+        <a href="about.html">О компании</a>
+        <a href="articles.html">Статьи</a>
+        <a class="btn btn-small btn-accent" href="start.html">Начать работу</a>
+      </nav>
     </div>
-  </div>
-</header>
-
-<nav class="mobile-nav">
-  <a href="/" class="mobile-nav__link">Главная</a>
-  <a href="/pricing.html" class="mobile-nav__link">Тарифы</a>
-  <a href="/examples.html" class="mobile-nav__link">Примеры работ</a>
-  <a href="/reviews.html" class="mobile-nav__link">Отзывы</a>
-  <a href="/about.html" class="mobile-nav__link">О нас</a>
-  <a href="/book-demo.html" class="btn btn-primary btn-lg btn-block mt-4">Записаться на демо</a>
-</nav>
-
-<main>
-  <section class="section">
-    <div class="container text-center" style="max-width: 600px; margin: 0 auto;">
-      <p style="font-size: clamp(6rem, 18vw, 12rem); font-weight: 900; line-height: 1; color: var(--yellow); letter-spacing: -0.05em;">404</p>
-      <h1 class="mt-5">Страница не найдена</h1>
-      <p class="lead mt-4">Кажется, такого адреса нет. Может, опечатка — или страница переехала.</p>
-      <div class="mt-6 flex gap-3" style="justify-content: center; flex-wrap: wrap;">
-        <a href="/" class="btn btn-primary btn-lg">На главную</a>
-        <a href="/examples.html" class="btn btn-outline btn-lg">Посмотреть кейсы</a>
+  </header>
+  <main>
+    <section class="page-hero">
+      <div class="container" style="max-width:760px; text-align:center;">
+        <p class="eyebrow">Ошибка 404</p>
+        <h1>Такой страницы нет</h1>
+        <p class="lead">Возможно, ссылка устарела. Вернитесь на главную или посмотрите реальные работы.</p>
+        <div class="section-actions" style="justify-content:center; margin-top:28px;"><a class="btn btn-accent" href="index.html">На главную</a><a class="btn btn-secondary" href="examples.html">Посмотреть работы</a></div>
       </div>
-    </div>
-  </section>
-</main>
-
-<footer class="footer">
-  <div class="container">
-    <div class="footer__bottom">
-      <span>© <span data-year>2026</span> Лимон Медиа. Все права защищены.</span>
-      <div class="footer__socials">
-        <a href="#" aria-label="Telegram">TG</a>
-        <a href="#" aria-label="ВКонтакте">VK</a>
-        <a href="#" aria-label="YouTube">YT</a>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="brand" href="index.html" aria-label="lemonmedia — главная"><span class="brand-dot" aria-hidden="true"></span>lemonmedia</a>
+        <p class="footer-note">Регулярный контент под ключ для российского малого и среднего бизнеса. Команда lemonmedia работает с 2020 года.</p>
       </div>
+      <div class="footer-column"><strong>Выбрать</strong><a href="pricing.html">Цены и конструктор</a><a href="examples.html">Работы</a><a href="process.html">Как работаем</a><a href="compare.html">Сравнение</a></div>
+      <div class="footer-column"><strong>Узнать больше</strong><a href="reviews.html">Отзывы</a><a href="about.html">О компании</a><a href="services.html">Разовые услуги</a><a href="partners.html">Партнёрам</a><a href="articles.html">Статьи</a><a href="faq.html">Все вопросы</a></div>
+      <div class="footer-column"><strong>Начать</strong><a href="start.html">Собрать пакет</a><a href="audit.html">Бесплатный разбор</a><a href="guarantee.html">Условия гарантии</a><a href="legal.html#offer">Условия работы</a><a href="legal.html#privacy">Конфиденциальность</a></div>
     </div>
-  </div>
-</footer>
-
-<script src="/assets/js/main.js"></script>
+  </footer>
+  <script src="assets/js/prototype.js"></script>
 </body>
 </html>

@@ -1,0 +1,1704 @@
+version: 1
+brand: lemonmedia
+language: ru
+
+counting:
+  rule: "Считаются уникальные публикации. Слайды каруселей и размещения одного материала на разных площадках не считаются отдельными работами."
+  public_cases: 39
+  verified_publications_in_registry: 478
+  publishable_visualized_publications: 434
+  note: "Подарочные карусели считаются отдельными уникальными публикациями, но не подменяют основные календарные слоты. У фонда «Доброе сердце» один макет не прошёл финальный QA. В кейсе Ольги Андреевой четыре готовых поста оставлены вне публичной галереи до медицинской и юридической проверки формулировок. В кейсе Dava Life публично показаны пять макетов, которых не касался последний список правок. Новый цикл Colorplast, кейсы Налог Эксперт и «Кристалл» показаны с честными незавершёнными этапами. В INARI внутренние слайды с несверенными ценами и условиями не опубликованы. В кейсе «Атерис» макеты с именами и узнаваемыми сотрудниками исключены из публичной подборки. В кейсе «ЭЛЕКТРОНИКС» один слайд с крупным лицом исключён из публичной версии. В Oh! Beauty опубликована только нейтральная выборка без имён, чувствительных кадров, старых акций и медицинских обещаний. В кейсе кардиолога показана только нейтральная выборка без списков симптомов, лекарственных тезисов, диагнозов, пациентов и исторических цен. В Fjord-Petersburg показаны только кадры без узнаваемых людей. В «Сиянии вяза» исключены спорная по условиям карусель и три вертикальных кадра с несоответствием плану. В «Ритуал-С» исключены лица, имена, даты, документы, адреса, конкретные цены и чувствительные ритуальные сцены."
+
+cases:
+  - id: saratov-kitchens-2026-08
+    slug: saratov-kitchens-2026-08
+    public_title: "Саратов Кухни — контент-план августа 2026"
+    client_display_name: "Саратов Кухни"
+    period: "2026-08"
+    release_window: "2026-08-05/2026-09-02"
+    niche: home-and-interior
+    subniche: custom-kitchens
+    formats:
+      - full-month
+      - static-post
+      - carousel
+      - stories-sequence
+    scope:
+      publications: 15
+      static_posts: 10
+      carousel_publications: 5
+      carousel_slides: 34
+      stories_sequences: 1
+      stories_frames: 5
+      platform_count: 5
+      platform_ids:
+        - vk
+        - instagram
+        - max
+        - pinterest
+        - odnoklassniki
+    featured_goals:
+      - build-trust
+      - reduce-result-uncertainty
+      - create-purchase-desire
+      - measurement-request
+      - lead-request
+    data:
+      case: "cases/saratov-kitchens-2026-08/case.yml"
+      plan: "cases/saratov-kitchens-2026-08/plan.yml"
+    public_page: "case-saratov-kitchens.html"
+    media_status: media-ready
+    portfolio_permission_status: permission-confirmed
+    publishable: true
+    publish_blockers: []
+    optional_follow_up:
+      - "Добавить прямые ссылки на отдельные живые публикации, если они будут показаны."
+
+  - id: borodulina-tape
+    slug: borodulina-tape
+    public_title: "BORODULINA TAPE — контент-план июля–августа 2026"
+    client_display_name: "BORODULINA TAPE"
+    period: "2026-07/2026-08"
+    release_window: "2026-07-31/2026-08-18"
+    niche: beauty-and-wellness
+    subniche: taping-massage-kinesiofitness
+    formats:
+      - full-month
+      - static-post
+      - carousel
+      - stories-sequence
+    scope:
+      publications: 10
+      static_posts: 8
+      carousel_publications: 2
+      carousel_slides: 14
+      stories_sequences: 1
+      stories_frames: 5
+      confirmed_launch_platform_count: 1
+      confirmed_launch_platform_ids:
+        - vk
+    featured_goals:
+      - attract-new-audience
+      - build-trust
+      - show-expertise
+      - collect-feedback
+      - lead-request
+    data:
+      case: "cases/borodulina-tape/case.yml"
+      plan: "cases/borodulina-tape/plan.yml"
+    public_page: "case-borodulina-tape.html"
+    media_status: media-ready
+    portfolio_permission_status: permission-confirmed
+    publishable: true
+    publish_blockers: []
+    optional_follow_up:
+      - "Добавить прямые ссылки на опубликованные материалы и аналитику, если появятся."
+
+  - id: dobroe-serdtse
+    slug: dobroe-serdtse
+    public_title: "БФ «Доброе сердце» — контент о помощи, доверии и участии"
+    client_display_name: "БФ «Доброе сердце»"
+    period: "2026-07/2026-08"
+    release_window: "2026-07-17/2026-08-04"
+    niche: nonprofit-and-charity
+    subniche: charity-foundation
+    formats:
+      - static-post
+      - carousel
+    scope:
+      publications: 10
+      static_posts: 8
+      publishable_static_post_visuals: 7
+      carousel_publications: 2
+      carousel_slides: 14
+      publishable_visual_files: 21
+      excluded_visual_files: 1
+    featured_goals:
+      - attract-new-audience
+      - build-trust
+      - show-real-work
+      - encourage-participation
+      - lead-request
+    data:
+      case: "cases/dobroe-serdtse/case.yml"
+      plan: "cases/dobroe-serdtse/plan.yml"
+    public_page: "case-dobroe-serdtse.html"
+    media_status: media-ready-with-explicit-exclusions
+    portfolio_permission_status: permission-confirmed
+    publishable: true
+    publish_blockers: []
+    optional_follow_up:
+      - "Заменить исключённый макет публикации №9 после получения исправленной версии."
+      - "Не возвращать истории в кейс до проверки исправленного финала."
+
+  - id: yagodny-ray
+    slug: yagodny-ray
+    public_title: "Ягодный Рай — 5 постов и подарочная карусель"
+    client_display_name: "Ягодный Рай"
+    period: "2026-07"
+    release_window: "2026-07-31/2026-08-08"
+    niche: food-and-hospitality
+    subniche: berries-and-farm-products
+    formats:
+      - static-post
+      - carousel
+    scope:
+      publications: 6
+      static_posts: 5
+      carousel_publications: 1
+      carousel_slides: 6
+      platform_count: 2
+      platform_ids:
+        - vk
+        - odnoklassniki
+    featured_goals:
+      - build-trust
+      - show-product
+      - encourage-saves
+      - create-purchase-desire
+      - lead-request
+    data:
+      case: "cases/yagodny-ray/case.yml"
+      plan: "cases/yagodny-ray/plan.yml"
+    public_page: "case-yagodny-ray.html"
+    media_status: media-ready
+    portfolio_permission_status: permission-confirmed
+    publishable: true
+    publish_blockers: []
+    optional_follow_up:
+      - "Добавить результат продления 30/10 только после завершения производства."
+
+  - id: chebusser
+    slug: chebusser
+    public_title: "ЧЕБУССЭР — контент-система для локальной чебуречной"
+    client_display_name: "ЧЕБУССЭР"
+    period: "2026-08"
+    release_window: null
+    niche: food-and-hospitality
+    subniche: local-street-food
+    formats:
+      - static-post
+      - carousel
+      - stories-sequence
+    scope:
+      publications: 10
+      static_posts: 8
+      carousel_publications: 2
+      carousel_slides: 14
+      stories_sequences: 1
+      stories_frames: 5
+      visual_files: 27
+      planned_platform_count: 2
+      planned_platform_ids:
+        - vk
+        - telegram
+    featured_goals:
+      - create-purchase-desire
+      - encourage-saves
+      - build-trust
+      - help-choice
+      - differentiate-offer
+      - lead-request
+    data:
+      case: "cases/chebusser/case.yml"
+      plan: "cases/chebusser/plan.yml"
+    public_page: "case-chebusser.html"
+    media_status: media-ready
+    portfolio_permission_status: permission-confirmed
+    publishable: true
+    publish_blockers: []
+    evidence_limitations:
+      - "Прямое клиентское утверждение финального дизайна не найдено."
+      - "Публикация и бизнес-метрики не подтверждены."
+      - "Коммерческие условия внутри макетов относятся к периоду проекта."
+
+  - id: silny-parus
+    slug: silny-parus
+    public_title: "Сильный Парус — 10 юридических тем в формате каруселей"
+    client_display_name: "Сильный Парус"
+    period: "2026-07"
+    release_window: null
+    niche: legal-services
+    subniche: personal-bankruptcy-and-debt-law
+    formats:
+      - carousel
+      - stories-sequence
+    scope:
+      publications: 10
+      static_posts: 0
+      carousel_publications: 10
+      carousel_slides: 66
+      stories_sequences: 3
+      stories_frames: 15
+      visual_files: 81
+      planned_platform_count: 2
+      planned_platform_ids:
+        - vk
+        - max
+    featured_goals:
+      - explain-complex-topics
+      - build-trust
+      - remove-fears
+      - encourage-saves
+      - show-expertise
+      - lead-to-consultation
+    data:
+      case: "cases/silny-parus/case.yml"
+      plan: "cases/silny-parus/plan.yml"
+    public_page: "case-silny-parus.html"
+    media_status: media-ready
+    portfolio_permission_status: permission-confirmed
+    publishable: true
+    publish_blockers: []
+    evidence_limitations:
+      - "Прямое клиентское утверждение финального дизайна не найдено."
+      - "Публикация и бизнес-метрики не подтверждены."
+      - "Плановые площадки нельзя выдавать за подтверждённое размещение."
+
+  - id: orange-style
+    slug: orange-style
+    public_title: "Orange Style — контент-система для фитнес-клуба"
+    client_display_name: "Orange Style"
+    period: first-month
+    release_window: null
+    niche: fitness-and-wellness
+    subniche: fitness-club
+    formats:
+      - static-post
+      - stories-sequence
+      - vk-widget
+    scope:
+      publications: 10
+      static_posts: 10
+      carousel_publications: 0
+      carousel_slides: 0
+      stories_sequences: 1
+      stories_frames: 5
+      vk_widgets: 3
+      visual_files: 18
+      prepared_platform_count: 1
+      prepared_platform_ids:
+        - vk
+    featured_goals:
+      - retain-existing-clients
+      - encourage-saves
+      - build-expertise
+      - remove-fears
+      - collect-feedback
+      - promote-personal-training
+      - lead-renewal
+    data:
+      case: "cases/orange-style/case.yml"
+      plan: "cases/orange-style/plan.yml"
+    public_page: "case-orange-style.html"
+    media_status: media-ready
+    portfolio_permission_status: permission-confirmed
+    publishable: true
+    publish_blockers: []
+    evidence_limitations:
+      - "Материалы загружены в систему публикации, но точный выход каждого поста не подтверждён."
+      - "Бизнес-метрики и прямые ссылки на публикации не найдены."
+      - "Следующий заказ на 15 постов и 10 историй находится в производстве и не считается готовым результатом."
+
+  - id: dan-gun
+    slug: dan-gun
+    public_title: "Дан-Гун — контент для набора в клуб единоборств"
+    client_display_name: "Дан-Гун"
+    period: "2026-07/2026-08"
+    release_window: "2026-07-30/2026-08-17"
+    niche: sport-and-fitness
+    subniche: martial-arts-club
+    formats:
+      - static-post
+      - carousel
+    scope:
+      publications: 11
+      scheduled_publications: 10
+      bonus_publications: 1
+      static_posts: 8
+      carousel_publications: 3
+      carousel_slides: 21
+      visual_files: 29
+      confirmed_upload_platform_count: 1
+      confirmed_upload_platform_ids:
+        - vk
+      planned_but_unconfirmed_platform_ids:
+        - telegram
+        - max
+    featured_goals:
+      - attract-new-audience
+      - answer-parent-questions
+      - remove-fears
+      - build-trust
+      - show-real-club-life
+      - lead-to-enrollment
+    data:
+      case: "cases/dan-gun/case.yml"
+      plan: "cases/dan-gun/plan.yml"
+    public_page: "case-dan-gun.html"
+    media_status: media-ready
+    portfolio_permission_status: permission-confirmed
+    publishable: true
+    publish_blockers: []
+    evidence_limitations:
+      - "Подтверждена загрузка только 10 основных публикаций во ВКонтакте."
+      - "Подарочная карусель не входит в подтверждённый календарь."
+      - "Telegram, MAX, бизнес-метрики и выполнение следующего заказа не подтверждены."
+
+  - id: sidcobra
+    slug: sidcobra
+    public_title: "SIDCOBRA — контент-система для тренера и бренда спорттоваров"
+    client_display_name: "SIDCOBRA"
+    period: "2026-07/2026-10"
+    release_window: "2026-07-29/2026-10-05"
+    niche: sport-and-fitness
+    subniche: strength-coaching-and-sports-goods
+    formats:
+      - static-post
+      - carousel
+    scope:
+      publications: 30
+      static_posts: 24
+      carousel_publications: 6
+      carousel_slides: 42
+      visual_files: 66
+      confirmed_launch_platform_count: 2
+      confirmed_launch_platform_ids:
+        - vk
+        - telegram
+      planned_but_unconfirmed_platform_ids:
+        - instagram
+    featured_goals:
+      - build-expert-trust
+      - explain-training-method
+      - remove-strength-training-fears
+      - show-student-proof
+      - introduce-owned-products
+      - lead-training-request
+    data:
+      case: "cases/sidcobra/case.yml"
+      plan: "cases/sidcobra/plan.yml"
+    public_page: "case-sidcobra.html"
+    media_status: media-ready
+    portfolio_permission_status: permission-confirmed
+    publishable: true
+    publish_blockers: []
+    evidence_limitations:
+      - "Instagram упоминался в плане, но его запуск не подтверждён."
+      - "Охваты, заявки, продажи и публичный отзыв не найдены."
+      - "Коммерческие условия внутри макетов относятся к периоду проекта."
+
+  - id: roman-sedov
+    slug: roman-sedov
+    public_title: "Роман Седов — экспертный контент для личного бренда ведущего"
+    client_display_name: "Роман Седов"
+    period: "2026-08"
+    release_window: "2026-08-01/2026-08-28"
+    niche: events-and-entertainment
+    subniche: event-host
+    formats:
+      - static-post
+      - carousel
+    scope:
+      publications: 10
+      static_posts: 8
+      carousel_publications: 2
+      carousel_slides: 14
+      visual_files: 22
+      draft_platform_count: 5
+      draft_platform_ids:
+        - vk
+        - instagram
+        - telegram
+        - threads
+        - max
+    featured_goals:
+      - explain-invisible-work
+      - build-personal-trust
+      - answer-client-questions
+      - show-event-expertise
+      - lead-date-booking
+    data:
+      case: "cases/roman-sedov/case.yml"
+      plan: "cases/roman-sedov/plan.yml"
+    public_page: "case-roman-sedov.html"
+    media_status: media-ready
+    portfolio_permission_status: permission-confirmed
+    publishable: true
+    publish_blockers: []
+    evidence_limitations:
+      - "Подтверждена загрузка черновиков, а не выход всех материалов в пяти сетях."
+      - "Прямое клиентское утверждение финального дизайна не найдено."
+      - "Продление №2 находится в производстве; метрик результата нет."
+
+  - id: electric-monchegorsk
+    slug: electric-monchegorsk
+    public_title: "Электрик Мончегорск — первый контент-план для локального специалиста"
+    client_display_name: "Электрик Мончегорск"
+    period: "2026-07/2026-08"
+    release_window: "2026-07-30/2026-08-17"
+    niche: local-services
+    subniche: electrical-services
+    formats:
+      - static-post
+      - carousel
+      - stories-sequence
+    scope:
+      publications: 10
+      static_posts: 8
+      carousel_publications: 2
+      carousel_slides: 14
+      stories_sequences: 1
+      stories_frames: 5
+      visual_files: 27
+      confirmed_launch_platform_count: 1
+      confirmed_launch_platform_ids:
+        - vk
+    featured_goals:
+      - explain-service
+      - build-local-trust
+      - show-real-work
+      - remove-price-fears
+      - lead-measurement-request
+    data:
+      case: "cases/electric-monchegorsk/case.yml"
+      plan: "cases/electric-monchegorsk/plan.yml"
+    public_page: "case-electric-monchegorsk.html"
+    media_status: media-ready
+    portfolio_permission_status: permission-confirmed
+    publishable: true
+    publish_blockers: []
+    evidence_limitations:
+      - "Запуск подтверждён только во ВКонтакте."
+      - "Охваты, обращения, продажи и публичный отзыв не найдены."
+      - "Коммерческие условия внутри макетов относятся к периоду проекта."
+
+  - id: olga-pravdyuk
+    slug: olga-pravdyuk
+    public_title: "Ольга Правдюк — понятный контент-план о профориентации"
+    client_display_name: "Ольга Правдюк — «Профориентация — путь в профессию»"
+    period: "2026-07/2026-08"
+    release_window: "2026-07-29/2026-08-25"
+    niche: education
+    subniche: career-guidance
+    formats:
+      - static-post
+      - carousel
+    scope:
+      publications: 11
+      scheduled_publications: 10
+      bonus_publications: 1
+      static_posts: 8
+      carousel_publications: 3
+      carousel_slides: 21
+      visual_files: 29
+      confirmed_draft_platform_count: 1
+      confirmed_draft_platform_ids:
+        - vk
+    featured_goals:
+      - explain-service
+      - remove-myths
+      - reduce-parent-anxiety
+      - show-expertise
+      - answer-questions
+      - lead-to-consultation
+    data:
+      case: "cases/olga-pravdyuk/case.yml"
+      plan: "cases/olga-pravdyuk/plan.yml"
+    public_page: "case-olga-pravdyuk.html"
+    media_status: media-ready
+    portfolio_permission_status: permission-confirmed
+    publishable: true
+    publish_blockers: []
+    evidence_limitations:
+      - "Подтверждена загрузка черновиков, а не выход всех материалов во ВКонтакте."
+      - "Установка трёх виджетов, бизнес-метрики и прямой отзыв не подтверждены."
+      - "Образовательные результаты учеников нельзя приписывать работе lemonmedia."
+
+  - id: achinsk-begovoy
+    slug: achinsk-begovoy
+    public_title: "Ачинск Беговой — контент-план перед городским забегом"
+    client_display_name: "Ачинск Беговой"
+    period: "2026-08"
+    release_window: "2026-08-01/2026-08-28"
+    niche: sport-and-events
+    subniche: running-club-and-local-race
+    formats:
+      - static-post
+      - carousel
+    scope:
+      publications: 11
+      scheduled_publications: 10
+      bonus_publications: 1
+      static_posts: 8
+      carousel_publications: 3
+      carousel_slides: 21
+      visual_files: 29
+      draft_platform_count: 3
+      draft_platform_ids:
+        - vk
+        - max
+        - ok
+    featured_goals:
+      - build-event-awareness
+      - remove-beginner-fears
+      - explain-event-conditions
+      - show-community-atmosphere
+      - build-trust
+      - lead-to-registration
+    data:
+      case: "cases/achinsk-begovoy/case.yml"
+      plan: "cases/achinsk-begovoy/plan.yml"
+    public_page: "case-achinsk-begovoy.html"
+    media_status: media-ready
+    portfolio_permission_status: permission-confirmed
+    publishable: true
+    publish_blockers: []
+    evidence_limitations:
+      - "Загружены черновики для трёх площадок; фактический выход публикаций не подтверждён."
+      - "Отдельное финальное утверждение дизайна клиентом не найдено."
+      - "Охваты, регистрации, продажи мест и другие бизнес-метрики не подтверждены."
+
+  - id: casahitto
+    slug: casahitto
+    public_title: "CasaHitto — система выбора загородного дома"
+    client_display_name: "CasaHitto"
+    period: "2026-07"
+    release_window: null
+    niche: travel-and-hospitality
+    subniche: countryside-cottages
+    formats:
+      - static-post
+      - carousel
+    scope:
+      publications: 11
+      scheduled_publications: 10
+      bonus_publications: 1
+      static_posts: 8
+      carousel_publications: 3
+      carousel_slides: 21
+      visual_files: 29
+      prepared_platform_count: 1
+      prepared_platform_ids:
+        - vk
+    featured_goals:
+      - explain-cottage-choice
+      - remove-booking-doubts
+      - show-properties
+      - prepare-for-stay
+      - compare-options
+      - lead-to-booking
+    data:
+      case: "cases/casahitto/case.yml"
+      plan: "cases/casahitto/plan.yml"
+    public_page: "case-casahitto.html"
+    media_status: media-ready
+    portfolio_permission_status: permission-confirmed
+    publishable: true
+    publish_blockers: []
+    evidence_limitations:
+      - "Подтверждены утверждение комплекта и передача в публикацию во ВКонтакте."
+      - "Календарь, фактический выход постов и прямые ссылки не подтверждены."
+      - "Охваты, обращения и бронирования не подтверждены."
+
+  - id: fr-moto
+    slug: fr-moto
+    public_title: "FR-moto — точный контент для инженерного эндуро-продукта"
+    client_display_name: "FR-moto"
+    period: "2026-07/2026-08"
+    release_window: null
+    niche: automotive-and-motorsport
+    subniche: enduro-and-motocross-parts
+    formats:
+      - static-post
+      - carousel
+      - stories-sequence
+    scope:
+      publications: 10
+      static_posts: 8
+      carousel_publications: 2
+      carousel_slides: 12
+      stories_sequences: 1
+      stories_frames: 5
+      visual_files: 25
+      prepared_platform_count: 4
+      prepared_platform_ids:
+        - vk
+        - instagram
+        - telegram
+        - max
+    featured_goals:
+      - explain-technical-product
+      - show-own-production
+      - handle-price-objection
+      - help-product-choice
+      - build-rider-trust
+      - lead-to-order
+    data:
+      case: "cases/fr-moto/case.yml"
+      plan: "cases/fr-moto/plan.yml"
+    public_page: "case-fr-moto.html"
+    media_status: media-ready-after-domain-qa
+    portfolio_permission_status: permission-confirmed
+    publishable: true
+    publish_blockers: []
+    evidence_limitations:
+      - "Подтверждены клиентское утверждение исправленного комплекта и передача на этап публикации."
+      - "Подготовка для четырёх площадок не выдаётся за подтверждённый выход во всех четырёх."
+      - "Календарь, прямые ссылки, охваты, обращения и продажи не подтверждены."
+
+  - id: klient-prosto
+    slug: klient-prosto
+    public_title: "Клиент Просто — контент-система для B2B-веб-студии"
+    client_display_name: "Клиент Просто"
+    period: first-month
+    release_window: null
+    niche: b2b-services
+    subniche: web-development-and-promotion
+    formats:
+      - static-post
+      - carousel
+      - stories-sequence
+    scope:
+      publications: 10
+      static_posts: 8
+      carousel_publications: 2
+      carousel_slides: 14
+      stories_sequences: 1
+      stories_frames: 5
+      visual_files: 27
+      calendar_channel_count: 4
+      cadence: every-3-days
+    featured_goals:
+      - explain-complex-services
+      - show-client-cases
+      - build-b2b-trust
+      - show-process
+      - provide-useful-diagnostics
+      - remove-post-launch-fears
+    data:
+      case: "cases/klient-prosto/case.yml"
+      plan: "cases/klient-prosto/plan.yml"
+    public_page: "case-klient-prosto.html"
+    media_status: media-ready-with-attribution-notes
+    portfolio_permission_status: permission-confirmed
+    publishable: true
+    publish_blockers: []
+    evidence_limitations:
+      - "Цифры ×3 и ×5 внутри каруселей относятся к кейсам самого клиента, а не к работе lemonmedia."
+      - "Недостающий седьмой слайд и истории добавлены после основного утверждения; отдельное повторное подтверждение не найдено."
+      - "Охваты, заявки, продажи и окупаемость не подтверждены."
+
+  - id: olga-andreeva
+    slug: olga-andreeva
+    public_title: "Ольга Андреева — система мягкого перезапуска экспертного проекта"
+    client_display_name: "Ольга Андреева"
+    period: first-month
+    release_window: null
+    niche: expert-and-wellness
+    subniche: psychological-wellness-project
+    formats:
+      - static-post
+      - stories-sequence
+    scope:
+      publications: 10
+      static_posts: 10
+      stories_sequences: 1
+      stories_frames: 5
+      source_visual_files: 15
+      publishable_post_visuals: 6
+      publishable_story_visuals: 5
+      publishable_visual_files: 11
+      editorially_withheld_post_visuals: 4
+      prepared_platform_count: 3
+      prepared_platform_ids:
+        - vk
+        - telegram
+        - max
+    featured_goals:
+      - introduce-new-project
+      - build-personal-trust
+      - show-expert-position
+      - encourage-self-reflection
+      - warm-up-to-club
+      - lead-to-consultation
+    data:
+      case: "cases/olga-andreeva/case.yml"
+      plan: "cases/olga-andreeva/plan.yml"
+    public_page: "case-olga-andreeva.html"
+    media_status: media-ready-with-editorial-exclusions
+    portfolio_permission_status: permission-confirmed
+    publishable: true
+    publish_blockers: []
+    evidence_limitations:
+      - "Фактический выход, полный календарь и бизнес-метрики не подтверждены."
+      - "Четыре публикации исключены из публичной галереи до проверки медицинских формулировок."
+      - "Контент нельзя представлять как лечение, гарантированный эффект или замену медицинской помощи."
+
+  - id: dava-holding
+    slug: dava-holding
+    public_title: "Dava Holding — сложная идеология как понятный контент-план"
+    client_display_name: "Dava Holding"
+    period: first-month
+    release_window: "2026-08-07/2026-09-03"
+    niche: business-and-economics
+    subniche: corporate-ideology
+    formats:
+      - static-post
+      - stories-sequence
+    scope:
+      publications: 10
+      static_posts: 10
+      stories_sequences: 1
+      stories_frames: 5
+      final_visual_files: 15
+      visual_concepts: 3
+      web_visual_files: 18
+      draft_platform_count: 1
+      draft_platform_ids:
+        - vk
+      auto_matched_post_visuals: 8
+      auto_matched_story_visuals: 3
+    featured_goals:
+      - explain-complex-idea
+      - introduce-brand-worldview
+      - remove-stereotypes
+      - show-model-pillars
+      - encourage-discussion
+      - build-systemic-understanding
+    data:
+      case: "cases/dava-holding/case.yml"
+      plan: "cases/dava-holding/plan.yml"
+    public_page: "case-dava-holding.html"
+    media_status: media-ready-with-calendar-qa-gap
+    portfolio_permission_status: permission-confirmed
+    publishable: true
+    publish_blockers: []
+    evidence_limitations:
+      - "Автоматическая загрузка сопоставила не все финальные визуалы; ручное исправление не подтверждено."
+      - "Фактический выход всего месяца и бизнес-метрики не подтверждены."
+      - "Идеологические тезисы принадлежат клиентскому проекту, а не lemonmedia."
+      - "Повторный заказ принят в производство, но ещё не выполнен."
+
+  - id: refix
+    slug: refix
+    public_title: "REFIX — контент, который снимает страх перед ремонтом техники"
+    client_display_name: "REFIX"
+    period: "2026-08"
+    release_window: "2026-08-05/2026-08-27"
+    niche: repair-service
+    subniche: consumer-electronics-and-electric-scooters
+    formats:
+      - static-post
+      - carousel
+      - stories-sequence
+    scope:
+      publications: 10
+      static_posts: 8
+      carousel_publications: 2
+      carousel_slides: 14
+      stories_sequences: 3
+      stories_frames: 15
+      visual_files: 37
+      confirmed_launch_platform_count: 1
+      confirmed_launch_platform_ids:
+        - vk
+    featured_goals:
+      - remove-repair-fears
+      - explain-diagnostics-and-price-approval
+      - explain-timing-and-parts
+      - provide-emergency-guidance
+      - show-service-breadth
+      - lead-to-message
+    data:
+      case: "cases/refix/case.yml"
+      plan: "cases/refix/plan.yml"
+    public_page: "case-refix.html"
+    media_status: media-ready-with-historical-terms
+    portfolio_permission_status: permission-confirmed
+    publishable: true
+    publish_blockers: []
+    evidence_limitations:
+      - "Запуск подтверждён только для ВКонтакте; Instagram и YouTube указаны как подготовленные площадки."
+      - "Охваты, обращения, продажи и повторный заказ не подтверждены."
+      - "Цены и условия внутри макетов относятся к кампании 2026 года."
+      - "Сценарные изображения ремонта не выдаются за документальные фотографии конкретных работ."
+
+  - id: dava-life
+    slug: dava-life
+    public_title: "Dava Life — сложная продуктовая линейка как понятный контент-план"
+    client_display_name: "Dava Life"
+    period: "2026-07/2026-08"
+    release_window: null
+    niche: health-and-wellness-products
+    subniche: peptide-and-wellness-products
+    formats:
+      - static-post
+      - stories-sequence
+    scope:
+      publications: 10
+      static_posts: 10
+      stories_sequences: 1
+      stories_frames: 5
+      source_visual_files: 15
+      publishable_post_visuals: 5
+      publishable_visual_files: 5
+      prepared_platform_count: 1
+      prepared_platform_ids:
+        - vk
+    featured_goals:
+      - explain-complex-product
+      - build-category-understanding
+      - handle-skepticism
+      - show-product-line
+      - help-product-choice
+      - remove-order-barrier
+    data:
+      case: "cases/dava-life/case.yml"
+      plan: "cases/dava-life/plan.yml"
+    public_page: "case-dava-life.html"
+    media_status: media-ready-with-version-control
+    portfolio_permission_status: permission-confirmed
+    publishable: true
+    publish_blockers: []
+    evidence_limitations:
+      - "Финальная версия утверждена в Figma, но исправленный экспорт не найден в доступной папке Битрикс."
+      - "Публично показываются только пять макетов, которых не касался последний список изменений."
+      - "Фактический выход исправленного комплекта, прямые ссылки и бизнес-метрики не подтверждены."
+      - "Новый заказ принят в очередь, но ещё не выполнен."
+      - "Продуктовые тезисы клиента не являются медицинскими заявлениями lemonmedia."
+
+  - id: colorplast
+    slug: colorplast
+    public_title: "Colorplast — продление с ростом пакета с 10 до 20 публикаций"
+    client_display_name: "Colorplast"
+    period: two-cycles
+    release_window: null
+    niche: home-and-interior
+    subniche: windows-doors-and-glazing
+    formats:
+      - static-post
+      - carousel
+      - renewal
+    scope:
+      publications: 32
+      main_publications: 30
+      bonus_publications: 2
+      previous_cycle_publications: 11
+      current_cycle_publications: 21
+      carousel_publications: 9
+      carousel_slides: 63
+      visual_files: 86
+      current_draft_platform_count: 3
+      current_draft_platform_ids:
+        - vk
+        - instagram
+        - threads
+    featured_goals:
+      - explain-technical-product
+      - remove-window-myths
+      - show-solutions
+      - explain-process
+      - build-local-trust
+      - lead-to-measurement
+    data:
+      case: "cases/colorplast/case.yml"
+      plan: "cases/colorplast/plan.yml"
+    public_page: "case-colorplast.html"
+    media_status: media-ready-two-cycles
+    portfolio_permission_status: permission-confirmed
+    publishable: true
+    publish_blockers: []
+    evidence_limitations:
+      - "Продление и рост пакета подтверждены, но не доказывают рост продаж, заявок или охватов."
+      - "В новом цикле 13 текстов дополнительно сокращаются для Threads."
+      - "20 черновиков не выдаются за опубликованные материалы."
+      - "Стоковые и иллюстративные сцены не называются реальными объектами Colorplast."
+
+  - id: moscow-padel
+    slug: moscow-padel
+    public_title: "MoscowPadel — контент-система для сложного B2B-продукта"
+    client_display_name: "MoscowPadel"
+    period: "2026-08"
+    release_window: "2026-08-06/2026-08-25"
+    niche: sport-infrastructure
+    subniche: padel-court-construction-and-supply
+    formats:
+      - static-post
+      - carousel
+      - full-month
+    scope:
+      publications: 21
+      main_publications: 20
+      bonus_publications: 1
+      static_posts: 10
+      carousel_publications: 11
+      carousel_slides: 77
+      visual_files: 87
+      confirmed_draft_platform_count: 2
+      confirmed_draft_platform_ids:
+        - vk
+        - instagram
+    featured_goals:
+      - explain-expensive-product
+      - remove-technical-uncertainty
+      - show-objects-and-cases
+      - help-budgeting
+      - build-b2b-trust
+      - lead-to-calculation
+    data:
+      case: "cases/moscow-padel/case.yml"
+      plan: "cases/moscow-padel/plan.yml"
+    public_page: "case-moscow-padel.html"
+    media_status: media-ready-drafts-confirmed
+    portfolio_permission_status: permission-confirmed
+    publishable: true
+    publish_blockers: []
+    evidence_limitations:
+      - "Подтверждены черновики только во ВКонтакте и Instagram."
+      - "Фактический выход публикаций, прямые ссылки и бизнес-метрики не подтверждены."
+      - "Технические характеристики, цены и расчёты внутри макетов не являются гарантиями lemonmedia."
+
+  - id: nalog-expert
+    slug: nalog-expert
+    public_title: "Налог Эксперт — сложные темы как понятный контент-план"
+    client_display_name: "Налог Эксперт"
+    period: "2026-07/2026-08"
+    release_window: null
+    niche: professional-services
+    subniche: accounting-and-tax-support
+    formats:
+      - static-post
+      - carousel
+      - stories-sequence
+    scope:
+      publications: 11
+      main_publications: 10
+      bonus_publications: 1
+      static_posts: 8
+      carousel_publications: 3
+      carousel_slides: 21
+      stories_sequences: 2
+      stories_frames: 10
+      visual_files: 39
+      prepared_platform_count: 3
+      prepared_platform_ids:
+        - vk
+        - instagram
+        - telegram
+    featured_goals:
+      - restore-regular-content
+      - explain-current-topics
+      - demonstrate-expertise
+      - remove-tax-service-myths
+      - generate-saves
+      - lead-to-consultation
+    data:
+      case: "cases/nalog-expert/case.yml"
+      plan: "cases/nalog-expert/plan.yml"
+    public_page: "case-nalog-expert.html"
+    media_status: media-ready-awaiting-typography-response
+    portfolio_permission_status: permission-confirmed
+    publishable: true
+    publish_blockers: []
+    evidence_limitations:
+      - "Комплект отправлен клиенту, но финальный ответ по размеру шрифтов не зафиксирован."
+      - "Фактический запуск публикаций, прямые ссылки и бизнес-метрики не подтверждены."
+      - "Налоговые тезисы внутри макетов не являются консультацией lemonmedia."
+
+  - id: narfkis
+    slug: narfkis
+    public_title: "NARFKiS — контент для инклюзивных спортивных событий"
+    client_display_name: "NARFKiS"
+    period: "2026-07"
+    release_window: null
+    niche: inclusive-sport
+    subniche: public-sport-events
+    formats:
+      - static-post
+      - stories-sequence
+    scope:
+      publications: 10
+      static_posts: 10
+      stories_sequences: 1
+      stories_frames: 5
+      visual_files: 15
+      planned_platform_count: 2
+      planned_platform_ids:
+        - vk
+        - max
+    featured_goals:
+      - explain-new-sports
+      - announce-events
+      - remove-participation-barriers
+      - show-real-events
+      - build-organizer-trust
+    data:
+      case: "cases/narfkis/case.yml"
+      plan: "cases/narfkis/plan.yml"
+    public_page: "case-narfkis.html"
+    media_status: media-ready-approved
+    portfolio_permission_status: permission-confirmed
+    publishable: true
+    publish_blockers: []
+    evidence_limitations:
+      - "Финальный пакет утверждён и передан в публикационный процесс, но фактический выход не подтверждён."
+      - "Охваты, участники мероприятий, заявки и другие метрики не подтверждены."
+      - "Повторный заказ подтверждён, но новый пакет ещё согласуется и не считается готовым."
+
+  - id: inari
+    slug: inari
+    public_title: "INARI — контент-система для локальной доставки еды"
+    client_display_name: "INARI"
+    period: "2026-08"
+    release_window: "2026-08-04/2026-08-22"
+    niche: food-and-hospitality
+    subniche: rolls-pizza-and-ready-food
+    formats:
+      - static-post
+      - carousel
+      - stories-sequence
+    scope:
+      publications: 10
+      static_posts: 8
+      carousel_publications: 2
+      carousel_slides: 14
+      stories_sequences: 1
+      stories_frames: 5
+      source_visual_files: 27
+      publishable_visual_files: 15
+      confirmed_draft_platform_count: 1
+      confirmed_draft_platform_ids:
+        - vk
+    featured_goals:
+      - create-appetite
+      - help-menu-choice
+      - show-kitchen-process
+      - remove-freshness-concerns
+      - engage-local-audience
+      - lead-to-order
+    data:
+      case: "cases/inari/case.yml"
+      plan: "cases/inari/plan.yml"
+    public_page: "case-inari.html"
+    media_status: media-ready-with-pricing-exclusions
+    portfolio_permission_status: permission-confirmed
+    publishable: true
+    publish_blockers: []
+    evidence_limitations:
+      - "Черновики подтверждены только для ВКонтакте; фактический выход не доказан."
+      - "Внутренние слайды каруселей с несверенными ценами, порогами доставки и служебной строкой исключены."
+      - "Повторный заказ создан, но второй пакет ещё не выполнен."
+      - "Охваты, заказы, продажи и рост аудитории не подтверждены."
+
+  - id: taplife
+    slug: taplife
+    public_title: "TapLife — контент вокруг главного барьера родителей"
+    client_display_name: "TapLife"
+    period: null
+    release_window: null
+    niche: local-services
+    subniche: family-massage-studio
+    formats:
+      - static-post
+      - carousel
+    scope:
+      publications: 11
+      main_publications: 10
+      bonus_publications: 1
+      static_posts: 8
+      carousel_publications: 3
+      carousel_slides: 20
+      visual_files: 28
+      prepared_platform_count: 5
+      prepared_platform_ids:
+        - vk
+        - instagram
+        - telegram
+        - max
+        - threads
+    featured_goals:
+      - explain-family-format
+      - remove-childcare-barrier
+      - build-team-trust
+      - answer-age-questions
+      - show-visit-scenario
+      - lead-to-booking
+    data:
+      case: "cases/taplife/case.yml"
+      plan: "cases/taplife/plan.yml"
+    public_page: "case-taplife.html"
+    media_status: media-ready-approved
+    portfolio_permission_status: permission-confirmed
+    publishable: true
+    publish_blockers: []
+    evidence_limitations:
+      - "Пакет передан на публикацию, но фактический выход всех десяти материалов на каждой площадке не подтверждён."
+      - "Продление подтверждено, но визуал следующего месяца ещё не утверждён."
+      - "Охваты, заявки, продажи и медицинский эффект не заявляются."
+      - "Условия и скидка на макетах относятся к периоду кампании."
+
+  - id: sergey-glibin
+    slug: sergey-glibin
+    public_title: "Сергей Глибин — контент для ведущего мероприятий"
+    client_display_name: "Сергей Глибин"
+    period: "2026-07"
+    release_window: null
+    niche: personal-brand
+    subniche: event-host
+    formats:
+      - static-post
+      - carousel
+      - stories-sequence
+    scope:
+      publications: 20
+      static_posts: 15
+      carousel_publications: 5
+      carousel_slides: 33
+      stories_sequences: 1
+      stories_frames: 5
+      visual_files: 53
+      planned_platform_count: 3
+      planned_platform_ids:
+        - instagram
+        - vk
+        - telegram
+    featured_goals:
+      - refresh-active-profile
+      - build-premium-image
+      - explain-host-selection
+      - remove-event-myths
+      - show-real-events
+      - lead-to-date-booking
+    data:
+      case: "cases/sergey-glibin/case.yml"
+      plan: "cases/sergey-glibin/plan.yml"
+    public_page: "case-sergey-glibin.html"
+    media_status: media-ready-approved-to-publication
+    portfolio_permission_status: permission-confirmed
+    publishable: true
+    publish_blockers: []
+    evidence_limitations:
+      - "Визуал согласован и материалы переданы в публикационный процесс, но фактическое размещение всех двадцати публикаций не подтверждено."
+      - "Охваты, заявки, продажи и количество забронированных дат не заявляются."
+      - "Сезонные предложения внутри материалов относятся к периоду кампании."
+
+  - id: ateris
+    slug: ateris
+    public_title: "Атерис — контент для центра здоровья животных"
+    client_display_name: "Атерис"
+    period: "2026-08"
+    release_window: "2026-08-06/2026-08-24"
+    niche: local-services
+    subniche: animal-health-center
+    formats:
+      - static-post
+      - carousel
+    scope:
+      publications: 11
+      main_publications: 10
+      bonus_publications: 1
+      static_posts: 8
+      carousel_publications: 3
+      carousel_slides: 21
+      source_visual_files: 29
+      publishable_visual_files: 21
+      publishable_visualized_publications: 8
+      planned_platform_count: 1
+      planned_platform_ids:
+        - vk
+    featured_goals:
+      - give-saveable-guides
+      - explain-specialist-choice
+      - remove-care-myths
+      - show-exotic-animal-expertise
+      - lead-to-booking
+    data:
+      case: "cases/ateris/case.yml"
+      plan: "cases/ateris/plan.yml"
+    public_page: "case-ateris.html"
+    media_status: media-ready-safe-selection
+    portfolio_permission_status: permission-confirmed
+    publishable: true
+    publish_blockers: []
+    evidence_limitations:
+      - "Десять публикаций загружены в черновики, но их фактический выход не подтверждён."
+      - "Макеты с именами и узнаваемыми сотрудниками исключены из публичной подборки."
+      - "Охваты, записи, продажи и медицинский эффект не заявляются."
+
+  - id: kristall-water
+    slug: kristall-water
+    public_title: "Буровая компания «Кристалл» — сложная услуга простым контентом"
+    client_display_name: "Кристалл"
+    period: "2026-07"
+    release_window: null
+    niche: local-services
+    subniche: drilling-and-autonomous-water-supply
+    formats:
+      - static-post
+      - carousel
+    scope:
+      publications: 11
+      main_publications: 10
+      bonus_publications: 1
+      static_posts: 10
+      carousel_publications: 1
+      carousel_slides: 7
+      available_visual_files: 17
+      planned_platform_count: 2
+      planned_platform_ids:
+        - vk
+        - max
+    featured_goals:
+      - explain-complex-service
+      - unpack-project-price
+      - remove-winter-risks
+      - show-complete-system
+      - address-private-and-b2b-buyers
+      - lead-to-estimate
+    data:
+      case: "cases/kristall-water/case.yml"
+      plan: "cases/kristall-water/plan.yml"
+    public_page: "case-kristall-water.html"
+    media_status: design-version-under-revision
+    portfolio_permission_status: permission-confirmed
+    publishable: true
+    publish_blockers: []
+    evidence_limitations:
+      - "Тексты утверждены, но визуальная версия возвращена на правки и не называется финальной."
+      - "Фактическая публикация, охваты, заявки и продажи не подтверждены."
+      - "Акции, сроки и цифра объектов внутри макетов относятся к периоду кампании и не выдаются за актуальные сегодня."
+
+  - id: masterpol
+    slug: masterpol
+    public_title: "МастерПол — контент для услуг по укладке пола"
+    client_display_name: "МастерПол"
+    period: "2026-07/2026-08"
+    release_window: "2026-07-28/2026-08-15"
+    niche: home-improvement
+    subniche: flooring-installation
+    formats:
+      - static-post
+      - carousel
+      - stories-sequence
+    scope:
+      publications: 10
+      static_posts: 8
+      carousel_publications: 2
+      carousel_slides: 14
+      stories_sequences: 1
+      stories_frames: 5
+      visual_files: 27
+      confirmed_draft_platform_count: 1
+      confirmed_draft_platform_ids:
+        - vk
+    featured_goals:
+      - attract-new-audience
+      - build-trust
+      - explain-material-choice
+      - demonstrate-work
+      - handle-price-objections
+      - lead-measurement-request
+    data:
+      case: "cases/masterpol/case.yml"
+      plan: "cases/masterpol/plan.yml"
+    public_page: "case-masterpol.html"
+    media_status: media-ready-approved-drafts-loaded
+    portfolio_permission_status: permission-confirmed
+    publishable: true
+    publish_blockers: []
+    evidence_limitations:
+      - "Публикационный календарь подтверждён как черновики; фактический выход каждого материала не проверен."
+      - "Охваты, заявки, продажи и окупаемость не заявляются."
+      - "Второй цикл заказан, но его визуал ещё находится в производстве."
+
+  - id: electronics-cherepovets
+    slug: electronics-cherepovets
+    public_title: "ЭЛЕКТРОНИКС — полезный контент для магазина техники"
+    client_display_name: "ЭЛЕКТРОНИКС"
+    period: "2026-07/2026-08"
+    release_window: "2026-08"
+    niche: retail
+    subniche: consumer-electronics
+    formats:
+      - static-post
+      - carousel
+    scope:
+      publications: 11
+      main_publications: 10
+      bonus_publications: 1
+      static_posts: 8
+      carousel_publications: 3
+      carousel_slides: 21
+      source_visual_files: 29
+      publishable_visual_files: 28
+      publishable_visualized_publications: 11
+      planned_platform_count: 1
+      planned_platform_ids:
+        - vk
+    featured_goals:
+      - build-expert-trust
+      - help-product-choice
+      - handle-objections
+      - show-products
+      - encourage-comments
+      - lead-to-messages
+    data:
+      case: "cases/electronics-cherepovets/case.yml"
+      plan: "cases/electronics-cherepovets/plan.yml"
+    public_page: "case-electronics-cherepovets.html"
+    media_status: media-ready-safe-selection
+    portfolio_permission_status: permission-confirmed
+    publishable: true
+    publish_blockers: []
+    evidence_limitations:
+      - "Один слайд с крупным лицом исключён из публичной версии; основной смысл карусели сохранён."
+      - "Фактический выход публикаций, охваты, обращения, продажи и окупаемость не подтверждены."
+      - "Цены и акции внутри макетов относятся к периоду проекта."
+
+  - id: invest-management
+    slug: invest-management
+    public_title: "Invest Management — контент для сложного инвестиционного продукта"
+    client_display_name: "Invest Management"
+    period: "2026-07"
+    release_window: null
+    niche: commercial-real-estate
+    subniche: commercial-property-sublease
+    formats:
+      - static-post
+      - carousel
+      - stories-sequence
+      - pinned-post
+    scope:
+      publications: 11
+      main_publications: 10
+      additional_pinned_publications: 1
+      static_posts: 9
+      carousel_publications: 2
+      carousel_slides: 14
+      stories_sequences: 1
+      stories_frames: 5
+      visual_files: 28
+      planned_platform_count: 4
+      planned_platform_ids:
+        - telegram
+        - vk
+        - instagram
+        - max
+    featured_goals:
+      - explain-product-mechanics
+      - build-founder-trust
+      - demonstrate-cases
+      - handle-risk-objections
+      - show-expertise
+      - lead-expert-analysis-request
+    data:
+      case: "cases/invest-management/case.yml"
+      plan: "cases/invest-management/plan.yml"
+    public_page: "case-invest-management.html"
+    media_status: media-ready-approved
+    portfolio_permission_status: permission-confirmed
+    publishable: true
+    publish_blockers: []
+    evidence_limitations:
+      - "Цифры, ставки, суммы и условия внутри макетов относятся к июлю 2026 года и могут быть неактуальны."
+      - "Материалы не являются финансовым советом, офертой или гарантией lemonmedia."
+      - "Публикация, заявки, привлечённые инвесторы, доходность и другие бизнес-метрики не заявляются."
+
+  - id: oh-beauty
+    slug: oh-beauty
+    public_title: "Oh! Beauty — контент-система для студии красоты"
+    client_display_name: "Oh! Beauty"
+    period: "2026-07"
+    release_window: null
+    niche: beauty-and-wellness
+    subniche: laser-hair-removal-and-lpg-studio
+    formats:
+      - static-post
+      - carousel
+    scope:
+      publications: 11
+      main_publications: 10
+      bonus_publications: 1
+      static_posts: 10
+      carousel_publications: 1
+      carousel_slides: 7
+      source_visual_files: 17
+      publishable_visual_files: 5
+      publishable_visualized_publications: 4
+    featured_goals:
+      - reduce-uncertainty
+      - answer-common-objections
+      - show-process
+      - build-trust
+      - lead-to-dialogue
+    data:
+      case: "cases/oh-beauty/case.yml"
+      plan: "cases/oh-beauty/plan.yml"
+    public_page: "case-oh-beauty.html"
+    media_status: media-ready-safe-selection
+    portfolio_permission_status: permission-confirmed
+    publishable: true
+    publish_blockers: []
+    evidence_limitations:
+      - "Публично показаны три нейтральных поста и два безопасных слайда подарочной карусели."
+      - "Имена клиентов, чувствительные кадры, старые акции и медицинские обещания исключены."
+      - "Публикация, охваты, заявки, продажи и медицинский эффект не заявляются."
+
+  - id: alliance-climate
+    slug: alliance-climate
+    public_title: "Альянс Климат — контент о выборе и монтаже климатической техники"
+    client_display_name: "Альянс Климат"
+    period: "2026-08"
+    release_window: null
+    niche: home-services
+    subniche: air-conditioning-sales-and-installation
+    formats:
+      - static-post
+      - stories-sequence
+    scope:
+      publications: 10
+      static_posts: 10
+      stories_sequences: 1
+      stories_frames: 5
+      visual_files: 15
+      planned_platform_count: 1
+      planned_platform_ids:
+        - vk
+    featured_goals:
+      - build-expert-trust
+      - explain-service-choice
+      - handle-objections
+      - show-work-quality
+      - demonstrate-warranty
+      - lead-to-messages
+    data:
+      case: "cases/alliance-climate/case.yml"
+      plan: "cases/alliance-climate/plan.yml"
+    public_page: "case-alliance-climate.html"
+    media_status: media-ready-complete-package
+    portfolio_permission_status: permission-confirmed
+    publishable: true
+    publish_blockers: []
+    evidence_limitations:
+      - "Фактический выход публикаций, охваты, обращения, продажи и окупаемость не заявляются."
+      - "Коммерческие условия и сезонные сроки внутри материалов относятся к периоду проекта."
+
+  - id: lipniki
+    slug: lipniki
+    public_title: "Липники — контент-план для локального продуктового магазина"
+    client_display_name: "Липники"
+    period: "2026-08"
+    release_window: null
+    niche: local-retail
+    subniche: grocery-store
+    formats:
+      - static-post
+      - carousel
+    scope:
+      publications: 11
+      main_publications: 10
+      bonus_publications: 1
+      static_posts: 8
+      carousel_publications: 3
+      carousel_slides: 20
+      visual_files: 28
+      planned_platform_count: 1
+      planned_platform_ids:
+        - max
+    featured_goals:
+      - show-fresh-assortment
+      - build-local-trust
+      - help-product-choice
+      - encourage-comments
+      - encourage-saves
+      - lead-to-messages-and-store
+    data:
+      case: "cases/lipniki/case.yml"
+      plan: "cases/lipniki/plan.yml"
+    public_page: "case-lipniki.html"
+    media_status: media-ready-complete-package
+    portfolio_permission_status: permission-confirmed
+    publishable: true
+    publish_blockers: []
+    evidence_limitations:
+      - "Пакет подготовлен к загрузке; фактический выход публикаций и коммерческие метрики не заявляются."
+      - "Исторические цены из плана не перенесены в публичный кейс."
+
+  - id: lisitsinsky
+    slug: lisitsinsky
+    public_title: "Кардиолог Александр Лисицинский — экспертная контент-система"
+    client_display_name: "Александр Лисицинский"
+    period: "2026-07"
+    release_window: null
+    niche: healthcare
+    subniche: cardiology
+    formats:
+      - static-post
+      - carousel
+    scope:
+      publications: 11
+      main_publications: 10
+      bonus_publications: 1
+      static_posts: 8
+      carousel_publications: 3
+      carousel_slides: 21
+      source_visual_files: 29
+      publishable_visual_files: 5
+      publishable_visualized_publications: 4
+      planned_platform_count: 2
+      planned_platform_ids:
+        - vk
+        - telegram
+    featured_goals:
+      - reduce-information-overload
+      - set-self-diagnosis-boundary
+      - explain-doctor-process
+      - build-expert-trust
+      - lead-to-consultation
+    data:
+      case: "cases/lisitsinsky/case.yml"
+      plan: "cases/lisitsinsky/plan.yml"
+    public_page: "case-lisitsinsky.html"
+    media_status: media-ready-safe-selection
+    portfolio_permission_status: permission-confirmed
+    publishable: true
+    publish_blockers: []
+    evidence_limitations:
+      - "Публично показаны три нейтральных поста и два безопасных слайда одной карусели."
+      - "Списки симптомов, лекарственные тезисы, диагностические выводы, пациенты и исторические цены исключены."
+      - "Публикация, охваты, обращения, продажи и медицинский эффект не заявляются."
+
+  - id: fjord-petersburg
+    slug: fjord-petersburg
+    public_title: "Fjord-Petersburg — контент для водных прогулок в Санкт-Петербурге"
+    client_display_name: "Fjord-Petersburg"
+    period: "2026-07/2026-08"
+    release_window: null
+    niche: tourism-and-leisure
+    subniche: boat-rental-and-water-trips
+    formats:
+      - static-post
+      - carousel
+    scope:
+      publications: 11
+      main_publications: 10
+      bonus_publications: 1
+      static_posts: 8
+      carousel_publications: 3
+      carousel_slides: 21
+      source_visual_files: 29
+      publishable_visual_files: 15
+      publishable_visualized_publications: 5
+      planned_platform_count: 1
+      planned_platform_ids:
+        - vk
+    featured_goals:
+      - simplify-choice
+      - show-routes-and-vessels
+      - handle-rental-objections
+      - create-occasion-desire
+      - lead-to-messages
+    data:
+      case: "cases/fjord-petersburg/case.yml"
+      plan: "cases/fjord-petersburg/plan.yml"
+    public_page: "case-fjord-petersburg.html"
+    media_status: media-ready-safe-selection
+    portfolio_permission_status: permission-confirmed
+    publishable: true
+    publish_blockers: []
+    evidence_limitations:
+      - "Четырнадцать макетов с узнаваемыми людьми исключены из публичной версии."
+      - "Загрузка десяти материалов как черновиков VK не называется фактической публикацией."
+      - "Охваты, обращения, продажи и актуальность исторических предложений не заявляются."
+
+  - id: siyanie-vyaza
+    slug: siyanie-vyaza
+    public_title: "Сияние вяза — контент для мастерской авторской мебели"
+    client_display_name: "Мастерская Юлии Якунович"
+    period: "2026-07"
+    release_window: null
+    niche: furniture
+    subniche: handcrafted-wood-and-resin-furniture
+    formats:
+      - static-post
+      - carousel
+      - stories-sequence
+    scope:
+      publications: 10
+      static_posts: 8
+      carousel_publications: 2
+      carousel_slides: 18
+      stories_frames: 3
+      source_visual_files: 29
+      publishable_visual_files: 12
+      publishable_visualized_publications: 9
+      planned_platform_count: 4
+      planned_platform_ids:
+        - vk
+        - telegram
+        - max
+        - instagram
+    featured_goals:
+      - show-craftsmanship
+      - help-product-choice
+      - explain-materials
+      - build-maker-trust
+      - lead-to-dialogue
+    data:
+      case: "cases/siyanie-vyaza/case.yml"
+      plan: "cases/siyanie-vyaza/plan.yml"
+    public_page: "case-siyanie-vyaza.html"
+    media_status: media-ready-safe-selection
+    portfolio_permission_status: permission-confirmed
+    publishable: true
+    publish_blockers: []
+    evidence_limitations:
+      - "Одна карусель исключена из публичной выборки из-за исторических условий и правок."
+      - "Три вертикальных кадра не показаны из-за несоответствия названий содержанию плана."
+      - "Фактическая публикация, охваты, обращения, продажи и окупаемость не заявляются."
+
+  - id: ritual-s
+    slug: ritual-s
+    public_title: "Ритуал-С — спокойный контент для сложного выбора"
+    client_display_name: "Ритуал-С"
+    period: "2026-07"
+    release_window: null
+    niche: services
+    subniche: ritual-services
+    formats:
+      - static-post
+      - carousel
+    scope:
+      publications: 20
+      static_posts: 15
+      carousel_publications: 5
+      carousel_slides: 35
+      source_visual_files: 50
+      publishable_visual_files: 34
+      publishable_visualized_publications: 10
+      planned_stories: 5
+      confirmed_story_files: 0
+      planned_platform_count: 3
+      planned_platform_ids:
+        - vk
+        - telegram
+        - max
+    featured_goals:
+      - reduce-choice-anxiety
+      - explain-product-differences
+      - show-production-system
+      - build-trust
+      - lead-to-messages
+    data:
+      case: "cases/ritual-s/case.yml"
+      plan: "cases/ritual-s/plan.yml"
+    public_page: "case-ritual-s.html"
+    media_status: media-ready-safe-selection
+    portfolio_permission_status: permission-confirmed
+    publishable: true
+    publish_blockers: []
+    evidence_limitations:
+      - "Шестнадцать кадров с лицами, именами, датами, документами, адресами, конкретными ценами или чувствительными сценами исключены."
+      - "Пять историй были запланированы, но файлов нет в финальной папке, поэтому они не считаются готовыми."
+      - "Фактический выход публикаций, охваты, обращения, продажи и окупаемость не заявляются."

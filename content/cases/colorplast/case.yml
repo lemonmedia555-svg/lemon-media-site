@@ -1,0 +1,110 @@
+version: 1
+brand: lemonmedia
+id: colorplast
+slug: colorplast
+language: ru
+
+identity:
+  public_title: "Colorplast — продление контента с ростом пакета с 10 до 20 публикаций"
+  client_display_name: "Colorplast"
+  niche: windows-and-doors-manufacturing
+  services:
+    - pvc-windows-and-doors
+    - aluminium-windows-and-doors
+    - measurement
+    - installation
+  relationship: renewal
+
+summary:
+  short: "После первого месяца Colorplast продолжил работу и увеличил объём с 10 до 20 публикаций. Новый цикл объясняет сложный продукт через пользу, мифы, процесс, решения и отзывы."
+  content_task: "Повышать узнаваемость производителя и доверие к нему без постоянного давления акциями."
+  result_wording: "Подтверждены продление, рост пакета, утверждение визуала и загрузка 20 черновиков на три площадки. Перед стартом 13 текстов дополнительно сокращаются под Threads, поэтому новый цикл не называется полностью готовым или опубликованным."
+
+scope:
+  previous_cycle:
+    publications: 10
+    static_posts: 8
+    main_carousels: 2
+    bonus_carousels: 1
+    carousel_slides: 21
+    source_visual_files: 29
+    source_dimensions: "1200 × 1500"
+  current_cycle:
+    publications: 20
+    static_posts: 15
+    main_carousels: 5
+    bonus_carousels: 1
+    carousel_slides: 42
+    source_visual_files: 57
+    source_dimensions: "1080 × 1350"
+  total_public_visuals: 86
+  web_dimensions: "720 × 900"
+  crop: false
+
+content_balance:
+  useful: 5
+  myth_busting: 3
+  works-and-solutions: 3
+  offers: 3
+  process: 2
+  reviews-and-results: 2
+  engagement: 2
+
+renewal_evidence:
+  confirmed: true
+  evidence_summary:
+    - "Есть два самостоятельных финальных пакета."
+    - "Первый пакет содержит 10 публикаций и 29 финальных изображений."
+    - "Новый пакет содержит 20 публикаций и 57 финальных изображений."
+    - "Новая задача зафиксирована как продление."
+  claim_boundary: "Продление подтверждает продолжение сотрудничества, но не доказывает рост продаж, охватов или аудитории."
+
+quality_control:
+  texts_approved_for_design: confirmed
+  visual_internal_review: confirmed
+  visual_corrections: completed
+  client_visual_approval: confirmed
+  draft_calendar: confirmed
+  threads_text_adaptation:
+    status: in-progress
+    publication_count: 13
+    publications: [1, 2, 3, 5, 6, 10, 11, 12, 14, 17, 18, 19, 20]
+
+calendar:
+  platforms: [vk, instagram, threads]
+  draft_publications: 20
+  starts_at: "2026-08-12 10:00"
+  ends_at: "2026-09-19 10:00"
+  cadence: every-two-days
+  publication_time: "10:00"
+  actual_publication: unconfirmed
+  bonus_carousel_separate_slot: unconfirmed
+
+evidence:
+  confirmed:
+    - "Публичное название проекта: Colorplast."
+    - "Первый пакет: 10 публикаций, 2 основные карусели, подарочная карусель и 29 финальных изображений."
+    - "Новый пакет: 20 публикаций, 5 основных каруселей, подарочная карусель и 57 финальных изображений."
+    - "Тексты нового цикла были приняты для перехода в дизайн."
+    - "После внутреннего ревью визуал исправлен и принят клиентом."
+    - "20 черновиков загружены для ВКонтакте, Instagram и Threads."
+    - "Все 86 исходных файлов открываются, точных дублей нет."
+  not_claimed:
+    - "Фактический выход всех 20 публикаций."
+    - "Полная готовность 13 длинных текстов для Threads."
+    - "Охваты, подписчики, заявки, продажи или выручка."
+    - "Документальность стоковых или иллюстративных сцен."
+    - "Актуальность акций, бесплатного замера и географии после периода кампании."
+  analytics: null
+  direct_publication_links: null
+
+publication_control:
+  portfolio_permission: confirmed_by_project_owner
+  final_media: ready
+  publishable: true
+  display_notes:
+    - "Показывать оба месяца как подтверждённое продление."
+    - "Новый месяц называть визуально завершённым, но не полностью готовым к публикации во всех каналах."
+    - "Не писать, что 20 публикаций уже вышли."
+    - "Не выдавать иллюстративные сцены за реальные объекты Colorplast."
+    - "Акции и условия периода не называть текущей офертой."

@@ -1,0 +1,117 @@
+version: 1
+brand: lemonmedia
+id: electric-monchegorsk
+slug: electric-monchegorsk
+language: ru
+
+identity:
+  public_title: "Электрик Мончегорск — первый месяц регулярного контента"
+  client_display_name: "Электрик Мончегорск"
+  period: "2026-07/08"
+  release_window: "2026-07-30/2026-08-17"
+  niche: home-services
+  subniche: electrical-installation
+  geography: monchegorsk
+
+summary:
+  short: "Полезные посты, реальные электромонтажные работы, две карусели и мини-прогрев — в единой системе для локального специалиста."
+  content_task: "Привлекать новую локальную аудиторию, добавить регулярность, давать полезные советы и показывать реальные работы без превращения ленты в набор одинаковых объявлений."
+  result_wording: "Подготовлены и утверждены 10 публикаций: 8 одиночных постов и 2 карусели по 7 слайдов. Дополнительно создан мини-прогрев из 5 историй. Ошибка с фотографиями объекта в карусели №7 исправлена до утверждения. Весь комплект загружен в календарь ВКонтакте и запущен по графику с 30 июля по 17 августа 2026 года."
+
+scope:
+  publications: 10
+  static_posts: 8
+  carousel_publications: 2
+  carousel_slides: 14
+  stories_sequences: 1
+  stories_frames: 5
+  source_visual_files: 27
+  web_visual_files: 27
+  platform_count: 1
+  platform_ids:
+    - vk
+  platform_status: publication-schedule-confirmed
+
+content_mix:
+  useful:
+    publications: 4
+    numbers:
+      - 1
+      - 4
+      - 6
+      - 9
+  work-showcase:
+    publications: 2
+    numbers:
+      - 2
+      - 7
+  myth-busting:
+    publications: 2
+    numbers:
+      - 3
+      - 8
+  offer:
+    publications: 2
+    numbers:
+      - 5
+      - 10
+
+featured_goals:
+  - attract-local-audience
+  - build-trust
+  - show-real-work
+  - demonstrate-expertise
+  - reduce-choice-risk
+  - lead-request
+
+evidence:
+  confirmed:
+    - "Публичное название проекта: Электрик Мончегорск."
+    - "Контент-план и тексты на 10 публикаций утверждены."
+    - "Подготовлены 8 одиночных постов и 2 карусели по 7 слайдов."
+    - "Дополнительно подготовлена связка из 5 статичных историй к публикации №5."
+    - "В финальной папке 27 PNG: 22 визуала формата 4:5 и 5 историй формата 9:16."
+    - "В карусели №7 фотографии другого объекта заменены на материалы нужного гаража."
+    - "После исправления визуал утверждён."
+    - "Все 10 публикаций и 5 историй загружены в календарь ВКонтакте."
+    - "Публикации запущены по графику раз в два дня в 08:00 с 30 июля по 17 августа 2026 года."
+  not_claimed:
+    - "Охваты, просмотры, вовлечённость или рост подписчиков."
+    - "Количество обращений, заявок, продаж, выручка или окупаемость."
+    - "Публичный отзыв клиента."
+    - "Причинная связь между контентом и коммерческими показателями."
+    - "Актуальность условий бесплатного замера, фиксированной сметы или оплаты после работ после периода проекта."
+  public_links: null
+  direct_publication_links: null
+  analytics: null
+  client_review: null
+
+quality_control:
+  client_visual_approval: confirmed-after-correction
+  content_plan_approval: confirmed
+  publication_calendar: confirmed
+  publication_launch: confirmed
+  corrected_issue:
+    publication: 7
+    issue: "В первой версии использовались фотографии другого гаража."
+    action: "Изображения заменили на материалы конкретного объекта клиента."
+    outcome: "Обновлённая карусель вошла в финальную папку, после проверки визуал был утверждён."
+
+publication_control:
+  portfolio_permission: confirmed_by_project_owner
+  final_media: ready
+  direct_publication_links: unavailable
+  publishable: true
+  historical_terms_visible_in_assets:
+    - "posts/05.jpg"
+    - "posts/10.jpg"
+    - "stories/01.jpg"
+    - "stories/02.jpg"
+    - "stories/03.jpg"
+    - "stories/04.jpg"
+    - "stories/05.jpg"
+  display_notes:
+    - "Посты и карусели показывать в формате 4:5 без обрезки."
+    - "Истории показывать в формате 9:16 без обрезки."
+    - "Коммерческие условия внутри макетов относятся к периоду проекта."
+    - "Не добавлять количественные результаты без отдельного источника аналитики."

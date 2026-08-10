@@ -1,0 +1,102 @@
+version: 1
+brand: lemonmedia
+id: sidcobra
+slug: sidcobra
+language: ru
+
+identity:
+  public_title: "SIDCOBRA — единая контент-система для тренера и бренда спорттоваров"
+  client_display_name: "SIDCOBRA"
+  period: "2026-07/2026-10"
+  release_window: "2026-07-29/2026-10-05"
+  niche: sports-and-fitness
+  subniche: strength-coaching-and-sports-goods
+  geography: "Санкт-Петербург и онлайн по России"
+
+summary:
+  short: "30 публикаций, которые одновременно раскрывают экспертность тренера, результаты учеников и собственную линейку спортивных товаров."
+  content_task: "Соединить в одной ленте персональные и онлайн-тренировки с продуктовой линией SIDCOBRA, не превращая профиль ни в сухой учебник, ни в каталог товаров."
+  result_wording: "Подготовлены и утверждены 30 публикаций: 24 одиночных поста и 6 каруселей по 7 слайдов. Все 66 визуалов собраны в единую чёрно-красную систему, загружены во ВКонтакте и Telegram и поставлены в календарь с 29 июля по 5 октября 2026 года."
+
+scope:
+  publications: 30
+  static_posts: 24
+  carousel_publications: 6
+  carousel_slides: 42
+  visual_files: 66
+  confirmed_launch_platform_count: 2
+  confirmed_launch_platform_ids:
+    - vk
+    - telegram
+  planned_but_not_launch_confirmed_platform_ids:
+    - instagram
+
+schedule:
+  start_date: "2026-07-29"
+  end_date: "2026-10-05"
+  cadence_weekdays:
+    - monday
+    - wednesday
+    - friday
+  time_local: "10:00"
+  timezone_status: not-recorded
+  status: uploaded-and-scheduled
+
+content_system:
+  expert_and_educational_publications: 12
+  product_and_equipment_publications: 7
+  proof_and_results_publications: 5
+  service_and_offer_publications: 3
+  brand_and_backstage_publications: 3
+
+featured_goals:
+  - build-expert-trust
+  - explain-training-method
+  - remove-strength-training-fears
+  - show-student-proof
+  - introduce-owned-products
+  - lead-training-request
+  - create-recognizable-brand-feed
+
+revision_story:
+  publication_09: "Клиент попросил не изменять сами товары на реальных фотографиях. В финале сохранены исходные изображения продукта, а дизайн работает как рамка и навигация."
+  publication_10: "Клиенту понравилась идея с котом в теме о сне. Концепцию сохранили, а внешний вид полотенца переработали."
+  internal_qa: "После проверки добавили недостающий слайд карусели №13 и визуал публикации №15. В финальном комплекте также есть публикации №25–28, которых не было в первой загрузке черновиков."
+
+evidence:
+  confirmed:
+    - "Публичное название бренда: SIDCOBRA."
+    - "Утверждены контент-план и тексты на 30 публикаций."
+    - "Финальный комплект содержит 24 одиночных поста и 6 каруселей по 7 слайдов."
+    - "Всего подготовлено 66 финальных изображений формата 4:5."
+    - "Визуал утверждён."
+    - "Материалы загружены во ВКонтакте и Telegram."
+    - "Календарь подтверждён: с 29 июля по 5 октября 2026 года, по понедельникам, средам и пятницам в 10:00."
+    - "Тексты адаптированы под ограничения Telegram."
+  not_claimed:
+    - "Охваты, вовлечённость, заявки, продажи, выручка и окупаемость."
+    - "Рост подписчиков или узнаваемости после публикации."
+    - "Публикация этого комплекта в Instagram."
+    - "Публичный отзыв клиента."
+    - "Актуальность цен и условий внутри материалов периода проекта."
+  public_links: null
+  direct_publication_links: null
+  analytics: null
+  client_review: null
+
+publication_control:
+  portfolio_permission: confirmed_by_project_owner
+  final_media: ready
+  client_visual_approval: confirmed
+  upload_vk: confirmed
+  upload_telegram: confirmed
+  upload_instagram: not-confirmed
+  recognizable_people_assets:
+    - "posts/*.jpg"
+    - "carousels/**/*.jpg"
+  recognizable_people_use_basis: confirmed_by_project_owner
+  display_notes:
+    - "Все макеты имеют формат 4:5 и должны показываться без обрезки."
+    - "Не представлять Instagram как подтверждённую площадку запуска."
+    - "Не добавлять количественные бизнес-результаты без отдельной аналитики."
+  publishable: true

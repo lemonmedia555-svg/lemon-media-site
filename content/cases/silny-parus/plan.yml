@@ -1,0 +1,255 @@
+version: 1
+brand: lemonmedia
+case_id: silny-parus
+period: "2026-07"
+language: ru
+
+scope:
+  publications: 10
+  static_posts: 0
+  carousel_publications: 10
+  carousel_slides: 66
+  stories_sequences: 3
+  stories_frames: 15
+  visual_files: 81
+  planned_platform_count: 2
+
+claim_rule: "Цели ниже описывают маркетинговую задачу материалов, а не уже достигнутый результат. Утверждение текстов и внутренняя приёмка визуала подтверждены; публикация, метрики и прямое клиентское утверждение дизайна не зафиксированы."
+
+schedule:
+  exact_publication_dates: null
+  exact_publication_times: null
+  status: final-visuals-handed-to-client-publication-not-verified
+
+publications:
+  - number: 1
+    id: publication-01
+    format: carousel
+    slide_count: 7
+    category: debt-collection
+    title: "Коллекторы: что им можно, а что запрещено"
+    goals:
+      - explain-rights
+      - remove-fears
+      - encourage-saves
+    assets:
+      - "assets/cases/silny-parus/carousels/01/01.jpg"
+      - "assets/cases/silny-parus/carousels/01/02.jpg"
+      - "assets/cases/silny-parus/carousels/01/03.jpg"
+      - "assets/cases/silny-parus/carousels/01/04.jpg"
+      - "assets/cases/silny-parus/carousels/01/05.jpg"
+      - "assets/cases/silny-parus/carousels/01/06.jpg"
+      - "assets/cases/silny-parus/carousels/01/07.jpg"
+
+  - number: 2
+    id: publication-02
+    format: carousel
+    slide_count: 7
+    category: enforcement
+    title: "Приставы сняли деньги с карты: что защищено законом"
+    goals:
+      - explain-rights
+      - provide-practical-guidance
+      - encourage-saves
+    assets:
+      - "assets/cases/silny-parus/carousels/02/01.jpg"
+      - "assets/cases/silny-parus/carousels/02/02.jpg"
+      - "assets/cases/silny-parus/carousels/02/03.jpg"
+      - "assets/cases/silny-parus/carousels/02/04.jpg"
+      - "assets/cases/silny-parus/carousels/02/05.jpg"
+      - "assets/cases/silny-parus/carousels/02/06.jpg"
+      - "assets/cases/silny-parus/carousels/02/07.jpg"
+
+  - number: 3
+    id: publication-03
+    format: carousel
+    slide_count: 7
+    category: bankruptcy-myths
+    title: "Четыре мифа о банкротстве"
+    goals:
+      - remove-fears
+      - explain-complex-topics
+      - show-expertise
+    assets:
+      - "assets/cases/silny-parus/carousels/03/01.jpg"
+      - "assets/cases/silny-parus/carousels/03/02.jpg"
+      - "assets/cases/silny-parus/carousels/03/03.jpg"
+      - "assets/cases/silny-parus/carousels/03/04.jpg"
+      - "assets/cases/silny-parus/carousels/03/05.jpg"
+      - "assets/cases/silny-parus/carousels/03/06.jpg"
+      - "assets/cases/silny-parus/carousels/03/07.jpg"
+
+  - number: 4
+    id: publication-04
+    format: carousel
+    slide_count: 4
+    category: brand-trust
+    title: "Почему компании доверяют с 2013 года"
+    goals:
+      - introduce-company
+      - build-trust
+      - show-expertise
+    assets:
+      - "assets/cases/silny-parus/carousels/04/01.jpg"
+      - "assets/cases/silny-parus/carousels/04/02.jpg"
+      - "assets/cases/silny-parus/carousels/04/03.jpg"
+      - "assets/cases/silny-parus/carousels/04/04.jpg"
+
+  - number: 5
+    id: publication-05
+    format: carousel
+    slide_count: 6
+    category: legal-faq
+    title: "Вопросы, которые люди стесняются задать юристу"
+    goals:
+      - remove-barriers
+      - build-trust
+      - lead-to-consultation
+    assets:
+      - "assets/cases/silny-parus/carousels/05/01.jpg"
+      - "assets/cases/silny-parus/carousels/05/02.jpg"
+      - "assets/cases/silny-parus/carousels/05/03.jpg"
+      - "assets/cases/silny-parus/carousels/05/04.jpg"
+      - "assets/cases/silny-parus/carousels/05/05.jpg"
+      - "assets/cases/silny-parus/carousels/05/06.jpg"
+
+  - number: 6
+    id: publication-06
+    format: carousel
+    slide_count: 7
+    category: credit-problem-guide
+    title: "Платить кредит стало нечем: четыре законных шага"
+    goals:
+      - provide-practical-guidance
+      - remove-panic
+      - encourage-saves
+    assets:
+      - "assets/cases/silny-parus/carousels/06/01.jpg"
+      - "assets/cases/silny-parus/carousels/06/02.jpg"
+      - "assets/cases/silny-parus/carousels/06/03.jpg"
+      - "assets/cases/silny-parus/carousels/06/04.jpg"
+      - "assets/cases/silny-parus/carousels/06/05.jpg"
+      - "assets/cases/silny-parus/carousels/06/06.jpg"
+      - "assets/cases/silny-parus/carousels/06/07.jpg"
+
+  - number: 7
+    id: publication-07
+    format: carousel
+    slide_count: 7
+    category: consumer-rights
+    title: "Как вернуть навязанную страховку по кредиту за 14 дней"
+    goals:
+      - explain-rights
+      - provide-practical-guidance
+      - encourage-saves
+    assets:
+      - "assets/cases/silny-parus/carousels/07/01.jpg"
+      - "assets/cases/silny-parus/carousels/07/02.jpg"
+      - "assets/cases/silny-parus/carousels/07/03.jpg"
+      - "assets/cases/silny-parus/carousels/07/04.jpg"
+      - "assets/cases/silny-parus/carousels/07/05.jpg"
+      - "assets/cases/silny-parus/carousels/07/06.jpg"
+      - "assets/cases/silny-parus/carousels/07/07.jpg"
+
+  - number: 8
+    id: publication-08
+    format: carousel
+    slide_count: 7
+    category: family-law
+    title: "Развод: мифы и факты о разделе имущества и долгов"
+    goals:
+      - explain-complex-topics
+      - remove-fears
+      - encourage-saves
+    assets:
+      - "assets/cases/silny-parus/carousels/08/01.jpg"
+      - "assets/cases/silny-parus/carousels/08/02.jpg"
+      - "assets/cases/silny-parus/carousels/08/03.jpg"
+      - "assets/cases/silny-parus/carousels/08/04.jpg"
+      - "assets/cases/silny-parus/carousels/08/05.jpg"
+      - "assets/cases/silny-parus/carousels/08/06.jpg"
+      - "assets/cases/silny-parus/carousels/08/07.jpg"
+
+  - number: 9
+    id: publication-09
+    format: carousel
+    slide_count: 7
+    category: lawyer-choice
+    title: "Как выбрать юриста и не потерять деньги на слишком дешёвом предложении"
+    goals:
+      - build-trust
+      - help-choice
+      - differentiate-approach
+    assets:
+      - "assets/cases/silny-parus/carousels/09/01.jpg"
+      - "assets/cases/silny-parus/carousels/09/02.jpg"
+      - "assets/cases/silny-parus/carousels/09/03.jpg"
+      - "assets/cases/silny-parus/carousels/09/04.jpg"
+      - "assets/cases/silny-parus/carousels/09/05.jpg"
+      - "assets/cases/silny-parus/carousels/09/06.jpg"
+      - "assets/cases/silny-parus/carousels/09/07.jpg"
+
+  - number: 10
+    id: publication-10
+    format: carousel
+    slide_count: 7
+    category: inheritance-law
+    title: "Наследство с долгами: принимать или отказываться"
+    goals:
+      - explain-complex-topics
+      - provide-practical-guidance
+      - lead-to-consultation
+    assets:
+      - "assets/cases/silny-parus/carousels/10/01.jpg"
+      - "assets/cases/silny-parus/carousels/10/02.jpg"
+      - "assets/cases/silny-parus/carousels/10/03.jpg"
+      - "assets/cases/silny-parus/carousels/10/04.jpg"
+      - "assets/cases/silny-parus/carousels/10/05.jpg"
+      - "assets/cases/silny-parus/carousels/10/06.jpg"
+      - "assets/cases/silny-parus/carousels/10/07.jpg"
+
+stories_sequences:
+  - id: stories-01
+    format: stories-sequence
+    frame_count: 5
+    title: "Опасные обещания и «100% гарантия»"
+    goal: recognize-risky-legal-advertising
+    assets:
+      - "assets/cases/silny-parus/stories/01/01.jpg"
+      - "assets/cases/silny-parus/stories/01/02.jpg"
+      - "assets/cases/silny-parus/stories/01/03.jpg"
+      - "assets/cases/silny-parus/stories/01/04.jpg"
+      - "assets/cases/silny-parus/stories/01/05.jpg"
+
+  - id: stories-02
+    format: stories-sequence
+    frame_count: 5
+    title: "Как проверить кредитный договор"
+    goal: help-find-extra-credit-payments
+    assets:
+      - "assets/cases/silny-parus/stories/02/01.jpg"
+      - "assets/cases/silny-parus/stories/02/02.jpg"
+      - "assets/cases/silny-parus/stories/02/03.jpg"
+      - "assets/cases/silny-parus/stories/02/04.jpg"
+      - "assets/cases/silny-parus/stories/02/05.jpg"
+
+  - id: stories-03
+    format: stories-sequence
+    frame_count: 5
+    title: "Пять признаков, что долговая проблема не решится сама"
+    goal: encourage-problem-self-check
+    assets:
+      - "assets/cases/silny-parus/stories/03/01.jpg"
+      - "assets/cases/silny-parus/stories/03/02.jpg"
+      - "assets/cases/silny-parus/stories/03/03.jpg"
+      - "assets/cases/silny-parus/stories/03/04.jpg"
+      - "assets/cases/silny-parus/stories/03/05.jpg"
+
+asset_display_notes:
+  carousel_aspect_ratio: "4:5"
+  stories_aspect_ratio: "9:16"
+  crop: false
+  source_carousel_dimensions: "1080 × 1350"
+  source_stories_dimensions: "1080 × 1920"
+  web_carousel_dimensions: "720 × 900"
+  web_stories_dimensions: "540 × 960"

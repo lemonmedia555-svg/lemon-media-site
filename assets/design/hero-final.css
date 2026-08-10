@@ -1,0 +1,373 @@
+/* ============================================================
+   lemonmedia — первый экран (чистовой) + блок оффера
+   Пара 1: светло-серый + лавандовый. Жёлтый — в акцентах.
+   Тексты и кнопки — из прототипа. Префикс hf-.
+   ============================================================ */
+
+:root {
+  --hf-cool: #F4F6FA;   /* левая зона */
+  --hf-lav: #E4EAF7;    /* правая зона (витрина) */
+  --hf-line: #DDE3EE;
+}
+
+body.hf {
+  margin: 0;
+  font-family: var(--lm-font-sans);
+  color: var(--lm-text-primary);
+  background: var(--lm-color-cool-050);
+  -webkit-font-smoothing: antialiased;
+}
+.hf * { box-sizing: border-box; }
+.hf :where(h1, h2, h3, p, ul, figure) { margin: 0; }
+
+/* ============================================================
+   HERO
+   ============================================================ */
+.hf-hero {
+  position: relative;
+  margin-top: -82px;   /* хедер-капсула плавает поверх, без белой полосы сверху */
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  overflow: hidden;
+}
+.hf-hero__bg-l, .hf-hero__bg-r { position: absolute; top: 0; bottom: 0; z-index: 0; }
+.hf-hero__bg-l { left: 0; right: 50%; background: var(--hf-cool); }
+.hf-hero__bg-r { left: 50%; right: 0; background: var(--hf-lav); }
+
+/* --- левая колонка: композиция по вертикальной шкале --- */
+.hf-copy {
+  position: relative; z-index: 2;
+  padding: 106px 24px 52px max(24px, calc((100vw - var(--lm-container)) / 2 + 24px));
+  display: flex; flex-direction: column; justify-content: center;
+}
+/* 616px — ровно столько остаётся в левой половине при контейнере 1328
+   на любой ширине от 1328px. Кнопки должны влезать в одну строку. */
+.hf-copy__inner { max-width: 616px; }
+
+.hf-rating {
+  font: 600 15px/1 var(--lm-font-sans);
+  color: var(--lm-color-muted);
+}
+.hf-rating .stars { color: var(--lm-color-lemon-500); font-size: 15px; letter-spacing: 1.5px; margin-right: 4px; }
+.hf-rating b { font-weight: 800; color: var(--lm-text-primary); }
+
+.hf-kicker {
+  display: block; margin-top: 22px;
+  font: 700 13px/1 var(--lm-font-sans);
+  letter-spacing: .1em; text-transform: uppercase;
+  color: var(--lm-color-purple-600);
+}
+.hf-h1 {
+  margin-top: 13px;
+  font-size: clamp(32px, 4vw, 56px);
+  font-weight: 800; line-height: 1.06; letter-spacing: -0.032em;
+}
+.hf-h1 em { font-style: normal; color: var(--lm-color-purple-600); display: inline-block; }
+.hf-lead {
+  margin-top: 24px;
+  font-size: 19px; line-height: 1.62;
+  color: var(--lm-color-muted);
+  max-width: 46ch;
+}
+/* Преимущества: не список строк, а сетка 2×2 из плашек — читаются
+   как состав услуги и не спорят с лидом. Тексты из прототипа. */
+.hf-list {
+  list-style: none; margin: 30px 0 0; padding: 0;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 10px;
+}
+.hf-list li {
+  display: flex; gap: 11px; align-items: flex-start;
+  font-size: 16.5px; line-height: 1.34;
+  background: var(--lm-color-neutral-000);
+  border: 1px solid var(--hf-line);
+  border-radius: 16px;
+  padding: 14px 16px;
+}
+.hf-tick {
+  flex: 0 0 auto; width: 22px; height: 22px; border-radius: 8px;
+  background: var(--lm-color-lemon-500); color: var(--lm-color-neutral-1000);
+  font: 800 11px/1 var(--lm-font-sans);
+  display: flex; align-items: center; justify-content: center;
+  margin-top: 1px;
+}
+.hf-actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 34px; }
+.hf-actions .lm-btn { font-size: 16px; padding: 15px 20px; }
+
+.hf-note {
+  margin-top: 22px;
+  display: flex; flex-wrap: wrap; gap: 8px 22px;
+  font-size: 14px; line-height: 1.5;
+  color: var(--lm-color-muted-2);
+}
+.hf-note span { display: inline-flex; align-items: center; gap: 7px; }
+.hf-note b { font-weight: 800; color: var(--lm-text-primary); }
+.hf-note i { font-style: normal; opacity: .5; }
+
+/* --- правая колонка: витрина --- */
+.hf-stage { position: relative; z-index: 1; overflow: hidden; }
+.hf-cols {
+  /* число колонок задаёт скрипт: 5 на широких, 4 на средних, 3 на мобиле —
+     чем больше колонок, тем мельче карточка и тем сильнее «как много работ» */
+  position: relative; z-index: 1;
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 12px; padding-left: 22px;
+  height: clamp(660px, 92vh, 960px);
+  -webkit-mask-image: linear-gradient(180deg, transparent, #000 11%, #000 88%, transparent);
+  mask-image: linear-gradient(180deg, transparent, #000 11%, #000 88%, transparent);
+}
+.hf-col { overflow: hidden; height: 100%; }
+.hf-track { display: flex; flex-direction: column; gap: 12px; animation: hf-up var(--sp, 60s) linear infinite; }
+.hf-col--down .hf-track { animation-direction: reverse; }
+.hf-col:hover .hf-track { animation-play-state: paused; }
+@keyframes hf-up { to { transform: translateY(-50%); } }
+@media (prefers-reduced-motion: reduce) { .hf-track { animation: none; } }
+
+.hf-pin {
+  position: absolute; z-index: 5;
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--lm-color-neutral-000);
+  border-radius: 100px; padding: 10px 16px;
+  font: 800 13px/1 var(--lm-font-sans);
+  box-shadow: 0 12px 30px -10px rgba(20, 26, 44, .35);
+  animation: hf-float 5s ease-in-out infinite;
+}
+@keyframes hf-float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-7px); } }
+.hf-pin--top { top: 108px; left: 34px; }
+.hf-pin--bottom { bottom: 54px; right: 40px; animation-delay: 2.4s; }
+.hf-pin .num { color: var(--lm-color-purple-600); }
+
+/* --- карточка работы --- */
+.w {
+  position: relative; border-radius: 16px;
+  background: var(--lm-color-neutral-000);
+  box-shadow: 0 8px 22px -10px rgba(20, 26, 44, .28);
+  cursor: pointer;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.w:hover { transform: translateY(-3px) scale(1.02); box-shadow: 0 16px 34px -12px rgba(20,26,44,.4); z-index: 3; }
+.w img { display: block; width: 100%; border-radius: 16px; }
+.w__label {
+  position: absolute; left: 8px; bottom: 8px; z-index: 3;
+  display: inline-flex; align-items: center; gap: 5px;
+  background: rgba(255,255,255,.95);
+  border-radius: 100px; padding: 5px 10px;
+  font: 800 10.5px/1 var(--lm-font-sans); letter-spacing: .04em; text-transform: uppercase;
+}
+.w__label .d { width: 6px; height: 6px; border-radius: 50%; }
+.w__niche {
+  position: absolute; right: 8px; bottom: 8px; z-index: 3;
+  background: rgba(2,2,2,.62); color: #fff;
+  border-radius: 100px; padding: 5px 9px;
+  font: 700 10px/1 var(--lm-font-sans);
+  opacity: 0; transition: opacity .18s ease;
+}
+.w:hover .w__niche { opacity: 1; }
+
+.w--post img { aspect-ratio: 4/5; object-fit: cover; }
+.w--post .w__label .d { background: var(--lm-color-lemon-500); }
+
+/* карусель: стопка + счётчик + стрелка */
+.w--carousel { margin-right: 7px; }
+.w--carousel img { aspect-ratio: 4/5; object-fit: cover; position: relative; z-index: 2; }
+.w--carousel::before, .w--carousel::after {
+  content: ""; position: absolute; inset: 0; border-radius: 16px;
+  background: var(--lm-color-neutral-000);
+  box-shadow: 0 6px 16px -8px rgba(20,26,44,.3);
+}
+.w--carousel::before { transform: translate(7px,-7px) scale(.985); z-index: 0; opacity: .55; }
+.w--carousel::after { transform: translate(3.5px,-3.5px) scale(.993); z-index: 1; opacity: .8; }
+.w--carousel .w__label .d { background: var(--lm-color-purple-500); }
+.w__count {
+  position: absolute; top: 8px; right: 8px; z-index: 3;
+  background: rgba(2,2,2,.72); color: #fff;
+  border-radius: 100px; padding: 4px 9px;
+  font: 800 10.5px/1 var(--lm-font-sans);
+}
+.w__nav {
+  position: absolute; z-index: 4; top: 50%; transform: translateY(-50%);
+  width: 30px; height: 30px; border-radius: 50%; border: 0; padding: 0;
+  background: rgba(255,255,255,.96); color: #000; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  font: 800 15px/1 var(--lm-font-sans);
+  box-shadow: 0 4px 14px -4px rgba(20,26,44,.5);
+  opacity: 0; transition: opacity .16s ease, transform .16s ease;
+}
+.w:hover .w__nav { opacity: 1; }
+.w__nav:hover { transform: translateY(-50%) scale(1.1); }
+.w__nav:disabled { opacity: 0 !important; }
+.w__nav--prev { left: 8px; }
+.w__nav--next { right: 8px; }
+.w__hint {
+  position: absolute; z-index: 3; right: 8px; top: 50%; transform: translateY(-50%);
+  width: 28px; height: 28px; border-radius: 50%;
+  background: var(--lm-color-neutral-000);
+  display: flex; align-items: center; justify-content: center;
+  font: 800 14px/1 var(--lm-font-sans);
+  box-shadow: 0 4px 12px -4px rgba(20,26,44,.4);
+  animation: hf-nudge 2.4s ease-in-out infinite;
+}
+@keyframes hf-nudge { 0%,100% { transform: translateY(-50%) translateX(0); } 50% { transform: translateY(-50%) translateX(4px); } }
+.w:hover .w__hint { opacity: 0; }
+
+/* сторис: 9:16 + полоски + стрелка */
+.w--story img { aspect-ratio: 9/16; object-fit: cover; }
+.w--story .w__label .d { background: #FF5C8A; }
+.w__bars { position: absolute; top: 8px; left: 8px; right: 8px; z-index: 3; display: flex; gap: 3px; }
+.w__bars i { flex: 1; height: 3px; border-radius: 2px; background: rgba(255,255,255,.45); }
+.w__bars i.on { background: #fff; }
+.w__count, .w__bars i { transition: background .2s ease; }
+
+/* 1000-1360: левая половина уже 616px — кнопки ужимаем, чтобы держать строку */
+@media (min-width: 1001px) and (max-width: 1360px) {
+  .hf-actions .lm-btn { font-size: 15px; padding: 14px 16px; }
+}
+
+@media (max-width: 1000px) {
+  .hf-hero { grid-template-columns: minmax(0, 1fr); }
+  .hf-hero__bg-l { right: 0; }
+  .hf-hero__bg-r { left: 0; top: auto; height: 540px; bottom: 0; }
+  .hf-copy { padding: 108px 24px 36px; }
+  .hf-h1 { font-size: clamp(30px, 7.2vw, 44px); }
+  .hf-list { grid-template-columns: 1fr; }
+  .hf-cols { grid-template-columns: repeat(3, 1fr); padding: 0 16px; height: 540px; }
+  .hf-pin--top { top: 18px; left: 18px; }
+  .hf-pin--bottom { display: none; }
+}
+
+/* ============================================================
+   БЛОК-ОФФЕР: один материал → пять соцсетей
+   ============================================================ */
+.hf-offer {
+  position: relative; overflow: hidden;
+  background: var(--lm-color-neutral-1000);
+  color: #fff;
+  padding: 64px 0;
+}
+.hf-offer::before {
+  content: ""; position: absolute; width: 780px; aspect-ratio: 1;
+  background: var(--lm-glowspot-lemon);
+  right: -12%; top: -60%; pointer-events: none;
+}
+.hf-offer__in {
+  position: relative;
+  max-width: 1240px; margin-inline: auto; padding-inline: 24px;
+  display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
+  gap: 56px; align-items: center;
+}
+.hf-offer__eyebrow {
+  font: 700 12.5px/1 var(--lm-font-sans); letter-spacing: .1em; text-transform: uppercase;
+  color: var(--lm-color-lemon-500);
+}
+.hf-offer h2 {
+  margin-top: 16px;
+  font-size: clamp(28px, 3.2vw, 42px);
+  font-weight: 800; line-height: 1.08; letter-spacing: -0.025em;
+}
+.hf-offer h2 em { font-style: normal; color: var(--lm-color-lemon-500); }
+.hf-offer__sub { margin-top: 24px; font-size: 16px; line-height: 1.55; color: rgba(255,255,255,.72); max-width: 46ch; }
+.hf-formula {
+  display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  margin-top: 28px; padding: 18px 22px;
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.14);
+  border-radius: 20px;
+  width: fit-content;
+}
+.hf-formula__p { text-align: center; }
+.hf-formula__p b { display: block; font: 800 26px/1 var(--lm-font-sans); letter-spacing: -0.02em; }
+.hf-formula__p span { display: block; margin-top: 5px; font-size: 12px; color: rgba(255,255,255,.6); }
+.hf-formula__op { font: 800 18px/1 var(--lm-font-sans); color: rgba(255,255,255,.35); }
+.hf-formula__p--res b { color: var(--lm-color-lemon-500); }
+
+/* схема: пост → сети */
+.hf-scheme { position: relative; display: grid; grid-template-columns: auto 1fr; gap: 28px; align-items: center; }
+.hf-scheme__post { position: relative; width: 168px; }
+.hf-scheme__post img { width: 100%; aspect-ratio: 4/5; object-fit: cover; border-radius: 18px; display: block; box-shadow: 0 18px 40px -14px rgba(0,0,0,.7); }
+.hf-scheme__post span {
+  position: absolute; left: 50%; transform: translateX(-50%); bottom: -13px;
+  background: var(--lm-color-lemon-500); color: #000;
+  border-radius: 100px; padding: 6px 14px;
+  font: 800 11.5px/1 var(--lm-font-sans); white-space: nowrap;
+}
+.hf-scheme__lines { position: absolute; left: 168px; top: 0; bottom: 0; width: 60px; pointer-events: none; }
+.hf-scheme__lines svg { width: 100%; height: 100%; overflow: visible; }
+.hf-scheme__lines path { stroke: rgba(255,255,255,.28); stroke-width: 1.5; fill: none; stroke-dasharray: 4 5; }
+.hf-nets { display: grid; gap: 10px; padding-left: 44px; }
+.hf-net {
+  display: flex; align-items: center; gap: 12px;
+  background: rgba(255,255,255,.07);
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 100px; padding: 9px 18px 9px 9px;
+  transition: transform .18s ease, background .18s ease;
+}
+.hf-net:hover { transform: translateX(4px); background: rgba(255,255,255,.12); }
+.hf-net__ic {
+  width: 36px; height: 36px; border-radius: 50%; flex: 0 0 auto;
+  display: flex; align-items: center; justify-content: center; color: #fff;
+}
+.hf-net__ic svg { width: 19px; height: 19px; }
+.hf-net__ic b { font: 800 11px/1 var(--lm-font-sans); }
+.hf-net__n { font: 700 14.5px/1 var(--lm-font-sans); }
+.hf-net__tag { margin-left: auto; font: 700 11.5px/1 var(--lm-font-sans); color: var(--lm-color-lemon-500); }
+.hf-net--vk .hf-net__ic { background: #0077FF; }
+.hf-net--ig .hf-net__ic { background: radial-gradient(120% 120% at 30% 110%, #FEDA75 0%, #FA7E1E 30%, #D62976 55%, #962FBF 78%, #4F5BD5 100%); }
+.hf-net--tg .hf-net__ic { background: #229ED9; }
+.hf-net--max .hf-net__ic { background: linear-gradient(135deg, #7D00EA, #4E4CF5); }
+.hf-net--th .hf-net__ic { background: #fff; color: #000; }
+@media (max-width: 1000px) {
+  .hf-offer__in { grid-template-columns: minmax(0, 1fr); gap: 36px; }
+  .hf-scheme { grid-template-columns: 1fr; gap: 32px; }
+  .hf-scheme__post { width: 140px; margin-inline: auto; }
+  .hf-scheme__lines { display: none; }
+  .hf-nets { padding-left: 0; }
+}
+
+/* ============================================================
+   ПРОСМОТРЩИК: посты, карусели (стрелки), сторис (полоски)
+   ============================================================ */
+.hf-viewer { border: 0; padding: 0; background: transparent; max-width: none; max-height: none; width: 100%; height: 100%; }
+.hf-viewer::backdrop { background: rgba(2,2,2,.93); backdrop-filter: blur(10px); }
+.hf-viewer__box {
+  position: relative;
+  height: 100%; width: 100%;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 14px; padding: 24px;
+}
+.hf-viewer__frame { position: relative; display: flex; align-items: center; justify-content: center; }
+.hf-viewer__frame img {
+  max-height: 78vh; max-width: min(92vw, 620px);
+  border-radius: 18px; display: block;
+  box-shadow: 0 30px 70px -20px rgba(0,0,0,.8);
+}
+.hf-viewer__bars { position: absolute; top: 12px; left: 12px; right: 12px; z-index: 4; display: flex; gap: 4px; }
+.hf-viewer__bars i { flex: 1; height: 4px; border-radius: 2px; background: rgba(255,255,255,.35); }
+.hf-viewer__bars i.on { background: #fff; }
+.hf-nav {
+  position: absolute; top: 50%; transform: translateY(-50%);
+  width: 52px; height: 52px; border-radius: 50%; border: 0;
+  background: rgba(255,255,255,.95);
+  font: 800 22px/1 var(--lm-font-sans); color: #000;
+  cursor: pointer; display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 10px 26px -8px rgba(0,0,0,.6);
+  transition: transform .15s ease;
+}
+.hf-nav:hover { transform: translateY(-50%) scale(1.08); }
+.hf-nav:disabled { opacity: .25; cursor: default; transform: translateY(-50%); }
+.hf-nav--prev { left: -70px; }
+.hf-nav--next { right: -70px; }
+.hf-viewer__meta { display: flex; align-items: center; gap: 14px; color: #fff; font-size: 13.5px; }
+.hf-viewer__meta b { font-weight: 800; }
+.hf-viewer__meta .cnt { color: rgba(255,255,255,.6); }
+.hf-viewer__close {
+  position: fixed; top: 20px; right: 24px; z-index: 6;
+  border: 0; border-radius: 100px; cursor: pointer;
+  background: rgba(255,255,255,.14); color: #fff;
+  font: 700 13.5px/1 var(--lm-font-sans); padding: 11px 18px;
+}
+.hf-viewer__close:hover { background: rgba(255,255,255,.24); }
+.hf-viewer__hint { color: rgba(255,255,255,.45); font-size: 12px; }
+@media (max-width: 760px) {
+  .hf-nav--prev { left: 6px; }
+  .hf-nav--next { right: 6px; }
+  .hf-nav { width: 42px; height: 42px; }
+}

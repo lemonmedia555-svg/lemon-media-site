@@ -1,0 +1,149 @@
+version: 1
+brand: lemonmedia
+case_id: masterpol
+period: "2026-07/2026-08"
+language: ru
+
+scope:
+  publications: 10
+  static_posts: 8
+  carousel_publications: 2
+  carousel_slides: 14
+  stories_sequences: 1
+  stories_frames: 5
+  final_media_files: 27
+  confirmed_draft_platform_count: 1
+
+claim_rule: "Все цели ниже описывают задачу материала, а не уже достигнутый бизнес-результат. Для VK подтверждена загрузка черновиков, но не выход каждой публикации."
+
+schedule:
+  start_date: "2026-07-28"
+  end_date: "2026-08-15"
+  cadence_days: 2
+  time_local: "10:00"
+  timezone_status: not-recorded
+  status: drafts-loaded-publication-not-confirmed
+
+publications:
+  - number: 1
+    id: publication-01
+    planned_at_local: "2026-07-28T10:00:00"
+    format: static-post
+    category: useful
+    title: "Ламинат, кварцвинил или инженерная доска"
+    goals:
+      - explain-material-choice
+      - encourage-saves
+
+  - number: 2
+    id: publication-02
+    planned_at_local: "2026-07-30T10:00:00"
+    format: static-post
+    category: portfolio
+    title: "79 м² за один день: разбор выполненной работы"
+    goals:
+      - demonstrate-work
+      - build-trust
+
+  - number: 3
+    id: publication-03
+    planned_at_local: "2026-08-01T10:00:00"
+    format: carousel
+    slide_count: 7
+    category: objections-and-myths
+    title: "Пять мифов об укладке пола, из-за которых переплачивают"
+    goals:
+      - handle-objections
+      - encourage-saves
+
+  - number: 4
+    id: publication-04
+    planned_at_local: "2026-08-03T10:00:00"
+    format: static-post
+    category: process
+    title: "Почему у нас пол без щелей"
+    goals:
+      - show-process
+      - build-trust
+
+  - number: 5
+    id: publication-05
+    planned_at_local: "2026-08-05T10:00:00"
+    format: static-post
+    category: offer
+    title: "Замер с зачётом в стоимость работ"
+    goals:
+      - lead-measurement-request
+    related_stories_sequence: stories-01
+
+  - number: 6
+    id: publication-06
+    planned_at_local: "2026-08-07T10:00:00"
+    format: carousel
+    slide_count: 7
+    category: portfolio
+    title: "130 м² инженерной доски ёлочкой: разбор проекта"
+    goals:
+      - demonstrate-work
+      - build-trust
+
+  - number: 7
+    id: publication-07
+    planned_at_local: "2026-08-09T10:00:00"
+    format: static-post
+    category: useful
+    title: "Шесть точек проверки, когда принимаете готовый пол"
+    goals:
+      - show-expertise
+      - encourage-saves
+
+  - number: 8
+    id: publication-08
+    planned_at_local: "2026-08-11T10:00:00"
+    format: static-post
+    category: objections-and-myths
+    title: "Почему укладка ёлочкой дороже прямой"
+    goals:
+      - explain-pricing
+      - handle-objections
+
+  - number: 9
+    id: publication-09
+    planned_at_local: "2026-08-13T10:00:00"
+    format: static-post
+    category: process
+    title: "Откуда берётся низкая цена"
+    goals:
+      - explain-process-efficiency
+      - build-trust
+
+  - number: 10
+    id: publication-10
+    planned_at_local: "2026-08-15T10:00:00"
+    format: static-post
+    category: offer
+    title: "Бронируйте удобный срок заранее"
+    goals:
+      - lead-request
+
+stories_sequences:
+  - id: stories-01
+    related_publication_id: publication-05
+    frame_count: 5
+    goal: warm-up-to-measurement-offer
+    frames:
+      - number: 1
+        role: hook
+        topic: "Почему точную цену нельзя честно назвать без осмотра основания"
+      - number: 2
+        role: explanation
+        topic: "От чего зависит объём подготовки"
+      - number: 3
+        role: barrier-removal
+        topic: "Замер даёт понятный расчёт"
+      - number: 4
+        role: benefit
+        topic: "Стоимость замера засчитывается в заказ"
+      - number: 5
+        role: publication-transition
+        topic: "Переход к публикации о замере"

@@ -1,0 +1,76 @@
+version: 1
+brand: lemonmedia
+case:
+  id: lipniki
+  slug: lipniki
+  public_name: "Липники"
+  page: "case-lipniki.html"
+  status: complete-package
+  case_type: expanded
+  period: "2026-08"
+  release_window: "2026-08"
+  niche: local-retail
+  subniche: grocery-store
+
+summary:
+  short: "Ассортимент локального магазина превратили в живой контент-план: свежий завоз, выбор, диалог, сезонные поводы и сохраняемые решения."
+  content_task: "Оживить действующую страницу магазина в MAX, сделать публикации регулярными и понятными, показать ассортимент и привести аудиторию к сообщениям и визиту."
+  result_wording: "Собран полный комплект: 10 публикаций, две основные карусели и подарочная карусель — 28 изображений."
+
+scope:
+  platform_count: 1
+  platform_ids:
+    - max
+  publications: 10
+  static_posts: 8
+  carousel_publications: 2
+  carousel_slides: 13
+  gift_carousels: 1
+  gift_slides: 7
+  visual_files: 28
+  public_media_files: 28
+  private_exclusions: 0
+
+featured_goals:
+  - show-fresh-assortment
+  - build-local-trust
+  - help-product-choice
+  - encourage-comments
+  - encourage-saves
+  - lead-to-messages-and-store
+
+evidence:
+  confirmed:
+    - "Публичное название проекта: магазин Липники."
+    - "Контент-план содержит 10 публикаций для MAX."
+    - "Баланс плана: 4 витрины товара, 2 полезных материала, 2 предложения и 2 вовлекающих публикации."
+    - "Основной пакет содержит 8 одиночных макетов и 2 карусели — 6 и 7 слайдов."
+    - "Дополнительно подготовлена подарочная карусель из 7 слайдов."
+    - "Финальный визуальный комплект содержит 28 изображений формата 4:5."
+    - "Все 28 финальных визуальных файлов доступны для публичного показа."
+    - "Клиент положительно оценил визуальную подачу; пакет был подготовлен к загрузке в постинг."
+  not_claimed:
+    - "Фактический выход публикаций."
+    - "Охваты, реакции, обращения, продажи и окупаемость."
+    - "Текущая актуальность цен из исторического контент-плана."
+  public_links: null
+  direct_publication_links: null
+  analytics: null
+
+quality_control:
+  final_media_package: confirmed
+  prepared_for_posting: confirmed
+  publication_launch: not-confirmed
+  privacy_review: passed
+  stale_prices_visible_in_final_media: false
+  public_exclusions: []
+
+publication_control:
+  portfolio_permission: confirmed_by_project_owner
+  publishable_as_case: true
+  display_notes:
+    - "Использовать публичное название «Липники»; имя заказчика не показывать."
+    - "Не называть материалы опубликованными."
+    - "Не добавлять бизнес-метрики без отдельной аналитики."
+    - "Не показывать внутренние ссылки, почту, имена сотрудников и служебные статусы."
+    - "Не переносить исторические цены из текстового плана в публичный кейс."

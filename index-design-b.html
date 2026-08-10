@@ -1,0 +1,806 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="lemonmedia создаёт контент для социальных сетей под ключ: 10 постов за 4 990 ₽, публикация на пяти подключённых площадках без доплаты.">
+  <title>Контент для социальных сетей под ключ — lemonmedia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/design/tokens.css">
+  <link rel="stylesheet" href="assets/design/components.css">
+  <link rel="stylesheet" href="assets/design/sections.css">
+  <link rel="stylesheet" href="assets/design/page.css">
+  <link rel="stylesheet" href="assets/design/hero-final.css">
+  <link rel="stylesheet" href="assets/design/page-b.css">
+</head>
+<body class="dz hf b">
+
+<!-- ХЕДЕР -->
+<header class="lms-header">
+  <div class="lms-header__bar">
+    <a href="index-design.html" aria-label="lemonmedia — главная"><img class="lms-header__logo" src="assets/design/logo-dark.svg" alt="lemonmedia"></a>
+    <nav class="lms-header__nav" aria-label="Основная навигация">
+      <a href="examples.html">Работы</a>
+      <a href="process.html">Как работаем</a>
+      <a href="pricing.html">Цены</a>
+      <a href="reviews.html">Отзывы</a>
+      <a href="about.html">О компании</a>
+      <a href="articles.html">Статьи</a>
+    </nav>
+    <div class="lms-header__spacer"></div>
+    <a class="lm-btn lm-btn--primary lm-btn--pill" href="start.html">Начать работу</a>
+    <button class="lms-header__burger" aria-label="Меню" onclick="document.getElementById('mnav').classList.add('is-open')">☰</button>
+  </div>
+</header>
+<div class="lms-mobilenav" id="mnav">
+  <button class="lms-mobilenav__close" aria-label="Закрыть" onclick="this.parentElement.classList.remove('is-open')">✕</button>
+  <a href="examples.html">Работы</a>
+  <a href="process.html">Как работаем</a>
+  <a href="pricing.html">Цены</a>
+  <a href="reviews.html">Отзывы</a>
+  <a href="articles.html">Статьи</a>
+  <a class="lm-btn lm-btn--primary" style="margin-top:20px" href="start.html">Начать работу</a>
+</div>
+
+<main>
+
+<!-- HERO (утверждён) -->
+<section class="hf-hero">
+  <div class="hf-hero__bg-l"></div>
+  <div class="hf-hero__bg-r"></div>
+
+  <div class="hf-copy">
+    <div class="hf-copy__inner">
+      <p class="hf-rating"><span class="stars">★★★★★</span> <b>5,0</b> и 200+ отзывов на Яндекс&nbsp;Картах</p>
+
+      <span class="hf-kicker">Контент для соцсетей под ключ</span>
+      <h1 class="hf-h1">Контент для социальных сетей — <em>10 постов за 4&nbsp;990&nbsp;₽</em></h1>
+      <p class="hf-lead">Чтобы соцсети бизнеса не выглядели заброшенными, а вы не тратили вечера на контент. Готовим 10–30 постов на один контент-план: придумываем темы, оформляем и публикуем. Вы рассказываете о бизнесе и утверждаете материалы.</p>
+
+      <ul class="hf-list">
+        <li><span class="hf-tick">✓</span><span>Маркетолог, дизайнер и личный менеджер</span></li>
+        <li><span class="hf-tick">✓</span><span>Один пост — во все подключённые соцсети без доплаты</span></li>
+        <li><span class="hf-tick">✓</span><span>Темы, тексты, оформление, публикация и статусы</span></li>
+        <li><span class="hf-tick">✓</span><span>Понятный план выпуска и один менеджер на весь процесс</span></li>
+      </ul>
+
+      <div class="hf-actions">
+        <a class="lm-btn lm-btn--primary lm-btn--pill" href="start.html?plan=10">Собрать пакет: 10 постов · 4 990 ₽</a>
+        <a class="lm-btn lm-btn--ghost lm-btn--pill" href="examples.html">Посмотреть реальные работы</a>
+      </div>
+
+      <p class="hf-note">
+        <span><i>🛡</i><b>14 дней</b> на проверку первой партии</span>
+        <span><i>⏱</i>2 дня на план и тексты · 2 дня на визуал</span>
+      </p>
+
+      <span class="b-hint"><i>›</i> Карусели и сторис листаются прямо здесь — наведите на любую работу</span>
+    </div>
+  </div>
+
+  <span class="hf-pin hf-pin--top">🔥 <span>Выходит каждый месяц</span></span>
+  <span class="hf-pin hf-pin--bottom"><span class="num">10 000+</span> <span>проектов сделано</span></span>
+
+  <div class="hf-stage">
+    <div class="hf-cols" id="feed"></div>
+  </div>
+</section>
+
+<!-- ПЛОЩАДКИ -->
+<section class="dz-platforms">
+  <div class="lm-container">
+    <div class="dz-platforms__card rv">
+      <div class="dz-platforms__text">
+        <strong>Один материал — сразу на пяти площадках</strong>
+        <span>Адаптируем и публикуем без доплаты за количество соцсетей</span>
+      </div>
+      <div class="dz-platforms__list" aria-label="Подключаемые площадки">
+        <span class="dz-social dz-social--vk"><span class="dz-social__icon"><b>VK</b></span><span>ВКонтакте</span></span>
+        <span class="dz-social dz-social--tg"><span class="dz-social__icon"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.6 3.2 2.9 10.1c-.9.36-.86 1.63.06 1.93l4.6 1.5 1.7 5.3c.28.87 1.4 1.04 1.94.3l2.3-3.1 4.5 3.3c.75.55 1.83.14 2.03-.78l2.5-13.4c.2-1.06-.83-1.94-1.93-1.55zM8.7 13.1l8.8-5.6c.23-.15.47.17.27.36l-7.2 6.7-.28 3.1-1.6-4.56z"/></svg></span><span>Telegram</span></span>
+        <span class="dz-social dz-social--ig"><span class="dz-social__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1.15" fill="currentColor" stroke="none"/></svg></span><span>Instagram</span></span>
+        <span class="dz-social dz-social--max"><span class="dz-social__icon"><b>MAX</b></span><span>MAX</span></span>
+        <span class="dz-social dz-social--th"><span class="dz-social__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 21a9 9 0 1 1 9-9c0 2.6-1.4 4.4-3.4 4.4-1.7 0-2.8-1.2-2.8-3V8.2"/><circle cx="12" cy="12" r="3.6"/></svg></span><span>Threads</span></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ЦИФРЫ -->
+<section class="dz-proof">
+  <div class="lm-container">
+    <div class="lms-proofbar rv">
+      <div class="lms-proofbar__item"><strong data-count="10000" data-suffix="+">0</strong><span>проектов всей lemonmedia</span></div>
+      <div class="lms-proofbar__item"><strong>С 2020</strong><span>работаем с российским бизнесом</span></div>
+      <div class="lms-proofbar__item"><strong data-count="200" data-suffix="+">0</strong><span>отзывов на Яндекс Картах</span></div>
+      <div class="lms-proofbar__item"><strong>5,0</strong><span>рейтинг по отзывам</span></div>
+    </div>
+    <div class="dz-links rv">
+      <a href="reviews.html">Посмотреть отзывы и источники →</a>
+      <a href="examples.html">Найти работы своей ниши →</a>
+    </div>
+  </div>
+</section>
+
+<!-- РАБОТЫ: ВИТРИНА КЕЙСА + ГРИД -->
+<section class="dz-section" id="works">
+  <div class="lm-container">
+    <div class="lms-section__head rv">
+      <span class="lm-eyebrow">Реальные работы</span>
+      <h2>Оценивайте не одну обложку, а весь материал</h2>
+      <p>Посмотрите полный контент-план и отдельно пролистайте готовую карусель.</p>
+    </div>
+    <div class="lms-case-feature rv">
+      <div class="lms-case-feature__copy">
+        <span class="lm-badge lm-badge--dark">Кухни и интерьер · контент-план августа</span>
+        <h3>15 публикаций для «Саратов Кухни» — от выбора модели до записи на замер</h3>
+        <p>Связная система: полезные материалы, реальные работы, модели кухонь, снятие сомнений и предложения.</p>
+        <div class="lms-case-feature__stats">
+          <span><strong>15</strong>публикаций</span>
+          <span><strong>5</strong>каруселей</span>
+          <span><strong>5</strong>экранов сторис</span>
+          <span><strong>5</strong>площадок</span>
+        </div>
+        <div class="lms-case-feature__actions">
+          <a class="lm-btn lm-btn--primary" href="case-saratov-kitchens.html">Посмотреть весь кейс</a>
+          <a class="lm-btn lm-btn--ghost" href="pricing.html?plan=15&amp;carousels=5&amp;stories=10">Собрать похожий пакет</a>
+        </div>
+      </div>
+      <div class="lms-case-feature__feed" aria-label="Фрагмент ленты Саратов Кухни">
+        <img class="lms-zoomable" src="assets/cases/saratov-kitchens-2026-08/posts/01.webp" alt="Пост о выборе кухни" loading="lazy">
+        <img class="lms-zoomable" src="assets/cases/saratov-kitchens-2026-08/posts/05.webp" alt="Пост о бесплатном замере" loading="lazy">
+        <img class="lms-zoomable" src="assets/cases/saratov-kitchens-2026-08/posts/12.webp" alt="Пост о материалах фасадов" loading="lazy">
+      </div>
+    </div>
+    <div class="lms-case-grid rv" style="margin-top:16px" aria-label="Ещё четыре кейса lemonmedia">
+      <a class="lms-case-card" href="case-borodulina-tape.html">
+        <img src="assets/cases/borodulina-tape/posts/03.webp" alt="Карусель BORODULINA TAPE" loading="lazy">
+        <span class="lms-case-card__meta"><small>Красота и здоровье</small><strong>BORODULINA TAPE</strong><b>10 публикаций · 2 карусели · 5 сторис</b></span>
+      </a>
+      <a class="lms-case-card" href="case-dobroe-serdtse.html">
+        <img src="assets/cases/dobroe-serdtse/carousels/02/01.webp" alt="Карусель фонда Доброе сердце" loading="lazy">
+        <span class="lms-case-card__meta"><small>Благотворительность</small><strong>БФ «Доброе сердце»</strong><b>10 публикаций · 21 готовый макет</b></span>
+      </a>
+      <a class="lms-case-card" href="case-yagodny-ray.html">
+        <img src="assets/cases/yagodny-ray/carousels/01/01.jpg" alt="Карусель Ягодный Рай" loading="lazy">
+        <span class="lms-case-card__meta"><small>Фермерский продукт</small><strong>«Ягодный Рай»</strong><b>5 постов · карусель из 6 слайдов</b></span>
+      </a>
+      <a class="lms-case-card" href="case-chebusser.html">
+        <img src="assets/cases/chebusser/posts/01.jpg" alt="Публикация ЧЕБУССЭР" loading="lazy">
+        <span class="lms-case-card__meta"><small>Локальный общепит</small><strong>ЧЕБУССЭР</strong><b>10 публикаций · 2 карусели · 5 сторис</b></span>
+      </a>
+    </div>
+    <div class="rv" style="margin-top:22px;text-align:center">
+      <a class="lm-btn lm-btn--ghost" href="examples.html">Открыть все кейсы и работы</a>
+    </div>
+  </div>
+</section>
+
+<!-- СИТУАЦИИ -->
+<section class="dz-section" id="fit">
+  <div class="lm-container">
+    <div class="lms-section__head rv">
+      <span class="lm-eyebrow">Узнаёте свою ситуацию?</span>
+      <h2>Соцсети есть. Системы выпуска контента — нет</h2>
+      <p>lemonmedia подходит действующему бизнесу, которому нужен регулярный контент, но не нужен большой маркетинговый отдел.</p>
+    </div>
+    <div class="cards-4 rv" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px">
+      <div class="lm-card"><span class="lm-card__num">01</span><h3 style="font-size:22px;font-weight:800">Аккаунт замолчал</h3><p style="font-size:16px;color:var(--lm-color-muted);margin-top:8px">Последняя публикация была давно, и новый клиент видит заброшенную страницу.</p></div>
+      <div class="lm-card"><span class="lm-card__num">02</span><h3 style="font-size:22px;font-weight:800">Ведёте по вечерам</h3><p style="font-size:16px;color:var(--lm-color-muted);margin-top:8px">Темы, тексты и публикации отнимают время после основной работы.</p></div>
+      <div class="lm-card"><span class="lm-card__num">03</span><h3 style="font-size:22px;font-weight:800">Сотрудник делает «в нагрузку»</h3><p style="font-size:16px;color:var(--lm-color-muted);margin-top:8px">Контент выходит, только когда у него остаются силы и свободное окно.</p></div>
+      <div class="lm-card"><span class="lm-card__num">04</span><h3 style="font-size:22px;font-weight:800">Подрядчик подвёл</h3><p style="font-size:16px;color:var(--lm-color-muted);margin-top:8px">Один человек пропал, сорвал график или не вытянул смысл и дизайн сразу.</p></div>
+    </div>
+    <div class="lms-band rv" style="margin-top:16px">
+      <div class="lms-band__item"><span>Вместо хаоса</span><strong>Понятный план на месяц</strong></div>
+      <div class="lms-band__item"><span>Вместо вечеров с контентом</span><strong>Темы, тексты и дизайн на нас</strong></div>
+      <div class="lms-band__item"><span>Вместо ручных напоминаний</span><strong>Публикации выходят по графику</strong></div>
+    </div>
+    <div class="dz-actions rv">
+      <a class="lm-btn lm-btn--primary" href="start.html?plan=10">Собрать пакет из 10 постов</a>
+      <a class="lm-btn lm-btn--ghost" href="audit.html">Сначала получить разбор соцсетей</a>
+    </div>
+  </div>
+</section>
+
+<!-- ЧТО ВХОДИТ -->
+<section class="dz-section" id="included">
+  <div class="lm-container">
+    <div class="lms-section__head rv">
+      <span class="lm-eyebrow">Что входит</span>
+      <h2>10 постов — это готовый контент-план</h2>
+      <p>Вы рассказываете о бизнесе и согласовываете материалы. Производство и выпуск берём на себя.</p>
+    </div>
+    <div class="lms-equation rv" aria-label="Состав пакета из 10 постов">
+      <div class="lms-equation__part"><strong>10</strong><span>готовых постов</span></div>
+      <span class="lms-equation__op">×</span>
+      <div class="lms-equation__part"><strong>до 5</strong><span>площадок</span></div>
+      <span class="lms-equation__op">=</span>
+      <div class="lms-equation__part lms-equation__part--result"><strong>до 50</strong><span>размещений без доплаты</span></div>
+      <span class="lms-equation__op">+</span>
+      <div class="lms-equation__part"><strong>1</strong><span>менеджер и график</span></div>
+    </div>
+    <div class="rv" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;margin-top:16px">
+      <div class="lm-card"><span class="lm-card__num">01</span><b>Темы и контент-план</b><p style="font-size:16px;color:var(--lm-color-muted);margin-top:6px">Маркетолог собирает план под ваш бизнес, аудиторию и ближайшие задачи.</p></div>
+      <div class="lm-card"><span class="lm-card__num">02</span><b>Тексты</b><p style="font-size:16px;color:var(--lm-color-muted);margin-top:6px">Пишем содержание постов и сначала согласовываем его с вами.</p></div>
+      <div class="lm-card"><span class="lm-card__num">03</span><b>Дизайн</b><p style="font-size:16px;color:var(--lm-color-muted);margin-top:6px">После утверждения текстов оформляем публикации в стиле бренда.</p></div>
+      <div class="lm-card"><span class="lm-card__num">04</span><b>Адаптация</b><p style="font-size:16px;color:var(--lm-color-muted);margin-top:6px">Готовим один материал для всех подключённых площадок.</p></div>
+      <div class="lm-card"><span class="lm-card__num">05</span><b>Публикация</b><p style="font-size:16px;color:var(--lm-color-muted);margin-top:6px">Размещаем утверждённый контент по согласованному графику.</p></div>
+      <div class="lm-card"><span class="lm-card__num">06</span><b>Менеджер и статусы</b><p style="font-size:16px;color:var(--lm-color-muted);margin-top:6px">Один человек держит связь, собирает правки и контролирует выпуск.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ФОРМАТЫ: КСЮША-ГИД -->
+<section class="dz-section" id="formats">
+  <div class="lm-container">
+    <div class="lms-section__head rv">
+      <span class="lm-eyebrow">Форматы</span>
+      <h2>Пост, карусель и сторис — в чём разница</h2>
+    </div>
+    <div class="dz-guide rv">
+      <div class="dz-guide__person">
+        <div class="dz-guide__photo"><img src="assets/img/people/ksyusha-guide.jpeg" alt="Ксюша — AI-ведущая lemonmedia"></div>
+        <span class="lm-eyebrow">Ксюша · AI-ведущая lemonmedia · вымышленный персонаж</span>
+        <p style="font-size:13.5px;color:var(--lm-color-muted-2)">Ксюша объясняет форматы контента</p>
+        <h3 id="guide-title">Пост — основа контент-плана</h3>
+        <p id="guide-copy">Одна задача, готовый текст и основной визуал. Уже включает работу маркетолога, дизайнера, менеджера и публикацию.</p>
+      </div>
+      <div class="lms-tabs" data-tabs>
+        <div class="lms-tabs__nav" role="tablist" aria-label="Форматы контента">
+          <button class="lms-tabs__btn is-active" role="tab" data-tab="f1" data-title="Пост — основа контент-плана" data-copy="Одна задача, готовый текст и основной визуал. Уже включает работу маркетолога, дизайнера, менеджера и публикацию."><span>01</span><div><strong>Пост</strong><small>Основа · входит в пакет</small></div></button>
+          <button class="lms-tabs__btn" role="tab" data-tab="f2" data-title="Карусель усиливает выбранный пост" data-copy="Когда одной картинки мало, раскрываем мысль последовательностью до 7 слайдов. Это усиление нужной темы за +250 ₽."><span>02</span><div><strong>Карусель</strong><small>Усиление · +250 ₽</small></div></button>
+          <button class="lms-tabs__btn" role="tab" data-tab="f3" data-title="Пять сторис собираются в мини-прогрев" data-copy="Не пять случайных экранов, а короткий путь: интерес → проблема → решение → доказательство → действие."><span>03</span><div><strong>5 сторис</strong><small>Формат · 5 экранов</small></div></button>
+        </div>
+        <div>
+          <div class="lms-tabs__panel is-active" data-panel="f1">
+            <figure>
+              <img class="lms-zoomable" src="assets/cases/saratov-kitchens-2026-08/posts/01.webp" alt="Пример обычного поста" style="width:100%;max-width:400px;border-radius:var(--lm-radius-md);box-shadow:var(--lm-shadow-card)">
+              <figcaption>Материал проекта «Саратов Кухни» · нажмите, чтобы рассмотреть</figcaption>
+            </figure>
+          </div>
+          <div class="lms-tabs__panel" data-panel="f2">
+            <figure>
+              <img class="lms-zoomable" src="assets/cases/saratov-kitchens-2026-08/carousels/06/01.webp" alt="Обложка карусели" style="width:100%;max-width:400px;border-radius:var(--lm-radius-md);box-shadow:var(--lm-shadow-card)">
+              <figcaption>Обложка карусели «Саратов Кухни»</figcaption>
+            </figure>
+          </div>
+          <div class="lms-tabs__panel" data-panel="f3">
+            <figure>
+              <img class="lms-zoomable" src="assets/cases/saratov-kitchens-2026-08/stories/01.webp" alt="Первый экран мини-прогрева" style="width:100%;max-width:280px;border-radius:var(--lm-radius-md);box-shadow:var(--lm-shadow-card)">
+              <figcaption>Первый экран мини-прогрева</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <p class="dz-note rv"><b>Один обычный пост:</b> одна тема, один текст и один основной визуал. Карусель — усиление выбранного поста последовательностью до 7 слайдов, а не дополнительная публикация.</p>
+  </section>
+
+<!-- ЦЕНЫ -->
+<section class="dz-section" id="prices">
+  <div class="lm-container">
+    <div class="lms-section__head rv">
+      <span class="lm-eyebrow">Соберите свой месяц</span>
+      <h2>Сначала ритм. Затем усиления</h2>
+      <p>Выберите число постов, нажмите на темы, которые нужно раскрыть каруселью, и при желании добавьте пакет сторис.</p>
+    </div>
+
+    <div class="dz-calc rv" data-calc>
+      <div class="dz-calc__panel">
+        <div class="dz-calc__step">
+          <small>Шаг 1 · выберите объём</small>
+          <div class="dz-plans" role="group" aria-label="Объём постов">
+            <button class="dz-plan is-active" data-plan="10" data-price="4990"><strong>10 постов</strong><span>Спокойный старт</span><b>4 990 ₽</b></button>
+            <button class="dz-plan" data-plan="15" data-price="7490"><strong>15 постов</strong><span>Стабильный ритм</span><b>7 490 ₽</b></button>
+            <button class="dz-plan" data-plan="20" data-price="9990"><strong>20 постов</strong><span>Активное присутствие</span><b>9 990 ₽</b></button>
+            <button class="dz-plan" data-plan="30" data-price="14990"><strong>30 постов</strong><span>Почти каждый день</span><b>14 990 ₽</b></button>
+          </div>
+          <p class="dz-note"><b>Основа месяца готова.</b> Контент-план, тексты, дизайн, менеджер и публикация на подключённых площадках уже входят.</p>
+        </div>
+
+        <div class="dz-calc__step">
+          <small>Шаг 2 · усильте нужные темы</small>
+          <div class="dz-calc__row">
+            <div>
+              <h3>Какие посты раскрыть каруселью?</h3>
+              <p>Нажимайте на кубики. Выбранный пост превратится в карусель до 7 слайдов за +250 ₽.</p>
+            </div>
+            <div class="dz-counter" aria-label="Количество каруселей">
+              <button type="button" data-car-dec aria-label="Убрать одну карусель">−</button>
+              <output data-car-out>0</output>
+              <button type="button" data-car-inc aria-label="Добавить одну карусель">+</button>
+            </div>
+          </div>
+          <div class="dz-cubes" data-cubes aria-label="Состав пакета по постам"></div>
+        </div>
+
+        <div class="dz-calc__step">
+          <small>Шаг 3 · добавьте сторис</small>
+          <div class="dz-calc__row">
+            <div>
+              <h3>Сколько сторис подготовить?</h3>
+              <p>Собираем их в мини-прогревы по 5 кадров: интерес → проблема → решение → доказательство → действие.</p>
+            </div>
+            <div class="dz-stories" role="group" aria-label="Пакет сторис">
+              <button class="is-active" data-story="0" data-sprice="0">Без сторис</button>
+              <button data-story="10" data-sprice="3490">10 · 3 490 ₽</button>
+              <button data-story="20" data-sprice="5490">20 · 5 490 ₽</button>
+              <button data-story="30" data-sprice="7490">30 · 7 490 ₽</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <aside class="dz-calc__total">
+        <span class="lm-eyebrow">Ваш контент-план</span>
+        <div class="dz-calc__sum" data-total>4 990 ₽</div>
+        <ul class="dz-calc__lines">
+          <li><span><b data-posts-line>10 постов</b></span><b data-base-line>4 990 ₽</b></li>
+          <li><span>Карусели</span><b data-car-line>0 ₽</b></li>
+          <li><span>Сторис</span><b data-story-line>не выбраны</b></li>
+        </ul>
+        <div class="dz-calc__place"><span data-place>До 50 размещений</span> — если подключены все 5 площадок</div>
+        <div class="dz-calc__nets"><span>ВКонтакте</span><span>Instagram</span><span>Telegram</span><span>MAX</span><span>+ ещё одна</span></div>
+        <a class="lm-btn lm-btn--primary" href="start.html?plan=10" data-order>Продолжить с этим пакетом</a>
+        <p class="dz-calc__note">Названия кубиков показывают роли контента в месяце. Точные темы маркетолог соберёт после знакомства с бизнесом. Итоговая сумма включает посты, выбранные карусели и пакет сторис.</p>
+      </aside>
+    </div>
+
+    <div class="dz-actions rv"><a class="lm-btn lm-btn--ghost" href="pricing.html">Рассчитать пакет подробно</a></div>
+  </div>
+</section>
+
+<!-- ПРОДУКТ ИЗНУТРИ -->
+<section class="dz-section" id="workspace">
+  <div class="lm-container">
+    <div class="dz-inside rv">
+      <div class="lms-section__head">
+        <span class="lm-eyebrow" style="color:var(--lm-color-lemon-300)">Продукт изнутри</span>
+        <h2>Вот что появляется после заказа — шаг за шагом</h2>
+        <p>Реальные экраны двух проектов: бриф, контент-план, публикация, статусы и календарь.</p>
+      </div>
+      <div class="lms-tabs" data-tabs>
+        <div class="lms-tabs__nav" role="tablist" aria-label="Пять шагов реального заказа">
+          <button class="lms-tabs__btn is-active" role="tab" data-tab="w1"><span>01</span><div><strong>Передаёте факты</strong><small>Реальный бриф REFIX</small></div></button>
+          <button class="lms-tabs__btn" role="tab" data-tab="w2"><span>02</span><div><strong>Получаете план</strong><small>Темы, роли и цели постов</small></div></button>
+          <button class="lms-tabs__btn" role="tab" data-tab="w3"><span>03</span><div><strong>Смотрите материал</strong><small>Текст и 7 слайдов вместе</small></div></button>
+          <button class="lms-tabs__btn" role="tab" data-tab="w4"><span>04</span><div><strong>Видите статус</strong><small>От черновика до публикации</small></div></button>
+          <button class="lms-tabs__btn" role="tab" data-tab="w5"><span>05</span><div><strong>Контролируете месяц</strong><small>Календарь проекта</small></div></button>
+        </div>
+        <div>
+          <div class="lms-tabs__panel is-active" data-panel="w1">
+            <figure><img class="dz-inside__shot lms-zoomable" src="assets/img/product-inside/real-brief-refix.png" alt="Фрагмент реального брифа проекта REFIX" loading="lazy"><figcaption>Реальный проект REFIX · входные данные до начала контент-плана · нажмите, чтобы рассмотреть</figcaption></figure>
+          </div>
+          <div class="lms-tabs__panel" data-panel="w2">
+            <figure><img class="dz-inside__shot lms-zoomable" src="assets/img/product-inside/real-content-plan-table-refix.png" alt="Утверждённая таблица контент-плана REFIX" loading="lazy"><figcaption>Утверждённый контент-план REFIX · тема → рубрика → цель</figcaption></figure>
+          </div>
+          <div class="lms-tabs__panel" data-panel="w3">
+            <figure><img class="dz-inside__shot lms-zoomable" src="assets/img/product-inside/real-publication-card-electric.png" alt="Открытая карточка публикации" loading="lazy"><figcaption>Карточка публикации · проект «Электрик Мончегорск»</figcaption></figure>
+          </div>
+          <div class="lms-tabs__panel" data-panel="w4">
+            <figure><img class="dz-inside__shot lms-zoomable" src="assets/img/product-inside/real-workflow-electric.png" alt="Рабочие статусы проекта" loading="lazy"><figcaption>Статусы: черновик → согласование → планирование → публикация</figcaption></figure>
+          </div>
+          <div class="lms-tabs__panel" data-panel="w5">
+            <figure><img class="dz-inside__shot lms-zoomable" src="assets/img/product-inside/real-calendar-electric.png" alt="Календарь публикаций проекта" loading="lazy"><figcaption>Календарь проекта · даты, время и карточки публикаций</figcaption></figure>
+          </div>
+        </div>
+      </div>
+      <div class="dz-inside__facts" aria-label="Сроки и правки">
+        <article><strong>2 дня</strong><span>план и тексты</span></article>
+        <article><strong>до 2 дней</strong><span>ваше согласование</span></article>
+        <article><strong>2 дня</strong><span>создание визуала</span></article>
+        <article><strong>до 2 дней</strong><span>ваше согласование</span></article>
+        <article><strong>2 + 2</strong><span>круга правок: смысл и визуал</span></article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ПОЧЕМУ ЦЕНА -->
+<section class="dz-section" id="why">
+  <div class="lm-container">
+    <div class="lms-section__head rv">
+      <span class="lm-eyebrow">Почему 4 990 ₽ — реальная цена</span>
+      <h2>Не экономим на ролях. Экономим на хаосе производства</h2>
+      <p>После 10 000+ проектов мы знаем последовательность работы, типовые ошибки и точки контроля. Повторяется процесс — не контент клиента.</p>
+    </div>
+    <div class="dz-model rv">
+      <div class="dz-model__item"><strong>Узкая услуга</strong><span>Не содержим лишние роли под рекламу, съёмку и весь маркетинг.</span></div>
+      <div class="dz-model__item"><strong>Разделение задач</strong><span>Каждый специалист делает свою часть быстрее и сильнее универсала.</span></div>
+      <div class="dz-model__item"><strong>Отлаженный маршрут</strong><span>Сначала тексты, затем дизайн — меньше дорогих переделок.</span></div>
+      <div class="dz-model__item"><strong>Технологии для рутины</strong><span>ИИ ускоряет операции, но решения принимают и проверяют люди.</span></div>
+    </div>
+    <p class="dz-note rv"><b>Поэтому цена ниже классического агентства:</b> вы оплачиваете нужный объём регулярного контента, а не большой индивидуальный маркетинговый проект и не ставку сотрудника.</p>
+    <div class="dz-mission rv" style="margin-top:18px">
+      <span class="lm-badge lm-badge--dark">Не удешевляем смысл</span>
+      <span class="lm-badge lm-badge--purple">Не заменяем людей шаблоном</span>
+      <span class="lm-badge lm-badge--lemon">Удешевляем сам процесс</span>
+    </div>
+  </div>
+</section>
+
+<!-- СРАВНЕНИЕ -->
+<section class="dz-section" id="comparison">
+  <div class="lm-container">
+    <div class="lms-section__head rv">
+      <span class="lm-eyebrow">Сравнение</span>
+      <h2>Платить за нужный объём — или содержать весь процесс</h2>
+    </div>
+    <div class="lms-compare-wrap rv">
+      <table class="lms-compare">
+        <thead><tr><th>Вариант</th><th>Когда подходит</th><th>Что остаётся на владельце</th><th>Главное ограничение</th></tr></thead>
+        <tbody>
+          <tr><td>Делать самому</td><td>Есть время и навык</td><td>Темы, тексты, дизайн, график и публикация</td><td>Регулярность зависит от свободного времени</td></tr>
+          <tr><td>ИИ или планировщик</td><td>Нужен инструмент, а не исполнитель</td><td>Постановка задачи, отбор, редактура и контроль</td><td>Инструмент не отвечает за выпуск</td></tr>
+          <tr><td>Фрилансер</td><td>Нужен один гибкий специалист</td><td>Постановка задачи и контроль одного человека</td><td>Качество и график зависят от его загрузки</td></tr>
+          <tr><td>Сотрудник в штат</td><td>Есть большой постоянный объём</td><td>Найм, управление, замена</td><td>Ставка платится, даже когда задач меньше</td></tr>
+          <tr><td>Большое агентство</td><td>Нужны реклама и комплекс работ</td><td>Бюджет и длинные согласования</td><td>Избыточно, если нужны именно публикации</td></tr>
+          <tr class="is-ours"><td>lemonmedia · от 4 990 ₽</td><td>Нужны 10–30 постов каждый месяц</td><td>Факты о бизнесе и согласование материалов</td><td>Не заменяет рекламу, съёмку и отдел продаж</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="dz-actions rv"><a class="lm-btn lm-btn--ghost" href="compare.html">Сравнить варианты подробно</a></div>
+  </div>
+</section>
+
+<!-- ГАРАНТИЯ -->
+<section class="dz-section" id="guarantee">
+  <div class="lm-container">
+    <div class="lms-guarantee rv">
+      <div class="lms-guarantee__mark">14<small>дней</small></div>
+      <div class="lms-guarantee__body">
+        <span class="lm-eyebrow">Гарантия первой партии</span>
+        <h2>Если после включённых правок первая партия не подойдёт — вернём оплату за неё</h2>
+        <ul class="lms-split__list">
+          <li>У вас есть 14 дней на проверку первой партии.</li>
+          <li>Включено 2 круга правок по контент-плану и текстам.</li>
+          <li>Отдельно включено 2 круга правок по визуалу.</li>
+          <li>Если после этих правок первая партия не подошла, возвращаем оплату именно за первую партию.</li>
+        </ul>
+        <a class="lm-btn lm-btn--ghost" style="margin-top:18px" href="guarantee.html">Прочитать условия гарантии</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ОТЗЫВЫ -->
+<section class="dz-section" id="reviews">
+  <div class="lm-container">
+    <div class="lms-section__head rv">
+      <span class="lm-eyebrow">Репутация lemonmedia</span>
+      <h2>5,0 и более 200 отзывов на Яндекс Картах</h2>
+      <p>Отзывы показывают, как команда ведёт проекты и работает с правками. Качество продукта проверяется по полным кейсам.</p>
+    </div>
+    <div class="lms-reviews rv">
+      <div class="lms-review">
+        <span class="lm-badge lm-badge--lemon">Правки без конфликта</span>
+        <p class="lms-review__text">«Терпеливо доводят работу до понятного результата — даже когда у заказчика ещё нет точного образа».</p>
+        <div class="lms-review__person"><span class="lms-review__ava" style="background:var(--lm-color-lemon-100)">ЯК</span><div><div class="lms-review__name">Отзыв на Яндекс Картах</div><div class="lms-review__role">полная лента по ссылке</div></div></div>
+      </div>
+      <div class="lms-review">
+        <span class="lm-badge lm-badge--purple">Повторное обращение</span>
+        <p class="lms-review__text">«Сначала обратились за логотипом, затем вернулись за презентацией — возвращаются с новыми задачами».</p>
+        <div class="lms-review__person"><span class="lms-review__ava" style="background:var(--lm-color-purple-050)">ЯК</span><div><div class="lms-review__name">Отзыв на Яндекс Картах</div><div class="lms-review__role">даты и имена в источнике</div></div></div>
+      </div>
+      <div class="lms-review">
+        <span class="lm-badge lm-badge--dark">Открытый источник</span>
+        <p class="lms-review__text">«Полная лента отзывов, даты, имена и ответы компании доступны по прямой ссылке — всё можно проверить».</p>
+        <div class="lms-review__person"><span class="lms-review__ava" style="background:var(--lm-color-surface)">5,0</span><div><div class="lms-review__name">Яндекс Карты</div><div class="lms-review__role">рейтинг lemonmedia</div></div></div>
+      </div>
+    </div>
+    <div class="rv" style="margin-top:22px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+      <a class="lm-btn lm-btn--ghost" href="reviews.html">Посмотреть все отзывы</a>
+      <a class="lm-btn lm-btn--ghost" href="https://yandex.ru/maps/org/lemon_media/138965142865/reviews/" target="_blank" rel="noopener">Открыть Яндекс Карты ↗</a>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="dz-section" id="faq">
+  <div class="lm-container">
+    <div class="lms-section__head rv">
+      <span class="lm-eyebrow">Вопросы</span>
+      <h2>Что важно знать до начала</h2>
+    </div>
+    <div class="lms-faq rv">
+      <details open>
+        <summary>Что входит в один пост?</summary>
+        <div class="lms-faq__body">Тема, текст, один готовый визуал, адаптация и публикация во все подключённые площадки. При необходимости пост можно усилить каруселью.</div>
+      </details>
+      <details>
+        <summary>Кто придумывает темы и делает контент?</summary>
+        <div class="lms-faq__body">Маркетолог связывает темы с аудиторией и задачами бизнеса. Дизайнер отвечает за визуал, менеджер — за выпуск. Нейросеть ускоряет рутину, но финальные решения принимают люди.</div>
+      </details>
+      <details>
+        <summary>Какие соцсети входят в цену?</summary>
+        <div class="lms-faq__body">Один утверждённый материал адаптируем и публикуем на пяти подключённых площадках без доплаты. Точный набор менеджер подтверждает до начала работы.</div>
+      </details>
+      <details>
+        <summary>Сколько занимает подготовка и что нужно от меня?</summary>
+        <div class="lms-faq__body">План и тексты — за 2 дня, после их утверждения визуал — ещё за 2 дня. У вас до 2 дней на согласование каждого этапа. От вас — факты, материалы и один собранный список комментариев.</div>
+      </details>
+      <details>
+        <summary>Что делать, если нет своих фотографий?</summary>
+        <div class="lms-faq__body">До оплаты покажем возможный вариант в базовом пакете: графическая подача, ваши материалы, сток или созданная иллюстрация. Платный исходник или съёмку согласуем отдельно заранее.</div>
+      </details>
+      <details>
+        <summary>Можно ли добавить карусели и сторис?</summary>
+        <div class="lms-faq__body">Да. Любой пост можно усилить каруселью до 7 слайдов за 250 ₽. Сторис собираем сериями по 5 кадров; пакеты — 10, 20 и 30 сторис.</div>
+      </details>
+      <details>
+        <summary>Что не входит и гарантируете ли вы заявки?</summary>
+        <div class="lms-faq__body">Сервис закрывает производство контента, а не рекламу, отдел продаж или съёмку. Мы отвечаем за согласованные материалы и публикацию, но не обещаем продажи, охваты или вирусность.</div>
+      </details>
+      <details>
+        <summary>Как работает гарантия?</summary>
+        <div class="lms-faq__body">14 дней на проверку первой партии, по 2 круга правок на тексты и визуал. Если после них первая партия не подошла — возвращаем оплату за неё по опубликованным условиям.</div>
+      </details>
+    </div>
+    <div class="dz-actions rv" style="justify-content:center"><a class="lm-btn lm-btn--ghost" href="faq.html">Открыть все вопросы</a></div>
+  </div>
+</section>
+
+<!-- ФИНАЛЬНЫЙ CTA -->
+<section class="dz-section">
+  <div class="lm-container">
+    <div class="lms-cta rv">
+      <h2>10 готовых постов и публикация на пяти площадках — <span class="lm-mark-lemon">4 990 ₽</span></h2>
+      <p>Маркетолог собирает план, команда пишет и оформляет, менеджер ведёт согласование. Вы занимаетесь бизнесом.</p>
+      <div class="lms-cta__actions">
+        <a class="lm-btn lm-btn--primary" href="start.html?plan=10">Собрать 10 постов за 4 990 ₽</a>
+        <a class="lm-btn lm-btn--ghost" href="audit.html">Получить бесплатный разбор</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ФУТЕР -->
+<footer class="lms-footer">
+  <div class="lm-container">
+    <div class="lms-footer__grid">
+      <div>
+        <img class="lms-footer__logo" src="assets/design/logo-white.svg" alt="lemonmedia">
+        <p class="lms-footer__about">Регулярный контент под ключ для российского малого и среднего бизнеса. Команда lemonmedia работает с 2020 года.</p>
+        <div class="lms-footer__social">
+          <a href="#" aria-label="ВКонтакте">VK</a>
+          <a href="#" aria-label="Telegram">TG</a>
+          <a href="#" aria-label="Instagram">IG</a>
+        </div>
+      </div>
+      <div class="lms-footer__col">
+        <b>Выбрать</b>
+        <a href="pricing.html">Цены и конструктор</a>
+        <a href="examples.html">Работы</a>
+        <a href="process.html">Как работаем</a>
+        <a href="compare.html">Сравнение</a>
+      </div>
+      <div class="lms-footer__col">
+        <b>Узнать больше</b>
+        <a href="reviews.html">Отзывы</a>
+        <a href="about.html">О компании</a>
+        <a href="services.html">Разовые услуги</a>
+        <a href="articles.html">Статьи</a>
+        <a href="faq.html">Все вопросы</a>
+      </div>
+      <div class="lms-footer__col">
+        <b>Начать</b>
+        <a href="start.html">Собрать пакет</a>
+        <a href="audit.html">Бесплатный разбор</a>
+        <a href="guarantee.html">Условия гарантии</a>
+        <a href="legal.html#offer">Условия работы</a>
+        <a href="legal.html#privacy">Конфиденциальность</a>
+      </div>
+    </div>
+    <div class="lms-footer__bottom">
+      <span>© 2020-2026 lemonmedia</span>
+      <span>Регулярный контент под ключ</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+const WORKS = [{"t":"post","src":"assets/cases/saratov-kitchens-2026-08/posts/02.webp","n":"Кухни","a":"Пост · Кухни"},{"t":"post","src":"assets/cases/chebusser/posts/02.jpg","n":"Общепит","a":"Пост · Общепит"},{"t":"carousel","src":"assets/cases/saratov-kitchens-2026-08/carousels/06/01.webp","slides":["assets/cases/saratov-kitchens-2026-08/carousels/06/01.webp","assets/cases/saratov-kitchens-2026-08/carousels/06/02.webp","assets/cases/saratov-kitchens-2026-08/carousels/06/03.webp","assets/cases/saratov-kitchens-2026-08/carousels/06/04.webp","assets/cases/saratov-kitchens-2026-08/carousels/06/05.webp","assets/cases/saratov-kitchens-2026-08/carousels/06/06.webp","assets/cases/saratov-kitchens-2026-08/carousels/06/07.webp"],"n":"Кухни","a":"Карусель · Кухни"},{"t":"post","src":"assets/cases/moscow-padel/posts/05.jpg","n":"Спорт","a":"Пост · Спорт"},{"t":"story","src":"assets/cases/saratov-kitchens-2026-08/stories/01.webp","slides":["assets/cases/saratov-kitchens-2026-08/stories/01.webp","assets/cases/saratov-kitchens-2026-08/stories/02.webp","assets/cases/saratov-kitchens-2026-08/stories/03.webp","assets/cases/saratov-kitchens-2026-08/stories/04.webp","assets/cases/saratov-kitchens-2026-08/stories/05.webp"],"n":"Кухни","a":"Сторис · Кухни"},{"t":"post","src":"assets/cases/nalog-expert/posts/02.jpg","n":"Налоги","a":"Пост · Налоги"},{"t":"post","src":"assets/cases/refix/posts/03.png","n":"Ремонт техники","a":"Пост · Ремонт техники"},{"t":"carousel","src":"assets/cases/borodulina-tape/carousels/03/01.webp","slides":["assets/cases/borodulina-tape/carousels/03/01.webp","assets/cases/borodulina-tape/carousels/03/02.webp","assets/cases/borodulina-tape/carousels/03/03.webp","assets/cases/borodulina-tape/carousels/03/04.webp","assets/cases/borodulina-tape/carousels/03/05.webp","assets/cases/borodulina-tape/carousels/03/06.webp","assets/cases/borodulina-tape/carousels/03/07.webp"],"n":"Здоровье","a":"Карусель · Здоровье"},{"t":"post","src":"assets/cases/fr-moto/posts/02.jpg","n":"Мото","a":"Пост · Мото"},{"t":"story","src":"assets/cases/nalog-expert/stories/01-01.jpg","slides":["assets/cases/nalog-expert/stories/01-01.jpg","assets/cases/nalog-expert/stories/01-02.jpg","assets/cases/nalog-expert/stories/01-03.jpg","assets/cases/nalog-expert/stories/01-04.jpg","assets/cases/nalog-expert/stories/01-05.jpg","assets/cases/nalog-expert/stories/02-01.jpg","assets/cases/nalog-expert/stories/02-02.jpg","assets/cases/nalog-expert/stories/02-03.jpg","assets/cases/nalog-expert/stories/02-04.jpg","assets/cases/nalog-expert/stories/02-05.jpg"],"n":"Налоги","a":"Сторис · Налоги"},{"t":"post","src":"assets/cases/inari/posts/02.jpg","n":"Красота","a":"Пост · Красота"},{"t":"post","src":"assets/cases/orange-style/posts/02.jpg","n":"Стиль","a":"Пост · Стиль"},{"t":"carousel","src":"assets/cases/dobroe-serdtse/carousels/02/01.webp","slides":["assets/cases/dobroe-serdtse/carousels/02/01.webp","assets/cases/dobroe-serdtse/carousels/02/02.webp","assets/cases/dobroe-serdtse/carousels/02/03.webp","assets/cases/dobroe-serdtse/carousels/02/04.webp","assets/cases/dobroe-serdtse/carousels/02/05.webp","assets/cases/dobroe-serdtse/carousels/02/06.webp","assets/cases/dobroe-serdtse/carousels/02/07.webp"],"n":"Фонд","a":"Карусель · Фонд"},{"t":"post","src":"assets/cases/kristall-water/posts/02.jpg","n":"Вода","a":"Пост · Вода"},{"t":"story","src":"assets/cases/borodulina-tape/stories/01.webp","slides":["assets/cases/borodulina-tape/stories/01.webp","assets/cases/borodulina-tape/stories/02.webp","assets/cases/borodulina-tape/stories/03.webp","assets/cases/borodulina-tape/stories/04.webp","assets/cases/borodulina-tape/stories/05.webp"],"n":"Здоровье","a":"Сторис · Здоровье"},{"t":"post","src":"assets/cases/electric-monchegorsk/posts/02.jpg","n":"Электрика","a":"Пост · Электрика"},{"t":"post","src":"assets/cases/alliance-climate/posts/02.webp","n":"Климат","a":"Пост · Климат"},{"t":"carousel","src":"assets/cases/moscow-padel/carousels/01/01.jpg","slides":["assets/cases/moscow-padel/carousels/01/01.jpg","assets/cases/moscow-padel/carousels/01/02.jpg","assets/cases/moscow-padel/carousels/01/03.jpg","assets/cases/moscow-padel/carousels/01/04.jpg","assets/cases/moscow-padel/carousels/01/05.jpg","assets/cases/moscow-padel/carousels/01/06.jpg","assets/cases/moscow-padel/carousels/01/07.jpg"],"n":"Спорт","a":"Карусель · Спорт"},{"t":"post","src":"assets/cases/casahitto/posts/02.jpg","n":"Интерьер","a":"Пост · Интерьер"},{"t":"story","src":"assets/cases/chebusser/stories/01.jpg","slides":["assets/cases/chebusser/stories/01.jpg","assets/cases/chebusser/stories/02.jpg","assets/cases/chebusser/stories/03.jpg","assets/cases/chebusser/stories/04.jpg","assets/cases/chebusser/stories/05.jpg"],"n":"Общепит","a":"Сторис · Общепит"},{"t":"post","src":"assets/cases/dan-gun/posts/03.jpg","n":"Ресторан","a":"Пост · Ресторан"},{"t":"post","src":"assets/cases/narfkis/posts/02.jpg","n":"Образование","a":"Пост · Образование"},{"t":"carousel","src":"assets/cases/chebusser/carousels/03/01.jpg","slides":["assets/cases/chebusser/carousels/03/01.jpg","assets/cases/chebusser/carousels/03/02.jpg","assets/cases/chebusser/carousels/03/03.jpg","assets/cases/chebusser/carousels/03/04.jpg","assets/cases/chebusser/carousels/03/05.jpg","assets/cases/chebusser/carousels/03/06.jpg","assets/cases/chebusser/carousels/03/07.jpg"],"n":"Общепит","a":"Карусель · Общепит"},{"t":"post","src":"assets/cases/dava-holding/posts/02.jpg","n":"Бизнес","a":"Пост · Бизнес"},{"t":"story","src":"assets/cases/fr-moto/stories/01.jpg","slides":["assets/cases/fr-moto/stories/01.jpg","assets/cases/fr-moto/stories/02.jpg","assets/cases/fr-moto/stories/03.jpg","assets/cases/fr-moto/stories/04.jpg","assets/cases/fr-moto/stories/05.jpg"],"n":"Мото","a":"Сторис · Мото"},{"t":"post","src":"assets/cases/lipniki/posts/02.webp","n":"Загород","a":"Пост · Загород"},{"t":"post","src":"assets/cases/achinsk-begovoy/posts/03.jpg","n":"Спорт","a":"Пост · Спорт"},{"t":"carousel","src":"assets/cases/refix/carousels/01/01.png","slides":["assets/cases/refix/carousels/01/01.png","assets/cases/refix/carousels/01/02.png","assets/cases/refix/carousels/01/03.png","assets/cases/refix/carousels/01/04.png","assets/cases/refix/carousels/01/05.png","assets/cases/refix/carousels/01/06.png","assets/cases/refix/carousels/01/07.png"],"n":"Ремонт техники","a":"Карусель · Ремонт техники"},{"t":"post","src":"assets/cases/klient-prosto/posts/02.png","n":"Услуги","a":"Пост · Услуги"},{"t":"story","src":"assets/cases/narfkis/stories/01.jpg","slides":["assets/cases/narfkis/stories/01.jpg","assets/cases/narfkis/stories/02.jpg","assets/cases/narfkis/stories/03.jpg","assets/cases/narfkis/stories/04.jpg","assets/cases/narfkis/stories/05.jpg"],"n":"Образование","a":"Сторис · Образование"},{"t":"carousel","src":"assets/cases/olga-pravdyuk/carousels/02/01.jpg","slides":["assets/cases/olga-pravdyuk/carousels/02/01.jpg","assets/cases/olga-pravdyuk/carousels/02/02.jpg","assets/cases/olga-pravdyuk/carousels/02/03.jpg","assets/cases/olga-pravdyuk/carousels/02/04.jpg","assets/cases/olga-pravdyuk/carousels/02/05.jpg","assets/cases/olga-pravdyuk/carousels/02/06.jpg","assets/cases/olga-pravdyuk/carousels/02/07.jpg"],"n":"","a":"Карусель · olga-pravdyuk"},{"t":"story","src":"assets/cases/inari/stories/01.jpg","slides":["assets/cases/inari/stories/01.jpg","assets/cases/inari/stories/02.jpg","assets/cases/inari/stories/03.jpg","assets/cases/inari/stories/04.jpg","assets/cases/inari/stories/05.jpg"],"n":"Красота","a":"Сторис · Красота"},{"t":"carousel","src":"assets/cases/casahitto/carousels/06/01.jpg","slides":["assets/cases/casahitto/carousels/06/01.jpg","assets/cases/casahitto/carousels/06/02.jpg","assets/cases/casahitto/carousels/06/03.jpg","assets/cases/casahitto/carousels/06/04.jpg","assets/cases/casahitto/carousels/06/05.jpg","assets/cases/casahitto/carousels/06/06.jpg","assets/cases/casahitto/carousels/06/07.jpg"],"n":"Интерьер","a":"Карусель · Интерьер"}];
+const LABEL = { post: 'Пост', carousel: 'Карусель', story: 'Сторис' };
+
+function makeCard(it) {
+  const f = document.createElement('figure');
+  f.className = 'w w--' + it.t;
+  const slides = it.slides || [it.src];
+  f.dataset.pos = 0;
+  let inner = `<img src="${it.src}" alt="${it.a}" loading="lazy">`;
+  if (slides.length > 1) {
+    if (it.t === 'story') {
+      inner = `<span class="w__bars">${slides.map((_, i) => `<i class="${i === 0 ? 'on' : ''}"></i>`).join('')}</span>` + inner;
+    } else {
+      inner += `<span class="w__count">1 / ${slides.length}</span>`;
+    }
+    inner += `<span class="w__hint">›</span>`;
+    inner += `<button class="w__nav w__nav--prev" type="button" aria-label="Назад" disabled>‹</button>`;
+    inner += `<button class="w__nav w__nav--next" type="button" aria-label="Вперёд">›</button>`;
+  }
+  inner += `<span class="w__label"><span class="d"></span>${LABEL[it.t]}</span>`;
+  if (it.n) inner += `<span class="w__niche">${it.n}</span>`;
+  f.innerHTML = inner;
+  if (slides.length > 1) {
+    const img = f.querySelector('img');
+    const prev = f.querySelector('.w__nav--prev'), next = f.querySelector('.w__nav--next');
+    const count = f.querySelector('.w__count'), bars = f.querySelectorAll('.w__bars i');
+    const go = (d, e) => {
+      e.stopPropagation(); e.preventDefault();
+      let pos = Math.min(slides.length - 1, Math.max(0, +f.dataset.pos + d));
+      f.dataset.pos = pos;
+      img.src = slides[pos];
+      if (count) count.textContent = `${pos + 1} / ${slides.length}`;
+      bars.forEach((b, i) => b.classList.toggle('on', i <= pos));
+      prev.disabled = pos === 0;
+      next.disabled = pos === slides.length - 1;
+    };
+    prev.addEventListener('click', e => go(-1, e));
+    next.addEventListener('click', e => go(1, e));
+  }
+  return f;
+}
+
+const feed = document.getElementById('feed');
+const SPEEDS = ['74s', '92s', '80s', '104s', '86s'];
+// Чем шире экран, тем больше колонок — карточка мельче, работ видно больше
+const colCount = () => innerWidth <= 1000 ? 3 : (innerWidth >= 1500 ? 5 : 4);
+let builtWith = 0;
+
+function buildFeed() {
+  const COLS = colCount();
+  if (COLS === builtWith) return;
+  builtWith = COLS;
+  feed.textContent = '';
+  feed.style.gridTemplateColumns = `repeat(${COLS}, 1fr)`;
+  for (let c = 0; c < COLS; c++) {
+    const col = document.createElement('div');
+    col.className = 'hf-col' + (c % 2 ? ' hf-col--down' : '');
+    const track = document.createElement('div');
+    track.className = 'hf-track';
+    track.style.setProperty('--sp', SPEEDS[c]);
+    const items = WORKS.filter((_, i) => i % COLS === c);
+    items.forEach(it => track.appendChild(makeCard(it)));
+    items.forEach(it => { const d = makeCard(it); d.setAttribute('aria-hidden', 'true'); track.appendChild(d); });
+    col.appendChild(track);
+    feed.appendChild(col);
+  }
+}
+
+buildFeed();
+let feedTimer;
+addEventListener('resize', () => { clearTimeout(feedTimer); feedTimer = setTimeout(buildFeed, 200); });
+</script>
+
+<!-- Лайтбокс -->
+<dialog class="lms-lightbox" id="lightbox">
+  <div class="lms-lightbox__bar">
+    <strong id="lightbox-title">Материал lemonmedia</strong>
+    <button type="button" onclick="document.getElementById('lightbox').close()">Закрыть ✕</button>
+  </div>
+  <img id="lightbox-img" src="" alt="">
+</dialog>
+
+<script>
+  // Табы (+ синхронизация текста Ксюши-гида)
+  document.querySelectorAll('[data-tabs]').forEach(root => {
+    root.querySelectorAll('[data-tab]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        root.querySelectorAll('[data-tab]').forEach(b => b.classList.toggle('is-active', b === btn));
+        root.querySelectorAll('[data-panel]').forEach(p =>
+          p.classList.toggle('is-active', p.dataset.panel === btn.dataset.tab));
+        if (btn.dataset.title) {
+          const t = document.getElementById('guide-title'), c = document.getElementById('guide-copy');
+          if (t) t.textContent = btn.dataset.title;
+          if (c) c.textContent = btn.dataset.copy;
+        }
+      });
+    });
+  });
+
+  // Лайтбокс
+  const lb = document.getElementById('lightbox'), lbImg = document.getElementById('lightbox-img');
+  document.querySelectorAll('.lms-zoomable').forEach(img => {
+    img.addEventListener('click', () => {
+      lbImg.src = img.src; lbImg.alt = img.alt;
+      document.getElementById('lightbox-title').textContent = img.alt || 'Материал lemonmedia';
+      lb.showModal();
+    });
+  });
+  lb?.addEventListener('click', e => { if (e.target === lb) lb.close(); });
+
+  // Появление при скролле
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(en => { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } });
+  }, { threshold: .12 });
+  document.querySelectorAll('.rv').forEach(el => io.observe(el));
+
+  // Счётчики цифр
+  const fmt = n => n.toLocaleString('ru-RU').replace(/ /g, ' ');
+  const cio = new IntersectionObserver(entries => {
+    entries.forEach(en => {
+      if (!en.isIntersecting) return;
+      const el = en.target, target = +el.dataset.count, suf = el.dataset.suffix || '';
+      const t0 = performance.now(), dur = 900;
+      const tick = now => {
+        const p = Math.min(1, (now - t0) / dur);
+        el.textContent = fmt(Math.round(target * (1 - Math.pow(1 - p, 3)))) + suf;
+        if (p < 1) requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick);
+      cio.unobserve(el);
+    });
+  }, { threshold: .6 });
+  document.querySelectorAll('[data-count]').forEach(el => cio.observe(el));
+
+  // ---- Калькулятор пакета ----
+  (() => {
+    const root = document.querySelector('[data-calc]');
+    if (!root) return;
+    const state = { posts: 10, base: 4990, cars: 0, story: 0, sprice: 0, carSet: new Set() };
+    const $ = s => root.querySelector(s);
+    const fmtr = n => n.toLocaleString('ru-RU');
+    const cubes = $('[data-cubes]');
+
+    // Роли контента в месяце — подпись под итогом обещает именно это.
+    const ROLES = ['польза', 'продукт', 'кейс', 'ответ', 'оффер', 'процесс', 'отзыв', 'польза',
+                   'подборка', 'вопрос', 'кейс', 'продукт', 'разбор', 'оффер', 'польза',
+                   'команда', 'ответ', 'кейс', 'сравнение', 'продукт', 'польза', 'отзыв',
+                   'инструкция', 'оффер', 'кейс', 'вопрос', 'продукт', 'польза', 'разбор', 'итог'];
+    function renderCubes() {
+      cubes.innerHTML = '';
+      for (let i = 0; i < 30; i++) {
+        const b = document.createElement('button');
+        b.type = 'button';
+        const inPack = i < state.posts;
+        const isCarousel = state.carSet.has(i);
+        b.className = 'dz-cube' + (!inPack ? ' is-off' : (isCarousel ? ' is-carousel' : ''));
+        b.textContent = inPack ? ROLES[i] : '';
+        b.disabled = !inPack;
+        b.setAttribute('aria-label', inPack
+          ? 'Пост ' + (i + 1) + ' · ' + ROLES[i] + (isCarousel ? ' · карусель, нажмите чтобы убрать' : ' · сделать каруселью')
+          : 'Не входит в выбранный объём');
+        b.setAttribute('aria-pressed', String(isCarousel));
+        // нажали на конкретный пост — именно он и становится каруселью
+        if (inPack) b.addEventListener('click', () => {
+          if (state.carSet.has(i)) state.carSet.delete(i); else state.carSet.add(i);
+          state.cars = state.carSet.size;
+          render();
+        });
+        cubes.appendChild(b);
+      }
+    }
+    function render() {
+      const carSum = state.cars * 250;
+      $('[data-total]').textContent = fmtr(state.base + carSum + state.sprice) + ' ₽';
+      $('[data-posts-line]').textContent = state.posts + ' постов';
+      $('[data-base-line]').textContent = fmtr(state.base) + ' ₽';
+      $('[data-car-line]').textContent = state.cars ? state.cars + ' × 250 = ' + fmtr(carSum) + ' ₽' : '0 ₽';
+      $('[data-story-line]').textContent = state.story ? state.story + ' шт · ' + fmtr(state.sprice) + ' ₽' : 'не выбраны';
+      $('[data-place]').textContent = 'До ' + state.posts * 5 + ' размещений';
+      $('[data-car-out]').textContent = state.cars;
+      $('[data-order]').href = 'start.html?plan=' + state.posts + '&carousels=' + state.cars + '&stories=' + state.story;
+      renderCubes();
+    }
+    root.querySelectorAll('[data-plan]').forEach(btn => btn.addEventListener('click', () => {
+      root.querySelectorAll('[data-plan]').forEach(b => b.classList.toggle('is-active', b === btn));
+      state.posts = +btn.dataset.plan; state.base = +btn.dataset.price;
+      [...state.carSet].filter(i => i >= state.posts).forEach(i => state.carSet.delete(i));
+      state.cars = state.carSet.size; render();
+    }));
+    $('[data-car-inc]').addEventListener('click', () => { for (let i = 0; i < state.posts; i++) { if (!state.carSet.has(i)) { state.carSet.add(i); break; } } state.cars = state.carSet.size; render(); });
+    $('[data-car-dec]').addEventListener('click', () => { const last = [...state.carSet].pop(); if (last !== undefined) state.carSet.delete(last); state.cars = state.carSet.size; render(); });
+    root.querySelectorAll('[data-story]').forEach(btn => btn.addEventListener('click', () => {
+      root.querySelectorAll('[data-story]').forEach(b => b.classList.toggle('is-active', b === btn));
+      state.story = +btn.dataset.story; state.sprice = +btn.dataset.sprice; render();
+    }));
+    render();
+  })();
+</script>
+
+</body>
+</html>

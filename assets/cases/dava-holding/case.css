@@ -1,0 +1,58 @@
+.dava-case {
+  --accent: #d6b769;
+  --accent-soft: #f3eddf;
+  --dava-green: #153b2f;
+}
+
+.dava-case .case-full-hero {
+  background:
+    radial-gradient(circle at 84% 18%, rgba(45, 103, 79, .28), transparent 31%),
+    linear-gradient(135deg, #f7f3e8 0%, #fff 68%);
+}
+
+.dava-case .case-hero-media {
+  box-shadow: 8px 8px 0 var(--dava-green);
+}
+
+.dava-case .case-rubrics article {
+  background: linear-gradient(145deg, #fff 0%, var(--accent-soft) 100%);
+}
+
+.dava-concepts {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.dava-concepts figure {
+  margin: 0;
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: #fff;
+}
+
+.dava-concepts figure:last-child {
+  border: 2px solid var(--dava-green);
+  box-shadow: 5px 5px 0 var(--accent);
+}
+
+.dava-concepts img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.dava-concepts figcaption {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  padding-top: 10px;
+  color: var(--muted);
+}
+
+@media (max-width: 680px) {
+  .dava-case .case-hero-media { box-shadow: 5px 5px 0 var(--dava-green); }
+  .dava-concepts { grid-template-columns: 1fr; }
+}

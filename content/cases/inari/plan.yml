@@ -1,0 +1,45 @@
+version: 1
+brand: lemonmedia
+case_id: inari
+period: "2026-08"
+language: ru
+
+claim_rule: "Контент-план, тексты, финальный визуал и календарь черновиков ВКонтакте подтверждены. Фактический выход публикаций, загрузка в другие каналы и коммерческие метрики не подтверждены."
+
+schedule:
+  starts_at: "2026-08-04 10:00"
+  ends_at: "2026-08-22 10:00"
+  cadence: every-two-days
+  publication_time: "10:00"
+  planned_platforms: [vk, instagram, telegram, max]
+  confirmed_draft_platforms: [vk]
+  status: drafts-uploaded-publication-unconfirmed
+
+rubrics:
+  - { id: product-showcase, count: 3, purpose: "Показать ассортимент и сценарии заказа." }
+  - { id: behind-the-scenes, count: 3, purpose: "Снять сомнения о свежести и показать кухню." }
+  - { id: useful, count: 2, purpose: "Облегчить выбор и объяснить сервис без спорных условий." }
+  - { id: engagement, count: 2, purpose: "Вовлечь местную аудиторию в простой выбор." }
+
+publications:
+  - { number: 1, date: "2026-08-04", format: static-post, rubric: behind-the-scenes, title: "Как готовят ролл под заказ", public_asset: "assets/cases/inari/posts/01.jpg" }
+  - { number: 2, date: "2026-08-06", format: static-post, rubric: useful, title: "Как выбрать сет на компанию", public_asset: "assets/cases/inari/posts/02.jpg" }
+  - { number: 3, date: "2026-08-08", format: carousel, slide_count: 7, rubric: product-showcase, title: "Популярные сеты", public_cover: "assets/cases/inari/carousel-covers/03.jpg", internal_slides_public: false }
+  - { number: 4, date: "2026-08-10", format: static-post, rubric: engagement, title: "Что заказать на вечер пятницы", public_asset: "assets/cases/inari/posts/04.jpg" }
+  - { number: 5, date: "2026-08-12", format: static-post, rubric: behind-the-scenes, title: "Разбор сомнения о свежести рыбы", public_asset: "assets/cases/inari/posts/05.jpg" }
+  - { number: 6, date: "2026-08-14", format: static-post, rubric: product-showcase, title: "Пицца и доставка горячей еды", public_asset: "assets/cases/inari/posts/06.jpg" }
+  - { number: 7, date: "2026-08-16", format: carousel, slide_count: 7, rubric: useful, title: "Как доставить горячую еду горячей", public_cover: "assets/cases/inari/carousel-covers/07.jpg", internal_slides_public: false }
+  - { number: 8, date: "2026-08-18", format: static-post, rubric: engagement, title: "Роллы или пицца", public_asset: "assets/cases/inari/posts/08.jpg" }
+  - { number: 9, date: "2026-08-20", format: static-post, rubric: behind-the-scenes, title: "Люди и процессы на кухне", public_asset: "assets/cases/inari/posts/09.jpg" }
+  - { number: 10, date: "2026-08-22", format: static-post, rubric: product-showcase, title: "Быстрые и сытные позиции меню", public_asset: "assets/cases/inari/posts/10.jpg" }
+
+stories:
+  count: 5
+  purpose: "Мини-прогрев к публикации о готовых сетах."
+  logic:
+    - "гости скоро, еды нет"
+    - "необязательно готовить самому"
+    - "один заказ на компанию"
+    - "готовые сеты"
+    - "переход к публикации"
+  public_assets: "assets/cases/inari/stories/{01..05}.jpg"

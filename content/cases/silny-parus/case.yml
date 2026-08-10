@@ -1,0 +1,86 @@
+version: 1
+brand: lemonmedia
+id: silny-parus
+slug: silny-parus
+language: ru
+
+identity:
+  public_title: "Сильный Парус — экспертный контент для юридического агентства"
+  client_display_name: "Сильный Парус"
+  period: "2026-07"
+  release_window: null
+  niche: legal-services
+  subniche: personal-bankruptcy-and-debt-law
+  geography: null
+
+summary:
+  short: "Десять экспертных каруселей о долгах, банкротстве и защите прав плюс три связанных мини-прогрева."
+  content_task: "Снять тревогу перед сложными юридическими темами, показать экспертность без обещаний гарантированного результата и дать человеку понятный следующий шаг."
+  result_wording: "Утверждены контент-план и тексты. Подготовлены 10 карусельных публикаций на 66 экранов и 3 серии историй на 15 экранов — всего 81 финальный макет. Визуал прошёл внутреннюю приёмку и был передан клиенту; публикация, метрики и прямое клиентское утверждение финального дизайна не подтверждены."
+
+scope:
+  publications: 10
+  static_posts: 0
+  carousel_publications: 10
+  carousel_slides: 66
+  stories_sequences: 3
+  stories_frames: 15
+  visual_files: 81
+  planned_platform_count: 2
+  planned_platform_ids:
+    - vk
+    - max
+  platform_status: named-in-project-publication-not-independently-verified
+
+presentation_grouping:
+  debt-collection-and-enforcement: 2
+  bankruptcy-and-credit-problems: 2
+  trust-and-choice: 2
+  practical-legal-guides: 2
+  family-and-inheritance: 2
+
+featured_goals:
+  - explain-complex-topics
+  - build-trust
+  - remove-fears
+  - encourage-saves
+  - show-expertise
+  - lead-to-consultation
+
+evidence:
+  confirmed:
+    - "Публичное название клиента: Сильный Парус."
+    - "Утверждённый контент-план содержит 10 публикаций; все десять оформлены как карусели."
+    - "Тексты прошли два круга правок и отмечены как утверждённые 23 июля 2026 года."
+    - "Финальный комплект содержит 66 экранов каруселей и 15 экранов историй."
+    - "Три серии историй состоят из пяти экранов каждая."
+    - "Визуал прошёл внутреннюю приёмку и был передан клиенту 30 июля 2026 года."
+  not_claimed:
+    - "Прямое клиентское утверждение финального дизайна."
+    - "Публикация материалов во ВКонтакте или Max."
+    - "Охваты, вовлечённость, обращения, продажи, выручка и окупаемость."
+    - "Гарантированный результат юридических услуг."
+    - "Причинная связь между контентом и бизнес-показателями."
+  public_links:
+    - label: "Сообщество «Сильный Парус» ВКонтакте"
+      url: "https://vk.ru/yuristy.parus"
+      verification_status: provided-by-client-in-project
+  direct_publication_links: null
+  analytics: null
+  client_review: null
+
+publication_control:
+  portfolio_permission: confirmed_by_project_owner
+  final_media: ready
+  direct_publication_links: unavailable
+  client_copy_approval: confirmed
+  client_visual_approval: not-recorded
+  visual_internal_review: confirmed
+  final_visual_handover: confirmed
+  display_notes:
+    - "Все карусели имеют формат 4:5 и должны показываться без обрезки."
+    - "Все истории имеют формат 9:16 и должны показываться без обрезки."
+    - "Не представлять плановые площадки как подтверждённые публикации."
+    - "Не добавлять количественные бизнес-результаты без отдельного источника аналитики."
+    - "Не обещать гарантированный результат юридических услуг."
+  publishable: true

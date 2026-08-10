@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Три варианта каталога кейсов — lemonmedia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/design/examples-case-card-variants.css?v=3">
+</head>
+<body>
+  <nav class="cv-toolbar" aria-label="Варианты каталога">
+    <strong><i></i>Три варианта</strong>
+    <div><a href="#cases-v1">01 · Цвет клиента</a><a href="#cases-v2">02 · Чистое поле</a><a href="#cases-v3">03 · Тёмный контраст</a></div>
+    <a href="examples-study.html">Страница «Работы» ↗</a>
+  </nav>
+
+  <main>
+    <section class="cv-option" id="cases-v1">
+      <header class="cv-option-head"><span>01</span><div><h1>Мягкий фон в цветах клиента</h1><p>Рекомендуемый вариант: подложка изображений получает очень светлый оттенок конкретного проекта — зелёный, кремовый, жёлтый или графитовый.</p></div></header>
+      <div class="cv-canvas cv-bg-option cv-bg-option--tint">
+        <div class="cv-shell">
+          <div class="cv-filter" data-filter-menu><strong>Показать кейсы</strong><div><button class="is-active" data-filter="all">Все</button><button data-filter="product">Еда и товары</button><button data-filter="services">Услуги</button><button data-filter="experts">Эксперты</button><button data-filter="sport">Спорт</button><button data-filter="social">Социальные</button></div></div>
+          <div class="cv-background-grid" data-variant-grid="tint"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cv-option" id="cases-v2">
+      <header class="cv-option-head"><span>02</span><div><h1>Чистое белое поле</h1><p>Самый спокойный вариант: голубую подложку убираем полностью, а проекты разделяем тонкой цветной линией клиента.</p></div></header>
+      <div class="cv-canvas cv-bg-option cv-bg-option--clean">
+        <div class="cv-shell">
+          <div class="cv-filter cv-filter--line" data-filter-menu><strong>Показать кейсы</strong><div><button class="is-active" data-filter="all">Все</button><button data-filter="product">Еда и товары</button><button data-filter="services">Услуги</button><button data-filter="experts">Эксперты</button><button data-filter="sport">Спорт</button><button data-filter="social">Социальные</button></div></div>
+          <div class="cv-background-grid" data-variant-grid="clean"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cv-option" id="cases-v3">
+      <header class="cv-option-head"><span>03</span><div><h1>Контрастное тёмное поле</h1><p>Сильнее поддерживает первый экран: общий чёрный фон отделяет каталог, а внутри карточек остаются мягкие цвета клиентов.</p></div></header>
+      <div class="cv-canvas cv-bg-option cv-bg-option--dark">
+        <div class="cv-shell">
+          <div class="cv-filter cv-filter--dark" data-filter-menu><strong>Показать кейсы</strong><div><button class="is-active" data-filter="all">Все</button><button data-filter="product">Еда и товары</button><button data-filter="services">Услуги</button><button data-filter="experts">Эксперты</button><button data-filter="sport">Спорт</button><button data-filter="social">Социальные</button></div></div>
+          <div class="cv-background-grid" data-variant-grid="dark"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="assets/design/examples-case-card-variants.js?v=3"></script>
+</body>
+</html>

@@ -1,262 +1,132 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Тарифы — Лимон Медиа</title>
-<meta name="description" content="Тарифы Лимон Медиа: контент для соцсетей, дизайн, видео и реклама. Фиксированная стоимость в месяц, без скрытых платежей.">
-<link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap">
-<link rel="stylesheet" href="/assets/css/main.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Цены на посты, карусели и мини-прогревы lemonmedia.">
+  <title>Цены — lemonmedia</title>
+  <link rel="stylesheet" href="assets/css/prototype.css">
 </head>
 <body>
-
-<header class="header">
-  <div class="container header__inner">
-    <a href="/" class="header__logo" aria-label="Лимон Медиа — на главную">
-      <img src="/assets/img/logo.svg" alt="Лимон Медиа">
-    </a>
-    <nav class="nav" aria-label="Основная навигация">
-      <a href="/about.html" class="nav__link" data-nav="about.html">О компании</a>
-      <a href="/pricing.html" class="nav__link" data-nav="pricing.html">Услуги</a>
-      <a href="/examples.html" class="nav__link" data-nav="examples.html">Примеры</a>
-      <a href="/pricing.html" class="nav__link" data-nav="pricing.html">Тарифы</a>
-    </nav>
-    <div class="header__cta">
-      <a href="#" class="nav__link">Войти</a>
-      <a href="/book-demo.html" class="btn btn-outline btn-sm">Записаться на демо</a>
-      <a href="/pricing.html" class="btn btn-primary btn-sm">Начать сейчас</a>
-      <button class="burger" aria-label="Открыть меню" aria-expanded="false">
-        <span class="burger__lines"></span>
-      </button>
+  <header class="site-header">
+    <div class="container header-row">
+      <a class="brand" href="index.html" aria-label="lemonmedia — главная"><span class="brand-dot" aria-hidden="true"></span>lemonmedia</a>
+      <button class="menu-button" type="button" aria-expanded="false" data-menu-toggle>Меню</button>
+      <nav class="main-nav" aria-label="Основная навигация">
+        <a href="examples.html">Работы</a>
+        <a href="process.html">Как работаем</a>
+        <a href="pricing.html" aria-current="page">Цены</a>
+        <a href="reviews.html">Отзывы</a>
+        <a href="about.html">О компании</a>
+        <a href="articles.html">Статьи</a>
+        <a class="btn btn-small btn-accent" href="start.html">Начать работу</a>
+      </nav>
     </div>
-  </div>
-</header>
+  </header>
 
-<nav class="mobile-nav" aria-label="Мобильная навигация">
-  <a href="/about.html" class="mobile-nav__link">О компании</a>
-  <a href="/pricing.html" class="mobile-nav__link">Услуги</a>
-  <a href="/examples.html" class="mobile-nav__link">Примеры</a>
-  <a href="/pricing.html" class="mobile-nav__link">Тарифы</a>
-  <a href="/reviews.html" class="mobile-nav__link">Отзывы</a>
-  <a href="/book-demo.html" class="btn btn-outline btn-lg btn-block mt-4">Записаться на демо</a>
-  <a href="/pricing.html" class="btn btn-primary btn-lg btn-block">Начать сейчас</a>
-</nav>
+  <main>
+    <section class="page-hero">
+      <div class="container">
 
-<main>
-
-<!-- ============== HERO ============== -->
-<section class="section">
-  <div class="container text-center" style="max-width: 760px; margin: 0 auto;">
-    <span class="badge">Тарифы</span>
-    <h1 class="mt-4">Простые тарифы. Без скрытых платежей.</h1>
-    <p class="lead mt-5">Выберите план под задачи. Через месяц — продлите, поменяете уровень или поставите на паузу. Никакого автопродления.</p>
-
-    <div class="billing-toggle mt-7" role="group" aria-label="Период оплаты">
-      <button data-billing="month" aria-pressed="true">Помесячно</button>
-      <button data-billing="year" aria-pressed="false">За год <span class="save-pill">−15%</span></button>
-    </div>
-  </div>
-</section>
-
-<!-- ============== ТАРИФЫ ============== -->
-<section class="section-sm">
-  <div class="container">
-    <div class="pricing-grid">
-
-      <div class="pricing-card">
-        <p class="pricing__name">Старт</p>
-        <p class="muted">Для микро-бизнеса и сольных предпринимателей.</p>
-        <div class="pricing__price">
-          <span class="pricing__price-num"><span data-price data-price-month="49 900 ₽" data-price-year="42 400 ₽">49 900 ₽</span></span>
-        </div>
-        <p class="muted xsmall" data-period>/ в месяц</p>
-        <a href="/book-demo.html" class="btn btn-outline btn-block">Записаться на демо</a>
-        <div class="pricing__features mt-4">
-          <div class="pricing__feature"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="5,12 10,17 19,8"/></svg><span>1 соцсеть на выбор</span></div>
-          <div class="pricing__feature"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="5,12 10,17 19,8"/></svg><span>12 постов в месяц</span></div>
-          <div class="pricing__feature"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="5,12 10,17 19,8"/></svg><span>Контент-план на месяц</span></div>
-          <div class="pricing__feature"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="5,12 10,17 19,8"/></svg><span>Базовый дизайн (шаблоны)</span></div>
-          <div class="pricing__feature"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="5,12 10,17 19,8"/></svg><span>До 3 правок на материал</span></div>
-          <div class="pricing__feature"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="5,12 10,17 19,8"/></svg><span>Менеджер в Telegram</span></div>
+        <p class="eyebrow">Цены без запроса менеджеру</p>
+        <h1>Вы платите за объём контента, а не за число соцсетей</h1>
+        <p class="lead">Один пост публикуется во всех подключённых площадках без доплаты. Калькулятор сразу считает посты, карусели и сторис.</p>
+        <div class="deliverable-equation" style="margin-top:32px;">
+          <div><strong>10</strong><span>готовых постов</span></div><b>×</b>
+          <div><strong>до 5</strong><span>площадок</span></div><b>=</b>
+          <div><strong>до 50</strong><span>размещений</span></div><b>за</b>
+          <div><strong>4 990 ₽</strong><span>за пакет</span></div>
         </div>
       </div>
+    </section>
 
-      <div class="pricing-card pricing-card--featured">
-        <span class="pricing-card__badge">Популярно</span>
-        <p class="pricing__name">Рост</p>
-        <p class="muted">Полный SMM с видео и таргетом.</p>
-        <div class="pricing__price">
-          <span class="pricing__price-num"><span data-price data-price-month="119 900 ₽" data-price-year="101 900 ₽">119 900 ₽</span></span>
+    <section class="section section-soft">
+      <div class="container" data-calculator>
+
+        <div class="section-head">
+          <div><p class="eyebrow">Калькулятор</p><h2>Соберите свой месяц</h2></div>
+          <p>Сначала выбираете базовый объём, затем усиливаете нужные публикации. Итог виден до заявки.</p>
         </div>
-        <p class="muted xsmall" data-period>/ в месяц</p>
-        <a href="/book-demo.html" class="btn btn-primary btn-block">Записаться на демо</a>
-        <div class="pricing__features mt-4">
-          <div class="pricing__feature"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="5,12 10,17 19,8"/></svg><span>До 3 соцсетей</span></div>
-          <div class="pricing__feature"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="5,12 10,17 19,8"/></svg><span>24 поста + сторис каждый день</span></div>
-          <div class="pricing__feature"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="5,12 10,17 19,8"/></svg><span>4 Reels / Shorts видео</span></div>
-          <div class="pricing__feature"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="5,12 10,17 19,8"/></svg><span>Авторский дизайн, не шаблоны</span></div>
-          <div class="pricing__feature"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="5,12 10,17 19,8"/></svg><span>Таргет VK Ads + Яндекс</span></div>
-          <div class="pricing__feature"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="5,12 10,17 19,8"/></svg><span>Еженедельный отчёт</span></div>
-          <div class="pricing__feature"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="5,12 10,17 19,8"/></svg><span>Закреплённая команда из 3 человек</span></div>
+        <div class="calculator">
+          <div class="calculator-panel">
+            <h3>1. Сколько постов нужно в месяц?</h3>
+            <div class="plan-options" style="margin: 18px 0 26px;">
+              <button class="plan-button active" type="button" data-plan data-posts="10" data-price="4990"><strong>10 постов</strong><span>Спокойный старт</span><b>4 990 ₽</b></button>
+              <button class="plan-button" type="button" data-plan data-posts="15" data-price="7490"><strong>15 постов</strong><span>Стабильный ритм</span><b>7 490 ₽</b></button>
+              <button class="plan-button" type="button" data-plan data-posts="20" data-price="9990"><strong>20 постов</strong><span>Активное присутствие</span><b>9 990 ₽</b></button>
+              <button class="plan-button" type="button" data-plan data-posts="30" data-price="14990"><strong>30 постов</strong><span>Почти каждый день</span><b>14 990 ₽</b></button>
+            </div>
+            <div class="calculator-row">
+              <div><h3>2. Какие посты раскрыть каруселями?</h3><p>Нажимайте на кубики справа. Выбранный пост превратится в карусель до 7 слайдов за +250 ₽.</p></div>
+              <div class="carousel-counter" aria-label="Количество каруселей"><button type="button" data-carousel-decrease aria-label="Убрать одну карусель">−</button><output data-carousel-counter>0</output><button type="button" data-carousel-increase aria-label="Добавить одну карусель">+</button></div>
+            </div>
+            <div class="calculator-row story-builder-row">
+              <div><h3>3. Добавить сторис?</h3><p>Собираем их в мини‑прогревы по 5 кадров: интерес → проблема → решение → доказательство → действие.</p></div>
+              <div class="story-choice"><button class="active" type="button" data-story-value="0">Без сторис</button><button type="button" data-story-value="10">10 · 3 490 ₽</button><button type="button" data-story-value="20">20 · 5 490 ₽</button><button type="button" data-story-value="30">30 · 7 490 ₽</button><input type="hidden" value="0" data-story-interest></div>
+            </div>
+          </div>
+          <aside class="calculator-total">
+            <p class="eyebrow">Ваш контент‑план</p>
+            <output data-total-output>4 990 ₽</output>
+            <div class="bundle-visual" aria-live="polite">
+              <div class="bundle-slots" data-bundle-slots aria-label="Состав пакета по постам"></div>
+              <div class="bundle-story-stack" data-bundle-stories hidden></div>
+            </div>
+            <p><strong><span data-posts-output>10</span> постов:</strong> <span data-base-output>4 990 ₽</span></p>
+            <p><strong>Карусели:</strong> <span data-carousel-output>0 ₽</span></p>
+            <p data-story-output><strong>Сторис:</strong> не выбраны</p>
+            <div class="placement-counter"><strong data-placement-output>До 50 размещений</strong><span>если подключены все 5 площадок</span></div>
+            <div class="bundle-platforms" aria-label="Пример набора площадок"><span>ВКонтакте</span><span>Instagram</span><span>Telegram</span><span>MAX</span><span>+ ещё одна</span></div>
+            <p class="builder-instruction">Нажмите на любой кубик поста, чтобы превратить его в карусель.</p>
+            <p class="legal-note">Названия кубиков показывают роли контента в месяце. Точные темы маркетолог соберёт после знакомства с бизнесом.</p>
+            <p class="legal-note">Итоговая сумма включает посты, выбранные карусели и пакет сторис.</p>
+            <a class="btn btn-accent" href="start.html?plan=10" data-order-link style="width: 100%; margin-top: 18px;">Продолжить с этим составом</a>
+          </aside>
         </div>
       </div>
+    </section>
 
-      <div class="pricing-card">
-        <p class="pricing__name">Бренд</p>
-        <p class="muted">Полный цикл маркетинга и брендинга.</p>
-        <div class="pricing__price">
-          <span class="pricing__price-num"><span data-price data-price-month="от 249 000 ₽" data-price-year="от 211 600 ₽">от 249 000 ₽</span></span>
-        </div>
-        <p class="muted xsmall" data-period>/ в месяц</p>
-        <a href="/book-demo.html" class="btn btn-outline btn-block">Записаться на демо</a>
-        <div class="pricing__features mt-4">
-          <div class="pricing__feature"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="5,12 10,17 19,8"/></svg><span>Все соцсети без ограничений</span></div>
-          <div class="pricing__feature"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="5,12 10,17 19,8"/></svg><span>Объём контента под запрос</span></div>
-          <div class="pricing__feature"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="5,12 10,17 19,8"/></svg><span>Логотип + фирстиль + гайдлайны</span></div>
-          <div class="pricing__feature"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="5,12 10,17 19,8"/></svg><span>Промо-видео и UGC-кампании</span></div>
-          <div class="pricing__feature"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="5,12 10,17 19,8"/></svg><span>Лендинги и интеграции с CRM</span></div>
-          <div class="pricing__feature"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="5,12 10,17 19,8"/></svg><span>Персональный арт-директор</span></div>
-          <div class="pricing__feature"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="5,12 10,17 19,8"/></svg><span>SLA и приоритетные правки</span></div>
+    <section class="section">
+      <div class="container">
+
+        <div class="section-head"><div><p class="eyebrow">Во всех пакетах</p><h2>Одинаковая команда и полный цикл</h2></div><p>В каждом пакете работают маркетолог, дизайнер и менеджер. Публикация на подключённых площадках уже входит в цену.</p></div>
+        <div class="grid-3">
+          <article class="card"><h3>До дизайна</h3><ul class="check-list compact"><li>бриф и материалы;</li><li>темы и контент‑план;</li><li>тексты;</li><li>согласование текстов.</li></ul></article>
+          <article class="card"><h3>Производство</h3><ul class="check-list compact"><li>дизайн в стиле бренда;</li><li>адаптация к площадкам;</li><li>по 2 круга правок на тексты и визуал;</li><li>менеджер на связи.</li></ul></article>
+          <article class="card"><h3>После согласования</h3><ul class="check-list compact"><li>публикация по графику;</li><li>во все подключённые соцсети;</li><li>менеджер и статусы материалов;</li><li>контроль календаря;</li><li><a href="process.html">подробный порядок работы</a>.</li></ul></article>
         </div>
       </div>
+    </section>
 
-    </div>
-  </div>
-</section>
+    <section class="section section-accent">
+      <div class="container">
 
-<!-- ============== ЧТО ВХОДИТ ============== -->
-<section class="section">
-  <div class="container">
-    <div class="text-center mb-7" style="max-width: 720px; margin: 0 auto var(--sp-7);">
-      <span class="badge">Что входит в любой тариф</span>
-      <h2 class="mt-4">Базовые гарантии — для всех</h2>
-    </div>
-    <div class="grid grid-3">
-      <div class="card card-soft">
-        <h3>Без счетов за правки</h3>
-        <p class="mt-3 muted">3 итерации правок на каждый материал. Если нужно больше — обсудим, но это редкость.</p>
+        <div class="section-head"><div><p class="eyebrow">Как выбрать объём</p><h2>От спокойного старта до ежедневного присутствия</h2></div><p>Качество команды и процесса не меняется. Меняется только темп вашего контент‑плана.</p></div>
+        <div class="grid-4">
+          <article class="card"><span class="tag">10 постов</span><h3 style="margin-top:18px;">Начать регулярно</h3><p>Подходит, если соцсети давно не велись или нужен спокойный стабильный ритм.</p></article>
+          <article class="card"><span class="tag">15 постов</span><h3 style="margin-top:18px;">Быть заметнее</h3><p>Публикации выходят примерно через день и закрывают больше тем бизнеса.</p></article>
+          <article class="card"><span class="tag">20 постов</span><h3 style="margin-top:18px;">Поддерживать активность</h3><p>Для нескольких направлений, частых новостей, продуктов и экспертных тем.</p></article>
+          <article class="card"><span class="tag">30 постов</span><h3 style="margin-top:18px;">Почти каждый день</h3><p>Для бизнеса с большим количеством предложений и постоянным потоком инфоповодов.</p></article>
+        </div>
       </div>
-      <div class="card card-soft">
-        <h3>Один контакт</h3>
-        <p class="mt-3 muted">Закреплённый менеджер в Telegram. Никаких чатов на 20 человек.</p>
-      </div>
-      <div class="card card-soft">
-        <h3>Договор и закрывающие документы</h3>
-        <p class="mt-3 muted">Работаем по договору. Акты и счёт-фактуры — каждый месяц.</p>
-      </div>
-      <div class="card card-soft">
-        <h3>Передача прав</h3>
-        <p class="mt-3 muted">Все исходники и права — ваши. Уйдёте — получите архив без вопросов.</p>
-      </div>
-      <div class="card card-soft">
-        <h3>Уникальный контент</h3>
-        <p class="mt-3 muted">Проверяем тексты на антиплагиат, дизайны — на коллизии с патентами.</p>
-      </div>
-      <div class="card card-soft">
-        <h3>Пауза без штрафов</h3>
-        <p class="mt-3 muted">Сезонность? Поставьте подписку на паузу. Возобновите без переоформления.</p>
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<!-- ============== FAQ ============== -->
-<section class="section bg-soft">
-  <div class="container">
-    <div class="text-center mb-7">
-      <span class="badge">FAQ</span>
-      <h2 class="mt-4">Вопросы про оплату и условия</h2>
-    </div>
-    <div class="faq">
-      <details class="faq__item">
-        <summary class="faq__q">Можно оплатить картой / по счёту?</summary>
-        <div class="faq__a">Да, принимаем оба варианта: банковская карта и безналичный расчёт по счёту для юрлиц и ИП.</div>
-      </details>
-      <details class="faq__item">
-        <summary class="faq__q">Что если контента нужно больше?</summary>
-        <div class="faq__a">Допсчёт по фиксированной ставке за единицу: пост — от 1 500 ₽, Reels — от 7 000 ₽. Согласовываем заранее.</div>
-      </details>
-      <details class="faq__item">
-        <summary class="faq__q">Можно сменить тариф посередине?</summary>
-        <div class="faq__a">Да. Повысить — с любого дня, понизить — со следующего расчётного периода.</div>
-      </details>
-      <details class="faq__item">
-        <summary class="faq__q">Что входит в годовую скидку?</summary>
-        <div class="faq__a">Оплата сразу за 12 месяцев — экономия 15%. Если решите остановиться раньше — вернём пропорционально неиспользованным месяцам.</div>
-      </details>
-      <details class="faq__item">
-        <summary class="faq__q">Есть ли пробный период?</summary>
-        <div class="faq__a">Прямого пробника нет, но первый месяц можно завершить без продления. За первые 2 недели вы поймёте, подходим ли мы.</div>
-      </details>
-    </div>
-  </div>
-</section>
+    <section class="final-cta">
+      <div class="container"><p class="eyebrow">Понятный старт</p><h2>Начните с 10 постов за 4 990 ₽</h2><p class="lead">Перед оплатой вы увидите состав заказа и условия первой партии.</p><div class="section-actions" style="margin-top: 24px;"><a class="btn btn-accent" href="start.html">Начать работу</a><a class="btn btn-secondary" href="process.html" style="border-color:#fff;color:#fff;">Сначала посмотреть процесс</a></div></div>
+    </section>
+  </main>
 
-<!-- ============== CTA ============== -->
-<section class="section-sm">
-  <div class="container">
-    <div class="cta-banner">
-      <h2>Не уверены, какой тариф подойдёт?</h2>
-      <p class="lead" style="color: rgba(255,255,255,.85); max-width: 580px; margin: 0 auto;">Записывайтесь на 30-минутный звонок. Покажем кейсы, разберём ваши задачи и подберём план.</p>
-      <div class="mt-6">
-        <a href="/book-demo.html" class="btn btn-primary btn-lg">Записаться на демо</a>
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="brand" href="index.html" aria-label="lemonmedia — главная"><span class="brand-dot" aria-hidden="true"></span>lemonmedia</a>
+        <p class="footer-note">Регулярный контент под ключ для российского малого и среднего бизнеса. Команда lemonmedia работает с 2020 года.</p>
       </div>
+      <div class="footer-column"><strong>Выбрать</strong><a href="pricing.html">Цены и конструктор</a><a href="examples.html">Работы</a><a href="process.html">Как работаем</a><a href="compare.html">Сравнение</a></div>
+      <div class="footer-column"><strong>Узнать больше</strong><a href="reviews.html">Отзывы</a><a href="about.html">О компании</a><a href="services.html">Разовые услуги</a><a href="partners.html">Партнёрам</a><a href="articles.html">Статьи</a><a href="faq.html">Все вопросы</a></div>
+      <div class="footer-column"><strong>Начать</strong><a href="start.html">Собрать пакет</a><a href="audit.html">Бесплатный разбор</a><a href="guarantee.html">Условия гарантии</a><a href="legal.html#offer">Условия работы</a><a href="legal.html#privacy">Конфиденциальность</a></div>
     </div>
-  </div>
-</section>
-
-</main>
-
-<footer class="footer">
-  <div class="container">
-    <div class="footer__top">
-      <div class="footer__col footer__about">
-        <img src="/assets/img/logo.svg" alt="Лимон Медиа" style="height: 40px; filter: brightness(0) invert(1);">
-        <p>Студия полного цикла: логотипы, фирменный стиль, контент для соцсетей, реклама и видео. С 2020 года.</p>
-      </div>
-      <div class="footer__col">
-        <h4>Сайт</h4>
-        <ul>
-          <li><a href="/">Главная</a></li>
-          <li><a href="/pricing.html">Тарифы</a></li>
-          <li><a href="/examples.html">Примеры</a></li>
-          <li><a href="/reviews.html">Отзывы</a></li>
-          <li><a href="/about.html">О нас</a></li>
-        </ul>
-      </div>
-      <div class="footer__col">
-        <h4>Услуги</h4>
-        <ul>
-          <li><a href="/pricing.html">Контент для соцсетей</a></li>
-          <li><a href="/pricing.html">Логотип и фирстиль</a></li>
-          <li><a href="/pricing.html">Видео и Reels</a></li>
-          <li><a href="/pricing.html">Реклама и таргет</a></li>
-          <li><a href="/pricing.html">Лендинги</a></li>
-        </ul>
-      </div>
-      <div class="footer__col">
-        <h4>Контакты</h4>
-        <ul>
-          <li><a href="mailto:hello@lemon-media.ru">hello@lemon-media.ru</a></li>
-          <li><a href="https://lemon-media.ru" target="_blank" rel="noopener">lemon-media.ru</a></li>
-          <li>Часы работы: 9:00–18:00 МСК</li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer__bottom">
-      <span>© <span data-year>2026</span> Лимон Медиа. Все права защищены.</span>
-      <div class="footer__socials">
-        <a href="#" aria-label="Telegram">TG</a>
-        <a href="#" aria-label="ВКонтакте">VK</a>
-        <a href="#" aria-label="YouTube">YT</a>
-      </div>
-    </div>
-  </div>
-</footer>
-
-<script src="/assets/js/main.js"></script>
+  </footer>
+  <script src="assets/js/prototype.js"></script>
 </body>
 </html>

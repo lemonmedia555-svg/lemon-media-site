@@ -1,0 +1,108 @@
+version: 1
+brand: lemonmedia
+id: moscow-padel
+slug: moscow-padel
+language: ru
+
+identity:
+  public_title: "MoscowPadel — контент-система для сложного B2B-продукта"
+  client_display_name: "MoscowPadel"
+  period: "2026-08"
+  niche: sport-infrastructure
+  subniche: padel-court-construction-and-supply
+  client_type: new-client
+
+summary:
+  short: "20 публикаций, которые объясняют устройство и стоимость падел-корта, снимают сомнения, показывают объекты и ведут к спокойному диалогу."
+  content_task: "Упаковать дорогой технический продукт с длинным циклом решения в понятную последовательность контента."
+  result_wording: "Контент-план, тексты и визуал утверждены. Подготовлены 10 статичных постов, 10 основных каруселей и подарочная карусель — 87 финальных изображений. 20 черновиков загружены в календарь ВКонтакте и Instagram. Фактические публикации и бизнес-метрики на дату проверки не подтверждены."
+
+scope:
+  publications: 20
+  static_posts: 10
+  main_carousel_publications: 10
+  bonus_carousel_publications: 1
+  total_carousel_publications: 11
+  slides_per_carousel: 7
+  carousel_slides: 77
+  source_visual_files: 87
+  web_visual_files: 87
+  source_dimensions: "1080 × 1350"
+  web_dimensions: "864 × 1080"
+  aspect_ratio: "4:5"
+  planned_platform_count: 4
+  confirmed_draft_platform_count: 2
+
+marketing_logic:
+  premise: "Падел-корт — дорогая покупка с длинным решением. Контент должен сначала создать понимание и доверие, а затем предлагать следующий шаг."
+  sequence:
+    - familiar-context
+    - product-explanation
+    - risk-removal
+    - object-proof
+    - soft-call-to-action
+  rubric_distribution:
+    useful-and-expert: 5
+    objects-and-cases: 4
+    offers: 4
+    myths: 3
+    engagement: 2
+    topical: 2
+
+schedule:
+  status: drafts-uploaded-publication-not-yet-started
+  starts_at: "2026-08-06 10:00"
+  ends_at: "2026-08-25 10:00"
+  cadence: daily
+  publication_time: "10:00"
+  planned_platforms: [vk, instagram, telegram, max]
+  confirmed_draft_platforms: [vk, instagram]
+  confirmed_published_platforms: []
+
+quality_control:
+  content_plan_approval: confirmed
+  text_approval: confirmed
+  client_visual_approval: confirmed
+  internal_visual_review: confirmed
+  local_text_corrections: 2
+  corrected_files_replaced_in_final_folder: true
+  exact_duplicates_in_final_folder: 0
+  damaged_files: 0
+
+evidence:
+  confirmed:
+    - "Публичное название проекта: MoscowPadel."
+    - "Контент-план содержит 20 публикаций."
+    - "Подготовлены 10 статичных постов и 10 основных каруселей по 7 слайдов."
+    - "Дополнительно подготовлена подарочная карусель из 7 слайдов."
+    - "Финальная папка содержит 87 JPEG размером 1080 × 1350 px."
+    - "Контент-план, тексты и визуал утверждены."
+    - "20 черновиков загружены в календарь ВКонтакте и Instagram на 6–25 августа 2026 года в 10:00."
+  not_claimed:
+    - "Фактический выход всех публикаций."
+    - "Загрузка или публикация в Telegram и MAX."
+    - "Охваты, просмотры, вовлечённость или рост аудитории."
+    - "Заявки, продажи, выручка или окупаемость."
+    - "Строительные результаты MoscowPadel как результат lemonmedia."
+    - "Независимая проверка технических характеристик, цен и расчётов внутри макетов."
+  public_links: null
+  analytics: null
+  client_review: null
+
+publication_control:
+  portfolio_permission: confirmed_by_project_owner
+  final_media: ready
+  publishable: true
+  display_notes:
+    - "Показывать все изображения в формате 4:5 без обрезки."
+    - "Подарочную карусель отделять от 20 основных публикаций."
+    - "Не называть черновики опубликованными постами."
+    - "Не называть четыре плановые площадки подтверждённой загрузкой."
+    - "Не добавлять бизнес-метрики без отдельной аналитики."
+    - "Характеристики, цены и расчёты внутри макетов относятся к материалам клиента и не являются гарантиями lemonmedia."
+
+assets:
+  root: "assets/cases/moscow-padel"
+  static_posts: "posts/{publication_number_2d}.jpg"
+  main_carousels: "carousels/{publication_number_2d}/{slide_number_2d}.jpg"
+  gift_carousel: "gift/{slide_number_2d}.jpg"

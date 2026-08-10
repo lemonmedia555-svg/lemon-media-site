@@ -1,0 +1,127 @@
+version: 1
+brand: lemonmedia
+language: ru
+
+# Один справочник для каталога, фильтров и кейсов.
+# Новые значения добавляются сюда до использования в отдельных кейсах.
+
+niches:
+  - id: home-and-interior
+    label: "Дом и интерьер"
+    children:
+      - id: custom-kitchens
+        label: "Кухни на заказ"
+  - id: services
+    label: "Услуги"
+  - id: beauty-and-health
+    label: "Красота и здоровье"
+  - id: food-and-hospitality
+    label: "Еда и рестораны"
+  - id: education-and-children
+    label: "Образование и дети"
+  - id: legal-and-finance
+    label: "Юридические и финансовые услуги"
+  - id: construction-and-real-estate
+    label: "Строительство и недвижимость"
+  - id: retail-and-ecommerce
+    label: "Магазины и e-commerce"
+  - id: experts
+    label: "Эксперты"
+  - id: b2b-and-production
+    label: "B2B и производство"
+  - id: travel-and-leisure
+    label: "Путешествия и досуг"
+
+formats:
+  - id: static-post
+    label: "Пост"
+    counting_rule: "Одна публикация считается одной работой. Размещения на нескольких площадках не умножают число работ."
+  - id: carousel
+    label: "Карусель"
+    counting_rule: "Одна карусель считается одной публикацией и одной работой. Её слайды отдельно не считаются."
+  - id: stories-sequence
+    label: "Цепочка сторис"
+    counting_rule: "Связанные экраны одной цепочки считаются одним дополнением к контент-плану. Число экранов хранится отдельно."
+  - id: full-month
+    label: "Полный месяц"
+    counting_rule: "Полный месяц является кейсом-контейнером и не добавляется к числу публикаций."
+
+categories:
+  - id: useful
+    label: "Польза"
+  - id: work-showcase
+    label: "Наши работы"
+  - id: product-showcase
+    label: "Витрина продукта"
+  - id: myths
+    label: "Мифы"
+  - id: offer
+    label: "Оффер"
+
+goals:
+  - id: build-trust
+    label: "Усилить доверие"
+  - id: encourage-saves
+    label: "Дать материал для сохранения"
+  - id: reduce-result-uncertainty
+    label: "Снять страх за итоговый результат"
+  - id: create-purchase-desire
+    label: "Вызвать желание покупки"
+  - id: differentiate-offer
+    label: "Отстроить предложение от альтернатив"
+  - id: measurement-request
+    label: "Подвести к заявке на замер"
+  - id: reduce-space-fit-uncertainty
+    label: "Снять страх, что решение не поместится"
+  - id: show-expertise
+    label: "Показать экспертность"
+  - id: reduce-layout-uncertainty
+    label: "Снять страх сложной планировки"
+  - id: help-choice
+    label: "Помочь с выбором"
+  - id: reduce-color-fatigue-uncertainty
+    label: "Снять страх, что цвет надоест"
+  - id: lead-request
+    label: "Подвести к заявке"
+
+story_roles:
+  - id: hook
+    label: "Зацепка"
+  - id: explanation
+    label: "Раскрытие"
+  - id: proof
+    label: "Доказательство"
+  - id: terms
+    label: "Условия"
+  - id: call-to-action
+    label: "Призыв к действию"
+  - id: repost-placeholder
+    label: "Место для репоста публикации"
+
+platforms:
+  - id: vk
+    label: "ВКонтакте"
+  - id: telegram
+    label: "Telegram"
+  - id: max
+    label: "MAX"
+  - id: threads
+    label: "Threads"
+  - id: instagram
+    label: "Instagram"
+  - id: pinterest
+    label: "Pinterest"
+  - id: odnoklassniki
+    label: "Одноклассники"
+
+verification_statuses:
+  - id: source-collected
+    label: "Исходные материалы собраны"
+  - id: facts-verified
+    label: "Факты проверены"
+  - id: permission-confirmed
+    label: "Разрешение на портфолио подтверждено"
+  - id: media-ready
+    label: "Публичные изображения готовы"
+  - id: publishable
+    label: "Кейс можно публиковать"

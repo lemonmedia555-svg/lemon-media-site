@@ -1,0 +1,99 @@
+version: 1
+brand: lemonmedia
+id: invest-management
+slug: invest-management
+language: ru
+
+identity:
+  public_title: "Invest Management — контент-план июля 2026"
+  client_display_name: "Invest Management"
+  period: "2026-07"
+  niche: commercial-real-estate
+  subniche: commercial-property-sublease
+  geography: russia
+
+summary:
+  short: "Контент-план для сложного инвестиционного продукта: механика дохода, команда, реальные объекты, риски и предложения."
+  content_task: "Регулярно вести соцсети о субаренде коммерческой недвижимости, объяснить незнакомую механику и подвести прогретого читателя к экспертному разбору."
+  result_wording: "Подготовлены и приняты клиентом 10 публикаций, включая две карусели по 7 слайдов, серия из 5 историй и дополнительный пост-закреп. Финальный комплект содержит 28 изображений."
+
+scope:
+  publications: 10
+  static_posts: 8
+  carousel_publications: 2
+  carousel_slides: 14
+  stories_sequences: 1
+  stories_frames: 5
+  additional_pinned_posts: 1
+  final_media_files: 28
+  planned_platform_count: 4
+  planned_platform_ids:
+    - telegram
+    - vk
+    - instagram
+    - max
+  primary_planned_platform_id: telegram
+
+category_distribution:
+  useful: 2
+  team: 2
+  portfolio: 2
+  objections-and-myths: 2
+  offer: 2
+
+featured_goals:
+  - explain-product-mechanics
+  - build-founder-trust
+  - demonstrate-cases
+  - handle-risk-objections
+  - show-expertise
+  - lead-expert-analysis-request
+  - present-partnership-format
+
+stories:
+  sequence_id: stories-01
+  related_publication_id: publication-05
+  frames: 5
+  narrative: "Лежащий капитал → ограничения привычных вариантов → механика субаренды → сложность процесса → бесплатный экспертный разбор."
+
+additional_materials:
+  - id: pinned-post-01
+    type: pinned-post
+    title: "С чего начать инвестору"
+    purpose: "Быстро объяснить новому читателю продукт, форматы работы и первый шаг."
+
+evidence:
+  confirmed:
+    - "Публичное название проекта: T.I.M / Turapov Invest Management."
+    - "Контент-план утверждён и содержит 10 публикаций в пяти рубриках."
+    - "Финальный пакет содержит две карусели по семь слайдов."
+    - "К публикации о бесплатном разборе подготовлена серия из пяти историй."
+    - "Дополнительно подготовлен пост-закреп."
+    - "Финальная папка содержит 28 изображений."
+    - "После точечных правок клиент принял финальный комплект."
+  not_claimed:
+    - "Публикация каждого материала на всех четырёх площадках."
+    - "Количество заявок или привлечённых инвесторов."
+    - "Продажи, выручка, окупаемость и доходность."
+    - "Рост охватов, подписчиков или вовлечённости."
+    - "Гарантированный инвестиционный результат."
+  public_links:
+    - label: "Сообщество клиента VK"
+      url: "https://vk.ru/turapov.invest.managment"
+    - label: "Канал клиента Telegram"
+      url: "https://t.me/turapov_im"
+  analytics: null
+  client_review: confirmed-positive-without-public-quote
+
+publication_control:
+  portfolio_permission: confirmed_by_project_owner
+  final_media: ready
+  public_links: partially-verified
+  recognizable_people_assets:
+    - "post-02.jpg"
+    - "post-05.jpg"
+    - "post-08.jpg"
+    - "pinned-post.jpg"
+  recognizable_people_use_basis: confirmed_by_project_owner
+  publishable: true
+

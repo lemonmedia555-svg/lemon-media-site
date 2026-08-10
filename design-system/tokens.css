@@ -1,0 +1,135 @@
+/* ============================================================
+   lemonmedia — Design Tokens (web)
+   Канон: Figma «LM • SMM DESIGN SYSTEM — v1»
+   (https://www.figma.com/design/W5OADlZzEMJGmjxnpNsIjl)
+   + фактика рабочих проектов (lemon-landing, lemon-configurator,
+   lemon-media-site). Единственный источник значений для веба.
+   Подключение:  <link rel="stylesheet" href="tokens.css">
+   ============================================================ */
+
+:root {
+  /* ---------- ЦВЕТ: ПРИМИТИВЫ ---------- */
+  /* Нейтрали */
+  --lm-color-neutral-000: #FFFFFF;
+  --lm-color-neutral-100: #EFEFEF;
+  --lm-color-neutral-800: #262626;
+  --lm-color-neutral-900: #1E1E1E;
+  --lm-color-neutral-950: #020202;
+  --lm-color-neutral-1000: #000000;
+
+  /* Лимон (фирменный жёлтый) */
+  --lm-color-lemon-100: #FFF3C4;   /* lemon light — мягкие подложки */
+  --lm-color-lemon-300: #FFDB4E;   /* светлый акцент */
+  --lm-color-lemon-500: #EECB03;   /* КАНОН. Единственный «жёлтый lemonmedia» */
+  --lm-color-lemon-600: #D9B900;   /* hover/pressed для lemon-500 */
+
+  /* Фиолетовый */
+  --lm-color-purple-050: #F4E8FF;
+  --lm-color-purple-200: #DFCCFF;
+  --lm-color-purple-300: #C582FF;
+  --lm-color-purple-400: #AF53FF;
+  --lm-color-purple-500: #9747FF;  /* акцент SMM/иллюминация */
+  --lm-color-purple-600: #7D00EA;  /* акцент веба: кнопки, текстовые акценты */
+
+  /* Холодные светлые зоны (раскол экрана, фоны страниц) */
+  --lm-color-cool-050: #F4F6FA;    /* холодный светло-серый — фон страницы, левая зона */
+  --lm-color-cool-100: #E8ECF3;    /* холодный серый глубже — полосы, линии */
+  --lm-color-lavender-100: #E4EAF7;/* холодный лавандовый — правая зона витрины */
+
+  /* Оверлеи */
+  --lm-color-overlay-black-60: #00000099;
+  --lm-color-overlay-white-80: #FFFFFFCC;
+
+  /* Веб-нейтрали интерфейса (текст/поверхности/линии) */
+  --lm-color-muted: #5E5E66;       /* вторичный текст */
+  --lm-color-muted-2: #8A8A93;     /* третичный текст, подписи */
+  --lm-color-surface: #F6F6F7;     /* серый фон секций */
+  --lm-surface-page: var(--lm-color-cool-050);  /* фон страницы по умолчанию */
+  --lm-color-surface-2: #FBFBFC;   /* едва серый фон */
+  --lm-color-border: #EBEBEE;      /* базовая линия/бордер */
+  --lm-color-border-2: #E2E2E6;    /* бордер погуще (инпуты, ghost-кнопки) */
+
+  /* Статусы (интерфейсы, дашборды) */
+  --lm-color-success: #2EB872;
+  --lm-color-danger: #E5484D;
+  --lm-color-info: #4361EE;
+
+  /* ---------- ЦВЕТ: СЕМАНТИКА ---------- */
+  /* Утверждённые пары «поверхность × текст». Не изобретать новые. */
+  --lm-surface-default: var(--lm-color-neutral-000);
+  --lm-text-primary: var(--lm-color-neutral-950);
+
+  --lm-surface-lemon: var(--lm-color-lemon-500);
+  --lm-text-on-lemon: var(--lm-color-neutral-1000);   /* ТОЛЬКО чёрный на лимоне */
+
+  --lm-surface-purple: var(--lm-color-purple-600);
+  --lm-text-on-purple: var(--lm-color-neutral-000);   /* белый на фиолетовом */
+
+  --lm-surface-inverse: var(--lm-color-neutral-1000);
+  --lm-text-inverse: var(--lm-color-neutral-000);
+
+  --lm-surface-lemon-soft: var(--lm-color-lemon-100);  /* текст — primary */
+  --lm-surface-purple-soft: var(--lm-color-purple-050);/* текст — primary */
+
+  /* ---------- ТИПОГРАФИКА (веб) ---------- */
+  --lm-font-sans: "Manrope", -apple-system, "Segoe UI", Roboto, sans-serif;
+  /* Единственная гарнитура системы. Веса: 400 текст, 700 label, 800 заголовки. */
+
+  /* Шкала фиксированная: одинаковая на 1440 и на 2000+. Кегль не «резиновый»
+     от ширины окна — на большом мониторе страница не должна выглядеть
+     ноутбучной. Ориентир по читаемости — сетка bitrix24.ru (body 19px). */
+  --lm-fs-display: clamp(44px, 6vw, 76px);  /* hero-цифры и WOW-строки */
+  --lm-fs-h1: clamp(40px, 5vw, 60px);
+  --lm-fs-h2: clamp(34px, 4.2vw, 58px);
+  --lm-fs-h3: clamp(24px, 2.6vw, 30px);
+  --lm-fs-lead: 20px;
+  --lm-fs-body: 18px;
+  --lm-fs-ui: 17px;                         /* кнопки, навигация, таблицы */
+  --lm-fs-small: 15px;
+  --lm-fs-eyebrow: 13px;                    /* 700, uppercase, letter-spacing .08em */
+
+  --lm-lh-heading: 1.05;
+  --lm-lh-body: 1.6;
+  --lm-ls-heading: -0.02em;                 /* заголовки слегка сжаты, до -0.035em на крупных */
+
+  /* ---------- ГЕОМЕТРИЯ ---------- */
+  --lm-radius-sm: 10px;    /* кнопки, инпуты, теги */
+  --lm-radius-md: 16px;    /* вложенные карточки, медиа */
+  --lm-radius-lg: 24px;    /* карточки, блоки, секции */
+  --lm-radius-pill: 100px; /* пилюли, бейджи, CTA в стиле сайта */
+
+  --lm-space-4: 4px;  --lm-space-8: 8px;   --lm-space-12: 12px;
+  --lm-space-16: 16px; --lm-space-20: 20px; --lm-space-24: 24px;
+  --lm-space-32: 32px; --lm-space-40: 40px; --lm-space-48: 48px;
+  --lm-space-64: 64px; --lm-space-80: 80px; --lm-space-96: 96px;
+  --lm-space-128: 128px;
+
+  --lm-container: 1328px;   /* сетка страницы; на 2000px поля ~336px */
+  --lm-btn-pad: 15px 26px;
+
+  /* ---------- АТМОСФЕРА: ТЕНИ И СВЕЧЕНИЯ ---------- */
+  --lm-shadow-soft: 0 2px 16px rgba(16, 24, 40, .08);            /* LM/Shadow/Soft */
+  --lm-shadow-card: 0 3px 14px rgba(0, 0, 0, .08);               /* LM/Shadow/Card */
+  --lm-shadow-pop: 0 18px 48px -12px rgba(0, 0, 0, .22);         /* поднятые элементы */
+  --lm-glow-lemon: 0 10px 28px -8px rgba(238, 203, 3, .45);      /* LM/Glow/Yellow */
+  --lm-glow-purple: 0 10px 28px -8px rgba(125, 0, 234, .40);     /* LM/Glow/Purple */
+
+  /* ---------- АТМОСФЕРА: ГРАДИЕНТЫ ---------- */
+  /* Светлые подложки */
+  --lm-grad-hero-light: linear-gradient(180deg, #FFFEF8 0%, #F8F7FB 100%);
+  --lm-grad-lemon-soft: linear-gradient(150deg, #FFF9E3 0%, #FFF3C4 100%);
+  --lm-grad-purple-soft: linear-gradient(150deg, #F4E8FF 0%, #EFE9FF 100%);
+
+  /* Плотные заливки */
+  --lm-grad-lemon: linear-gradient(150deg, #FFDB4E 0%, #EECB03 55%, #D9B900 100%);
+  --lm-grad-purple: linear-gradient(150deg, #9747FF 0%, #7D00EA 100%);
+
+  /* Тёмный «космос» (фон тёмных секций и hero) */
+  --lm-grad-space: radial-gradient(120% 140% at 82% 0%, #3B1E7A 0%, #17122B 55%, #0B0912 100%);
+  /* Фирменная шапка: фиолетовый слева ↘ чёрный ↘ лимон справа */
+  --lm-grad-brand-dark: linear-gradient(100deg, #3B1E7A 0%, #0B0912 42%, #6B5A00 78%, #EECB03 130%);
+
+  /* Локальные свечения на тёмном (radial, только как подсветка объекта) */
+  --lm-glowspot-lemon: radial-gradient(circle, rgba(238, 203, 3, .55), transparent 62%);
+  --lm-glowspot-purple: radial-gradient(circle, rgba(151, 71, 255, .45), transparent 65%);
+}

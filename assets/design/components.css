@@ -1,0 +1,178 @@
+/* ============================================================
+   lemonmedia — базовые компоненты (веб)
+   Требует tokens.css. Классы с префиксом lm-.
+   ============================================================ */
+
+/* ---------- База ---------- */
+.lm-page {
+  font-family: var(--lm-font-sans);
+  font-size: var(--lm-fs-body);
+  line-height: var(--lm-lh-body);
+  color: var(--lm-text-primary);
+  background: var(--lm-surface-default);
+  -webkit-font-smoothing: antialiased;
+}
+
+.lm-container {
+  max-width: var(--lm-container);
+  margin-inline: auto;
+  padding-inline: var(--lm-space-20);
+}
+
+/* ---------- Типографика ---------- */
+.lm-display,
+.lm-h1, .lm-h2, .lm-h3 {
+  font-weight: 800;
+  line-height: var(--lm-lh-heading);
+  letter-spacing: var(--lm-ls-heading);
+  margin: 0;
+}
+.lm-display { font-size: var(--lm-fs-display); }
+.lm-h1 { font-size: var(--lm-fs-h1); }
+.lm-h2 { font-size: var(--lm-fs-h2); }
+.lm-h3 { font-size: var(--lm-fs-h3); line-height: 1.15; }
+
+.lm-lead { font-size: var(--lm-fs-lead); color: var(--lm-color-muted); }
+.lm-eyebrow {
+  font-size: var(--lm-fs-eyebrow);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  color: var(--lm-color-purple-600);
+}
+
+/* Выделение ключевого слова в заголовке */
+.lm-mark-lemon { color: var(--lm-color-lemon-500); }
+.lm-mark-purple { color: var(--lm-color-purple-600); }
+
+/* ---------- Кнопки ---------- */
+.lm-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: var(--lm-btn-pad);
+  border: 0;
+  border-radius: var(--lm-radius-sm);
+  font: 700 17px/1 var(--lm-font-sans);
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
+}
+.lm-btn:hover { transform: translateY(-2px); }
+
+.lm-btn--primary {
+  background: var(--lm-surface-lemon);
+  color: var(--lm-text-on-lemon);
+  box-shadow: var(--lm-glow-lemon);
+}
+.lm-btn--primary:hover { background: var(--lm-color-lemon-600); }
+
+.lm-btn--purple {
+  background: var(--lm-surface-purple);
+  color: var(--lm-text-on-purple);
+  box-shadow: var(--lm-glow-purple);
+}
+
+.lm-btn--dark {
+  background: var(--lm-surface-inverse);
+  color: var(--lm-text-inverse);
+}
+
+.lm-btn--ghost {
+  background: var(--lm-color-neutral-000);
+  color: var(--lm-text-primary);
+  border: 1px solid var(--lm-color-border-2);
+}
+
+.lm-btn--pill { border-radius: var(--lm-radius-pill); }
+
+/* ---------- Карточки ---------- */
+.lm-card {
+  background: var(--lm-color-neutral-000);
+  border: 1px solid var(--lm-color-border);
+  border-radius: var(--lm-radius-lg);
+  box-shadow: var(--lm-shadow-card);
+  padding: var(--lm-space-24);
+}
+.lm-card--soft-lemon { background: var(--lm-color-lemon-100); border-color: transparent; }
+.lm-card--soft-purple { background: var(--lm-color-purple-050); border-color: transparent; }
+.lm-card--inverse {
+  background: var(--lm-surface-inverse);
+  color: var(--lm-text-inverse);
+  border-color: transparent;
+}
+.lm-card--space { background: var(--lm-grad-space); color: var(--lm-text-inverse); border-color: transparent; }
+
+/* Медиа внутри карточки (живой скриншот, фото) */
+.lm-card__media {
+  border-radius: var(--lm-radius-md);
+  overflow: hidden;
+  display: block;
+  max-width: 100%;
+}
+
+/* ---------- Бейджи и теги ---------- */
+.lm-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: var(--lm-radius-pill);
+  font: 700 14px/1.2 var(--lm-font-sans);
+  text-transform: uppercase;
+  letter-spacing: .06em;
+}
+.lm-badge--lemon { background: var(--lm-surface-lemon); color: var(--lm-text-on-lemon); }
+.lm-badge--purple { background: var(--lm-surface-purple); color: var(--lm-text-on-purple); }
+.lm-badge--dark { background: var(--lm-surface-inverse); color: var(--lm-text-inverse); }
+
+.lm-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: var(--lm-radius-pill);
+  background: var(--lm-color-neutral-000);
+  border: 1px solid var(--lm-color-border);
+  box-shadow: var(--lm-shadow-soft);
+  font: 600 15.5px/1.2 var(--lm-font-sans);
+}
+
+/* ---------- Метрика ---------- */
+.lm-metric__value {
+  font-size: var(--lm-fs-display);
+  font-weight: 800;
+  letter-spacing: var(--lm-ls-heading);
+  line-height: 1;
+}
+.lm-metric__label { font-size: var(--lm-fs-small); color: var(--lm-color-muted); margin-top: 8px; }
+.lm-card--inverse .lm-metric__value,
+.lm-card--space .lm-metric__value { color: var(--lm-color-lemon-500); }
+.lm-card--inverse .lm-metric__label,
+.lm-card--space .lm-metric__label { color: var(--lm-color-overlay-white-80); }
+
+/* ---------- Тёмная секция с локальным свечением ---------- */
+.lm-section--dark {
+  position: relative;
+  background: var(--lm-grad-space);
+  color: var(--lm-text-inverse);
+  border-radius: var(--lm-radius-lg);
+  overflow: hidden;
+}
+.lm-section--dark::before {
+  /* один доминирующий glow; позиционируй под главный объект */
+  content: "";
+  position: absolute;
+  width: 60%;
+  aspect-ratio: 1;
+  background: var(--lm-glowspot-lemon);
+  top: -20%;
+  right: -10%;
+  pointer-events: none;
+}
+
+/* ---------- Статусы ---------- */
+.lm-status--ok { color: var(--lm-color-success); }
+.lm-status--error { color: var(--lm-color-danger); }
+.lm-status--info { color: var(--lm-color-info); }

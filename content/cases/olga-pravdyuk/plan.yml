@@ -1,0 +1,153 @@
+version: 1
+brand: lemonmedia
+case_id: olga-pravdyuk
+period: "2026-07/2026-08"
+language: ru
+
+scope:
+  scheduled_publications: 10
+  bonus_publications: 1
+  static_posts: 8
+  carousel_publications: 3
+  carousel_slides: 21
+  visual_files: 29
+
+claim_rule: "Цели описывают роль контента, а не доказанный бизнес-результат. Подтверждена загрузка десяти основных публикаций в черновики ВКонтакте, но не фактический выход и не метрики."
+
+schedule:
+  platform: vk
+  status: drafts-loaded
+  start_date: "2026-07-29"
+  end_date: "2026-08-25"
+  time: "17:00"
+  cadence: every-3-days
+  scheduled_publications: 10
+  bonus_carousel_in_calendar: false
+
+publications:
+  - number: 1
+    id: publication-01
+    format: static-post
+    category: expertise
+    title: "25 лет в образовании и один разговор, который всё изменил"
+    asset: "assets/cases/olga-pravdyuk/posts/01.jpg"
+    goals: [show-expertise, build-trust]
+
+  - number: 2
+    id: publication-02
+    format: carousel
+    slide_count: 7
+    category: myth
+    title: "5 мифов о профориентации, из-за которых теряют год"
+    goals: [remove-myths, encourage-saves]
+    assets:
+      - "assets/cases/olga-pravdyuk/carousels/02/01.jpg"
+      - "assets/cases/olga-pravdyuk/carousels/02/02.jpg"
+      - "assets/cases/olga-pravdyuk/carousels/02/03.jpg"
+      - "assets/cases/olga-pravdyuk/carousels/02/04.jpg"
+      - "assets/cases/olga-pravdyuk/carousels/02/05.jpg"
+      - "assets/cases/olga-pravdyuk/carousels/02/06.jpg"
+      - "assets/cases/olga-pravdyuk/carousels/02/07.jpg"
+
+  - number: 3
+    id: publication-03
+    format: static-post
+    category: story
+    title: "Год назад не знал, куда поступать — сейчас студент вуза мечты"
+    asset: "assets/cases/olga-pravdyuk/posts/03.jpg"
+    attribution: client-expertise-story
+    goals: [show-method, build-trust]
+
+  - number: 4
+    id: publication-04
+    format: static-post
+    category: diagnostic
+    title: "5 признаков, что подростку уже пора к профориентологу"
+    asset: "assets/cases/olga-pravdyuk/posts/04.jpg"
+    goals: [help-self-identification, lead-to-consultation]
+
+  - number: 5
+    id: publication-05
+    format: static-post
+    category: offer
+    title: "Курс «Индивидуальное сопровождение»"
+    asset: "assets/cases/olga-pravdyuk/posts/05.jpg"
+    historical_terms: true
+    goals: [explain-service, lead-to-consultation]
+
+  - number: 6
+    id: publication-06
+    format: static-post
+    category: myth
+    title: "«Хороший ученик сам разберётся»: почему это ловушка"
+    asset: "assets/cases/olga-pravdyuk/posts/06.jpg"
+    goals: [remove-myths, reduce-parent-anxiety]
+
+  - number: 7
+    id: publication-07
+    format: carousel
+    slide_count: 7
+    category: useful
+    title: "От паники за год до экзаменов — к понятному плану"
+    goals: [reduce-parent-anxiety, explain-service, encourage-saves]
+    assets:
+      - "assets/cases/olga-pravdyuk/carousels/07/01.jpg"
+      - "assets/cases/olga-pravdyuk/carousels/07/02.jpg"
+      - "assets/cases/olga-pravdyuk/carousels/07/03.jpg"
+      - "assets/cases/olga-pravdyuk/carousels/07/04.jpg"
+      - "assets/cases/olga-pravdyuk/carousels/07/05.jpg"
+      - "assets/cases/olga-pravdyuk/carousels/07/06.jpg"
+      - "assets/cases/olga-pravdyuk/carousels/07/07.jpg"
+
+  - number: 8
+    id: publication-08
+    format: static-post
+    category: position
+    title: "Я не выбираю профессию за ребёнка"
+    asset: "assets/cases/olga-pravdyuk/posts/08.jpg"
+    goals: [explain-method, build-trust]
+
+  - number: 9
+    id: publication-09
+    format: static-post
+    category: engagement
+    title: "4 вопроса подростку вместо «кем хочешь стать?»"
+    asset: "assets/cases/olga-pravdyuk/posts/09.jpg"
+    goals: [encourage-dialogue, encourage-comments]
+
+  - number: 10
+    id: publication-10
+    format: static-post
+    category: process
+    title: "Как проходит профконсультация"
+    asset: "assets/cases/olga-pravdyuk/posts/10.jpg"
+    goals: [explain-service, remove-uncertainty, lead-to-consultation]
+    qa_note: "В финале добавлена контрастная подложка под текст после второго круга правок."
+
+bonus:
+  - id: bonus-carousel-01
+    format: carousel
+    slide_count: 7
+    category: checklist
+    title: "7 шагов родителю выпускника, пока есть время"
+    calendar_status: not-in-confirmed-calendar
+    goals: [help-parents, encourage-saves, build-trust]
+    assets:
+      - "assets/cases/olga-pravdyuk/carousels/bonus/01.jpg"
+      - "assets/cases/olga-pravdyuk/carousels/bonus/02.jpg"
+      - "assets/cases/olga-pravdyuk/carousels/bonus/03.jpg"
+      - "assets/cases/olga-pravdyuk/carousels/bonus/04.jpg"
+      - "assets/cases/olga-pravdyuk/carousels/bonus/05.jpg"
+      - "assets/cases/olga-pravdyuk/carousels/bonus/06.jpg"
+      - "assets/cases/olga-pravdyuk/carousels/bonus/07.jpg"
+
+next_order:
+  status: content-plan-in-review
+  publications: 10
+  carousel_publications: 2
+
+asset_display_notes:
+  aspect_ratio: "4:5"
+  crop: false
+  dimensions: "720 × 900"
+  widgets: "Не показывать как завершённую часть проекта без финальных файлов и подтверждения установки."

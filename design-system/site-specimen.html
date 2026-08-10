@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>lemonmedia — site-kit: секции сайта (v2)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="tokens.css">
+<link rel="stylesheet" href="components.css">
+<link rel="stylesheet" href="sections.css">
+<style>
+  * { box-sizing: border-box; margin: 0; }
+  body {
+    font-family: var(--lm-font-sans);
+    font-size: var(--lm-fs-body);
+    line-height: var(--lm-lh-body);
+    color: var(--lm-text-primary);
+    background: var(--lm-color-neutral-000);
+    -webkit-font-smoothing: antialiased;
+  }
+  .lm-container { max-width: var(--lm-container); margin-inline: auto; padding-inline: 20px; }
+  /* разделитель-ярлык между мастерами на витрине */
+  .kit-label {
+    max-width: var(--lm-container); margin: 72px auto 20px; padding-inline: 20px;
+    display: flex; align-items: center; gap: 14px;
+  }
+  .kit-label b {
+    font-size: 12.5px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase;
+    color: var(--lm-color-purple-600);
+    background: var(--lm-color-purple-050);
+    border-radius: 100px; padding: 6px 14px;
+  }
+  .kit-label span { flex: 1; height: 1px; background: var(--lm-color-border); }
+</style>
+</head>
+<body>
+
+<!-- ================= ХЕДЕР ================= -->
+<header class="lms-header">
+  <div class="lms-header__bar">
+    <img class="lms-header__logo" src="../logo-dark.svg" alt="lemonmedia">
+    <nav class="lms-header__nav">
+      <a href="#">Тарифы</a>
+      <a href="#">Примеры работ</a>
+      <a href="#">Отзывы</a>
+      <a href="#">О нас</a>
+    </nav>
+    <div class="lms-header__spacer"></div>
+    <a class="lm-btn lm-btn--ghost lm-btn--pill lms-header__ghost" href="#">Войти</a>
+    <a class="lm-btn lm-btn--primary lm-btn--pill" href="#">Получить разбор</a>
+    <button class="lms-header__burger" aria-label="Меню" onclick="document.getElementById('mnav').classList.add('is-open')">☰</button>
+  </div>
+</header>
+<div class="lms-mobilenav" id="mnav">
+  <button class="lms-mobilenav__close" aria-label="Закрыть" onclick="this.parentElement.classList.remove('is-open')">✕</button>
+  <a href="#">Тарифы</a>
+  <a href="#">Примеры работ</a>
+  <a href="#">Отзывы</a>
+  <a href="#">О нас</a>
+  <a class="lm-btn lm-btn--primary" style="margin-top:20px" href="#">Получить разбор</a>
+</div>
+
+<!-- ================= HERO-СПЛИТ (ОСНОВНОЙ) ================= -->
+<section class="lms-hero-split">
+  <div class="lm-container">
+    <div class="lms-hero-split__grid">
+      <div>
+        <span class="lms-hero-split__eyebrow">Контент для соцсетей под ключ · <b>5,0</b> и 200+ отзывов на Яндекс Картах</span>
+        <h1>Контент для соцсетей — <span class="lm-mark-purple">10 постов за 4 990 ₽</span></h1>
+        <p class="lms-hero-split__lead">Чтобы соцсети бизнеса не выглядели заброшенными, а вы не тратили вечера на контент. Придумываем темы, пишем, оформляем и публикуем — вы только согласовываете.</p>
+        <ul class="lms-split__list">
+          <li>Маркетолог, дизайнер и личный менеджер</li>
+          <li>Один пост — во все подключённые соцсети без доплаты</li>
+          <li>Понятный план выпуска на месяц</li>
+        </ul>
+        <div class="lms-hero-split__actions">
+          <a class="lm-btn lm-btn--primary" href="#">Собрать пакет: 10 постов · 4 990 ₽</a>
+          <a class="lm-btn lm-btn--ghost" href="#">Посмотреть реальные работы</a>
+        </div>
+        <p class="lms-hero-split__note">2 дня на план и тексты · 2 дня на визуал · до 2 дней на каждое согласование</p>
+      </div>
+      <div class="lms-collage">
+        <img src="assets/samples/example-post-massage.webp" alt="Пример поста для сферы услуг">
+        <img src="assets/samples/example-post-salim.webp" alt="Пример поста для бизнеса">
+        <img src="assets/samples/example-post-kindergarten.webp" alt="Пример поста для детского центра">
+        <img src="assets/samples/example-post-deadlift.webp" alt="Пример поста для фитнеса">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ПОЛОСА ПЛОЩАДОК ================= -->
+<div class="kit-label"><b>Полоса площадок</b><span></span></div>
+<section class="lms-platforms">
+  <div class="lm-container">
+    <div class="lms-platforms__row">
+      <strong>Публикуем один материал во всех подключённых площадках</strong>
+      <div class="lms-platforms__list">
+        <span>ВКонтакте</span><span>Instagram</span><span>Telegram</span><span>MAX</span><span>Threads</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ПОЛОСА ДОКАЗАТЕЛЬСТВ ================= -->
+<div class="kit-label"><b>Полоса доказательств (светлая)</b><span></span></div>
+<section style="padding: 24px 0">
+  <div class="lm-container">
+    <div class="lms-proofbar">
+      <div class="lms-proofbar__item"><strong>10 000+</strong><span>проектов всей lemonmedia</span></div>
+      <div class="lms-proofbar__item"><strong>С 2020</strong><span>работаем с российским бизнесом</span></div>
+      <div class="lms-proofbar__item"><strong>200+</strong><span>отзывов на Яндекс Картах</span></div>
+      <div class="lms-proofbar__item"><strong>5,0</strong><span>рейтинг по отзывам</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= HERO ЦЕНТРАЛЬНЫЙ (вариант) ================= -->
+<div class="kit-label"><b>Hero центральный — вариант</b><span></span></div>
+<section class="lms-hero-light">
+  <img class="lms-face" style="top:120px;left:6%" src="assets/ksusha-workplace.jpg" alt="">
+  <div class="lms-face--icon" style="top:104px;left:calc(6% + 76px);background:var(--lm-surface-lemon)">✍️</div>
+  <img class="lms-face" style="top:300px;left:12%" src="assets/ksusha-master-web.jpg" alt="">
+  <div class="lms-face--icon" style="top:388px;left:11%;background:var(--lm-surface-purple)">🎨</div>
+  <img class="lms-face" style="top:150px;right:7%" src="assets/ksusha-workplace.jpg" alt="">
+  <div class="lms-face--icon" style="top:238px;right:6.5%;background:var(--lm-surface-inverse)">📣</div>
+  <img class="lms-face" style="top:330px;right:13%" src="assets/ksusha-master-web.jpg" alt="">
+
+  <div class="lm-container">
+    <h1 class="lms-hero-light__title">Ведём ваши соцсети <span class="lm-mark-purple">под ключ</span></h1>
+    <p class="lms-hero-light__sub">Контент, дизайн, публикация. Делают живые люди, а не нейросеть. Вы только согласовываете.</p>
+    <div class="lms-hero-light__cta">
+      <a class="lm-btn lm-btn--primary" href="#">Получить бесплатный разбор</a>
+      <a class="lm-btn lm-btn--ghost" href="#">Посмотреть работы</a>
+    </div>
+    <div class="lms-hero-light__note">От 4990 ₽/мес · гарантия возврата 14 дней</div>
+    <div class="lms-tagrow">
+      <span class="lm-chip"><span>📝</span><span>Посты</span></span>
+      <span class="lm-chip"><span>🎠</span><span>Карусели</span></span>
+      <span class="lm-chip"><span>📖</span><span>Сторис</span></span>
+      <span class="lm-chip"><span>🎬</span><span>Ролики</span></span>
+      <span class="lm-chip"><span>🤖</span><span>AI-аватар</span></span>
+    </div>
+    <div style="max-width:880px;margin:44px auto 0">
+      <div class="lms-browser">
+        <div class="lms-browser__bar">
+          <span class="lms-browser__dot" style="background:#E5484D"></span>
+          <span class="lms-browser__dot" style="background:var(--lm-color-lemon-500)"></span>
+          <span class="lms-browser__dot" style="background:var(--lm-color-success)"></span>
+          <span class="lms-browser__url">lemon-media.ru</span>
+        </div>
+        <div class="lms-browser__body"><div class="lms-shot">живой скриншот продукта<br>(календарь публикаций / лента работ)</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ЛОГОБАР ================= -->
+<div class="kit-label"><b>Логобар</b><span></span></div>
+<section class="lms-logobar">
+  <div class="lm-container">
+    <div class="lms-logobar__label">Нам доверяют соцсети</div>
+    <div class="lms-logobar__row">
+      <span>Кафе «Утро»</span><span>Barbershop 13</span><span>Клиника «Смайл»</span><span>FitLab</span><span>Цветы&nbsp;24</span><span>АвтоПрофи</span>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ВИТРИНА КЕЙСА ================= -->
+<div class="kit-label"><b>Витрина кейса (featured)</b><span></span></div>
+<section style="padding: 24px 0">
+  <div class="lm-container">
+    <div class="lms-case-feature">
+      <div class="lms-case-feature__copy">
+        <span class="lm-badge lm-badge--dark">Кухни и интерьер · контент-план августа</span>
+        <h3>15 публикаций для «Саратов Кухни» — от выбора модели до записи на замер</h3>
+        <p>Связная система: полезные материалы, реальные работы, снятие сомнений и предложения.</p>
+        <div class="lms-case-feature__stats">
+          <span><strong>15</strong>публикаций</span>
+          <span><strong>5</strong>каруселей</span>
+          <span><strong>5</strong>экранов сторис</span>
+          <span><strong>5</strong>площадок</span>
+        </div>
+        <div class="lms-case-feature__actions">
+          <a class="lm-btn lm-btn--primary" href="#">Посмотреть весь кейс</a>
+          <a class="lm-btn lm-btn--ghost" href="#">Собрать похожий пакет</a>
+        </div>
+      </div>
+      <div class="lms-case-feature__feed">
+        <img class="lms-zoomable" src="assets/samples/case-saratov-01.webp" alt="Пост о выборе кухни">
+        <img class="lms-zoomable" src="assets/samples/case-saratov-03.webp" alt="Пост о модели кухни">
+        <img class="lms-zoomable" src="assets/samples/case-saratov-05.webp" alt="Пост о бесплатном замере">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ГРИД КЕЙСОВ ================= -->
+<div class="kit-label"><b>Грид карточек-кейсов</b><span></span></div>
+<section style="padding: 24px 0">
+  <div class="lm-container">
+    <div class="lms-case-grid">
+      <a class="lms-case-card" href="#">
+        <img src="assets/samples/case-borodulina.webp" alt="Карусель BORODULINA TAPE" loading="lazy">
+        <span class="lms-case-card__meta"><small>Красота и здоровье</small><strong>BORODULINA TAPE</strong><b>10 публикаций · 2 карусели · 5 сторис</b></span>
+      </a>
+      <a class="lms-case-card" href="#">
+        <img src="assets/samples/case-dobroe.webp" alt="Карусель фонда Доброе сердце" loading="lazy">
+        <span class="lms-case-card__meta"><small>Благотворительность</small><strong>БФ «Доброе сердце»</strong><b>10 публикаций · 21 готовый макет</b></span>
+      </a>
+      <a class="lms-case-card" href="#">
+        <img src="assets/samples/case-chebusser.jpg" alt="Публикация ЧЕБУССЭР" loading="lazy">
+        <span class="lms-case-card__meta"><small>Локальный общепит</small><strong>ЧЕБУССЭР</strong><b>10 публикаций · 2 карусели · 5 сторис</b></span>
+      </a>
+      <a class="lms-case-card" href="#">
+        <img src="assets/samples/example-post-kindergarten.webp" alt="Пост детского центра" loading="lazy">
+        <span class="lms-case-card__meta"><small>Детский центр</small><strong>«Умные дети»</strong><b>15 публикаций · 3 карусели</b></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= HERO ТЁМНЫЙ ================= -->
+<div class="kit-label"><b>Hero тёмный — вариант</b><span></span></div>
+<section class="lms-hero-dark">
+  <div class="lm-container">
+    <div class="lms-hero-dark__grid">
+      <div>
+        <div class="lms-hero-dark__card">
+          <h1>Ведём ваши социальные сети под ключ.</h1>
+          <span class="lms-price-pill">От 4990 ₽/мес</span>
+          <p>Контент, дизайн, публикация.<br>Делают живые люди, а не нейросеть.</p>
+        </div>
+        <div class="lms-hero-dark__badges">
+          <span class="lms-feature-pill"><span>📅</span> Работаем с 2020 года</span>
+          <span class="lms-feature-pill"><span>👥</span> 10 000+ клиентов</span>
+          <span class="lms-feature-pill"><span>🛡️</span> 14-дневная гарантия возврата</span>
+        </div>
+      </div>
+      <div class="lms-hero-dark__media">
+        <img src="assets/ksusha-workplace.jpg" alt="Ксюша - контент для соцсетей">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= БЕНТО-ФИЧИ ================= -->
+<div class="kit-label"><b>Бенто-фичи (пастель)</b><span></span></div>
+<section class="lms-section" style="padding-top:24px">
+  <div class="lm-container">
+    <div class="lms-section__head">
+      <span class="lm-eyebrow">Что входит в подписку</span>
+      <h2>Всё, что нужно вашим соцсетям</h2>
+      <p>Каждый блок — отдельная услуга. Собираются в подписку как конструктор.</p>
+    </div>
+    <div class="lms-bento">
+      <div class="lms-bento__card lms-bento__card--lemon lms-bento__card--wide">
+        <h3>Посты и карусели</h3>
+        <p>Тексты и дизайн в фирменном стиле. Один пост публикуем во все подключённые соцсети без доплаты.</p>
+        <div class="lms-bento__media"><div class="lms-shot">живой скриншот: лента постов клиента</div></div>
+      </div>
+      <div class="lms-bento__card lms-bento__card--purple">
+        <h3>Сторис</h3>
+        <p>Прогревающие истории по вашим фото и видео.</p>
+        <div class="lms-bento__media"><div class="lms-shot lms-shot--tall" style="max-width:150px;margin-inline:auto">сторис 9:16</div></div>
+      </div>
+      <div class="lms-bento__card lms-bento__card--dark">
+        <h3>Ролики</h3>
+        <p style="color:var(--lm-color-overlay-white-80)">Вертикальные видео для Reels, VK Клипов и Shorts.</p>
+        <div class="lms-bento__media"><div class="lms-shot" style="aspect-ratio:16/9">кадр ролика</div></div>
+      </div>
+      <div class="lms-bento__card lms-bento__card--gray">
+        <h3>AI-аватар</h3>
+        <p>Цифровой ведущий для видео — как наша Ксюша.</p>
+        <div class="lms-bento__media"><img src="assets/ksusha-master-web.jpg" alt="AI-аватар" style="aspect-ratio:16/9;object-fit:cover;object-position:top"></div>
+      </div>
+      <div class="lms-bento__card lms-bento__card--white">
+        <h3>Публикация</h3>
+        <p>Сами выкладываем по графику. ВКонтакте, Instagram, Telegram, MAX, Threads.</p>
+        <div class="lms-bento__media"><div class="lms-shot">календарь публикаций</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ФОРМУЛА + ВМЕСТО/СТАЛО ================= -->
+<div class="kit-label"><b>Формула ценности + полоса «вместо → стало»</b><span></span></div>
+<section style="padding: 24px 0">
+  <div class="lm-container" style="display:grid;gap:18px">
+    <div class="lms-equation" aria-label="Состав пакета из 10 постов">
+      <div class="lms-equation__part"><strong>10</strong><span>готовых постов</span></div>
+      <span class="lms-equation__op">×</span>
+      <div class="lms-equation__part"><strong>до 5</strong><span>площадок</span></div>
+      <span class="lms-equation__op">=</span>
+      <div class="lms-equation__part lms-equation__part--result"><strong>до 50</strong><span>размещений без доплаты</span></div>
+      <span class="lms-equation__op">+</span>
+      <div class="lms-equation__part"><strong>1</strong><span>менеджер и график</span></div>
+    </div>
+    <div class="lms-band">
+      <div class="lms-band__item"><span>Вместо хаоса</span><strong>Понятный план на месяц</strong></div>
+      <div class="lms-band__item"><span>Вместо вечеров с контентом</span><strong>Темы, тексты и дизайн на нас</strong></div>
+      <div class="lms-band__item"><span>Вместо ручных напоминаний</span><strong>Публикации выходят по графику</strong></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= СПЛИТ-СЕКЦИЯ ================= -->
+<div class="kit-label"><b>Сплит: текст + живой скриншот</b><span></span></div>
+<section class="lms-section" style="padding-top:0">
+  <div class="lm-container">
+    <div class="lms-split">
+      <div class="lms-split__text">
+        <span class="lm-eyebrow">Как мы работаем</span>
+        <h2>Вы согласовываете — мы делаем всё остальное</h2>
+        <p>Над вашими соцсетями работает команда: маркетолог, дизайнер и менеджер. Не один фрилансер и не нейросеть на потоке.</p>
+        <ul class="lms-split__list">
+          <li>Контент-план и тексты по вашей нише</li>
+          <li>Дизайн в фирменном стиле — не шаблоны</li>
+          <li>Два пакета правок в каждом месяце</li>
+          <li>Публикация по графику без вашего участия</li>
+        </ul>
+        <div class="lms-split__cta">
+          <a class="lm-btn lm-btn--primary" href="#">Получить разбор</a>
+          <a class="lm-btn lm-btn--ghost" href="#">Примеры контент-планов</a>
+        </div>
+      </div>
+      <div class="lms-split__media">
+        <div class="lms-browser">
+          <div class="lms-browser__bar">
+            <span class="lms-browser__dot"></span><span class="lms-browser__dot"></span><span class="lms-browser__dot"></span>
+            <span class="lms-browser__url">кабинет клиента</span>
+          </div>
+          <div class="lms-browser__body"><div class="lms-shot">живой скриншот кабинета:<br>план публикаций на месяц</div></div>
+        </div>
+      </div>
+    </div>
+    <div class="lms-split lms-split--reverse">
+      <div class="lms-split__text">
+        <span class="lm-eyebrow">Мобильно</span>
+        <h2>Соцсети растут — вы видите это с телефона</h2>
+        <p>Каждый пост согласовывается в один тап. Правки — прямо в чате с менеджером.</p>
+        <div class="lms-split__cta">
+          <a class="lm-btn lm-btn--purple" href="#">Попробовать</a>
+        </div>
+      </div>
+      <div class="lms-split__media">
+        <div class="lms-phone">
+          <div class="lms-phone__screen"><div class="lms-shot lms-shot--tall">живой скриншот:<br>согласование поста</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ТАБЫ-ГИД ================= -->
+<div class="kit-label"><b>Табы-гид (форматы / walkthrough)</b><span></span></div>
+<section class="lms-section" style="padding-top:0">
+  <div class="lm-container">
+    <div class="lms-section__head">
+      <span class="lm-eyebrow">Форматы</span>
+      <h2>Пост, карусель и сторис — в чём разница</h2>
+    </div>
+    <div class="lms-tabs" data-tabs>
+      <div class="lms-tabs__nav" role="tablist">
+        <button class="lms-tabs__btn is-active" role="tab" data-tab="t1"><span>01</span><div><strong>Пост — основа месяца</strong><small>Входит в пакет</small></div></button>
+        <button class="lms-tabs__btn" role="tab" data-tab="t2"><span>02</span><div><strong>Карусель усиливает пост</strong><small>+250 ₽ к выбранному посту</small></div></button>
+        <button class="lms-tabs__btn" role="tab" data-tab="t3"><span>03</span><div><strong>Сторис — мини-прогрев</strong><small>Пакетами по 5 кадров</small></div></button>
+      </div>
+      <div>
+        <div class="lms-tabs__panel is-active" data-panel="t1">
+          <figure>
+            <img class="lms-zoomable" src="assets/samples/case-saratov-01.webp" alt="Пример поста" style="width:100%;max-width:420px;border-radius:var(--lm-radius-md);box-shadow:var(--lm-shadow-card)">
+            <figcaption><b>Пост:</b> одна тема, текст и визуал. Работа маркетолога, дизайнера и публикация уже входят.</figcaption>
+          </figure>
+        </div>
+        <div class="lms-tabs__panel" data-panel="t2">
+          <figure>
+            <img class="lms-zoomable" src="assets/samples/case-borodulina.webp" alt="Пример карусели" style="width:100%;max-width:420px;border-radius:var(--lm-radius-md);box-shadow:var(--lm-shadow-card)">
+            <figcaption><b>Карусель:</b> когда одной картинки мало — раскрываем мысль до 7 слайдов.</figcaption>
+          </figure>
+        </div>
+        <div class="lms-tabs__panel" data-panel="t3">
+          <figure>
+            <img class="lms-zoomable" src="assets/samples/case-dobroe.webp" alt="Пример сторис" style="width:100%;max-width:420px;border-radius:var(--lm-radius-md);box-shadow:var(--lm-shadow-card)">
+            <figcaption><b>Сторис:</b> короткий путь — интерес → проблема → решение → доказательство → действие.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ШАГИ ================= -->
+<div class="kit-label"><b>Как это работает (шаги)</b><span></span></div>
+<section class="lms-section" style="padding-top:0">
+  <div class="lm-container">
+    <div class="lms-section__head">
+      <span class="lm-eyebrow">Старт за 3 дня</span>
+      <h2>Как это работает</h2>
+    </div>
+    <div class="lms-steps">
+      <div class="lms-steps__item">
+        <div class="lms-steps__num">1</div>
+        <h3>Бесплатный разбор</h3>
+        <p>Смотрим ваши соцсети глазами клиента и говорим, что мешает продавать. Без обязательств.</p>
+      </div>
+      <div class="lms-steps__item">
+        <div class="lms-steps__num">2</div>
+        <h3>Собираем подписку</h3>
+        <p>Выбираете состав: посты, сторис, ролики. Фиксированная цена — без сюрпризов.</p>
+      </div>
+      <div class="lms-steps__item">
+        <div class="lms-steps__num">3</div>
+        <h3>Контент выходит сам</h3>
+        <p>Согласовываете план — дальше публикации идут по графику. Ваше время свободно.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ПРАЙСИНГ ================= -->
+<div class="kit-label"><b>Прайсинг</b><span></span></div>
+<section class="lms-section" style="padding-top:0">
+  <div class="lm-container">
+    <div class="lms-section__head">
+      <span class="lm-eyebrow">Тарифы</span>
+      <h2>Подписка на посты</h2>
+      <p>Карусель — апгрейд поста за +250 ₽. Сторис и ролики добавляются отдельными пакетами.</p>
+    </div>
+    <div class="lms-pricing">
+      <div class="lms-price-card">
+        <div class="lms-price-card__plan">10 постов</div>
+        <div class="lms-price-card__price">4 990 ₽<small> /мес</small></div>
+        <div class="lms-price-card__per">≈ 499 ₽ за пост</div>
+        <ul class="lms-price-card__list">
+          <li>Тексты и дизайн</li>
+          <li>Публикация во все соцсети</li>
+          <li>2 пакета правок</li>
+        </ul>
+        <a class="lm-btn lm-btn--ghost" href="#">Выбрать</a>
+      </div>
+      <div class="lms-price-card">
+        <div class="lms-price-card__plan">15 постов</div>
+        <div class="lms-price-card__price">7 490 ₽<small> /мес</small></div>
+        <div class="lms-price-card__per">≈ 499 ₽ за пост</div>
+        <ul class="lms-price-card__list">
+          <li>Тексты и дизайн</li>
+          <li>Публикация во все соцсети</li>
+          <li>2 пакета правок</li>
+        </ul>
+        <a class="lm-btn lm-btn--ghost" href="#">Выбрать</a>
+      </div>
+      <div class="lms-price-card lms-price-card--featured">
+        <span class="lm-badge lm-badge--lemon lms-price-card__flag">Популярный</span>
+        <div class="lms-price-card__plan">20 постов</div>
+        <div class="lms-price-card__price">9 990 ₽<small> /мес</small></div>
+        <div class="lms-price-card__per">≈ 499 ₽ за пост</div>
+        <ul class="lms-price-card__list">
+          <li>Тексты и дизайн</li>
+          <li>Публикация во все соцсети</li>
+          <li>2 пакета правок</li>
+          <li>Приоритет в очереди</li>
+        </ul>
+        <a class="lm-btn lm-btn--primary" href="#">Выбрать</a>
+      </div>
+      <div class="lms-price-card">
+        <div class="lms-price-card__plan">30 постов</div>
+        <div class="lms-price-card__price">14 990 ₽<small> /мес</small></div>
+        <div class="lms-price-card__per">≈ 499 ₽ за пост</div>
+        <ul class="lms-price-card__list">
+          <li>Тексты и дизайн</li>
+          <li>Публикация во все соцсети</li>
+          <li>2 пакета правок</li>
+          <li>Приоритет в очереди</li>
+        </ul>
+        <a class="lm-btn lm-btn--ghost" href="#">Выбрать</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= СРАВНЕНИЕ ================= -->
+<div class="kit-label"><b>Сравнительная таблица</b><span></span></div>
+<section class="lms-section" style="padding-top:0">
+  <div class="lm-container">
+    <div class="lms-section__head">
+      <span class="lm-eyebrow">Сравнение</span>
+      <h2>Платить за нужный объём — или содержать весь процесс</h2>
+    </div>
+    <div class="lms-compare-wrap">
+      <table class="lms-compare">
+        <thead><tr><th>Вариант</th><th>Когда подходит</th><th>Что остаётся на владельце</th><th>Главное ограничение</th></tr></thead>
+        <tbody>
+          <tr><td>Делать самому</td><td>Есть время и навык</td><td>Темы, тексты, дизайн, график</td><td>Регулярность зависит от свободного времени</td></tr>
+          <tr><td>Фрилансер</td><td>Нужен один гибкий специалист</td><td>Постановка задачи и контроль</td><td>Качество зависит от его загрузки</td></tr>
+          <tr><td>Сотрудник в штат</td><td>Постоянный большой объём</td><td>Найм, управление, замена</td><td>Платите ставку, даже когда задач меньше</td></tr>
+          <tr class="is-ours"><td>lemonmedia · от 4 990 ₽</td><td>Нужны 10–30 постов каждый месяц</td><td>Факты о бизнесе и согласование</td><td>Не заменяет рекламу и отдел продаж</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ГАРАНТИЯ ================= -->
+<div class="kit-label"><b>Гарантия</b><span></span></div>
+<section class="lms-section" style="padding-top:0">
+  <div class="lm-container">
+    <div class="lms-guarantee">
+      <div class="lms-guarantee__mark">14<small>дней</small></div>
+      <div class="lms-guarantee__body">
+        <span class="lm-eyebrow">Гарантия первой партии</span>
+        <h2>Если после включённых правок первая партия не подойдёт — вернём оплату за неё</h2>
+        <ul class="lms-split__list">
+          <li>14 дней на проверку первой партии</li>
+          <li>2 круга правок по плану и текстам + 2 круга по визуалу</li>
+          <li>Возврат оплаты за первую партию по опубликованным условиям</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= МЕТРИКИ ================= -->
+<div class="kit-label"><b>Метрики (тёмная полоса)</b><span></span></div>
+<section class="lms-section" style="padding-top:0">
+  <div class="lm-container">
+    <div class="lms-metrics">
+      <div><div class="lms-metrics__value">10 000+</div><div class="lms-metrics__label">клиентов с 2020 года</div></div>
+      <div><div class="lms-metrics__value">6 лет</div><div class="lms-metrics__label">на рынке брендинга и SMM</div></div>
+      <div><div class="lms-metrics__value">80</div><div class="lms-metrics__label">человек в команде</div></div>
+      <div><div class="lms-metrics__value">14 дней</div><div class="lms-metrics__label">гарантия с настоящим возвратом</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ОТЗЫВЫ ================= -->
+<div class="kit-label"><b>Отзывы</b><span></span></div>
+<section class="lms-section" style="padding-top:0">
+  <div class="lm-container">
+    <div class="lms-section__head">
+      <span class="lm-eyebrow">Отзывы</span>
+      <h2>Что говорят клиенты</h2>
+    </div>
+    <div class="lms-reviews">
+      <div class="lms-review">
+        <div class="lms-review__stars">★★★★★</div>
+        <p class="lms-review__text">«Раньше посты выходили раз в месяц, когда доходили руки. Теперь лента живёт сама, а я занимаюсь кухней, а не контентом».</p>
+        <div class="lms-review__person">
+          <span class="lms-review__ava" style="background:var(--lm-color-lemon-100)">МА</span>
+          <div><div class="lms-review__name">Марина</div><div class="lms-review__role">кафе «Утро»</div></div>
+        </div>
+      </div>
+      <div class="lms-review">
+        <div class="lms-review__stars">★★★★★</div>
+        <p class="lms-review__text">«Дизайн узнают клиенты — говорят, „у вас красиво в профиле“. Для записи через соцсети это половина дела».</p>
+        <div class="lms-review__person">
+          <span class="lms-review__ava" style="background:var(--lm-color-purple-050)">ДК</span>
+          <div><div class="lms-review__name">Денис</div><div class="lms-review__role">Barbershop 13</div></div>
+        </div>
+      </div>
+      <div class="lms-review">
+        <div class="lms-review__stars">★★★★★</div>
+        <p class="lms-review__text">«Взяли на пробу 10 постов — через два месяца перешли на 20 и добавили сторис. Правки вносят быстро, без споров».</p>
+        <div class="lms-review__person">
+          <span class="lms-review__ava" style="background:var(--lm-color-surface)">ОС</span>
+          <div><div class="lms-review__name">Ольга</div><div class="lms-review__role">клиника «Смайл»</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ФОРМА ================= -->
+<div class="kit-label"><b>Форма (поля и состояния)</b><span></span></div>
+<section class="lms-section" style="padding-top:0">
+  <div class="lm-container">
+    <div class="lms-split">
+      <div class="lms-split__text">
+        <span class="lm-eyebrow">Заявка</span>
+        <h2>Получите бесплатный разбор ваших соцсетей</h2>
+        <p>Пройдём по профилю по 5 пунктам и скажем, что улучшить первым — даже если не станете клиентом.</p>
+      </div>
+      <div class="lm-card" style="padding:32px">
+        <div style="display:grid;gap:18px">
+          <div class="lms-field">
+            <label class="lms-field__label">Ваше имя</label>
+            <input class="lms-input" type="text" placeholder="Иван">
+          </div>
+          <div class="lms-field">
+            <label class="lms-field__label">Телефон или Telegram</label>
+            <input class="lms-input" type="text" placeholder="+7 900 000-00-00">
+          </div>
+          <div class="lms-field lms-field--error">
+            <label class="lms-field__label">Ссылка на соцсеть</label>
+            <input class="lms-input" type="text" value="vk.com/">
+            <span class="lms-field__error">Добавьте адрес вашей группы после vk.com/</span>
+          </div>
+          <div class="lms-field">
+            <label class="lms-field__label">Сфера бизнеса</label>
+            <select class="lms-select">
+              <option>Общепит</option><option>Бьюти</option><option>Услуги</option><option>Ритейл</option><option>Другое</option>
+            </select>
+          </div>
+          <label class="lms-check">
+            <input type="checkbox" checked>
+            <span>Согласен на обработку персональных данных</span>
+          </label>
+          <button class="lm-btn lm-btn--primary" type="button">Получить разбор</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<div class="kit-label"><b>FAQ (аккордеон)</b><span></span></div>
+<section class="lms-section" style="padding-top:0">
+  <div class="lm-container">
+    <div class="lms-section__head">
+      <span class="lm-eyebrow">Вопросы</span>
+      <h2>Частые вопросы</h2>
+    </div>
+    <div class="lms-faq">
+      <details open>
+        <summary>Что если контент не понравится?</summary>
+        <div class="lms-faq__body">В каждом месяце два пакета правок - доводим до «нравится». А в первые 14 дней действует гарантия с настоящим возвратом денег.</div>
+      </details>
+      <details>
+        <summary>В какие соцсети публикуете?</summary>
+        <div class="lms-faq__body">ВКонтакте, Instagram, Telegram, MAX и Threads. Один пост выходит во все подключённые площадки без доплаты.</div>
+      </details>
+      <details>
+        <summary>Кто будет делать контент?</summary>
+        <div class="lms-faq__body">Команда: маркетолог, дизайнер и менеджер. Живые люди, а не нейросеть на потоке - и это видно по контенту.</div>
+      </details>
+      <details>
+        <summary>Вы гарантируете заявки и продажи?</summary>
+        <div class="lms-faq__body">Нет. Мы отвечаем за регулярный качественный контент и порядок в соцсетях. Обещать заявки в подписке на контент - обман.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CTA ================= -->
+<div class="kit-label"><b>CTA-полоса</b><span></span></div>
+<section class="lms-section" style="padding-top:0">
+  <div class="lm-container">
+    <div class="lms-cta">
+      <h2>Соцсети могут работать. <span class="lm-mark-lemon">Начните с разбора.</span></h2>
+      <p>Бесплатно пройдём по вашему профилю по 5 пунктам и скажем, что улучшить первым.</p>
+      <div class="lms-cta__actions">
+        <a class="lm-btn lm-btn--primary" href="#">Получить разбор</a>
+        <a class="lm-btn lm-btn--ghost" href="#">Посмотреть тарифы</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ФУТЕР ================= -->
+<footer class="lms-footer">
+  <div class="lm-container">
+    <div class="lms-footer__grid">
+      <div>
+        <img class="lms-footer__logo" src="../logo-white.svg" alt="lemonmedia">
+        <p class="lms-footer__about">Подписка на ведение соцсетей под ключ. Контент, дизайн, публикация - делают живые люди.</p>
+        <div class="lms-footer__social">
+          <a href="#" aria-label="ВКонтакте">VK</a>
+          <a href="#" aria-label="Telegram">TG</a>
+          <a href="#" aria-label="Instagram">IG</a>
+          <a href="#" aria-label="YouTube">YT</a>
+        </div>
+      </div>
+      <div class="lms-footer__col">
+        <b>Услуги</b>
+        <a href="#">Посты и карусели</a>
+        <a href="#">Сторис</a>
+        <a href="#">Ролики</a>
+        <a href="#">AI-аватар</a>
+      </div>
+      <div class="lms-footer__col">
+        <b>Компания</b>
+        <a href="#">О нас</a>
+        <a href="#">Примеры работ</a>
+        <a href="#">Отзывы</a>
+        <a href="#">Вакансии</a>
+      </div>
+      <div class="lms-footer__col">
+        <b>Контакты</b>
+        <a href="#">Написать в Telegram</a>
+        <a href="#">Написать в VK</a>
+        <a href="#">hello@lemon-media.ru</a>
+      </div>
+    </div>
+    <div class="lms-footer__bottom">
+      <span>© 2020-2026 lemonmedia</span>
+      <span>Политика конфиденциальности · Оферта</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Лайтбокс для скриншотов и работ -->
+<dialog class="lms-lightbox" id="lightbox">
+  <div class="lms-lightbox__bar">
+    <strong id="lightbox-title">Работа lemonmedia</strong>
+    <button type="button" onclick="document.getElementById('lightbox').close()">Закрыть ✕</button>
+  </div>
+  <img id="lightbox-img" src="" alt="">
+</dialog>
+
+<script>
+  // Табы
+  document.querySelectorAll('[data-tabs]').forEach(root => {
+    root.querySelectorAll('[data-tab]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        root.querySelectorAll('[data-tab]').forEach(b => b.classList.toggle('is-active', b === btn));
+        root.querySelectorAll('[data-panel]').forEach(p =>
+          p.classList.toggle('is-active', p.dataset.panel === btn.dataset.tab));
+      });
+    });
+  });
+  // Лайтбокс
+  const lb = document.getElementById('lightbox'), lbImg = document.getElementById('lightbox-img');
+  document.querySelectorAll('.lms-zoomable').forEach(img => {
+    img.addEventListener('click', () => {
+      lbImg.src = img.src; lbImg.alt = img.alt;
+      document.getElementById('lightbox-title').textContent = img.alt || 'Работа lemonmedia';
+      lb.showModal();
+    });
+  });
+  lb?.addEventListener('click', e => { if (e.target === lb) lb.close(); });
+</script>
+
+</body>
+</html>

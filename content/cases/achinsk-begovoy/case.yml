@@ -1,0 +1,98 @@
+version: 1
+brand: lemonmedia
+id: achinsk-begovoy
+slug: achinsk-begovoy
+language: ru
+
+identity:
+  public_title: "Ачинск Беговой — контент-план перед городским забегом"
+  client_display_name: "Ачинск Беговой"
+  period: "2026-08"
+  release_window: "2026-08-01/2026-08-28"
+  niche: sport-and-events
+  subniche: running-club-and-local-race
+  geography: achinsk
+
+summary:
+  short: "Десять публикаций перед ежегодным забегом: история события, ответы новичкам, практическая карусель и последовательные переходы к регистрации."
+  content_task: "Разогреть интерес перед забегом 6 сентября, показать атмосферу прошлых стартов, снять сомнения начинающих и объяснить условия участия."
+  result_wording: "Утверждены контент-план и тексты. Подготовлены 8 одиночных постов, 2 основные карусели и отдельная подарочная карусель — 29 визуалов. Комплект прошёл внутреннюю проверку и был загружен черновиками для ВКонтакте, MAX и Одноклассников. Фактический выход публикаций и бизнес-метрики не подтверждены."
+
+scope:
+  scheduled_publications: 10
+  bonus_publications: 1
+  total_content_units: 11
+  static_posts: 8
+  scheduled_carousel_publications: 2
+  bonus_carousel_publications: 1
+  total_carousel_publications: 3
+  carousel_slides: 21
+  source_visual_files: 29
+  web_visual_files: 29
+  source_dimensions: "1080 × 1350"
+  web_dimensions: "720 × 900"
+  draft_platform_count: 3
+  draft_platform_ids:
+    - vk
+    - max
+    - ok
+  platform_status: drafts-uploaded-publication-unconfirmed
+
+featured_goals:
+  - build-event-awareness
+  - remove-beginner-fears
+  - explain-event-conditions
+  - show-community-atmosphere
+  - build-trust
+  - lead-to-registration
+
+evidence:
+  confirmed:
+    - "Публичное название проекта: Ачинск Беговой."
+    - "Контент-план и тексты утверждены."
+    - "Основной пакет содержит 10 публикаций: 8 статичных постов и 2 карусели по 7 слайдов."
+    - "Пост №10 является статичным постом, а не каруселью."
+    - "Дополнительно подготовлена подарочная карусель из 7 слайдов."
+    - "В финальной папке 29 PNG размером 1080 × 1350 px."
+    - "Визуал прошёл внутреннюю проверку и был передан в систему публикации."
+    - "Черновики загружены для ВКонтакте, MAX и Одноклассников на период с 1 по 28 августа в 10:00."
+  not_claimed:
+    - "Прямое финальное утверждение дизайна клиентом."
+    - "Фактический выход всех десяти публикаций."
+    - "Охваты, просмотры, вовлечённость или рост подписчиков."
+    - "Количество регистраций, проданных мест, заявок или выручка."
+    - "Причинная связь между контентом и коммерческими показателями забега."
+    - "Актуальность чисел, дат и условий внутри исторических макетов после периода кампании."
+  public_links: null
+  direct_publication_links: null
+  analytics: null
+  client_review: null
+
+quality_control:
+  content_plan_approval: confirmed
+  internal_visual_review: confirmed
+  client_visual_approval: not-recorded
+  draft_calendar: confirmed
+  publication_launch: not-confirmed
+  verified_format_correction:
+    publication: 10
+    incorrect_label: "Карусель"
+    verified_format: static-post
+    source: "Финальная папка содержит один макет поста №10."
+
+publication_control:
+  portfolio_permission: confirmed_by_project_owner
+  final_media: ready
+  drafts_uploaded_platforms:
+    - vk
+    - max
+    - ok
+  publishable: true
+  display_notes:
+    - "Все посты и слайды показывать в формате 4:5 без обрезки."
+    - "Подарочную карусель отделять от десяти основных публикаций."
+    - "Не называть черновики опубликованными постами."
+    - "Не писать, что клиент финально утвердил дизайн."
+    - "Числа и условия внутри макетов относятся к периоду кампании и не являются текущей офертой."
+    - "Не добавлять количественные бизнес-результаты без отдельной аналитики."
+

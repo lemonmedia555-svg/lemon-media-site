@@ -1,0 +1,148 @@
+version: 1
+brand: lemonmedia
+case_id: casahitto
+period: "2026-07"
+language: ru
+
+scope:
+  core_publications: 10
+  bonus_publications: 1
+  static_posts: 8
+  core_carousel_publications: 2
+  bonus_carousel_publications: 1
+  carousel_slides: 21
+  visual_files: 29
+
+claim_rule: "Цели описывают маркетинговую задачу контента, а не доказанный коммерческий результат. Подтверждены утверждение и передача комплекта в публикацию во ВКонтакте; календарь, фактический выход и метрики не подтверждены."
+
+schedule:
+  platform: vk
+  status: handed-off-calendar-unavailable
+  start_date: null
+  end_date: null
+  publication_time: null
+  actual_publication: unconfirmed
+  bonus_carousel_in_main_ten: false
+
+publications:
+  - number: 1
+    id: publication-01
+    format: static-post
+    category: property-showcase
+    title: "Вилла Ромашки — новый дом"
+    asset: "assets/cases/casahitto/posts/01.jpg"
+    goals: [show-property, build-interest]
+
+  - number: 2
+    id: publication-02
+    format: static-post
+    category: use-cases
+    title: "5 поводов собраться за городом"
+    asset: "assets/cases/casahitto/posts/02.jpg"
+    goals: [inspire-occasion, build-interest]
+
+  - number: 3
+    id: publication-03
+    format: static-post
+    category: objection
+    title: "А шуметь у вас можно?"
+    asset: "assets/cases/casahitto/posts/03.jpg"
+    goals: [remove-rule-objection, explain-format]
+
+  - number: 4
+    id: publication-04
+    format: static-post
+    category: property-showcase
+    title: "Сярьги SPA — простор для большой компании"
+    asset: "assets/cases/casahitto/posts/04.jpg"
+    goals: [show-property, help-property-choice]
+
+  - number: 5
+    id: publication-05
+    format: static-post
+    category: seasonal-offer
+    title: "Успеть поймать остаток лета"
+    asset: "assets/cases/casahitto/posts/05.jpg"
+    historical_terms: true
+    goals: [create-seasonal-urgency, lead-to-booking]
+
+  - number: 6
+    id: publication-06
+    format: carousel
+    slide_count: 7
+    category: useful
+    title: "Что взять с собой в загородный дом"
+    goals: [explain-preparation, encourage-saves]
+    assets:
+      - "assets/cases/casahitto/carousels/06/01.jpg"
+      - "assets/cases/casahitto/carousels/06/02.jpg"
+      - "assets/cases/casahitto/carousels/06/03.jpg"
+      - "assets/cases/casahitto/carousels/06/04.jpg"
+      - "assets/cases/casahitto/carousels/06/05.jpg"
+      - "assets/cases/casahitto/carousels/06/06.jpg"
+      - "assets/cases/casahitto/carousels/06/07.jpg"
+
+  - number: 7
+    id: publication-07
+    format: static-post
+    category: objection
+    title: "Только для своих? Не про нас"
+    asset: "assets/cases/casahitto/posts/07.jpg"
+    goals: [remove-exclusivity-objection, build-trust]
+
+  - number: 8
+    id: publication-08
+    format: carousel
+    slide_count: 7
+    category: property-overview
+    title: "Коттедж CasaHitto — обзор"
+    goals: [show-property, help-property-choice]
+    assets:
+      - "assets/cases/casahitto/carousels/08/01.jpg"
+      - "assets/cases/casahitto/carousels/08/02.jpg"
+      - "assets/cases/casahitto/carousels/08/03.jpg"
+      - "assets/cases/casahitto/carousels/08/04.jpg"
+      - "assets/cases/casahitto/carousels/08/05.jpg"
+      - "assets/cases/casahitto/carousels/08/06.jpg"
+      - "assets/cases/casahitto/carousels/08/07.jpg"
+
+  - number: 9
+    id: publication-09
+    format: static-post
+    category: partner-offer
+    title: "Пейнтбол + коттедж = баня в подарок"
+    asset: "assets/cases/casahitto/posts/09.jpg"
+    historical_terms: true
+    goals: [show-offer, lead-to-booking]
+
+  - number: 10
+    id: publication-10
+    format: static-post
+    category: faq
+    title: "Хороший отдых любит подготовку"
+    asset: "assets/cases/casahitto/posts/10.jpg"
+    goals: [explain-preparation, build-trust]
+
+bonus:
+  - id: bonus-carousel-01
+    format: carousel
+    slide_count: 7
+    category: choice-guide
+    title: "Какой из трёх домов — ваш?"
+    calendar_status: separate-from-main-ten
+    goals: [help-property-choice, encourage-saves, lead-to-booking]
+    assets:
+      - "assets/cases/casahitto/carousels/bonus/01.jpg"
+      - "assets/cases/casahitto/carousels/bonus/02.jpg"
+      - "assets/cases/casahitto/carousels/bonus/03.jpg"
+      - "assets/cases/casahitto/carousels/bonus/04.jpg"
+      - "assets/cases/casahitto/carousels/bonus/05.jpg"
+      - "assets/cases/casahitto/carousels/bonus/06.jpg"
+      - "assets/cases/casahitto/carousels/bonus/07.jpg"
+
+asset_display_notes:
+  aspect_ratio: "4:5"
+  crop: false
+  source_dimensions: "1080 × 1350"
+  web_dimensions: "720 × 900"
+  historical_commercial_terms: "Предложения и условия внутри макетов относятся к июлю 2026 года и не являются текущей офертой."

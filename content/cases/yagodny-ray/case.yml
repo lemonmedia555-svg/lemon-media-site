@@ -1,0 +1,111 @@
+version: 1
+brand: lemonmedia
+id: yagodny-ray
+slug: yagodny-ray
+language: ru
+
+identity:
+  public_title: "Ягодный Рай — 5 постов и карусель для сезонного продукта"
+  client_display_name: "Ягодный Рай"
+  period: "2026-07"
+  release_window: "2026-07-31/2026-08-08"
+  niche: food-and-hospitality
+
+summary:
+  short: "Сезонная цепочка контента для фермерского бренда: знакомство с хозяйством, польза, вовлечение, социальное доказательство и прямое предложение."
+  content_task: "Быстро усилить доверие к действующему фермерскому проекту, показать ассортимент и подвести аудиторию к обращению без обещаний коммерческого результата."
+  result_wording: "Подготовлены и утверждены 5 постов и подарочная карусель из 6 слайдов. Комплект прошёл два круга правок и был передан в планирование публикаций. Продление на 30 постов, из них 10 каруселей, находится в производстве и в результат этого кейса не включено."
+
+scope:
+  publications: 6
+  static_posts: 5
+  carousel_publications: 1
+  carousel_slides: 6
+  stories_sequences: 0
+  stories_frames: 0
+  visual_files: 11
+  platform_count: 2
+  platform_ids:
+    - vk
+    - odnoklassniki
+  platform_names_status: verified_from_draft_upload_report
+  package_note: "Пять постов составили основной пакет; карусель была подготовлена дополнительно в подарок."
+
+schedule:
+  start_date: "2026-07-31"
+  end_date: "2026-08-08"
+  cadence_days: 2
+  time_local: "10:00"
+  timezone_status: not-recorded
+  status: drafts-scheduled-from-work-task
+  direct_publication_links_status: not-recorded
+
+category_distribution:
+  useful: 1
+  work-showcase: 2
+  product-showcase: 1
+  myths: 1
+  offer: 1
+
+featured_goals:
+  - build-trust
+  - encourage-saves
+  - show-expertise
+  - create-purchase-desire
+  - help-choice
+  - lead-request
+
+carousel:
+  sequence_id: bonus-carousel-01
+  relation_to_package: gift-beyond-five-posts
+  frames: 6
+  narrative: "Сезон открыт → клубника → самосбор → рассада → варенье → помощь с выбором."
+
+renewal:
+  task_id: 90886
+  ordered_posts: 30
+  carousel_publications: 10
+  status: in-production
+  final_materials: null
+  included_in_case_result: false
+  checked_at: "2026-08-05"
+
+evidence:
+  confirmed:
+    - "Публичный бренд: Ягодный Рай."
+    - "Ниша: клубника, рассада, варенье и самосбор."
+    - "В утверждённом контент-плане 5 постов и одна подарочная карусель из 6 слайдов."
+    - "Подготовлено 11 финальных изображений в едином формате 1080 × 1350 пикселей."
+    - "24 июля 2026 года клиент подтвердил финальный пакет и разрешил переходить к публикации."
+    - "Последняя правка карусели внесена в третий слайд; в комплекте сохранена именно исправленная версия."
+    - "В рабочем отчёте зафиксирована загрузка 5 постов черновиками во ВКонтакте и Одноклассники."
+    - "Заказ на продолжение из 30 постов и 10 каруселей принят в производство, но ещё не завершён."
+  not_claimed:
+    - "Продажи, заявки, выручка и окупаемость."
+    - "Рост охватов, подписчиков и вовлечённости."
+    - "Причинная связь между контентом и бизнес-показателями."
+    - "Независимо проверенная публикация всех пяти материалов по прямым ссылкам."
+    - "Размещение этого комплекта на пяти площадках."
+    - "Завершение продления на 30 постов и 10 каруселей."
+  public_links:
+    - label: "Проект ВКонтакте"
+      url: "https://vk.ru/klubnika21cheb"
+  analytics: null
+  client_review: null
+
+publication_control:
+  portfolio_permission: confirmed_by_project_owner
+  final_media: ready
+  public_links: partial
+  recognizable_people_assets:
+    - "posts/04.jpg"
+  recognizable_people_use_basis: confirmed_by_project_owner
+  historical_terms_visible_in_assets:
+    - "posts/05.jpg"
+    - "carousels/01/02.jpg"
+    - "carousels/01/03.jpg"
+  display_notes:
+    - "Коммерческие условия на изображениях относятся к периоду производства кейса и не являются текущим предложением."
+    - "В посте 04 присутствует миниатюра публичного отзыва; при отдельной рекламной кампании стоит дополнительно проверить необходимость редактирования ника и аватара."
+    - "Все изображения имеют формат 4:5 и должны показываться без обрезки."
+  publishable: true

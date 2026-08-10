@@ -1,0 +1,76 @@
+version: 1
+brand: lemonmedia
+case:
+  id: dava-life
+  slug: dava-life
+  public_name: "Dava Life"
+  page: "case-dava-life.html"
+  status: published-curated
+  case_type: compact-with-version-control
+  period: "2026-07/2026-08"
+  release_window: null
+  niche: health-and-wellness-products
+  subniche: peptide-and-wellness-products
+
+summary:
+  short: "Сложную продуктовую линейку превратили в понятный месяц: польза, разбор сомнений, витрина товаров и путь к выбору."
+  content_task: "Подогреть интерес к продуктам, объяснить линейку простым языком и снять барьер выбора и заказа."
+  result_wording: "Подготовлены 10 публикаций и 5 историй. После поздних комментариев тексты и часть визуалов синхронизированы заново; финальный визуал утверждён и передан на этап постинга."
+
+scope:
+  publications: 10
+  static_posts: 10
+  stories_sequences: 1
+  stories_frames: 5
+  final_materials: 15
+  first_export_visual_files: 15
+  public_stable_post_visuals: 5
+  public_visual_files: 5
+  prepared_platform_count: 1
+  prepared_platform_ids:
+    - vk
+
+featured_goals:
+  - explain-complex-product
+  - build-category-understanding
+  - handle-skepticism
+  - show-product-line
+  - help-product-choice
+  - remove-order-barrier
+
+evidence:
+  confirmed:
+    - "Пакет содержит 10 статичных публикаций и 5 связанных историй."
+    - "Контент-план состоит из пяти полезных тем, трёх разборов мифов и двух продуктовых витрин."
+    - "После дополнительных комментариев переработаны тексты и часть визуалов."
+    - "Финальная версия в Figma получила прямое подтверждение «всё супер»."
+    - "Проект переведён на этап загрузки в постинг."
+    - "Создан новый заказ на следующий месяц; производство ещё не начато."
+  not_claimed:
+    - "Повторная загрузка исправленного комплекта и фактический выход всех материалов."
+    - "Охваты, обращения, продажи или окупаемость."
+    - "Лечебный, профилактический или гарантированный эффект продукции."
+  public_links: null
+  direct_publication_links: null
+  analytics: null
+
+editorial_control:
+  public_post_ids: [1, 2, 3, 6, 9]
+  withheld_post_ids: [4, 5, 7, 8, 10]
+  withheld_stories: 5
+  reason: "Исправленные версии подтверждены в Figma, но не выгружены в доступную финальную папку Битрикс."
+  rule: "Показывать только макеты, которых не касался последний список правок."
+
+publication_control:
+  portfolio_permission: confirmed_by_project_owner
+  client_copy_approval: confirmed-after-revision
+  client_visual_approval: confirmed-after-revision
+  transferred_to_posting: confirmed
+  publication_launch: not-confirmed-after-final-revision
+  renewal_order: accepted-not-produced
+  publishable: true
+  display_notes:
+    - "Показывать пять стабильных примеров, не затронутых финальными правками."
+    - "Не выдавать новый заказ за выполненный второй месяц."
+    - "Не пересказывать продуктовые обещания как позицию lemonmedia."
+

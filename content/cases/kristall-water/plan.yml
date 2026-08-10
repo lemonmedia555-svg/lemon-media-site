@@ -1,0 +1,56 @@
+version: 1
+brand: lemonmedia
+case_id: kristall-water
+language: ru
+
+claim_rule: "Тексты утверждены; дизайн показан как версия на этапе правок. Финальное согласование, публикация, актуальность исторических условий и коммерческие метрики не заявляются."
+
+web_assets:
+  format: jpeg
+  dimensions: "720 × 900"
+  aspect_ratio: "4:5"
+  crop: false
+
+package:
+  publications: 10
+  static_posts: 10
+  bonus_carousels: 1
+  bonus_carousel_slides: 7
+  available_visual_files: 17
+  platforms: [vk, max]
+
+publications:
+  - { number: 1, format: static-post, role: behind-the-scenes, title: "Кто мы и с чего начинали", goal: "Знакомство и доверие", asset: "assets/cases/kristall-water/posts/01.jpg" }
+  - { number: 2, format: static-post, role: useful, title: "Кессон: когда он нужен и какой выбрать", goal: "Объяснить выбор и снять страх лишних расходов", asset: "assets/cases/kristall-water/posts/02.jpg" }
+  - { number: 3, format: static-post, role: portfolio, title: "Было: вода привозная. Стало: вода в доме, как в квартире", goal: "Показать понятный результат работы", asset: "assets/cases/kristall-water/posts/03.jpg" }
+  - { number: 4, format: static-post, role: engagement, title: "Зачем вообще нужна скважина", goal: "Начать диалог с владельцами участков", asset: "assets/cases/kristall-water/posts/04.jpg" }
+  - { number: 5, format: static-post, role: offer, title: "Забудьте про бутыли навсегда", goal: "Предложение комплекса в период кампании", asset: "assets/cases/kristall-water/posts/05.jpg", historical_terms: true }
+  - { number: 6, format: static-post, role: useful, title: "Одна компания и одна гарантия на весь комплекс", goal: "Показать ценность единого исполнителя", asset: "assets/cases/kristall-water/posts/06.jpg" }
+  - { number: 7, format: static-post, role: social-proof, title: "Опыт через географию выполненных объектов", goal: "Подтвердить практическое знание региона", asset: "assets/cases/kristall-water/posts/07.jpg", historical_metric: true }
+  - { number: 8, format: static-post, role: useful, title: "Что будет со скважиной без утепления к зиме", goal: "Предупредить риск и объяснить правильное обустройство", asset: "assets/cases/kristall-water/posts/08.jpg" }
+  - { number: 9, format: static-post, role: portfolio, title: "Скважины для застройщиков", goal: "Показать B2B-направление", asset: "assets/cases/kristall-water/posts/09.jpg" }
+  - { number: 10, format: static-post, role: offer, title: "Напоминание об условиях кампании", goal: "Перевести интерес в расчёт", asset: "assets/cases/kristall-water/posts/10.jpg", historical_terms: true }
+
+bonus:
+  format: carousel
+  title: "Из чего складывается цена скважины"
+  role: useful
+  goal: "Разобрать смету по позициям и подготовить человека к предметному расчёту"
+  slide_count: 7
+  separate_calendar_slot: unconfirmed
+  status: design-version-under-revision
+  slides:
+    - { number: 1, purpose: "Хук: цена — не только стоимость метра", asset: "assets/cases/kristall-water/carousel/01.jpg" }
+    - { number: 2, purpose: "Показать структуру сметы", asset: "assets/cases/kristall-water/carousel/02.jpg" }
+    - { number: 3, purpose: "Дальность, грунт и материал обсадки", asset: "assets/cases/kristall-water/carousel/03.jpg" }
+    - { number: 4, purpose: "Кессон как отдельная статья", asset: "assets/cases/kristall-water/carousel/04.jpg" }
+    - { number: 5, purpose: "Подключение к дому", asset: "assets/cases/kristall-water/carousel/05.jpg" }
+    - { number: 6, purpose: "Что спросить при цене «от»", asset: "assets/cases/kristall-water/carousel/06.jpg" }
+    - { number: 7, purpose: "Финальный результат: вода на участке", asset: "assets/cases/kristall-water/carousel/07.jpg" }
+
+display_notes:
+  - "Все 17 изображений показываются в пропорции 4:5 без обрезки."
+  - "Подарочная карусель показана отдельно от десяти основных публикаций."
+  - "Макеты 5 и 10 содержат исторические условия кампании, не текущую оферту."
+  - "Макет 7 содержит цифру периода, которая не заявляется как актуальная сегодня."
+  - "Весь визуал маркируется как версия на этапе правок."

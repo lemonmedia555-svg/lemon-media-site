@@ -1,0 +1,55 @@
+/*
+  Shared case template.
+  The approved Saratov case is the visual source of truth.
+  Project pages override only the --case-project-* variables on <body>.
+*/
+@import url("./case-saratov-approved.css?v=17");
+
+.lm-case-study .case-empty {
+  display: grid;
+  min-height: 260px;
+  place-items: center;
+  padding: 32px;
+  border: 1px solid rgba(255, 255, 255, .12);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, .04);
+  color: rgba(255, 255, 255, .68);
+  text-align: center;
+}
+
+.lm-case-study .case-template-note {
+  color: rgba(255, 255, 255, .64);
+}
+
+/* Lean case pilot: one strong cover, the complete work and one next step. */
+.lm-case-study.lm-case-lean #case-product {
+  margin-top: 96px;
+  margin-bottom: 96px;
+}
+
+.lm-case-study.lm-case-lean .case-tab-list {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  width: min(430px, 100%);
+}
+
+.lm-case-study.lm-case-lean .final-cta h2 {
+  max-width: 840px;
+}
+
+.lm-case-study.lm-case-lean .final-cta .lead {
+  max-width: 620px;
+}
+
+@media (max-width: 900px) {
+  .lm-case-study.lm-case-lean #case-product {
+    margin-top: 72px;
+    margin-bottom: 72px;
+  }
+}
+
+@media (max-width: 620px) {
+  .lm-case-study.lm-case-lean #case-product {
+    margin-top: 48px;
+    margin-bottom: 48px;
+  }
+}

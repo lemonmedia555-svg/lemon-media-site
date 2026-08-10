@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Стандарт сайта lemonmedia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="design-system/tokens.css">
+  <style>
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; color: #09090b; background: #f4f6fa; font-family: Manrope, sans-serif; }
+    a { color: inherit; }
+    img { display: block; max-width: 100%; }
+    h1, h2, h3, p { margin: 0; }
+    .shell { width: min(1328px, calc(100% - 48px)); margin-inline: auto; }
+    .top-note { padding: 10px 24px; background: #eecb03; color: #000; text-align: center; font-size: 12px; font-weight: 800; }
+    .site-header { position: relative; z-index: 10; padding-top: 12px; }
+    .header-row { display: flex; min-height: 64px; align-items: center; width: min(1328px, calc(100% - 40px)); margin-inline: auto; padding: 8px 10px 8px 20px; border: 1px solid #ebebee; border-radius: 100px; background: rgba(255,255,255,.94); box-shadow: 0 2px 16px rgba(16,24,40,.08); }
+    .brand-image { flex: 0 0 auto; width: 156px; }
+    .main-nav { display: flex; flex: 1; align-items: center; gap: 18px; margin-left: 20px; }
+    .main-nav a { font-size: 14px; font-weight: 700; text-decoration: none; }
+    .main-nav a:hover { color: #7d00ea; }
+    .nav-cta { display: inline-flex; min-height: 40px; align-items: center; justify-content: center; margin-left: auto; padding: 9px 15px; border-radius: 100px; background: #eecb03; box-shadow: 0 10px 28px -8px rgba(238,203,3,.45); color: #000; }
+    .menu-button { display: none; margin-left: auto; padding: 9px 12px; border: 1px solid #09090b; border-radius: 10px; background: transparent; font-weight: 800; }
+    .intro { padding: 104px 0 92px; }
+    .intro-grid { display: grid; grid-template-columns: minmax(0, .95fr) minmax(360px, .55fr); gap: 90px; align-items: end; }
+    .eyebrow { color: #7d00ea; font-size: 13px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+    h1 { max-width: 860px; margin-top: 18px; font-size: clamp(52px, 5.2vw, 76px); line-height: .97; letter-spacing: -.06em; }
+    .intro-copy { max-width: 470px; color: #5e5e66; font-size: 18px; line-height: 1.65; }
+    .status-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 32px; }
+    .status { padding: 8px 12px; border-radius: 100px; font-size: 12px; font-weight: 800; }
+    .status--yes { background: #e6f4e8; }
+    .status--work { background: #fff3c4; }
+    .status--lock { background: #f4e8ff; }
+    .section { padding: 112px 0; background: #fff; }
+    .section--cool { background: #f4f6fa; }
+    .section--soft-purple { background: #f4e8ff; }
+    .section-head { display: grid; grid-template-columns: minmax(0, 1fr) minmax(300px, .42fr); gap: 64px; align-items: end; margin-bottom: 54px; }
+    h2 { max-width: 900px; margin-top: 14px; font-size: clamp(46px, 4.4vw, 68px); line-height: 1; letter-spacing: -.055em; }
+    .section-head > p { color: #5e5e66; font-size: 17px; line-height: 1.6; }
+    .demo-frame { padding: 42px; border: 1px solid #e2e2e6; border-radius: 32px; background: #fff; box-shadow: 0 3px 14px rgba(0,0,0,.06); }
+    .dark-demo { padding: 48px 24px; border-radius: 28px; background: radial-gradient(circle at 90% 10%, rgba(238,203,3,.25), transparent 35%), #09090b; }
+    .dark-demo .header-row { background: rgba(20,20,23,.86); border-color: rgba(255,255,255,.15); }
+    .dark-demo .main-nav a { color: #fff; }
+    .dark-demo .menu-button { color: #fff; border-color: #fff; }
+    .note-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 20px; }
+    .note-grid article { min-height: 150px; padding: 24px; border-radius: 20px; background: #f4f6fa; }
+    .note-grid strong { display: block; font-size: 18px; }
+    .note-grid p { margin-top: 9px; color: #5e5e66; font-size: 14px; line-height: 1.55; }
+    .type-grid { display: grid; gap: 0; border: 1px solid #e2e2e6; border-radius: 28px; overflow: hidden; }
+    .type-row { display: grid; grid-template-columns: 170px 1fr; gap: 32px; align-items: baseline; padding: 30px; background: #fff; }
+    .type-row + .type-row { border-top: 1px solid #e2e2e6; }
+    .type-row span { color: #8a8a93; font-size: 12px; font-weight: 800; text-transform: uppercase; }
+    .sample-h1 { font-size: clamp(48px, 5vw, 72px); font-weight: 800; line-height: .98; letter-spacing: -.055em; }
+    .sample-h2 { font-size: clamp(42px, 4.3vw, 58px); font-weight: 800; line-height: 1; letter-spacing: -.05em; }
+    .sample-h3 { font-size: 30px; font-weight: 800; line-height: 1.08; letter-spacing: -.035em; }
+    .sample-lead { font-size: 20px; line-height: 1.55; }
+    .sample-body { font-size: 18px; line-height: 1.6; }
+    .color-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+    .swatch { display: flex; min-height: 190px; justify-content: space-between; flex-direction: column; padding: 22px; border: 1px solid rgba(0,0,0,.08); border-radius: 24px; }
+    .swatch strong { font-size: 18px; }
+    .swatch code { font-size: 12px; opacity: .7; }
+    .swatch--yellow { background: #eecb03; }
+    .swatch--purple { background: #7d00ea; color: #fff; }
+    .swatch--lemon { background: #fff3c4; }
+    .swatch--lavender { background: #f4e8ff; }
+    .swatch--cool { background: #f4f6fa; }
+    .swatch--cool2 { background: #e4eaf7; }
+    .swatch--dark { background: #09090b; color: #fff; }
+    .swatch--white { background: #fff; }
+    .component-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 20px; }
+    .component-card { min-height: 330px; padding: 34px; border-radius: 28px; background: #fff; }
+    .component-card h3 { font-size: 28px; letter-spacing: -.035em; }
+    .button-row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 34px; }
+    .button { display: inline-flex; min-height: 54px; align-items: center; justify-content: center; padding: 15px 26px; border: 1px solid #09090b; border-radius: 100px; font-size: 15px; font-weight: 800; text-decoration: none; }
+    .button--yellow { border-color: #eecb03; background: #eecb03; box-shadow: 0 10px 28px -8px rgba(238,203,3,.45); }
+    .button--dark { background: #09090b; color: #fff; }
+    .radius-row { display: flex; align-items: end; gap: 12px; margin-top: 34px; }
+    .radius-row div { display: grid; place-items: center; width: 92px; height: 92px; background: #f4e8ff; color: #7d00ea; font-size: 12px; font-weight: 800; }
+    .r10 { border-radius: 10px; } .r16 { border-radius: 16px; } .r24 { border-radius: 24px; } .rpill { width: 130px !important; border-radius: 100px; }
+    .media-row { display: flex; align-items: end; gap: 18px; margin-top: 30px; }
+    .media-shape { display: grid; place-items: center; border: 2px solid #7d00ea; background: #f4e8ff; color: #7d00ea; font-weight: 800; }
+    .post-shape { width: 150px; aspect-ratio: 4/5; border-radius: 16px; }
+    .story-shape { width: 112px; aspect-ratio: 9/16; border-radius: 16px; }
+    .transition-stage { padding-top: 82px; background: #fff; }
+    .transition-light { min-height: 260px; padding: 58px; background: linear-gradient(180deg, #f4f6fa, #fff); }
+    .transition-light h3 { max-width: 720px; font-size: 42px; letter-spacing: -.05em; }
+    .closing { padding: 86px 0 92px; border-radius: 48px 48px 0 0; background: radial-gradient(circle at 94% 12%, rgba(238,203,3,.3), transparent 34%), radial-gradient(circle at 6% 28%, rgba(109,61,228,.42), transparent 40%), #09090b; color: #fff; }
+    .closing h2 { max-width: 880px; }
+    .closing p { margin-top: 24px; color: #bdbec4; font-size: 20px; }
+    .site-footer { margin: 0; padding: 68px 0; border-top: 1px solid rgba(255,255,255,.1); background: #09090b; color: #fff; }
+    .footer-grid { display: grid; grid-template-columns: 1.4fr repeat(3, 1fr); gap: 32px; }
+    .footer-brand { display: inline-flex; align-items: center; gap: 9px; font-size: 20px; font-weight: 800; letter-spacing: -.04em; text-decoration: none; }
+    .brand-dot { width: 24px; height: 24px; border: 2px solid #09090b; border-radius: 8px 12px 9px 13px; background: #eecb03; }
+    .footer-note { max-width: 330px; margin-top: 18px; color: rgba(255,255,255,.62); font-size: 13px; line-height: 1.55; }
+    .footer-column strong { display: block; margin-bottom: 14px; }
+    .footer-column a { display: block; margin: 8px 0; color: rgba(255,255,255,.62); font-size: 14px; text-decoration: none; }
+    .page-map { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .page-card { min-height: 240px; padding: 28px; border: 1px solid #e2e2e6; border-radius: 24px; background: #fff; }
+    .page-card h3 { margin-top: 28px; font-size: 25px; }
+    .page-card p { margin-top: 12px; color: #5e5e66; font-size: 14px; line-height: 1.55; }
+    .page-card a { display: inline-flex; margin-top: 24px; font-size: 13px; font-weight: 800; }
+    @media (max-width: 1100px) {
+      .main-nav { gap: 12px; margin-left: 14px; }
+      .main-nav a { font-size: 12px; }
+      .color-grid { grid-template-columns: repeat(2, 1fr); }
+      .page-map { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 900px) {
+      .intro-grid, .section-head, .component-grid { grid-template-columns: 1fr; gap: 28px; }
+      .main-nav { display: none; }
+      .menu-button { display: block; }
+      .note-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 620px) {
+      .shell { width: calc(100% - 28px); }
+      .header-row { width: calc(100% - 16px); min-height: 56px; padding: 7px 8px 7px 13px; }
+      .brand-image { width: 138px; }
+      .intro, .section { padding: 82px 0; }
+      .demo-frame { padding: 14px; border-radius: 24px; }
+      .dark-demo { padding: 30px 6px; }
+      .type-row { grid-template-columns: 1fr; gap: 12px; padding: 24px; }
+      .color-grid, .page-map { grid-template-columns: 1fr; }
+      .component-card { padding: 24px; }
+      .radius-row { flex-wrap: wrap; }
+      .transition-light { padding: 58px 0; }
+      .transition-light h3 { font-size: 36px; line-height: 1.05; }
+      .closing { padding: 76px 0; border-radius: 28px 28px 0 0; }
+      .footer-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="top-note">Этот экран показывает только зафиксированные правила. Эксперименты сюда не попадают.</div>
+  <header class="site-header">
+    <div class="header-row">
+      <a class="brand-image" href="top-three-air-study.html" aria-label="lemonmedia — главная"><img src="assets/design/logo-dark.svg" alt="lemonmedia"></a>
+      <button class="menu-button" type="button">Меню</button>
+      <nav class="main-nav" aria-label="Основная навигация">
+        <a href="examples-study.html">Работы</a><a href="process.html">Как работаем</a><a href="pricing.html">Цены</a><a href="reviews.html">Отзывы</a><a href="about.html">О компании</a><a href="articles.html">Статьи</a><a class="nav-cta" href="start.html">Начать работу</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="intro">
+      <div class="shell intro-grid">
+        <div><p class="eyebrow">Визуальный паспорт сайта</p><h1>Вот что новый чат обязан сохранить</h1><div class="status-row"><span class="status status--yes">Утверждено</span><span class="status status--work">Рабочая версия</span><span class="status status--lock">Прототип — не менять</span></div></div>
+        <p class="intro-copy">Здесь не собраны все возможные блоки. Здесь показан каркас: меню, футер, шрифты, цвета, сетка, формы, переходы и статус страниц.</p>
+      </div>
+    </section>
+
+    <section class="section" id="menu">
+      <div class="shell">
+        <div class="section-head"><div><p class="eyebrow">01 · Меню</p><h2>Одна структура, две цветовые версии</h2></div><p>Светлая капсула используется на светлом фоне. На тёмном первом экране разрешена тёмная капсула. Состав и геометрия одинаковые.</p></div>
+        <div class="demo-frame">
+          <div class="header-row"><a class="brand-image" href="#"><img src="assets/design/logo-dark.svg" alt="lemonmedia"></a><button class="menu-button">Меню</button><nav class="main-nav"><a href="#">Работы</a><a href="#">Как работаем</a><a href="#">Цены</a><a href="#">Отзывы</a><a href="#">О компании</a><a href="#">Статьи</a><a class="nav-cta" href="#">Начать работу</a></nav></div>
+          <div class="dark-demo" style="margin-top:24px"><div class="header-row"><a class="brand-image" href="#"><img src="assets/design/logo-white.svg" alt="lemonmedia"></a><button class="menu-button">Меню</button><nav class="main-nav"><a href="#">Работы</a><a href="#">Как работаем</a><a href="#">Цены</a><a href="#">Отзывы</a><a href="#">О компании</a><a href="#">Статьи</a><a class="nav-cta" href="#">Начать работу</a></nav></div></div>
+          <div class="note-grid"><article><strong>1328 px</strong><p>Максимальная ширина меню и основного контейнера.</p></article><article><strong>64 px</strong><p>Минимальная высота капсулы на компьютере.</p></article><article><strong>Один порядок</strong><p>Пункты и ссылки нельзя переставлять на отдельных страницах.</p></article></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--cool" id="type">
+      <div class="shell"><div class="section-head"><div><p class="eyebrow">02 · Типографика</p><h2>Размер зависит от роли, а не от настроения</h2></div><p>Заголовки могут отличаться из-за композиции, но все страницы используют одну шкалу и один шрифт Manrope.</p></div>
+        <div class="type-grid"><div class="type-row"><span>H1 · 60–76</span><div class="sample-h1">Главный смысл страницы</div></div><div class="type-row"><span>H2 · 50–72</span><div class="sample-h2">Новая смысловая глава</div></div><div class="type-row"><span>H3 · 24–30</span><div class="sample-h3">Заголовок карточки</div></div><div class="type-row"><span>Lead · 20</span><div class="sample-lead">Коротко объясняет предложение и помогает понять следующий шаг.</div></div><div class="type-row"><span>Body · 18</span><div class="sample-body">Основной текст читается свободно и не превращается в серое плотное пятно.</div></div></div>
+      </div>
+    </section>
+
+    <section class="section" id="color">
+      <div class="shell"><div class="section-head"><div><p class="eyebrow">03 · Цвета</p><h2>Восемь разрешённых поверхностей</h2></div><p>Цвет клиента можно добавлять внутри кейса. Каркас, интерфейс и типографика остаются lemonmedia.</p></div>
+        <div class="color-grid"><div class="swatch swatch--yellow"><strong>Лимон</strong><code>#EECB03</code></div><div class="swatch swatch--purple"><strong>Фиолетовый</strong><code>#7D00EA</code></div><div class="swatch swatch--lemon"><strong>Светло-жёлтый</strong><code>#FFF3C4</code></div><div class="swatch swatch--lavender"><strong>Светло-фиолетовый</strong><code>#F4E8FF</code></div><div class="swatch swatch--cool"><strong>Холодный серый</strong><code>#F4F6FA</code></div><div class="swatch swatch--cool2"><strong>Лавандовый</strong><code>#E4EAF7</code></div><div class="swatch swatch--dark"><strong>Тёмный</strong><code>#09090B</code></div><div class="swatch swatch--white"><strong>Белый</strong><code>#FFFFFF</code></div></div>
+      </div>
+    </section>
+
+    <section class="section section--soft-purple" id="components">
+      <div class="shell"><div class="section-head"><div><p class="eyebrow">04 · Компоненты</p><h2>Повторяется система, не композиция</h2></div><p>Кнопки, скругления и пропорции стабильны. Секции при этом можно собирать по-разному.</p></div>
+        <div class="component-grid"><div class="component-card"><h3>Кнопки и скругления</h3><div class="button-row"><a class="button button--yellow" href="#">Начать работу</a><a class="button" href="#">Посмотреть работы</a><a class="button button--dark" href="#">Читать подробнее</a></div><div class="radius-row"><div class="r10">10 px</div><div class="r16">16 px</div><div class="r24">24 px</div><div class="rpill">капсула</div></div></div><div class="component-card"><h3>Правильные пропорции работ</h3><div class="media-row"><div class="media-shape post-shape">Пост<br>4:5</div><div class="media-shape story-shape">Сторис<br>9:16</div></div></div></div>
+      </div>
+    </section>
+
+    <section class="section section--cool" id="pages">
+      <div class="shell"><div class="section-head"><div><p class="eyebrow">05 · Статус страниц</p><h2>Новый чат сразу видит, что можно менять</h2></div><p>Утверждение относится только к конкретному файлу и конкретной роли. Рабочий эксперимент не становится шаблоном автоматически.</p></div>
+        <div class="page-map"><article class="page-card"><span class="status status--yes">Утверждено</span><h3>Главная</h3><p>Общий визуальный эталон сайта.</p><a href="top-three-air-study.html">Открыть top-three-air-study.html →</a></article><article class="page-card"><span class="status status--yes">Утверждённое направление</span><h3>Работы</h3><p>Каталог кейсов и контрастный первый экран.</p><a href="examples-study.html">Открыть examples-study.html →</a></article><article class="page-card"><span class="status status--work">Рабочая версия</span><h3>Кейс «Саратов Кухни»</h3><p>Можно дорабатывать, но пока нельзя копировать как утверждённый шаблон.</p><a href="case-saratov-kitchens-design.html">Открыть дизайн →</a></article><article class="page-card"><span class="status status--lock">Не менять</span><h3>Прототип главной</h3><p>Источник структуры и текста.</p><a href="index.html">Открыть index.html →</a></article><article class="page-card"><span class="status status--lock">Не менять</span><h3>Прототип работ</h3><p>Источник структуры и текста.</p><a href="examples.html">Открыть examples.html →</a></article><article class="page-card"><span class="status status--lock">Не менять</span><h3>Прототип кейса</h3><p>Источник структуры и текста.</p><a href="case-saratov-kitchens.html">Открыть прототип →</a></article></div>
+      </div>
+    </section>
+
+    <section class="transition-stage" id="transition">
+      <div class="transition-light"><div class="shell"><p class="eyebrow">06 · Переход в финал</p><h3>Никаких случайных полос между светлой частью, призывом и футером</h3></div></div>
+      <section class="closing"><div class="shell"><p class="eyebrow" style="color:#eecb03">Финальный CTA</p><h2>Хотите такой же связный контент-план?</h2><p>Начните с 10 постов за 4 990 ₽.</p><div class="button-row"><a class="button button--yellow" href="start.html">Начать работу</a><a class="button" style="border-color:rgba(255,255,255,.7);color:#fff" href="pricing.html">Посмотреть цены</a></div></div></section>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-grid"><div><a class="footer-brand" href="top-three-air-study.html"><span class="brand-dot"></span>lemonmedia</a><p class="footer-note">Регулярный контент под ключ для российского малого и среднего бизнеса. Команда lemonmedia работает с 2020 года.</p></div><div class="footer-column"><strong>Выбрать</strong><a href="pricing.html">Цены и конструктор</a><a href="examples-study.html">Работы</a><a href="process.html">Как работаем</a><a href="compare.html">Сравнение</a></div><div class="footer-column"><strong>Узнать больше</strong><a href="reviews.html">Отзывы</a><a href="about.html">О компании</a><a href="services.html">Разовые услуги</a><a href="partners.html">Партнёрам</a><a href="articles.html">Статьи</a><a href="faq.html">Все вопросы</a></div><div class="footer-column"><strong>Начать</strong><a href="start.html">Собрать пакет</a><a href="audit.html">Бесплатный разбор</a><a href="guarantee.html">Условия гарантии</a><a href="legal.html#offer">Условия работы</a><a href="legal.html#privacy">Конфиденциальность</a></div></div>
+  </footer>
+</body>
+</html>

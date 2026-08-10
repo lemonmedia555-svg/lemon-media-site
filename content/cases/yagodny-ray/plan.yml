@@ -1,0 +1,129 @@
+version: 1
+brand: lemonmedia
+case_id: yagodny-ray
+period: "2026-07"
+language: ru
+
+scope:
+  publications: 6
+  static_posts: 5
+  carousel_publications: 1
+  carousel_slides: 6
+  stories_sequences: 0
+  stories_frames: 0
+  visual_files: 11
+  platform_count: 2
+
+claim_rule: "Цели материалов описывают маркетинговую задачу, а не уже достигнутый бизнес-результат. Даты ниже взяты из графика черновиков и не заменяют прямые ссылки на опубликованные записи."
+
+schedule:
+  start_date: "2026-07-31"
+  end_date: "2026-08-08"
+  cadence_days: 2
+  time_local: "10:00"
+  timezone_status: not-recorded
+  status: drafts-scheduled-from-work-task
+
+publications:
+  - number: 1
+    id: publication-01
+    scheduled_at_local: "2026-07-31T10:00:00"
+    format: static-post
+    category: work-showcase
+    title: "Сегодня утром на поле в Анат-Киняры"
+    asset: "assets/cases/yagodny-ray/posts/01.jpg"
+    goals:
+      - build-trust
+
+  - number: 2
+    id: publication-02
+    scheduled_at_local: "2026-08-02T10:00:00"
+    format: static-post
+    category: useful
+    title: "3 признака, что клубника свежая"
+    asset: "assets/cases/yagodny-ray/posts/02.jpg"
+    goals:
+      - encourage-saves
+      - show-expertise
+
+  - number: 3
+    id: publication-03
+    scheduled_at_local: "2026-08-04T10:00:00"
+    format: static-post
+    category: myths
+    title: "Можете закидать нас тапками, но…"
+    asset: "assets/cases/yagodny-ray/posts/03.jpg"
+    goals:
+      - differentiate-offer
+
+  - number: 4
+    id: publication-04
+    scheduled_at_local: "2026-08-06T10:00:00"
+    format: static-post
+    category: work-showcase
+    title: "Что говорят те, кто уже заказывал"
+    asset: "assets/cases/yagodny-ray/posts/04.jpg"
+    goals:
+      - build-trust
+
+  - number: 5
+    id: publication-05
+    scheduled_at_local: "2026-08-08T10:00:00"
+    format: static-post
+    category: offer
+    title: "Свежая клубника — сезон уже идёт"
+    asset: "assets/cases/yagodny-ray/posts/05.jpg"
+    goals:
+      - lead-request
+
+bonus_carousels:
+  - id: bonus-carousel-01
+    format: carousel
+    slide_count: 6
+    category: product-showcase
+    title: "Что у нас можно заказать прямо сейчас"
+    relation_to_package: gift-beyond-five-posts
+    separate_publication_slot_status: not-recorded
+    goals:
+      - create-purchase-desire
+      - help-choice
+    slides:
+      - number: 1
+        role: cover
+        topic: "Сезон открыт — и есть не только ягода"
+        asset: "assets/cases/yagodny-ray/carousels/01/01.jpg"
+      - number: 2
+        role: product
+        topic: "Клубника"
+        asset: "assets/cases/yagodny-ray/carousels/01/02.jpg"
+      - number: 3
+        role: service
+        topic: "Самосбор"
+        asset: "assets/cases/yagodny-ray/carousels/01/03.jpg"
+      - number: 4
+        role: product
+        topic: "Рассада"
+        asset: "assets/cases/yagodny-ray/carousels/01/04.jpg"
+      - number: 5
+        role: product
+        topic: "Варенье"
+        asset: "assets/cases/yagodny-ray/carousels/01/05.jpg"
+      - number: 6
+        role: call-to-action
+        topic: "Помощь с выбором"
+        asset: "assets/cases/yagodny-ray/carousels/01/06.jpg"
+
+renewal:
+  task_id: 90886
+  ordered_posts: 30
+  carousel_publications: 10
+  status: in-production
+  final_materials: null
+  included_in_case_result: false
+  checked_at: "2026-08-05"
+
+asset_display_notes:
+  preserve_aspect_ratio: "4:5"
+  crop: false
+  historical_commercial_terms: "Некоторые изображения содержат условия периода производства кейса; не представлять их как актуальное предложение."
+  review_asset: "posts/04.jpg содержит миниатюру публичного отзыва."

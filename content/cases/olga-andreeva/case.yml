@@ -1,0 +1,90 @@
+version: 1
+brand: lemonmedia
+case:
+  id: olga-andreeva
+  slug: olga-andreeva
+  public_name: "Ольга Андреева"
+  page: "case-olga-andreeva.html"
+  status: published-curated
+  case_type: compact-with-editorial-exclusions
+  period: first-month
+  release_window: null
+  niche: expert-and-wellness
+  subniche: psychological-wellness-project
+
+summary:
+  short: "С нуля собрана смысловая и визуальная система мягкого перезапуска экспертного проекта."
+  content_task: "Познакомить с новым проектом, создать доверие, раскрыть личный подход и мягко подвести к закрытому клубу и консультации."
+  result_wording: "Подготовлены и утверждены 10 публикаций и 5 историй — 15 финальных материалов. Для публичной галереи после редакционной проверки выбраны 6 нейтральных публикаций и все 5 историй."
+
+scope:
+  publications: 10
+  static_posts: 10
+  stories_sequences: 1
+  stories_frames: 5
+  source_visual_files: 15
+  public_gallery_post_visuals: 6
+  public_story_visuals: 5
+  public_visual_files: 11
+  editorially_withheld_post_visuals: 4
+  prepared_platform_count: 3
+  prepared_platform_ids:
+    - vk
+    - telegram
+    - max
+
+featured_goals:
+  - introduce-new-project
+  - build-personal-trust
+  - show-expert-position
+  - encourage-self-reflection
+  - warm-up-to-club
+  - lead-to-consultation
+
+evidence:
+  confirmed:
+    - "Публичное имя: Ольга Андреева."
+    - "До проекта не было готовых фирменных цветов, шрифтов, логотипа и визуальной системы."
+    - "Команда разработала рубрики, темы, тексты и единый визуальный язык."
+    - "После первого круга правок тексты сделали теплее и эмоциональнее."
+    - "Клиент утвердил тексты и дал прямую положительную оценку визуальному стилю."
+    - "Финальный комплект содержит 10 публикаций и 5 историй."
+    - "После утверждения проект передан на этап публикации."
+  not_claimed:
+    - "Фактический выход всех материалов в трёх каналах."
+    - "Полный календарь публикаций."
+    - "Охваты, заявки, продажи или изменения состояния аудитории."
+    - "Лечение, выздоровление, гарантированный эффект или замена медицинской помощи."
+    - "Публичное использование дипломов и квалификаций без отдельной проверки."
+  public_links: null
+  direct_publication_links: null
+  analytics: null
+
+editorial_control:
+  public_post_ids:
+    - 1
+    - 3
+    - 5
+    - 7
+    - 9
+    - 10
+  withheld_post_ids:
+    - 2
+    - 4
+    - 6
+    - 8
+  reason: "Требуется отдельная медицинская и юридическая проверка формулировок."
+  rule: "Не публиковать и не пересказывать спорные медицинские утверждения до проверки."
+
+publication_control:
+  portfolio_permission: confirmed_by_project_owner
+  client_copy_approval: confirmed
+  client_visual_approval: confirmed-positive
+  transferred_to_publication: confirmed
+  publication_launch: not-confirmed
+  publishable: true
+  display_notes:
+    - "Показывать 6 безопасных публикаций и все 5 историй."
+    - "Четыре публикации не удалены из доказанного объёма, но исключены из публичной галереи до проверки."
+    - "Не превращать wellness-темы в медицинские обещания."
+    - "Не заявлять бизнес-метрики без отдельной аналитики."

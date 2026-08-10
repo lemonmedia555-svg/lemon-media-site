@@ -1,0 +1,96 @@
+version: 1
+brand: lemonmedia
+id: borodulina-tape
+slug: borodulina-tape
+language: ru
+
+identity:
+  public_title: "BORODULINA TAPE — контент-план июля–августа 2026"
+  client_display_name: "BORODULINA TAPE"
+  period: "2026-07/2026-08"
+  release_window: "2026-07-31/2026-08-18"
+  niche: beauty-and-wellness
+  subniche: taping-massage-kinesiofitness
+  geography: izhevsk
+
+summary:
+  short: "Экспертный контент-план о тейпировании, массаже и кинезиофитнесе без постоянного давления продажей."
+  content_task: "Привлечь новую аудиторию, показать индивидуальный подход эксперта и последовательно соединить пользу, доверие, вовлечение и одно прямое предложение."
+  result_wording: "Подготовлены и утверждены 10 публикаций: 8 одиночных постов, 2 карусели по 7 слайдов и мини-прогрев из 5 сторис. Публикации запущены в VK по согласованному календарю."
+
+scope:
+  publications: 10
+  static_posts: 8
+  carousel_publications: 2
+  carousel_slides: 14
+  stories_sequences: 1
+  stories_frames: 5
+  confirmed_launch_platform_count: 1
+  confirmed_launch_platform_ids:
+    - vk
+  planned_but_not_launch_confirmed_platform_ids:
+    - telegram
+    - instagram
+
+schedule:
+  start_date: "2026-07-31"
+  end_date: "2026-08-18"
+  cadence_days: 2
+  time_local: "10:00"
+  timezone_status: not-recorded
+  status: launched-from-crm
+
+category_distribution:
+  expert: 5
+  personal-and-backstage: 2
+  seasonal: 1
+  engagement: 1
+  offer: 1
+
+featured_goals:
+  - attract-new-audience
+  - build-trust
+  - encourage-saves
+  - show-expertise
+  - differentiate-approach
+  - collect-feedback
+  - lead-request
+
+stories:
+  sequence_id: stories-01
+  related_publication_id: publication-01
+  frames: 5
+  narrative: "Сезонная проблема → узнавание себя → спокойное объяснение → обещание разбора → переход к публикации."
+
+evidence:
+  confirmed:
+    - "Публичное название клиента: BORODULINA TAPE."
+    - "Финальный пакет содержит 10 публикаций, включая две карусели по семь слайдов."
+    - "К первой публикации подготовлен прогрев из пяти сторис."
+    - "Клиент выбрал вторую визуальную концепцию и подтвердил финальные правки."
+    - "Календарь согласован: с 31 июля по 18 августа 2026 года, через день в 10:00."
+    - "CRM подтверждает запуск публикаций в VK."
+    - "На момент запуска Telegram и Instagram не были подключены."
+  not_claimed:
+    - "Продажи, заявки, выручка и окупаемость."
+    - "Рост охватов, подписчиков и вовлечённости."
+    - "Лечебный или медицинский эффект услуг клиента."
+    - "Публикация этого комплекта в Telegram или Instagram."
+    - "Актуальность цен и коммерческих условий из материалов клиента."
+  public_links:
+    - label: "Сообщество клиента VK"
+      url: "https://vk.ru/club_borodulina_tape"
+  analytics: null
+  client_review: null
+
+publication_control:
+  portfolio_permission: confirmed_by_project_owner
+  final_media: ready
+  public_links: partially-verified
+  recognizable_people_assets:
+    - "posts/*.webp"
+    - "carousels/**/*.webp"
+    - "stories/*.webp"
+  recognizable_people_use_basis: confirmed_by_project_owner
+  publishable: true
+

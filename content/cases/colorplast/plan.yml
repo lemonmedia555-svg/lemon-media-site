@@ -1,0 +1,173 @@
+version: 1
+brand: lemonmedia
+case_id: colorplast
+language: ru
+
+claim_rule: "Подтверждены продление, визуальные пакеты и календарь черновиков. Фактический выход, метрики и завершение адаптации 13 текстов под Threads не заявляются."
+
+web_assets:
+  format: jpeg
+  dimensions: "720 × 900"
+  aspect_ratio: "4:5"
+  crop: false
+
+current_cycle:
+  scope:
+    publications: 20
+    static_posts: 15
+    main_carousels: 5
+    bonus_carousels: 1
+    visual_files: 57
+  schedule:
+    platforms: [vk, instagram, threads]
+    drafts: 20
+    starts_at: "2026-08-12 10:00"
+    ends_at: "2026-09-19 10:00"
+    cadence: every-two-days
+    actual_publication: unconfirmed
+    threads_adaptation_in_progress: [1, 2, 3, 5, 6, 10, 11, 12, 14, 17, 18, 19, 20]
+  publications:
+    - { number: 1, format: static-post, role: useful, title: "Почему потеют окна и что с этим делать", asset: "assets/cases/colorplast/current/posts/01.jpg" }
+    - { number: 2, format: static-post, role: myth-busting, title: "Мифы о пластике и алюминии", asset: "assets/cases/colorplast/current/posts/02.jpg" }
+    - { number: 3, format: static-post, role: solution, title: "Остекление загородного дома в стиле шале", asset: "assets/cases/colorplast/current/posts/03.jpg" }
+    - number: 4
+      format: carousel
+      role: useful
+      title: "Как принять окна после монтажа"
+      slides:
+        - { number: 1, asset: "assets/cases/colorplast/current/carousels/04/01.jpg" }
+        - { number: 2, asset: "assets/cases/colorplast/current/carousels/04/02.jpg" }
+        - { number: 3, asset: "assets/cases/colorplast/current/carousels/04/03.jpg" }
+        - { number: 4, asset: "assets/cases/colorplast/current/carousels/04/04.jpg" }
+        - { number: 5, asset: "assets/cases/colorplast/current/carousels/04/05.jpg" }
+        - { number: 6, asset: "assets/cases/colorplast/current/carousels/04/06.jpg" }
+        - { number: 7, asset: "assets/cases/colorplast/current/carousels/04/07.jpg" }
+    - { number: 5, format: static-post, role: offer, title: "Остекление балкона под ключ до холодов", asset: "assets/cases/colorplast/current/posts/05.jpg" }
+    - { number: 6, format: static-post, role: process, title: "Материалы и поставщики — почему это важно клиенту", asset: "assets/cases/colorplast/current/posts/06.jpg" }
+    - number: 7
+      format: carousel
+      role: useful
+      title: "Можно ли ставить окна зимой"
+      slides:
+        - { number: 1, asset: "assets/cases/colorplast/current/carousels/07/01.jpg" }
+        - { number: 2, asset: "assets/cases/colorplast/current/carousels/07/02.jpg" }
+        - { number: 3, asset: "assets/cases/colorplast/current/carousels/07/03.jpg" }
+        - { number: 4, asset: "assets/cases/colorplast/current/carousels/07/04.jpg" }
+        - { number: 5, asset: "assets/cases/colorplast/current/carousels/07/05.jpg" }
+        - { number: 6, asset: "assets/cases/colorplast/current/carousels/07/06.jpg" }
+        - { number: 7, asset: "assets/cases/colorplast/current/carousels/07/07.jpg" }
+    - number: 8
+      format: carousel
+      role: solution
+      title: "Замена старых окон — до и после"
+      slides:
+        - { number: 1, asset: "assets/cases/colorplast/current/carousels/08/01.jpg" }
+        - { number: 2, asset: "assets/cases/colorplast/current/carousels/08/02.jpg" }
+        - { number: 3, asset: "assets/cases/colorplast/current/carousels/08/03.jpg" }
+        - { number: 4, asset: "assets/cases/colorplast/current/carousels/08/04.jpg" }
+        - { number: 5, asset: "assets/cases/colorplast/current/carousels/08/05.jpg" }
+        - { number: 6, asset: "assets/cases/colorplast/current/carousels/08/06.jpg" }
+        - { number: 7, asset: "assets/cases/colorplast/current/carousels/08/07.jpg" }
+    - { number: 9, format: static-post, role: engagement, title: "Что аудитория поменяла бы первым при ремонте", asset: "assets/cases/colorplast/current/posts/09.jpg" }
+    - { number: 10, format: static-post, role: useful, title: "Почему дует из закрытого окна", asset: "assets/cases/colorplast/current/posts/10.jpg" }
+    - { number: 11, format: static-post, role: offer, title: "Тёплые окна к отопительному сезону", asset: "assets/cases/colorplast/current/posts/11.jpg" }
+    - { number: 12, format: static-post, role: review, title: "Отзыв об окнах в частном доме", asset: "assets/cases/colorplast/current/posts/12.jpg" }
+    - number: 13
+      format: carousel
+      role: comparison
+      title: "Пластиковая или алюминиевая дверь"
+      slides:
+        - { number: 1, asset: "assets/cases/colorplast/current/carousels/13/01.jpg" }
+        - { number: 2, asset: "assets/cases/colorplast/current/carousels/13/02.jpg" }
+        - { number: 3, asset: "assets/cases/colorplast/current/carousels/13/03.jpg" }
+        - { number: 4, asset: "assets/cases/colorplast/current/carousels/13/04.jpg" }
+        - { number: 5, asset: "assets/cases/colorplast/current/carousels/13/05.jpg" }
+        - { number: 6, asset: "assets/cases/colorplast/current/carousels/13/06.jpg" }
+        - { number: 7, asset: "assets/cases/colorplast/current/carousels/13/07.jpg" }
+    - { number: 14, format: static-post, role: myth-busting, title: "Мифы о панорамном остеклении", asset: "assets/cases/colorplast/current/posts/14.jpg" }
+    - number: 15
+      format: carousel
+      role: solution
+      title: "Коммерческое остекление — до и после"
+      slides:
+        - { number: 1, asset: "assets/cases/colorplast/current/carousels/15/01.jpg" }
+        - { number: 2, asset: "assets/cases/colorplast/current/carousels/15/02.jpg" }
+        - { number: 3, asset: "assets/cases/colorplast/current/carousels/15/03.jpg" }
+        - { number: 4, asset: "assets/cases/colorplast/current/carousels/15/04.jpg" }
+        - { number: 5, asset: "assets/cases/colorplast/current/carousels/15/05.jpg" }
+        - { number: 6, asset: "assets/cases/colorplast/current/carousels/15/06.jpg" }
+        - { number: 7, asset: "assets/cases/colorplast/current/carousels/15/07.jpg" }
+    - { number: 16, format: static-post, role: engagement, title: "Какая проблема с окнами раздражает больше всего", asset: "assets/cases/colorplast/current/posts/16.jpg" }
+    - { number: 17, format: static-post, role: product-education, title: "Портальные системы и панорамное остекление", asset: "assets/cases/colorplast/current/posts/17.jpg" }
+    - { number: 18, format: static-post, role: offer, title: "Акция периода и бесплатный замер", asset: "assets/cases/colorplast/current/posts/18.jpg", historical_terms: true }
+    - { number: 19, format: static-post, role: review, title: "Отзыв о сложной работе и сервисе", asset: "assets/cases/colorplast/current/posts/19.jpg" }
+    - { number: 20, format: static-post, role: process, title: "Как проходит замер и почему важна точность", asset: "assets/cases/colorplast/current/posts/20.jpg" }
+  bonus:
+    format: carousel
+    slide_count: 7
+    title: "7 решений для загородного дома"
+    separate_calendar_slot: unconfirmed
+    slides:
+      - { number: 1, asset: "assets/cases/colorplast/current/carousels/bonus/01.jpg" }
+      - { number: 2, asset: "assets/cases/colorplast/current/carousels/bonus/02.jpg" }
+      - { number: 3, asset: "assets/cases/colorplast/current/carousels/bonus/03.jpg" }
+      - { number: 4, asset: "assets/cases/colorplast/current/carousels/bonus/04.jpg" }
+      - { number: 5, asset: "assets/cases/colorplast/current/carousels/bonus/05.jpg" }
+      - { number: 6, asset: "assets/cases/colorplast/current/carousels/bonus/06.jpg" }
+      - { number: 7, asset: "assets/cases/colorplast/current/carousels/bonus/07.jpg" }
+
+previous_cycle:
+  scope:
+    publications: 10
+    static_posts: 8
+    main_carousels: 2
+    bonus_carousels: 1
+    visual_files: 29
+  publications:
+    - { number: 1, format: static-post, title: "Окна для дома в жару и мороз", asset: "assets/cases/colorplast/previous/posts/01.jpg" }
+    - { number: 2, format: static-post, title: "Три мифа о цвете окон", asset: "assets/cases/colorplast/previous/posts/02.jpg" }
+    - { number: 3, format: static-post, title: "Остекление веранды под ключ", asset: "assets/cases/colorplast/previous/posts/03.jpg" }
+    - number: 4
+      format: carousel
+      title: "6 вещей, которые нужно проверить до заказа окон"
+      slides:
+        - { number: 1, asset: "assets/cases/colorplast/previous/carousels/04/01.jpg" }
+        - { number: 2, asset: "assets/cases/colorplast/previous/carousels/04/02.jpg" }
+        - { number: 3, asset: "assets/cases/colorplast/previous/carousels/04/03.jpg" }
+        - { number: 4, asset: "assets/cases/colorplast/previous/carousels/04/04.jpg" }
+        - { number: 5, asset: "assets/cases/colorplast/previous/carousels/04/05.jpg" }
+        - { number: 6, asset: "assets/cases/colorplast/previous/carousels/04/06.jpg" }
+        - { number: 7, asset: "assets/cases/colorplast/previous/carousels/04/07.jpg" }
+    - { number: 5, format: static-post, title: "Бесплатный замер периода кампании", asset: "assets/cases/colorplast/previous/posts/05.jpg", historical_terms: true }
+    - { number: 6, format: static-post, title: "Профиль в разных цветах", asset: "assets/cases/colorplast/previous/posts/06.jpg" }
+    - { number: 7, format: static-post, title: "Отзыв об установке", asset: "assets/cases/colorplast/previous/posts/07.jpg" }
+    - number: 8
+      format: carousel
+      title: "Из хранилища в комнату"
+      slides:
+        - { number: 1, asset: "assets/cases/colorplast/previous/carousels/08/01.jpg" }
+        - { number: 2, asset: "assets/cases/colorplast/previous/carousels/08/02.jpg" }
+        - { number: 3, asset: "assets/cases/colorplast/previous/carousels/08/03.jpg" }
+        - { number: 4, asset: "assets/cases/colorplast/previous/carousels/08/04.jpg" }
+        - { number: 5, asset: "assets/cases/colorplast/previous/carousels/08/05.jpg" }
+        - { number: 6, asset: "assets/cases/colorplast/previous/carousels/08/06.jpg" }
+        - { number: 7, asset: "assets/cases/colorplast/previous/carousels/08/07.jpg" }
+    - { number: 9, format: static-post, title: "Какой цвет окон выбрали бы вы", asset: "assets/cases/colorplast/previous/posts/09.jpg" }
+    - { number: 10, format: static-post, title: "Профиль окна: за что вы платите", asset: "assets/cases/colorplast/previous/posts/10.jpg" }
+  bonus:
+    format: carousel
+    slide_count: 7
+    title: "6 ошибок остекления балкона"
+    slides:
+      - { number: 1, asset: "assets/cases/colorplast/previous/carousels/bonus/01.jpg" }
+      - { number: 2, asset: "assets/cases/colorplast/previous/carousels/bonus/02.jpg" }
+      - { number: 3, asset: "assets/cases/colorplast/previous/carousels/bonus/03.jpg" }
+      - { number: 4, asset: "assets/cases/colorplast/previous/carousels/bonus/04.jpg" }
+      - { number: 5, asset: "assets/cases/colorplast/previous/carousels/bonus/05.jpg" }
+      - { number: 6, asset: "assets/cases/colorplast/previous/carousels/bonus/06.jpg" }
+      - { number: 7, asset: "assets/cases/colorplast/previous/carousels/bonus/07.jpg" }
+
+display_notes:
+  - "Все 86 изображений показываются в пропорции 4:5 без обрезки."
+  - "Стоковые и иллюстративные сцены не называются реальными объектами Colorplast."
+  - "Акции и условия внутри макетов относятся к периодам кампаний."

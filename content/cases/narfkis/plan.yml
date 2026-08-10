@@ -1,0 +1,103 @@
+version: 1
+brand: lemonmedia
+case_id: narfkis
+period: "2026-07"
+language: ru
+
+claim_rule: "Цели описывают маркетинговую задачу материалов, а не доказанный эффект. Подтверждены готовый пакет, согласование и передача в публикационный процесс; фактический выход публикаций и метрики не подтверждены."
+
+channels:
+  planned: [vk, max]
+  confirmed_published: []
+
+rubrics:
+  - id: event-announcements
+    count: 2
+    purpose: "Привлечь внимание к конкретной дате и формату события."
+  - id: useful-explainers
+    count: 2
+    purpose: "Объяснить незнакомые игры простым языком."
+  - id: myth-busting
+    count: 2
+    purpose: "Снять барьеры и сомнения перед участием."
+  - id: client-projects
+    count: 2
+    purpose: "Показать реальные события и организационную работу клиента."
+  - id: brand-story
+    count: 2
+    purpose: "Закрепить ценности и доверие к бренду."
+
+publications:
+  - number: 1
+    format: static-post
+    rubric: event-announcements
+    title: "Инклюзивное авторалли «Приз Большого Норильска»"
+    purpose: "Дать дату, формат и причину прийти."
+    asset: "assets/cases/narfkis/posts/01.jpg"
+  - number: 2
+    format: static-post
+    rubric: useful-explainers
+    title: "Что такое юкигассен и как в него играют"
+    purpose: "Сделать новую игру понятной."
+    asset: "assets/cases/narfkis/posts/02.jpg"
+  - number: 3
+    format: static-post
+    rubric: myth-busting
+    title: "Миф: спорт недоступен людям с инвалидностью"
+    purpose: "Снять барьер перед участием."
+    asset: "assets/cases/narfkis/posts/03.jpg"
+  - number: 4
+    format: static-post
+    rubric: client-projects
+    title: "Как прошло инклюзивное авторалли"
+    purpose: "Показать реальное событие."
+    asset: "assets/cases/narfkis/posts/04.jpg"
+  - number: 5
+    format: static-post
+    rubric: brand-story
+    title: "Спортивная инициатива и грантовый проект"
+    purpose: "Объяснить масштаб работы клиента."
+    asset: "assets/cases/narfkis/posts/05.jpg"
+  - number: 6
+    format: static-post
+    rubric: event-announcements
+    title: "Открытие сезона юкигассена"
+    purpose: "Привести внимание к новой дате."
+    asset: "assets/cases/narfkis/posts/06.jpg"
+  - number: 7
+    format: static-post
+    rubric: useful-explainers
+    title: "Бочча, диск-гольф и юкигассен в Норильске"
+    purpose: "Познакомить с новыми форматами."
+    asset: "assets/cases/narfkis/posts/07.jpg"
+  - number: 8
+    format: static-post
+    rubric: client-projects
+    title: "Как организовать спортивное событие под ключ"
+    purpose: "Показать компетенции организатора."
+    asset: "assets/cases/narfkis/posts/08.jpg"
+  - number: 9
+    format: static-post
+    rubric: myth-busting
+    title: "Миф: в Норильске негде заниматься спортом"
+    purpose: "Ответить на локальное возражение."
+    asset: "assets/cases/narfkis/posts/09.jpg"
+  - number: 10
+    format: static-post
+    rubric: brand-story
+    title: "Зачем NARFKiS развивает инклюзивный спорт"
+    purpose: "Закрепить ценности и доверие."
+    asset: "assets/cases/narfkis/posts/10.jpg"
+
+story_series:
+  title: "Прогрев к открытию сезона юкигассена"
+  format: story
+  aspect_ratio: "9:16"
+  frame_count: 5
+  in_main_publication_count: false
+  frames:
+    - { number: 1, role: hook, title: "Снежки в Норильске — в разгар лета", asset: "assets/cases/narfkis/stories/01.jpg" }
+    - { number: 2, role: explanation, title: "Что такое юкигассен", asset: "assets/cases/narfkis/stories/02.jpg" }
+    - { number: 3, role: mechanics, title: "Команды, тактика и азарт", asset: "assets/cases/narfkis/stories/03.jpg" }
+    - { number: 4, role: event-details, title: "Дата и место открытия сезона", asset: "assets/cases/narfkis/stories/04.jpg" }
+    - { number: 5, role: transition, title: "Репост основного поста", asset: "assets/cases/narfkis/stories/05.jpg" }

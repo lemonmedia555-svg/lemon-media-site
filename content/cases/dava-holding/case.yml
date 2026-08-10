@@ -1,0 +1,94 @@
+version: 1
+brand: lemonmedia
+case:
+  id: dava-holding
+  slug: dava-holding
+  public_name: "Dava Holding"
+  page: "case-dava-holding.html"
+  status: published
+  case_type: expanded-process
+  period: first-month
+  release_window: "2026-08-07/2026-09-03"
+  niche: business-and-economics
+  subniche: corporate-ideology
+
+summary:
+  short: "Сложная общественно-экономическая идея пересобрана в понятный контент-план."
+  content_task: "Познакомить аудиторию с мировоззрением холдинга, объяснить пять опор модели и вовлечь в обсуждение."
+  result_wording: "Приняты контент-план и тексты, выбрана третья визуальная концепция, подготовлены 10 постов и 5 историй. Черновики загружены во ВКонтакте, но автоматическое сопоставление части файлов требует ручной проверки."
+
+scope:
+  publications: 10
+  static_posts: 10
+  carousel_publications: 0
+  stories_sequences: 1
+  stories_frames: 5
+  final_visual_files: 15
+  visual_concepts: 3
+  web_visual_files: 18
+  draft_platform_count: 1
+  draft_platform_ids:
+    - vk
+  auto_matched_post_visuals: 8
+  auto_matched_story_visuals: 3
+
+featured_goals:
+  - explain-complex-idea
+  - introduce-brand-worldview
+  - remove-stereotypes
+  - show-model-pillars
+  - encourage-discussion
+  - build-systemic-understanding
+
+next_order:
+  ordered_date: "2026-08-05"
+  status: accepted-in-production
+  publications: 10
+  carousel_publications: 2
+  public_wording: "Подтверждён повторный заказ, но второй месяц ещё не произведён и не входит в готовый объём кейса."
+
+evidence:
+  confirmed:
+    - "Публичное название проекта: Dava Holding."
+    - "Первый месяц содержит 10 одиночных публикаций и 5 подарочных историй."
+    - "После обратной связи первую концепцию текстов полностью пересобрали: темы юриспруденции убрали, фокус оставили на идеологии холдинга."
+    - "Точечную терминологическую правку внесли в пост 2 и связанные истории."
+    - "Контент-план и тексты приняли для перехода к визуалу."
+    - "Подготовлены три визуальные концепции; утверждена концепция 3."
+    - "Финальная папка по контрольным суммам совпадает с концепцией 3."
+    - "Финальный комплект содержит 10 постов и 5 историй."
+    - "Черновики загрузили во ВКонтакте на период с 7 августа по 3 сентября, раз в три дня в 10:00."
+    - "Подтверждён повторный заказ на 10 публикаций с 2 каруселями."
+  not_claimed:
+    - "Фактический выход всего месяца."
+    - "Корректное ручное сопоставление двух недостающих постовых визуалов и двух историй в планировщике."
+    - "Охваты, рост аудитории, заявки, продажи или выручка."
+    - "Выполнение второго заказа."
+    - "Совпадение взглядов lemonmedia с идеологическими утверждениями клиента."
+  public_links: null
+  direct_publication_links: null
+  analytics: null
+
+quality_control:
+  copy_rounds: 2
+  visual_concepts: 3
+  selected_visual_concept: 3
+  final_hash_match_to_selected_concept: confirmed
+  original_post_dimension_issue: confirmed
+  web_normalization: completed
+  web_post_dimensions: "720 × 900"
+  web_story_dimensions: "720 × 1280"
+
+publication_control:
+  portfolio_permission: confirmed_by_project_owner
+  final_media: ready
+  drafts_uploaded_platforms:
+    - vk
+  publication_launch: not-confirmed
+  publishable: true
+  display_notes:
+    - "Показывать нормализованные веб-копии без белой кромки."
+    - "Не называть весь календарь опубликованным."
+    - "Явно отделять готовый первый месяц от повторного заказа."
+    - "Не объединять Dava Holding с отдельным проектом «Дава Лайф»."
+    - "Идеологические формулировки принадлежат клиентскому проекту."

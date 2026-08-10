@@ -1,0 +1,86 @@
+version: 1
+brand: lemonmedia
+case:
+  id: olga-pravdyuk
+  slug: olga-pravdyuk
+  public_name: "Ольга Правдюк — «Профориентация — путь в профессию»"
+  page: "case-olga-pravdyuk.html"
+  status: published
+  case_type: expanded
+  period: "2026-07/2026-08"
+  release_window: "2026-07-29/2026-08-25"
+  niche: education
+  subniche: career-guidance
+  audience:
+    - "ученики 8–11 классов"
+    - "родители подростков"
+
+summary:
+  short: "Сложная профориентационная услуга разложена на понятный контент-план для родителей и подростков."
+  content_task: "Объяснить ценность консультации и сопровождения, снять мифы и тревогу, показать подход эксперта и привести к диалогу."
+  result_wording: "Подготовлены 10 основных публикаций и подарочная карусель — 29 финальных изображений. Основные материалы загружены во ВКонтакте как черновики; бизнес-метрики не зафиксированы."
+
+scope:
+  scheduled_publications: 10
+  bonus_publications: 1
+  total_content_units: 11
+  static_posts: 8
+  carousel_publications: 3
+  scheduled_carousel_publications: 2
+  bonus_carousel_publications: 1
+  carousel_slides: 21
+  visual_files: 29
+  confirmed_draft_platform_count: 1
+  confirmed_draft_platform_ids:
+    - vk
+
+featured_goals:
+  - explain-service
+  - remove-myths
+  - reduce-parent-anxiety
+  - show-expertise
+  - answer-questions
+  - lead-to-consultation
+
+next_order:
+  status: ordered-content-plan-in-review
+  publications: 10
+  carousel_publications: 2
+  public_wording: "Клиент продолжил работу. Для второго месяца подготовлен контент-план, но визуал и календарь ещё не завершены и не входят в результат кейса."
+
+evidence:
+  confirmed:
+    - "Публичное название: Ольга Правдюк — «Профориентация — путь в профессию»."
+    - "Первый пакет содержит 10 основных публикаций: 8 статичных постов и 2 карусели по 7 слайдов."
+    - "Дополнительно подготовлена подарочная карусель из 7 слайдов."
+    - "Всего в финальном комплекте 29 изображений."
+    - "Контент-план и тексты прошли три версии и были утверждены."
+    - "Визуал прошёл два круга правок; исправленный пост 10 вошёл в финальную папку."
+    - "Все 10 основных публикаций загружены во ВКонтакте как черновики на период с 29 июля по 25 августа, раз в три дня в 17:00."
+    - "Подтверждена повторная покупка; второй пакет находится на стадии согласования контент-плана."
+  not_claimed:
+    - "Фактический выход всех материалов в ленте."
+    - "Охваты, вовлечённость, заявки, продажи и окупаемость."
+    - "Финальная передача или установка трёх виджетов ВКонтакте."
+    - "Завершение второго месяца."
+    - "Образовательные результаты учеников как результат работы lemonmedia."
+  public_links: null
+  direct_publication_links: null
+  analytics: null
+  client_review: null
+
+publication_control:
+  portfolio_permission: confirmed_by_project_owner
+  final_media: ready
+  client_copy_approval: confirmed
+  client_visual_approval: confirmed-except-separate-post-10-reapproval-not-found
+  confirmed_draft_platforms:
+    - vk
+  widgets_status: unconfirmed
+  display_notes:
+    - "Все веб-изображения приведены к 720 × 900 и показываются без дополнительной обрезки."
+    - "Подарочная карусель отделяется от десяти основных публикаций."
+    - "Не связывать результат «4 из 4 поступили на бюджет» с работой lemonmedia."
+    - "Не заявлять установку виджетов без финальных файлов и подтверждения."
+    - "Не выдавать черновики в календаре за доказанный выход публикаций."
+  publishable: true

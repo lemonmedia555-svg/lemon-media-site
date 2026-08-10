@@ -1,0 +1,152 @@
+version: 1
+brand: lemonmedia
+case_id: achinsk-begovoy
+period: "2026-08"
+language: ru
+
+scope:
+  scheduled_publications: 10
+  bonus_publications: 1
+  static_posts: 8
+  scheduled_carousel_publications: 2
+  bonus_carousel_publications: 1
+  carousel_slides: 21
+  visual_files: 29
+
+claim_rule: "Цели описывают задачу контента, а не доказанный коммерческий результат. Подтверждены утверждение текстов, внутренняя проверка визуала и загрузка черновиков; фактические публикации и метрики не подтверждены."
+
+schedule:
+  platforms:
+    - vk
+    - max
+    - ok
+  starts_at: "2026-08-01 10:00"
+  ends_at: "2026-08-28 10:00"
+  cadence: evenly-through-month
+  publication_time: "10:00"
+  status: drafts-uploaded
+  actual_publication: unconfirmed
+  bonus_carousel_in_main_calendar: false
+
+publications:
+  - number: 1
+    id: publication-01
+    format: static-post
+    category: event-awareness
+    title: "5 кругов бега — главный беговой день Ачинска"
+    asset: "assets/cases/achinsk-begovoy/posts/01.jpg"
+    goals: [build-event-awareness, lead-to-registration]
+
+  - number: 2
+    id: publication-02
+    format: carousel
+    slide_count: 7
+    category: event-history
+    title: "Три года назад нас было 10"
+    goals: [show-community-atmosphere, build-trust]
+    slides:
+      - { number: 1, role: cover, topic: "Три года назад нас было 10", asset: "assets/cases/achinsk-begovoy/carousels/02/01.jpg" }
+      - { number: 2, role: scale, topic: "В этом сентябре на старт выйдут сотни", asset: "assets/cases/achinsk-begovoy/carousels/02/02.jpg" }
+      - { number: 3, role: origin, topic: "Скромное начало с небольшой компании", asset: "assets/cases/achinsk-begovoy/carousels/02/03.jpg" }
+      - { number: 4, role: growth, topic: "Как год за годом приходили новые участники", asset: "assets/cases/achinsk-begovoy/carousels/02/04.jpg" }
+      - { number: 5, role: community, topic: "Как локальные старты стали городскими событиями", asset: "assets/cases/achinsk-begovoy/carousels/02/05.jpg" }
+      - { number: 6, role: symbol, topic: "Финишная медаль и традиция события", asset: "assets/cases/achinsk-begovoy/carousels/02/06.jpg" }
+      - { number: 7, role: call-to-action, topic: "Приглашение выйти на новый старт", asset: "assets/cases/achinsk-begovoy/carousels/02/07.jpg" }
+
+  - number: 3
+    id: publication-03
+    format: static-post
+    category: beginner-help
+    title: "Первый забег без паники: с чего начать за месяц до старта"
+    asset: "assets/cases/achinsk-begovoy/posts/03.jpg"
+    goals: [remove-beginner-fears, explain-event-conditions]
+
+  - number: 4
+    id: publication-04
+    format: static-post
+    category: brand-story
+    title: "Почему в Ачинске появился беговой клуб"
+    asset: "assets/cases/achinsk-begovoy/posts/04.jpg"
+    goals: [build-trust, show-community-atmosphere]
+
+  - number: 5
+    id: publication-05
+    format: static-post
+    category: offer
+    title: "Запись открыта: старт 6 сентября"
+    asset: "assets/cases/achinsk-begovoy/posts/05.jpg"
+    historical_event_data: true
+    goals: [lead-to-registration]
+
+  - number: 6
+    id: publication-06
+    format: carousel
+    slide_count: 7
+    category: useful
+    title: "Что взять с собой на забег"
+    goals: [remove-beginner-fears, encourage-saves]
+    slides:
+      - { number: 1, role: cover, topic: "Что взять с собой на забег", asset: "assets/cases/achinsk-begovoy/carousels/06/01.jpg" }
+      - { number: 2, role: introduction, topic: "Чек-лист новичка", asset: "assets/cases/achinsk-begovoy/carousels/06/02.jpg" }
+      - { number: 3, role: checklist, topic: "Проверенные кроссовки", asset: "assets/cases/achinsk-begovoy/carousels/06/03.jpg" }
+      - { number: 4, role: checklist, topic: "Удобная форма по погоде", asset: "assets/cases/achinsk-begovoy/carousels/06/04.jpg" }
+      - { number: 5, role: checklist, topic: "Вода и лёгкий перекус", asset: "assets/cases/achinsk-begovoy/carousels/06/05.jpg" }
+      - { number: 6, role: checklist, topic: "Заряженный телефон", asset: "assets/cases/achinsk-begovoy/carousels/06/06.jpg" }
+      - { number: 7, role: call-to-action, topic: "Сохранить список перед стартом", asset: "assets/cases/achinsk-begovoy/carousels/06/07.jpg" }
+
+  - number: 7
+    id: publication-07
+    format: static-post
+    category: event-story
+    title: "Они бежали в жару: история одного старта"
+    asset: "assets/cases/achinsk-begovoy/posts/07.jpg"
+    goals: [show-community-atmosphere, build-trust]
+
+  - number: 8
+    id: publication-08
+    format: static-post
+    category: trust
+    title: "Кто нас держит: доверие и открытость"
+    asset: "assets/cases/achinsk-begovoy/posts/08.jpg"
+    goals: [build-trust, show-event-team]
+
+  - number: 9
+    id: publication-09
+    format: static-post
+    category: event-guide
+    title: "Как пройдёт 6 сентября"
+    asset: "assets/cases/achinsk-begovoy/posts/09.jpg"
+    goals: [explain-event-conditions, lead-to-registration]
+
+  - number: 10
+    id: publication-10
+    format: static-post
+    verified_static: true
+    category: urgency
+    title: "Последняя неделя записи"
+    asset: "assets/cases/achinsk-begovoy/posts/10.jpg"
+    goals: [lead-to-registration]
+
+bonus:
+  - id: bonus-carousel-01
+    format: carousel
+    slide_count: 7
+    category: motivation
+    title: "5 причин выйти на старт этой осенью"
+    calendar_status: separate-from-main-ten
+    goals: [remove-beginner-fears, motivate-participation, encourage-saves]
+    slides:
+      - { number: 1, role: cover, topic: "5 причин выйти на старт этой осенью", asset: "assets/cases/achinsk-begovoy/carousels/bonus/01.jpg" }
+      - { number: 2, role: hook, topic: "Даже если вы никогда не бегали", asset: "assets/cases/achinsk-begovoy/carousels/bonus/02.jpg" }
+      - { number: 3, role: reason, topic: "Удивиться собственным возможностям", asset: "assets/cases/achinsk-begovoy/carousels/bonus/03.jpg" }
+      - { number: 4, role: reason, topic: "Бежать рядом со своими", asset: "assets/cases/achinsk-begovoy/carousels/bonus/04.jpg" }
+      - { number: 5, role: reason, topic: "Получить финишную медаль", asset: "assets/cases/achinsk-begovoy/carousels/bonus/05.jpg" }
+      - { number: 6, role: reason, topic: "Стать частью ежегодного события", asset: "assets/cases/achinsk-begovoy/carousels/bonus/06.jpg" }
+      - { number: 7, role: call-to-action, topic: "Начать проще, чем кажется", asset: "assets/cases/achinsk-begovoy/carousels/bonus/07.jpg" }
+
+asset_display_notes:
+  aspect_ratio: "4:5"
+  crop: false
+  source_dimensions: "1080 × 1350"
+  web_dimensions: "720 × 900"
+  historical_event_terms: "Даты, числа и условия внутри макетов относятся к кампании 2026 года и не являются текущей офертой."

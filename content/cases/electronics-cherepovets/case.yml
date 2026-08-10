@@ -1,0 +1,81 @@
+version: 1
+brand: lemonmedia
+case:
+  id: electronics-cherepovets
+  slug: electronics-cherepovets
+  public_name: "ЭЛЕКТРОНИКС"
+  page: "case-electronics-cherepovets.html"
+  status: review-version
+  case_type: expanded
+  period: "2026-07/2026-08"
+  release_window: "2026-08"
+  niche: retail
+  subniche: consumer-electronics
+
+summary:
+  short: "Ассортимент магазина электроники собран в полезный контент-план: выбор, снятие сомнений, витрина, вовлечение и предложения."
+  content_task: "Подогреть интерес к товарам и акциям, показать экспертный подбор и привести аудиторию к сообщениям магазина."
+  result_wording: "Собран полный комплект: 10 публикаций, две основные карусели и подарочная карусель — 29 изображений."
+
+scope:
+  platform_count: 1
+  platform_ids:
+    - vk
+  publications: 10
+  static_posts: 8
+  carousel_publications: 2
+  carousel_slides: 14
+  gift_carousels: 1
+  gift_slides: 7
+  visual_files: 29
+  public_media_files: 28
+  private_exclusions: 1
+
+featured_goals:
+  - build-expert-trust
+  - help-product-choice
+  - handle-objections
+  - show-products
+  - encourage-comments
+  - lead-to-messages
+
+evidence:
+  confirmed:
+    - "Публичное название проекта: ЭЛЕКТРОНИКС."
+    - "Контент-план содержит 10 публикаций для ВКонтакте."
+    - "Основной пакет содержит 8 одиночных макетов и 2 карусели по 7 слайдов."
+    - "Дополнительно подготовлена подарочная карусель из 7 слайдов."
+    - "Всего в переданном визуальном пакете 29 изображений формата 1080 × 1350."
+    - "Контент-план и тексты утверждены до передачи на визуал."
+    - "Визуальный пакет передан клиенту на проверку 5 августа 2026 года."
+  not_claimed:
+    - "Финальное клиентское утверждение визуала."
+    - "Фактический выход публикаций."
+    - "Охваты, реакции, обращения, продажи и окупаемость."
+    - "Текущая актуальность цен и акций внутри исторических макетов."
+  public_links: null
+  direct_publication_links: null
+  analytics: null
+  client_review: pending
+
+quality_control:
+  client_copy_approval: confirmed
+  client_visual_approval: pending
+  transferred_for_review: confirmed
+  transferred_for_review_date: "2026-08-05"
+  publication_launch: not-confirmed
+  public_exclusions:
+    - asset: "post-01-carousel/slide-02"
+      reason: "Крупное изображение лица; сохранено только в закрытом архиве проекта."
+
+publication_control:
+  portfolio_permission: confirmed_by_project_owner
+  final_media: internal-complete
+  publishable_as_result: false
+  publishable_as_review_version: true
+  display_notes:
+    - "В публичной версии использовать нейтральную формулировку «собрали полный комплект»."
+    - "Не называть материалы опубликованными."
+    - "Не добавлять бизнес-метрики без отдельной аналитики."
+    - "Цены и акции внутри макетов маркировать как условия августа 2026 года."
+    - "Публично показывать 28 из 29 изображений; исключённый слайд не копировать в assets кейса."

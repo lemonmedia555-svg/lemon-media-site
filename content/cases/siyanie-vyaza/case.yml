@@ -1,0 +1,87 @@
+version: 1
+brand: lemonmedia
+id: siyanie-vyaza
+slug: siyanie-vyaza
+language: ru
+
+identity:
+  public_title: "Сияние вяза — мастерская Юлии Якунович"
+  client_display_name: "Мастерская Юлии Якунович"
+  period: "2026-07"
+  niche: furniture
+  subniche: handcrafted-wood-and-resin-furniture
+  geography: null
+
+summary:
+  short: "Прошлый контент-цикл мастерской: 10 публикаций, две карусели по 9 слайдов и 3 дополнительных вертикальных кадра — 29 финальных изображений."
+  content_task: "Перевести внимание от красивой фактуры к понятному выбору изделия под комнату и личному диалогу с мастером."
+  result_wording: "В итоговой публичной папке сохранены 8 одиночных макетов, 18 слайдов двух каруселей и 3 вертикальных кадра. На странице показана нейтральная продуктовая выборка из 12 изображений."
+
+scope:
+  publications: 10
+  static_publications: 8
+  carousel_publications: 2
+  carousel_slides_each: 9
+  additional_story_frames: 3
+  visual_files: 29
+  post_aspect_ratio: "4:5"
+  story_aspect_ratio: "9:16"
+  prepared_platform_count: 4
+  platforms_in_plan: [vk, telegram, max, instagram]
+
+content_mix:
+  behind_the_scenes: 2
+  useful: 2
+  materials: 2
+  works: 2
+  offers: 2
+
+public_assets:
+  posts:
+    - "assets/cases/siyanie-vyaza/posts/01.jpg"
+    - "assets/cases/siyanie-vyaza/posts/03.jpg"
+    - "assets/cases/siyanie-vyaza/posts/04.jpg"
+    - "assets/cases/siyanie-vyaza/posts/05.jpg"
+    - "assets/cases/siyanie-vyaza/posts/06.jpg"
+    - "assets/cases/siyanie-vyaza/posts/08.jpg"
+    - "assets/cases/siyanie-vyaza/posts/09.jpg"
+    - "assets/cases/siyanie-vyaza/posts/10.jpg"
+  carousel_02:
+    - "assets/cases/siyanie-vyaza/carousel-02/01.jpg"
+    - "assets/cases/siyanie-vyaza/carousel-02/03.jpg"
+    - "assets/cases/siyanie-vyaza/carousel-02/07.jpg"
+    - "assets/cases/siyanie-vyaza/carousel-02/09.jpg"
+  public_asset_count: 12
+  selection_rule: "Только изделия, интерьеры и нейтральные образовательные слайды: без людей, личных данных, условий о стоимости и неподтверждённых результатов."
+
+evidence:
+  confirmed:
+    - "Завершённый цикл подтверждён планом, итоговой визуальной папкой и его использованием как основы для следующего этапа."
+    - "Прошлый план содержит 10 публикаций: 8 одиночных и 2 карусели по 9 слайдов."
+    - "План содержит 3 дополнительных вертикальных кадра."
+    - "Публичная папка прошлого визуала содержит 29 JPEG-файлов: 8 одиночных макетов, 18 слайдов каруселей и 3 вертикальных кадра."
+    - "Визуалы не содержат лиц, контактов, отзывов или иных персональных данных."
+  evidence_limitations:
+    - "Завершение прошлого цикла подтверждено его использованием как готового комплекта для следующего этапа и наличием итоговой папки."
+    - "Названия трёх вертикальных файлов не полностью соответствуют тексту бонусной серии в плане; поэтому они не показаны на публичной странице."
+  not_claimed:
+    - "Фактическая публикация материалов в социальных сетях."
+    - "Охваты, сохранения, заявки, продажи и окупаемость."
+    - "Актуальность исторических условий, сроков и формулировок предложения."
+  direct_publication_links: null
+  analytics: null
+  client_review: null
+
+publication_control:
+  portfolio_permission: confirmed_by_project_owner
+  source_visuals_verified: true
+  source_plan_verified: true
+  personal_data_visible_public: false
+  recognizable_people_visible_public: false
+  historical_price_claims_visible_public: false
+  publishable: true
+  display_notes:
+    - "Показывать изображения полностью, без обрезки."
+    - "Не представлять подготовку для четырёх площадок как подтверждение фактической публикации."
+    - "Не использовать незавершённый следующий цикл и материалы его правок."
+    - "Не заявлять метрики или продажи без отдельной аналитики."

@@ -1,0 +1,191 @@
+version: 1
+brand: lemonmedia
+case_id: orange-style
+period: first-month
+language: ru
+
+scope:
+  publications: 10
+  static_posts: 10
+  carousel_publications: 0
+  carousel_slides: 0
+  stories_sequences: 1
+  stories_frames: 5
+  vk_widgets: 3
+  visual_files: 18
+  prepared_platform_count: 1
+
+claim_rule: "Цели ниже описывают маркетинговую задачу материалов, а не уже достигнутый бизнес-результат. Первый комплект утверждён и загружен в систему публикации, но точный выход всех постов и метрики не подтверждены."
+
+schedule:
+  exact_publication_dates: null
+  exact_publication_times: null
+  status: uploaded-to-publication-system-exact-publication-not-verified
+
+publications:
+  - number: 1
+    id: publication-01
+    format: static-post
+    category: useful
+    title: "Как не забросить тренировки летом"
+    asset: "assets/cases/orange-style/posts/01.jpg"
+    goals:
+      - retain-existing-clients
+      - encourage-saves
+
+  - number: 2
+    id: publication-02
+    format: static-post
+    category: engagement
+    title: "Любимое групповое направление"
+    asset: "assets/cases/orange-style/posts/02.jpg"
+    goals:
+      - collect-feedback
+      - encourage-comments
+
+  - number: 3
+    id: publication-03
+    format: static-post
+    category: myth
+    title: "Стану как качок: разбираем страх силовых тренировок"
+    asset: "assets/cases/orange-style/posts/03.jpg"
+    goals:
+      - remove-fears
+      - build-expertise
+
+  - number: 4
+    id: publication-04
+    format: static-post
+    category: proof-and-work
+    title: "Наш чемпион: бронза Спартакиады России"
+    asset: "assets/cases/orange-style/posts/04.jpg"
+    goals:
+      - build-trust
+      - promote-personal-training
+
+  - number: 5
+    id: publication-05
+    format: static-post
+    category: offer
+    title: "Семейный фитнес: вдвоём выгоднее"
+    asset: "assets/cases/orange-style/posts/05.jpg"
+    historical_terms: true
+    related_stories_sequence: stories-01
+    goals:
+      - lead-request
+      - motivate-with-support
+
+  - number: 6
+    id: publication-06
+    format: static-post
+    category: useful
+    title: "Что есть до и после тренировки"
+    asset: "assets/cases/orange-style/posts/06.jpg"
+    goals:
+      - encourage-saves
+      - build-expertise
+
+  - number: 7
+    id: publication-07
+    format: static-post
+    category: myth
+    title: "Меньше ешь — похудеешь?"
+    asset: "assets/cases/orange-style/posts/07.jpg"
+    goals:
+      - remove-fears
+      - build-expertise
+
+  - number: 8
+    id: publication-08
+    format: static-post
+    category: engagement
+    title: "Честно: что мешает ходить в зал летом?"
+    asset: "assets/cases/orange-style/posts/08.jpg"
+    goals:
+      - collect-feedback
+      - retain-existing-clients
+
+  - number: 9
+    id: publication-09
+    format: static-post
+    category: proof-and-work
+    title: "Путь до результата: как устроена персональная работа"
+    asset: "assets/cases/orange-style/posts/09.jpg"
+    goals:
+      - promote-personal-training
+      - build-trust
+
+  - number: 10
+    id: publication-10
+    format: static-post
+    category: offer
+    title: "Бонус постоянства: продление абонемента"
+    asset: "assets/cases/orange-style/posts/10.jpg"
+    historical_terms: true
+    goals:
+      - lead-renewal
+      - retain-existing-clients
+
+stories:
+  - id: stories-01
+    format: stories-sequence
+    frame_count: 5
+    related_publication_id: publication-05
+    title: "Мини-прогрев к семейному фитнесу"
+    historical_terms: true
+    frames:
+      - number: 1
+        role: hook
+        topic: "Почему одни бросают зал через месяц, а другие ходят годами"
+        asset: "assets/cases/orange-style/stories/01.jpg"
+      - number: 2
+        role: reframing
+        topic: "Дело не только в силе воли, а в поддержке рядом"
+        asset: "assets/cases/orange-style/stories/02.jpg"
+      - number: 3
+        role: argument
+        topic: "Вдвоём легче не сдаваться и доходить до результата"
+        asset: "assets/cases/orange-style/stories/03.jpg"
+      - number: 4
+        role: offer-transition
+        topic: "Вместе может быть ещё и выгоднее"
+        asset: "assets/cases/orange-style/stories/04.jpg"
+      - number: 5
+        role: publication-transition
+        topic: "Переход к подробностям в посте"
+        asset: "assets/cases/orange-style/stories/05.jpg"
+
+vk_widgets:
+  - number: 1
+    id: widget-01
+    title: "Что нужно, чтобы похудеть"
+    asset: "assets/cases/orange-style/widgets/01.jpg"
+    goal: lead-to-useful-content
+
+  - number: 2
+    id: widget-02
+    title: "Как устроена персональная работа"
+    asset: "assets/cases/orange-style/widgets/02.jpg"
+    goal: promote-personal-training
+
+  - number: 3
+    id: widget-03
+    title: "Семейный фитнес"
+    asset: "assets/cases/orange-style/widgets/03.jpg"
+    historical_terms: true
+    goal: lead-to-offer
+
+next_order:
+  status: ordered-in-production
+  publications: 15
+  stories_frames: 10
+
+asset_display_notes:
+  posts_aspect_ratio: "4:5"
+  stories_aspect_ratio: "9:16"
+  widgets_aspect_ratio: "2:3"
+  crop: false
+  posts_dimensions: "720 × 900"
+  stories_dimensions: "540 × 960"
+  widgets_dimensions: "640 × 960"
+  historical_commercial_terms: "Скидки и бонусы внутри макетов относятся к периоду проекта; не представлять их как актуальное предложение Orange Style."

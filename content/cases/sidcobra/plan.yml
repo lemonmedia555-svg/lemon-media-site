@@ -1,0 +1,350 @@
+version: 1
+brand: lemonmedia
+case_id: sidcobra
+period: "2026-07/2026-10"
+language: ru
+
+scope:
+  publications: 30
+  static_posts: 24
+  carousel_publications: 6
+  carousel_slides: 42
+  visual_files: 66
+  confirmed_launch_platform_count: 2
+
+claim_rule: "Цели публикаций описывают замысел контента, а не измеренный бизнес-результат. Загрузка подтверждена для VK и Telegram; Instagram был только в плане."
+
+schedule:
+  start_date: "2026-07-29"
+  end_date: "2026-10-05"
+  weekdays: "понедельник, среда, пятница"
+  time_local: "10:00"
+  timezone_status: not-recorded
+  status: uploaded-and-scheduled
+
+publications:
+  - number: 1
+    id: publication-01
+    scheduled_at_local: "2026-07-29T10:00:00"
+    format: static-post
+    category: brand-and-backstage
+    title: "День за кадром"
+    asset: "assets/cases/sidcobra/posts/01.jpg"
+    goals: [humanize-expert, build-trust]
+
+  - number: 2
+    id: publication-02
+    scheduled_at_local: "2026-07-31T10:00:00"
+    format: static-post
+    category: brand-and-engagement
+    title: "Какой вес Ваш?"
+    asset: "assets/cases/sidcobra/posts/02.jpg"
+    goals: [encourage-comments, start-dialogue]
+
+  - number: 3
+    id: publication-03
+    scheduled_at_local: "2026-08-03T10:00:00"
+    format: carousel
+    slide_count: 7
+    category: expert-myth
+    title: "От штанги я стану перекачанной"
+    goals: [remove-fear, show-expertise, encourage-saves]
+    slides:
+      - { number: 1, role: cover, asset: "assets/cases/sidcobra/carousels/03/01.jpg" }
+      - { number: 2, role: problem, asset: "assets/cases/sidcobra/carousels/03/02.jpg" }
+      - { number: 3, role: explanation, asset: "assets/cases/sidcobra/carousels/03/03.jpg" }
+      - { number: 4, role: explanation, asset: "assets/cases/sidcobra/carousels/03/04.jpg" }
+      - { number: 5, role: explanation, asset: "assets/cases/sidcobra/carousels/03/05.jpg" }
+      - { number: 6, role: conclusion, asset: "assets/cases/sidcobra/carousels/03/06.jpg" }
+      - { number: 7, role: call-to-action, asset: "assets/cases/sidcobra/carousels/03/07.jpg" }
+
+  - number: 4
+    id: publication-04
+    scheduled_at_local: "2026-08-05T10:00:00"
+    format: static-post
+    category: proof-and-achievement
+    title: "Два рекорда России"
+    asset: "assets/cases/sidcobra/posts/04.jpg"
+    goals: [show-proof, build-authority]
+
+  - number: 5
+    id: publication-05
+    scheduled_at_local: "2026-08-07T10:00:00"
+    format: static-post
+    category: service-and-offer
+    title: "Разбор целей — бесплатно"
+    asset: "assets/cases/sidcobra/posts/05.jpg"
+    goals: [lower-entry-barrier, lead-request]
+
+  - number: 6
+    id: publication-06
+    scheduled_at_local: "2026-08-10T10:00:00"
+    format: static-post
+    category: expert-education
+    title: "Разминка, а не трата времени"
+    asset: "assets/cases/sidcobra/posts/06.jpg"
+    goals: [show-expertise, encourage-saves]
+
+  - number: 7
+    id: publication-07
+    scheduled_at_local: "2026-08-12T10:00:00"
+    format: static-post
+    category: product
+    title: "Бутылка SIDCOBRA"
+    asset: "assets/cases/sidcobra/posts/07.jpg"
+    goals: [introduce-product, create-interest]
+
+  - number: 8
+    id: publication-08
+    scheduled_at_local: "2026-08-14T10:00:00"
+    format: static-post
+    category: expert-education
+    title: "Присед и колени"
+    asset: "assets/cases/sidcobra/posts/08.jpg"
+    goals: [remove-fear, explain-technique]
+
+  - number: 9
+    id: publication-09
+    scheduled_at_local: "2026-08-17T10:00:00"
+    format: static-post
+    category: product-proof
+    title: "Товары в деле"
+    asset: "assets/cases/sidcobra/posts/09.jpg"
+    goals: [show-real-use, build-product-trust]
+    revision_note: "По просьбе клиента реальные фотографии и сами товары сохранены без изменения."
+
+  - number: 10
+    id: publication-10
+    scheduled_at_local: "2026-08-19T10:00:00"
+    format: static-post
+    category: expert-education
+    title: "Сила растёт во сне"
+    asset: "assets/cases/sidcobra/posts/10.jpg"
+    goals: [explain-recovery, encourage-saves]
+    revision_note: "Сохранили понравившуюся идею с котом и переработали внешний вид полотенца."
+
+  - number: 11
+    id: publication-11
+    scheduled_at_local: "2026-08-21T10:00:00"
+    format: static-post
+    category: expert-positioning
+    title: "Программа из интернета"
+    asset: "assets/cases/sidcobra/posts/11.jpg"
+    goals: [differentiate-service, show-expertise]
+
+  - number: 12
+    id: publication-12
+    scheduled_at_local: "2026-08-24T10:00:00"
+    format: static-post
+    category: service
+    title: "Онлайн-ведение"
+    asset: "assets/cases/sidcobra/posts/12.jpg"
+    goals: [explain-service, lead-request]
+
+  - number: 13
+    id: publication-13
+    scheduled_at_local: "2026-08-26T10:00:00"
+    format: carousel
+    slide_count: 7
+    category: beginner-guide
+    title: "Новичок в зале: с чего начать"
+    goals: [help-beginner, show-expertise, lead-request]
+    slides:
+      - { number: 1, role: cover, asset: "assets/cases/sidcobra/carousels/13/01.jpg" }
+      - { number: 2, role: problem, asset: "assets/cases/sidcobra/carousels/13/02.jpg" }
+      - { number: 3, role: explanation, asset: "assets/cases/sidcobra/carousels/13/03.jpg" }
+      - { number: 4, role: explanation, asset: "assets/cases/sidcobra/carousels/13/04.jpg" }
+      - { number: 5, role: recommendation, asset: "assets/cases/sidcobra/carousels/13/05.jpg" }
+      - { number: 6, role: conclusion, asset: "assets/cases/sidcobra/carousels/13/06.jpg" }
+      - { number: 7, role: call-to-action, asset: "assets/cases/sidcobra/carousels/13/07.jpg" }
+
+  - number: 14
+    id: publication-14
+    scheduled_at_local: "2026-08-28T10:00:00"
+    format: static-post
+    category: proof-and-story
+    title: "Ей отказывали другие тренеры"
+    asset: "assets/cases/sidcobra/posts/14.jpg"
+    goals: [show-student-story, build-trust]
+
+  - number: 15
+    id: publication-15
+    scheduled_at_local: "2026-08-31T10:00:00"
+    format: static-post
+    category: expert-education
+    title: "Нужен ли протеин"
+    asset: "assets/cases/sidcobra/posts/15.jpg"
+    goals: [answer-common-question, encourage-saves]
+
+  - number: 16
+    id: publication-16
+    scheduled_at_local: "2026-09-02T10:00:00"
+    format: carousel
+    slide_count: 7
+    category: product-guide
+    title: "Что реально нужно взять на тренировку"
+    goals: [help-choice, introduce-products, encourage-saves]
+    slides:
+      - { number: 1, role: cover, asset: "assets/cases/sidcobra/carousels/16/01.jpg" }
+      - { number: 2, role: problem, asset: "assets/cases/sidcobra/carousels/16/02.jpg" }
+      - { number: 3, role: product, asset: "assets/cases/sidcobra/carousels/16/03.jpg" }
+      - { number: 4, role: product, asset: "assets/cases/sidcobra/carousels/16/04.jpg" }
+      - { number: 5, role: product, asset: "assets/cases/sidcobra/carousels/16/05.jpg" }
+      - { number: 6, role: conclusion, asset: "assets/cases/sidcobra/carousels/16/06.jpg" }
+      - { number: 7, role: offer, asset: "assets/cases/sidcobra/carousels/16/07.jpg" }
+
+  - number: 17
+    id: publication-17
+    scheduled_at_local: "2026-09-04T10:00:00"
+    format: static-post
+    category: expert-technique
+    title: "Выдох — на усилии"
+    asset: "assets/cases/sidcobra/posts/17.jpg"
+    goals: [explain-technique, build-expertise]
+
+  - number: 18
+    id: publication-18
+    scheduled_at_local: "2026-09-07T10:00:00"
+    format: static-post
+    category: product-offer
+    title: "Первая партия заканчивается"
+    asset: "assets/cases/sidcobra/posts/18.jpg"
+    goals: [show-demand, lead-product-request]
+
+  - number: 19
+    id: publication-19
+    scheduled_at_local: "2026-09-09T10:00:00"
+    format: static-post
+    category: social-proof
+    title: "Слово ученику"
+    asset: "assets/cases/sidcobra/posts/19.jpg"
+    goals: [show-proof, build-trust]
+
+  - number: 20
+    id: publication-20
+    scheduled_at_local: "2026-09-11T10:00:00"
+    format: carousel
+    slide_count: 7
+    category: expert-myth
+    title: "Много повторов сушат, мало — качают массу"
+    goals: [remove-myth, show-expertise, encourage-saves]
+    slides:
+      - { number: 1, role: cover, asset: "assets/cases/sidcobra/carousels/20/01.jpg" }
+      - { number: 2, role: explanation, asset: "assets/cases/sidcobra/carousels/20/02.jpg" }
+      - { number: 3, role: explanation, asset: "assets/cases/sidcobra/carousels/20/03.jpg" }
+      - { number: 4, role: explanation, asset: "assets/cases/sidcobra/carousels/20/04.jpg" }
+      - { number: 5, role: conclusion, asset: "assets/cases/sidcobra/carousels/20/05.jpg" }
+      - { number: 6, role: example, asset: "assets/cases/sidcobra/carousels/20/06.jpg" }
+      - { number: 7, role: call-to-action, asset: "assets/cases/sidcobra/carousels/20/07.jpg" }
+
+  - number: 21
+    id: publication-21
+    scheduled_at_local: "2026-09-14T10:00:00"
+    format: static-post
+    category: expert-system
+    title: "Как расти, а не стоять"
+    asset: "assets/cases/sidcobra/posts/21.jpg"
+    goals: [explain-progress-tracking, show-system]
+
+  - number: 22
+    id: publication-22
+    scheduled_at_local: "2026-09-16T10:00:00"
+    format: static-post
+    category: product-proof
+    title: "Два товара. Каждый проверен"
+    asset: "assets/cases/sidcobra/posts/22.jpg"
+    goals: [build-product-trust, introduce-products]
+
+  - number: 23
+    id: publication-23
+    scheduled_at_local: "2026-09-18T10:00:00"
+    format: carousel
+    slide_count: 7
+    category: student-case
+    title: "Как я научилась приседать, жать и тянуть онлайн за 14 месяцев"
+    goals: [show-student-proof, explain-online-format, lead-request]
+    slides:
+      - { number: 1, role: cover, asset: "assets/cases/sidcobra/carousels/23/01.jpg" }
+      - { number: 2, role: starting-point, asset: "assets/cases/sidcobra/carousels/23/02.jpg" }
+      - { number: 3, role: process, asset: "assets/cases/sidcobra/carousels/23/03.jpg" }
+      - { number: 4, role: explanation, asset: "assets/cases/sidcobra/carousels/23/04.jpg" }
+      - { number: 5, role: measured-progress, asset: "assets/cases/sidcobra/carousels/23/05.jpg" }
+      - { number: 6, role: proof, asset: "assets/cases/sidcobra/carousels/23/06.jpg" }
+      - { number: 7, role: call-to-action, asset: "assets/cases/sidcobra/carousels/23/07.jpg" }
+
+  - number: 24
+    id: publication-24
+    scheduled_at_local: "2026-09-21T10:00:00"
+    format: carousel
+    slide_count: 7
+    category: expert-recovery
+    title: "5 признаков, что Вы перетренировались"
+    goals: [help-self-check, explain-recovery, encourage-saves]
+    slides:
+      - { number: 1, role: cover, asset: "assets/cases/sidcobra/carousels/24/01.jpg" }
+      - { number: 2, role: sign-1, asset: "assets/cases/sidcobra/carousels/24/02.jpg" }
+      - { number: 3, role: sign-2, asset: "assets/cases/sidcobra/carousels/24/03.jpg" }
+      - { number: 4, role: signs-3-and-4, asset: "assets/cases/sidcobra/carousels/24/04.jpg" }
+      - { number: 5, role: sign-5, asset: "assets/cases/sidcobra/carousels/24/05.jpg" }
+      - { number: 6, role: conclusion, asset: "assets/cases/sidcobra/carousels/24/06.jpg" }
+      - { number: 7, role: call-to-action, asset: "assets/cases/sidcobra/carousels/24/07.jpg" }
+
+  - number: 25
+    id: publication-25
+    scheduled_at_local: "2026-09-23T10:00:00"
+    format: static-post
+    category: service
+    title: "Лично в Питере"
+    asset: "assets/cases/sidcobra/posts/25.jpg"
+    goals: [explain-offline-format, lead-request]
+
+  - number: 26
+    id: publication-26
+    scheduled_at_local: "2026-09-25T10:00:00"
+    format: static-post
+    category: expert-technique
+    title: "Штанга или тренажёр"
+    asset: "assets/cases/sidcobra/posts/26.jpg"
+    goals: [explain-choice, show-expertise]
+
+  - number: 27
+    id: publication-27
+    scheduled_at_local: "2026-09-28T10:00:00"
+    format: static-post
+    category: product
+    title: "Охлаждает, когда жарко"
+    asset: "assets/cases/sidcobra/posts/27.jpg"
+    goals: [show-product-use, create-interest]
+
+  - number: 28
+    id: publication-28
+    scheduled_at_local: "2026-09-30T10:00:00"
+    format: static-post
+    category: positioning
+    title: "Результат — это привычка"
+    asset: "assets/cases/sidcobra/posts/28.jpg"
+    goals: [reinforce-method, build-trust]
+
+  - number: 29
+    id: publication-29
+    scheduled_at_local: "2026-10-02T10:00:00"
+    format: static-post
+    category: brand-news
+    title: "SIDCOBRA. Скоро — свой зал"
+    asset: "assets/cases/sidcobra/posts/29.jpg"
+    goals: [share-brand-development, create-interest]
+
+  - number: 30
+    id: publication-30
+    scheduled_at_local: "2026-10-05T10:00:00"
+    format: static-post
+    category: product-news
+    title: "Футболки SIDCOBRA. Скоро"
+    asset: "assets/cases/sidcobra/posts/30.jpg"
+    goals: [introduce-product, create-interest]
+
+asset_display_notes:
+  aspect_ratio: "4:5"
+  crop: false
+  normalized_dimensions: "1080 × 1350"
+  source_dimensions: "43 файла 1080 × 1350 и 23 файла 2160 × 2700"

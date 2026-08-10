@@ -1,0 +1,112 @@
+version: 1
+brand: lemonmedia
+case_id: dava-holding
+period: first-month
+language: ru
+
+scope:
+  publications: 10
+  static_posts: 10
+  stories_sequences: 1
+  stories_frames: 5
+  visual_concepts: 3
+  final_visual_files: 15
+
+claim_rule: "Темы отражают мировоззрение клиентского проекта, а не позицию lemonmedia. Контент-план, дизайн и черновики подтверждены; полный выход и коммерческие результаты не доказаны."
+
+schedule:
+  platform: vk
+  status: drafts-loaded-with-unmatched-files
+  start_date: "2026-08-07"
+  end_date: "2026-09-03"
+  time: "10:00"
+  cadence: every-3-days
+  texts_loaded: 10
+  auto_matched_post_visuals: 8
+  auto_matched_story_visuals: 3
+  final_folder_posts: 10
+  final_folder_stories: 5
+
+publications:
+  - number: 1
+    role: brand-history
+    title: "Бизнес как служение"
+    asset: "assets/cases/dava-holding/posts/01.jpg"
+    goals: [introduce-brand-worldview, explain-complex-idea]
+  - number: 2
+    role: useful
+    title: "Пять опор державного инклюзивного капитализма"
+    asset: "assets/cases/dava-holding/posts/02.jpg"
+    terminology_revision: confirmed
+    goals: [show-model-pillars, build-systemic-understanding]
+  - number: 3
+    role: myth
+    title: "Нажива берёт или служение даёт"
+    asset: "assets/cases/dava-holding/posts/03.jpg"
+    goals: [remove-stereotypes, encourage-discussion]
+  - number: 4
+    role: useful
+    title: "Каждый гражданин — акционер общего богатства"
+    asset: "assets/cases/dava-holding/posts/04.jpg"
+    goals: [explain-complex-idea, build-systemic-understanding]
+  - number: 5
+    role: brand-history
+    title: "Труд должен позволять жить, а не выживать"
+    asset: "assets/cases/dava-holding/posts/05.jpg"
+    goals: [introduce-brand-worldview, encourage-discussion]
+  - number: 6
+    role: engagement
+    title: "Семья — базовая ячейка экономики"
+    asset: "assets/cases/dava-holding/posts/06.jpg"
+    goals: [encourage-discussion]
+  - number: 7
+    role: useful
+    title: "Технология служит человеку"
+    asset: "assets/cases/dava-holding/posts/07.jpg"
+    goals: [explain-complex-idea, introduce-brand-worldview]
+  - number: 8
+    role: myth
+    title: "Не содержать, а страховать"
+    asset: "assets/cases/dava-holding/posts/08.jpg"
+    goals: [remove-stereotypes, explain-complex-idea]
+  - number: 9
+    role: brand-history
+    title: "Не социализм и не либерализм: третий путь"
+    asset: "assets/cases/dava-holding/posts/09.jpg"
+    goals: [introduce-brand-worldview, build-systemic-understanding]
+  - number: 10
+    role: engagement
+    title: "Человек — цель, а не средство"
+    asset: "assets/cases/dava-holding/posts/10.jpg"
+    goals: [summarize-month, encourage-discussion]
+
+stories:
+  - id: stories-to-publication-02
+    frame_count: 5
+    related_publication: 2
+    title: "Пять опор простыми словами"
+    goals: [simplify-term, show-model-pillars, lead-to-post]
+    assets:
+      - "assets/cases/dava-holding/stories/01.jpg"
+      - "assets/cases/dava-holding/stories/02.jpg"
+      - "assets/cases/dava-holding/stories/03.jpg"
+      - "assets/cases/dava-holding/stories/04.jpg"
+      - "assets/cases/dava-holding/stories/05.jpg"
+
+visual_concepts:
+  selected: 3
+  previews:
+    - { number: 1, asset: "assets/cases/dava-holding/concepts/01.jpg", status: not-selected }
+    - { number: 2, asset: "assets/cases/dava-holding/concepts/02.jpg", status: not-selected }
+    - { number: 3, asset: "assets/cases/dava-holding/concepts/03.jpg", status: selected }
+
+next_order:
+  status: accepted-in-production
+  publications: 10
+  carousel_publications: 2
+
+asset_display_notes:
+  post_dimensions: "720 × 900"
+  story_dimensions: "720 × 1280"
+  crop: false
+  ideology_attribution: "Идеологические тезисы принадлежат клиентскому проекту."

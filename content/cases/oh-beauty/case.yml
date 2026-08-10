@@ -1,0 +1,86 @@
+version: 1
+brand: lemonmedia
+id: oh-beauty
+slug: oh-beauty
+language: ru
+
+identity:
+  public_title: "Oh! Beauty — контент-система для студии красоты"
+  client_display_name: "Oh! Beauty"
+  period: "2026-07"
+  niche: beauty-and-wellness
+  subniche: laser-hair-removal-and-lpg-studio
+  geography: null
+
+summary:
+  short: "Первый подтверждённый комплект для студии: 10 постов и подарочная карусель из 7 слайдов с последовательностью от полезной темы и сомнений к процессу и обращению."
+  content_task: "Объяснить сложную услугу без давления, снять неопределённость, показать организованный процесс и встроить коммерческие публикации после полезной части."
+  result_wording: "Подготовлены 10 финальных постов и дополнительная карусель из 7 слайдов. На публичной странице показана нейтральная выборка из пяти макетов; публикация и бизнес-метрики не заявляются."
+
+scope:
+  publications: 10
+  static_posts: 10
+  carousel_publications: 1
+  carousel_slides: 7
+  visual_files: 17
+  post_aspect_ratio: "4:5"
+  carousel_aspect_ratio: "4:5"
+  prepared_platform_count: null
+  platform_status: not-publicly-confirmed
+
+public_assets:
+  posts:
+    - "assets/cases/oh-beauty/posts/01.jpg"
+    - "assets/cases/oh-beauty/posts/02.jpg"
+    - "assets/cases/oh-beauty/posts/03.jpg"
+  carousel:
+    - "assets/cases/oh-beauty/carousel/01.jpg"
+    - "assets/cases/oh-beauty/carousel/07.jpg"
+  public_asset_count: 5
+  selection_rule: "Только нейтральные макеты без имён клиентов, узнаваемых лиц, чувствительных кадров, старых цен и медицинских обещаний."
+
+featured_goals:
+  - reduce-uncertainty
+  - answer-common-objections
+  - show-process
+  - build-trust
+  - lead-to-dialogue
+
+continuation:
+  status_internal: renewal-in-production
+  source_task_id: 90756
+  visual_task_id: 90938
+  public_wording: "После первого комплекта клиент продолжил работу с lemonmedia."
+
+evidence:
+  confirmed:
+    - "Контент-план содержит 10 публикаций."
+    - "Финальная визуальная папка от 16 июля 2026 года содержит 10 постов."
+    - "Та же папка содержит подарочную карусель из 7 слайдов."
+    - "Всего найдено 17 финальных изображений в формате 4:5."
+    - "Текущая задача продления подтверждает продолжение работы с клиентом."
+  not_claimed:
+    - "Публикация каждого материала."
+    - "Охваты, вовлечённость, заявки, продажи и окупаемость."
+    - "Медицинская эффективность процедур."
+    - "Актуальность цен, скидок и других условий из исторических макетов."
+    - "Готовность нового комплекта."
+  public_links: null
+  direct_publication_links: null
+  analytics: null
+  client_review: null
+
+publication_control:
+  portfolio_permission: confirmed_by_project_owner
+  final_media: ready
+  client_visual_approval: not-explicitly-claimed
+  direct_publication_links: unavailable
+  recognizable_people_assets_public: false
+  historical_terms_visible_public: false
+  medical_claims_visible_public: false
+  display_notes:
+    - "Показывать изображения полностью, без обрезки."
+    - "Не пересказывать медицинские утверждения из исходных текстов как советы или доказанные факты."
+    - "Не показывать отзывы с именами и кадры тела, выбранные как чувствительные."
+    - "Не представлять продолжение работы как готовность нового комплекта."
+  publishable: true
