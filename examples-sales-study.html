@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Посты, карусели и истории lemonmedia для разных сфер бизнеса на одной странице.">
+  <title>Примеры работ для вашего бизнеса - lemonmedia</title>
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/design/tokens.css">
+  <link rel="stylesheet" href="assets/design/examples-sales-study.css?v=7">
+</head>
+<body class="sales-page" data-sales-embed-ready="false">
+  <header class="sales-hero">
+    <div class="sales-shell sales-hero__brand"><img src="assets/design/logo-white.svg" alt="lemonmedia"></div>
+    <div class="sales-shell sales-hero__composition">
+      <h1><span>Посмотрите, как может выглядеть</span> <em>ваш контент</em></h1>
+      <div class="sales-hero__support">
+        <p>Выберите близкий проект. Внутри - посты, полные карусели и истории.</p>
+      </div>
+    </div>
+  </header>
+
+  <main id="sales-catalog">
+    <section class="sales-filter-stage" aria-label="Фильтры работ">
+      <div class="sales-shell sales-filters" data-sales-filters>
+        <div class="sales-filter-row">
+          <strong>Тип проекта</strong>
+          <div class="sales-filter-scroll" role="group" aria-label="Выберите тип проекта">
+            <button class="is-active" type="button" data-category="all">Все</button>
+            <button type="button" data-category="services">Услуги</button>
+            <button type="button" data-category="product">Товары</button>
+            <button type="button" data-category="expert">Эксперты и B2B</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sales-works" aria-labelledby="sales-works-title">
+      <div class="sales-shell sales-works__head">
+        <h2 id="sales-works-title">Примеры работ для разных задач</h2>
+      </div>
+
+      <div class="sales-shell sales-showcase" data-sales-showcase></div>
+
+      <div class="sales-empty" data-sales-empty hidden>
+        <h3>В этой подборке пока нет проекта</h3>
+        <p>Выберите другой тип проекта или покажите все работы.</p>
+        <button type="button" data-reset-filters>Показать все работы</button>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="assets/design/examples-sales-data.js?v=6"></script>
+  <script src="assets/design/examples-sales-study.js?v=10"></script>
+</body>
+</html>
