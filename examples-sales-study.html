@@ -3,13 +3,29 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
   <meta name="description" content="Посты, карусели и истории lemonmedia для разных сфер бизнеса на одной странице.">
   <title>Примеры работ для вашего бизнеса - lemonmedia</title>
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/design/tokens.css">
-  <link rel="stylesheet" href="assets/design/examples-sales-study.css?v=7">
+  <link rel="stylesheet" href="assets/design/examples-sales-study.css?v=8">
 </head>
-<body class="sales-page" data-sales-embed-ready="false">
+<body class="sales-page" data-sales-embed-ready="false" data-sales-authorized="false">
+  <section class="sales-access" data-sales-access aria-labelledby="sales-access-title">
+    <div class="sales-access__brand"><img src="assets/design/logo-white.svg" alt="lemonmedia"></div>
+    <form class="sales-access__form" data-sales-access-form novalidate>
+      <span class="sales-access__eyebrow">Закрытая страница</span>
+      <h1 id="sales-access-title">Примеры работ<br><em>lemonmedia</em></h1>
+      <p>Введите пароль, который вам передал менеджер.</p>
+      <label for="sales-access-password">Пароль</label>
+      <div class="sales-access__field">
+        <input id="sales-access-password" name="password" type="password" inputmode="numeric" autocomplete="current-password" required>
+        <button type="submit">Открыть страницу</button>
+      </div>
+      <span class="sales-access__error" data-sales-access-error aria-live="polite"></span>
+    </form>
+  </section>
+
   <header class="sales-hero">
     <div class="sales-shell sales-hero__brand"><img src="assets/design/logo-white.svg" alt="lemonmedia"></div>
     <div class="sales-shell sales-hero__composition">
@@ -51,7 +67,6 @@
 
   </main>
 
-  <script src="assets/design/examples-sales-data.js?v=6"></script>
-  <script src="assets/design/examples-sales-study.js?v=10"></script>
+  <script src="assets/design/examples-sales-access.js?v=1"></script>
 </body>
 </html>

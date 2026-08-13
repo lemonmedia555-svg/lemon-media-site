@@ -5,6 +5,25 @@
 html { scroll-behavior: smooth; }
 body { margin: 0; }
 body.sales-page { color: var(--lm-text-primary); background: var(--lm-surface-page); font-family: var(--lm-font-sans); font-size: var(--lm-fs-body); -webkit-font-smoothing: antialiased; }
+.sales-page[data-sales-authorized="false"] > .sales-hero,
+.sales-page[data-sales-authorized="false"] > main { display: none; }
+.sales-access[hidden] { display: none; }
+.sales-access { position: relative; display: grid; min-height: 100svh; padding: 38px max(24px, calc((100% - var(--lm-container)) / 2)); overflow: hidden; grid-template-rows: auto 1fr; background: var(--lm-grad-space); color: var(--lm-text-inverse); }
+.sales-access::before { content: ""; position: absolute; top: -28%; right: -12%; width: min(760px, 56vw); aspect-ratio: 1; background: var(--lm-glowspot-lemon); opacity: .58; pointer-events: none; }
+.sales-access__brand, .sales-access__form { position: relative; z-index: 1; }
+.sales-access__brand img { width: 174px; }
+.sales-access__form { width: min(760px, 100%); align-self: center; padding: 96px 0 120px; }
+.sales-access__eyebrow { display: block; margin-bottom: 22px; color: var(--lm-color-overlay-white-80); font-size: var(--lm-fs-eyebrow); font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+.sales-access h1 { font-size: clamp(52px, 7vw, 96px); font-weight: 800; line-height: .92; letter-spacing: -.055em; }
+.sales-access h1 em { color: var(--lm-color-lemon-500); font-style: normal; }
+.sales-access__form > p { max-width: 520px; margin-top: 36px; color: var(--lm-color-overlay-white-80); font-size: var(--lm-fs-lead); line-height: var(--lm-lh-body); }
+.sales-access__form > label { display: block; margin-top: 46px; margin-bottom: 9px; font-size: 13px; font-weight: 800; }
+.sales-access__field { display: grid; max-width: 620px; grid-template-columns: minmax(0, 1fr) auto; gap: 10px; }
+.sales-access__field input { width: 100%; min-height: 58px; padding: 14px 18px; border: 1px solid var(--lm-color-overlay-white-80); border-radius: var(--lm-radius-md); outline: 0; background: var(--lm-surface-default); color: var(--lm-text-primary); font: 800 22px/1 var(--lm-font-sans); letter-spacing: .18em; }
+.sales-access__field input:focus { border-color: var(--lm-color-purple-300); box-shadow: var(--lm-glow-purple); }
+.sales-access__field button { min-height: 58px; padding: 14px 24px; border: 0; border-radius: var(--lm-radius-pill); background: var(--lm-surface-lemon); color: var(--lm-text-on-lemon); cursor: pointer; font-weight: 800; }
+.sales-access__field button:disabled { cursor: wait; opacity: .7; }
+.sales-access__error { display: block; min-height: 24px; margin-top: 11px; color: var(--lm-color-overlay-white-80); font-size: 14px; font-weight: 700; }
 .sales-is-embedded, .sales-is-embedded body.sales-page { overflow-x: clip; }
 .sales-is-embedded body.sales-page { min-width: 0; }
 .sales-page img { display: block; max-width: 100%; }
@@ -156,6 +175,14 @@ body.sales-page { color: var(--lm-text-primary); background: var(--lm-surface-pa
 }
 
 @media (max-width: 520px) {
+  .sales-access { padding: 28px 20px; }
+  .sales-access__brand img { width: 150px; }
+  .sales-access__form { padding: 72px 0 88px; }
+  .sales-access h1 { font-size: 50px; }
+  .sales-access__form > p { margin-top: 28px; font-size: 17px; }
+  .sales-access__form > label { margin-top: 34px; }
+  .sales-access__field { grid-template-columns: 1fr; }
+  .sales-access__field button { width: 100%; }
   .sales-hero { padding-bottom: 78px; }
   .sales-hero__composition { padding-top: 90px; }
   .sales-hero__composition h1 { font-size: 47px; line-height: .94; }
