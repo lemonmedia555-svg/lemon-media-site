@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Визуальное исследование композиций, фонов и ритма длинных страниц сайта lemonmedia.">
+  <title>Композиции и фоны сайта — lemonmedia</title>
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/design/tokens.css">
+  <link rel="stylesheet" href="assets/design/web-composition-backgrounds-study.css?v=1">
+</head>
+<body id="top">
+  <div class="cb-status">Визуальное исследование · не утверждено</div>
+
+  <header class="cb-header">
+    <div class="cb-shell cb-header__row">
+      <a class="cb-logo" href="top-three-air-study.html" aria-label="lemonmedia — главная">
+        <img src="assets/design/logo-dark.svg" alt="lemonmedia">
+      </a>
+      <button class="cb-menu-button" type="button" aria-expanded="false" aria-controls="cb-mobile-menu" data-menu-open>Меню</button>
+      <nav class="cb-main-nav" aria-label="Основная навигация">
+        <a href="examples-study.html">Работы</a>
+        <a href="process-design.html">Как работаем</a>
+        <a href="pricing-design.html">Цены</a>
+        <a href="reviews-design.html">Отзывы</a>
+        <a href="about-design.html">О компании</a>
+        <a href="articles-design.html">Статьи</a>
+        <a class="cb-nav-cta" href="start-design.html">Начать работу</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="cb-mobile-menu" id="cb-mobile-menu" hidden data-mobile-menu>
+    <div class="cb-mobile-menu__top">
+      <a class="cb-logo" href="top-three-air-study.html" aria-label="lemonmedia — главная"><img src="assets/design/logo-dark.svg" alt="lemonmedia"></a>
+      <button type="button" data-menu-close>Закрыть</button>
+    </div>
+    <nav aria-label="Мобильная навигация">
+      <a href="examples-study.html">Работы</a>
+      <a href="process-design.html">Как работаем</a>
+      <a href="pricing-design.html">Цены</a>
+      <a href="reviews-design.html">Отзывы</a>
+      <a href="about-design.html">О компании</a>
+      <a href="articles-design.html">Статьи</a>
+      <a class="cb-nav-cta" href="start-design.html">Начать работу</a>
+    </nav>
+  </div>
+
+  <main>
+    <section class="cb-intro" aria-labelledby="cb-intro-title">
+      <div class="cb-shell cb-intro__grid">
+        <div>
+          <p class="cb-label">Следующий слой системы сайта</p>
+          <h1 id="cb-intro-title">Одна сетка.<br>Разные сцены.<br><em>Спокойный ритм.</em></h1>
+        </div>
+        <div class="cb-intro__note">
+          <p>Это не новый дизайн главной. Здесь проверяем, как длинный сайт остаётся цельным, но не превращается в девять одинаковых блоков.</p>
+          <nav aria-label="Разделы исследования">
+            <a href="#backgrounds"><span>01</span>Фоны</a>
+            <a href="#compositions"><span>02</span>Композиции</a>
+            <a href="#page-rhythm"><span>03</span>Ритм страницы</a>
+          </nav>
+        </div>
+      </div>
+    </section>
+
+    <section class="cb-fixed" aria-labelledby="cb-fixed-title">
+      <div class="cb-shell">
+        <div class="cb-section-head cb-section-head--compact">
+          <div><p class="cb-label">Уже решили по твоей обратной связи</p><h2 id="cb-fixed-title">Это сохраняем</h2></div>
+          <p>Ниже меняется только способ сборки страницы. Эти пять решений не обсуждаем заново.</p>
+        </div>
+        <div class="cb-fixed__rail">
+          <article><span>01</span><strong>Живая лента в первом экране</strong><small>Работы постоянно движутся</small></article>
+          <article><span>02</span><strong>Мягкий жёлтый переход</strong><small>Одна большая продуктовая сцена</small></article>
+          <article><span>03</span><strong>Кейсы крупно</strong><small>Не огрызок, а продукт</small></article>
+          <article><span>04</span><strong>Маршрут из пяти шагов</strong><small>Тема → выпуск</small></article>
+          <article><span>05</span><strong>Месяц показываем целиком</strong><small>15 из 15 публикаций</small></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cb-backgrounds" id="backgrounds" aria-labelledby="cb-backgrounds-title">
+      <div class="cb-shell cb-section-head">
+        <div><p class="cb-label">01 · Система фонов</p><h2 id="cb-backgrounds-title">Цвет не меняется<br>в каждом блоке</h2></div>
+        <p>Основа страницы — один спокойный светлый холст. Цвет появляется как редкая сцена, когда смысл действительно меняется.</p>
+      </div>
+
+      <div class="cb-shell cb-background-compare">
+        <article class="cb-rhythm-card cb-rhythm-card--bad">
+          <div class="cb-rhythm-card__head"><span>Нет</span><strong>Каждый блок — новый фон</strong></div>
+          <div class="cb-page-mini cb-page-mini--bad" aria-label="Пример слишком пёстрого ритма">
+            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+          </div>
+          <p>Сайт распадается на цветные полосы. Человек замечает фон раньше смысла.</p>
+        </article>
+        <article class="cb-rhythm-card cb-rhythm-card--good">
+          <div class="cb-rhythm-card__head"><span>Да</span><strong>Холст + редкие главы</strong></div>
+          <div class="cb-page-mini cb-page-mini--good" aria-label="Рекомендуемый спокойный ритм">
+            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+          </div>
+          <p>Светлые блоки перетекают друг в друга. Акцентная сцена появляется раз в две-три главы.</p>
+        </article>
+      </div>
+
+      <div class="cb-shell cb-surface-types">
+        <article class="cb-surface-type cb-surface-type--plain">
+          <div class="cb-surface-type__demo"><span></span><span></span><span></span></div>
+          <div><strong>1. Общий холст</strong><p>Фон продолжается. Новую тему создают воздух и композиция, а не новая заливка.</p></div>
+        </article>
+        <article class="cb-surface-type cb-surface-type--inset">
+          <div class="cb-surface-type__demo"><span></span></div>
+          <div><strong>2. Вложенная сцена</strong><p>Цветной блок живёт внутри поля страницы. Для продукта, схемы или доказательства.</p></div>
+        </article>
+        <article class="cb-surface-type cb-surface-type--full">
+          <div class="cb-surface-type__demo"><span></span></div>
+          <div><strong>3. Полная глава</strong><p>На всю ширину только сильный поворот: кейсы, контрастное сравнение или финал.</p></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="cb-compositions" id="compositions" aria-labelledby="cb-compositions-title">
+      <div class="cb-shell cb-section-head">
+        <div><p class="cb-label">02 · Атлас композиций</p><h2 id="cb-compositions-title">Восемь способов<br>собрать один сайт</h2></div>
+        <p>Сетка одна — 12 колонок и контейнер 1328 px. Но текст, продукт и доказательства занимают её по-разному.</p>
+      </div>
+
+      <section class="cb-demo cb-demo--hero" aria-labelledby="cb-demo-hero-title">
+        <div class="cb-demo-note"><span>Композиция 01</span><strong>Раскол + движение до края</strong><small>Для первого экрана</small></div>
+        <div class="cb-hero-copy">
+          <p class="cb-rating"><b>★★★★★</b> 5,0 · более 200 отзывов</p>
+          <h3 id="cb-demo-hero-title">Контент для<br>социальных сетей<br><em>от <mark>4&nbsp;990&nbsp;₽</mark></em></h3>
+          <p>Придумываем темы, пишем, оформляем и публикуем — вы только согласовываете.</p>
+          <div class="cb-actions"><a class="cb-button cb-button--yellow" href="start-design.html">Собрать свой пакет</a><a class="cb-text-link" href="examples-study.html">Посмотреть работы →</a></div>
+        </div>
+        <div class="cb-moving-wall" aria-label="Движущаяся лента реальных работ lemonmedia">
+          <div class="cb-moving-wall__fade cb-moving-wall__fade--top"></div>
+          <div class="cb-moving-column cb-moving-column--up">
+            <div><img src="assets/cases/saratov-kitchens-2026-08/posts/03.webp" alt="Работа Саратов Кухни"><img src="assets/cases/refix/posts/07.png" alt="Работа REFIX"><img src="assets/cases/moscow-padel/posts/15.jpg" alt="Работа MoscowPadel"><img src="assets/cases/yagodny-ray/posts/01.jpg" alt="Работа Ягодный Рай"></div>
+            <div aria-hidden="true"><img src="assets/cases/saratov-kitchens-2026-08/posts/03.webp" alt=""><img src="assets/cases/refix/posts/07.png" alt=""><img src="assets/cases/moscow-padel/posts/15.jpg" alt=""><img src="assets/cases/yagodny-ray/posts/01.jpg" alt=""></div>
+          </div>
+          <div class="cb-moving-column cb-moving-column--down">
+            <div><img src="assets/cases/achinsk-begovoy/posts/01.jpg" alt="Работа Ачинского бегового дня"><img src="assets/cases/ateris/posts/03.jpg" alt="Работа Атерис"><img src="assets/cases/sergey-glibin/posts/08.jpg" alt="Работа Сергей Глибин"><img src="assets/cases/colorplast/previous/posts/01.jpg" alt="Работа Colorplast"></div>
+            <div aria-hidden="true"><img src="assets/cases/achinsk-begovoy/posts/01.jpg" alt=""><img src="assets/cases/ateris/posts/03.jpg" alt=""><img src="assets/cases/sergey-glibin/posts/08.jpg" alt=""><img src="assets/cases/colorplast/previous/posts/01.jpg" alt=""></div>
+          </div>
+          <div class="cb-moving-column cb-moving-column--up cb-moving-column--optional">
+            <div><img src="assets/cases/ritual-s/posts/04.webp" alt="Работа Ритуал-С"><img src="assets/cases/klient-prosto/posts/03.png" alt="Работа Клиент Просто"><img src="assets/cases/chebusser/posts/07.jpg" alt="Работа Chebusser"><img src="assets/cases/dan-gun/posts/06.jpg" alt="Работа Dan Gun"></div>
+            <div aria-hidden="true"><img src="assets/cases/ritual-s/posts/04.webp" alt=""><img src="assets/cases/klient-prosto/posts/03.png" alt=""><img src="assets/cases/chebusser/posts/07.jpg" alt=""><img src="assets/cases/dan-gun/posts/06.jpg" alt=""></div>
+          </div>
+          <div class="cb-moving-wall__fade cb-moving-wall__fade--bottom"></div>
+        </div>
+      </section>
+
+      <section class="cb-shell cb-demo cb-demo--center" aria-labelledby="cb-demo-center-title">
+        <div class="cb-demo-note"><span>Композиция 02</span><strong>Заголовок по центру + большой инструмент</strong><small>Для одной продуктовой мысли</small></div>
+        <div class="cb-center-copy">
+          <h3 id="cb-demo-center-title">Публикуем сразу<br>во всех соцсетях<br><em>без доплаты</em></h3>
+          <p>Один готовый материал адаптируем под каждую площадку и размещаем по графику.</p>
+        </div>
+        <div class="cb-publish-board">
+          <div class="cb-pack">
+            <span>Контент-план</span><strong>10 материалов готовы</strong>
+            <div><img src="assets/cases/orange-style/posts/01.jpg" alt="Готовый пост"><img src="assets/cases/orange-style/posts/02.jpg" alt="Готовый пост"><img src="assets/cases/orange-style/posts/03.jpg" alt="Готовый пост"><img src="assets/cases/orange-style/posts/08.jpg" alt="Готовый пост"></div>
+          </div>
+          <div class="cb-publish-arrow"><b>→</b><small>по графику</small></div>
+          <div class="cb-network-list"><span><b>VK</b>ВКонтакте<i>✓</i></span><span><b>➤</b>Telegram<i>✓</i></span><span><b>◎</b>Instagram<i>✓</i></span><span><b>MAX</b>MAX<i>✓</i></span><span><b>@</b>Threads<i>✓</i></span></div>
+        </div>
+      </section>
+
+      <section class="cb-shell cb-demo cb-demo--editorial" aria-labelledby="cb-demo-editorial-title">
+        <div class="cb-demo-note"><span>Композиция 03</span><strong>Редакционное смещение</strong><small>Для объяснения позиции</small></div>
+        <p class="cb-editorial-index">03</p>
+        <h3 id="cb-demo-editorial-title">Не просим поверить<br>на слово.</h3>
+        <div class="cb-editorial-copy"><p>Показываем реальные работы, полный объём и путь материала до публикации.</p><strong>Смысл стоит не слева по привычке, а в центре общей сетки.</strong></div>
+      </section>
+
+      <section class="cb-demo cb-demo--cases" aria-labelledby="cb-demo-cases-title">
+        <div class="cb-shell cb-cases-head">
+          <div class="cb-demo-note"><span>Композиция 04</span><strong>Один большой кейс + два соседних</strong><small>Для главной и страницы работ</small></div>
+          <h3 id="cb-demo-cases-title">Работы занимают экран.<br><em>Потому что это и есть продукт.</em></h3>
+          <a class="cb-text-link" href="examples-study.html">Смотреть все работы →</a>
+        </div>
+        <div class="cb-shell cb-case-gallery">
+          <a class="cb-case-card cb-case-card--lead" href="case-moscow-padel.html"><img src="assets/cases/moscow-padel/posts/15.jpg" alt="Работа MoscowPadel"><span><small>Спортивная инфраструктура</small><strong>MoscowPadel</strong></span></a>
+          <a class="cb-case-card" href="case-ritual-s.html"><img src="assets/cases/ritual-s/posts/04.webp" alt="Работа Ритуал-С"><span><small>Ритуальные услуги</small><strong>Ритуал-С</strong></span></a>
+          <a class="cb-case-card" href="case-sergey-glibin.html"><img src="assets/cases/sergey-glibin/posts/08.jpg" alt="Работа Сергей Глибин"><span><small>Личный бренд</small><strong>Сергей Глибин</strong></span></a>
+        </div>
+      </section>
+
+      <section class="cb-shell cb-demo cb-demo--month" aria-labelledby="cb-demo-month-title">
+        <div class="cb-month-head">
+          <div class="cb-demo-note"><span>Композиция 05</span><strong>Полный объём как доказательство</strong><small>Для кейса и продуктового блока</small></div>
+          <div><h3 id="cb-demo-month-title">Не четыре картинки.<br><em>Весь месяц целиком.</em></h3><p>«Саратов Кухни» · август · 15 публикаций</p></div>
+          <div class="cb-month-tabs" role="tablist" aria-label="Форматы контент-плана">
+            <button type="button" role="tab" aria-selected="true" data-month-tab="posts">15 публикаций</button>
+            <button type="button" role="tab" aria-selected="false" data-month-tab="carousels">5 каруселей</button>
+            <button type="button" role="tab" aria-selected="false" data-month-tab="stories">5 сторис</button>
+          </div>
+        </div>
+        <div class="cb-month-panel is-active" role="tabpanel" data-month-panel="posts">
+          <div class="cb-month-grid cb-month-grid--posts">
+            <img src="assets/cases/saratov-kitchens-2026-08/posts/01.webp" alt="Публикация 1"><img src="assets/cases/saratov-kitchens-2026-08/posts/02.webp" alt="Публикация 2"><img src="assets/cases/saratov-kitchens-2026-08/posts/03.webp" alt="Публикация 3"><img src="assets/cases/saratov-kitchens-2026-08/posts/04.webp" alt="Публикация 4"><img src="assets/cases/saratov-kitchens-2026-08/posts/05.webp" alt="Публикация 5"><img src="assets/cases/saratov-kitchens-2026-08/posts/06.webp" alt="Публикация 6"><img src="assets/cases/saratov-kitchens-2026-08/posts/07.webp" alt="Публикация 7"><img src="assets/cases/saratov-kitchens-2026-08/posts/08.webp" alt="Публикация 8"><img src="assets/cases/saratov-kitchens-2026-08/posts/09.webp" alt="Публикация 9"><img src="assets/cases/saratov-kitchens-2026-08/posts/10.webp" alt="Публикация 10"><img src="assets/cases/saratov-kitchens-2026-08/posts/11.webp" alt="Публикация 11"><img src="assets/cases/saratov-kitchens-2026-08/posts/12.webp" alt="Публикация 12"><img src="assets/cases/saratov-kitchens-2026-08/posts/13.webp" alt="Публикация 13"><img src="assets/cases/saratov-kitchens-2026-08/posts/14.webp" alt="Публикация 14"><img src="assets/cases/saratov-kitchens-2026-08/posts/15.webp" alt="Публикация 15">
+          </div>
+        </div>
+        <div class="cb-month-panel" role="tabpanel" data-month-panel="carousels" hidden>
+          <div class="cb-month-grid cb-month-grid--posts"><img src="assets/cases/saratov-kitchens-2026-08/carousels/06/01.webp" alt="Карусель 1"><img src="assets/cases/saratov-kitchens-2026-08/carousels/07/01.webp" alt="Карусель 2"><img src="assets/cases/saratov-kitchens-2026-08/carousels/10/01.webp" alt="Карусель 3"><img src="assets/cases/saratov-kitchens-2026-08/carousels/11/01.webp" alt="Карусель 4"><img src="assets/cases/saratov-kitchens-2026-08/carousels/13/01.webp" alt="Карусель 5"></div>
+        </div>
+        <div class="cb-month-panel" role="tabpanel" data-month-panel="stories" hidden>
+          <div class="cb-month-grid cb-month-grid--stories"><img src="assets/cases/saratov-kitchens-2026-08/stories/01.webp" alt="Сторис 1"><img src="assets/cases/saratov-kitchens-2026-08/stories/02.webp" alt="Сторис 2"><img src="assets/cases/saratov-kitchens-2026-08/stories/03.webp" alt="Сторис 3"><img src="assets/cases/saratov-kitchens-2026-08/stories/04.webp" alt="Сторис 4"><img src="assets/cases/saratov-kitchens-2026-08/stories/05.webp" alt="Сторис 5"></div>
+        </div>
+      </section>
+
+      <section class="cb-shell cb-demo cb-demo--steps" aria-labelledby="cb-demo-steps-title">
+        <div class="cb-steps-head">
+          <div class="cb-demo-note"><span>Композиция 06</span><strong>Горизонтальный маршрут</strong><small>Для процесса</small></div>
+          <h3 id="cb-demo-steps-title">Один материал проходит<br><em>весь путь до публикации</em></h3>
+        </div>
+        <ol class="cb-steps">
+          <li><span>01</span><strong>Тема</strong><small>связана с задачей бизнеса</small></li>
+          <li><span>02</span><strong>Текст</strong><small>согласован до дизайна</small></li>
+          <li><span>03</span><strong>Визуал</strong><small>собран в стиле клиента</small></li>
+          <li><span>04</span><strong>Адаптация</strong><small>под каждую площадку</small></li>
+          <li><span>05</span><strong>Выпуск</strong><small>по общему графику</small></li>
+        </ol>
+      </section>
+
+      <section class="cb-shell cb-demo cb-demo--reverse" aria-labelledby="cb-demo-reverse-title">
+        <div class="cb-demo-note"><span>Композиция 07</span><strong>Большое доказательство слева</strong><small>Для результата и отзыва</small></div>
+        <div class="cb-result"><span>29 дней</span><strong>без пауз<br>в публикациях</strong><small>весь август по согласованному графику</small></div>
+        <blockquote><p id="cb-demo-reverse-title">«Мы один раз согласовали направление — дальше всё выходило само. Впервые соцсети не зависели от моего свободного вечера».</p><footer>Результат работы команды и процесса</footer></blockquote>
+      </section>
+
+      <section class="cb-demo cb-demo--metrics" aria-labelledby="cb-demo-metrics-title">
+        <div class="cb-shell">
+          <div class="cb-demo-note"><span>Композиция 08</span><strong>Сквозная строка фактов</strong><small>Редко, между крупными главами</small></div>
+          <h3 id="cb-demo-metrics-title" class="cb-visually-hidden">Факты о процессе lemonmedia</h3>
+          <dl class="cb-metrics"><div><dt>14 дней</dt><dd>на проверку первой партии</dd></div><div><dt>5 площадок</dt><dd>без доплаты за количество</dd></div><div><dt>1 менеджер</dt><dd>держит весь выпуск</dd></div></dl>
+        </div>
+      </section>
+    </section>
+
+    <section class="cb-page-rhythm" id="page-rhythm" aria-labelledby="cb-page-rhythm-title">
+      <div class="cb-shell cb-section-head">
+        <div><p class="cb-label">03 · Рекомендуемый ритм</p><h2 id="cb-page-rhythm-title">Вот как девять блоков<br>не спорят друг с другом</h2></div>
+        <p>Нельзя буквально повторять эту последовательность на каждой странице. Это образец частоты: спокойствие → акцент → спокойствие → сильная глава.</p>
+      </div>
+      <div class="cb-shell cb-page-plan">
+        <article class="cb-plan-block cb-plan-block--split"><span>01</span><strong>Первый экран</strong><small>раскол + живая лента</small><div><i></i><i></i></div></article>
+        <article class="cb-plan-block cb-plan-block--inset"><span>02</span><strong>Продуктовая сцена</strong><small>мягкий жёлтый внутри холста</small><div><i></i></div></article>
+        <article class="cb-plan-block cb-plan-block--editorial"><span>03</span><strong>Объяснение</strong><small>редакционное смещение</small><div><i></i><i></i></div></article>
+        <article class="cb-plan-block cb-plan-block--gallery"><span>04</span><strong>Крупные кейсы</strong><small>1 большой + 2 соседних</small><div><i></i><i></i><i></i></div></article>
+        <article class="cb-plan-block cb-plan-block--dark"><span>05</span><strong>Контрастная глава</strong><small>один сильный поворот</small><div><i></i></div></article>
+        <article class="cb-plan-block cb-plan-block--plain"><span>06</span><strong>Сравнение</strong><small>спокойный общий холст</small><div><i></i><i></i></div></article>
+        <article class="cb-plan-block cb-plan-block--route"><span>07</span><strong>Процесс</strong><small>горизонтальный маршрут</small><div><i></i><i></i><i></i><i></i><i></i></div></article>
+        <article class="cb-plan-block cb-plan-block--plain"><span>08</span><strong>FAQ</strong><small>без новой цветной сцены</small><div><i></i><i></i></div></article>
+        <article class="cb-plan-block cb-plan-block--final"><span>09</span><strong>Финальный CTA</strong><small>тёмная полноширинная глава</small><div><i></i><i></i></div></article>
+      </div>
+      <div class="cb-shell cb-rule-line"><strong>Главное правило</strong><p>Одинаковые композиции не стоят подряд. Новый фон появляется только при смене смысловой главы.</p></div>
+    </section>
+
+    <section class="cb-final">
+      <div class="cb-shell cb-final__grid">
+        <div><p class="cb-label">Что должно войти в систему после утверждения</p><h2>Не набор блоков.<br><em>Грамматика сайта.</em></h2></div>
+        <div><p>Фиксируем три типа фона, восемь композиций, правила чередования и отдельные схемы для главной, работ, кейсов и статей.</p><a class="cb-button cb-button--yellow" href="#top">Вернуться к началу ↑</a></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="cb-footer">
+    <div class="cb-shell cb-footer__grid">
+      <div><a class="cb-logo cb-logo--light" href="top-three-air-study.html" aria-label="lemonmedia — главная"><img src="assets/design/logo-white.svg" alt="lemonmedia"></a><p>Регулярный контент под ключ для малого и среднего бизнеса.</p></div>
+      <div><strong>Выбрать</strong><a href="pricing-design.html">Цены и конструктор</a><a href="examples-study.html">Работы</a><a href="process-design.html">Как работаем</a><a href="compare-design.html">Сравнение</a></div>
+      <div><strong>Узнать больше</strong><a href="reviews-design.html">Отзывы</a><a href="about-design.html">О компании</a><a href="services-design.html">Разовые услуги</a><a href="partners-design.html">Партнёрам</a><a href="articles-design.html">Статьи</a><a href="faq-design.html">Все вопросы</a></div>
+      <div><strong>Начать</strong><a href="start-design.html">Собрать пакет</a><a href="audit-design.html">Бесплатный разбор</a><a href="guarantee-design.html">Условия гарантии</a><a href="legal-design.html#offer">Условия работы</a><a href="legal-design.html#privacy">Конфиденциальность</a></div>
+    </div>
+  </footer>
+
+  <script src="assets/design/web-composition-backgrounds-study.js?v=1"></script>
+</body>
+</html>
