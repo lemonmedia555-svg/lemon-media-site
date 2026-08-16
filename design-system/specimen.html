@@ -1,530 +1,142 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>lemonmedia — дизайн-система</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="tokens.css">
-<link rel="stylesheet" href="components.css">
-<style>
-  * { box-sizing: border-box; margin: 0; }
-  body {
-    font-family: var(--lm-font-sans);
-    font-size: var(--lm-fs-body);
-    line-height: var(--lm-lh-body);
-    color: var(--lm-text-primary);
-    background: var(--lm-color-surface);
-  }
-  .wrap { max-width: 1200px; margin-inline: auto; padding: 0 24px; }
-
-  /* ---- шапка ---- */
-  .hero {
-    background: var(--lm-grad-brand-dark);
-    color: #fff;
-    padding: 72px 0 64px;
-    position: relative;
-    overflow: hidden;
-  }
-  .hero::before {
-    content: ""; position: absolute; width: 720px; aspect-ratio: 1;
-    background: var(--lm-glowspot-lemon); top: -40%; right: -8%; pointer-events: none;
-  }
-  .hero .wrap { position: relative; }
-  .hero-logo { height: 40px; display: block; margin-bottom: 40px;
-    background: var(--lm-color-neutral-000); padding: 10px 18px; border-radius: var(--lm-radius-sm); }
-  .hero h1 { font-size: var(--lm-fs-h1); font-weight: 800; letter-spacing: -0.02em; line-height: 1.05; max-width: 720px; }
-  .hero p { margin-top: 20px; max-width: 640px; color: var(--lm-color-overlay-white-80); font-size: var(--lm-fs-lead); }
-  .hero-meta { margin-top: 32px; display: flex; gap: 10px; flex-wrap: wrap; }
-
-  /* ---- секции ---- */
-  section { padding: 64px 0 8px; }
-  .sec-head { display: flex; align-items: baseline; gap: 16px; margin-bottom: 8px; }
-  .sec-num { font-weight: 800; color: var(--lm-color-purple-600); font-size: 15px; letter-spacing: .08em; }
-  h2.sec-title { font-size: clamp(28px, 3.4vw, 40px); font-weight: 800; letter-spacing: -0.02em; }
-  .sec-sub { color: var(--lm-color-muted); max-width: 760px; margin: 10px 0 28px; }
-  h3.group-title { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: .08em;
-    color: var(--lm-color-purple-600); margin: 28px 0 14px; }
-
-  /* ---- свотчи ---- */
-  .swatch-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 14px; }
-  .swatch { background: var(--lm-color-neutral-000); border: 1px solid var(--lm-color-border); border-radius: var(--lm-radius-md); padding: 10px; }
-  .swatch-chip { height: 64px; border-radius: 10px; margin-bottom: 10px; border: 1px solid rgba(0,0,0,.06); }
-  .swatch b { display: block; font-size: 13px; font-weight: 700; }
-  .swatch span { font-size: 12px; color: var(--lm-color-muted-2); }
-
-  /* ---- пары ---- */
-  .pair-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 14px; }
-  .pair { border-radius: var(--lm-radius-md); padding: 18px 16px; border: 1px solid rgba(0,0,0,.05); }
-  .pair b { display: block; font-size: 14px; font-weight: 800; margin-bottom: 4px; }
-  .pair span { font-size: 12px; opacity: .75; }
-
-  /* ---- запреты ---- */
-  .rules { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; }
-  .rule { border-radius: var(--lm-radius-md); padding: 18px; font-weight: 700; position: relative; }
-  .rule small { display: block; font-weight: 400; font-size: 13px; margin-top: 6px; opacity: .8; }
-  .rule--bad { outline: 2px dashed var(--lm-color-danger); outline-offset: 3px; }
-  .rule-flag { position: absolute; top: -12px; right: 12px; font-size: 11px; font-weight: 800;
-    padding: 4px 10px; border-radius: 100px; text-transform: uppercase; letter-spacing: .05em; }
-  .rule-flag--no { background: var(--lm-color-danger); color: #fff; }
-  .rule-flag--yes { background: var(--lm-color-success); color: #fff; }
-
-  /* ---- типографика ---- */
-  .type-card { background: var(--lm-color-neutral-000); border: 1px solid var(--lm-color-border); border-radius: var(--lm-radius-lg);
-    padding: 28px 32px; display: grid; grid-template-columns: 150px 1fr; gap: 20px; align-items: baseline;
-    margin-bottom: 12px; }
-  .type-spec { font-size: 12px; color: var(--lm-color-muted-2); line-height: 1.5; }
-  .type-sample { overflow-wrap: anywhere; }
-  .smm-table { width: 100%; border-collapse: collapse; background: var(--lm-color-neutral-000); border-radius: var(--lm-radius-md);
-    overflow: hidden; border: 1px solid var(--lm-color-border); font-size: 14px; }
-  .smm-table th { background: var(--lm-color-neutral-100); text-align: left; padding: 10px 16px; font-size: 12px;
-    text-transform: uppercase; letter-spacing: .06em; }
-  .smm-table td { padding: 10px 16px; border-top: 1px solid var(--lm-color-border); }
-  .smm-table td:first-child { font-weight: 700; }
-
-  /* ---- геометрия ---- */
-  .geo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; }
-  .radius-demo { display: flex; gap: 14px; flex-wrap: wrap; }
-  .radius-box { width: 108px; height: 84px; background: var(--lm-color-purple-050);
-    border: 2px solid var(--lm-color-purple-400); display: flex; align-items: end; justify-content: center;
-    padding-bottom: 8px; font-size: 12px; font-weight: 700; color: var(--lm-color-purple-600); }
-  .space-row { display: flex; align-items: center; gap: 14px; margin-bottom: 8px; font-size: 13px; }
-  .space-bar { height: 12px; background: var(--lm-color-purple-500); border-radius: 6px; }
-
-  /* ---- градиенты ---- */
-  .grad-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 14px; }
-  .grad { height: 130px; border-radius: var(--lm-radius-md); position: relative; overflow: hidden;
-    border: 1px solid rgba(0,0,0,.06); }
-  .grad em { position: absolute; left: 12px; bottom: 10px; font-style: normal; font-size: 12px; font-weight: 700;
-    background: rgba(255,255,255,.9); color: #000; padding: 3px 9px; border-radius: 100px; }
-  .shadow-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 20px; }
-  .shadow-card-demo { background: var(--lm-color-neutral-000); border-radius: var(--lm-radius-md); height: 110px;
-    display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700; text-align: center; }
-  .glow-stage { background: #0B0912; border-radius: var(--lm-radius-md); height: 110px; position: relative;
-    display: flex; align-items: center; justify-content: center; overflow: hidden; }
-  .glow-ball { width: 52px; height: 52px; border-radius: 50%; }
-  .glow-label { position: absolute; left: 12px; bottom: 10px; color: #fff; font-size: 12px; font-weight: 700; opacity: .85; }
-
-  /* ---- компоненты ---- */
-  .demo-row { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; margin-bottom: 20px; }
-  .cards-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 16px; }
-
-  /* ---- принципы ---- */
-  .princ { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; }
-  .princ ul { margin: 12px 0 0; padding-left: 20px; }
-  .princ li { margin-bottom: 8px; }
-
-  /* ---- ксюша ---- */
-  .ksusha { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
-
-  /* ---- qa ---- */
-  .qa { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 16px; }
-  .qa-num { font-size: 40px; font-weight: 800; line-height: 1; margin-bottom: 10px; }
-
-  footer { margin-top: 72px; background: var(--lm-color-neutral-1000); color: #fff; padding: 40px 0 48px; }
-  footer code { background: rgba(255,255,255,.12); padding: 2px 8px; border-radius: 6px; font-size: 13px; }
-  footer p { margin-top: 10px; color: rgba(255,255,255,.7); font-size: 14px; }
-  .foot-files { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 16px; }
-
-  /* ---- логотип ---- */
-  .logo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; }
-  .logo-tile { border-radius: var(--lm-radius-md); height: 150px; display: flex; align-items: center;
-    justify-content: center; position: relative; overflow: hidden; }
-  .logo-tile img { width: 62%; max-width: 300px; display: block; }
-  .logo-tile em { position: absolute; left: 14px; bottom: 10px; font-style: normal; font-size: 12px;
-    font-weight: 700; color: var(--lm-color-muted-2); }
-  .logo-plate { background: var(--lm-color-neutral-000); border-radius: 12px; padding: 12px 20px; box-shadow: var(--lm-shadow-card); }
-  .logo-plate img { width: 200px; }
-
-  /* ---- ксюша фото ---- */
-  .ksusha-photos { display: grid; grid-template-columns: 2fr 1fr; gap: 16px; margin-bottom: 16px; }
-  .ksusha-master { position: relative; border-radius: var(--lm-radius-lg); overflow: hidden; background: #000; }
-  .ksusha-master img { width: 100%; display: block; }
-  .ksusha-master .tag-row { position: absolute; left: 16px; bottom: 14px; display: flex; gap: 8px; flex-wrap: wrap; }
-  .ksusha-work { border-radius: var(--lm-radius-lg); overflow: hidden; position: relative; }
-  .ksusha-work img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: top; display: block; }
-  @media (max-width: 760px) { .ksusha-work { aspect-ratio: 1/1; } }
-  .ksusha-work em { position: absolute; left: 14px; bottom: 12px; font-style: normal; font-size: 12px; font-weight: 700;
-    background: rgba(255,255,255,.92); padding: 4px 10px; border-radius: 100px; }
-  @media (max-width: 760px) { .ksusha-photos { grid-template-columns: 1fr; } }
-
-  @media (max-width: 640px) {
-    .type-card { grid-template-columns: 1fr; gap: 8px; }
-  }
-</style>
-</head>
-<body>
-
-<header class="hero">
-  <div class="wrap">
-    <img class="hero-logo" src="../logo-dark.svg" alt="lemonmedia">
-    <h1>Дизайн-система lemonmedia</h1>
-    <p>Один источник стиля для сайта, интерфейсов, SMM-контента и генераций Claude. Канон значений — Figma «LM • SMM DESIGN SYSTEM — v1», этот пакет — канон для кода.</p>
-    <div class="hero-meta">
-      <span class="lm-badge lm-badge--lemon">v1 · 06.08.2026</span>
-      <span class="lm-badge lm-badge--purple">Manrope</span>
-      <span class="lm-badge lm-badge--dark">#EECB03</span>
-    </div>
-  </div>
-</header>
-
-<!-- ============ 01 ЛОГОТИП ============ -->
-<section>
-  <div class="wrap">
-    <div class="sec-head"><span class="sec-num">01</span><h2 class="sec-title">Логотип</h2></div>
-    <p class="sec-sub">Тёмная версия — на светлом, белая — на тёмном. На жёлтой заливке символ-лимон пропадает — там логотип ставится на белой плашке (или текстовая версия без символа). Охранное поле — высота символа-лимона, минимальная ширина 120px. Не перекрашивать, без теней и обводок.</p>
-    <div class="logo-grid">
-      <div class="logo-tile" style="background:#fff;border:1px solid var(--lm-color-border)">
-        <img src="../logo-dark.svg" alt="тёмный логотип на белом"><em>на белом — тёмный</em>
-      </div>
-      <div class="logo-tile" style="background:#000">
-        <img src="../logo-white.svg" alt="белый логотип на чёрном"><em style="color:rgba(255,255,255,.65)">на чёрном — белый</em>
-      </div>
-      <div class="logo-tile" style="background:var(--lm-grad-space)">
-        <img src="../logo-white.svg" alt="белый логотип на космосе"><em style="color:rgba(255,255,255,.65)">на «космосе» — белый</em>
-      </div>
-      <div class="logo-tile" style="background:var(--lm-color-lemon-500)">
-        <div class="logo-plate"><img src="../logo-dark.svg" alt="логотип на плашке на жёлтом"></div>
-        <em style="color:rgba(0,0,0,.55)">на жёлтом — белая плашка</em>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ 02 ЦВЕТ ============ -->
-<section>
-  <div class="wrap">
-    <div class="sec-head"><span class="sec-num">02</span><h2 class="sec-title">Цвет</h2></div>
-    <p class="sec-sub">Основа — чёрный + жёлтый + белый. Фиолетовый — второй акцент. В макетах используем только утверждённые пары «поверхность × текст», базовые цвета — через токены.</p>
-
-    <h3 class="group-title">Нейтрали</h3>
-    <div class="swatch-grid">
-      <div class="swatch"><div class="swatch-chip" style="background:#FFFFFF"></div><b>neutral/000</b><span>#FFFFFF</span></div>
-      <div class="swatch"><div class="swatch-chip" style="background:#EFEFEF"></div><b>neutral/100</b><span>#EFEFEF</span></div>
-      <div class="swatch"><div class="swatch-chip" style="background:#262626"></div><b>neutral/800</b><span>#262626</span></div>
-      <div class="swatch"><div class="swatch-chip" style="background:#1E1E1E"></div><b>neutral/900</b><span>#1E1E1E</span></div>
-      <div class="swatch"><div class="swatch-chip" style="background:#020202"></div><b>neutral/950</b><span>#020202 · текст</span></div>
-      <div class="swatch"><div class="swatch-chip" style="background:#000000"></div><b>neutral/1000</b><span>#000000</span></div>
-    </div>
-
-    <h3 class="group-title">Лимон и фиолетовый</h3>
-    <div class="swatch-grid">
-      <div class="swatch"><div class="swatch-chip" style="background:#FFF3C4"></div><b>lemon/100</b><span>#FFF3C4 · подложка</span></div>
-      <div class="swatch"><div class="swatch-chip" style="background:#FFDB4E"></div><b>lemon/300</b><span>#FFDB4E</span></div>
-      <div class="swatch"><div class="swatch-chip" style="background:#EECB03"></div><b>lemon/500 ★</b><span>#EECB03 · канон</span></div>
-      <div class="swatch"><div class="swatch-chip" style="background:#D9B900"></div><b>lemon/600</b><span>#D9B900 · hover</span></div>
-      <div class="swatch"><div class="swatch-chip" style="background:#F4E8FF"></div><b>purple/050</b><span>#F4E8FF · подложка</span></div>
-      <div class="swatch"><div class="swatch-chip" style="background:#DFCCFF"></div><b>purple/200</b><span>#DFCCFF</span></div>
-      <div class="swatch"><div class="swatch-chip" style="background:#C582FF"></div><b>purple/300</b><span>#C582FF</span></div>
-      <div class="swatch"><div class="swatch-chip" style="background:#AF53FF"></div><b>purple/400</b><span>#AF53FF</span></div>
-      <div class="swatch"><div class="swatch-chip" style="background:#9747FF"></div><b>purple/500</b><span>#9747FF · SMM</span></div>
-      <div class="swatch"><div class="swatch-chip" style="background:#7D00EA"></div><b>purple/600</b><span>#7D00EA · веб</span></div>
-    </div>
-
-    <h3 class="group-title">Веб-нейтрали и статусы</h3>
-    <div class="swatch-grid">
-      <div class="swatch"><div class="swatch-chip" style="background:#5E5E66"></div><b>muted</b><span>#5E5E66 · второй текст</span></div>
-      <div class="swatch"><div class="swatch-chip" style="background:#8A8A93"></div><b>muted-2</b><span>#8A8A93 · подписи</span></div>
-      <div class="swatch"><div class="swatch-chip" style="background:#F6F6F7"></div><b>surface</b><span>#F6F6F7 · фон секций</span></div>
-      <div class="swatch"><div class="swatch-chip" style="background:#EBEBEE"></div><b>border</b><span>#EBEBEE</span></div>
-      <div class="swatch"><div class="swatch-chip" style="background:#2EB872"></div><b>success</b><span>#2EB872</span></div>
-      <div class="swatch"><div class="swatch-chip" style="background:#E5484D"></div><b>danger</b><span>#E5484D</span></div>
-    </div>
-
-    <h3 class="group-title">Утверждённые пары — только эти шесть</h3>
-    <div class="pair-grid">
-      <div class="pair" style="background:#fff;border-color:var(--lm-color-border)"><b>DEFAULT</b><span>белый × neutral/950</span></div>
-      <div class="pair" style="background:#EECB03;color:#000"><b>LEMON</b><span>lemon/500 × чёрный</span></div>
-      <div class="pair" style="background:#7D00EA;color:#fff"><b>PURPLE</b><span>purple/600 × белый</span></div>
-      <div class="pair" style="background:#000;color:#fff"><b>INVERSE</b><span>чёрный × белый</span></div>
-      <div class="pair" style="background:#FFF3C4"><b>LEMON SOFT</b><span>lemon/100 × neutral/950</span></div>
-      <div class="pair" style="background:#F4E8FF"><b>PURPLE SOFT</b><span>purple/050 × neutral/950</span></div>
-    </div>
-
-    <h3 class="group-title">Контраст: можно / нельзя</h3>
-    <div class="rules">
-      <div class="rule rule--bad" style="background:#EECB03;color:#fff">
-        <span class="rule-flag rule-flag--no">Запрещено</span>
-        Белый текст на лимоне
-        <small style="color:#fff">Слабый контраст — не читается</small>
-      </div>
-      <div class="rule" style="background:#EECB03;color:#000">
-        <span class="rule-flag rule-flag--yes">Канон</span>
-        Чёрный текст на лимоне
-        <small>Единственный текст на lemon/500</small>
-      </div>
-      <div class="rule rule--bad" style="background:linear-gradient(150deg,#FFFFFF,#EECB03);color:#000">
-        <span class="rule-flag rule-flag--no">Deprecated</span>
-        Градиент white → yellow
-        <small>Не использовать в новых макетах</small>
-      </div>
-      <div class="rule" style="background:#000;color:#fff">
-        <span class="rule-flag rule-flag--yes">Канон</span>
-        Белый / <span style="color:#EECB03">лимон</span> на чёрном
-        <small style="color:rgba(255,255,255,.75)">+ локальный glow жёлтый или фиолетовый</small>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ 03 ТИПОГРАФИКА ============ -->
-<section>
-  <div class="wrap">
-    <div class="sec-head"><span class="sec-num">03</span><h2 class="sec-title">Типографика</h2></div>
-    <p class="sec-sub">Manrope — единственная гарнитура системы. Заголовки — 800, сжатие −0.02em. Один смысловой удар на заголовок, без висячих слов.</p>
-
-    <h3 class="group-title">Веб-шкала</h3>
-    <div class="type-card"><div class="type-spec">Display<br>clamp(44–72px) · 800</div><div class="type-sample" style="font-size:var(--lm-fs-display);font-weight:800;letter-spacing:-0.02em;line-height:1.05">25 000+</div></div>
-    <div class="type-card"><div class="type-spec">H1<br>clamp(40–56px) · 800</div><div class="type-sample" style="font-size:var(--lm-fs-h1);font-weight:800;letter-spacing:-0.02em;line-height:1.05">Ведём ваши соцсети под ключ</div></div>
-    <div class="type-card"><div class="type-spec">H2<br>clamp(32–54px) · 800</div><div class="type-sample" style="font-size:var(--lm-fs-h2);font-weight:800;letter-spacing:-0.02em;line-height:1.08">Контент, которому верят</div></div>
-    <div class="type-card"><div class="type-spec">H3<br>clamp(22–28px) · 800</div><div class="type-sample" style="font-size:var(--lm-fs-h3);font-weight:800;line-height:1.15">Делают живые люди, а не нейросеть</div></div>
-    <div class="type-card"><div class="type-spec">Lead · 18px · 400</div><div class="type-sample lm-lead">Клиент платит фикс и получает готовый опубликованный контент - остаётся только согласовывать.</div></div>
-    <div class="type-card"><div class="type-spec">Body · 16px · 400 · lh 1.6</div><div class="type-sample">Мы продаём предсказуемость: понятная цена, понятный объём, понятный результат каждый месяц.</div></div>
-    <div class="type-card"><div class="type-spec">Eyebrow · 13px · 700</div><div class="type-sample lm-eyebrow">Экспертный пост</div></div>
-
-    <h3 class="group-title">SMM-шкала (канвас 1080×1350, стили LM/* в Figma)</h3>
-    <table class="smm-table">
-      <tr><th>Стиль</th><th>Вес</th><th>Размер</th><th>Интерлиньяж</th></tr>
-      <tr><td>Display/Numeric</td><td>ExtraBold</td><td>200</td><td>100%</td></tr>
-      <tr><td>Display/Hero</td><td>SemiBold</td><td>160</td><td>100%</td></tr>
-      <tr><td>Heading/XL · L</td><td>SemiBold</td><td>100 · 90</td><td>100%</td></tr>
-      <tr><td>Heading/M</td><td>SemiBold</td><td>80</td><td>105%</td></tr>
-      <tr><td>Heading/S</td><td>Bold</td><td>70</td><td>105%</td></tr>
-      <tr><td>Body/XL · L · M</td><td>Regular</td><td>50 · 45 · 40</td><td>115%</td></tr>
-      <tr><td>Label/L</td><td>Bold</td><td>35</td><td>110%</td></tr>
-      <tr><td>Label/S</td><td>SemiBold</td><td>30</td><td>110%</td></tr>
-    </table>
-  </div>
-</section>
-
-<!-- ============ 04 ГЕОМЕТРИЯ ============ -->
-<section>
-  <div class="wrap">
-    <div class="sec-head"><span class="sec-num">04</span><h2 class="sec-title">Геометрия</h2></div>
-    <p class="sec-sub">Крупные скругления — фирменная пластика. Блочная система: каждый смысл — отдельная карточка, много воздуха.</p>
-
-    <div class="geo-grid">
-      <div class="lm-card">
-        <h3 class="group-title" style="margin-top:0">Радиусы (веб)</h3>
-        <div class="radius-demo">
-          <div class="radius-box" style="border-radius:10px">10 · sm</div>
-          <div class="radius-box" style="border-radius:16px">16 · md</div>
-          <div class="radius-box" style="border-radius:24px">24 · lg</div>
-          <div class="radius-box" style="border-radius:42px">pill</div>
-        </div>
-        <p style="font-size:13px;color:var(--lm-color-muted);margin-top:14px">Кнопки/теги — 10 · медиа и вложенные — 16 · карточки и секции — 24 · бейджи — pill. SMM: 0–100 и full.</p>
-      </div>
-      <div class="lm-card">
-        <h3 class="group-title" style="margin-top:0">Отступы (веб)</h3>
-        <div class="space-row"><div class="space-bar" style="width:16px"></div>16 — внутри мелких блоков</div>
-        <div class="space-row"><div class="space-bar" style="width:24px"></div>24 — паддинг карточки</div>
-        <div class="space-row"><div class="space-bar" style="width:48px"></div>48 — между группами</div>
-        <div class="space-row"><div class="space-bar" style="width:96px"></div>96–128 — между секциями</div>
-        <p style="font-size:13px;color:var(--lm-color-muted);margin-top:14px">Контейнер 1200px. SMM-шкала: 20 / 30 / 40 / 60 / 80 / 100 / 120 / 160.</p>
-      </div>
-      <div class="lm-card lm-card--inverse">
-        <h3 class="group-title" style="margin-top:0;color:var(--lm-color-lemon-500)">Сетка SMM</h3>
-        <p style="font-weight:800;font-size:22px">1080 × 1350</p>
-        <p style="font-size:14px;margin-top:8px;color:rgba(255,255,255,.8)">Safe margin 60px · рабочее поле 960×1230 · 12 колонок · gutter 20px.</p>
-        <p style="font-size:14px;margin-top:12px;background:var(--lm-color-lemon-500);color:#000;border-radius:12px;padding:10px 14px;font-weight:700">Текст, цифры и лицо — внутри safe area. Декор и свет могут выходить наружу.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ 05 АТМОСФЕРА ============ -->
-<section>
-  <div class="wrap">
-    <div class="sec-head"><span class="sec-num">05</span><h2 class="sec-title">Атмосфера</h2></div>
-    <p class="sec-sub">Свет — локальный и смысловой: подсвечивает главный объект или акцент. Один доминирующий glow, второй — только поддерживающий.</p>
-
-    <h3 class="group-title">Тени и свечения</h3>
-    <div class="shadow-grid">
-      <div class="shadow-card-demo" style="box-shadow:var(--lm-shadow-soft)">Shadow / Soft</div>
-      <div class="shadow-card-demo" style="box-shadow:var(--lm-shadow-card)">Shadow / Card</div>
-      <div class="shadow-card-demo" style="box-shadow:var(--lm-shadow-pop)">Shadow / Pop</div>
-      <div class="glow-stage"><div class="glow-ball" style="background:var(--lm-color-lemon-500);box-shadow:0 0 60px 24px rgba(238,203,3,.55)"></div><span class="glow-label">Glow / Yellow</span></div>
-      <div class="glow-stage"><div class="glow-ball" style="background:var(--lm-color-purple-500);box-shadow:0 0 60px 24px rgba(151,71,255,.55)"></div><span class="glow-label">Glow / Purple</span></div>
-      <div class="glow-stage"><div class="glow-ball" style="background:var(--lm-color-neutral-000);box-shadow:0 0 44px 16px rgba(238,203,3,.5), 0 0 90px 40px rgba(151,71,255,.4)"></div><span class="glow-label">Glow / Dual</span></div>
-    </div>
-
-    <h3 class="group-title">Градиенты</h3>
-    <div class="grad-grid">
-      <div class="grad" style="background:var(--lm-grad-hero-light)"><em>hero-light</em></div>
-      <div class="grad" style="background:var(--lm-grad-lemon-soft)"><em>lemon-soft</em></div>
-      <div class="grad" style="background:var(--lm-grad-purple-soft)"><em>purple-soft</em></div>
-      <div class="grad" style="background:var(--lm-grad-lemon)"><em>lemon</em></div>
-      <div class="grad" style="background:var(--lm-grad-purple)"><em>purple</em></div>
-      <div class="grad" style="background:var(--lm-grad-space)"><em>space</em></div>
-      <div class="grad" style="background:var(--lm-grad-brand-dark)"><em>brand-dark</em></div>
-      <div class="grad" style="background:#0B0912"><div style="position:absolute;inset:0;background:var(--lm-glowspot-lemon);transform:translate(30%,-30%)"></div><em>glowspot-lemon</em></div>
-      <div class="grad" style="background:#0B0912"><div style="position:absolute;inset:0;background:var(--lm-glowspot-purple);transform:translate(-25%,25%)"></div><em>glowspot-purple</em></div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ 06 КОМПОНЕНТЫ ============ -->
-<section>
-  <div class="wrap">
-    <div class="sec-head"><span class="sec-num">06</span><h2 class="sec-title">Компоненты</h2></div>
-    <p class="sec-sub">Базовый словарь интерфейса. Одна жёлтая primary-кнопка на экран.</p>
-
-    <h3 class="group-title">Кнопки</h3>
-    <div class="demo-row">
-      <button class="lm-btn lm-btn--primary">Получить бесплатно</button>
-      <button class="lm-btn lm-btn--purple">Попробовать AI</button>
-      <button class="lm-btn lm-btn--dark">Узнать больше</button>
-      <button class="lm-btn lm-btn--ghost">Посмотреть примеры</button>
-      <button class="lm-btn lm-btn--primary lm-btn--pill">От 4990 ₽/мес</button>
-    </div>
-
-    <h3 class="group-title">Бейджи и чипсы</h3>
-    <div class="demo-row">
-      <span class="lm-badge lm-badge--lemon">Позиция</span>
-      <span class="lm-badge lm-badge--purple">Экспертный пост</span>
-      <span class="lm-badge lm-badge--dark">Диагностика</span>
-      <span class="lm-chip"><span>📣</span><span>Мессенджер</span></span>
-      <span class="lm-chip"><span>🤝</span><span>Совместная работа</span></span>
-      <span class="lm-chip"><span>⚡</span><span>CRM</span></span>
-    </div>
-
-    <h3 class="group-title">Карточки</h3>
-    <div class="cards-3">
-      <div class="lm-card">
-        <span class="lm-eyebrow">Default</span>
-        <h3 style="font-size:20px;font-weight:800;margin:10px 0 8px">Белая карточка</h3>
-        <p style="font-size:14px;color:var(--lm-color-muted)">Радиус 24, бордер, мягкая тень. Живой скриншот — с радиусом 16:</p>
-        <div class="lm-card__media" style="margin-top:14px;height:84px;background:var(--lm-grad-hero-light);display:flex;align-items:center;justify-content:center;font-size:13px;color:var(--lm-color-muted-2)">место под скриншот</div>
-      </div>
-      <div class="lm-card lm-card--soft-lemon">
-        <span class="lm-eyebrow" style="color:var(--lm-text-primary)">Lemon soft</span>
-        <h3 style="font-size:20px;font-weight:800;margin:10px 0 8px">Тёплая подложка</h3>
-        <p style="font-size:14px">Для акцентных блоков и выделений в документах. Текст — только тёмный.</p>
-        <div style="margin-top:14px"><span class="lm-badge lm-badge--dark">Сохрани</span></div>
-      </div>
-      <div class="lm-card lm-card--space">
-        <span class="lm-eyebrow" style="color:var(--lm-color-lemon-300)">Space</span>
-        <div class="lm-metric" style="margin-top:10px">
-          <div class="lm-metric__value">10 000+</div>
-          <div class="lm-metric__label">клиентов с 2020 года</div>
-        </div>
-      </div>
-    </div>
-
-    <h3 class="group-title">Тёмная секция с локальным свечением</h3>
-    <div class="lm-section--dark" style="padding:40px 36px">
-      <span class="lm-badge lm-badge--lemon">Разбор</span>
-      <h3 style="font-size:clamp(24px,3vw,34px);font-weight:800;letter-spacing:-0.02em;max-width:560px;margin:16px 0 10px">Не надо кричать. Сильная позиция слышна и <span class="lm-mark-lemon">без шума</span>.</h3>
-      <p style="max-width:520px;color:var(--lm-color-overlay-white-80);font-size:15px">Фон — «космос», свет — одно доминирующее пятно за главным объектом. Ключевое слово — лимоном.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ============ 07 ПРИНЦИПЫ ============ -->
-<section>
-  <div class="wrap">
-    <div class="sec-head"><span class="sec-num">07</span><h2 class="sec-title">Принципы подачи</h2></div>
-    <p class="sec-sub">Из разбора референсов: Битрикс24, Яндекс Алиса, Postmypost — как ориентиры; Wazzup — как антипример иллюстраций.</p>
-    <div class="princ">
-      <div class="lm-card" style="border-top:4px solid var(--lm-color-success)">
-        <b style="font-size:17px">Делаем</b>
-        <ul style="font-size:14.5px">
-          <li><b>Блочная система</b> — каждый смысл в своём скруглённом блоке, сразу видно, куда смотреть</li>
-          <li><b>Живые скриншоты и лица</b> — продукт, реальные работы, видео, мокапы устройств</li>
-          <li><b>Интерактив</b> — hover-эффекты, анимации, можно нажать и что-то запустится</li>
-          <li><b>Яркость</b> — мы про контент, цветные подложки в каждом блоке</li>
-          <li><b>Воздух</b> — читаемые заголовки, подзаголовки, ничего не слипается</li>
-          <li><b>Показываем, а не рассказываем</b> — каждое обещание подтверждено картинкой</li>
-        </ul>
-      </div>
-      <div class="lm-card" style="border-top:4px solid var(--lm-color-danger)">
-        <b style="font-size:17px">Не делаем</b>
-        <ul style="font-size:14.5px">
-          <li>Рисованные мультяшные иллюстрации и стоковые векторные человечки</li>
-          <li>Мелкие «документные» скругления — пластика у нас крупная</li>
-          <li>Белый текст на жёлтом, градиент white→yellow</li>
-          <li>Два конкурирующих glow в одном кадре</li>
-          <li>«Плавающие» жёлтые из легаси — только #EECB03</li>
-          <li>Серые простыни текста без блоков и воздуха</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ 08 КСЮША ============ -->
-<section>
-  <div class="wrap">
-    <div class="sec-head"><span class="sec-num">08</span><h2 class="sec-title">Ксюша — аватар бренда</h2></div>
-    <p class="sec-sub">Постоянный визуальный носитель бренда: рыжие кудри, живая эмоция. Лицо и идентичность неизменны, контекст меняется по смыслу поста. Ассеты — в design-system/assets/.</p>
-    <div class="ksusha-photos">
-      <div class="ksusha-master">
-        <img src="assets/ksusha-master-web.jpg" alt="Ксюша — master reference, 5 ракурсов">
-        <div class="tag-row">
-          <span class="lm-badge lm-badge--lemon">Master reference</span>
-          <span class="lm-badge lm-badge--dark">5 ракурсов</span>
-          <span class="lm-badge lm-badge--purple">Face identity locked</span>
-        </div>
-      </div>
-      <div class="ksusha-work">
-        <img src="assets/ksusha-workplace.jpg" alt="Ксюша-дизайнер за работой">
-        <em>образ «за работой»</em>
-      </div>
-    </div>
-    <div class="ksusha">
-      <div class="lm-card lm-card--soft-lemon">
-        <b>Можно менять</b>
-        <ul style="padding-left:20px;margin-top:10px;font-size:14.5px">
-          <li>одежду и аксессуары</li>
-          <li>эмоции и мимику</li>
-          <li>позу и жесты</li>
-          <li>свет, сцену, окружение</li>
-        </ul>
-      </div>
-      <div class="lm-card" style="background:var(--lm-color-purple-600);color:#fff;border-color:transparent">
-        <b>Нельзя менять</b>
-        <ul style="padding-left:20px;margin-top:10px;font-size:14.5px">
-          <li>геометрию и пропорции лица</li>
-          <li>форму и цвет волос — рыжие кудри</li>
-          <li>возраст и комплекцию</li>
-        </ul>
-      </div>
-      <div class="lm-card lm-card--inverse">
-        <b style="color:var(--lm-color-lemon-500)">Протокол генерации</b>
-        <ol style="padding-left:20px;margin-top:10px;font-size:14.5px;line-height:1.7">
-          <li><b>Master first</b> — старт всегда с эталона (5 ракурсов в Figma)</li>
-          <li><b>Prompt</b> — описываем контекст вокруг лица, лицо не трогаем</li>
-          <li><b>QA</b> — сверка с master reference перед публикацией</li>
-        </ol>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ 09 QA ============ -->
-<section>
-  <div class="wrap">
-    <div class="sec-head"><span class="sec-num">09</span><h2 class="sec-title">QA-гейт арт-директора</h2></div>
-    <p class="sec-sub">Каждый макет перед выпуском. PASS = 3/3, иначе — правка и повторная проверка.</p>
-    <div class="qa">
-      <div class="lm-card"><div class="qa-num" style="color:var(--lm-color-lemon-500)">01</div><b>Геометрия</b><p style="font-size:14px;color:var(--lm-color-muted);margin-top:8px">Канвас и safe area точные, поля одинаковые, всё на сетке, случайных обрезок нет.</p></div>
-      <div class="lm-card"><div class="qa-num" style="color:var(--lm-color-purple-500)">02</div><b>Типографика</b><p style="font-size:14px;color:var(--lm-color-muted);margin-top:8px">Только системные стили, без случайных переносов и висячих слов, один текстовый уровень внимания.</p></div>
-      <div class="lm-card"><div class="qa-num">03</div><b>Визуал</b><p style="font-size:14px;color:var(--lm-color-muted);margin-top:8px">Контраст пар соблюдён, чистые зоны вокруг главного, лицо Ксюши = master, один доминирующий glow.</p></div>
-    </div>
-  </div>
-</section>
-
-<footer>
-  <div class="wrap">
-    <b style="font-size:18px">Файлы пакета</b>
-    <div class="foot-files">
-      <code>DESIGN.md</code><code>tokens.css</code><code>tokens.json</code><code>components.css</code><code>assets/</code><code>README.md</code><code>specimen.html</code>
-    </div>
-    <p>Папка: lemonmedia. SaaS / 06 Маркетинг lemonmedia / Бренд / design-system · Скилл для Claude: /lm-design · Канон визуала: Figma «LM • SMM DESIGN SYSTEM — v1»</p>
-  </div>
-</footer>
-
-</body>
-</html>
+<!DOCTYPE html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>lemonmedia — дизайн-система — витрина</title><link rel="stylesheet" href="tokens.css"><link rel="stylesheet" href="components.css"><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet"><style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Manrope,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  background:var(--lm-color-cool-050,#F4F6FA);color:#020202;font-size:17px;line-height:1.6}
+a{color:#7D00EA}
+.wrap{display:grid;grid-template-columns:264px 1fr;gap:0;max-width:1600px;margin:0 auto}
+nav{position:sticky;top:0;align-self:start;height:100vh;overflow:auto;padding:28px 20px;
+  background:#020202;color:#fff}
+nav .brand{display:flex;align-items:center;gap:10px;margin-bottom:6px}
+nav .brand img{height:26px}
+nav .ver{font-size:13px;color:#8A8A93;margin-bottom:22px}
+nav a{display:block;color:#C9C9D1;text-decoration:none;font-size:15px;padding:7px 10px;border-radius:8px}
+nav a:hover{background:#1E1E1E;color:#fff}
+nav a .n{color:#8A8A93;font-size:13px;margin-right:8px}
+nav .navgap{margin-top:18px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#8A8A93;padding:0 10px}
+main{padding:40px 44px 100px;max-width:1180px}
+header.top{margin-bottom:44px}
+header.top h1{font-size:52px;line-height:1.05;letter-spacing:-.02em;margin:0 0 12px}
+header.top p{font-size:20px;color:#5E5E66;margin:0 0 20px;max-width:760px}
+.legend{display:flex;gap:10px;flex-wrap:wrap;font-size:14px}
+.legend span{background:#fff;border:1px solid #EBEBEE;border-radius:100px;padding:6px 14px}
+.srcbox{margin-top:20px;background:#fff;border:1px solid #EBEBEE;border-radius:16px;padding:16px 20px;font-size:15px}
+.srcbox b{display:block;margin-bottom:6px}
+.srcbox li{color:#5E5E66;margin:3px 0}
+section.sec{background:#fff;border:1px solid #EBEBEE;border-radius:24px;padding:30px 32px;margin-bottom:26px;
+  box-shadow:0 3px 14px rgba(0,0,0,.05)}
+section.sec>h2{font-size:32px;letter-spacing:-.02em;margin:0 0 4px;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+h2 .num{font-size:14px;font-weight:800;color:#8A8A93;letter-spacing:.06em}
+h2 .cnt{font-size:13px;font-weight:800;background:#EECB03;color:#020202;border-radius:100px;padding:5px 12px;letter-spacing:.04em}
+h2 .st{font-size:12px;font-weight:800;border-radius:100px;padding:5px 12px;letter-spacing:.04em;
+  background:#F6F6F7;color:#5E5E66;text-transform:uppercase}
+h2 .st.novoe{background:#F4E8FF;color:#7D00EA}
+h2 .st.probel{background:#FDECEC;color:#E5484D}
+.intro{color:#5E5E66;margin:10px 0 22px;max-width:820px}
+.rules{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin-top:26px}
+.rules>div{border-radius:16px;padding:16px 18px;font-size:15px;line-height:1.55}
+.rules .use{background:#F6F6F7}
+.rules .no{background:#FDECEC}
+.rules .why{background:#FFF3C4}
+.rules h5{margin:0 0 10px;font-size:13px;letter-spacing:.08em;text-transform:uppercase}
+.rules .use h5{color:#2EB872}.rules .no h5{color:#E5484D}.rules .why h5{color:#8a6b00}
+.rules ul{margin:0;padding-left:18px}.rules li{margin:6px 0}
+.src{margin-top:16px;font-size:14px;color:#8A8A93}
+.sub{font-size:14px;letter-spacing:.06em;text-transform:uppercase;color:#8A8A93;margin:26px 0 12px}
+.cap{font-size:14px;color:#8A8A93;margin:10px 0 0}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.pcard{background:#F6F6F7;border-radius:16px;padding:18px}
+.pcard .pnum{width:28px;height:28px;border-radius:100px;background:#EECB03;color:#020202;
+  display:grid;place-items:center;font-weight:800;font-size:14px;margin-bottom:10px}
+.pcard p{margin:6px 0 0;font-size:15px;color:#5E5E66}
+.logogrid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.logotile{margin:0;border-radius:16px;height:130px;display:flex;flex-direction:column;align-items:center;
+  justify-content:center;gap:12px;border:1px solid #EBEBEE;position:relative}
+.logotile img{width:62%;max-width:200px}
+.logotile figcaption{font-size:12px;color:#8A8A93;position:absolute;bottom:10px}
+.logotile.bad{outline:2px solid #E5484D;outline-offset:-2px}
+.logotile.bad figcaption{color:#E5484D}
+.guard{display:flex;gap:20px;align-items:center;margin-top:16px}
+.guardbox{padding:34px;border:2px dashed #DFCCFF;border-radius:16px}
+.guardbox img{width:200px;display:block}
+.files{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:18px;font-size:14px}
+.files>div{background:#F6F6F7;border-radius:10px;padding:10px 12px;display:flex;gap:10px;flex-wrap:wrap}
+.files code{font-size:13px}.files span{color:#8A8A93}
+.files.smm{grid-template-columns:repeat(3,1fr)}
+.files.smm b{min-width:110px}
+.swatches{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.sw{border:1px solid #EBEBEE;border-radius:12px;padding:10px;font-size:13px}
+.sw .chip{display:block;height:52px;border-radius:8px;border:1px solid rgba(0,0,0,.06);margin-bottom:8px}
+.sw b{display:block}.sw code{color:#5E5E66}.sw i{display:block;color:#8A8A93;font-style:normal;margin-top:3px}
+.pairs{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.pair{border-radius:16px;padding:18px;border:1px solid #EBEBEE;min-height:104px}
+.pair b{display:block;font-size:12px;letter-spacing:.08em;opacity:.7}
+.pair span{display:block;font-size:19px;font-weight:800;margin-top:6px}
+.pair i{display:block;font-style:normal;font-size:13px;opacity:.65;margin-top:6px}
+.pair.bad{outline:2px solid #E5484D;outline-offset:-2px}
+.pair.ok{outline:2px solid #2EB872;outline-offset:-2px}
+.typescale .trow{display:grid;grid-template-columns:200px 1fr;gap:20px;padding:16px 0;border-top:1px solid #EBEBEE;align-items:start}
+.tmeta b{display:block;font-size:13px;letter-spacing:.06em}
+.tmeta code,.tmeta span{display:block;font-size:13px;color:#8A8A93}
+.tmeta .lim{margin-top:6px;color:#7D00EA;font-weight:700}
+.tdemo .role{margin:8px 0 0;font-size:14px;color:#8A8A93}
+.gridblock{margin-bottom:26px}
+.webgrid{position:relative;background:#F6F6F7;border-radius:16px;padding:22px 40px}
+.wg-container{background:#fff;border:1px dashed #7D00EA;border-radius:12px;padding:14px;position:relative}
+.wg-cols{display:grid;grid-template-columns:repeat(12,1fr);gap:20px;height:70px}
+.wg-cols span{background:rgba(125,0,234,.10);border-radius:4px}
+.wg-container em{position:absolute;right:10px;bottom:-9px;background:#7D00EA;color:#fff;font-style:normal;
+  font-size:11px;border-radius:100px;padding:2px 10px}
+.wg-side{position:absolute;top:50%;left:8px;font-size:11px;color:#8A8A93}
+.wg-side.r{left:auto;right:8px}
+.smmgrid .canvas{width:300px;height:375px;background:#020202;border-radius:16px;padding:17px;position:relative}
+.smmgrid .safe{width:100%;height:100%;border:1px dashed #EECB03;border-radius:8px;padding:8px;position:relative}
+.sg-cols{display:grid;grid-template-columns:repeat(12,1fr);gap:3px;height:100%}
+.sg-cols span{background:rgba(238,203,3,.14);border-radius:2px}
+.sg-label{position:absolute;left:8px;bottom:8px;color:#EECB03;font-size:11px;line-height:1.4}
+.margin-note{position:absolute;top:4px;right:10px;color:#8A8A93;font-size:11px}
+.radii{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.rad .box{height:74px;background:#EECB03;margin-bottom:8px}
+.rad b{font-size:14px}.rad code{color:#5E5E66;font-size:13px;margin-left:6px}
+.rad i{display:block;font-style:normal;font-size:13px;color:#8A8A93}
+.spacing{display:flex;flex-direction:column;gap:5px}
+.sp{display:flex;align-items:center;gap:10px}
+.sp span{display:block;height:12px;background:#7D00EA;border-radius:3px}
+.sp i{font-style:normal;font-size:13px;color:#8A8A93}
+.nest{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}
+.nest .outer{background:#fff;border:1px solid #EBEBEE;border-radius:24px;padding:14px}
+.nest .inner{background:#F4E8FF;border-radius:16px;padding:22px;font-size:14px;text-align:center;color:#5E5E66}
+.nest .inner.same{border-radius:24px}
+.nest .outer.bad{outline:2px solid #E5484D;outline-offset:-2px}
+.shadows{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+.shbox{padding:16px;border-radius:14px;background:#F6F6F7;font-size:13px}
+.shbox.on-dark{background:#020202;color:#fff}
+.shbox .plate{height:56px;border-radius:12px;background:#fff;margin-bottom:10px}
+.shbox b{display:block}.shbox i{font-style:normal;color:#8A8A93}
+.grads{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.grad .plate{height:72px;border-radius:12px;border:1px solid #EBEBEE;margin-bottom:6px}
+.grad{font-size:13px}
+.grad.bad{outline:2px solid #E5484D;outline-offset:-2px;border-radius:14px;padding:6px}
+.cblock{margin-bottom:26px}
+.cells{display:flex;gap:14px;flex-wrap:wrap;margin-top:12px}
+.cell{flex:1 1 200px;min-width:190px}
+.cellbox{background:#F6F6F7;border-radius:14px;padding:20px;display:flex;align-items:center;
+  justify-content:center;min-height:104px}
+.cell b{display:block;margin-top:8px;font-size:14px}
+.cell i{font-style:normal;font-size:13px;color:#8A8A93}
+.ksusha{display:grid;grid-template-columns:2fr 1fr;gap:14px}
+.ksusha figure{margin:0}
+.ksusha img{width:100%;border-radius:16px;display:block}
+.ksusha figcaption{font-size:13px;color:#8A8A93;margin-top:8px}
+.oq{background:#020202;color:#fff;border-radius:24px;padding:30px 32px}
+.oq h2{margin:0 0 6px;font-size:30px}
+.oq>p{color:#8A8A93;margin:0 0 20px}
+.oqlist{display:grid;gap:12px}
+.oqitem{background:#1E1E1E;border-radius:16px;padding:16px 18px}
+.oqitem b{color:#EECB03}
+.oqitem p{margin:6px 0 0;color:#C9C9D1;font-size:15px}
+.oqitem .imp{display:inline-block;margin-top:8px;font-size:13px;color:#8A8A93}
+footer{margin-top:30px;font-size:14px;color:#8A8A93}
+@media(max-width:1100px){.wrap{grid-template-columns:1fr}nav{position:static;height:auto}
+ .rules,.grid3,.swatches,.pairs,.radii,.shadows,.grads,.logogrid,.files{grid-template-columns:1fr 1fr}
+ main{padding:24px}}
+</style></head><body><div class="wrap"><nav><div class="brand"><img src="assets/logo-white.svg" alt="lemonmedia"></div><div class="ver">Дизайн-система · v2.0 · 2026-08-12</div><a href="#osnovy"><span class="n">01</span>Основы бренда</a><a href="#logo"><span class="n">02</span>Логотип</a><a href="#color"><span class="n">03</span>Цвет</a><a href="#type"><span class="n">04</span>Типографика</a><a href="#grid"><span class="n">05</span>Сетки</a><a href="#geometry"><span class="n">06</span>Геометрия</a><a href="#elevation"><span class="n">07</span>Атмосфера: тени и свет</a><a href="#motion"><span class="n">08</span>Движение</a><a href="#components"><span class="n">09</span>Компоненты и состояния</a><a href="#media-web"><span class="n">10</span>Носитель: сайт</a><a href="#media-smm"><span class="n">11</span>Носитель: SMM 1080×1350</a><a href="#media-app"><span class="n">12</span>Носитель: кабинет и дашборды</a><a href="#media-docs"><span class="n">13</span>Носитель: КП и документы</a><a href="#ksusha"><span class="n">14</span>Ксюша - аватар бренда</a><a href="#copy"><span class="n">15</span>Тексты в макетах</a><a href="#qa"><span class="n">16</span>QA-гейт арт-директора</a><div class="navgap">Ещё</div><a href="#open">Открытые вопросы</a></nav><main><header class="top"><h1>lemonmedia — дизайн-система</h1><p>Единый стиль бренда для всех носителей: сайт, интерфейсы, SMM-контент, КП, презентации. Каждый раздел устроен одинаково: живой пример, как пользоваться, что нельзя и почему.</p><div class="legend"><span><b>канон</b> — утверждено, применять как есть</span><span><b>частично новое</b> — часть правил предложена системой и ждёт подтверждения Ивана</span><span><b>пробел</b> — слой описан не полностью, есть открытые вопросы</span></div><div class="srcbox"><b>Источники канона</b><ul><li>Figma «LM • SMM DESIGN SYSTEM — v1»: https://www.figma.com/design/W5OADlZzEMJGmjxnpNsIjl</li><li>Логотипы SVG: 06 Маркетинг lemonmedia/Бренд/</li><li>Ассеты Ксюши: design-system/assets/</li><li>Разбор референсов Ивана (видео 06.08.2026): Битрикс24, Яндекс Алиса, Wazzup, Postmypost</li><li>Шаблоны сайта: Сайт/lemon-media-site-prototype/docs/SITE_PAGE_TEMPLATE.md и docs/CASE_TEMPLATE.md</li></ul><p style="margin:10px 0 0;color:#8A8A93">Правится только <code>system.json</code>. Эта страница собирается из него скриптом <code>build/build.py</code>.</p></div></header><section class="sec" id="osnovy" data-lm-section="osnovy" data-lm-status="канон"><h2><span class="num">01</span>Основы бренда<span class="cnt">3 принципа</span><span class="st ">канон</span></h2><p class="intro">lemonmedia (всегда строчными) - подписка на ведение соцсетей под ключ. Продаём предсказуемость: фиксированная цена, готовый опубликованный контент, делают живые люди. Тон прямой, на «ты», senior с равным. Из этого следуют три дизайн-принципа - они выше любого частного правила ниже.</p><div class="grid3"><div class="pcard"><div class="pnum">1</div><b>Показывать, а не рассказывать</b><p>Всё, о чём говорим, демонстрируем: живые скриншоты продукта, реальные работы, видео, лица.</p></div><div class="pcard"><div class="pnum">2</div><b>Яркость</b><p>Чистые заливки лимона и фиолетового, свечения на тёмном. Мы про контент - яркость должна быть везде.</p></div><div class="pcard"><div class="pnum">3</div><b>Блочность</b><p>Лендинг и интерфейс собираются из скруглённых блоков-карточек, как приложение. Много воздуха, один уровень внимания на блок.</p></div></div><div class="rules"><div class="use"><h5>Как пользоваться</h5><ul><li>Спорный визуальный выбор проверяй этими тремя принципами, а не вкусом.</li><li>Если элемент не служит ни одному из трёх - он лишний.</li></ul></div><div class="no"><h5>Нельзя</h5><ul><li>Рисованные мультяшные иллюстрации и стоковые векторные человечки.</li><li>Серая простыня без цветных подложек - мы про контент, яркость обязательна.</li></ul></div><div class="why"><h5>Почему так</h5><p>Принципы - единственное, что не меняется при смене носителя. Цвета и размеры у сайта и карусели разные, а «показывать, а не рассказывать» одинаково.</p></div></div><p class="src">Источник: DESIGN.md §1, разбор референсов Ивана 06.08.2026</p></section><section class="sec" id="logo" data-lm-section="logo" data-lm-status="канон"><h2><span class="num">02</span>Логотип<span class="cnt">2 рабочих файла + 4 исходника</span><span class="st ">канон</span></h2><p class="intro">Рабочие файлы для вёрстки - logo-dark.svg и logo-white.svg. Остальные четыре в папке Бренда - исходники.</p><div class="logogrid"><figure class="logotile " style="background:#FFFFFF"><img src="assets/logo-dark.svg" alt="lemonmedia"><figcaption>белый фон - тёмный логотип</figcaption></figure><figure class="logotile " style="background:#020202"><img src="assets/logo-white.svg" alt="lemonmedia"><figcaption>тёмный фон - белый логотип</figcaption></figure><figure class="logotile " style="background:#F4E8FF"><img src="assets/logo-dark.svg" alt="lemonmedia"><figcaption>purple/050 - тёмный логотип</figcaption></figure><figure class="logotile bad" style="background:#EECB03"><img src="assets/logo-dark.svg" alt="lemonmedia"><figcaption>lemon/500 - символ сливается</figcaption></figure></div><div class="guard"><div class="guardbox"><img src="assets/logo-dark.svg" alt=""></div><p class="cap">Охранное поле - высота символа-лимона со всех сторон. Минимальная ширина текстовой части: 120px экран, 25мм печать.</p></div><div class="files"><div><code>logo-dark.svg</code><span>тёмный с символом, обрезанный - вёрстка на светлом</span></div><div><code>logo-white.svg</code><span>белый с символом, обрезанный - вёрстка на тёмном</span></div><div><code>Lemon Media основной лого ТЕМНЫЙ/БЕЛЫЙ С СИМВОЛОМ.svg</code><span>квадрат 1080, исходник</span></div><div><code>… без символа.svg</code><span>текст без лимона - узкие места и жёлтые фоны</span></div></div><div class="rules"><div class="use"><h5>Как пользоваться</h5><ul><li>Светлые фоны (белый, lemon-100, purple-050) - тёмная версия.</li><li>Тёмные фоны (чёрный, purple-600, «космос», фото с затемнением) - белая версия.</li><li>На жёлтой заливке lemon/500 бери тёмный логотип БЕЗ символа либо ставь лого на белой плашке.</li><li>Символ-лимон отдельно - только фавикон, аватарки соцсетей и другие малые пространства.</li></ul></div><div class="no"><h5>Нельзя</h5><ul><li>Перекрашивать: лимон только #EECB03, текст #1D1D1B или белый.</li><li>Тени, обводки, градиенты, наклоны.</li><li>Ставить логотип ближе, чем высота символа-лимона, к краю или чужому объекту.</li><li>Текстовая часть уже 120px на экране и 25мм в печати.</li></ul></div><div class="why"><h5>Почему так</h5><p>На жёлтом фоне символ-лимон сливается с подложкой и логотип читается как обрезанный. Охранное поле в высоту символа - чтобы лого не слипалось с соседним блоком в плотных шапках.</p></div></div><p class="src">Источник: Файлы: 06 Маркетинг lemonmedia/Бренд/*.svg</p></section><section class="sec" id="color" data-lm-section="color" data-lm-status="канон"><h2><span class="num">03</span>Цвет<span class="cnt">6 пар, 1 жёлтый</span><span class="st ">канон</span></h2><p class="intro">Основа - чёрный, жёлтый, белый. Фиолетовый - второй акцент. Мягкие lemon-100 и purple-050 - подложки карточек и секций. Пар «поверхность × текст» ровно шесть, новых не изобретать.</p><h4 class="sub">neutral</h4><div class="swatches"><div class="sw" data-lm-token="color.neutral.000"><span class="chip" style="background:#FFFFFF"></span><b>neutral/000</b><code>#FFFFFF</code><i></i></div><div class="sw" data-lm-token="color.neutral.100"><span class="chip" style="background:#EFEFEF"></span><b>neutral/100</b><code>#EFEFEF</code><i></i></div><div class="sw" data-lm-token="color.neutral.800"><span class="chip" style="background:#262626"></span><b>neutral/800</b><code>#262626</code><i></i></div><div class="sw" data-lm-token="color.neutral.900"><span class="chip" style="background:#1E1E1E"></span><b>neutral/900</b><code>#1E1E1E</code><i></i></div><div class="sw" data-lm-token="color.neutral.950"><span class="chip" style="background:#020202"></span><b>neutral/950</b><code>#020202</code><i></i></div><div class="sw" data-lm-token="color.neutral.1000"><span class="chip" style="background:#000000"></span><b>neutral/1000</b><code>#000000</code><i></i></div></div><h4 class="sub">lemon</h4><div class="swatches"><div class="sw" data-lm-token="color.lemon.100"><span class="chip" style="background:#FFF3C4"></span><b>lemon/100</b><code>#FFF3C4</code><i>lemon light — мягкие подложки</i></div><div class="sw" data-lm-token="color.lemon.300"><span class="chip" style="background:#FFDB4E"></span><b>lemon/300</b><code>#FFDB4E</code><i></i></div><div class="sw" data-lm-token="color.lemon.500"><span class="chip" style="background:#EECB03"></span><b>lemon/500</b><code>#EECB03</code><i>КАНОН — единственный жёлтый lemonmedia</i></div><div class="sw" data-lm-token="color.lemon.600"><span class="chip" style="background:#D9B900"></span><b>lemon/600</b><code>#D9B900</code><i>hover/pressed для lemon-500</i></div></div><h4 class="sub">purple</h4><div class="swatches"><div class="sw" data-lm-token="color.purple.050"><span class="chip" style="background:#F4E8FF"></span><b>purple/050</b><code>#F4E8FF</code><i></i></div><div class="sw" data-lm-token="color.purple.200"><span class="chip" style="background:#DFCCFF"></span><b>purple/200</b><code>#DFCCFF</code><i></i></div><div class="sw" data-lm-token="color.purple.300"><span class="chip" style="background:#C582FF"></span><b>purple/300</b><code>#C582FF</code><i></i></div><div class="sw" data-lm-token="color.purple.400"><span class="chip" style="background:#AF53FF"></span><b>purple/400</b><code>#AF53FF</code><i></i></div><div class="sw" data-lm-token="color.purple.500"><span class="chip" style="background:#9747FF"></span><b>purple/500</b><code>#9747FF</code><i>акцент SMM, свечения</i></div><div class="sw" data-lm-token="color.purple.600"><span class="chip" style="background:#7D00EA"></span><b>purple/600</b><code>#7D00EA</code><i>акцент веба: кнопки, текстовые акценты</i></div></div><h4 class="sub">overlay</h4><div class="swatches"><div class="sw" data-lm-token="color.overlay.black-60"><span class="chip" style="background:#00000099"></span><b>overlay/black-60</b><code>#00000099</code><i></i></div><div class="sw" data-lm-token="color.overlay.white-80"><span class="chip" style="background:#FFFFFFCC"></span><b>overlay/white-80</b><code>#FFFFFFCC</code><i></i></div></div><h4 class="sub">web</h4><div class="swatches"><div class="sw" data-lm-token="color.web.muted"><span class="chip" style="background:#5E5E66"></span><b>web/muted</b><code>#5E5E66</code><i>вторичный текст</i></div><div class="sw" data-lm-token="color.web.muted-2"><span class="chip" style="background:#8A8A93"></span><b>web/muted-2</b><code>#8A8A93</code><i></i></div><div class="sw" data-lm-token="color.web.surface"><span class="chip" style="background:#F6F6F7"></span><b>web/surface</b><code>#F6F6F7</code><i></i></div><div class="sw" data-lm-token="color.web.surface-2"><span class="chip" style="background:#FBFBFC"></span><b>web/surface-2</b><code>#FBFBFC</code><i></i></div><div class="sw" data-lm-token="color.web.border"><span class="chip" style="background:#EBEBEE"></span><b>web/border</b><code>#EBEBEE</code><i></i></div><div class="sw" data-lm-token="color.web.border-2"><span class="chip" style="background:#E2E2E6"></span><b>web/border-2</b><code>#E2E2E6</code><i></i></div><div class="sw" data-lm-token="color.web.success"><span class="chip" style="background:#2EB872"></span><b>web/success</b><code>#2EB872</code><i></i></div><div class="sw" data-lm-token="color.web.danger"><span class="chip" style="background:#E5484D"></span><b>web/danger</b><code>#E5484D</code><i></i></div><div class="sw" data-lm-token="color.web.info"><span class="chip" style="background:#4361EE"></span><b>web/info</b><code>#4361EE</code><i></i></div></div><h4 class="sub">semantic</h4><div class="swatches"><div class="sw" data-lm-token="color.semantic.surface-default"><span class="chip" style="background:#FFFFFF"></span><b>semantic/surface-default</b><code>#FFFFFF</code><i></i></div><div class="sw" data-lm-token="color.semantic.text-primary"><span class="chip" style="background:#020202"></span><b>semantic/text-primary</b><code>#020202</code><i></i></div><div class="sw" data-lm-token="color.semantic.surface-lemon"><span class="chip" style="background:#EECB03"></span><b>semantic/surface-lemon</b><code>#EECB03</code><i></i></div><div class="sw" data-lm-token="color.semantic.text-on-lemon"><span class="chip" style="background:#000000"></span><b>semantic/text-on-lemon</b><code>#000000</code><i>только чёрный на лимоне, белый запрещён</i></div><div class="sw" data-lm-token="color.semantic.surface-purple"><span class="chip" style="background:#7D00EA"></span><b>semantic/surface-purple</b><code>#7D00EA</code><i></i></div><div class="sw" data-lm-token="color.semantic.text-on-purple"><span class="chip" style="background:#FFFFFF"></span><b>semantic/text-on-purple</b><code>#FFFFFF</code><i></i></div><div class="sw" data-lm-token="color.semantic.surface-inverse"><span class="chip" style="background:#000000"></span><b>semantic/surface-inverse</b><code>#000000</code><i></i></div><div class="sw" data-lm-token="color.semantic.text-inverse"><span class="chip" style="background:#FFFFFF"></span><b>semantic/text-inverse</b><code>#FFFFFF</code><i></i></div><div class="sw" data-lm-token="color.semantic.surface-lemon-soft"><span class="chip" style="background:#FFF3C4"></span><b>semantic/surface-lemon-soft</b><code>#FFF3C4</code><i></i></div><div class="sw" data-lm-token="color.semantic.surface-purple-soft"><span class="chip" style="background:#F4E8FF"></span><b>semantic/surface-purple-soft</b><code>#F4E8FF</code><i></i></div><div class="sw" data-lm-token="color.semantic.surface-page"><span class="chip" style="background:#F4F6FA"></span><b>semantic/surface-page</b><code>#F4F6FA</code><i>фон страницы по умолчанию</i></div></div><h4 class="sub">cool</h4><div class="swatches"><div class="sw" data-lm-token="color.cool.050"><span class="chip" style="background:#F4F6FA"></span><b>cool/050</b><code>#F4F6FA</code><i>холодный светло-серый — фон страницы и левая зона раскола</i></div><div class="sw" data-lm-token="color.cool.100"><span class="chip" style="background:#E8ECF3"></span><b>cool/100</b><code>#E8ECF3</code><i>холодный серый глубже — полосы и линии</i></div></div><h4 class="sub">lavender</h4><div class="swatches"><div class="sw" data-lm-token="color.lavender.100"><span class="chip" style="background:#E4EAF7"></span><b>lavender/100</b><code>#E4EAF7</code><i>холодный лавандовый — правая зона витрины</i></div></div><h4 class="sub">highlight</h4><div class="swatches"><div class="sw" data-lm-token="color.highlight.edit"><span class="chip" style="background:#FFF176"></span><b>highlight/edit</b><code>#FFF176</code><i>подсветка правок в клиентских документах и КП</i></div></div><h4 class="sub">Утверждённые пары «поверхность × текст» — только эти шесть</h4><div class="pairs"><div class="pair" style="background:#FFFFFF;color:#020202"><b>DEFAULT</b><span>Заголовок и текст</span><i>белый + neutral/950</i></div><div class="pair" style="background:#EECB03;color:#020202"><b>LEMON</b><span>Заголовок и текст</span><i>lemon/500 + чёрный</i></div><div class="pair" style="background:#7D00EA;color:#FFFFFF"><b>PURPLE</b><span>Заголовок и текст</span><i>purple/600 + белый</i></div><div class="pair" style="background:#020202;color:#FFFFFF"><b>INVERSE</b><span>Заголовок и текст</span><i>чёрный + белый</i></div><div class="pair" style="background:#FFF3C4;color:#020202"><b>LEMON SOFT</b><span>Заголовок и текст</span><i>lemon/100 + neutral/950</i></div><div class="pair" style="background:#F4E8FF;color:#020202"><b>PURPLE SOFT</b><span>Заголовок и текст</span><i>purple/050 + neutral/950</i></div></div><h4 class="sub">Контраст: можно и нельзя</h4><div class="pairs"><div class="pair ok" style="background:#EECB03;color:#020202"><b>МОЖНО</b><span>Чёрный на лимоне</span></div><div class="pair bad" style="background:#EECB03;color:#fff"><b>НЕЛЬЗЯ</b><span>Белый на лимоне</span></div><div class="pair bad" style="background:#fff;color:#EECB03"><b>НЕЛЬЗЯ</b><span>Мелкий жёлтый на белом</span></div></div><div class="rules"><div class="use"><h5>Как пользоваться</h5><ul><li>Бери цвет токеном, а не HEX-ом: --lm-color-lemon-500, а не #EECB03.</li><li>Фон и текст бери готовой парой из шести - контраст в них уже проверен.</li><li>Жёлтый в композиции с расколом экрана живёт только в акцентах: кнопка, галочки, бейджи.</li></ul></div><div class="no"><h5>Нельзя</h5><ul><li>Белый текст на lemon/500 - слабый контраст, на лимоне только чёрный.</li><li>Жёлтый и фиолетовый мелким текстом на белом - только от H3 и крупнее, мелкий текст neutral/muted.</li><li>Градиент white → yellow - DEPRECATED, узел 40:2939 в Figma.</li><li>Подчёркивания и маркеры-выделения под текстом - их в системе нет.</li></ul></div><div class="why"><h5>Почему так</h5><p>Шесть пар - это не ограничение ради ограничения. Каждая пара прошла проверку контраста, а седьмая пара, придуманная на ходу, её не проходит и ломает читаемость на телефоне.</p></div></div><p class="src">Источник: tokens.json → color, Figma «LM • SMM DESIGN SYSTEM — v1»</p></section><section class="sec" id="type" data-lm-section="type" data-lm-status="канон"><h2><span class="num">04</span>Типографика<span class="cnt">9 стилей веб + 10 SMM, 1 гарнитура</span><span class="st ">канон</span></h2><p class="intro">Manrope - единственная гарнитура системы, веса 400/600/700/800. Стиль выбирается по РОЛИ в макете, а не по желаемому размеру. Размер внутри роли задан токеном и вручную не подбирается.</p><div class="typescale"><div class="trow" data-lm-token="typography-web.display"><div class="tmeta"><b>DISPLAY</b><code>clamp(44px, 6vw, 76px)</code><span>вес 800</span><span class="lim">не больше одной на экран</span></div><div class="tdemo"><div style="font-size:clamp(44px, 6vw, 76px);font-weight:800;line-height:1.05;letter-spacing:-0.02em;">80 клиентов на подписке</div><p class="role">Один смысловой удар на экран: цифра-рекорд или главная строка</p></div></div><div class="trow" data-lm-token="typography-web.h1"><div class="tmeta"><b>H1</b><code>clamp(40px, 5vw, 60px)</code><span>вес 800</span><span class="lim">ровно один на странице</span></div><div class="tdemo"><div style="font-size:clamp(40px, 5vw, 60px);font-weight:800;line-height:1.05;letter-spacing:-0.02em;">Ведём ваши соцсети под ключ</div><p class="role">Заголовок страницы</p></div></div><div class="trow" data-lm-token="typography-web.h2"><div class="tmeta"><b>H2</b><code>clamp(34px, 4.2vw, 58px)</code><span>вес 800</span><span class="lim">по одному на секцию</span></div><div class="tdemo"><div style="font-size:clamp(34px, 4.2vw, 58px);font-weight:800;line-height:1.08;letter-spacing:-0.02em;">Как это работает</div><p class="role">Заголовок секции</p></div></div><div class="trow" data-lm-token="typography-web.h3"><div class="tmeta"><b>H3</b><code>clamp(24px, 2.6vw, 30px)</code><span>вес 800</span><span class="lim">без ограничений</span></div><div class="tdemo"><div style="font-size:clamp(24px, 2.6vw, 30px);font-weight:800;line-height:1.15;letter-spacing:normal;">Пост, карусель и сторис</div><p class="role">Заголовок карточки или блока внутри секции</p></div></div><div class="trow" data-lm-token="typography-web.lead"><div class="tmeta"><b>LEAD</b><code>20px</code><span>вес 400</span><span class="lim">один на секцию</span></div><div class="tdemo"><div style="font-size:20px;font-weight:400;line-height:1.6;letter-spacing:normal;color:#5E5E66;">Вы согласовываете - мы делаем всё остальное.</div><p class="role">Абзац-подводка сразу под заголовком</p></div></div><div class="trow" data-lm-token="typography-web.body"><div class="tmeta"><b>BODY</b><code>18px</code><span>вес 400</span><span class="lim">без ограничений</span></div><div class="tdemo"><div style="font-size:18px;font-weight:400;line-height:1.6;letter-spacing:normal;">Фиксированная цена, готовый опубликованный контент, живые люди вместо нейросети.</div><p class="role">Основной текст</p></div></div><div class="trow" data-lm-token="typography-web.ui"><div class="tmeta"><b>UI</b><code>17px</code><span>вес 700</span><span class="lim">без ограничений</span></div><div class="tdemo"><div style="font-size:17px;font-weight:700;line-height:1;letter-spacing:normal;">Получить бесплатный разбор</div><p class="role">Кнопки, навигация, шапки таблиц</p></div></div><div class="trow" data-lm-token="typography-web.small"><div class="tmeta"><b>SMALL</b><code>15px</code><span>вес 400</span><span class="lim">минимальный кегль в вебе</span></div><div class="tdemo"><div style="font-size:15px;font-weight:400;line-height:1.5;letter-spacing:normal;">Обновлено 12 августа</div><p class="role">Подписи под элементами</p></div></div><div class="trow" data-lm-token="typography-web.eyebrow"><div class="tmeta"><b>EYEBROW</b><code>13px</code><span>вес 700</span><span class="lim">на сайте перед заголовками запрещена</span></div><div class="tdemo"><div style="font-size:13px;font-weight:700;line-height:1.3;letter-spacing:0.08em;text-transform:uppercase;color:#7D00EA;">ТАРИФЫ</div><p class="role">Служебная метка-рубрика</p></div></div></div><h4 class="sub">SMM-шкала — канвас 1080×1350, стили LM/* в Figma</h4><div class="files smm"><div><b>display-numeric</b><code>200</code><span>ExtraBold · 100%</span></div><div><b>display-hero</b><code>160</code><span>SemiBold · 100%</span></div><div><b>heading-xl</b><code>100</code><span>SemiBold · 100%</span></div><div><b>heading-l</b><code>90</code><span>SemiBold · 100%</span></div><div><b>heading-m</b><code>80</code><span>SemiBold · 105%</span></div><div><b>heading-s</b><code>70</code><span>Bold · 105%</span></div><div><b>body-xl</b><code>50</code><span>Regular · 115%</span></div><div><b>body-l</b><code>45</code><span>Regular · 115%</span></div><div><b>body-m</b><code>40</code><span>Regular · 115%</span></div><div><b>label-l</b><code>35</code><span>Bold · 110%</span></div><div><b>label-s</b><code>30</code><span>SemiBold · 110%</span></div></div><div class="rules"><div class="use"><h5>Как пользоваться</h5><ul><li>Display - один смысловой удар на экран: цифра-рекорд или главная строка. Больше одной Display на экран не бывает.</li><li>H1 - заголовок страницы, ровно один. H2 - заголовок секции. H3 - заголовок карточки или блока внутри секции.</li><li>Lead - абзац-подводка сразу под заголовком, один на секцию. Дальше идёт Body.</li><li>UI 17px - кнопки, навигация, шапки таблиц. Small 15px - подписи под элементами.</li><li>В SMM бери стиль из Figma (LM/*), в вебе - токен. Свои размеры не набирай.</li></ul></div><div class="no"><h5>Нельзя</h5><ul><li>Второй шрифт в любом виде.</li><li>Текст мельче 15px в вебе - кроме служебных меток на миниатюрах.</li><li>Два конкурирующих уровня внимания в одном блоке: Display рядом с H1.</li><li>Висячие предлоги и случайные переносы в заголовках - проверяются на финальном тексте.</li></ul></div><div class="why"><h5>Почему так</h5><p>Вопрос «какой размер взять» возникает, только когда стиль выбирают по величине. Если выбирать по роли, размер не нужен: роль в макете одна, стиль к ней один.</p></div></div><p class="src">Источник: tokens.json → typography-web / typography-smm, Figma text styles LM/*</p></section><section class="sec" id="grid" data-lm-section="grid" data-lm-status="канон"><h2><span class="num">05</span>Сетки<span class="cnt">2 сетки: веб и SMM</span><span class="st ">канон</span></h2><p class="intro">Две сетки на всё агентство. Веб - контейнер фиксированной ширины по центру. SMM - канвас 1080×1350 с защитным полем, за которое не выходит смысл.</p><div class="gridblock"><h4 class="sub">Веб — контейнер 1328px</h4><div class="webgrid"><div class="wg-page"><div class="wg-container"><div class="wg-cols"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><em>контейнер 1328px</em></div><span class="wg-side">поле</span><span class="wg-side r">поле</span></div><p class="cap">Зазор карточных секций 20-24px. Вертикальный ритм секций 96–128px.</p></div></div><div class="gridblock"><h4 class="sub">SMM — канвас 1080×1350, safe area 960×1230</h4><div class="smmgrid"><div class="canvas"><div class="safe"><div class="sg-cols"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><div class="sg-label">safe area 960×1230<br>12 колонок · gutter 20</div></div><span class="margin-note">поле 60px</span></div><p class="cap">Текст, цифры, навигация и лицо — внутри safe area. Декор и свет могут выходить наружу.</p></div></div><div class="rules"><div class="use"><h5>Как пользоваться</h5><ul><li>Веб: весь контент внутри контейнера --lm-container. Карточные секции - grid с зазором 20-24px.</li><li>SMM: текст, цифры, навигация и лицо - строго внутри safe area 960×1230.</li><li>SMM: декор, свет и части фото могут выходить за safe area наружу, это разрешено.</li><li>Колонок в SMM двенадцать, gutter 20 - блоки выравниваются по ним, а не на глаз.</li></ul></div><div class="no"><h5>Нельзя</h5><ul><li>Контент шире контейнера или прижатый к краю канваса.</li><li>Смысловые элементы в зоне обрезки: в ленте и превью края режутся.</li><li>Своя ширина контейнера на отдельной странице.</li></ul></div><div class="why"><h5>Почему так</h5><p>Safe area 60px нужна потому, что соцсети режут края в превью и в разных лентах по-разному. Всё, что должно быть прочитано, обязано пережить обрезку.</p></div></div><p class="src">Источник: tokens.json → grid</p></section><section class="sec" id="geometry" data-lm-section="geometry" data-lm-status="канон"><h2><span class="num">06</span>Геометрия<span class="cnt">4 радиуса веб + 8 SMM</span><span class="st ">канон</span></h2><p class="intro">Скругления - фирменная пластика, они крупные. Мелкие скругления «как в документах» читаются как чужие.</p><h4 class="sub">Радиусы — веб</h4><div class="radii"><div class="rad" data-lm-token="radius-web.sm"><div class="box" style="border-radius:10px"></div><b>sm</b><code>10px</code><i></i></div><div class="rad" data-lm-token="radius-web.md"><div class="box" style="border-radius:16px"></div><b>md</b><code>16px</code><i></i></div><div class="rad" data-lm-token="radius-web.lg"><div class="box" style="border-radius:24px"></div><b>lg</b><code>24px</code><i></i></div><div class="rad" data-lm-token="radius-web.pill"><div class="box" style="border-radius:100px"></div><b>pill</b><code>100px</code><i></i></div></div><p class="cap">SMM-радиусы (1080×1350): 0, 10, 40, 50, 60, 80, 100, full.</p><h4 class="sub">Шкала отступов — веб</h4><div class="spacing"><div class="sp"><span style="width:4px"></span><i>4</i></div><div class="sp"><span style="width:8px"></span><i>8</i></div><div class="sp"><span style="width:12px"></span><i>12</i></div><div class="sp"><span style="width:16px"></span><i>16</i></div><div class="sp"><span style="width:20px"></span><i>20</i></div><div class="sp"><span style="width:24px"></span><i>24</i></div><div class="sp"><span style="width:32px"></span><i>32</i></div><div class="sp"><span style="width:40px"></span><i>40</i></div><div class="sp"><span style="width:48px"></span><i>48</i></div><div class="sp"><span style="width:64px"></span><i>64</i></div><div class="sp"><span style="width:80px"></span><i>80</i></div><div class="sp"><span style="width:96px"></span><i>96</i></div><div class="sp"><span style="width:128px"></span><i>128</i></div></div><h4 class="sub">Вложенность радиусов</h4><div class="nest"><div class="outer"><div class="inner">медиа md 16 внутри карточки lg 24</div></div><div class="outer bad"><div class="inner same">одинаковый радиус — так нельзя</div></div></div><div class="rules"><div class="use"><h5>Как пользоваться</h5><ul><li>Веб: sm 10 - кнопки и теги; md 16 - вложенные блоки и медиа; lg 24 - карточки и секции; pill 100 - бейджи и пилюли-CTA.</li><li>Вложенный элемент всегда скруглён меньше родителя: медиа md внутри карточки lg.</li><li>Формы: скруглённый прямоугольник в продуктовых интерфейсах, пилюля - на маркетинговом сайте.</li><li>Отступы бери из шкалы: веб 4-128 (секции 96-128), SMM 20/30/40/60/80/100/120/160.</li></ul></div><div class="no"><h5>Нельзя</h5><ul><li>Радиус 4-8px на карточках и секциях - это чужая пластика.</li><li>Одинаковый радиус у родителя и вложенного медиа - выглядит как ошибка вёрстки.</li><li>Отступы «на глаз» мимо шкалы.</li></ul></div><div class="why"><h5>Почему так</h5><p>Радиус и отступ - половина узнаваемости бренда. Цвет можно перебить фотографией, а пластика блоков читается даже в чёрно-белом скриншоте.</p></div></div><p class="src">Источник: tokens.json → radius-web / radius-smm / spacing-web / spacing-smm</p></section><section class="sec" id="elevation" data-lm-section="elevation" data-lm-status="канон"><h2><span class="num">07</span>Атмосфера: тени и свет<span class="cnt">3 тени, 2 свечения</span><span class="st ">канон</span></h2><p class="intro">Свет локальный и смысловой: он подсвечивает главный объект или эмоциональный акцент. Один доминирующий glow на экран, второй - только поддерживающий.</p><div class="shadows"><div class="shbox " data-lm-token="shadow.soft"><div class="plate" style="box-shadow:0 2px 16px rgba(16,24,40,.08)"></div><b>soft</b><i></i></div><div class="shbox " data-lm-token="shadow.card"><div class="plate" style="box-shadow:0 3px 14px rgba(0,0,0,.08)"></div><b>card</b><i></i></div><div class="shbox " data-lm-token="shadow.pop"><div class="plate" style="box-shadow:0 18px 48px -12px rgba(0,0,0,.22)"></div><b>pop</b><i></i></div><div class="shbox on-dark" data-lm-token="shadow.glow-lemon"><div class="plate" style="box-shadow:0 10px 28px -8px rgba(238,203,3,.45);background:#EECB03"></div><b>glow-lemon</b><i></i></div><div class="shbox on-dark" data-lm-token="shadow.glow-purple"><div class="plate" style="box-shadow:0 10px 28px -8px rgba(125,0,234,.40);background:#7D00EA"></div><b>glow-purple</b><i></i></div></div><h4 class="sub">Градиенты-подложки</h4><div class="grads"><div class="grad " data-lm-token="gradient.hero-light"><div class="plate" style="background:linear-gradient(180deg,#FFFEF8 0%,#F8F7FB 100%)"></div><b>hero-light</b></div><div class="grad " data-lm-token="gradient.lemon-soft"><div class="plate" style="background:linear-gradient(150deg,#FFF9E3 0%,#FFF3C4 100%)"></div><b>lemon-soft</b></div><div class="grad " data-lm-token="gradient.purple-soft"><div class="plate" style="background:linear-gradient(150deg,#F4E8FF 0%,#EFE9FF 100%)"></div><b>purple-soft</b></div><div class="grad " data-lm-token="gradient.lemon"><div class="plate" style="background:linear-gradient(150deg,#FFDB4E 0%,#EECB03 55%,#D9B900 100%)"></div><b>lemon</b></div><div class="grad " data-lm-token="gradient.purple"><div class="plate" style="background:linear-gradient(150deg,#9747FF 0%,#7D00EA 100%)"></div><b>purple</b></div><div class="grad " data-lm-token="gradient.space"><div class="plate" style="background:radial-gradient(120% 140% at 82% 0%,#3B1E7A 0%,#17122B 55%,#0B0912 100%)"></div><b>space</b></div><div class="grad " data-lm-token="gradient.brand-dark"><div class="plate" style="background:linear-gradient(100deg,#3B1E7A 0%,#0B0912 42%,#6B5A00 78%,#EECB03 130%)"></div><b>brand-dark</b></div><div class="grad " data-lm-token="gradient.glowspot-lemon"><div class="plate" style="background:radial-gradient(circle,rgba(238,203,3,.55),transparent 62%)"></div><b>glowspot-lemon</b></div><div class="grad " data-lm-token="gradient.glowspot-purple"><div class="plate" style="background:radial-gradient(circle,rgba(151,71,255,.45),transparent 65%)"></div><b>glowspot-purple</b></div></div><div class="rules"><div class="use"><h5>Как пользоваться</h5><ul><li>Soft - мягкое отделение блока от фона. Card - карточки на светлом. Pop - то, что выходит поверх: модалка, выпадашка.</li><li>glow-lemon - под primary-кнопкой и под главным объектом. glow-purple - под вторичным акцентом.</li><li>На тёмном фоне свет делается локальными пятнами glowspot, а не заливкой всего фона.</li></ul></div><div class="no"><h5>Нельзя</h5><ul><li>Два конкурирующих свечения в одном экране.</li><li>Тень на всём подряд: если светятся все блоки, не светится ни один.</li><li>Жёсткие контрастные тени - все тени низкоконтрастные и мягкие.</li></ul></div><div class="why"><h5>Почему так</h5><p>Свечение - это указатель внимания. Второе свечение делит внимание пополам и обнуляет первое.</p></div></div><p class="src">Источник: tokens.json → shadow / gradient</p></section><section class="sec" id="motion" data-lm-section="motion" data-lm-status="канон"><h2><span class="num">08</span>Движение<span class="cnt">3 сценария</span><span class="st ">канон</span></h2><p class="intro">Интерактив - часть бренда: с блоками можно взаимодействовать, и это должно чувствоваться.</p><div class="rules"><div class="use"><h5>Как пользоваться</h5><ul><li>Микро-отклик (наведение, нажатие): 150ms ease, подъём translateY(-2px) плюс усиление тени или свечения.</li><li>Появление при скролле: 300-400ms ease-out, сдвиг снизу 16-24px плюс проявление. Один каскад на секцию, задержка между карточками 60-90ms.</li><li>Демонстрации продукта - собственные скринкасты, зациклены аккуратно, автоплей без звука.</li></ul></div><div class="no"><h5>Нельзя</h5><ul><li>Параллакс ради параллакса, вращения, bounce на серьёзных блоках.</li><li>Анимация двух конкурирующих объектов одновременно.</li><li>Покупные стоковые анимации.</li></ul></div><div class="why"><h5>Почему так</h5><p>Одинаковая длительность отклика по всем носителям - это то, по чему интерфейс ощущается сделанным одной командой, даже когда страницы верстали разные люди.</p></div></div><p class="src">Источник: DESIGN.md §7</p></section><section class="sec" id="components" data-lm-section="components" data-lm-status="частично новое"><h2><span class="num">09</span>Компоненты и состояния<span class="cnt">6 компонентов, 5 состояний</span><span class="st novoe">частично новое</span></h2><p class="intro">Элемент живёт не в одном виде. Если состояние не описано - его придумывает каждый исполнитель заново, и кнопка в кабинете начинает вести себя не так, как на сайте.</p><div class="cblock"><h4 class="sub">Кнопка — варианты</h4><p class="cap">Одна primary на экран. Остальные действия берут secondary, dark или ghost.</p><div class="cells"><div class="cell"><div class="cellbox"><button style="display:inline-flex;align-items:center;gap:8px;border:0;cursor:pointer;font-family:inherit;font-weight:800;font-size:16px;padding:14px 24px;border-radius:10px;background:#EECB03;color:#020202;box-shadow:0 10px 28px -8px rgba(238,203,3,.45)">Получить разбор</button></div><b>primary</b><i>главное действие</i></div><div class="cell"><div class="cellbox"><button style="display:inline-flex;align-items:center;gap:8px;border:0;cursor:pointer;font-family:inherit;font-weight:800;font-size:16px;padding:14px 24px;border-radius:10px;background:#7D00EA;color:#fff;box-shadow:0 10px 28px -8px rgba(125,0,234,.40)">Смотреть работы</button></div><b>secondary</b><i>второе по важности</i></div><div class="cell"><div class="cellbox"><button style="display:inline-flex;align-items:center;gap:8px;border:0;cursor:pointer;font-family:inherit;font-weight:800;font-size:16px;padding:14px 24px;border-radius:10px;background:#020202;color:#fff">Написать нам</button></div><b>dark</b><i>на светлых секциях</i></div><div class="cell"><div class="cellbox"><button style="display:inline-flex;align-items:center;gap:8px;border:0;cursor:pointer;font-family:inherit;font-weight:800;font-size:16px;padding:14px 24px;border-radius:10px;background:#fff;color:#020202;border:1px solid #E2E2E6">Подробнее</button></div><b>ghost</b><i>третьестепенное</i></div></div></div><div class="cblock"><h4 class="sub">Кнопка — состояния</h4><p class="cap">Отклик одинаковый у кнопок и карточек: подъём 2px плюс усиление свечения, 150ms ease.</p><div class="cells"><div class="cell"><div class="cellbox"><button style="display:inline-flex;align-items:center;gap:8px;border:0;cursor:pointer;font-family:inherit;font-weight:800;font-size:16px;padding:14px 24px;border-radius:10px;background:#EECB03;color:#020202;box-shadow:0 10px 28px -8px rgba(238,203,3,.45)">Получить разбор</button></div><b>обычная</b><i>покой</i></div><div class="cell"><div class="cellbox"><button style="display:inline-flex;align-items:center;gap:8px;border:0;cursor:pointer;font-family:inherit;font-weight:800;font-size:16px;padding:14px 24px;border-radius:10px;background:#EECB03;color:#020202;transform:translateY(-2px);box-shadow:0 16px 36px -8px rgba(238,203,3,.60)">Получить разбор</button></div><b>наведение</b><i>translateY(-2px), свечение сильнее</i></div><div class="cell"><div class="cellbox"><button style="display:inline-flex;align-items:center;gap:8px;border:0;cursor:pointer;font-family:inherit;font-weight:800;font-size:16px;padding:14px 24px;border-radius:10px;background:#D9B900;color:#020202;transform:translateY(0);box-shadow:0 4px 12px -6px rgba(238,203,3,.5)">Получить разбор</button></div><b>нажата</b><i>lemon/600, свечение гаснет</i></div><div class="cell"><div class="cellbox"><button disabled style="display:inline-flex;align-items:center;gap:8px;border:0;cursor:pointer;font-family:inherit;font-weight:800;font-size:16px;padding:14px 24px;border-radius:10px;background:#EFEFEF;color:#8A8A93;cursor:not-allowed">Получить разбор</button></div><b>отключена</b><i>без тени, курсор not-allowed</i></div><div class="cell"><div class="cellbox"><button disabled style="display:inline-flex;align-items:center;gap:8px;border:0;cursor:pointer;font-family:inherit;font-weight:800;font-size:16px;padding:14px 24px;border-radius:10px;background:#EECB03;color:#020202;opacity:.75;cursor:progress">Отправляем…</button></div><b>загрузка</b><i>текст меняется, клик заблокирован</i></div></div></div><div class="cblock"><h4 class="sub">Поле ввода — состояния</h4><p class="cap">Ошибка всегда сопровождается текстом под полем. Только цветом ошибку не сообщаем.</p><div class="cells"><div class="cell"><div class="cellbox"><input style="width:100%;box-sizing:border-box;font-family:inherit;font-size:16px;padding:12px 14px;border-radius:10px;background:#fff;border:1px solid #E2E2E6;color:#020202;color:#8A8A93" value="Ваше имя" readonly></div><b>пустое</b><i>плейсхолдер muted-2</i></div><div class="cell"><div class="cellbox"><input style="width:100%;box-sizing:border-box;font-family:inherit;font-size:16px;padding:12px 14px;border-radius:10px;background:#fff;border:1px solid #E2E2E6;color:#020202;" value="Иван Тумаков" readonly></div><b>заполнено</b><i>текст neutral/950</i></div><div class="cell"><div class="cellbox"><input style="width:100%;box-sizing:border-box;font-family:inherit;font-size:16px;padding:12px 14px;border-radius:10px;background:#fff;border:1px solid #E2E2E6;color:#020202;border-color:#7D00EA;box-shadow:0 0 0 3px rgba(125,0,234,.15)" value="Иван Тумаков" readonly></div><b>фокус</b><i>рамка purple/600, кольцо 3px</i></div><div class="cell"><div class="cellbox"><input style="width:100%;box-sizing:border-box;font-family:inherit;font-size:16px;padding:12px 14px;border-radius:10px;background:#fff;border:1px solid #E2E2E6;color:#020202;border-color:#E5484D" value="ivan@" readonly><div style="font-size:14px;color:#E5484D;margin-top:6px">Проверьте адрес почты</div></div><b>ошибка</b><i>рамка danger плюс текст ошибки</i></div><div class="cell"><div class="cellbox"><input disabled style="width:100%;box-sizing:border-box;font-family:inherit;font-size:16px;padding:12px 14px;border-radius:10px;background:#fff;border:1px solid #E2E2E6;color:#020202;background:#F6F6F7;color:#8A8A93;cursor:not-allowed" value="Иван Тумаков"></div><b>заблокировано</b><i>фон surface, курсор not-allowed</i></div></div></div><div class="cblock"><h4 class="sub">Карточка — состояния</h4><p class="cap">Радиус lg 24. Вложенное медиа всегда меньше родителя: md 16.</p><div class="cells"><div class="cell"><div class="cellbox"><div style="background:#fff;border:1px solid #EBEBEE;border-radius:24px;padding:20px;font-size:15px;color:#5E5E66;transition:.15s ease;box-shadow:0 3px 14px rgba(0,0,0,.08)"><b style="color:#020202;font-size:17px">Карусель</b><br>9 слайдов, 4:5</div></div><b>обычная</b><i>shadow-card</i></div><div class="cell"><div class="cellbox"><div style="background:#fff;border:1px solid #EBEBEE;border-radius:24px;padding:20px;font-size:15px;color:#5E5E66;transition:.15s ease;transform:translateY(-2px);box-shadow:0 18px 48px -12px rgba(0,0,0,.22)"><b style="color:#020202;font-size:17px">Карусель</b><br>9 слайдов, 4:5</div></div><b>наведение</b><i>подъём 2px, тень глубже</i></div><div class="cell"><div class="cellbox"><div style="background:#fff;border:1px solid #EBEBEE;border-radius:24px;padding:20px;font-size:15px;color:#5E5E66;transition:.15s ease;border-color:#EECB03;box-shadow:0 0 0 3px rgba(238,203,3,.25)"><b style="color:#020202;font-size:17px">Карусель</b><br>9 слайдов, 4:5</div></div><b>выбрана</b><i>рамка lemon/500</i></div></div></div><div class="cblock"><h4 class="sub">Бейдж и статусы</h4><p class="cap">На сайте бейдж - только самостоятельный статус или фильтр, не надзаголовок.</p><div class="cells"><div class="cell"><div class="cellbox"><span style="display:inline-block;background:#EECB03;color:#020202;font-weight:800;font-size:13px;letter-spacing:.08em;padding:7px 14px;border-radius:100px">ТАРИФЫ</span></div><b>lemon</b><i>нейтральная рубрика</i></div><div class="cell"><div class="cellbox"><span style="display:inline-block;background:#7D00EA;color:#fff;font-weight:800;font-size:13px;letter-spacing:.08em;padding:7px 14px;border-radius:100px">НОВОЕ</span></div><b>purple</b><i>акцентная рубрика</i></div><div class="cell"><div class="cellbox"><span style="display:inline-block;background:#E7F7EF;color:#2EB872;font-weight:700;font-size:14px;padding:7px 14px;border-radius:100px">Опубликовано</span></div><b>success</b><i>опубликовано, оплачено</i></div><div class="cell"><div class="cellbox"><span style="display:inline-block;background:#FDECEC;color:#E5484D;font-weight:700;font-size:14px;padding:7px 14px;border-radius:100px">Ошибка публикации</span></div><b>danger</b><i>ошибка, просрочка</i></div></div></div><div class="cblock"><h4 class="sub">Строка таблицы — состояния</h4><p class="cap">Слой кабинета. Шапка UI 17px, строки Body.</p><div class="cells"><div class="cell"><div class="cellbox"><div style="display:flex;justify-content:space-between;padding:12px 14px;border:1px solid #EBEBEE;border-radius:10px;background:#fff;font-size:15px"><span>Пост 12 · карусель</span><span style="color:#8A8A93">14 авг</span></div></div><b>обычная</b><i>белый фон</i></div><div class="cell"><div class="cellbox"><div style="display:flex;justify-content:space-between;padding:12px 14px;border:1px solid #EBEBEE;border-radius:10px;background:#F6F6F7;font-size:15px"><span>Пост 12 · карусель</span><span style="color:#8A8A93">14 авг</span></div></div><b>наведение</b><i>фон surface</i></div><div class="cell"><div class="cellbox"><div style="display:flex;justify-content:space-between;padding:12px 14px;border:1px solid #EECB03;border-radius:10px;background:#FFF3C4;font-size:15px"><span>Пост 12 · карусель</span><span style="color:#5E5E66">14 авг</span></div></div><b>выбрана</b><i>подложка lemon-100</i></div></div></div><div class="rules"><div class="use"><h5>Как пользоваться</h5><ul><li>Бери готовый класс из components.css, не собирай элемент заново.</li><li>Одна primary-кнопка на экран. Остальные действия - secondary, dark или ghost.</li><li>Отклик на наведение одинаковый у кнопок и карточек: подъём 2px плюс усиление свечения, 150ms.</li><li>Поле с ошибкой всегда показывает текст ошибки под собой, только цветом ошибку не сообщаем.</li><li>Заблокированный элемент теряет тень и свечение, курсор not-allowed.</li></ul></div><div class="no"><h5>Нельзя</h5><ul><li>Новый компонент без нужды: сначала проверь, решается ли задача существующими.</li><li>Свои цвета состояний - hover-цвет берётся из lemon/600 и purple, а не подбирается.</li><li>Бейдж как декоративный надзаголовок перед H1, H2, H3 на сайте.</li></ul></div><div class="why"><h5>Почему так</h5><p>Состояния - это половина компонента. Без них разработчик додумывает поведение сам, и система расходится не в цвете, а в ощущении.</p></div></div><p class="src">Источник: components.css, sections.css</p></section><section class="sec" id="media-web" data-lm-section="media-web" data-lm-status="канон"><h2><span class="num">10</span>Носитель: сайт<span class="cnt">14 секций-мастеров</span><span class="st ">канон</span></h2><p class="intro">Страницы собираются из секций-мастеров site-kit: хедер-капсула, hero светлый и тёмный, логобар, бенто-фичи, сплиты с мокапами, шаги, прайсинг, метрики, отзывы, форма, FAQ, CTA, футер.</p><div class="rules"><div class="use"><h5>Как пользоваться</h5><ul><li>Новый лендинг - перестановка мастеров с новым контентом.</li><li>Светлые секции чередуются с тёмными. Одна жёлтая CTA на экран.</li><li>Живые скриншоты в мокапах устройств, реальные работы.</li><li>Кейсы: общий шаблон плюс проектный скин - тёмная обложка, один основной цвет проекта, один акцент.</li></ul></div><div class="no"><h5>Нельзя</h5><ul><li>Изобретать новые секции без нужды.</li><li>Мешать фиолетовый lemonmedia с цветом проекта внутри кейса.</li><li>Слово «контент-месяц» - только «контент-план».</li><li>Декоративные надзаголовки перед заголовками секций.</li></ul></div><div class="why"><h5>Почему так</h5><p>Единообразие даёт скорость: страница собирается за часы, а не рисуется с нуля. Но мастера не заменяют композицию - карточки нужны только когда сравнивают равные вещи.</p></div></div><p class="src">Источник: sections.css, site-specimen.html, docs/SITE_PAGE_TEMPLATE.md, docs/CASE_TEMPLATE.md</p></section><section class="sec" id="media-smm" data-lm-section="media-smm" data-lm-status="канон"><h2><span class="num">11</span>Носитель: SMM 1080×1350<span class="cnt">3 мастера поста + 9 слайдов</span><span class="st ">канон</span></h2><p class="intro">Собирается только из мастеров Figma через компоненты. Свои элементы не рисуем: выбираем мастер, заменяем контент, свапаем ракурс Ксюши, гоняем QA 3/3.</p><div class="rules"><div class="use"><h5>Как пользоваться</h5><ul><li>Заголовок - один смысловой удар, без сирот и случайных переносов.</li><li>Ключевое слово выделяется цветом: жёлтый на тёмном, фиолетовый на светлом.</li><li>Слайд-навигация: POST / 01 и LEMONMEDIA в футере, точки-прогресс в каруселях.</li><li>Единый CTA бренда - «Разбор», кодовое слово в комментариях.</li></ul></div><div class="no"><h5>Нельзя</h5><ul><li>Рисовать элемент вручную мимо мастера.</li><li>Выносить текст, цифры или лицо за safe area.</li><li>Публиковать без QA-гейта 3/3.</li></ul></div><div class="why"><h5>Почему так</h5><p>Производство идёт партиями на десятки клиентов. Любой элемент, нарисованный вручную, ломает партийную сборку и не переиспользуется в следующем месяце.</p></div></div><p class="src">Источник: Figma «LM • SMM DESIGN SYSTEM — v1», скиллы /kp-tz и /kp-plan</p></section><section class="sec" id="media-app" data-lm-section="media-app" data-lm-status="пробел"><h2><span class="num">12</span>Носитель: кабинет и дашборды<span class="cnt">слой в работе</span><span class="st probel">пробел</span></h2><p class="intro">Продуктовые интерфейсы: Lemon Publisher, Пульт. Тёмный сайдбар плюс белые карточки на surface, жёлтая - активный пункт и ключевое действие, статусы success и danger.</p><div class="rules"><div class="use"><h5>Как пользоваться</h5><ul><li>Цвета только из ядра: фиолетовый интерфейса - purple/600, жёлтый - lemon/500.</li><li>Радиус форм - скруглённый прямоугольник sm/md, пилюля остаётся маркетинговому сайту.</li><li>Плотность выше, чем на сайте: шкала отступов та же, но берутся меньшие ступени.</li></ul></div><div class="no"><h5>Нельзя</h5><ul><li>Заводить свою палитру под кабинет - это уже произошло и будет мигрировано.</li><li>Свой шрифт и свои радиусы под «продуктовость».</li></ul></div><div class="why"><h5>Почему так</h5><p>Кабинет - продукт подписки, его увидит каждый клиент. Если он выглядит как чужой сервис, подписка перестаёт читаться как продукт lemonmedia.</p></div></div><p class="src">Источник: 09 Подпроекты/Lemon Publisher</p></section><section class="sec" id="media-docs" data-lm-section="media-docs" data-lm-status="канон"><h2><span class="num">13</span>Носитель: КП и документы<span class="cnt">1 шаблон</span><span class="st ">канон</span></h2><p class="intro">Белый фон, Manrope, чёрные заголовки, жёлтые выделения-подложки lemon-100, таблицы с серыми шапками.</p><div class="rules"><div class="use"><h5>Как пользоваться</h5><ul><li>Правки в документе подсвечиваются жёлтой заливкой.</li><li>Каждая единица контента и «План публикаций» - с новой страницы.</li><li>Бренд «lemonmedia» строчными, дефис вместо тире, «е» вместо «ё».</li></ul></div><div class="no"><h5>Нельзя</h5><ul><li>Цветные фоны страниц и декоративная графика в клиентских документах.</li><li>Отдавать клиенту файл вместо ссылки на документ.</li></ul></div><div class="why"><h5>Почему так</h5><p>Документ читает клиент, а не дизайнер. Всё, что не помогает согласовать, мешает.</p></div></div><p class="src">Источник: Скиллы /kp-docs, /kp-plan, /kp-pravki</p></section><section class="sec" id="ksusha" data-lm-section="ksusha" data-lm-status="канон"><h2><span class="num">14</span>Ксюша - аватар бренда<span class="cnt">5 канонических ракурсов</span><span class="st ">канон</span></h2><p class="intro">Постоянный визуальный носитель бренда. Лицо и идентичность неизменны, контекст вокруг неё меняется по смыслу поста.</p><div class="ksusha"><figure><img src="assets/ksusha-master-5views.jpg" alt="Ксюша, 5 ракурсов"><figcaption>master reference — единственный допустимый исходник для генераций</figcaption></figure><figure><img src="assets/ksusha-workplace.jpg" alt="Ксюша за работой"><figcaption>фирменный образ «Ксюша-дизайнер»</figcaption></figure></div><div class="rules"><div class="use"><h5>Как пользоваться</h5><ul><li>Стартуй всегда с master-изображения ksusha-master-5views.jpg - единственный допустимый исходник.</li><li>Меняй: одежду и аксессуары, эмоцию, позу, свет, окружение, сцену.</li><li>В промпте описывай контекст вокруг лица, лицо не трогай.</li><li>Перед публикацией сверь результат с master reference.</li></ul></div><div class="no"><h5>Нельзя</h5><ul><li>Менять геометрию и пропорции лица, форму и цвет волос, возраст, комплекцию.</li><li>Генерировать с нуля без master-изображения.</li></ul></div><div class="why"><h5>Почему так</h5><p>Аватар работает как лицо бренда только при полной узнаваемости. Сдвиг черт на 10% превращает Ксюшу в другую девушку, и накопленное узнавание обнуляется.</p></div></div><p class="src">Источник: design-system/assets/, скилл /ksusha-outfit</p></section><section class="sec" id="copy" data-lm-section="copy" data-lm-status="канон"><h2><span class="num">15</span>Тексты в макетах<span class="cnt">4 правила</span><span class="st ">канон</span></h2><p class="intro">Правила письма одинаковы во всех носителях - от слайда карусели до кнопки в кабинете.</p><div class="rules"><div class="use"><h5>Как пользоваться</h5><ul><li>lemonmedia - всегда строчными, одним словом.</li><li>Дефис вместо тире, «е» вместо «ё».</li><li>Прямой тон на «ты», без штампов и без обещаний заявок, продаж и охватов.</li><li>Единый CTA: «Разбор» в SMM, «Получить бесплатно» и демо-сценарии на сайте.</li></ul></div><div class="no"><h5>Нельзя</h5><ul><li>«В современном мире», «индивидуальный подход», «команда профессионалов».</li><li>Обещания результата в цифрах, которых мы не контролируем.</li></ul></div><div class="why"><h5>Почему так</h5><p>Тон - такая же часть узнаваемости, как жёлтый. Текст в чужом тоне ломает бренд сильнее, чем неверный оттенок.</p></div></div><p class="src">Источник: DESIGN.md §11, Библия бренда lemonmedia.md</p></section><section class="sec" id="qa" data-lm-section="qa" data-lm-status="канон"><h2><span class="num">16</span>QA-гейт арт-директора<span class="cnt">3 из 3</span><span class="st ">канон</span></h2><p class="intro">Проверка каждого макета перед выпуском. PASS только 3 из 3, иначе правка и повторная проверка.</p><div class="rules"><div class="use"><h5>Как пользоваться</h5><ul><li>Геометрия: канвас точный, для SMM 1080×1350 и safe 60, поля одинаковые, элементы на сетке, ничего не обрезано.</li><li>Типографика: только системные стили, нет случайных переносов и висячих слов, один уровень внимания.</li><li>Визуал: контраст пар соблюдён, чистые зоны вокруг главного, лицо Ксюши равно master reference, один доминирующий glow.</li></ul></div><div class="no"><h5>Нельзя</h5><ul><li>Выпускать при 2 из 3.</li><li>Проверять по памяти вместо сверки с витриной.</li></ul></div><div class="why"><h5>Почему так</h5><p>Гейт из трёх пунктов ловит больше 90% типовых ошибок партии и занимает минуту. Без него ошибка уходит клиенту и стоит круга правок.</p></div></div><p class="src">Источник: DESIGN.md §12</p></section><section class="oq" id="open"><h2>Открытые вопросы</h2><p>Места, где система пока не даёт однозначного ответа. Решение за Иваном.</p><div class="oqlist"><div class="oqitem"><b>Резиновая или фиксированная типографика</b><p>В токенах Display и заголовки заданы через clamp() - размер плывёт от ширины окна. При этом текст канона прямо говорит: шкала фиксированная, не резиновая. Два утверждения противоречат друг другу, нужно решение Ивана.</p><span class="imp">Влияет на весь сайт: 73 страницы.</span></div><div class="oqitem"><b>Ширина контейнера: 1200 или 1328</b><p>tokens.css и tokens.json дают 1328px, старый текст §5 говорил 1200px. В витрине принято 1328 как значение из токенов, но подтверждение нужно.</p><span class="imp">Влияет на все страницы сайта.</span></div><div class="oqitem"><b>Иконки</b><p>Сет для интерфейсов не выбран. Кандидаты Lucide или Phosphor, линия 1.5-2px. В маркетинге сейчас эмодзи - это осознанный приём.</p><span class="imp">Блокирует слой кабинета.</span></div><div class="oqitem"><b>Фото-стайл</b><p>Правила обработки живых фото и скриншотов: свет, фон, кадрирование. Частично живёт в Визуальном паспорте производства.</p><span class="imp">Влияет на SMM и кейсы.</span></div><div class="oqitem"><b>Доступность</b><p>Focus-стили для форм и кнопок в site-kit есть. Остаётся аудит контраста мелких текстов и aria-разметка компонентов.</p><span class="imp">Влияет на кабинет.</span></div><div class="oqitem"><b>OG-image и фавикон</b><p>Шаблон превью для ссылок и фавикон из символа-лимона.</p><span class="imp">Влияет на сайт.</span></div></div></section><footer>Страница собрана автоматически из system.json. Руками не править — правки затрутся при следующей сборке.</footer></main></div><script type="application/json" id="lm-system">{"source": "system.json", "version": "2.0", "updated": "2026-08-12", "sections": [{"id": "osnovy", "title": "Основы бренда", "status": "канон", "use": ["Спорный визуальный выбор проверяй этими тремя принципами, а не вкусом.", "Если элемент не служит ни одному из трёх - он лишний."], "never": ["Рисованные мультяшные иллюстрации и стоковые векторные человечки.", "Серая простыня без цветных подложек - мы про контент, яркость обязательна."], "why": "Принципы - единственное, что не меняется при смене носителя. Цвета и размеры у сайта и карусели разные, а «показывать, а не рассказывать» одинаково."}, {"id": "logo", "title": "Логотип", "status": "канон", "use": ["Светлые фоны (белый, lemon-100, purple-050) - тёмная версия.", "Тёмные фоны (чёрный, purple-600, «космос», фото с затемнением) - белая версия.", "На жёлтой заливке lemon/500 бери тёмный логотип БЕЗ символа либо ставь лого на белой плашке.", "Символ-лимон отдельно - только фавикон, аватарки соцсетей и другие малые пространства."], "never": ["Перекрашивать: лимон только #EECB03, текст #1D1D1B или белый.", "Тени, обводки, градиенты, наклоны.", "Ставить логотип ближе, чем высота символа-лимона, к краю или чужому объекту.", "Текстовая часть уже 120px на экране и 25мм в печати."], "why": "На жёлтом фоне символ-лимон сливается с подложкой и логотип читается как обрезанный. Охранное поле в высоту символа - чтобы лого не слипалось с соседним блоком в плотных шапках."}, {"id": "color", "title": "Цвет", "status": "канон", "use": ["Бери цвет токеном, а не HEX-ом: --lm-color-lemon-500, а не #EECB03.", "Фон и текст бери готовой парой из шести - контраст в них уже проверен.", "Жёлтый в композиции с расколом экрана живёт только в акцентах: кнопка, галочки, бейджи."], "never": ["Белый текст на lemon/500 - слабый контраст, на лимоне только чёрный.", "Жёлтый и фиолетовый мелким текстом на белом - только от H3 и крупнее, мелкий текст neutral/muted.", "Градиент white → yellow - DEPRECATED, узел 40:2939 в Figma.", "Подчёркивания и маркеры-выделения под текстом - их в системе нет."], "why": "Шесть пар - это не ограничение ради ограничения. Каждая пара прошла проверку контраста, а седьмая пара, придуманная на ходу, её не проходит и ломает читаемость на телефоне."}, {"id": "type", "title": "Типографика", "status": "канон", "use": ["Display - один смысловой удар на экран: цифра-рекорд или главная строка. Больше одной Display на экран не бывает.", "H1 - заголовок страницы, ровно один. H2 - заголовок секции. H3 - заголовок карточки или блока внутри секции.", "Lead - абзац-подводка сразу под заголовком, один на секцию. Дальше идёт Body.", "UI 17px - кнопки, навигация, шапки таблиц. Small 15px - подписи под элементами.", "В SMM бери стиль из Figma (LM/*), в вебе - токен. Свои размеры не набирай."], "never": ["Второй шрифт в любом виде.", "Текст мельче 15px в вебе - кроме служебных меток на миниатюрах.", "Два конкурирующих уровня внимания в одном блоке: Display рядом с H1.", "Висячие предлоги и случайные переносы в заголовках - проверяются на финальном тексте."], "why": "Вопрос «какой размер взять» возникает, только когда стиль выбирают по величине. Если выбирать по роли, размер не нужен: роль в макете одна, стиль к ней один."}, {"id": "grid", "title": "Сетки", "status": "канон", "use": ["Веб: весь контент внутри контейнера --lm-container. Карточные секции - grid с зазором 20-24px.", "SMM: текст, цифры, навигация и лицо - строго внутри safe area 960×1230.", "SMM: декор, свет и части фото могут выходить за safe area наружу, это разрешено.", "Колонок в SMM двенадцать, gutter 20 - блоки выравниваются по ним, а не на глаз."], "never": ["Контент шире контейнера или прижатый к краю канваса.", "Смысловые элементы в зоне обрезки: в ленте и превью края режутся.", "Своя ширина контейнера на отдельной странице."], "why": "Safe area 60px нужна потому, что соцсети режут края в превью и в разных лентах по-разному. Всё, что должно быть прочитано, обязано пережить обрезку."}, {"id": "geometry", "title": "Геометрия", "status": "канон", "use": ["Веб: sm 10 - кнопки и теги; md 16 - вложенные блоки и медиа; lg 24 - карточки и секции; pill 100 - бейджи и пилюли-CTA.", "Вложенный элемент всегда скруглён меньше родителя: медиа md внутри карточки lg.", "Формы: скруглённый прямоугольник в продуктовых интерфейсах, пилюля - на маркетинговом сайте.", "Отступы бери из шкалы: веб 4-128 (секции 96-128), SMM 20/30/40/60/80/100/120/160."], "never": ["Радиус 4-8px на карточках и секциях - это чужая пластика.", "Одинаковый радиус у родителя и вложенного медиа - выглядит как ошибка вёрстки.", "Отступы «на глаз» мимо шкалы."], "why": "Радиус и отступ - половина узнаваемости бренда. Цвет можно перебить фотографией, а пластика блоков читается даже в чёрно-белом скриншоте."}, {"id": "elevation", "title": "Атмосфера: тени и свет", "status": "канон", "use": ["Soft - мягкое отделение блока от фона. Card - карточки на светлом. Pop - то, что выходит поверх: модалка, выпадашка.", "glow-lemon - под primary-кнопкой и под главным объектом. glow-purple - под вторичным акцентом.", "На тёмном фоне свет делается локальными пятнами glowspot, а не заливкой всего фона."], "never": ["Два конкурирующих свечения в одном экране.", "Тень на всём подряд: если светятся все блоки, не светится ни один.", "Жёсткие контрастные тени - все тени низкоконтрастные и мягкие."], "why": "Свечение - это указатель внимания. Второе свечение делит внимание пополам и обнуляет первое."}, {"id": "motion", "title": "Движение", "status": "канон", "use": ["Микро-отклик (наведение, нажатие): 150ms ease, подъём translateY(-2px) плюс усиление тени или свечения.", "Появление при скролле: 300-400ms ease-out, сдвиг снизу 16-24px плюс проявление. Один каскад на секцию, задержка между карточками 60-90ms.", "Демонстрации продукта - собственные скринкасты, зациклены аккуратно, автоплей без звука."], "never": ["Параллакс ради параллакса, вращения, bounce на серьёзных блоках.", "Анимация двух конкурирующих объектов одновременно.", "Покупные стоковые анимации."], "why": "Одинаковая длительность отклика по всем носителям - это то, по чему интерфейс ощущается сделанным одной командой, даже когда страницы верстали разные люди."}, {"id": "components", "title": "Компоненты и состояния", "status": "частично новое", "use": ["Бери готовый класс из components.css, не собирай элемент заново.", "Одна primary-кнопка на экран. Остальные действия - secondary, dark или ghost.", "Отклик на наведение одинаковый у кнопок и карточек: подъём 2px плюс усиление свечения, 150ms.", "Поле с ошибкой всегда показывает текст ошибки под собой, только цветом ошибку не сообщаем.", "Заблокированный элемент теряет тень и свечение, курсор not-allowed."], "never": ["Новый компонент без нужды: сначала проверь, решается ли задача существующими.", "Свои цвета состояний - hover-цвет берётся из lemon/600 и purple, а не подбирается.", "Бейдж как декоративный надзаголовок перед H1, H2, H3 на сайте."], "why": "Состояния - это половина компонента. Без них разработчик додумывает поведение сам, и система расходится не в цвете, а в ощущении."}, {"id": "media-web", "title": "Носитель: сайт", "status": "канон", "use": ["Новый лендинг - перестановка мастеров с новым контентом.", "Светлые секции чередуются с тёмными. Одна жёлтая CTA на экран.", "Живые скриншоты в мокапах устройств, реальные работы.", "Кейсы: общий шаблон плюс проектный скин - тёмная обложка, один основной цвет проекта, один акцент."], "never": ["Изобретать новые секции без нужды.", "Мешать фиолетовый lemonmedia с цветом проекта внутри кейса.", "Слово «контент-месяц» - только «контент-план».", "Декоративные надзаголовки перед заголовками секций."], "why": "Единообразие даёт скорость: страница собирается за часы, а не рисуется с нуля. Но мастера не заменяют композицию - карточки нужны только когда сравнивают равные вещи."}, {"id": "media-smm", "title": "Носитель: SMM 1080×1350", "status": "канон", "use": ["Заголовок - один смысловой удар, без сирот и случайных переносов.", "Ключевое слово выделяется цветом: жёлтый на тёмном, фиолетовый на светлом.", "Слайд-навигация: POST / 01 и LEMONMEDIA в футере, точки-прогресс в каруселях.", "Единый CTA бренда - «Разбор», кодовое слово в комментариях."], "never": ["Рисовать элемент вручную мимо мастера.", "Выносить текст, цифры или лицо за safe area.", "Публиковать без QA-гейта 3/3."], "why": "Производство идёт партиями на десятки клиентов. Любой элемент, нарисованный вручную, ломает партийную сборку и не переиспользуется в следующем месяце."}, {"id": "media-app", "title": "Носитель: кабинет и дашборды", "status": "пробел", "use": ["Цвета только из ядра: фиолетовый интерфейса - purple/600, жёлтый - lemon/500.", "Радиус форм - скруглённый прямоугольник sm/md, пилюля остаётся маркетинговому сайту.", "Плотность выше, чем на сайте: шкала отступов та же, но берутся меньшие ступени."], "never": ["Заводить свою палитру под кабинет - это уже произошло и будет мигрировано.", "Свой шрифт и свои радиусы под «продуктовость»."], "why": "Кабинет - продукт подписки, его увидит каждый клиент. Если он выглядит как чужой сервис, подписка перестаёт читаться как продукт lemonmedia."}, {"id": "media-docs", "title": "Носитель: КП и документы", "status": "канон", "use": ["Правки в документе подсвечиваются жёлтой заливкой.", "Каждая единица контента и «План публикаций» - с новой страницы.", "Бренд «lemonmedia» строчными, дефис вместо тире, «е» вместо «ё»."], "never": ["Цветные фоны страниц и декоративная графика в клиентских документах.", "Отдавать клиенту файл вместо ссылки на документ."], "why": "Документ читает клиент, а не дизайнер. Всё, что не помогает согласовать, мешает."}, {"id": "ksusha", "title": "Ксюша - аватар бренда", "status": "канон", "use": ["Стартуй всегда с master-изображения ksusha-master-5views.jpg - единственный допустимый исходник.", "Меняй: одежду и аксессуары, эмоцию, позу, свет, окружение, сцену.", "В промпте описывай контекст вокруг лица, лицо не трогай.", "Перед публикацией сверь результат с master reference."], "never": ["Менять геометрию и пропорции лица, форму и цвет волос, возраст, комплекцию.", "Генерировать с нуля без master-изображения."], "why": "Аватар работает как лицо бренда только при полной узнаваемости. Сдвиг черт на 10% превращает Ксюшу в другую девушку, и накопленное узнавание обнуляется."}, {"id": "copy", "title": "Тексты в макетах", "status": "канон", "use": ["lemonmedia - всегда строчными, одним словом.", "Дефис вместо тире, «е» вместо «ё».", "Прямой тон на «ты», без штампов и без обещаний заявок, продаж и охватов.", "Единый CTA: «Разбор» в SMM, «Получить бесплатно» и демо-сценарии на сайте."], "never": ["«В современном мире», «индивидуальный подход», «команда профессионалов».", "Обещания результата в цифрах, которых мы не контролируем."], "why": "Тон - такая же часть узнаваемости, как жёлтый. Текст в чужом тоне ломает бренд сильнее, чем неверный оттенок."}, {"id": "qa", "title": "QA-гейт арт-директора", "status": "канон", "use": ["Геометрия: канвас точный, для SMM 1080×1350 и safe 60, поля одинаковые, элементы на сетке, ничего не обрезано.", "Типографика: только системные стили, нет случайных переносов и висячих слов, один уровень внимания.", "Визуал: контраст пар соблюдён, чистые зоны вокруг главного, лицо Ксюши равно master reference, один доминирующий glow."], "never": ["Выпускать при 2 из 3.", "Проверять по памяти вместо сверки с витриной."], "why": "Гейт из трёх пунктов ловит больше 90% типовых ошибок партии и занимает минуту. Без него ошибка уходит клиенту и стоит круга правок."}]}</script></body></html>

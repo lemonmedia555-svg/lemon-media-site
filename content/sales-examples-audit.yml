@@ -1,0 +1,758 @@
+projects:
+- slug: saratov-kitchens-2026-08
+  name: Саратов Кухни
+  bitrix_task: 90812
+  content_source: 1JCV2qFZlzD7KK19K6KMAhOnhj5xn_1yX3MK21hFvlMA
+  planned_publications: 15
+  public_publications: 15
+  carousel_series: 5
+  partial_carousel_frames: 0
+  incomplete_carousel_series: []
+  story_frames: 5
+  missing_public_assets: []
+  missing_copy: []
+  copy_intentionally_hidden: []
+  excluded_or_unavailable_publications: []
+  included_assets: 49
+  duplicate_publication_numbers: []
+  excluded_collections: []
+- slug: fr-moto
+  name: FR-moto
+  bitrix_task: 90704
+  content_source: 1THbxSKW2yJt6Pju4Er5gptHZftAmVjqxpriPs4HhcEE
+  planned_publications: 10
+  public_publications: 10
+  carousel_series: 2
+  partial_carousel_frames: 0
+  incomplete_carousel_series: []
+  story_frames: 5
+  missing_public_assets: []
+  missing_copy: []
+  copy_intentionally_hidden: []
+  excluded_or_unavailable_publications: []
+  included_assets: 25
+  duplicate_publication_numbers: []
+  excluded_collections: []
+- slug: borodulina-tape
+  name: BORODULINA TAPE
+  bitrix_task: 90872
+  content_source: 1V2LeMv4K3w3NLou_CRX6EmUl9YVrVooRl1AVaENVGbA
+  planned_publications: 10
+  public_publications: 10
+  carousel_series: 2
+  partial_carousel_frames: 0
+  incomplete_carousel_series: []
+  story_frames: 5
+  missing_public_assets: []
+  missing_copy: []
+  copy_intentionally_hidden: []
+  excluded_or_unavailable_publications: []
+  included_assets: 27
+  duplicate_publication_numbers: []
+  excluded_collections: []
+- slug: chebusser
+  name: ЧЕБУССЭР
+  bitrix_task: 90860
+  content_source: 17HiZNnON-T6N4rX1l42x-yb9L45Hho_ENCO1aMIbGj0
+  planned_publications: 10
+  public_publications: 10
+  carousel_series: 2
+  partial_carousel_frames: 0
+  incomplete_carousel_series: []
+  story_frames: 5
+  missing_public_assets: []
+  missing_copy: []
+  copy_intentionally_hidden: []
+  excluded_or_unavailable_publications: []
+  included_assets: 27
+  duplicate_publication_numbers: []
+  excluded_collections: []
+- slug: sergey-glibin
+  name: Сергей Глибин
+  bitrix_task: 90220
+  content_source: 1e1-Z0XCM2lbb8N_s_G2Dru_7ta_NZklV8V2Aw5ZkpKE
+  planned_publications: 20
+  public_publications: 20
+  carousel_series: 5
+  partial_carousel_frames: 0
+  incomplete_carousel_series: []
+  story_frames: 5
+  missing_public_assets: []
+  missing_copy: []
+  copy_intentionally_hidden: []
+  excluded_or_unavailable_publications: []
+  included_assets: 53
+  duplicate_publication_numbers: []
+  excluded_collections: []
+- slug: nalog-expert
+  name: Налог Эксперт
+  bitrix_task: 90772
+  content_source: 1wiFUPyPno163A_e5xr7C7tS9j31tBrNYmz2jWbTJgHI
+  planned_publications: 10
+  public_publications: 10
+  carousel_series: 3
+  partial_carousel_frames: 0
+  incomplete_carousel_series: []
+  story_frames: 10
+  missing_public_assets: []
+  missing_copy: []
+  copy_intentionally_hidden: []
+  excluded_or_unavailable_publications: []
+  included_assets: 39
+  duplicate_publication_numbers: []
+  excluded_collections: []
+- slug: klient-prosto
+  name: Клиент Просто
+  bitrix_task: 90740
+  content_source: 1eVIgo9xISxCKg0Ow4fvU3dueQEVEu6hmnUePfimB5-E
+  planned_publications: 10
+  public_publications: 10
+  carousel_series: 2
+  partial_carousel_frames: 0
+  incomplete_carousel_series: []
+  story_frames: 5
+  missing_public_assets: []
+  missing_copy: []
+  copy_intentionally_hidden: []
+  excluded_or_unavailable_publications: []
+  included_assets: 27
+  duplicate_publication_numbers: []
+  excluded_collections: []
+- slug: refix
+  name: REFIX
+  bitrix_task: 90764
+  content_source: 1xDHnqP2mDXEbg8470ziq6wayGtjI-DzWOcYrQz0Owfs
+  planned_publications: 10
+  public_publications: 10
+  carousel_series: 2
+  partial_carousel_frames: 0
+  incomplete_carousel_series: []
+  story_frames: 15
+  missing_public_assets: []
+  missing_copy: []
+  copy_intentionally_hidden: []
+  excluded_or_unavailable_publications: []
+  included_assets: 37
+  duplicate_publication_numbers: []
+  excluded_collections: []
+- slug: narfkis
+  name: NARFKiS
+  bitrix_task: 90850
+  content_source: 13okztHfuDbMhUk0RFzbg-cEbFsDqGGqffq5a4EtoKSI
+  planned_publications: 10
+  public_publications: 10
+  carousel_series: 0
+  partial_carousel_frames: 0
+  incomplete_carousel_series: []
+  story_frames: 5
+  missing_public_assets: []
+  missing_copy: []
+  copy_intentionally_hidden: []
+  excluded_or_unavailable_publications: []
+  included_assets: 15
+  duplicate_publication_numbers: []
+  excluded_collections: []
+- slug: alliance-climate
+  name: Альянс Климат
+  bitrix_task: 90888
+  content_source: 1JTvtgaQZaiJ6zNAjon4xCyTh_CfDRhDolBI5UtcWp6E
+  planned_publications: 10
+  public_publications: 10
+  carousel_series: 0
+  partial_carousel_frames: 0
+  incomplete_carousel_series: []
+  story_frames: 5
+  missing_public_assets: []
+  missing_copy: []
+  copy_intentionally_hidden: []
+  excluded_or_unavailable_publications: []
+  included_assets: 15
+  duplicate_publication_numbers: []
+  excluded_collections: []
+- slug: ateris
+  name: Атерис
+  bitrix_task: 90820
+  content_source: 1ghjXdVgb-bIMYGA05ISN6Up1znkn8GO-LmGySxxf0p0
+  planned_publications: 10
+  public_publications: 7
+  carousel_series: 2
+  partial_carousel_frames: 0
+  incomplete_carousel_series: []
+  story_frames: 0
+  missing_public_assets: []
+  missing_copy: []
+  copy_intentionally_hidden: []
+  excluded_or_unavailable_publications:
+  - 2
+  - 6
+  - 9
+  included_assets: 20
+  duplicate_publication_numbers: []
+  excluded_collections: []
+- slug: moscow-padel
+  name: MoscowPadel
+  bitrix_task: 90802
+  content_source: 1eec785WgY_1-MuhwGyKvnnbHxpBhRaSB2_qffnk1Ets
+  planned_publications: 20
+  public_publications: 20
+  carousel_series: 11
+  partial_carousel_frames: 0
+  incomplete_carousel_series: []
+  story_frames: 0
+  missing_public_assets: []
+  missing_copy: []
+  copy_intentionally_hidden: []
+  excluded_or_unavailable_publications: []
+  included_assets: 87
+  duplicate_publication_numbers: []
+  excluded_collections: []
+- slug: ritual-s
+  name: Ритуал-С
+  bitrix_task: 90344
+  content_source: 1x8t8qaWf6gaCQbaZGm_qCqhwvjdFUElg7sEfV1lDEEs
+  planned_publications: 20
+  public_publications: 10
+  carousel_series: 4
+  partial_carousel_frames: 0
+  incomplete_carousel_series: []
+  story_frames: 0
+  missing_public_assets: []
+  missing_copy: []
+  copy_intentionally_hidden: []
+  excluded_or_unavailable_publications:
+  - 2
+  - 3
+  - 6
+  - 10
+  - 11
+  - 13
+  - 14
+  - 18
+  - 19
+  - 20
+  included_assets: 34
+  duplicate_publication_numbers: []
+  excluded_collections: []
+- slug: fjord-petersburg
+  name: Fjord-Petersburg
+  bitrix_task: null
+  content_source: 05 Клиенты/Fjord-Petersburg/КП-Fjord-Petersburg-2026-07.md
+  planned_publications: 10
+  public_publications: 3
+  carousel_series: 0
+  partial_carousel_frames: 13
+  incomplete_carousel_series:
+  - publication: 3
+    title: 'Лето на воде: как проходят наши прогулки'
+    available_frames: 5
+    reason: в публичной последовательности есть пропуски
+  - publication: 6
+    title: Как выбрать судно под ваш повод
+    available_frames: 4
+    reason: нет первого слайда
+  - publication: 11
+    title: Петербург, который видно только с воды
+    available_frames: 4
+    reason: нет первого слайда
+  story_frames: 0
+  missing_public_assets: []
+  missing_copy: []
+  copy_intentionally_hidden: []
+  excluded_or_unavailable_publications:
+  - 2
+  - 4
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  included_assets: 3
+  duplicate_publication_numbers: []
+  excluded_collections: []
+- slug: siyanie-vyaza
+  name: Сияние вяза
+  bitrix_task: null
+  content_source: 1fr1YkwVB4NzMw1U6K0BDY65dTKWvxkHr6po0P1Q7CCQ
+  planned_publications: 10
+  public_publications: 10
+  carousel_series: 2
+  partial_carousel_frames: 0
+  incomplete_carousel_series: []
+  story_frames: 0
+  missing_public_assets: []
+  missing_copy: []
+  copy_intentionally_hidden: []
+  excluded_or_unavailable_publications: []
+  included_assets: 26
+  duplicate_publication_numbers: []
+  excluded_collections: []
+- slug: lipniki
+  name: Липники
+  bitrix_task: 90354
+  content_source: 17tresy0rQ0VXgqUKRUjNhVSAxT6q4w2AeER5YZxWQMY
+  planned_publications: 10
+  public_publications: 10
+  carousel_series: 3
+  partial_carousel_frames: 0
+  incomplete_carousel_series: []
+  story_frames: 0
+  missing_public_assets: []
+  missing_copy: []
+  copy_intentionally_hidden: []
+  excluded_or_unavailable_publications: []
+  included_assets: 28
+  duplicate_publication_numbers: []
+  excluded_collections: []
+- slug: lisitsinsky
+  name: Александр Лисицинский
+  bitrix_task: 90790
+  content_source: 1JDdJFw3OGModePCm7Wb2ht4rxZV1qo6JyN_Tje_LA0A
+  planned_publications: 10
+  public_publications: 10
+  carousel_series: 3
+  partial_carousel_frames: 0
+  incomplete_carousel_series: []
+  story_frames: 0
+  missing_public_assets: []
+  missing_copy: []
+  copy_intentionally_hidden: []
+  excluded_or_unavailable_publications: []
+  included_assets: 29
+  duplicate_publication_numbers: []
+  excluded_collections: []
+- slug: oh-beauty
+  name: Oh! Beauty
+  bitrix_task: 90756
+  content_source: 1NxfhkVcx-zGK-dpl3AKi_Ot_xmGsUCP6-rjAkdm4yfE
+  planned_publications: 10
+  public_publications: 3
+  carousel_series: 0
+  partial_carousel_frames: 2
+  incomplete_carousel_series:
+  - publication: 4
+    title: Как выбрать студию лазерной эпиляции
+    available_frames: 2
+    reason: в публичной последовательности есть пропуски
+  story_frames: 0
+  missing_public_assets: []
+  missing_copy: []
+  copy_intentionally_hidden: []
+  excluded_or_unavailable_publications:
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  included_assets: 3
+  duplicate_publication_numbers: []
+  excluded_collections: []
+- slug: dobroe-serdtse
+  name: БФ «Доброе сердце»
+  bitrix_task: null
+  content_source: 05 Клиенты/Доброе-сердце/КП-Доброе-сердце-2026-07.md
+  planned_publications: 10
+  public_publications: 9
+  carousel_series: 2
+  partial_carousel_frames: 0
+  incomplete_carousel_series: []
+  story_frames: 0
+  missing_public_assets: []
+  missing_copy: []
+  copy_intentionally_hidden: []
+  excluded_or_unavailable_publications:
+  - 9
+  included_assets: 21
+  duplicate_publication_numbers: []
+  excluded_collections: []
+- slug: invest-management
+  name: Invest Management
+  bitrix_task: 90700
+  content_source: 1XDYdou3wS5M-jTxp55EXvtZ8rcr1qzB_m2Q-0nSQumI
+  planned_publications: 10
+  public_publications: 10
+  carousel_series: 2
+  partial_carousel_frames: 0
+  incomplete_carousel_series: []
+  story_frames: 5
+  missing_public_assets: []
+  missing_copy: []
+  copy_intentionally_hidden: []
+  excluded_or_unavailable_publications: []
+  included_assets: 27
+  duplicate_publication_numbers: []
+  excluded_collections: []
+- slug: masterpol
+  name: МастерПол
+  bitrix_task: 90406
+  content_source: 1MEF8k7xu9FCyW3xdYMNmNwod0ocGalvk1WbJZa6S1vk
+  planned_publications: 10
+  public_publications: 10
+  carousel_series: 2
+  partial_carousel_frames: 0
+  incomplete_carousel_series: []
+  story_frames: 5
+  missing_public_assets: []
+  missing_copy: []
+  copy_intentionally_hidden: []
+  excluded_or_unavailable_publications: []
+  included_assets: 27
+  duplicate_publication_numbers: []
+  excluded_collections: []
+- slug: electronics-cherepovets
+  name: ЭЛЕКТРОНИКС
+  bitrix_task: 90882
+  content_source: 1rGiN4j5xeRI02kFX-jm3lF7pPXdEbSTsJ4QZBh9wBB8
+  planned_publications: 10
+  public_publications: 10
+  carousel_series: 2
+  partial_carousel_frames: 6
+  incomplete_carousel_series:
+  - publication: 1
+    title: Стекло или гидрогель - как выбрать защиту экрана
+    available_frames: 6
+    reason: в публичной последовательности есть пропуски
+  story_frames: 0
+  missing_public_assets: []
+  missing_copy: []
+  copy_intentionally_hidden: []
+  excluded_or_unavailable_publications: []
+  included_assets: 23
+  duplicate_publication_numbers: []
+  excluded_collections: []
+- slug: colorplast
+  name: Colorplast
+  bitrix_task: 90864
+  content_source: 1nrgcI3lS6FM8hT6mIHiJCHETWg7fwp9go3H_8tvQlek
+  planned_publications: 20
+  public_publications: 20
+  carousel_series: 6
+  partial_carousel_frames: 0
+  incomplete_carousel_series: []
+  story_frames: 0
+  missing_public_assets: []
+  missing_copy: []
+  copy_intentionally_hidden: []
+  excluded_or_unavailable_publications: []
+  included_assets: 57
+  duplicate_publication_numbers: []
+  excluded_collections:
+  - key: previous_cycle
+    reason: На странице показана последняя датированная папка, предыдущий цикл не
+      смешивается с актуальным.
+- slug: taplife
+  name: TapLife
+  bitrix_task: null
+  content_source: 15xV-LhYbrDZmTNVg8jgWsgeYS3T3pDo9q-QT8rlJS5o
+  planned_publications: 10
+  public_publications: 10
+  carousel_series: 3
+  partial_carousel_frames: 0
+  incomplete_carousel_series: []
+  story_frames: 0
+  missing_public_assets: []
+  missing_copy: []
+  copy_intentionally_hidden: []
+  excluded_or_unavailable_publications: []
+  included_assets: 28
+  duplicate_publication_numbers: []
+  excluded_collections: []
+- slug: kristall-water
+  name: Кристалл
+  bitrix_task: 90698
+  content_source: 1i_Zin3kAUS6WDSqcSJhtuFfy_yyT091NS8nVRJATkbU
+  planned_publications: 10
+  public_publications: 10
+  carousel_series: 0
+  partial_carousel_frames: 7
+  incomplete_carousel_series:
+  - publication: 11
+    title: Из чего складывается цена скважины
+    available_frames: 7
+    reason: в утвержденном плане нет подписи под каруселью
+  story_frames: 0
+  missing_public_assets: []
+  missing_copy: []
+  copy_intentionally_hidden: []
+  excluded_or_unavailable_publications: []
+  included_assets: 10
+  duplicate_publication_numbers: []
+  excluded_collections: []
+- slug: inari
+  name: INARI
+  bitrix_task: 90832
+  content_source: 1WzipiOpsGrwreZeUgo3SEnSPPIDDrxmxqyM5oOLaaYw
+  planned_publications: 10
+  public_publications: 10
+  carousel_series: 0
+  partial_carousel_frames: 2
+  incomplete_carousel_series:
+  - publication: 3
+    title: Популярные сеты
+    available_frames: 1
+    reason: доступна только обложка
+  - publication: 7
+    title: Как доставить горячую еду горячей
+    available_frames: 1
+    reason: доступна только обложка
+  story_frames: 5
+  missing_public_assets: []
+  missing_copy: []
+  copy_intentionally_hidden: []
+  excluded_or_unavailable_publications: []
+  included_assets: 15
+  duplicate_publication_numbers: []
+  excluded_collections: []
+- slug: yagodny-ray
+  name: «Ягодный Рай»
+  bitrix_task: null
+  content_source: 11p0bJxDxInakGIk4fpmcbduenz_s396hCbvMuSsttHc
+  planned_publications: 6
+  public_publications: 5
+  carousel_series: 0
+  partial_carousel_frames: 6
+  incomplete_carousel_series:
+  - publication: 6
+    title: Что у нас можно заказать прямо сейчас
+    available_frames: 6
+    reason: в утвержденном плане нет подписи под каруселью
+  story_frames: 0
+  missing_public_assets: []
+  missing_copy: []
+  copy_intentionally_hidden: []
+  excluded_or_unavailable_publications: []
+  included_assets: 5
+  duplicate_publication_numbers: []
+  excluded_collections: []
+- slug: silny-parus
+  name: «Сильный Парус»
+  bitrix_task: 90708
+  content_source: 1pO8OLiGJw8VKWfw5_jrhOqYE9eV6nFbDD7YUomxoZWs
+  planned_publications: 10
+  public_publications: 10
+  carousel_series: 10
+  partial_carousel_frames: 0
+  incomplete_carousel_series: []
+  story_frames: 15
+  missing_public_assets: []
+  missing_copy: []
+  copy_intentionally_hidden: []
+  excluded_or_unavailable_publications: []
+  included_assets: 81
+  duplicate_publication_numbers: []
+  excluded_collections: []
+- slug: orange-style
+  name: Orange Style
+  bitrix_task: null
+  content_source: 1B5Zha_skaAr0w7KSevsUcMiNj5oT35-n4A2oArrBUjQ
+  planned_publications: 10
+  public_publications: 10
+  carousel_series: 0
+  partial_carousel_frames: 0
+  incomplete_carousel_series: []
+  story_frames: 5
+  missing_public_assets: []
+  missing_copy: []
+  copy_intentionally_hidden: []
+  excluded_or_unavailable_publications: []
+  included_assets: 15
+  duplicate_publication_numbers: []
+  excluded_collections: []
+- slug: dan-gun
+  name: «Дан-Гун»
+  bitrix_task: 90720
+  content_source: 1RfuTKIv_cdZe9XYSHdOqKZxeZhvbSzf6Wjy3qwrXDzU
+  planned_publications: 10
+  public_publications: 10
+  carousel_series: 3
+  partial_carousel_frames: 0
+  incomplete_carousel_series: []
+  story_frames: 0
+  missing_public_assets: []
+  missing_copy: []
+  copy_intentionally_hidden: []
+  excluded_or_unavailable_publications: []
+  included_assets: 29
+  duplicate_publication_numbers: []
+  excluded_collections: []
+- slug: sidcobra
+  name: SIDCOBRA
+  bitrix_task: 90702
+  content_source: 1PgV-hGLpImt7ISs1FzjYI3g4ko2F3dmqvCk7VgDAdAk
+  planned_publications: 30
+  public_publications: 30
+  carousel_series: 6
+  partial_carousel_frames: 0
+  incomplete_carousel_series: []
+  story_frames: 0
+  missing_public_assets: []
+  missing_copy: []
+  copy_intentionally_hidden: []
+  excluded_or_unavailable_publications: []
+  included_assets: 66
+  duplicate_publication_numbers: []
+  excluded_collections: []
+- slug: roman-sedov
+  name: Роман Седов
+  bitrix_task: 90722
+  content_source: 1hxrmTl5tGuPyOWBOlc55Ijj5yecpxM_f0hfUQlKTp50
+  planned_publications: 10
+  public_publications: 10
+  carousel_series: 2
+  partial_carousel_frames: 0
+  incomplete_carousel_series: []
+  story_frames: 0
+  missing_public_assets: []
+  missing_copy: []
+  copy_intentionally_hidden: []
+  excluded_or_unavailable_publications: []
+  included_assets: 22
+  duplicate_publication_numbers: []
+  excluded_collections: []
+- slug: electric-monchegorsk
+  name: Электрик Мончегорск
+  bitrix_task: 90726
+  content_source: 1QJlfNg_MM27wVFHKFAEKj0QABJfdIsiFCtoJKm9eXwI
+  planned_publications: 10
+  public_publications: 10
+  carousel_series: 2
+  partial_carousel_frames: 0
+  incomplete_carousel_series: []
+  story_frames: 5
+  missing_public_assets: []
+  missing_copy: []
+  copy_intentionally_hidden: []
+  excluded_or_unavailable_publications: []
+  included_assets: 27
+  duplicate_publication_numbers: []
+  excluded_collections: []
+- slug: olga-pravdyuk
+  name: Ольга Правдюк
+  bitrix_task: 90734
+  content_source: 1LnD7D6BgbKFQbzRLcidx55fSy6aa6B9S7TQP0OqLuf8
+  planned_publications: 10
+  public_publications: 10
+  carousel_series: 3
+  partial_carousel_frames: 0
+  incomplete_carousel_series: []
+  story_frames: 0
+  missing_public_assets: []
+  missing_copy: []
+  copy_intentionally_hidden: []
+  excluded_or_unavailable_publications: []
+  included_assets: 29
+  duplicate_publication_numbers: []
+  excluded_collections: []
+- slug: achinsk-begovoy
+  name: Ачинск Беговой
+  bitrix_task: 90716
+  content_source: 1jII71sGLUY-U-YDHg4Q8GvzX1OEUuVSMjBnlKUIn8Ao
+  planned_publications: 10
+  public_publications: 10
+  carousel_series: 3
+  partial_carousel_frames: 0
+  incomplete_carousel_series: []
+  story_frames: 0
+  missing_public_assets: []
+  missing_copy: []
+  copy_intentionally_hidden: []
+  excluded_or_unavailable_publications: []
+  included_assets: 29
+  duplicate_publication_numbers: []
+  excluded_collections: []
+- slug: casahitto
+  name: CasaHitto
+  bitrix_task: 90750
+  content_source: 1BBjjIXIhscjZql-qdUAz6YP4dyYvUbdCpWT6m42ERJ4
+  planned_publications: 10
+  public_publications: 10
+  carousel_series: 3
+  partial_carousel_frames: 0
+  incomplete_carousel_series: []
+  story_frames: 0
+  missing_public_assets: []
+  missing_copy: []
+  copy_intentionally_hidden: []
+  excluded_or_unavailable_publications: []
+  included_assets: 29
+  duplicate_publication_numbers: []
+  excluded_collections: []
+- slug: olga-andreeva
+  name: Ольга Андреева
+  bitrix_task: 90710
+  content_source: 1amWuy8DWJWfBCuPUEQ0M-rP3M5qG7nkMtEJfNHxXStI
+  planned_publications: 10
+  public_publications: 6
+  carousel_series: 0
+  partial_carousel_frames: 0
+  incomplete_carousel_series: []
+  story_frames: 5
+  missing_public_assets: []
+  missing_copy: []
+  copy_intentionally_hidden: []
+  excluded_or_unavailable_publications: []
+  included_assets: 11
+  duplicate_publication_numbers: []
+  excluded_collections: []
+- slug: dava-holding
+  name: Dava Holding
+  bitrix_task: 90800
+  content_source: 1hoJIeLBUlGGe8wiMrpqbyICD-bEicjGDkP4VFwK4RSU
+  planned_publications: 10
+  public_publications: 10
+  carousel_series: 0
+  partial_carousel_frames: 0
+  incomplete_carousel_series: []
+  story_frames: 5
+  missing_public_assets: []
+  missing_copy: []
+  copy_intentionally_hidden: []
+  excluded_or_unavailable_publications: []
+  included_assets: 15
+  duplicate_publication_numbers: []
+  excluded_collections:
+  - key: visual_concepts
+    reason: Черновые варианты выбора не являются финальным клиентским комплектом.
+- slug: dava-life
+  name: Dava Life
+  bitrix_task: 90768
+  content_source: 1f5YaL3pCObS6s7TRjSCaR2m-DugT6-jIKne3FBfgoqA
+  planned_publications: 10
+  public_publications: 5
+  carousel_series: 0
+  partial_carousel_frames: 0
+  incomplete_carousel_series: []
+  story_frames: 0
+  missing_public_assets: []
+  missing_copy: []
+  copy_intentionally_hidden: []
+  excluded_or_unavailable_publications: []
+  included_assets: 5
+  duplicate_publication_numbers: []
+  excluded_collections: []
+excluded_projects:
+- slug: ateris
+  name: Атерис
+  reason: 'недоступен полный финальный комплект: 7 из 10 календарных публикаций'
+- slug: ritual-s
+  name: Ритуал-С
+  reason: 'недоступен полный финальный комплект: 10 из 20 календарных публикаций'
+- slug: fjord-petersburg
+  name: Fjord-Petersburg
+  reason: 'недоступен полный финальный комплект: 3 из 10 календарных публикаций'
+- slug: oh-beauty
+  name: Oh! Beauty
+  reason: 'недоступен полный финальный комплект: 3 из 10 календарных публикаций'
+- slug: dobroe-serdtse
+  name: БФ «Доброе сердце»
+  reason: 'недоступен полный финальный комплект: 9 из 10 календарных публикаций'
+- slug: yagodny-ray
+  name: «Ягодный Рай»
+  reason: 'недоступен полный финальный комплект: 5 из 10 календарных публикаций'
+- slug: olga-andreeva
+  name: Ольга Андреева
+  reason: 'недоступен полный финальный комплект: 6 из 10 календарных публикаций'
+- slug: dava-life
+  name: Dava Life
+  reason: 'недоступен полный финальный комплект: 5 из 10 календарных публикаций'

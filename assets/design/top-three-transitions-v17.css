@@ -5,6 +5,12 @@ body.lm-top-three-study {
   background: #fff;
 }
 
+/* Removed preheadings: section titles now start directly on the layout grid. */
+.lm-top-three-study .lm-top-platform-flow__copy > div:first-child > h2,
+.lm-top-three-study .lm-top-section-head > div:first-child > h2 {
+  margin-top: 0;
+}
+
 /* The portfolio field dissolves into the white page instead of ending as a stripe. */
 .lm-top-three-study .lm-top-works {
   width: 100%;

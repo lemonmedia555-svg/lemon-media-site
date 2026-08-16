@@ -21,9 +21,8 @@ publications:
     category: useful
     public_title: "Когда вопрос о самочувствии стоит обсудить со специалистом"
     source_topic: "Перебои в сердце: когда это повод к врачу"
-    asset: null
-    public_asset: false
-    withholding_reason: symptom-and-triage-context
+    asset: "assets/cases/lisitsinsky/posts/01.png"
+    public_asset: true
     goals: [surface-familiar-question, lead-to-consultation]
 
   - number: 2
@@ -32,7 +31,7 @@ publications:
     category: myth-analysis
     public_title: "Почему интернет не заменяет специалиста"
     source_topic: "Чем опасно лечить сердце по интернету"
-    asset: "assets/cases/lisitsinsky/posts/02.jpg"
+    asset: "assets/cases/lisitsinsky/posts/02.png"
     public_asset: true
     visual_only: true
     goals: [set-self-diagnosis-boundary, build-trust]
@@ -43,7 +42,7 @@ publications:
     category: doctor-approach
     public_title: "Как специалист работает с исследованиями"
     source_topic: "Почему врач сам делает ЭКГ, УЗИ и читает мониторы"
-    asset: "assets/cases/lisitsinsky/posts/03.jpg"
+    asset: "assets/cases/lisitsinsky/posts/03.png"
     public_asset: true
     visual_only: true
     goals: [show-process, build-expert-trust]
@@ -55,16 +54,14 @@ publications:
     public_title: "Разные форматы обследований — один понятный вопрос"
     source_topic: "ЭКГ, Холтер, ЭхоКГ: чем отличаются"
     slide_count: 7
-    public_asset: partial
-    public_frames:
-      - number: 1
-        role: question
-        asset: "assets/cases/lisitsinsky/carousel-04/01.jpg"
-      - number: 7
-        role: invitation-to-dialogue
-        asset: "assets/cases/lisitsinsky/carousel-04/07.jpg"
-    withheld_frames: [2, 3, 4, 5, 6]
-    withholding_reason: medical-explanation-context
+    public_assets:
+      - "assets/cases/lisitsinsky/carousels/04/01.png"
+      - "assets/cases/lisitsinsky/carousels/04/02.png"
+      - "assets/cases/lisitsinsky/carousels/04/03.png"
+      - "assets/cases/lisitsinsky/carousels/04/04.png"
+      - "assets/cases/lisitsinsky/carousels/04/05.png"
+      - "assets/cases/lisitsinsky/carousels/04/06.png"
+      - "assets/cases/lisitsinsky/carousels/04/07.png"
     goals: [explain-format, encourage-dialogue]
 
   - number: 5
@@ -73,7 +70,7 @@ publications:
     category: offer
     public_title: "Онлайн-консультация как формат диалога"
     source_topic: "Онлайн-консультация: кому подходит"
-    asset: "assets/cases/lisitsinsky/posts/05.jpg"
+    asset: "assets/cases/lisitsinsky/posts/05.png"
     public_asset: true
     visual_only: true
     goals: [explain-service-format, lead-to-consultation]
@@ -84,9 +81,8 @@ publications:
     category: useful
     public_title: "Как обсуждать показатели со специалистом"
     source_topic: "Давление и пульс: норма и тревога"
-    asset: null
-    public_asset: false
-    withholding_reason: medical-norms-and-triage-context
+    asset: "assets/cases/lisitsinsky/posts/06.png"
+    public_asset: true
     goals: [educate, encourage-dialogue]
 
   - number: 7
@@ -96,9 +92,14 @@ publications:
     public_title: "Разговор о назначениях без мифов"
     source_topic: "Статины: что важно знать в 2026"
     slide_count: 7
-    asset: null
-    public_asset: false
-    withholding_reason: medicine-and-medical-claims-context
+    public_assets:
+      - "assets/cases/lisitsinsky/carousels/07/01.png"
+      - "assets/cases/lisitsinsky/carousels/07/02.png"
+      - "assets/cases/lisitsinsky/carousels/07/03.png"
+      - "assets/cases/lisitsinsky/carousels/07/04.png"
+      - "assets/cases/lisitsinsky/carousels/07/05.png"
+      - "assets/cases/lisitsinsky/carousels/07/06.png"
+      - "assets/cases/lisitsinsky/carousels/07/07.png"
     goals: [address-objections, build-trust]
 
   - number: 8
@@ -107,9 +108,8 @@ publications:
     category: doctor-approach
     public_title: "Как проходит консультация"
     source_topic: "Как проходит приём: уйти с ясностью"
-    asset: null
-    public_asset: false
-    withholding_reason: recognizable-patient-in-visual
+    asset: "assets/cases/lisitsinsky/posts/08.png"
+    public_asset: true
     goals: [show-process, reduce-uncertainty]
 
   - number: 9
@@ -118,9 +118,8 @@ publications:
     category: useful
     public_title: "Почему дистанционно нельзя делать диагностические выводы"
     source_topic: "Паническая атака или сердце: как не перепутать"
-    asset: null
-    public_asset: false
-    withholding_reason: differential-diagnosis-context
+    asset: "assets/cases/lisitsinsky/posts/09.png"
+    public_asset: true
     goals: [set-diagnosis-boundary, lead-to-consultation]
 
   - number: 10
@@ -129,9 +128,8 @@ publications:
     category: offer
     public_title: "Очная консультация как следующий шаг"
     source_topic: "Разобраться с сердцем за один визит"
-    asset: null
-    public_asset: false
-    withholding_reason: medical-overpromise-and-historical-price
+    asset: "assets/cases/lisitsinsky/posts/10.png"
+    public_asset: true
     goals: [lead-to-consultation]
 
 gift_carousel:
@@ -139,11 +137,17 @@ gift_carousel:
   title: "Сигналы, при которых сердцу нужен врач"
   slide_count: 7
   purpose: "Дать дополнительный сохраняемый формат и привести к обращению."
-  public_asset: false
-  withholding_reason: symptom-triage-and-medical-advice-context
+  public_assets:
+    - "assets/cases/lisitsinsky/gift/01.png"
+    - "assets/cases/lisitsinsky/gift/02.png"
+    - "assets/cases/lisitsinsky/gift/03.png"
+    - "assets/cases/lisitsinsky/gift/04.png"
+    - "assets/cases/lisitsinsky/gift/05.png"
+    - "assets/cases/lisitsinsky/gift/06.png"
+    - "assets/cases/lisitsinsky/gift/07.png"
 
 asset_display_notes:
   aspect_ratio: "4:5"
   dimensions: "1080 × 1350"
   crop: false
-  public_asset_count: 5
+  public_asset_count: 29
