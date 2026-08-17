@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Библиотека композиций v2 для будущего многостраничного сайта lemonmedia.">
+  <title>Библиотека композиций v2 — lemonmedia</title>
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/design/tokens.css">
+  <link rel="stylesheet" href="assets/design/web-composition-backgrounds-study.css?v=2">
+  <link rel="stylesheet" href="assets/design/web-composition-library-v2-study.css?v=1">
+</head>
+<body id="top" class="cl-page">
+  <div class="cb-status">Визуальное исследование · не утверждено</div>
+
+  <header class="cb-header">
+    <div class="cb-shell cb-header__row">
+      <a class="cb-logo" href="top-three-air-study.html" aria-label="lemonmedia — главная">
+        <img src="assets/design/logo-dark.svg" alt="lemonmedia">
+      </a>
+      <button class="cb-menu-button" type="button" aria-expanded="false" aria-controls="cl-mobile-menu" data-menu-open>Меню</button>
+      <nav class="cb-main-nav" aria-label="Основная навигация">
+        <a href="examples-study.html">Работы</a>
+        <a href="process-design.html">Как работаем</a>
+        <a href="pricing-design.html">Цены</a>
+        <a href="reviews-design.html">Отзывы</a>
+        <a href="about-design.html">О компании</a>
+        <a href="articles-design.html">Статьи</a>
+        <a class="cb-nav-cta" href="start-design.html">Начать работу</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="cb-mobile-menu" id="cl-mobile-menu" hidden data-mobile-menu>
+    <div class="cb-mobile-menu__top">
+      <a class="cb-logo" href="top-three-air-study.html" aria-label="lemonmedia — главная"><img src="assets/design/logo-dark.svg" alt="lemonmedia"></a>
+      <button type="button" data-menu-close>Закрыть</button>
+    </div>
+    <nav aria-label="Мобильная навигация">
+      <a href="examples-study.html">Работы</a>
+      <a href="process-design.html">Как работаем</a>
+      <a href="pricing-design.html">Цены</a>
+      <a href="reviews-design.html">Отзывы</a>
+      <a href="about-design.html">О компании</a>
+      <a href="articles-design.html">Статьи</a>
+      <a class="cb-nav-cta" href="start-design.html">Начать работу</a>
+    </nav>
+  </div>
+
+  <main>
+    <section class="cl-intro" aria-labelledby="cl-title">
+      <div class="cb-shell cl-intro__grid">
+        <div>
+          <h1 id="cl-title">Не сайт.<br><em>Система, из которой<br>он собирается.</em></h1>
+        </div>
+        <div class="cl-intro__aside">
+          <p>16 композиций закрывают разные задачи: знакомят, показывают продукт, доказывают результат, помогают выбрать и приводят к действию.</p>
+          <div class="cl-intro__count"><strong>16</strong><span>типов композиций<br>в одной сетке</span></div>
+        </div>
+      </div>
+      <div class="cb-shell cl-family-nav" aria-label="Группы композиций">
+        <a href="#heroes"><span>01–03</span><strong>Первые экраны</strong></a>
+        <a href="#works"><span>04–07</span><strong>Работы и доказательства</strong></a>
+        <a href="#product"><span>08–10</span><strong>Продукт и выбор</strong></a>
+        <a href="#trust"><span>11–14</span><strong>Объяснение и доверие</strong></a>
+        <a href="#actions"><span>15–16</span><strong>Действие</strong></a>
+      </div>
+    </section>
+
+    <section class="cl-rules" aria-labelledby="cl-rules-title">
+      <div class="cb-shell cl-section-head">
+        <h2 id="cl-rules-title">Что держит всё вместе</h2>
+        <p>Композиции разные, но их соединяют пять постоянных правил.</p>
+      </div>
+      <div class="cb-shell cl-rule-grid">
+        <article><span>01</span><strong>Одна сетка</strong><p>Контейнер 1328 px и общие линии выравнивания.</p></article>
+        <article><span>02</span><strong>Одна типографика</strong><p>Manrope и одинаковые роли текста на всех страницах.</p></article>
+        <article><span>03</span><strong>Три режима фона</strong><p>Общий холст, вложенная сцена или полная глава.</p></article>
+        <article><span>04</span><strong>Реальный продукт</strong><p>Работы показываем целиком и без случайных картинок.</p></article>
+        <article><span>05</span><strong>Разный ритм</strong><p>Одинаковые композиции не ставим подряд.</p></article>
+      </div>
+    </section>
+
+    <section class="cl-family" id="heroes" aria-labelledby="cl-heroes-title">
+      <div class="cb-shell cl-family-head">
+        <div><span>01–03</span><h2 id="cl-heroes-title">Первые экраны</h2></div>
+        <p>Первый экран выбирается по задаче страницы, а не повторяется механически.</p>
+      </div>
+
+      <article class="cl-scene cl-scene--split">
+        <div class="cl-scene-label"><span>01</span><strong>Раскол + живая лента</strong><small>Главная и продуктовая страница</small></div>
+        <div class="cl-split-copy">
+          <p class="cl-rating"><b>★★★★★</b> 5,0 · более 200 отзывов</p>
+          <h3>Контент для<br>социальных сетей<br><em>от <mark>4&nbsp;990&nbsp;₽</mark></em></h3>
+          <p>Придумываем темы, пишем, оформляем и публикуем — вы только согласовываете.</p>
+          <div class="cl-actions"><a class="cl-button cl-button--yellow" href="start-design.html">Собрать свой пакет</a><a href="examples-study.html">Посмотреть работы →</a></div>
+        </div>
+        <div class="cl-moving-wall" aria-label="Движущаяся лента реальных работ lemonmedia">
+          <div class="cl-moving-column cl-moving-column--up">
+            <div><img src="assets/cases/saratov-kitchens-2026-08/posts/03.webp" alt="Работа Саратов Кухни"><img src="assets/cases/refix/posts/07.png" alt="Работа REFIX"><img src="assets/cases/moscow-padel/posts/15.jpg" alt="Работа MoscowPadel"><img src="assets/cases/yagodny-ray/posts/01.jpg" alt="Работа Ягодный Рай"></div>
+            <div aria-hidden="true"><img src="assets/cases/saratov-kitchens-2026-08/posts/03.webp" alt=""><img src="assets/cases/refix/posts/07.png" alt=""><img src="assets/cases/moscow-padel/posts/15.jpg" alt=""><img src="assets/cases/yagodny-ray/posts/01.jpg" alt=""></div>
+          </div>
+          <div class="cl-moving-column cl-moving-column--down">
+            <div><img src="assets/cases/achinsk-begovoy/posts/01.jpg" alt="Работа Ачинского бегового дня"><img src="assets/cases/ateris/posts/03.jpg" alt="Работа Ateris"><img src="assets/cases/sergey-glibin/posts/08.jpg" alt="Работа Сергей Глибин"><img src="assets/cases/colorplast/previous/posts/01.jpg" alt="Работа Colorplast"></div>
+            <div aria-hidden="true"><img src="assets/cases/achinsk-begovoy/posts/01.jpg" alt=""><img src="assets/cases/ateris/posts/03.jpg" alt=""><img src="assets/cases/sergey-glibin/posts/08.jpg" alt=""><img src="assets/cases/colorplast/previous/posts/01.jpg" alt=""></div>
+          </div>
+          <div class="cl-moving-column cl-moving-column--up cl-moving-column--optional">
+            <div><img src="assets/cases/ritual-s/posts/04.webp" alt="Работа Ритуал-С"><img src="assets/cases/klient-prosto/posts/03.png" alt="Работа Клиент Просто"><img src="assets/cases/chebusser/posts/07.jpg" alt="Работа Chebusser"><img src="assets/cases/dan-gun/posts/06.jpg" alt="Работа Dan Gun"></div>
+            <div aria-hidden="true"><img src="assets/cases/ritual-s/posts/04.webp" alt=""><img src="assets/cases/klient-prosto/posts/03.png" alt=""><img src="assets/cases/chebusser/posts/07.jpg" alt=""><img src="assets/cases/dan-gun/posts/06.jpg" alt=""></div>
+          </div>
+        </div>
+      </article>
+
+      <div class="cb-shell cl-scene-pair">
+        <article class="cl-scene cl-scene--center-stage">
+          <div class="cl-scene-label"><span>02</span><strong>Центральная сцена</strong><small>Одна сильная продуктовая мысль</small></div>
+          <h3>Публикуем сразу<br>во всех соцсетях<br><em>без доплаты</em></h3>
+          <p>Готовый материал превращается в систему размещений.</p>
+          <strong class="cl-result-pill">10 постов <i>→</i> до 50 размещений</strong>
+          <div class="cl-connected-objects">
+            <div class="cl-content-pack"><span>Контент-план</span><strong>10 материалов готовы</strong><div><img src="assets/cases/orange-style/posts/01.jpg" alt="Готовый пост"><img src="assets/cases/orange-style/posts/02.jpg" alt="Готовый пост"><img src="assets/cases/orange-style/posts/03.jpg" alt="Готовый пост"><img src="assets/cases/orange-style/posts/08.jpg" alt="Готовый пост"></div></div>
+            <div class="cl-route-arrow">→<small>по графику</small></div>
+            <div class="cl-networks"><span><b>VK</b>ВКонтакте<i>✓</i></span><span><b>➤</b>Telegram<i>✓</i></span><span><b>MAX</b>MAX<i>✓</i></span></div>
+          </div>
+        </article>
+
+        <article class="cl-scene cl-scene--media-hero">
+          <div class="cl-scene-label cl-scene-label--light"><span>03</span><strong>Медиа ведёт</strong><small>Категория работ или начало кейса</small></div>
+          <img src="assets/cases/moscow-padel/posts/15.jpg" alt="Работа MoscowPadel">
+          <div class="cl-media-hero__copy"><h3>Не обещаем красивый контент.<br><em>Показываем его.</em></h3><a href="examples-study.html">Открыть работы →</a></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="cl-family cl-family--soft" id="works" aria-labelledby="cl-works-title">
+      <div class="cb-shell cl-family-head">
+        <div><span>04–07</span><h2 id="cl-works-title">Работы и доказательства</h2></div>
+        <p>Кейс — не декоративная карточка. Он получает столько места, сколько нужно, чтобы увидеть продукт.</p>
+      </div>
+
+      <article class="cb-shell cl-scene cl-scene--case-grid">
+        <div class="cl-scene-label"><span>04</span><strong>Один главный + два соседних</strong><small>Быстрая витрина на главной</small></div>
+        <div class="cl-case-grid__head"><h3>Работы занимают экран.<br><em>Потому что это продукт.</em></h3><a href="examples-study.html">Все работы →</a></div>
+        <div class="cl-case-grid">
+          <a class="cl-case-card cl-case-card--lead" href="case-moscow-padel.html"><img src="assets/cases/moscow-padel/posts/15.jpg" alt="Работа MoscowPadel"><span><small>Спортивная инфраструктура</small><strong>MoscowPadel</strong></span></a>
+          <a class="cl-case-card" href="case-ritual-s.html"><img src="assets/cases/ritual-s/posts/04.webp" alt="Работа Ритуал-С"><span><small>Ритуальные услуги</small><strong>Ритуал-С</strong></span></a>
+          <a class="cl-case-card" href="case-sergey-glibin.html"><img src="assets/cases/sergey-glibin/posts/08.jpg" alt="Работа Сергей Глибин"><span><small>Личный бренд</small><strong>Сергей Глибин</strong></span></a>
+        </div>
+      </article>
+
+      <article class="cb-shell cl-scene cl-scene--explorer" data-case-explorer>
+        <div class="cl-scene-label"><span>05</span><strong>Рассказ + полный просмотр</strong><small>Главный кейс на странице работ</small></div>
+        <div class="cl-explorer-copy">
+          <span>Кухни и интерьер · август</span>
+          <h3>15 публикаций для «Саратов Кухни» — от выбора модели до записи на замер</h3>
+          <p>Связная система: полезные материалы, реальные работы, снятие сомнений и предложения.</p>
+          <dl><div><dt>15</dt><dd>публикаций</dd></div><div><dt>5</dt><dd>каруселей</dd></div><div><dt>5</dt><dd>сторис</dd></div><div><dt>5</dt><dd>площадок</dd></div></dl>
+          <a class="cl-button cl-button--dark" href="case-saratov-kitchens-design.html">Посмотреть весь кейс</a>
+          <a href="pricing-design.html">Собрать похожий пакет →</a>
+        </div>
+        <div class="cl-explorer-view">
+          <div class="cl-tabs" role="tablist" aria-label="Материалы кейса">
+            <button type="button" role="tab" aria-selected="true" data-explorer-tab="feed">Лента <span>15</span></button>
+            <button type="button" role="tab" aria-selected="false" data-explorer-tab="carousel">Карусели <span>5</span></button>
+            <button type="button" role="tab" aria-selected="false" data-explorer-tab="stories">Сторис <span>5</span></button>
+          </div>
+          <div class="cl-explorer-panel is-active" data-explorer-panel="feed">
+            <img src="assets/cases/saratov-kitchens-2026-08/posts/01.webp" alt="Публикация 1"><img src="assets/cases/saratov-kitchens-2026-08/posts/02.webp" alt="Публикация 2"><img src="assets/cases/saratov-kitchens-2026-08/posts/03.webp" alt="Публикация 3"><img src="assets/cases/saratov-kitchens-2026-08/posts/04.webp" alt="Публикация 4"><img src="assets/cases/saratov-kitchens-2026-08/posts/05.webp" alt="Публикация 5"><img src="assets/cases/saratov-kitchens-2026-08/posts/06.webp" alt="Публикация 6"><img src="assets/cases/saratov-kitchens-2026-08/posts/07.webp" alt="Публикация 7"><img src="assets/cases/saratov-kitchens-2026-08/posts/08.webp" alt="Публикация 8"><img src="assets/cases/saratov-kitchens-2026-08/posts/09.webp" alt="Публикация 9"><img src="assets/cases/saratov-kitchens-2026-08/posts/10.webp" alt="Публикация 10"><img src="assets/cases/saratov-kitchens-2026-08/posts/11.webp" alt="Публикация 11"><img src="assets/cases/saratov-kitchens-2026-08/posts/12.webp" alt="Публикация 12"><img src="assets/cases/saratov-kitchens-2026-08/posts/13.webp" alt="Публикация 13"><img src="assets/cases/saratov-kitchens-2026-08/posts/14.webp" alt="Публикация 14"><img src="assets/cases/saratov-kitchens-2026-08/posts/15.webp" alt="Публикация 15">
+          </div>
+          <div class="cl-explorer-panel" data-explorer-panel="carousel" hidden>
+            <img src="assets/cases/saratov-kitchens-2026-08/carousels/06/01.webp" alt="Карусель 1"><img src="assets/cases/saratov-kitchens-2026-08/carousels/07/01.webp" alt="Карусель 2"><img src="assets/cases/saratov-kitchens-2026-08/carousels/10/01.webp" alt="Карусель 3"><img src="assets/cases/saratov-kitchens-2026-08/carousels/11/01.webp" alt="Карусель 4"><img src="assets/cases/saratov-kitchens-2026-08/carousels/13/01.webp" alt="Карусель 5">
+          </div>
+          <div class="cl-explorer-panel cl-explorer-panel--stories" data-explorer-panel="stories" hidden>
+            <img src="assets/cases/saratov-kitchens-2026-08/stories/01.webp" alt="Сторис 1"><img src="assets/cases/saratov-kitchens-2026-08/stories/02.webp" alt="Сторис 2"><img src="assets/cases/saratov-kitchens-2026-08/stories/03.webp" alt="Сторис 3"><img src="assets/cases/saratov-kitchens-2026-08/stories/04.webp" alt="Сторис 4"><img src="assets/cases/saratov-kitchens-2026-08/stories/05.webp" alt="Сторис 5">
+          </div>
+        </div>
+      </article>
+
+      <div class="cb-shell cl-scene-pair cl-scene-pair--balanced">
+        <article class="cl-scene cl-scene--full-month">
+          <div class="cl-scene-label"><span>06</span><strong>Весь объём</strong><small>Когда количество — доказательство</small></div>
+          <div class="cl-full-month__head"><h3>Не четыре картинки.<br><em>Все 15 публикаций.</em></h3><p>Человек видит систему, а не выбранные обложки.</p></div>
+          <div class="cl-month-strip" aria-label="15 публикаций Саратов Кухни">
+            <img src="assets/cases/saratov-kitchens-2026-08/posts/01.webp" alt="Публикация 1"><img src="assets/cases/saratov-kitchens-2026-08/posts/02.webp" alt="Публикация 2"><img src="assets/cases/saratov-kitchens-2026-08/posts/03.webp" alt="Публикация 3"><img src="assets/cases/saratov-kitchens-2026-08/posts/04.webp" alt="Публикация 4"><img src="assets/cases/saratov-kitchens-2026-08/posts/05.webp" alt="Публикация 5"><img src="assets/cases/saratov-kitchens-2026-08/posts/06.webp" alt="Публикация 6"><img src="assets/cases/saratov-kitchens-2026-08/posts/07.webp" alt="Публикация 7"><img src="assets/cases/saratov-kitchens-2026-08/posts/08.webp" alt="Публикация 8"><img src="assets/cases/saratov-kitchens-2026-08/posts/09.webp" alt="Публикация 9"><img src="assets/cases/saratov-kitchens-2026-08/posts/10.webp" alt="Публикация 10"><img src="assets/cases/saratov-kitchens-2026-08/posts/11.webp" alt="Публикация 11"><img src="assets/cases/saratov-kitchens-2026-08/posts/12.webp" alt="Публикация 12"><img src="assets/cases/saratov-kitchens-2026-08/posts/13.webp" alt="Публикация 13"><img src="assets/cases/saratov-kitchens-2026-08/posts/14.webp" alt="Публикация 14"><img src="assets/cases/saratov-kitchens-2026-08/posts/15.webp" alt="Публикация 15">
+          </div>
+        </article>
+
+        <article class="cl-scene cl-scene--result-story">
+          <div class="cl-scene-label cl-scene-label--light"><span>07</span><strong>Результат как история</strong><small>Финал кейса и доверие</small></div>
+          <div class="cl-result-story__number"><strong>3,2×</strong><span>больше обращений<br>из социальных сетей</span></div>
+          <blockquote>«Мы перестали объяснять одно и то же каждому новому клиенту — контент делает это заранее».</blockquote>
+          <div class="cl-result-story__path"><span>было<br><b>случайные публикации</b></span><i>→</i><span>стало<br><b>связная система</b></span></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="cl-family" id="product" aria-labelledby="cl-product-title">
+      <div class="cb-shell cl-family-head">
+        <div><span>08–10</span><h2 id="cl-product-title">Продукт и выбор</h2></div>
+        <p>Когда человек выбирает пакет, страница превращается из рассказа в понятный инструмент.</p>
+      </div>
+
+      <article class="cb-shell cl-scene cl-scene--calculator" data-calculator>
+        <div class="cl-scene-label"><span>08</span><strong>Шаги + живой итог</strong><small>Страница цен и калькулятор</small></div>
+        <div class="cl-calculator-form">
+          <section>
+            <span>Шаг 1 · выберите объём</span>
+            <div class="cl-volume-options">
+              <label class="is-selected"><input type="radio" name="volume" value="10" data-price="4990" checked><strong>10 постов</strong><small>Спокойный старт</small><b>4&nbsp;990&nbsp;₽</b></label>
+              <label><input type="radio" name="volume" value="15" data-price="7490"><strong>15 постов</strong><small>Стабильный ритм</small><b>7&nbsp;490&nbsp;₽</b></label>
+              <label><input type="radio" name="volume" value="20" data-price="9990"><strong>20 постов</strong><small>Активное присутствие</small><b>9&nbsp;990&nbsp;₽</b></label>
+              <label><input type="radio" name="volume" value="30" data-price="14990"><strong>30 постов</strong><small>Почти каждый день</small><b>14&nbsp;990&nbsp;₽</b></label>
+            </div>
+          </section>
+          <section class="cl-calculator-step">
+            <div><span>Шаг 2 · добавьте карусели</span><h3>Сколько постов усилить каруселью?</h3><p>Каждый получит до 7 слайдов за +250 ₽.</p></div>
+            <div class="cl-stepper"><button type="button" data-carousel-minus aria-label="Уменьшить число каруселей">−</button><strong data-carousel-count>0</strong><button type="button" data-carousel-plus aria-label="Увеличить число каруселей">+</button></div>
+          </section>
+          <section>
+            <span>Шаг 3 · добавьте сторис</span>
+            <div class="cl-story-options"><button type="button" class="is-selected" data-story-count="0" data-story-price="0">Без сторис</button><button type="button" data-story-count="10" data-story-price="3490">10 · 3&nbsp;490&nbsp;₽</button><button type="button" data-story-count="20" data-story-price="5490">20 · 5&nbsp;490&nbsp;₽</button><button type="button" data-story-count="30" data-story-price="7490">30 · 7&nbsp;490&nbsp;₽</button></div>
+          </section>
+        </div>
+        <aside class="cl-calculator-summary">
+          <span>Ваш контент-план</span>
+          <strong data-total-price>4&nbsp;990&nbsp;₽</strong>
+          <dl><div><dt>Публикации</dt><dd data-summary-volume>10</dd></div><div><dt>Карусели</dt><dd data-summary-carousels>0</dd></div><div><dt>Сторис</dt><dd data-summary-stories>0</dd></div></dl>
+          <div><strong>До <span data-placement-count>50</span> размещений</strong><small>Публикация на подключённых площадках включена</small></div>
+          <a class="cl-button cl-button--yellow" href="start-design.html">Продолжить с этим пакетом</a>
+        </aside>
+      </article>
+
+      <div class="cb-shell cl-scene-pair cl-scene-pair--product">
+        <article class="cl-scene cl-scene--process">
+          <div class="cl-scene-label"><span>09</span><strong>Маршрут</strong><small>Как устроена работа</small></div>
+          <h3>Один материал проходит<br><em>весь путь до публикации</em></h3>
+          <p class="cl-process-hint">5 этапов · листайте →</p>
+          <div class="cl-process-track"><span><i>01</i><b>Тема</b><small>связана с задачей</small></span><span><i>02</i><b>Текст</b><small>согласован</small></span><span><i>03</i><b>Визуал</b><small>в стиле клиента</small></span><span><i>04</i><b>Адаптация</b><small>под площадки</small></span><span><i>05</i><b>Выпуск</b><small>по графику</small></span></div>
+        </article>
+
+        <article class="cl-scene cl-scene--comparison">
+          <div class="cl-scene-label"><span>10</span><strong>Сравнение по критериям</strong><small>Когда нужно принять решение</small></div>
+          <h3>Не «мы лучше».<br><em>Вот в чём разница.</em></h3>
+          <div class="cl-comparison-table"><div><span>Критерий</span><strong>Самостоятельно</strong><strong>lemonmedia</strong></div><div><span>Темы и план</span><i>каждый месяц заново</i><b>готовая система</b></div><div><span>Команда</span><i>искать специалистов</i><b>уже собрана</b></div><div><span>Публикация</span><i>вручную</i><b>включена</b></div><div><span>Цена</span><i>плавает</i><b>фиксирована</b></div></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="cl-family cl-family--soft" id="trust" aria-labelledby="cl-trust-title">
+      <div class="cb-shell cl-family-head">
+        <div><span>11–14</span><h2 id="cl-trust-title">Объяснение и доверие</h2></div>
+        <p>Не каждой мысли нужен цветной блок. Иногда сильнее работают текст, цифра или голос клиента.</p>
+      </div>
+
+      <div class="cb-shell cl-trust-grid">
+        <article class="cl-scene cl-scene--editorial">
+          <div class="cl-scene-label"><span>11</span><strong>Редакционное смещение</strong><small>Позиция и важная мысль</small></div>
+          <span class="cl-editorial-number">11</span>
+          <h3>Не просим поверить<br><em>на слово.</em></h3>
+          <p>Показываем реальные работы, полный объём и путь материала до публикации.</p>
+        </article>
+
+        <article class="cl-scene cl-scene--metrics">
+          <div class="cl-scene-label"><span>12</span><strong>Линия фактов</strong><small>Короткое усиление между главами</small></div>
+          <dl><div><dt>14 дней</dt><dd>на проверку первой партии</dd></div><div><dt>5 площадок</dt><dd>без доплаты за количество</dd></div><div><dt>1 менеджер</dt><dd>держит весь выпуск</dd></div></dl>
+        </article>
+
+        <article class="cl-scene cl-scene--review">
+          <div class="cl-scene-label cl-scene-label--light"><span>13</span><strong>Один голос крупно</strong><small>Отзыв без карусели мелких карточек</small></div>
+          <div class="cl-review-rating">★★★★★ <span>5,0</span></div>
+          <blockquote>«Первый месяц, когда контент вышел вовремя и мне не пришлось никого подгонять».</blockquote>
+          <footer><strong>Владелец производственной компании</strong><span>работаем 8 месяцев</span></footer>
+        </article>
+
+        <article class="cl-scene cl-scene--faq">
+          <div class="cl-scene-label"><span>14</span><strong>Вопросы как спокойный список</strong><small>Перед финальным действием</small></div>
+          <h3>Что обычно спрашивают<br>до старта</h3>
+          <div class="cl-faq-list">
+            <details open><summary>Если мне не понравится первая партия?</summary><p>У вас есть 14 дней на проверку. Если направление не подходит, возвращаем оплату по условиям гарантии.</p></details>
+            <details><summary>Кто общается со мной?</summary><p>Один менеджер ведёт весь выпуск и собирает работу редактора, дизайнера и специалиста по публикации.</p></details>
+            <details><summary>Можно добавить больше материалов?</summary><p>Да. Объём, карусели и сторис выбираются в калькуляторе до начала работы.</p></details>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="cl-family" id="actions" aria-labelledby="cl-actions-title">
+      <div class="cb-shell cl-family-head">
+        <div><span>15–16</span><h2 id="cl-actions-title">Действие</h2></div>
+        <p>В середине страницы можно развести человека по двум сценариям. В финале — оставить одно главное решение.</p>
+      </div>
+
+      <article class="cb-shell cl-scene cl-scene--branch">
+        <div class="cl-scene-label"><span>15</span><strong>Два осмысленных пути</strong><small>Развилка внутри страницы</small></div>
+        <h3>Как вам удобнее<br><em>принять решение?</em></h3>
+        <div class="cl-branch-grid"><a href="examples-study.html"><span>Хочу сначала посмотреть</span><strong>Открыть реальные работы</strong><i>→</i></a><a href="pricing-design.html"><span>Уже понимаю задачу</span><strong>Собрать свой пакет</strong><i>→</i></a></div>
+      </article>
+
+      <article class="cl-scene cl-scene--final">
+        <div class="cb-shell cl-final-grid">
+          <div class="cl-scene-label cl-scene-label--light"><span>16</span><strong>Финальная полноширинная глава</strong><small>Один главный следующий шаг</small></div>
+          <h3>Можно начать<br><em>с бесплатного разбора</em></h3>
+          <div><p>Посмотрим ваши площадки, покажем точки роста и предложим подходящий объём без обязательств.</p><a class="cl-button cl-button--yellow" href="audit-design.html">Получить бесплатный разбор</a></div>
+        </div>
+      </article>
+    </section>
+
+    <section class="cl-page-maps" aria-labelledby="cl-page-maps-title">
+      <div class="cb-shell cl-family-head">
+        <div><span>Контрольная сборка</span><h2 id="cl-page-maps-title">Из системы получаются<br>четыре разные страницы</h2></div>
+        <p>Это проверка достаточности. Если одна библиотека собирает четыре разных сценария без повторяющейся «простыни», значит её можно переносить в стандарт.</p>
+      </div>
+      <div class="cb-shell cl-map-grid">
+        <article><div><span>Главная</span><strong>Знакомство → продукт → доверие</strong></div><ol><li data-tone="split">01 · живая лента</li><li data-tone="soft">02 · продуктовая сцена</li><li>11 · позиция</li><li data-tone="media">04 · работы</li><li>12 · факты</li><li data-tone="soft">09 · процесс</li><li>13 · отзыв</li><li data-tone="dark">16 · финал</li></ol></article>
+        <article><div><span>Работы</span><strong>Обзор → погружение → выбор</strong></div><ol><li data-tone="media">03 · медиа ведёт</li><li>05 · главный кейс</li><li data-tone="soft">06 · полный объём</li><li data-tone="media">04 · другие работы</li><li>07 · результаты</li><li>15 · два пути</li><li data-tone="dark">16 · финал</li></ol></article>
+        <article><div><span>Кейс</span><strong>Задача → процесс → результат</strong></div><ol><li data-tone="media">03 · обложка</li><li>11 · задача</li><li data-tone="soft">06 · материалы</li><li>09 · процесс</li><li data-tone="dark">07 · результат</li><li>13 · отзыв</li><li data-tone="media">04 · другие кейсы</li><li data-tone="dark">16 · финал</li></ol></article>
+        <article><div><span>Цены</span><strong>Объяснение → расчёт → решение</strong></div><ol><li data-tone="soft">02 · смысл продукта</li><li>12 · условия</li><li data-tone="soft">08 · калькулятор</li><li>10 · сравнение</li><li>14 · вопросы</li><li data-tone="dark">16 · финал</li></ol></article>
+      </div>
+      <div class="cb-shell cl-map-rule"><strong>Правило сборки</strong><p>На странице не должно быть двух одинаковых композиций подряд. Акцентная сцена появляется после одной-двух спокойных глав, а не в каждом блоке.</p></div>
+    </section>
+
+    <section class="cl-conclusion">
+      <div class="cb-shell cl-conclusion__grid">
+        <h2>После утверждения<br><em>фиксируем правила,<br>а не эту страницу.</em></h2>
+        <div><p>В стандарт попадут назначения 16 композиций, правила чередования, фоны, адаптив и карты страниц. Только после этого начинаем собирать настоящий сайт.</p><a class="cl-button cl-button--yellow" href="#top">Вернуться к началу ↑</a></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="cb-footer">
+    <div class="cb-shell cb-footer__grid">
+      <div><a class="cb-logo cb-logo--light" href="top-three-air-study.html" aria-label="lemonmedia — главная"><img src="assets/design/logo-white.svg" alt="lemonmedia"></a><p>Регулярный контент под ключ для малого и среднего бизнеса.</p></div>
+      <div><strong>Выбрать</strong><a href="pricing-design.html">Цены и конструктор</a><a href="examples-study.html">Работы</a><a href="process-design.html">Как работаем</a><a href="compare-design.html">Сравнение</a></div>
+      <div><strong>Узнать больше</strong><a href="reviews-design.html">Отзывы</a><a href="about-design.html">О компании</a><a href="services-design.html">Разовые услуги</a><a href="partners-design.html">Партнёрам</a><a href="articles-design.html">Статьи</a><a href="faq-design.html">Все вопросы</a></div>
+      <div><strong>Начать</strong><a href="start-design.html">Собрать пакет</a><a href="audit-design.html">Бесплатный разбор</a><a href="guarantee-design.html">Условия гарантии</a><a href="legal-design.html#offer">Условия работы</a><a href="legal-design.html#privacy">Конфиденциальность</a></div>
+    </div>
+  </footer>
+
+  <script src="assets/design/web-composition-library-v2-study.js?v=1"></script>
+</body>
+</html>
