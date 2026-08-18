@@ -1,0 +1,1183 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Цельная главная страница MVP lemonmedia: регулярное ведение контента, реальные работы, тарифы и заявка.">
+  <title>Ведение контента для бизнеса — lemonmedia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/prototype.css">
+  <link rel="stylesheet" href="assets/design/tokens.css">
+  <link rel="stylesheet" href="assets/design/page-approved-top-v1.css">
+  <link rel="stylesheet" href="assets/design/top-three-air-study.css?v=10">
+  <link rel="stylesheet" href="assets/design/top-three-fixes-v13.css?v=3">
+  <link rel="stylesheet" href="assets/design/top-three-polish-v14.css?v=3">
+  <link rel="stylesheet" href="assets/design/top-three-typography-v16.css?v=3">
+  <link rel="stylesheet" href="assets/design/top-three-transitions-v17.css?v=14">
+  <style>
+    .lm-home-mvp {
+      margin: 0;
+      background: var(--lm-surface-page);
+      color: var(--lm-text-primary);
+      font-family: var(--lm-font-sans);
+    }
+
+    .lm-home-mvp main > section:nth-of-type(n + 4),
+    .lm-home-mvp .site-footer {
+      display: block;
+    }
+
+    .lm-home-mvp *,
+    .lm-home-mvp *::before,
+    .lm-home-mvp *::after {
+      box-sizing: border-box;
+    }
+
+    .mvp-section {
+      padding: var(--lm-space-128) 0;
+    }
+
+    .mvp-container {
+      width: min(calc(100% - (var(--lm-space-32) * 2)), var(--lm-container));
+      margin: 0 auto;
+    }
+
+    .mvp-head {
+      display: grid;
+      grid-template-columns: minmax(0, 1.35fr) minmax(280px, .65fr);
+      gap: var(--lm-space-64);
+      align-items: end;
+      margin-bottom: var(--lm-space-64);
+    }
+
+    .mvp-head h2,
+    .mvp-centered-head h2 {
+      margin: 0;
+      font-size: var(--lm-fs-h2);
+      line-height: var(--lm-lh-heading);
+      letter-spacing: var(--lm-ls-heading);
+    }
+
+    .mvp-head p,
+    .mvp-centered-head p {
+      margin: 0;
+      color: var(--lm-color-muted);
+      font-size: var(--lm-fs-lead);
+      line-height: var(--lm-lh-body);
+    }
+
+    .mvp-centered-head {
+      max-width: 900px;
+      margin: 0 auto var(--lm-space-64);
+      text-align: center;
+    }
+
+    .mvp-centered-head p {
+      max-width: 720px;
+      margin: var(--lm-space-24) auto 0;
+    }
+
+    .mvp-text-link {
+      display: inline-flex;
+      gap: var(--lm-space-8);
+      align-items: center;
+      color: var(--lm-text-primary);
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    .mvp-text-link:hover {
+      color: var(--lm-color-purple-600);
+    }
+
+    .mvp-route {
+      background: var(--lm-surface-default);
+    }
+
+    .route-track {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      overflow: hidden;
+      border: 1px solid var(--lm-color-border-2);
+      border-radius: var(--lm-radius-lg);
+      background: var(--lm-surface-default);
+      box-shadow: var(--lm-shadow-soft);
+    }
+
+    .route-step {
+      position: relative;
+      display: flex;
+      min-height: 310px;
+      padding: var(--lm-space-32);
+      flex-direction: column;
+      justify-content: space-between;
+      border-right: 1px solid var(--lm-color-border-2);
+    }
+
+    .route-step:last-child {
+      border-right: 0;
+      background: var(--lm-surface-purple);
+      color: var(--lm-text-on-purple);
+    }
+
+    .route-step span {
+      color: var(--lm-color-purple-600);
+      font-size: var(--lm-fs-small);
+      font-weight: 800;
+    }
+
+    .route-step:last-child span,
+    .route-step:last-child p {
+      color: var(--lm-text-on-purple);
+    }
+
+    .route-step h3 {
+      margin: 0;
+      font-size: var(--lm-fs-h3);
+      line-height: var(--lm-lh-heading);
+    }
+
+    .route-step p {
+      margin: var(--lm-space-12) 0 0;
+      color: var(--lm-color-muted);
+      font-size: var(--lm-fs-small);
+      line-height: var(--lm-lh-body);
+    }
+
+    .route-step:not(:last-child)::after {
+      position: absolute;
+      z-index: 2;
+      top: var(--lm-space-24);
+      right: calc(var(--lm-space-16) * -1);
+      display: grid;
+      width: var(--lm-space-32);
+      height: var(--lm-space-32);
+      place-items: center;
+      border-radius: var(--lm-radius-pill);
+      background: var(--lm-surface-lemon);
+      color: var(--lm-text-on-lemon);
+      content: "→";
+      font-weight: 800;
+    }
+
+    .route-summary {
+      display: flex;
+      gap: var(--lm-space-24);
+      align-items: center;
+      justify-content: space-between;
+      margin-top: var(--lm-space-24);
+      padding: var(--lm-space-20) var(--lm-space-24);
+      border-radius: var(--lm-radius-md);
+      background: var(--lm-surface-lemon-soft);
+      font-size: var(--lm-fs-ui);
+    }
+
+    .route-summary strong {
+      max-width: 680px;
+    }
+
+    .route-summary span {
+      color: var(--lm-color-muted);
+    }
+
+    .mvp-month {
+      background: var(--lm-surface-lemon-soft);
+    }
+
+    .month-intro {
+      display: grid;
+      grid-template-columns: minmax(0, 1.35fr) minmax(300px, .65fr);
+      gap: var(--lm-space-64);
+      align-items: end;
+      margin-bottom: var(--lm-space-48);
+    }
+
+    .month-intro h2 {
+      max-width: 900px;
+      margin: 0;
+      font-size: var(--lm-fs-h2);
+      line-height: var(--lm-lh-heading);
+      letter-spacing: var(--lm-ls-heading);
+    }
+
+    .month-intro p {
+      margin: 0 0 var(--lm-space-24);
+      color: var(--lm-color-muted);
+      font-size: var(--lm-fs-lead);
+      line-height: var(--lm-lh-body);
+    }
+
+    .month-facts {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      overflow: hidden;
+      margin-bottom: var(--lm-space-24);
+      border: 1px solid var(--lm-color-border-2);
+      border-radius: var(--lm-radius-md);
+      background: var(--lm-surface-default);
+    }
+
+    .month-facts div {
+      padding: var(--lm-space-20) var(--lm-space-24);
+      border-right: 1px solid var(--lm-color-border-2);
+    }
+
+    .month-facts div:last-child {
+      border-right: 0;
+    }
+
+    .month-facts strong,
+    .month-facts span {
+      display: block;
+    }
+
+    .month-facts strong {
+      font-size: var(--lm-fs-h3);
+    }
+
+    .month-facts span {
+      margin-top: var(--lm-space-4);
+      color: var(--lm-color-muted);
+      font-size: var(--lm-fs-small);
+    }
+
+    .month-browser {
+      overflow: hidden;
+      padding: var(--lm-space-16);
+      border-radius: var(--lm-radius-lg);
+      background: var(--lm-surface-default);
+      box-shadow: var(--lm-shadow-pop);
+    }
+
+    .month-browser__bar {
+      display: flex;
+      gap: var(--lm-space-12);
+      align-items: center;
+      justify-content: space-between;
+      padding: var(--lm-space-12) var(--lm-space-16) var(--lm-space-24);
+      font-size: var(--lm-fs-small);
+      font-weight: 800;
+    }
+
+    .month-browser__bar span:last-child {
+      color: var(--lm-color-muted);
+      font-weight: 600;
+    }
+
+    .month-grid {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: var(--lm-space-12);
+    }
+
+    .month-grid img {
+      display: block;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 4 / 5;
+      border-radius: var(--lm-radius-md);
+      object-fit: contain;
+      background: var(--lm-color-surface);
+    }
+
+    .month-actions {
+      display: flex;
+      gap: var(--lm-space-24);
+      align-items: center;
+      justify-content: center;
+      margin-top: var(--lm-space-40);
+    }
+
+    .mvp-works {
+      background: var(--lm-surface-default);
+    }
+
+    .works-stage {
+      display: grid;
+      grid-template-columns: repeat(12, minmax(0, 1fr));
+      gap: var(--lm-space-24);
+    }
+
+    .work-card {
+      overflow: hidden;
+      border-radius: var(--lm-radius-lg);
+      background: var(--lm-surface-inverse);
+      color: var(--lm-text-inverse);
+      box-shadow: var(--lm-shadow-soft);
+    }
+
+    .work-card:nth-child(1) { grid-column: span 7; }
+    .work-card:nth-child(2) { grid-column: span 5; margin-top: var(--lm-space-80); }
+    .work-card:nth-child(3) { grid-column: 4 / span 6; }
+
+    .work-card__media {
+      display: grid;
+      place-items: center;
+      min-height: 0;
+      background: var(--lm-color-neutral-900);
+    }
+
+    .work-card img {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-height: 760px;
+      aspect-ratio: 4 / 5;
+      object-fit: contain;
+    }
+
+    .work-card__copy {
+      display: flex;
+      gap: var(--lm-space-24);
+      align-items: end;
+      justify-content: space-between;
+      padding: var(--lm-space-24) var(--lm-space-32) var(--lm-space-32);
+    }
+
+    .work-card__copy span {
+      display: block;
+      margin-bottom: var(--lm-space-8);
+      color: var(--lm-color-lemon-500);
+      font-size: var(--lm-fs-small);
+      font-weight: 800;
+    }
+
+    .work-card__copy h3 {
+      margin: 0;
+      color: var(--lm-text-inverse);
+      font-size: var(--lm-fs-h3);
+    }
+
+    .work-card__copy a {
+      color: var(--lm-text-inverse);
+      font-weight: 800;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .works-more {
+      display: flex;
+      justify-content: center;
+      margin-top: var(--lm-space-48);
+    }
+
+    .mvp-pricing {
+      background: var(--lm-surface-inverse);
+      color: var(--lm-text-inverse);
+    }
+
+    .mvp-pricing .mvp-centered-head p {
+      color: var(--lm-color-neutral-100);
+    }
+
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: var(--lm-space-24);
+      align-items: stretch;
+    }
+
+    .plan-card {
+      display: flex;
+      min-height: 540px;
+      padding: var(--lm-space-40);
+      flex-direction: column;
+      border-radius: var(--lm-radius-lg);
+      background: var(--lm-surface-default);
+      color: var(--lm-text-primary);
+    }
+
+    .plan-card--featured {
+      background: var(--lm-surface-purple);
+      color: var(--lm-text-on-purple);
+      box-shadow: var(--lm-glow-purple);
+    }
+
+    .plan-card__tag {
+      min-height: 24px;
+      color: var(--lm-color-purple-600);
+      font-size: var(--lm-fs-small);
+      font-weight: 800;
+    }
+
+    .plan-card--featured .plan-card__tag {
+      color: var(--lm-color-lemon-500);
+    }
+
+    .plan-card h3 {
+      margin: var(--lm-space-16) 0 var(--lm-space-8);
+      color: inherit;
+      font-size: var(--lm-fs-h3);
+    }
+
+    .plan-card__rhythm {
+      margin: 0;
+      color: var(--lm-color-muted);
+      font-size: var(--lm-fs-small);
+    }
+
+    .plan-card--featured .plan-card__rhythm,
+    .plan-card.plan-card--featured li {
+      color: var(--lm-text-on-purple);
+    }
+
+    .plan-card__price {
+      margin: var(--lm-space-32) 0;
+      font-size: clamp(42px, 4vw, 64px);
+      font-weight: 800;
+      letter-spacing: var(--lm-ls-heading);
+      line-height: 1;
+    }
+
+    .plan-card__price small {
+      font-size: var(--lm-fs-small);
+      font-weight: 700;
+    }
+
+    .plan-card ul {
+      display: grid;
+      gap: var(--lm-space-12);
+      margin: 0 0 var(--lm-space-32);
+      padding: 0;
+      list-style: none;
+    }
+
+    .plan-card li {
+      color: var(--lm-color-muted);
+      font-size: var(--lm-fs-ui);
+    }
+
+    .plan-card li::before {
+      margin-right: var(--lm-space-8);
+      color: var(--lm-color-purple-600);
+      content: "✓";
+      font-weight: 800;
+    }
+
+    .plan-card--featured li::before {
+      color: var(--lm-color-lemon-500);
+    }
+
+    .plan-card__button {
+      width: 100%;
+      margin-top: auto;
+      cursor: pointer;
+    }
+
+    .pricing-note {
+      display: flex;
+      gap: var(--lm-space-24);
+      align-items: center;
+      justify-content: space-between;
+      margin-top: var(--lm-space-32);
+      padding-top: var(--lm-space-24);
+      border-top: 1px solid var(--lm-color-neutral-800);
+      color: var(--lm-color-neutral-100);
+      font-size: var(--lm-fs-small);
+    }
+
+    .pricing-note a {
+      color: var(--lm-color-lemon-500);
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    .mvp-start {
+      background: var(--lm-surface-page);
+    }
+
+    .start-flow {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: var(--lm-space-12);
+      margin-bottom: var(--lm-space-40);
+    }
+
+    .start-flow div {
+      min-height: 150px;
+      padding: var(--lm-space-24);
+      border: 1px solid var(--lm-color-border-2);
+      border-radius: var(--lm-radius-md);
+      background: var(--lm-surface-default);
+    }
+
+    .start-flow strong,
+    .start-flow span {
+      display: block;
+    }
+
+    .start-flow strong {
+      margin-bottom: var(--lm-space-12);
+      font-size: var(--lm-fs-ui);
+    }
+
+    .start-flow span {
+      color: var(--lm-color-muted);
+      font-size: var(--lm-fs-small);
+      line-height: var(--lm-lh-body);
+    }
+
+    .start-panel {
+      display: grid;
+      grid-template-columns: minmax(260px, .65fr) minmax(0, 1.35fr);
+      overflow: hidden;
+      border-radius: var(--lm-radius-lg);
+      background: var(--lm-surface-default);
+      box-shadow: var(--lm-shadow-pop);
+    }
+
+    .start-panel__summary {
+      display: flex;
+      padding: var(--lm-space-48);
+      flex-direction: column;
+      justify-content: space-between;
+      background: var(--lm-surface-lemon);
+      color: var(--lm-text-on-lemon);
+    }
+
+    .start-panel__summary h3 {
+      margin: 0;
+      font-size: var(--lm-fs-h3);
+    }
+
+    .start-panel__summary p {
+      margin: var(--lm-space-16) 0 0;
+      font-size: var(--lm-fs-ui);
+      line-height: var(--lm-lh-body);
+    }
+
+    .start-panel__summary small {
+      display: block;
+      margin-top: var(--lm-space-48);
+      font-size: var(--lm-fs-small);
+      line-height: var(--lm-lh-body);
+    }
+
+    .start-form {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: var(--lm-space-24);
+      padding: var(--lm-space-48);
+    }
+
+    .form-field,
+    .contact-methods,
+    .form-submit {
+      min-width: 0;
+    }
+
+    .form-field label,
+    .contact-methods legend {
+      display: block;
+      margin-bottom: var(--lm-space-8);
+      color: var(--lm-text-primary);
+      font-size: var(--lm-fs-small);
+      font-weight: 800;
+    }
+
+    .form-field input,
+    .form-field select {
+      width: 100%;
+      min-height: 58px;
+      padding: 0 var(--lm-space-16);
+      border: 1px solid var(--lm-color-border-2);
+      border-radius: var(--lm-radius-sm);
+      background: var(--lm-surface-default);
+      color: var(--lm-text-primary);
+      font: 600 var(--lm-fs-ui)/1 var(--lm-font-sans);
+    }
+
+    .contact-methods {
+      grid-column: 1 / -1;
+      padding: 0;
+      border: 0;
+    }
+
+    .method-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: var(--lm-space-8);
+    }
+
+    .method-grid label {
+      position: relative;
+      margin: 0;
+    }
+
+    .method-grid input {
+      position: absolute;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .method-grid span {
+      display: grid;
+      min-height: 50px;
+      padding: 0 var(--lm-space-12);
+      place-items: center;
+      border: 1px solid var(--lm-color-border-2);
+      border-radius: var(--lm-radius-sm);
+      cursor: pointer;
+      font-size: var(--lm-fs-small);
+      font-weight: 800;
+      text-align: center;
+    }
+
+    .method-grid input:checked + span {
+      border-color: var(--lm-color-purple-600);
+      background: var(--lm-surface-purple-soft);
+      color: var(--lm-color-purple-600);
+    }
+
+    .form-submit {
+      display: flex;
+      grid-column: 1 / -1;
+      gap: var(--lm-space-16);
+      align-items: center;
+      justify-content: space-between;
+      padding-top: var(--lm-space-8);
+    }
+
+    .form-submit p {
+      max-width: 460px;
+      margin: 0;
+      color: var(--lm-color-muted);
+      font-size: var(--lm-fs-small);
+      line-height: var(--lm-lh-body);
+    }
+
+    .form-submit button {
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    .form-status {
+      grid-column: 1 / -1;
+      margin: 0;
+      color: var(--lm-color-success);
+      font-size: var(--lm-fs-small);
+      font-weight: 800;
+    }
+
+    .mvp-trust {
+      background: var(--lm-surface-default);
+    }
+
+    .trust-layout {
+      display: grid;
+      grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr);
+      gap: var(--lm-space-24);
+      align-items: stretch;
+    }
+
+    .trust-guarantee {
+      display: flex;
+      min-height: 430px;
+      padding: var(--lm-space-48);
+      flex-direction: column;
+      justify-content: space-between;
+      border-radius: var(--lm-radius-lg);
+      background: var(--lm-surface-lemon);
+      color: var(--lm-text-on-lemon);
+    }
+
+    .trust-guarantee strong {
+      display: block;
+      font-size: clamp(80px, 10vw, 150px);
+      line-height: .82;
+      letter-spacing: var(--lm-ls-heading);
+    }
+
+    .trust-guarantee h2 {
+      max-width: 450px;
+      margin: var(--lm-space-24) 0 0;
+      font-size: var(--lm-fs-h3);
+    }
+
+    .trust-guarantee p {
+      margin: var(--lm-space-32) 0 0;
+      font-size: var(--lm-fs-small);
+      line-height: var(--lm-lh-body);
+    }
+
+    .trust-proof {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: var(--lm-space-24);
+    }
+
+    .trust-stat,
+    .trust-about {
+      display: flex;
+      min-height: 200px;
+      padding: var(--lm-space-32);
+      flex-direction: column;
+      justify-content: space-between;
+      border: 1px solid var(--lm-color-border-2);
+      border-radius: var(--lm-radius-lg);
+      background: var(--lm-surface-default);
+    }
+
+    .trust-stat strong {
+      font-size: clamp(44px, 5vw, 76px);
+      line-height: 1;
+    }
+
+    .trust-stat span,
+    .trust-about p {
+      color: var(--lm-color-muted);
+      font-size: var(--lm-fs-small);
+      line-height: var(--lm-lh-body);
+    }
+
+    .trust-about {
+      grid-column: 1 / -1;
+      min-height: 180px;
+      flex-direction: row;
+      gap: var(--lm-space-32);
+      align-items: end;
+    }
+
+    .trust-about h3 {
+      max-width: 580px;
+      margin: 0;
+      font-size: var(--lm-fs-h3);
+    }
+
+    .trust-about p {
+      max-width: 430px;
+      margin: 0;
+    }
+
+    .mvp-faq {
+      background: var(--lm-color-surface);
+    }
+
+    .faq-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: var(--lm-space-16);
+    }
+
+    .faq-list details {
+      border: 1px solid var(--lm-color-border-2);
+      border-radius: var(--lm-radius-md);
+      background: var(--lm-surface-default);
+    }
+
+    .faq-list summary {
+      display: flex;
+      min-height: 92px;
+      padding: var(--lm-space-24);
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+      font-size: var(--lm-fs-ui);
+      font-weight: 800;
+      list-style: none;
+    }
+
+    .faq-list summary::after {
+      color: var(--lm-color-purple-600);
+      content: "+";
+      font-size: var(--lm-fs-h3);
+    }
+
+    .faq-list details[open] summary::after {
+      content: "−";
+    }
+
+    .faq-list details p {
+      margin: 0;
+      padding: 0 var(--lm-space-24) var(--lm-space-24);
+      color: var(--lm-color-muted);
+      font-size: var(--lm-fs-small);
+      line-height: var(--lm-lh-body);
+    }
+
+    .mvp-final {
+      padding: var(--lm-space-96) 0;
+      background: var(--lm-surface-purple);
+      color: var(--lm-text-on-purple);
+    }
+
+    .final-inner {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(280px, .8fr);
+      gap: var(--lm-space-64);
+      align-items: center;
+    }
+
+    .final-inner h2 {
+      max-width: 850px;
+      margin: 0;
+      color: inherit;
+      font-size: var(--lm-fs-h2);
+      line-height: var(--lm-lh-heading);
+      letter-spacing: var(--lm-ls-heading);
+    }
+
+    .final-actions {
+      display: flex;
+      gap: var(--lm-space-16);
+      align-items: center;
+      justify-content: flex-end;
+    }
+
+    .final-actions a:last-child {
+      color: var(--lm-text-on-purple);
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    @media (min-width: 901px) and (max-height: 820px) {
+      .lm-home-mvp .lm-top-hero {
+        height: 100vh;
+        min-height: 720px;
+      }
+
+      .lm-home-mvp .lm-top-hero__left {
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding-block: var(--lm-space-16);
+      }
+    }
+
+    @media (max-width: 1100px) {
+      .mvp-section { padding: var(--lm-space-96) 0; }
+      .route-track { grid-template-columns: repeat(3, 1fr); }
+      .route-step:nth-child(3) { border-right: 0; }
+      .route-step:nth-child(n + 4) { border-top: 1px solid var(--lm-color-border-2); }
+      .route-step:nth-child(4) { grid-column: span 2; }
+      .pricing-grid { grid-template-columns: 1fr; }
+      .plan-card { min-height: 0; }
+      .start-flow { grid-template-columns: repeat(3, 1fr); }
+      .start-panel { grid-template-columns: 1fr; }
+      .start-panel__summary small { margin-top: var(--lm-space-24); }
+    }
+
+    @media (max-width: 760px) {
+      .mvp-section { padding: var(--lm-space-80) 0; }
+      .mvp-container { width: min(calc(100% - (var(--lm-space-16) * 2)), var(--lm-container)); }
+      .lm-home-mvp .lm-top-rating { display: grid; grid-template-columns: auto 1fr; gap: var(--lm-space-8); align-items: start; text-align: left; }
+      .lm-home-mvp .lm-top-rating span { white-space: nowrap; }
+      .mvp-head,
+      .month-intro,
+      .trust-layout,
+      .final-inner { grid-template-columns: 1fr; gap: var(--lm-space-32); }
+      .mvp-head { margin-bottom: var(--lm-space-40); }
+      .mvp-head p { font-size: var(--lm-fs-body); }
+      .route-track { grid-template-columns: 1fr; }
+      .route-step,
+      .route-step:nth-child(4) { grid-column: auto; min-height: 190px; border-right: 0; border-top: 1px solid var(--lm-color-border-2); }
+      .route-step:first-child { border-top: 0; }
+      .route-step:not(:last-child)::after { top: auto; right: var(--lm-space-24); bottom: calc(var(--lm-space-16) * -1); transform: rotate(90deg); }
+      .route-summary { align-items: flex-start; flex-direction: column; }
+      .month-facts { grid-template-columns: 1fr; }
+      .month-facts div { border-right: 0; border-bottom: 1px solid var(--lm-color-border-2); }
+      .month-facts div:last-child { border-bottom: 0; }
+      .month-browser { padding: var(--lm-space-8); }
+      .month-browser__bar { align-items: flex-start; flex-direction: column; }
+      .month-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--lm-space-8); }
+      .month-actions { align-items: stretch; flex-direction: column; }
+      .works-stage { grid-template-columns: 1fr; }
+      .work-card:nth-child(1),
+      .work-card:nth-child(2),
+      .work-card:nth-child(3) { grid-column: auto; margin-top: 0; }
+      .work-card__copy { align-items: flex-start; flex-direction: column; padding: var(--lm-space-20); }
+      .plan-card { padding: var(--lm-space-32); }
+      .pricing-note { align-items: flex-start; flex-direction: column; }
+      .start-flow { grid-template-columns: 1fr; }
+      .start-flow div { min-height: 0; }
+      .start-panel__summary,
+      .start-form { padding: var(--lm-space-24); }
+      .start-form { grid-template-columns: 1fr; }
+      .contact-methods,
+      .form-submit,
+      .form-status { grid-column: auto; }
+      .method-grid { grid-template-columns: repeat(2, 1fr); }
+      .form-submit { align-items: stretch; flex-direction: column; }
+      .form-submit button { width: 100%; }
+      .trust-proof,
+      .faq-list { grid-template-columns: 1fr; }
+      .trust-about { grid-column: auto; align-items: flex-start; flex-direction: column; }
+      .final-actions { align-items: stretch; flex-direction: column; justify-content: flex-start; }
+      .final-actions .btn { width: 100%; text-align: center; }
+    }
+  </style>
+</head>
+<body class="lm-approved-top lm-top-three-study lm-home-mvp">
+  <header class="site-header">
+    <div class="container header-row">
+      <a class="brand lm-top-brand" href="homepage-mvp-architecture-study.html" aria-label="lemonmedia — главная"><img src="assets/design/logo-dark.svg" alt="lemonmedia"></a>
+      <button class="menu-button" type="button" aria-expanded="false" data-menu-toggle>Меню</button>
+      <nav class="main-nav" aria-label="Основная навигация">
+        <a href="examples-study.html">Примеры</a>
+        <a href="#route">Как работаем</a>
+        <a href="#prices">Цены</a>
+        <a href="#about">О компании</a>
+        <a class="btn btn-small btn-secondary lm-header-login" href="#start">Вход</a>
+        <a class="btn btn-small btn-accent lm-header-primary" href="#start">Начать работу</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="lm-top-hero" aria-labelledby="lm-top-hero-title">
+      <div class="lm-top-hero__left">
+        <div class="lm-top-shell lm-top-hero__copy">
+          <p class="lm-top-rating"><span>★★★★★</span> 5,0 · более 200 отзывов на Яндекс Картах</p>
+          <h1 id="lm-top-hero-title"><span>Контент для</span><span>социальных сетей</span><em><span class="lm-top-offer-price">от <mark>4&nbsp;990&nbsp;₽</mark></span></em></h1>
+          <p class="lm-top-lead">Чтобы соцсети бизнеса не выглядели заброшенными, а вы не тратили вечера на контент. Придумываем темы, пишем, оформляем и публикуем&nbsp;— вы только согласовываете.</p>
+          <div class="lm-top-actions">
+            <a class="lm-top-button lm-top-button--primary" href="#prices">Выбрать тариф</a>
+            <a class="lm-top-link" href="#works">Посмотреть примеры <span>→</span></a>
+          </div>
+          <div class="lm-top-hero-facts" aria-label="Ключевые факты о lemonmedia">
+            <div><strong>14 дней</strong><span>гарантия на возврат</span></div>
+            <div><strong>10 000+</strong><span>проектов сделано</span></div>
+            <div><strong>с 2020</strong><span>работаем с бизнесом</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="lm-top-hero__right">
+        <div class="lm-top-feedwall" aria-label="Лента реальных работ lemonmedia">
+          <div class="lm-top-feedwall__column lm-top-feedwall__column--up"><div class="lm-top-feedwall__track"><div class="lm-top-feedwall__set">
+            <button class="lm-top-feedwall__item" type="button" data-preview-image="assets/cases/saratov-kitchens-2026-08/posts/03.webp"><img src="assets/cases/saratov-kitchens-2026-08/posts/03.webp" alt="Работа для Саратов Кухни"></button>
+            <button class="lm-top-feedwall__item" type="button" data-preview-image="assets/cases/refix/posts/07.png"><img src="assets/cases/refix/posts/07.png" alt="Работа для REFIX"></button>
+            <button class="lm-top-feedwall__item" type="button" data-preview-image="assets/cases/moscow-padel/posts/15.jpg"><img src="assets/cases/moscow-padel/posts/15.jpg" alt="Работа для Moscow Padel"></button>
+            <button class="lm-top-feedwall__item lm-top-feedwall__story" type="button" data-preview-image="assets/cases/dava-holding/stories/01.jpg"><img src="assets/cases/dava-holding/stories/01.jpg" alt="Сторис для DAVA Holding"></button>
+            <button class="lm-top-feedwall__item" type="button" data-preview-image="assets/cases/alliance-climate/posts/03.webp"><img src="assets/cases/alliance-climate/posts/03.webp" alt="Работа для Альянс Климат"></button>
+          </div></div></div>
+          <div class="lm-top-feedwall__column lm-top-feedwall__column--down"><div class="lm-top-feedwall__track"><div class="lm-top-feedwall__set">
+            <button class="lm-top-feedwall__item lm-top-feedwall__story" type="button" data-preview-image="assets/cases/borodulina-tape/stories/03.webp"><img src="assets/cases/borodulina-tape/stories/03.webp" alt="Сторис для BORODULINA TAPE"></button>
+            <button class="lm-top-feedwall__item" type="button" data-preview-image="assets/cases/achinsk-begovoy/posts/01.jpg"><img src="assets/cases/achinsk-begovoy/posts/01.jpg" alt="Работа для бегового клуба"></button>
+            <button class="lm-top-feedwall__item" type="button" data-preview-image="assets/cases/kristall-water/posts/06.jpg"><img src="assets/cases/kristall-water/posts/06.jpg" alt="Работа для Кристалл"></button>
+            <button class="lm-top-feedwall__item" type="button" data-preview-image="assets/cases/inari/posts/01.jpg"><img src="assets/cases/inari/posts/01.jpg" alt="Работа для INARI"></button>
+            <button class="lm-top-feedwall__item" type="button" data-preview-image="assets/cases/oh-beauty/posts/02.jpg"><img src="assets/cases/oh-beauty/posts/02.jpg" alt="Работа для Oh Beauty"></button>
+          </div></div></div>
+          <div class="lm-top-feedwall__column lm-top-feedwall__column--up lm-top-feedwall__column--slow"><div class="lm-top-feedwall__track"><div class="lm-top-feedwall__set">
+            <button class="lm-top-feedwall__item" type="button" data-preview-image="assets/cases/dan-gun/posts/04.jpg"><img src="assets/cases/dan-gun/posts/04.jpg" alt="Работа для DAN GUN"></button>
+            <button class="lm-top-feedwall__item" type="button" data-preview-image="assets/cases/olga-andreeva/posts/07.jpg"><img src="assets/cases/olga-andreeva/posts/07.jpg" alt="Работа для Ольги Андреевой"></button>
+            <button class="lm-top-feedwall__item" type="button" data-preview-image="assets/cases/yagodny-ray/posts/01.jpg"><img src="assets/cases/yagodny-ray/posts/01.jpg" alt="Работа для Ягодного Рая"></button>
+            <button class="lm-top-feedwall__item" type="button" data-preview-image="assets/cases/sidcobra/posts/14.jpg"><img src="assets/cases/sidcobra/posts/14.jpg" alt="Работа для Sidcobra"></button>
+            <button class="lm-top-feedwall__item lm-top-feedwall__story" type="button" data-preview-image="assets/cases/narfkis/stories/01.jpg"><img src="assets/cases/narfkis/stories/01.jpg" alt="Сторис для NARFKIS"></button>
+          </div></div></div>
+          <div class="lm-top-feedwall__column lm-top-feedwall__column--down lm-top-feedwall__column--slow"><div class="lm-top-feedwall__track"><div class="lm-top-feedwall__set">
+            <button class="lm-top-feedwall__item" type="button" data-preview-image="assets/cases/siyanie-vyaza/posts/01.jpg"><img src="assets/cases/siyanie-vyaza/posts/01.jpg" alt="Работа для Сияние Вяза"></button>
+            <button class="lm-top-feedwall__item" type="button" data-preview-image="assets/cases/colorplast/previous/posts/01.jpg"><img src="assets/cases/colorplast/previous/posts/01.jpg" alt="Работа для Colorplast"></button>
+            <button class="lm-top-feedwall__item" type="button" data-preview-image="assets/cases/electric-monchegorsk/carousels/04/01.jpg"><img src="assets/cases/electric-monchegorsk/carousels/04/01.jpg" alt="Работа для Электрик Мончегорск"></button>
+            <button class="lm-top-feedwall__item" type="button" data-preview-image="assets/cases/fjord-petersburg/carousels/03/01.jpg"><img src="assets/cases/fjord-petersburg/carousels/03/01.jpg" alt="Работа для Фьорд Петербург"></button>
+            <button class="lm-top-feedwall__item" type="button" data-preview-image="assets/cases/fr-moto/carousels/03/01.jpg"><img src="assets/cases/fr-moto/carousels/03/01.jpg" alt="Работа для FR Moto"></button>
+          </div></div></div>
+          <a class="lm-top-feedwall__proof" href="examples-study.html"><strong>Все работы</strong> — реальные <span>→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="mvp-section mvp-route" id="route" aria-labelledby="route-title">
+      <div class="mvp-container">
+        <div class="mvp-head">
+          <h2 id="route-title">Один материал проходит весь путь до публикации</h2>
+          <p>Вы передаёте факты о бизнесе и согласовываете. Всё производство между этими точками берём на себя.</p>
+        </div>
+        <div class="route-track" aria-label="Путь одного материала">
+          <article class="route-step"><span>01</span><div><h3>Тема</h3><p>Связана с задачей бизнеса и общим планом месяца.</p></div></article>
+          <article class="route-step"><span>02</span><div><h3>Текст</h3><p>Смысл и формулировки согласованы до дизайна.</p></div></article>
+          <article class="route-step"><span>03</span><div><h3>Визуал</h3><p>Собран в стиле вашего бренда и под задачу материала.</p></div></article>
+          <article class="route-step"><span>04</span><div><h3>Адаптация</h3><p>Готовим материал под подключённые площадки.</p></div></article>
+          <article class="route-step"><span>05</span><div><h3>Выпуск</h3><p>Менеджер держит график и размещает согласованный материал.</p></div></article>
+        </div>
+        <div class="route-summary"><strong>На выходе — не картинка, а готовая единица контента.</strong><span>Тема, текст, дизайн, адаптация и публикация уже связаны между собой.</span></div>
+      </div>
+    </section>
+
+    <section class="mvp-section mvp-month" id="month" aria-labelledby="month-title">
+      <div class="mvp-container">
+        <div class="month-intro">
+          <h2 id="month-title">Показываем месяц целиком, чтобы качество было видно без обещаний</h2>
+          <div><p>«Саратов Кухни»: связная серия от полезных материалов и реальных работ до записи на замер.</p><a class="mvp-text-link" href="case-saratov-kitchens-design.html">Открыть подробный кейс <span>→</span></a></div>
+        </div>
+        <div class="month-facts" aria-label="Состав месяца Саратов Кухни">
+          <div><strong>15</strong><span>готовых публикаций</span></div>
+          <div><strong>5</strong><span>каруселей внутри серии</span></div>
+          <div><strong>5</strong><span>экранов сторис</span></div>
+        </div>
+        <div class="month-browser">
+          <div class="month-browser__bar"><span>Саратов Кухни · август</span><span>Все 15 материалов без обрезки</span></div>
+          <div class="month-grid">
+            <img src="assets/cases/saratov-kitchens-2026-08/posts/01.webp" width="720" height="900" loading="lazy" alt="Материал 1 для Саратов Кухни">
+            <img src="assets/cases/saratov-kitchens-2026-08/posts/02.webp" width="720" height="900" loading="lazy" alt="Материал 2 для Саратов Кухни">
+            <img src="assets/cases/saratov-kitchens-2026-08/posts/03.webp" width="720" height="900" loading="lazy" alt="Материал 3 для Саратов Кухни">
+            <img src="assets/cases/saratov-kitchens-2026-08/posts/04.webp" width="720" height="900" loading="lazy" alt="Материал 4 для Саратов Кухни">
+            <img src="assets/cases/saratov-kitchens-2026-08/posts/05.webp" width="720" height="900" loading="lazy" alt="Материал 5 для Саратов Кухни">
+            <img src="assets/cases/saratov-kitchens-2026-08/posts/06.webp" width="720" height="900" loading="lazy" alt="Материал 6 для Саратов Кухни">
+            <img src="assets/cases/saratov-kitchens-2026-08/posts/07.webp" width="720" height="900" loading="lazy" alt="Материал 7 для Саратов Кухни">
+            <img src="assets/cases/saratov-kitchens-2026-08/posts/08.webp" width="720" height="900" loading="lazy" alt="Материал 8 для Саратов Кухни">
+            <img src="assets/cases/saratov-kitchens-2026-08/posts/09.webp" width="720" height="900" loading="lazy" alt="Материал 9 для Саратов Кухни">
+            <img src="assets/cases/saratov-kitchens-2026-08/posts/10.webp" width="720" height="900" loading="lazy" alt="Материал 10 для Саратов Кухни">
+            <img src="assets/cases/saratov-kitchens-2026-08/posts/11.webp" width="720" height="900" loading="lazy" alt="Материал 11 для Саратов Кухни">
+            <img src="assets/cases/saratov-kitchens-2026-08/posts/12.webp" width="720" height="900" loading="lazy" alt="Материал 12 для Саратов Кухни">
+            <img src="assets/cases/saratov-kitchens-2026-08/posts/13.webp" width="720" height="900" loading="lazy" alt="Материал 13 для Саратов Кухни">
+            <img src="assets/cases/saratov-kitchens-2026-08/posts/14.webp" width="720" height="900" loading="lazy" alt="Материал 14 для Саратов Кухни">
+            <img src="assets/cases/saratov-kitchens-2026-08/posts/15.webp" width="720" height="900" loading="lazy" alt="Материал 15 для Саратов Кухни">
+          </div>
+        </div>
+        <div class="month-actions"><a class="btn btn-primary" href="case-saratov-kitchens-design.html">Посмотреть весь кейс</a><a class="mvp-text-link" href="#prices">Выбрать похожий ритм <span>→</span></a></div>
+      </div>
+    </section>
+
+    <section class="mvp-section mvp-works" id="works" aria-labelledby="works-title">
+      <div class="mvp-container">
+        <div class="mvp-head"><h2 id="works-title">Работы занимают экран, потому что это и есть продукт</h2><p>Не прячем качество за мокапами. Показываем реальные материалы для разных ниш в правильных пропорциях.</p></div>
+        <div class="works-stage">
+          <article class="work-card"><div class="work-card__media"><img src="assets/cases/moscow-padel/posts/15.jpg" width="864" height="1080" loading="lazy" alt="Публикация Moscow Padel"></div><div class="work-card__copy"><div><span>Спортивная инфраструктура</span><h3>Moscow Padel</h3></div><a href="examples-study.html">Смотреть →</a></div></article>
+          <article class="work-card"><div class="work-card__media"><img src="assets/cases/ritual-s/carousels/17/01.webp" width="864" height="1080" loading="lazy" alt="Карусель Ritual-S"></div><div class="work-card__copy"><div><span>Ритуальные услуги</span><h3>Ritual-S</h3></div><a href="examples-study.html">Смотреть →</a></div></article>
+          <article class="work-card"><div class="work-card__media"><img src="assets/cases/sergey-glibin/posts/02.jpg" width="864" height="1080" loading="lazy" alt="Публикация Сергея Глибина"></div><div class="work-card__copy"><div><span>Личный бренд</span><h3>Сергей Глибин</h3></div><a href="examples-study.html">Смотреть →</a></div></article>
+        </div>
+        <div class="works-more"><a class="btn btn-secondary" href="examples-study.html">Открыть каталог реальных работ</a></div>
+      </div>
+    </section>
+
+    <section class="mvp-section mvp-pricing" id="prices" aria-labelledby="prices-title">
+      <div class="mvp-container">
+        <div class="mvp-centered-head"><h2 id="prices-title">Выберите ритм, который нужен бизнесу сейчас</h2><p>В каждом тарифе уже есть контент-план, тексты, дизайн, менеджер и публикация на подключённых площадках.</p></div>
+        <div class="pricing-grid">
+          <article class="plan-card"><div class="plan-card__tag">Спокойный старт</div><h3>Старт</h3><p class="plan-card__rhythm">2 публикации в неделю</p><div class="plan-card__price">4 990 ₽ <small>/ месяц</small></div><ul><li>8 постов</li><li>Без каруселей</li><li>Без сторис</li><li>Тексты, дизайн и выпуск</li></ul><button class="btn btn-secondary plan-card__button" type="button" data-choose-plan="start">Выбрать «Старт»</button></article>
+          <article class="plan-card plan-card--featured"><div class="plan-card__tag">Рекомендуемый</div><h3>Стандарт</h3><p class="plan-card__rhythm">Публикации через день</p><div class="plan-card__price">9 900 ₽ <small>/ месяц</small></div><ul><li>16 постов</li><li>4 карусели</li><li>8 серий сторис</li><li>Тексты, дизайн и выпуск</li></ul><button class="btn btn-accent plan-card__button" type="button" data-choose-plan="standard">Выбрать «Стандарт»</button></article>
+          <article class="plan-card"><div class="plan-card__tag">Максимальный ритм</div><h3>Максимум</h3><p class="plan-card__rhythm">Почти каждый день</p><div class="plan-card__price">14 900 ₽ <small>/ месяц</small></div><ul><li>24 поста</li><li>8 каруселей</li><li>16 серий сторис</li><li>4 ролика</li></ul><button class="btn btn-secondary plan-card__button" type="button" data-choose-plan="maximum">Выбрать «Максимум»</button></article>
+        </div>
+        <div class="pricing-note"><span>Разово можем оформить группу, логотип или отдельный материал — обсудите это с менеджером.</span><a href="#start">Не уверены в тарифе? Получить разбор →</a></div>
+      </div>
+    </section>
+
+    <section class="mvp-section mvp-start" id="start" aria-labelledby="start-title">
+      <div class="mvp-container">
+        <div class="mvp-head"><h2 id="start-title">Начать можно без оплаты и длинного брифа</h2><p>Сначала менеджер уточнит задачу и поможет проверить тариф. Оплата — только после общения.</p></div>
+        <div class="start-flow" aria-label="Путь после выбора тарифа"><div><strong>Выбор</strong><span>Выбираете подходящий тариф.</span></div><div><strong>Заявка</strong><span>Оставляете короткие вводные.</span></div><div><strong>Связь</strong><span>Менеджер отвечает удобным способом в течение дня.</span></div><div><strong>Оплата</strong><span>Только после разговора и подтверждения состава.</span></div><div><strong>Старт</strong><span>Передаёте факты о бизнесе, команда начинает работу.</span></div></div>
+        <div class="start-panel">
+          <div class="start-panel__summary"><div><h3>Ваш выбор</h3><p data-plan-summary>Стандарт — 9 900 ₽ / месяц</p></div><small>Заявка ничего не списывает. Менеджер свяжется в течение дня, а оплату выставит только после разговора.</small></div>
+          <form class="start-form" data-start-form>
+            <div class="form-field"><label for="plan">Тариф</label><select id="plan" name="plan" data-plan-select><option value="start">Старт — 4 990 ₽</option><option value="standard" selected>Стандарт — 9 900 ₽</option><option value="maximum">Максимум — 14 900 ₽</option></select></div>
+            <div class="form-field"><label for="name">Как к вам обращаться</label><input id="name" name="name" type="text" autocomplete="name" placeholder="Имя" required></div>
+            <div class="form-field"><label for="business">Ссылка на бизнес</label><input id="business" name="business" type="url" inputmode="url" placeholder="Сайт или соцсеть" required></div>
+            <div class="form-field"><label for="contact" data-contact-label>Ваш Telegram</label><input id="contact" name="contact" type="text" autocomplete="off" placeholder="@username или ссылка" required></div>
+            <fieldset class="contact-methods"><legend>Как удобнее связаться</legend><div class="method-grid">
+              <label><input type="radio" name="contact-method" value="telegram" checked><span>Telegram</span></label>
+              <label><input type="radio" name="contact-method" value="whatsapp"><span>WhatsApp</span></label>
+              <label><input type="radio" name="contact-method" value="max"><span>MAX</span></label>
+              <label><input type="radio" name="contact-method" value="call"><span>Звонок</span></label>
+            </div></fieldset>
+            <div class="form-submit"><p>Нажимая кнопку, вы отправляете вводные менеджеру. Оплата на этом шаге не происходит.</p><button class="btn btn-accent" type="submit">Отправить заявку</button></div>
+            <p class="form-status" data-form-status hidden>Форма показана как рабочий сценарий. Отправка будет подключена на этапе разработки.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="mvp-section mvp-trust" id="about" aria-labelledby="trust-title">
+      <div class="mvp-container">
+        <div class="trust-layout">
+          <div class="trust-guarantee"><div><strong>14</strong><h2 id="trust-title">дней на проверку первой партии</h2></div><p>Если формат не подойдёт, действует гарантия возврата по условиям работы.</p></div>
+          <div class="trust-proof">
+            <div class="trust-stat"><strong>5,0</strong><span>рейтинг lemonmedia на Яндекс Картах</span></div>
+            <div class="trust-stat"><strong>200+</strong><span>отзывов о работе команды</span></div>
+            <div class="trust-about"><h3>lemonmedia ведёт контент бизнеса с 2020 года</h3><p>Реальные работы, понятный процесс и один менеджер, который держит выпуск целиком.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="mvp-section mvp-faq" id="faq" aria-labelledby="faq-title">
+      <div class="mvp-container">
+        <div class="mvp-centered-head"><h2 id="faq-title">Коротко о главном перед стартом</h2></div>
+        <div class="faq-list">
+          <details><summary>Что нужно от меня?</summary><p>Факты о бизнесе, материалы, если они есть, и согласование тем, текстов и дизайна.</p></details>
+          <details><summary>Что такое серия сторис?</summary><p>Это мини-прогрев примерно из пяти связанных кадров, который ведёт к посту, карусели или ролику.</p></details>
+          <details><summary>Как делаются ролики?</summary><p>Монтируем из ваших фото и видео или из AI-видеонарезок. Добавляем монтаж, голос и аудио по задаче.</p></details>
+          <details><summary>Когда нужно платить?</summary><p>Только после общения с менеджером, когда состав тарифа и порядок работы вам понятны.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="mvp-final" aria-labelledby="final-title">
+      <div class="mvp-container final-inner"><h2 id="final-title">Выберите ритм — остальное соберём вместе с менеджером</h2><div class="final-actions"><a class="btn btn-accent" href="#prices">Выбрать тариф</a><a href="#start">Сначала задать вопрос →</a></div></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div><a class="brand lm-top-brand" href="homepage-mvp-architecture-study.html" aria-label="lemonmedia — главная"><img src="assets/design/logo-white.svg" alt="lemonmedia"></a><p class="footer-note">Регулярный контент под ключ для малого и среднего бизнеса.</p></div>
+      <div class="footer-column"><strong>Выбрать</strong><a href="#prices">Тарифы</a><a href="examples-study.html">Работы</a><a href="#route">Как работаем</a></div>
+      <div class="footer-column"><strong>Узнать больше</strong><a href="#about">О компании</a><a href="#faq">Вопросы</a><a href="#about">Гарантия</a></div>
+      <div class="footer-column"><strong>Начать</strong><a href="#start">Оставить заявку</a><a href="#start">Получить разбор</a><a href="legal-design.html">Условия и конфиденциальность</a></div>
+    </div>
+  </footer>
+
+  <dialog class="lm-top-preview-dialog" data-top-preview aria-label="Просмотр работы"><button type="button" data-top-preview-close aria-label="Закрыть">Закрыть ×</button><img data-top-preview-image src="assets/cases/saratov-kitchens-2026-08/posts/01.webp" alt=""></dialog>
+
+  <script>
+    document.querySelectorAll('.lm-top-feedwall__track').forEach(track => {
+      const original = track.querySelector('.lm-top-feedwall__set');
+      const copy = original.cloneNode(true);
+      copy.setAttribute('aria-hidden', 'true');
+      copy.querySelectorAll('button').forEach(button => button.tabIndex = -1);
+      track.append(copy);
+    });
+
+    const preview = document.querySelector('[data-top-preview]');
+    document.addEventListener('click', event => {
+      const previewButton = event.target.closest('[data-preview-image]');
+      if (!previewButton) return;
+      const previewImage = preview.querySelector('[data-top-preview-image]');
+      previewImage.src = previewButton.dataset.previewImage;
+      previewImage.alt = previewButton.querySelector('img')?.alt || 'Работа lemonmedia';
+      if (!preview.open) preview.showModal();
+    });
+    preview.querySelector('[data-top-preview-close]').addEventListener('click', () => preview.close());
+    preview.addEventListener('click', event => { if (event.target === preview) preview.close(); });
+
+    const plans = {
+      start: 'Старт — 4 990 ₽ / месяц',
+      standard: 'Стандарт — 9 900 ₽ / месяц',
+      maximum: 'Максимум — 14 900 ₽ / месяц'
+    };
+    const planSelect = document.querySelector('[data-plan-select]');
+    const planSummary = document.querySelector('[data-plan-summary]');
+    const setPlan = value => {
+      planSelect.value = value;
+      planSummary.textContent = plans[value];
+    };
+    document.querySelectorAll('[data-choose-plan]').forEach(button => button.addEventListener('click', () => {
+      setPlan(button.dataset.choosePlan);
+      document.querySelector('#start').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }));
+    planSelect.addEventListener('change', () => setPlan(planSelect.value));
+
+    const contactInput = document.querySelector('#contact');
+    const contactLabel = document.querySelector('[data-contact-label]');
+    const contactCopy = {
+      telegram: ['Ваш Telegram', '@username или ссылка'],
+      whatsapp: ['Номер WhatsApp', '+7 999 000-00-00'],
+      max: ['Контакт в MAX', '+7 999 000-00-00'],
+      call: ['Номер для звонка', '+7 999 000-00-00']
+    };
+    document.querySelectorAll('input[name="contact-method"]').forEach(input => input.addEventListener('change', () => {
+      const [label, placeholder] = contactCopy[input.value];
+      contactLabel.textContent = label;
+      contactInput.placeholder = placeholder;
+      contactInput.value = '';
+      contactInput.focus();
+    }));
+
+    document.querySelector('[data-start-form]').addEventListener('submit', event => {
+      event.preventDefault();
+      document.querySelector('[data-form-status]').hidden = false;
+    });
+  </script>
+  <script src="assets/js/prototype.js"></script>
+</body>
+</html>
