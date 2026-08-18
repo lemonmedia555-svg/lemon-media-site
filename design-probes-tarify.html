@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Дизайн-пробы: тарифы · lemonmedia</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/design/tokens.css">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Manrope',sans-serif;color:var(--lm-color-neutral-950);background:#fff}
+.probe-label{max-width:1328px;margin:0 auto;padding:70px 28px 22px;font-size:14px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--lm-color-purple-500)}
+.wrap{max-width:1328px;margin:0 auto;padding:0 28px 90px}
+.h2{font-size:58px;font-weight:800;letter-spacing:-.02em;line-height:1.02;margin-bottom:14px}
+.lead{font-size:20px;line-height:1.5;color:var(--lm-color-muted);max-width:640px}
+.btn{display:block;text-align:center;border-radius:100px;padding:16px 26px;font-size:17px;font-weight:800;text-decoration:none;font-family:inherit}
+.btn-y{background:var(--lm-color-lemon-500);color:var(--lm-color-neutral-950)}
+.btn-line{border:1.5px solid var(--lm-color-neutral-950);color:var(--lm-color-neutral-950)}
+ul{list-style:none}
+
+/* ===== A. Воздух и типографика ===== */
+.pa .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:56px;border-top:1px solid var(--lm-color-border)}
+.pa .card{padding:44px 36px 40px;border-left:1px solid var(--lm-color-border);display:flex;flex-direction:column;min-height:560px}
+.pa .card:first-child{border-left:none}
+.pa .name{font-size:17px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;margin-bottom:26px;color:var(--lm-color-muted)}
+.pa .price{font-size:64px;font-weight:800;letter-spacing:-.03em;margin-bottom:4px}
+.pa .price small{font-size:20px;font-weight:600;color:var(--lm-color-muted);letter-spacing:0}
+.pa .per{font-size:15px;color:var(--lm-color-muted);margin-bottom:30px}
+.pa ul{display:grid;gap:12px;margin-bottom:28px}
+.pa li{font-size:17px;line-height:1.45;padding-left:0}
+.pa li b{font-weight:800}
+.pa li.mut{color:var(--lm-color-muted-2)}
+.pa .note{font-size:15px;color:var(--lm-color-muted);line-height:1.5;margin-bottom:26px}
+.pa .btn{margin-top:auto}
+.pa .feat .name{color:var(--lm-color-purple-500)}
+.pa .feat{position:relative}
+.pa .feat::before{content:"Выбирает большинство";position:absolute;top:-15px;left:36px;background:var(--lm-color-purple-500);color:#fff;border-radius:100px;padding:6px 16px;font-size:13px;font-weight:800}
+
+/* ===== B. Продуктовый плотный ===== */
+.pb{background:var(--lm-color-cool-050);padding:70px 0 90px}
+.pb .wrap{padding-bottom:0}
+.pb .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:48px}
+.pb .card{background:#fff;border-radius:16px;padding:34px 30px;display:flex;flex-direction:column;box-shadow:0 1px 3px rgba(2,2,2,.06)}
+.pb .name{font-size:22px;font-weight:800;margin-bottom:6px}
+.pb .who{font-size:14px;color:var(--lm-color-muted);margin-bottom:22px;line-height:1.45;min-height:40px}
+.pb .price{font-size:44px;font-weight:800;letter-spacing:-.02em;padding-bottom:22px;border-bottom:1px solid var(--lm-color-border);margin-bottom:22px}
+.pb .price small{font-size:16px;font-weight:600;color:var(--lm-color-muted)}
+.pb ul{display:grid;gap:11px;margin-bottom:26px}
+.pb li{font-size:15px;line-height:1.4;padding-left:28px;position:relative}
+.pb li::before{content:"✓";position:absolute;left:0;top:-1px;width:18px;height:18px;border-radius:50%;background:var(--lm-color-lemon-100);color:var(--lm-color-neutral-950);font-size:11px;font-weight:800;display:flex;align-items:center;justify-content:center}
+.pb li.mut{color:var(--lm-color-muted-2)}
+.pb li.mut::before{content:"—";background:var(--lm-color-cool-050)}
+.pb .btn{margin-top:auto}
+.pb .feat{background:var(--lm-color-neutral-950);color:#fff;transform:translateY(-14px);box-shadow:0 24px 48px -24px rgba(2,2,2,.45)}
+.pb .feat .who{color:rgba(255,255,255,.65)}
+.pb .feat .price{border-color:rgba(255,255,255,.14)}
+.pb .feat .price small{color:rgba(255,255,255,.65)}
+.pb .feat li.mut{color:rgba(255,255,255,.4)}
+.pb .badge{display:inline-block;background:var(--lm-color-lemon-500);color:var(--lm-color-neutral-950);border-radius:100px;padding:5px 14px;font-size:13px;font-weight:800;margin-bottom:14px}
+
+/* ===== C. Смелый цвет ===== */
+.pc{background:var(--lm-color-neutral-950);padding:70px 0 90px;color:#fff}
+.pc .h2{color:#fff}
+.pc .lead{color:rgba(255,255,255,.6)}
+.pc .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:52px}
+.pc .card{border:1px solid rgba(255,255,255,.14);border-radius:24px;padding:36px 32px;display:flex;flex-direction:column}
+.pc .name{font-size:24px;font-weight:800;margin-bottom:18px}
+.pc .price{font-size:54px;font-weight:800;letter-spacing:-.02em;margin-bottom:24px}
+.pc .price small{font-size:17px;font-weight:600;opacity:.55}
+.pc ul{display:grid;gap:12px;margin-bottom:26px}
+.pc li{font-size:16px;line-height:1.45;padding-left:24px;position:relative}
+.pc li::before{content:"";position:absolute;left:0;top:8px;width:10px;height:10px;border-radius:50%;background:var(--lm-color-purple-500)}
+.pc li.mut{opacity:.4}
+.pc li.mut::before{background:rgba(255,255,255,.25)}
+.pc .btn{margin-top:auto}
+.pc .btn-ghost{border:1.5px solid rgba(255,255,255,.35);color:#fff}
+.pc .feat{background:var(--lm-color-lemon-500);border:none;color:var(--lm-color-neutral-950)}
+.pc .feat .price small{opacity:.6}
+.pc .feat li::before{background:var(--lm-color-neutral-950)}
+.pc .feat .btn{background:var(--lm-color-neutral-950);color:#fff}
+.pc .chip{display:inline-block;border-radius:100px;padding:5px 14px;font-size:13px;font-weight:800;background:var(--lm-color-purple-500);color:#fff;margin-bottom:16px;width:fit-content}
+.pc .feat .chip{background:var(--lm-color-neutral-950);color:#fff}
+</style>
+</head>
+<body>
+
+<p class="probe-label">Вариант A · Воздух и типографика — в духе Битрикс24</p>
+<section class="pa">
+  <div class="wrap">
+    <h2 class="h2">Три тарифа.<br>Без скрытых доплат</h2>
+    <p class="lead">В каждом — полный цикл: контент-план, тексты, дизайн, публикация и личный менеджер. Разница только в объёме.</p>
+    <div class="grid">
+      <div class="card">
+        <p class="name">Старт</p>
+        <p class="price">4 990 <small>₽</small></p><p class="per">в месяц</p>
+        <ul><li><b>8 постов</b> в месяц</li><li>публикации 2 раза в неделю</li><li>контент-план от маркетолога</li><li>дизайн в стиле бренда</li><li>публикация во все соцсети</li><li class="mut">без каруселей, сторис и видео</li></ul>
+        <p class="note">Минимум, чтобы соцсети жили и выглядели профессионально.</p>
+        <a class="btn btn-line" href="#">Выбрать Старт</a>
+      </div>
+      <div class="card feat">
+        <p class="name">Стандарт</p>
+        <p class="price">9 900 <small>₽</small></p><p class="per">в месяц</p>
+        <ul><li><b>16 постов</b> в месяц</li><li><b>4 карусели</b></li><li><b>8 серий сторис</b></li><li>публикации через день</li><li>всё из «Старта»</li></ul>
+        <p class="note">Контента в 3,5 раза больше — лента, карусели и сторис работают вместе.</p>
+        <a class="btn btn-y" href="#">Выбрать Стандарт</a>
+      </div>
+      <div class="card">
+        <p class="name">Максимум</p>
+        <p class="price">14 900 <small>₽</small></p><p class="per">в месяц</p>
+        <ul><li><b>24 поста</b> в месяц</li><li><b>8 каруселей</b></li><li><b>16 серий сторис</b></li><li><b>4 ролика</b> — единственный тариф с видео</li><li>публикации почти каждый день</li></ul>
+        <p class="note">Соцсети как у большого бренда — включая ролики.</p>
+        <a class="btn btn-line" href="#">Выбрать Максимум</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<p class="probe-label">Вариант B · Продуктовый плотный — в духе Postmypost, тёмная главная карта</p>
+<section class="pb">
+  <div class="wrap">
+    <h2 class="h2">Три тарифа.<br>Без скрытых доплат</h2>
+    <p class="lead">В каждом — полный цикл: контент-план, тексты, дизайн, публикация и личный менеджер. Разница только в объёме.</p>
+    <div class="grid">
+      <div class="card">
+        <p class="name">Старт</p>
+        <p class="who">Минимум, чтобы соцсети жили и выглядели профессионально</p>
+        <p class="price">4 990 ₽ <small>/мес</small></p>
+        <ul><li>8 постов в месяц</li><li>публикации 2 раза в неделю</li><li>контент-план от маркетолога</li><li>дизайн в стиле бренда</li><li>публикация во все соцсети</li><li class="mut">без каруселей, сторис и видео</li></ul>
+        <a class="btn btn-line" href="#">Выбрать</a>
+      </div>
+      <div class="card feat">
+        <span class="badge">Выбирает большинство</span>
+        <p class="name">Стандарт</p>
+        <p class="who">Полноценное присутствие: лента, карусели и сторис работают вместе</p>
+        <p class="price">9 900 ₽ <small>/мес</small></p>
+        <ul><li>16 постов в месяц</li><li>4 карусели</li><li>8 серий сторис</li><li>публикации через день</li><li>всё из «Старта»</li></ul>
+        <a class="btn btn-y" href="#">Выбрать</a>
+      </div>
+      <div class="card">
+        <p class="name">Максимум</p>
+        <p class="who">Соцсети как у большого бренда — контент почти каждый день, включая видео</p>
+        <p class="price">14 900 ₽ <small>/мес</small></p>
+        <ul><li>24 поста в месяц</li><li>8 каруселей</li><li>16 серий сторис</li><li>4 ролика — единственный тариф с видео</li><li>публикации почти каждый день</li></ul>
+        <a class="btn btn-line" href="#">Выбрать</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<p class="probe-label">Вариант C · Смелый цвет — бренд на максимум, жёлтая карта-герой</p>
+<section class="pc">
+  <div class="wrap">
+    <h2 class="h2">Три тарифа.<br>Без скрытых доплат</h2>
+    <p class="lead">В каждом — полный цикл: контент-план, тексты, дизайн, публикация и личный менеджер. Разница только в объёме.</p>
+    <div class="grid">
+      <div class="card">
+        <p class="name">Старт</p>
+        <p class="price">4 990 <small>₽/мес</small></p>
+        <ul><li>8 постов в месяц</li><li>публикации 2 раза в неделю</li><li>контент-план и дизайн</li><li>публикация во все соцсети</li><li class="mut">без каруселей, сторис и видео</li></ul>
+        <a class="btn btn-ghost" href="#">Выбрать</a>
+      </div>
+      <div class="card feat">
+        <span class="chip">Выбирает большинство</span>
+        <p class="name">Стандарт</p>
+        <p class="price">9 900 <small>₽/мес</small></p>
+        <ul><li>16 постов в месяц</li><li>4 карусели</li><li>8 серий сторис</li><li>публикации через день</li><li>всё из «Старта»</li></ul>
+        <a class="btn" href="#">Выбрать Стандарт</a>
+      </div>
+      <div class="card">
+        <span class="chip">Максимум отдачи</span>
+        <p class="name">Максимум</p>
+        <p class="price">14 900 <small>₽/мес</small></p>
+        <ul><li>24 поста в месяц</li><li>8 каруселей + 16 сторис</li><li>4 ролика — единственный с видео</li><li>публикации почти каждый день</li></ul>
+        <a class="btn btn-ghost" href="#">Выбрать</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
