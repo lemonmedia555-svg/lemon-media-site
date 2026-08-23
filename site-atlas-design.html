@@ -193,6 +193,250 @@
     .placeholder-page h2 { margin-inline: auto; }
     @media (max-width: 1100px) { .atlas-toolbar small { display: none; } .atlas-nav { display: none; } .atlas-stage { padding: 24px; } }
   </style>
+  <style id="art-direction-2026">
+    /* Рабочая арт-дирекция 2026. Основание: 5 скелетов + канон бренда. */
+    body { background: var(--lm-surface-inverse); }
+    .atlas-toolbar { min-height: 88px; padding: 16px 32px; gap: 32px; background: var(--lm-color-neutral-1000); }
+    .atlas-toolbar img { width: 166px; }
+    .atlas-toolbar strong { font-size: 18px; }
+    .atlas-toolbar small { font-size: 13px; }
+    .atlas-nav { flex-wrap: nowrap; }
+    .atlas-nav a, .atlas-zoom button { min-height: 44px; padding: 11px 16px; border-color: var(--lm-color-neutral-800); background: var(--lm-color-neutral-900); }
+    .atlas-stage { padding: 48px; background: var(--lm-grad-space); }
+    .atlas-map { width: min(1400px, calc(100vw - 96px)); margin: 0 0 48px; padding: 32px; border: 1px solid var(--lm-color-neutral-800); border-radius: var(--lm-radius-lg); color: var(--lm-text-inverse); background: var(--lm-color-neutral-900); box-shadow: var(--lm-shadow-pop); }
+    .atlas-map__head { display: flex; align-items: end; justify-content: space-between; gap: 32px; margin-bottom: 24px; }
+    .atlas-map h2 { margin: 0; font-size: 34px; }
+    .atlas-map p { max-width: 720px; margin: 0; color: var(--lm-color-muted-2); font-size: 15px; }
+    .atlas-map__flow { display: grid; grid-template-columns: 1.15fr repeat(3, 1fr); gap: 12px; }
+    .atlas-map__node { position: relative; display: grid; gap: 8px; min-height: 132px; padding: 20px; border: 1px solid var(--lm-color-neutral-800); border-radius: var(--lm-radius-md); color: var(--lm-text-inverse); background: var(--lm-surface-inverse); text-decoration: none; }
+    .atlas-map__node--entry::after { content: "3 пути →"; position: absolute; z-index: 2; right: -32px; top: 50%; display: grid; min-width: 64px; min-height: 32px; place-items: center; padding: 4px 8px; border-radius: var(--lm-radius-pill); color: var(--lm-text-on-lemon); background: var(--lm-surface-lemon); font-size: 13px; font-weight: 800; transform: translate(50%,-50%); }
+    .atlas-map__node--case { border-style: dashed; }
+    .atlas-map__node--case::before { content: "из карточки работы"; color: var(--lm-color-lemon-500); font-size: 13px; font-weight: 800; }
+    .atlas-map__node b { font-size: 18px; }
+    .atlas-map__node span { color: var(--lm-color-muted-2); font-size: 13px; line-height: 1.45; }
+    .atlas-map__node--entry { grid-row: 1 / span 2; color: var(--lm-text-on-lemon); background: var(--lm-surface-lemon); border-color: var(--lm-surface-lemon); }
+    .atlas-map__node--entry span { color: var(--lm-text-primary); }
+    .atlas-map__states { display: grid; grid-template-columns: 1.1fr 1fr 1fr 1fr; gap: 12px; margin-top: 12px; }
+    .atlas-map__state { min-height: 94px; padding: 16px 20px; border-radius: var(--lm-radius-md); color: var(--lm-text-primary); background: var(--lm-color-surface); }
+    .atlas-map__state b { display: block; margin-bottom: 6px; font-size: 15px; }
+    .atlas-map__state span { color: var(--lm-color-muted); font-size: 13px; line-height: 1.4; }
+    .atlas-map__state:nth-child(2) { background: var(--lm-surface-purple-soft); }
+    .atlas-map__state:nth-child(3) { background: var(--lm-surface-lemon-soft); }
+    .atlas-map__state:nth-child(4) { color: var(--lm-text-inverse); background: var(--lm-surface-inverse); }
+    .atlas-map__state:nth-child(4) span { color: var(--lm-color-muted-2); }
+    .atlas-board { --atlas-scale: .4; gap: 128px; }
+    .atlas-page-wrap { gap: 22px; }
+    .atlas-label { min-height: 74px; padding: 16px 24px; border-radius: var(--lm-radius-lg); background: var(--lm-surface-lemon); }
+    .atlas-label b { font-size: 24px; }
+    .atlas-page { overflow: hidden; border-radius: var(--lm-radius-lg); background: var(--lm-color-cool-050); }
+
+    .site-header { padding: 16px 24px 0; background: var(--lm-color-cool-050); }
+    .site-nav { min-height: 72px; width: 100%; padding: 10px 12px 10px 24px; border: 0; box-shadow: var(--lm-shadow-soft); }
+    .site-nav img { width: 162px; }
+    .site-nav__links { gap: 30px; margin-left: 28px; }
+    .site-nav a { font-size: 16px; font-weight: 700; }
+    .site-nav__actions .btn { min-height: 50px; color: var(--lm-text-inverse); background: var(--lm-surface-inverse); box-shadow: none; }
+
+    .page-section { scroll-margin-top: 110px; margin: 24px; padding: 128px 64px; border-radius: var(--lm-radius-lg); background: var(--lm-surface-default); }
+    .page-section--compact { padding-block: 64px; }
+    .page-section--soft { background: var(--lm-color-surface); }
+    .page-section--purple-soft { background: var(--lm-surface-purple-soft); }
+    .page-section--lemon-soft { background: var(--lm-surface-lemon-soft); }
+    .page-section--lemon { background: var(--lm-surface-lemon); }
+    .page-section--dark { background: var(--lm-surface-inverse); }
+    .page-section--space { background: var(--lm-grad-space); }
+    #atlas-main .page-section:nth-of-type(4),
+    #atlas-pricing #pricing-reels,
+    #atlas-examples .page-section:nth-of-type(2),
+    #atlas-case #case-plan { margin-inline: 0; padding-inline: 96px; border-radius: 0; }
+    .inner { width: min(var(--lm-container), 100%); }
+    h1 { max-width: 890px; margin-bottom: 28px; font-size: 60px; line-height: 1.05; letter-spacing: -.02em; }
+    h2 { max-width: 980px; margin-bottom: 24px; font-size: 58px; line-height: 1.05; letter-spacing: -.035em; }
+    h3 { font-size: 28px; line-height: 1.12; letter-spacing: -.02em; }
+    p { font-size: 18px; line-height: 1.62; }
+    .lead { max-width: 820px; margin-bottom: 36px; font-size: 20px; line-height: 1.6; }
+    .btn { min-height: 54px; padding: 14px 24px; border-radius: var(--lm-radius-sm); transition: transform 150ms ease, box-shadow 150ms ease; }
+    .btn:hover { transform: translateY(-2px); }
+    .btn--ghost { background: var(--lm-surface-default); }
+    .btn[aria-disabled="true"] { opacity: .55; cursor: not-allowed; pointer-events: none; }
+
+    .main-hero { min-height: 920px; display: grid; align-items: center; background: var(--lm-grad-hero-light); }
+    .hero-grid { grid-template-columns: 1fr 1fr; gap: 64px; }
+    .main-hero h1 { font-size: 60px; }
+    .hero-checks { gap: 14px; margin: 32px 0; }
+    .hero-checks span { display: flex; align-items: center; gap: 10px; }
+    .hero-actions { margin-bottom: 26px; }
+    .work-wall { height: 720px; gap: 12px; padding: 20px; background: var(--lm-surface-purple-soft); box-shadow: var(--lm-shadow-pop); transform: rotate(1deg); }
+    .work-wall__column { gap: 12px; }
+    .work-wall img { box-shadow: var(--lm-shadow-card); }
+
+    #atlas-main .page-section:nth-of-type(2) .inner { display: grid; grid-template-columns: .78fr 1.22fr; gap: 64px; align-items: center; }
+    #atlas-main .page-section:nth-of-type(2) h2,
+    #atlas-main .page-section:nth-of-type(2) .lead,
+    #atlas-main .page-section:nth-of-type(2) .pill-grid,
+    #atlas-main .page-section:nth-of-type(2) .trust { grid-column: 1; }
+    #atlas-main .page-section:nth-of-type(2) .pill-grid { margin: 0; }
+    #atlas-main .page-section:nth-of-type(2) .pill { min-height: 48px; justify-content: center; border: 0; box-shadow: var(--lm-shadow-soft); }
+    .platform-proof { grid-column: 2; grid-row: 1 / span 4; display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; align-items: start; }
+    .platform-proof article { overflow: hidden; padding: 12px; border-radius: var(--lm-radius-lg); background: var(--lm-surface-default); box-shadow: var(--lm-shadow-card); }
+    .platform-proof article:nth-child(2), .platform-proof article:nth-child(5) { transform: translateY(38px); }
+    .platform-proof span { display: flex; justify-content: space-between; padding: 8px 4px 12px; font-size: 15px; font-weight: 800; }
+    .platform-proof span::after { content: "•••"; color: var(--lm-color-muted); letter-spacing: .08em; }
+    .platform-proof img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: var(--lm-radius-md); }
+    .platform-proof article::after { content: "♡   ◯   ↗"; display: block; padding: 12px 4px 4px; color: var(--lm-color-muted); font-size: 17px; font-weight: 800; }
+
+    .step-grid { grid-template-columns: repeat(12, 1fr); gap: 20px; }
+    .step { grid-column: span 6; min-height: 520px; display: grid; grid-template-columns: .8fr 1.2fr; gap: 24px; align-content: start; padding: 32px; border: 0; box-shadow: none; }
+    .step:nth-child(2), .step:nth-child(3) { background: var(--lm-surface-purple-soft); }
+    .step:nth-child(1), .step:nth-child(4) { background: var(--lm-color-surface); }
+    .step b { grid-column: 1; margin-bottom: 16px; }
+    .step h3, .step p { grid-column: 1; }
+    .step img { grid-column: 2; grid-row: 1 / span 4; height: 100%; max-height: 430px; margin: 0; object-fit: cover; }
+    .missing-proof { min-height: 320px; border-color: var(--lm-color-purple-300); background: var(--lm-surface-purple-soft); }
+
+    .month-board { gap: 32px; padding: 32px; border: 0; background: var(--lm-color-neutral-900); }
+    .tabs span { cursor: pointer; }
+    .tabs span:first-child { color: var(--lm-text-inverse); background: var(--lm-color-neutral-800); }
+    .tabs span.is-active { color: var(--lm-text-on-lemon); background: var(--lm-surface-lemon); }
+    .tab-panel[hidden] { display: none; }
+    .tab-note { margin: 0; color: var(--lm-color-muted-2); font-size: 15px; }
+    .text-preview { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+    .text-preview article { min-height: 150px; padding: 20px; border-radius: var(--lm-radius-md); color: var(--lm-text-primary); background: var(--lm-surface-default); }
+    .text-preview b { display: block; margin-bottom: 12px; }
+    .text-preview small { color: var(--lm-color-muted); font-size: 15px; line-height: 1.5; }
+    .calendar-preview { display: grid; grid-template-columns: repeat(7, 1fr); gap: 8px; }
+    .calendar-preview article { min-height: 124px; padding: 14px; border: 1px solid var(--lm-color-neutral-700); border-radius: var(--lm-radius-sm); }
+    .calendar-preview b, .calendar-preview span { display: block; }
+    .calendar-preview span { margin-top: 12px; color: var(--lm-color-muted-2); font-size: 15px; line-height: 1.35; }
+    .month-grid { grid-template-columns: repeat(5, 1fr); gap: 14px; }
+    .month-grid img:nth-child(2), .month-grid img:nth-child(7), .month-grid img:nth-child(12) { transform: translateY(18px); }
+    .month-plan { gap: 12px; }
+
+    .case-grid, .catalog-grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 24px; }
+    .case-card { grid-column: span 6; border: 0; box-shadow: none; transition: transform 150ms ease, box-shadow 150ms ease; }
+    .case-card:hover { transform: translateY(-2px); box-shadow: var(--lm-shadow-pop); }
+    .case-card:first-child { grid-column: span 8; }
+    .case-card:nth-child(2) { grid-column: span 4; }
+    .case-card__media { min-height: 390px; padding: 16px; background: var(--lm-color-lavender-100); }
+    .case-card__body { padding: 32px; }
+
+    .pricing-grid { align-items: end; gap: 20px; }
+    .price-card { min-height: 590px; padding: 32px; border: 0; background: var(--lm-color-surface); box-shadow: none; }
+    .price-card--standard { min-height: 650px; padding-top: 40px; background: var(--lm-surface-purple-soft); box-shadow: var(--lm-shadow-pop); }
+    .price-card--max { min-height: 620px; background: var(--lm-surface-inverse); }
+    .price-card__price { margin: 12px 0 32px; font-size: 52px; }
+    .price-card ul { gap: 16px; font-size: 17px; line-height: 1.4; }
+    .price-card__badge { margin-bottom: 20px; }
+    .trust, .price-card__badge, .field label, .month-plan span { font-size: 15px; }
+    .tariff-preview { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 24px; }
+    .tariff-preview--max { grid-template-columns: repeat(4, 1fr); }
+    .tariff-preview figure { margin: 0; }
+    .tariff-preview img, .tariff-preview__video { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: var(--lm-radius-sm); }
+    .tariff-preview figcaption { margin-top: 8px; font-size: 15px; font-weight: 800; }
+    .tariff-preview__video { display: grid; place-items: center; padding: 8px; color: var(--lm-text-inverse); text-align: center; background: var(--lm-surface-purple); font-size: 15px; font-weight: 800; }
+    .service-proof { margin-top: 20px; padding: 16px; border: 1px dashed var(--lm-color-border-2); border-radius: var(--lm-radius-md); color: var(--lm-color-muted); font-size: 15px; }
+
+    .guarantee { grid-template-columns: 380px 1fr; gap: 64px; }
+    .guarantee__number { font-size: 128px; letter-spacing: -.06em; }
+    .compare { overflow: hidden; border-radius: var(--lm-radius-lg); background: var(--lm-surface-default); box-shadow: var(--lm-shadow-soft); }
+    .compare th, .compare td { padding: 24px; }
+    .metric-grid { gap: 20px; }
+    .metric { min-height: 180px; display: flex; flex-direction: column; justify-content: flex-end; padding: 28px; box-shadow: none; }
+    .metric:nth-child(2) { background: var(--lm-surface-lemon-soft); }
+    .metric:nth-child(3) { background: var(--lm-surface-purple-soft); }
+    .metric:nth-child(4) { color: var(--lm-text-inverse); background: var(--lm-surface-inverse); }
+    .review-wall { grid-template-columns: 1.2fr .8fr 1fr; grid-auto-flow: dense; }
+    .review { min-height: 210px; padding: 32px; border: 0; background: var(--lm-color-surface); }
+    .review:first-child { grid-row: span 2; background: var(--lm-surface-lemon-soft); }
+    .review:nth-child(3) { background: var(--lm-surface-purple-soft); }
+    details { border: 0; background: var(--lm-color-surface); }
+    summary { padding: 24px 32px; font-size: 20px; }
+
+    .final-grid { grid-template-columns: .95fr 1.05fr; gap: 64px; }
+    .lead-form { gap: 20px; padding: 40px; border-radius: var(--lm-radius-lg); box-shadow: var(--lm-shadow-pop); }
+    .field input { min-height: 58px; }
+    .form-tabs span, .messengers span { min-height: 44px; display: inline-flex; align-items: center; }
+    .lead-form .form-tabs span { color: var(--lm-text-primary); background: var(--lm-surface-default); border-color: var(--lm-color-border); cursor: pointer; }
+    .lead-form .form-tabs span.is-selected { color: var(--lm-text-on-purple); background: var(--lm-surface-purple); border-color: var(--lm-surface-purple); }
+    .lead-form .messengers span { color: var(--lm-text-primary); background: var(--lm-surface-default); border-color: var(--lm-color-border); cursor: pointer; }
+    .lead-form .messengers span.is-selected { color: var(--lm-text-on-purple); background: var(--lm-surface-purple); border-color: var(--lm-surface-purple); }
+    .form-status { padding: 16px 18px; border-radius: var(--lm-radius-md); color: var(--lm-text-on-lemon); background: var(--lm-surface-lemon-soft); }
+    .field-error { margin: 0; color: var(--lm-color-purple-600); font-size: 15px; font-weight: 800; }
+    .field input[aria-invalid="true"] { border: 2px solid var(--lm-color-purple-600); }
+    .form-context { padding: 12px 16px; border-radius: var(--lm-radius-md); background: var(--lm-surface-lemon-soft); font-size: 15px; font-weight: 800; }
+    .lead-form small a { color: inherit; font-weight: 800; }
+
+    #atlas-pricing .site-header + .page-section,
+    #atlas-examples .site-header + .page-section,
+    #atlas-audit .site-header + .page-section { min-height: 620px; display: grid; align-items: center; }
+    #atlas-pricing .site-header + .page-section { background: var(--lm-surface-lemon-soft); }
+    #atlas-examples .site-header + .page-section { color: var(--lm-text-inverse); background: var(--lm-grad-space); }
+    #atlas-examples .site-header + .page-section .lead { color: var(--lm-color-neutral-100); }
+    #atlas-audit .site-header + .page-section { background: var(--lm-surface-purple-soft); }
+    .service-grid { gap: 20px; }
+    .service-card { min-height: 330px; padding: 32px; border: 0; box-shadow: none; }
+    .service-card--purple { background: var(--lm-surface-purple-soft); box-shadow: var(--lm-shadow-pop); }
+    .service-card--dark { background: var(--lm-surface-inverse); }
+    .service-card--lemon { background: var(--lm-surface-lemon-soft); }
+    .avatar-offer { min-height: 520px; gap: 32px; padding: 40px; background: var(--lm-grad-space); }
+    .timeline { grid-template-columns: repeat(7, 1fr); }
+    .timeline div { min-height: 190px; padding: 24px; box-shadow: none; }
+    .timeline div:nth-child(2n) { background: var(--lm-surface-purple-soft); }
+
+    .catalog-filters { gap: 20px; }
+    .catalog-filter-row .pill:first-child { color: var(--lm-text-primary); background: var(--lm-surface-default); border-color: var(--lm-color-border); }
+    .catalog-filter-row .pill { cursor: pointer; }
+    .catalog-filter-row .pill.is-active { color: var(--lm-text-on-lemon); background: var(--lm-surface-lemon); border-color: var(--lm-surface-lemon); }
+    .catalog-empty { grid-column: 1 / -1; padding: 32px; border-radius: var(--lm-radius-lg); text-align: center; background: var(--lm-surface-lemon-soft); }
+    .catalog-note { grid-column: 1 / -1; margin-bottom: 8px; padding: 20px 24px; border-radius: var(--lm-radius-md); background: var(--lm-color-surface); }
+    .catalog-grid .case-card { grid-column: span 6; }
+    .catalog-grid .case-card:nth-child(3n + 1) { grid-column: span 7; }
+    .catalog-grid .case-card:nth-child(3n + 2) { grid-column: span 5; }
+
+    #atlas-case .site-header { background: var(--lm-surface-inverse); }
+    #atlas-case .site-nav { background: var(--lm-surface-default); }
+    #atlas-case .case-skin { background: var(--lm-surface-lemon-soft); }
+    .case-cover { min-height: 740px; grid-template-columns: .82fr 1.18fr; gap: 64px; }
+    .case-identity { margin-bottom: 24px; color: var(--lm-color-lemon-500); font-size: 17px; font-weight: 800; }
+    .case-cover__media { gap: 16px; padding: 24px; transform: rotate(-1deg); }
+    .case-cover__media img:nth-child(2) { transform: translateY(32px); }
+    .case-metrics { gap: 20px; }
+    .case-metric { min-height: 180px; display: flex; flex-direction: column; justify-content: flex-end; border: 0; background: var(--lm-color-surface); }
+    .case-metric:nth-child(2) { background: var(--lm-surface-lemon-soft); }
+    .case-metric:nth-child(3) { background: var(--lm-surface-purple-soft); }
+    .case-metric:nth-child(4) { color: var(--lm-text-inverse); background: var(--lm-surface-inverse); }
+    .logic-grid { grid-template-columns: repeat(12, 1fr); gap: 20px; }
+    .logic-card { grid-column: span 4; min-height: 260px; padding: 32px; box-shadow: none; }
+    .logic-card:nth-child(4), .logic-card:nth-child(5) { grid-column: span 6; }
+    .gallery-2x2 { gap: 24px; }
+    .gallery-2x2 img:nth-child(2), .gallery-2x2 img:nth-child(3) { transform: translateY(28px); }
+    .plan-list { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+    .plan-list article { min-height: 72px; align-items: center; background: var(--lm-color-neutral-900); }
+    .format-gallery { gap: 16px; }
+    .case-format-panel[hidden] { display: none; }
+    .case-format-panel h3 { margin-top: 24px; }
+    .result-card { grid-template-columns: .8fr 1.2fr; gap: 48px; padding: 48px; background: var(--lm-surface-lemon-soft); }
+
+    .audit-list { grid-template-columns: repeat(12, 1fr); gap: 20px; }
+    .audit-list article { grid-column: span 4; min-height: 270px; padding: 32px; border: 0; background: var(--lm-color-surface); }
+    .audit-list article:nth-child(4), .audit-list article:nth-child(5) { grid-column: span 6; }
+    .audit-list article:nth-child(2), .audit-list article:nth-child(4) { background: var(--lm-surface-purple-soft); }
+    .audit-example { gap: 64px; }
+    .audit-example__frames { gap: 16px; }
+
+    .site-footer { margin: 24px; padding: 64px; border: 0; border-radius: var(--lm-radius-lg); background: var(--lm-color-neutral-1000); }
+    .site-footer__grid { grid-template-columns: 1.5fr 1fr 1fr; gap: 64px; }
+    .site-footer__col { gap: 12px; }
+    .site-footer__col strong { margin-bottom: 8px; font-size: 16px; }
+    .site-footer p, .site-footer a { font-size: 15px; line-height: 1.6; }
+    .site-footer a:hover { color: var(--lm-color-lemon-500); }
+
+    @media (max-width: 1100px) {
+      .atlas-map { width: calc(100vw - 48px); }
+      .atlas-map__flow { grid-template-columns: 1fr; }
+      .atlas-map__node::after { display: none !important; }
+    }
+  </style>
 </head>
 <body>
   <header class="atlas-toolbar">
@@ -207,15 +451,34 @@
   </header>
 
   <main class="atlas-stage">
+    <section class="atlas-map" aria-label="Карта переходов сайта">
+      <div class="atlas-map__head">
+        <h2>Как страницы связаны</h2>
+        <p>Это не линейная цепочка. Главная разводит человека по трём сценариям: увидеть доказательства, выбрать тариф или начать с бесплатного разбора. Кейс открывается только из конкретной работы.</p>
+      </div>
+      <div class="atlas-map__flow">
+        <a class="atlas-map__node atlas-map__node--entry" href="#atlas-main"><b>Главная</b><span>Объясняет услугу и помогает выбрать следующий шаг</span></a>
+        <a class="atlas-map__node" href="#atlas-examples"><b>Работы</b><span>Фильтр → карточка проекта → его кейс</span></a>
+        <a class="atlas-map__node" href="#atlas-pricing"><b>Цены</b><span>Тариф → выбранный контекст в форме</span></a>
+        <a class="atlas-map__node" href="#atlas-audit"><b>Разбор</b><span>Безопасный первый шаг → заявка</span></a>
+        <a class="atlas-map__node atlas-map__node--case" href="#atlas-case"><b>Кейс</b><span>Весь месяц → форма «хочу так же»</span></a>
+      </div>
+      <div class="atlas-map__states" aria-label="Состояния действий и форм">
+        <div class="atlas-map__state"><b>Кнопка тарифа</b><span>Открывает форму с уже выбранным тарифом</span></div>
+        <div class="atlas-map__state"><b>Форма</b><span>«Напишу сам» или «Свяжитесь со мной»</span></div>
+        <div class="atlas-map__state"><b>Заявка отправлена</b><span>Спасибо + срок ответа менеджера</span></div>
+        <div class="atlas-map__state"><b>Ошибка</b><span>Пояснение под конкретным полем, не только цвет</span></div>
+      </div>
+    </section>
     <div class="atlas-board" data-atlas-board>
       <div class="atlas-page-wrap" id="atlas-main">
         <div class="atlas-label"><b>01 · Главная</b><span>11 блоков · главный путь продажи</span></div>
         <article class="atlas-page">
-          <header class="site-header"><div class="site-nav"><img src="assets/design/logo-dark.svg" alt="lemonmedia"><nav class="site-nav__links"><a href="#atlas-examples">Работы</a><a href="#main-process">Как работаем</a><a href="#atlas-pricing">Цены</a><a href="reviews.html">Отзывы</a><a href="about.html">О компании</a><a href="articles.html">Статьи</a></nav><div class="site-nav__actions"><a class="btn" href="#main-final">Начать работу</a></div></div></header>
+          <header class="site-header"><div class="site-nav"><a href="#atlas-main" aria-label="Главная lemonmedia"><img src="assets/design/logo-dark.svg" alt="lemonmedia"></a><nav class="site-nav__links"><a href="#atlas-examples">Работы</a><a href="#main-process">Как работаем</a><a href="#atlas-pricing">Цены</a><a href="#atlas-audit">Бесплатный разбор</a></nav><div class="site-nav__actions"><a class="btn" href="#main-final">Обсудить проект</a></div></div></header>
 
           <section class="page-section main-hero"><div class="inner hero-grid"><div><h1>Ведём ваши соцсети.<br>От 4 990 ₽ в месяц</h1><p class="lead">Маркетолог, дизайнер и личный менеджер делают контент за вас: план, тексты, дизайн, публикация. Вы только согласовываете - это 15 минут в неделю.</p><div class="hero-checks"><span>✓ Контент делают живые люди, не нейросеть</span><span>✓ Публикуем сразу во все ваши соцсети</span><span>✓ Не понравится - вернём деньги</span></div><div class="hero-actions"><a class="btn" href="#main-pricing">Выбрать тариф</a><a class="btn btn--ghost" href="#atlas-audit">Бесплатный разбор</a></div><div class="trust">6 лет · 10 000+ проектов · рейтинг 5,0 и 200+ отзывов на Яндекс Картах</div></div><div class="work-wall" aria-label="Живая лента из 33 реальных работ lemonmedia"><div class="work-wall__column"><img src="assets/cases/saratov-kitchens-2026-08/posts/03.webp" alt="Работа для Саратов Кухни"><img src="assets/cases/refix/posts/07.png" alt="Работа для REFIX"><img src="assets/cases/moscow-padel/posts/15.jpg" alt="Работа для MoscowPadel"><img class="work-wall__story" src="assets/cases/dava-holding/stories/01.jpg" alt="Сторис для DAVA Holding"><img src="assets/cases/alliance-climate/posts/03.webp" alt="Работа для Альянс Климат"><img src="assets/cases/klient-prosto/carousels/04/post-04-slide-01-cover.png" alt="Карусель для Клиент Просто"><img src="assets/cases/saratov-kitchens-2026-08/posts/08.webp" alt="Работа для Саратов Кухни"></div><div class="work-wall__column"><img class="work-wall__story" src="assets/cases/borodulina-tape/stories/03.webp" alt="Сторис для BORODULINA TAPE"><img src="assets/cases/achinsk-begovoy/posts/01.jpg" alt="Работа для бегового клуба"><img src="assets/cases/kristall-water/posts/06.jpg" alt="Работа для Кристалл"><img src="assets/cases/inari/posts/01.jpg" alt="Работа для INARI"><img src="assets/cases/oh-beauty/posts/02.jpg" alt="Работа для Oh Beauty"><img src="assets/cases/chebusser/carousels/03/01.jpg" alt="Карусель для ЧЕБУССЭР"><img src="assets/cases/ateris/posts/08.jpg" alt="Работа для Атерис"></div><div class="work-wall__column"><img src="assets/cases/dan-gun/posts/04.jpg" alt="Работа для DAN GUN"><img src="assets/cases/olga-andreeva/posts/07.jpg" alt="Работа для Ольги Андреевой"><img src="assets/cases/yagodny-ray/posts/01.jpg" alt="Работа для Ягодного Рая"><img src="assets/cases/sidcobra/posts/14.jpg" alt="Работа для Sidcobra"><img class="work-wall__story" src="assets/cases/narfkis/stories/01.jpg" alt="Сторис для NARFKIS"><img src="assets/cases/dobroe-serdtse/carousels/02/01.webp" alt="Карусель фонда Доброе сердце"><img src="assets/cases/sergey-glibin/posts/14.jpg" alt="Работа для Сергея Глибина"></div><div class="work-wall__column"><img src="assets/cases/siyanie-vyaza/posts/01.jpg" alt="Работа для Сияние Вяза"><img src="assets/cases/colorplast/previous/posts/01.jpg" alt="Работа для Colorplast"><img src="assets/cases/electric-monchegorsk/carousels/04/01.jpg" alt="Работа для Электрик Мончегорск"><img src="assets/cases/fjord-petersburg/carousels/03/01.jpg" alt="Работа для Fjord-Petersburg"><img src="assets/cases/fr-moto/carousels/03/01.jpg" alt="Работа для FR-moto"><img src="assets/cases/taplife/carousels/04/01.jpg" alt="Карусель для Taplife"></div><div class="work-wall__column"><img src="assets/cases/ateris/carousels/01/01.jpg" alt="Работа для Атерис"><img src="assets/cases/casahitto/carousels/bonus/01.jpg" alt="Работа для Casa Hitto"><img src="assets/cases/electronics-cherepovets/posts/03.webp" alt="Работа для Электроника Череповец"><img src="assets/cases/lipniki/posts/03.webp" alt="Работа для Липники"><img class="work-wall__story" src="assets/cases/silny-parus/stories/03/01.jpg" alt="Сторис для Сильный парус"><img src="assets/cases/ritual-s/carousels/17/01.webp" alt="Карусель для Ритуал-С"></div></div></div></section>
 
-          <section class="page-section page-section--purple-soft"><div class="inner"><h2>Один пост - сразу во всех ваших соцсетях</h2><p class="lead">Мы делаем контент один раз и публикуем его на всех площадках, где есть ваши клиенты. Доплачивать за каждую соцсеть не нужно - это входит в тариф.</p><div class="pill-grid"><span class="pill">ВКонтакте</span><span class="pill">Telegram</span><span class="pill">Дзен</span><span class="pill">Одноклассники</span><span class="pill">Instagram*</span><span class="pill">MAX</span><span class="pill">Threads*</span><span class="pill">YouTube для роликов</span></div><p class="trust" style="margin-top:20px">*Instagram и Threads принадлежат Meta, признанной экстремистской организацией и запрещённой в РФ.</p></div></section>
+          <section class="page-section page-section--purple-soft"><div class="inner"><h2>Один пост - сразу во всех ваших соцсетях</h2><p class="lead">Мы делаем контент один раз и публикуем его на всех площадках, где есть ваши клиенты. Доплачивать за каждую соцсеть не нужно - это входит в тариф.</p><div class="pill-grid"><span class="pill">ВКонтакте</span><span class="pill">Telegram</span><span class="pill">Дзен</span><span class="pill">Одноклассники</span><span class="pill">Instagram*</span><span class="pill">MAX</span><span class="pill">Threads*</span><span class="pill">YouTube для роликов</span></div><p class="trust" style="margin-top:20px">*Instagram и Threads принадлежат Meta, признанной экстремистской организацией и запрещённой в РФ.</p><div class="platform-proof" aria-label="Одна реальная работа на пяти площадках"><article><span>ВКонтакте</span><img src="assets/cases/saratov-kitchens-2026-08/posts/03.webp" alt="Одна работа во ВКонтакте"></article><article><span>Telegram</span><img src="assets/cases/saratov-kitchens-2026-08/posts/03.webp" alt="Та же работа в Telegram"></article><article><span>Дзен</span><img src="assets/cases/saratov-kitchens-2026-08/posts/03.webp" alt="Та же работа в Дзене"></article><article><span>Одноклассники</span><img src="assets/cases/saratov-kitchens-2026-08/posts/03.webp" alt="Та же работа в Одноклассниках"></article><article><span>MAX</span><img src="assets/cases/saratov-kitchens-2026-08/posts/03.webp" alt="Та же работа в MAX"></article></div></div></section>
 
           <section class="page-section" id="main-process"><div class="inner"><h2>Вся ваша работа - 15 минут в неделю</h2><p class="lead">Мы забираем на себя всё: придумать, написать, нарисовать, опубликовать. От вас - один бриф в начале и пара «ок» в мессенджере. Вот как это устроено:</p><div class="step-grid"><article class="step"><b>01</b><h3>Заполняете бриф - один раз, минут за 15</h3><p>Рассказываете о бизнесе: что продаёте, кто клиенты, что любите и что нельзя.</p><img src="assets/img/product-inside/real-brief-refix.png" alt="Настоящий бриф клиента"></article><article class="step"><b>02</b><h3>Через 2 дня - контент-план и тексты</h3><p>Маркетолог придумывает темы под ваши задачи и пишет тексты. Вы читаете и говорите, что поправить - правки входят в цену.</p><img src="assets/img/product-inside/real-content-plan-table-refix.png" alt="Настоящий контент-план"></article><article class="step"><b>03</b><h3>Ещё 2 дня - дизайн</h3><p>Дизайнер отрисовывает посты в стиле вашего бренда. Снова смотрите и утверждаете.</p><img src="assets/img/product-inside/real-workflow-electric.png" alt="Настоящий рабочий процесс дизайна"></article><article class="step"><b>04</b><h3>Публикуем сами, по графику</h3><p>Загружаем всё в календарь и выпускаем без вашего участия. Вы видите, что и когда выйдет.</p><img src="assets/img/product-inside/real-calendar-electric.png" alt="Настоящий календарь публикаций"></article></div><p style="margin-top:24px;font-weight:800">Первый готовый контент - уже через 7 рабочих дней после брифа.</p><div class="missing-proof" style="margin-top:28px"><div><strong>Видео Ивана о работе изнутри</strong><p>Место предусмотрено в композиции. Само видео будет записано после утверждения блока.</p></div></div></div></section>
 
@@ -230,55 +493,55 @@
             <article class="case-card"><div class="case-card__media"><img src="assets/cases/fjord-petersburg/posts/01.jpg" alt="Реальный материал проекта"><img src="assets/cases/fjord-petersburg/posts/05.jpg" alt="Реальный материал проекта"><img src="assets/cases/fjord-petersburg/carousels/03/01.jpg" alt="Реальный материал проекта"></div><div class="case-card__body"><small>Водные прогулки · Санкт-Петербург</small><h3>Fjord-Petersburg</h3><p>Маршруты, выбор судна и сценарии отдыха собраны в спокойный путь к сообщению.</p><a class="btn btn--ghost" href="#atlas-examples">Открыть проект</a></div></article>
           </div><div style="margin-top:26px"><a class="btn btn--ghost" href="#atlas-examples">Все примеры работ</a></div></div></section>
 
-          <section class="page-section" id="main-pricing"><div class="inner"><h2>Три тарифа. Без скрытых доплат</h2><p class="lead">В каждом тарифе - контент-план, тексты, дизайн, публикация и личный менеджер. Разница только в объёме.</p><div class="pricing-grid"><article class="price-card"><h3>Старт</h3><div class="price-card__price">4 990 ₽<small>/мес</small></div><ul><li>8 постов</li><li>Публикации 2 раза в неделю</li><li>План, тексты, дизайн</li><li>Личный менеджер</li><li>Без каруселей, сторис и видео</li></ul><a class="btn" href="#main-final">Выбрать Старт</a></article><article class="price-card price-card--standard"><span class="price-card__badge">выбирает большинство</span><h3>Стандарт</h3><div class="price-card__price">9 900 ₽<small>/мес</small></div><ul><li>16 постов</li><li>4 карусели</li><li>8 серий сторис</li><li>Публикации через день</li><li>Контента в 3,5 раза больше «Старта»</li></ul><a class="btn" href="#main-final">Выбрать Стандарт</a></article><article class="price-card price-card--max"><span class="price-card__badge">максимум отдачи</span><h3>Максимум</h3><div class="price-card__price">14 900 ₽<small>/мес</small></div><ul><li>24 поста</li><li>8 каруселей</li><li>16 серий сторис</li><li>4 ролика</li><li>Публикации почти каждый день</li></ul><a class="btn" href="#main-final">Выбрать Максимум</a></article></div><p style="margin-top:24px">Нужны только ролики? От 5 990 ₽/мес. Разовые задачи: оформление соцсети или логотип - по 9 900 ₽. <a href="#atlas-pricing">Все услуги и цены</a></p></div></section>
+          <section class="page-section" id="main-pricing"><div class="inner"><h2>Три тарифа. Без скрытых доплат</h2><p class="lead">В каждом тарифе - полный цикл: контент-план, тексты, дизайн, публикация и личный менеджер. Разница только в объёме.</p><div class="pricing-grid"><article class="price-card"><h3>Старт</h3><div class="price-card__price">4 990 ₽<small>/мес</small></div><ul><li>8 постов</li><li>Публикации 2 раза в неделю</li><li>План, тексты, дизайн</li><li>Личный менеджер</li><li>Без каруселей, сторис и видео</li></ul><p>Минимум, чтобы соцсети жили и выглядели профессионально.</p><a class="btn" href="#main-final">Выбрать этот тариф</a></article><article class="price-card price-card--standard"><span class="price-card__badge">выбирает большинство</span><h3>Стандарт</h3><div class="price-card__price">9 900 ₽<small>/мес</small></div><ul><li>16 постов</li><li>4 карусели</li><li>8 серий сторис</li><li>Публикации через день</li><li>Контента в 3,5 раза больше «Старта»</li></ul><p>Полноценное присутствие: лента, карусели и сторис работают вместе.</p><a class="btn" href="#main-final">Выбрать этот тариф</a></article><article class="price-card price-card--max"><span class="price-card__badge">максимум отдачи</span><h3>Максимум</h3><div class="price-card__price">14 900 ₽<small>/мес</small></div><ul><li>24 поста</li><li>8 каруселей</li><li>16 серий сторис</li><li>4 ролика</li><li>Публикации почти каждый день</li><li>Единственный тариф с видео</li></ul><p>Соцсети выглядят как у большого бренда: лента, сторис и ролики каждый день.</p><a class="btn" href="#main-final">Выбрать этот тариф</a></article></div><p style="margin-top:24px">Нужны только ролики? Делаем отдельно - от 5 990 ₽/мес. Разовые задачи: оформление соцсети или логотип - по 9 900 ₽. <a href="#atlas-pricing">Все услуги и цены</a></p><p>Оплата как удобно: картой, по счёту, Долями, Сплитом или в рассрочку от надёжных банков. Работаем по всей России и с зарубежьем.</p></div></section>
 
-          <section class="page-section page-section--lemon"><div class="inner guarantee"><div class="guarantee__number">14<br>дней</div><div><h2>Первые 14 дней вы ничем не рискуете</h2><p class="lead" style="color:inherit">Посмотрите первую партию контента, попросите правки. Если результат не понравится - вернём деньги. Без выяснений. Это закреплено в оферте.</p></div></div></section>
+          <section class="page-section page-section--lemon"><div class="inner guarantee"><div class="guarantee__number">14<br>дней</div><div><h2>Первые 14 дней вы ничем не рискуете</h2><p class="lead" style="color:inherit">Посмотрите первую партию контента, попросите правки. Если результат не понравится - вернём деньги. Без выяснений и «а вы сначала докажите». Мы 6 лет на рынке, нам дороже репутация.</p><a href="legal-design.html#refund">Условия возврата и оферты →</a></div></div></section>
 
-          <section class="page-section"><div class="inner"><h2>Почему не фрилансер и не штатный SMM-щик?</h2><table class="compare"><thead><tr><th>Вариант</th><th>Цена в месяц</th><th>Кто делает</th><th>Риск</th></tr></thead><tbody><tr><td>Самому / сотрудник</td><td>0 ₽</td><td>вы, по вечерам</td><td>нерегулярно, выгорание</td></tr><tr><td>Фрилансер</td><td>15 000-40 000 ₽</td><td>один человек</td><td>может пропасть</td></tr><tr><td>Штатный SMM</td><td>95 000-110 000 ₽</td><td>один человек на всё</td><td>дорого, простаивает</td></tr><tr><td>Агентство</td><td>50 000-150 000 ₽</td><td>команда</td><td>избыточно для контента</td></tr><tr><td>lemonmedia</td><td>от 4 990 ₽</td><td>маркетолог + дизайнер + менеджер</td><td>14 дней - возврат</td></tr></tbody></table><p style="margin-top:24px">Мы можем так дёшево не потому, что делаем плохо, а потому что делаем только одно - контент - и поставили это на систему.</p></div></section>
+          <section class="page-section"><div class="inner"><h2>Почему не фрилансер и не штатный SMM-щик?</h2><table class="compare"><thead><tr><th>Вариант</th><th>Цена в месяц</th><th>Кто делает</th><th>Риск</th></tr></thead><tbody><tr><td>Самому / сотрудник в нагрузку</td><td>0 ₽</td><td>вы, по вечерам</td><td>нерегулярно, выгорание</td></tr><tr><td>Фрилансер</td><td>15 000-40 000 ₽</td><td>один человек на 5 проектах</td><td>может пропасть</td></tr><tr><td>Штатный SMM-специалист</td><td>95 000-110 000 ₽</td><td>один человек на всё</td><td>дорого, простаивает</td></tr><tr><td>Агентство</td><td>50 000-150 000 ₽</td><td>команда</td><td>избыточно для задачи «контент»</td></tr><tr><td>lemonmedia</td><td>от 4 990 ₽</td><td>маркетолог + дизайнер + менеджер</td><td>14 дней - возврат</td></tr></tbody></table><p style="margin-top:24px">Мы можем так дёшево не потому, что делаем плохо, а потому что делаем только одно - контент - и поставили это на систему: узкая услуга, отлаженный конвейер, технологии на рутине, люди на смысле.</p></div></section>
 
-          <section class="page-section page-section--purple-soft"><div class="inner"><h2>10 000+ проектов за 6 лет</h2><div class="metric-grid"><div class="metric"><b>10 000+</b>проектов</div><div class="metric"><b>6 лет</b>на рынке</div><div class="metric"><b>200+</b>отзывов</div><div class="metric"><b>5,0</b>на Яндекс Картах</div></div><div class="review-wall"><article class="review"><strong>Правки без конфликта</strong><h3>Терпеливо доводят работу до понятного результата</h3><p>В публичном отзыве клиент отмечает, что команда проходила итерации даже тогда, когда у самого заказчика ещё не было точного образа результата.</p></article><article class="review"><strong>Повторное обращение</strong><h3>Возвращаются с новой задачей</h3><p>Один из отзывов описывает два обращения: сначала за логотипом, затем за презентацией.</p></article><article class="review"><strong>Открытый источник</strong><h3>Отзывы можно проверить на Яндекс Картах</h3><p>Полная лента, даты, имена и ответы компании доступны по прямой ссылке.</p><a class="btn btn--ghost" href="https://yandex.ru/maps/org/lemon_media/138965142865/reviews/">Открыть Яндекс Карты</a></article></div><div class="missing-proof" style="margin-top:20px;min-height:180px"><div><strong>Для финального блока нужны реальные скриншоты отзывов</strong><p>В проекте их пока нет. Здесь должна быть плотная стена отзывов с именами и датами - без пересказов и выдуманных цитат.</p></div></div></div></section>
+          <section class="page-section page-section--purple-soft"><div class="inner"><h2>10 000+ проектов за 6 лет</h2><div class="metric-grid"><div class="metric"><b>10 000+</b>проектов</div><div class="metric"><b>6 лет</b>на рынке</div><div class="metric"><b>200+</b>отзывов</div><div class="metric"><b>5,0</b>на Яндекс Картах</div></div><div class="review-wall"><article class="review"><strong>Яндекс Карты · отзыв 01</strong><h3>Место для реального скриншота</h3><p>Имя, дата и текст должны быть видны без пересказа.</p></article><article class="review"><strong>Яндекс Карты · отзыв 02</strong><h3>Место для реального скриншота</h3><p>В приоритете отзывы о регулярном ведении контента.</p></article><article class="review"><strong>Яндекс Карты · вся лента</strong><h3>200+ отзывов должны подтверждаться глазами</h3><p>Пока исходники не добавлены, выдуманные цитаты не используем.</p><a class="btn btn--ghost" href="https://yandex.ru/maps/org/lemon_media/138965142865/reviews/">Читать все отзывы на Яндекс Картах</a></article></div><div class="missing-proof" style="margin-top:20px;min-height:180px"><div><strong>Нужны реальные скриншоты отзывов</strong><p>В проекте их пока нет. Здесь будет плотная стена отзывов с именами и датами.</p></div></div></div></section>
 
           <section class="page-section"><div class="inner"><h2>Честные ответы на неудобные вопросы</h2><div class="faq-list"><details open><summary>Контент будет делать нейросеть?</summary><p>Нет. План, тексты и дизайн делают живые маркетолог и дизайнер. ИИ ускоряет рутину - за счёт этого цена ниже рынка, - но не придумывает и не рисует за людей. Аудитория чувствует ИИ-штамповку, поэтому мы её не делаем.</p></details><details><summary>Что если мне не понравится?</summary><p>Сначала правки - они входят в цену: отдельно по текстам, отдельно по дизайну. Если после правок всё равно не то - в первые 14 дней вернём деньги.</p></details><details><summary>Что мне придётся делать самому?</summary><p>Один раз заполнить бриф и раз в неделю согласовывать материалы. Всё остальное - на нас.</p></details><details><summary>У меня нет фотографий. Как будете делать контент?</summary><p>Это не проблема. Работаем с тем, что есть: ваши фото, съёмка на телефон по нашим подсказкам, дизайн-макеты. А то, чего нет, генерируем нейросетями на профессиональном уровне: интерьеры, предметку, фоны, людей - так, что не отличить от съёмки. Контент без фотосессий - обычная для нас задача.</p></details><details><summary>В какие соцсети публикуете?</summary><p>ВКонтакте, Telegram, Дзен, Одноклассники, Instagram*, MAX, Threads*, для роликов - YouTube. Один и тот же контент адаптируем и выкладываем везде, где есть ваша аудитория, без доплаты.</p></details><details><summary>А Instagram - это вообще законно?</summary><p>Вести аккаунт и публиковать контент - законно. Запрещена реклама в Instagram (с сентября 2025). Мы публикуем контент и соблюдаем требования закона: маркировку и ограничения учитываем сами, вам следить не нужно.</p></details><details><summary>Когда выйдет первый пост?</summary><p>Первую партию контента вы увидите примерно через 7 рабочих дней после брифа: 2 дня - план и тексты, ваши правки, ещё 2 дня - дизайн. После утверждения начинаем публиковать по графику.</p></details><details><summary>Как проходит оплата? Есть документы?</summary><p>Работаем как ИП по оферте: счёт, карта, QR, Долями, рассрочка. Закрывающие документы даём. Оплачивать можно из-за рубежа.</p></details><details><summary>Вы гарантируете рост подписчиков и заявки?</summary><p>Нет, и не верьте тем, кто гарантирует. Мы отвечаем за то, что контролируем: профессиональный контент, выходящий вовремя. Живой, регулярный, качественный контент - главное условие, чтобы соцсети начали работать, но продажи зависят и от продукта, цен и спроса.</p></details><details><summary>Можно поменять тариф или уйти?</summary><p>Да. Оплата помесячная: закончился месяц - продлеваете, меняете тариф или останавливаетесь. Никаких договоров на год.</p></details><details><summary>Кто будет со мной на связи?</summary><p>Личный менеджер в удобном вам мессенджере: ВКонтакте, Telegram, WhatsApp, MAX. Отвечает в рабочее время в течение часа-двух.</p></details><details><summary>Чем вы отличаетесь от фрилансера за те же деньги?</summary><p>За 4 990-14 900 ₽ фрилансер делает всё один и ведёт параллельно несколько проектов. У нас над вашим контентом работают трое: маркетолог думает, дизайнер рисует, менеджер следит за сроками. И если человек заболел - конвейер не останавливается.</p></details></div></div></section>
 
           <section class="page-section page-section--dark" id="main-final"><div class="inner final-grid"><div><h2>Через неделю в ваших соцсетях будет первый готовый контент</h2><p class="lead">Выберите тариф - и менеджер свяжется с вами сегодня же. Или просто напишите нам в мессенджер: ответим на вопросы, покажем примеры по вашей нише, посоветуем, с чего начать.</p><div class="missing-proof" style="min-height:180px"><div><strong>Фото реальной команды или Ксюши</strong><p>Место предусмотрено. Нужен утверждённый исходник, случайное фото не подставляем.</p></div></div></div><form class="lead-form"><h3>Давайте начнём</h3><strong>Выберите тариф</strong><div class="form-tabs"><span>Старт</span><span>Стандарт</span><span>Максимум</span><span>Не решил - посоветуйте</span></div><div class="form-tabs"><span>Напишу сам</span><span>Свяжитесь со мной</span></div><div class="messengers"><span>ВКонтакте</span><span>Telegram</span><span>WhatsApp</span><span>MAX</span><span>Instagram*</span></div><div class="field"><label>Имя</label><input placeholder="Как вас зовут"></div><div class="field"><label>Телефон</label><input placeholder="+7 900 000-00-00"></div><button class="btn" type="button">Отправить</button><small>Менеджер ответит в течение дня, чаще - в течение часа</small><small>Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности. *Instagram принадлежит Meta, признанной экстремистской организацией и запрещённой в РФ.</small></form></div></section>
 
-          <footer class="site-footer"><div class="inner site-footer__grid"><div><img src="assets/design/logo-white.svg" alt="lemonmedia"><p>Регулярный контент под ключ для российского малого и среднего бизнеса. Команда lemonmedia работает с 2020 года.</p></div><div class="site-footer__col"><strong>Выбрать</strong><a href="#atlas-pricing">Цены и конструктор</a><a href="#atlas-examples">Работы</a><a href="#main-process">Как работаем</a><a href="compare.html">Сравнение</a></div><div class="site-footer__col"><strong>Узнать больше</strong><a href="reviews.html">Отзывы</a><a href="about.html">О компании</a><a href="services.html">Разовые услуги</a><a href="partners-design.html">Партнёрам</a><a href="articles.html">Статьи</a><a href="faq.html">Все вопросы</a></div><div class="site-footer__col"><strong>Начать</strong><a href="#main-final">Собрать пакет</a><a href="#atlas-audit">Бесплатный разбор</a><a href="legal.html#offer">Условия гарантии</a><a href="legal.html#offer">Условия работы</a><a href="legal.html#privacy">Конфиденциальность</a></div></div></footer>
+          <footer class="site-footer"><div class="inner site-footer__grid"><div><img src="assets/design/logo-white.svg" alt="lemonmedia"><p>Ведём соцсети под ключ: контент-план, тексты, дизайн и публикация.</p><p>6 лет · 10 000+ проектов · работаем по всей России.</p></div><div class="site-footer__col"><strong>Страницы</strong><a href="#atlas-main">Главная</a><a href="#atlas-examples">Работы</a><a href="#atlas-pricing">Цены</a><a href="#atlas-audit">Бесплатный разбор</a></div><div class="site-footer__col"><strong>Услуги</strong><a href="#pricing-social">Ведение соцсетей</a><a href="#pricing-reels">Ролики</a><a href="#pricing-once">Оформление и логотип</a><a href="#main-final">Обсудить проект</a></div></div></footer>
         </article>
       </div>
 
       <div class="atlas-page-wrap" id="atlas-pricing">
         <div class="atlas-label"><b>02 · Цены</b><span>7 блоков · горячий спрос</span></div>
         <article class="atlas-page">
-          <header class="site-header"><div class="site-nav"><img src="assets/design/logo-dark.svg" alt="lemonmedia"><nav class="site-nav__links"><a href="#atlas-examples">Работы</a><a href="#main-process">Как работаем</a><a href="#atlas-pricing">Цены</a><a href="reviews.html">Отзывы</a><a href="about.html">О компании</a><a href="articles.html">Статьи</a></nav><div class="site-nav__actions"><a class="btn" href="#pricing-final">Начать работу</a></div></div></header>
+          <header class="site-header"><div class="site-nav"><a href="#atlas-main" aria-label="Главная lemonmedia"><img src="assets/design/logo-dark.svg" alt="lemonmedia"></a><nav class="site-nav__links"><a href="#atlas-examples">Работы</a><a href="#main-process">Как работаем</a><a href="#atlas-pricing">Цены</a><a href="#atlas-audit">Бесплатный разбор</a></nav><div class="site-nav__actions"><a class="btn" href="#pricing-final">Обсудить проект</a></div></div></header>
 
           <section class="page-section page-section--purple-soft page-section--compact"><div class="inner"><h1>Услуги и цены</h1><p class="lead">Все цены открыты - ничего не прячем за «рассчитаем индивидуально». Выбирайте, что нужно: ведение соцсетей под ключ, ролики, оформление или логотип.</p><div class="pill-grid"><a class="pill" href="#pricing-social">Ведение соцсетей</a><a class="pill" href="#pricing-reels">Ролики</a><a class="pill" href="#pricing-once">Разовые задачи</a></div></div></section>
 
-          <section class="page-section" id="pricing-social"><div class="inner"><h2>Ведение соцсетей</h2><p class="lead">В каждом тарифе - полный цикл и команда: маркетолог, дизайнер, личный менеджер. Публикация во все ваши соцсети уже включена.</p><div class="pricing-grid"><article class="price-card"><h3>Старт</h3><div class="price-card__price">4 990 ₽<small>/мес</small></div><ul><li>8 постов в месяц</li><li>Публикации 2 раза в неделю</li><li>Контент-план от маркетолога</li><li>Дизайн в стиле бренда</li><li>Публикация во все соцсети</li><li>Менеджер и правки</li><li>Без каруселей, сторис и видео</li></ul><p>Минимум, чтобы соцсети жили и выглядели достойно.</p><a class="btn" href="#pricing-final">Выбрать тариф</a></article><article class="price-card price-card--standard"><span class="price-card__badge">выбирает большинство</span><h3>Стандарт</h3><div class="price-card__price">9 900 ₽<small>/мес</small></div><ul><li>16 постов</li><li>4 карусели</li><li>8 серий сторис</li><li>Публикации через день</li><li>Всё из «Старта»</li><li>Контента в 3,5 раза больше</li></ul><p>Полноценное присутствие: лента, карусели и сторис работают вместе.</p><a class="btn" href="#pricing-final">Выбрать тариф</a></article><article class="price-card price-card--max"><span class="price-card__badge">максимум отдачи</span><h3>Максимум</h3><div class="price-card__price">14 900 ₽<small>/мес</small></div><ul><li>24 поста</li><li>8 каруселей</li><li>16 серий сторис</li><li>4 ролика</li><li>Публикации почти каждый день</li><li>Единственный тариф с видео</li></ul><p>Соцсети как у большого бренда - каждый день и ниже цены одного фрилансера.</p><a class="btn" href="#pricing-final">Выбрать тариф</a></article></div><p style="margin-top:24px">Серия сторис - мини-прогрев из ~5 экранов. Ролик - вертикальное видео 20-60 секунд со сценарием, монтажом и озвучкой.</p></div></section>
+          <section class="page-section" id="pricing-social"><div class="inner"><h2>Ведение соцсетей</h2><p class="lead">В каждом тарифе - полный цикл и команда: маркетолог, дизайнер, личный менеджер. Публикация во все ваши соцсети уже включена.</p><div class="pricing-grid"><article class="price-card"><h3>Старт</h3><div class="price-card__price">4 990 ₽<small>/мес</small></div><ul><li>8 постов в месяц: картинка + текст</li><li>Публикации 2 раза в неделю</li><li>Контент-план от маркетолога</li><li>Дизайн в стиле вашего бренда</li><li>Публикация во все соцсети</li><li>Личный менеджер, правки входят</li><li>Без каруселей, сторис и видео</li></ul><p>Минимум, чтобы соцсети жили и выглядели достойно.</p><a class="btn" href="#pricing-final">Выбрать этот тариф</a></article><article class="price-card price-card--standard"><span class="price-card__badge">выбирает большинство</span><h3>Стандарт</h3><div class="price-card__price">9 900 ₽<small>/мес</small></div><ul><li>16 постов в месяц</li><li>4 карусели: листаются, сильнее вовлекают</li><li>8 серий сторис: мини-прогревы к постам</li><li>Публикации через день</li><li>Всё из «Старта»: план, тексты, дизайн, публикация, менеджер</li><li>Контента в 3,5 раза больше, чем в «Старте»</li></ul><p>Полноценное присутствие в соцсетях.</p><a class="btn" href="#pricing-final">Выбрать этот тариф</a></article><article class="price-card price-card--max"><span class="price-card__badge">максимум отдачи</span><h3>Максимум</h3><div class="price-card__price">14 900 ₽<small>/мес</small></div><ul><li>24 поста в месяц</li><li>8 каруселей</li><li>16 серий сторис</li><li>4 ролика: Reels / Клипы / Shorts</li><li>Публикации почти каждый день</li><li>Единственный тариф с видео</li></ul><p>Соцсети как у большого бренда - присутствие каждый день, включая ролики, за цену ниже одного фрилансера.</p><a class="btn" href="#pricing-final">Выбрать этот тариф</a></article></div><p style="margin-top:24px">Серия сторис - это мини-прогрев из ~5 экранов, который ведёт к посту или карусели. Ролик - вертикальное видео 20-60 секунд со сценарием, монтажом и озвучкой.</p></div></section>
 
-          <section class="page-section page-section--soft" id="pricing-reels"><div class="inner"><h2>Только ролики - без ведения</h2><p class="lead">Если лента и так живёт, а нужны короткие видео: Reels, VK Клипы, Shorts. Сценарий, монтаж, озвучка и публикация - на нас.</p><div class="service-grid"><article class="service-card"><b>4 ролика<br>5 990 ₽/мес</b><p>≈ 1 498 ₽ за ролик</p><a class="btn btn--ghost" href="#pricing-final">Выбрать</a></article><article class="service-card service-card--purple"><span class="price-card__badge">оптимально</span><b>8 роликов<br>9 990 ₽/мес</b><p>≈ 1 249 ₽ за ролик</p><a class="btn" href="#pricing-final">Выбрать</a></article><article class="service-card service-card--dark"><b>12 роликов<br>12 990 ₽/мес</b><p>≈ 1 083 ₽ за ролик</p><a class="btn" href="#pricing-final">Выбрать</a></article></div><p style="margin-top:24px">В каждом ролике: сценарий и раскадровка · монтаж вашего материала или генерация видеоряда · озвучка и субтитры · музыка и оформление под бренд · публикация, включая YouTube Shorts.</p><div class="avatar-offer"><div><h3>Цифровой ведущий для ваших роликов</h3><p>Создаём AI-аватара - одно лицо бренда, которое ведёт ваши ролики. Без съёмок, не болеет, не уходит в отпуск и остаётся с вами.</p><p><strong>Базовый - 2 900 ₽:</strong> 1 ракурс<br><strong>Расширенный - 4 900 ₽:</strong> 5 ракурсов + 1 сцена<br><strong>Премиум - 9 900 ₽:</strong> 5 ракурсов + 3 сцены</p></div><img src="assets/img/people/ksyusha-guide.jpeg" alt="Ксюша - AI-ведущая lemonmedia"></div></div></section>
+          <section class="page-section page-section--soft" id="pricing-reels"><div class="inner"><h2>Только ролики - без ведения</h2><p class="lead">Если лента и так живёт, а нужны короткие видео: Reels, VK Клипы, Shorts. Сценарий, монтаж, озвучка и публикация - на нас.</p><div class="service-grid"><article class="service-card"><b>4 ролика<br>5 990 ₽/мес</b><p>≈ 1 498 ₽ за ролик</p><a class="btn btn--ghost" href="#pricing-final">Выбрать</a></article><article class="service-card service-card--purple"><span class="price-card__badge">оптимально</span><b>8 роликов<br>9 990 ₽/мес</b><p>≈ 1 249 ₽ за ролик</p><a class="btn" href="#pricing-final">Выбрать</a></article><article class="service-card service-card--dark"><b>12 роликов<br>12 990 ₽/мес</b><p>≈ 1 083 ₽ за ролик</p><a class="btn" href="#pricing-final">Выбрать</a></article></div><p style="margin-top:24px">В каждом ролике: сценарий и раскадровка · монтаж вашего материала или генерация видеоряда · озвучка и субтитры · музыка и оформление под бренд · публикация, включая YouTube Shorts.</p><div class="avatar-offer"><div><h3>Цифровой ведущий для ваших роликов</h3><p>Создаём AI-аватара - одно лицо бренда, которое ведёт ваши ролики. Без съёмок, не болеет, не уходит в отпуск и всегда остаётся с вами. Оплата один раз, дальше аватар работает во всех роликах вашего тарифа.</p><p><strong>Базовый - 2 900 ₽:</strong> 1 ракурс<br><strong>Расширенный - 4 900 ₽:</strong> 5 ракурсов + 1 сцена<br><strong>Премиум - 9 900 ₽:</strong> 5 ракурсов + 3 сцены</p></div><img src="assets/img/people/ksyusha-guide.jpeg" alt="Ксюша - AI-ведущая lemonmedia"></div></div></section>
 
-          <section class="page-section" id="pricing-once"><div class="inner"><h2>Разовые задачи</h2><div class="service-grid service-grid--two"><article class="service-card service-card--lemon"><b>Оформление соцсети - 9 900 ₽</b><p>Обложка, аватар, описание, меню, виджеты и закреплённый пост - соцсеть, в которую не стыдно вести рекламу.</p><a class="btn btn--ghost" href="#pricing-final">Обсудить оформление</a></article><article class="service-card"><b>Логотип - 9 900 ₽</b><p>Логотип и базовый фирменный стиль: цвета, шрифты, правила использования. Основа, на которой держится весь контент.</p><a class="btn btn--ghost" href="#pricing-final">Обсудить логотип</a></article></div><p style="margin-top:24px">Эти задачи чаще всего берут вместе с ведением: сначала приводим соцсеть в порядок, потом наполняем контентом.</p></div></section>
+          <section class="page-section" id="pricing-once"><div class="inner"><h2>Разовые задачи</h2><div class="service-grid service-grid--two"><article class="service-card service-card--lemon"><b>Оформление соцсети - 9 900 ₽</b><p>Обложка, аватар, описание, меню, виджеты и закреплённый пост - соцсеть, в которую не стыдно вести рекламу. ВКонтакте, Instagram* или другая площадка.</p><a class="btn btn--ghost" href="#pricing-final">Обсудить оформление</a></article><article class="service-card"><b>Логотип - 9 900 ₽</b><p>Логотип и базовый фирменный стиль: цвета, шрифты, правила использования. Основа, на которой держится весь контент.</p><a class="btn btn--ghost" href="#pricing-final">Обсудить логотип</a></article></div><p style="margin-top:24px">Эти задачи чаще всего берут вместе с ведением: сначала приводим соцсеть в порядок, потом наполняем контентом.</p></div></section>
 
-          <section class="page-section page-section--purple-soft" id="pricing-start"><div class="inner"><h2>От заявки до первого поста - одна неделя</h2><div class="timeline"><div><b>01</b>Пишете нам</div><div><b>02</b>Менеджер отвечает и помогает выбрать тариф</div><div><b>03</b>Оплата после разговора</div><div><b>04</b>Бриф 15 минут</div><div><b>05</b>Через 2 дня план и тексты</div><div><b>06</b>Ещё 2 дня дизайн</div><div><b>07</b>Публикуем</div></div><p style="margin-top:24px">Счёт для ИП/ООО, карта, QR, Долями, Сплит, рассрочка. Оплата из-за рубежа - без проблем. Работаем по оферте, закрывающие документы даём.</p></div></section>
+          <section class="page-section page-section--purple-soft" id="pricing-start"><div class="inner"><h2>От заявки до первого поста - одна неделя</h2><div class="timeline"><div><b>01</b>Пишете нам</div><div><b>02</b>Менеджер отвечает в течение дня, помогает выбрать тариф</div><div><b>03</b>Оплата после разговора, не до</div><div><b>04</b>Бриф 15 минут</div><div><b>05</b>Через 2 дня план и тексты</div><div><b>06</b>Ещё 2 дня дизайн</div><div><b>07</b>Публикуем</div></div><p style="margin-top:24px">Счёт для ИП/ООО, карта, QR, Долями, Сплит, рассрочка от надёжных банков. Оплата из-за рубежа - без проблем. Работаем по оферте, закрывающие документы даём.</p></div></section>
 
-          <section class="page-section page-section--lemon page-section--compact"><div class="inner guarantee"><div class="guarantee__number">14<br>дней</div><div><h2>14 дней на возврат</h2><p class="lead" style="color:inherit">Не понравится первая партия контента после правок - вернём деньги. Это написано в оферте, а не только на сайте.</p></div></div></section>
+          <section class="page-section page-section--lemon page-section--compact"><div class="inner guarantee"><div class="guarantee__number">14<br>дней</div><div><h2>14 дней на возврат</h2><p class="lead" style="color:inherit">Не понравится первая партия контента после правок - вернём деньги. Это написано в оферте, а не только на сайте.</p><a href="legal-design.html#refund">Условия возврата и оферты →</a></div></div></section>
 
           <section class="page-section page-section--dark" id="pricing-final"><div class="inner final-grid"><div><h2>Не знаете, какой тариф ваш? Спросите</h2><p class="lead">Напишите нам - посоветуем честно: иногда «Старта» достаточно, и мы так и скажем.</p></div><form class="lead-form"><h3>Давайте начнём</h3><strong>Выберите тариф</strong><div class="form-tabs"><span>Старт</span><span>Стандарт</span><span>Максимум</span><span>Не решил - посоветуйте</span></div><div class="form-tabs"><span>Напишу сам</span><span>Свяжитесь со мной</span></div><div class="messengers"><span>ВКонтакте</span><span>Telegram</span><span>WhatsApp</span><span>MAX</span><span>Instagram*</span></div><div class="field"><label>Имя</label><input placeholder="Как вас зовут"></div><div class="field"><label>Телефон</label><input placeholder="+7 900 000-00-00"></div><button class="btn" type="button">Отправить</button><small>Менеджер ответит в течение дня, чаще - в течение часа</small><small>Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности. *Instagram принадлежит Meta, признанной экстремистской организацией и запрещённой в РФ.</small></form></div></section>
-          <footer class="site-footer"><div class="inner site-footer__grid"><div><img src="assets/design/logo-white.svg" alt="lemonmedia"><p>Регулярный контент под ключ для российского малого и среднего бизнеса. Команда lemonmedia работает с 2020 года.</p></div><div class="site-footer__col"><strong>Выбрать</strong><a href="#atlas-pricing">Цены и конструктор</a><a href="#atlas-examples">Работы</a><a href="#main-process">Как работаем</a><a href="compare.html">Сравнение</a></div><div class="site-footer__col"><strong>Узнать больше</strong><a href="reviews.html">Отзывы</a><a href="about.html">О компании</a><a href="#pricing-once">Разовые услуги</a><a href="partners-design.html">Партнёрам</a><a href="articles.html">Статьи</a><a href="faq.html">Все вопросы</a></div><div class="site-footer__col"><strong>Начать</strong><a href="#pricing-final">Собрать пакет</a><a href="#atlas-audit">Бесплатный разбор</a><a href="legal.html#offer">Условия гарантии</a><a href="legal.html#offer">Условия работы</a><a href="legal.html#privacy">Конфиденциальность</a></div></div></footer>
+          <footer class="site-footer"><div class="inner site-footer__grid"><div><img src="assets/design/logo-white.svg" alt="lemonmedia"><p>Ведём соцсети под ключ: контент-план, тексты, дизайн и публикация.</p><p>6 лет · 10 000+ проектов · работаем по всей России.</p></div><div class="site-footer__col"><strong>Страницы</strong><a href="#atlas-main">Главная</a><a href="#atlas-examples">Работы</a><a href="#atlas-pricing">Цены</a><a href="#atlas-audit">Бесплатный разбор</a></div><div class="site-footer__col"><strong>Услуги</strong><a href="#pricing-social">Ведение соцсетей</a><a href="#pricing-reels">Ролики</a><a href="#pricing-once">Оформление и логотип</a><a href="#pricing-final">Обсудить проект</a></div></div></footer>
         </article>
       </div>
       <div class="atlas-page-wrap" id="atlas-examples">
         <div class="atlas-label"><b>03 · Примеры работ</b><span>4 блока · каталог кейсов</span></div>
         <article class="atlas-page">
-          <header class="site-header"><div class="site-nav"><img src="assets/design/logo-dark.svg" alt="lemonmedia"><nav class="site-nav__links"><a href="#atlas-examples">Работы</a><a href="#main-process">Как работаем</a><a href="#atlas-pricing">Цены</a><a href="reviews.html">Отзывы</a><a href="about.html">О компании</a><a href="articles.html">Статьи</a></nav><div class="site-nav__actions"><a class="btn" href="#examples-final">Начать работу</a></div></div></header>
+          <header class="site-header"><div class="site-nav"><a href="#atlas-main" aria-label="Главная lemonmedia"><img src="assets/design/logo-dark.svg" alt="lemonmedia"></a><nav class="site-nav__links"><a href="#atlas-examples">Работы</a><a href="#main-process">Как работаем</a><a href="#atlas-pricing">Цены</a><a href="#atlas-audit">Бесплатный разбор</a></nav><div class="site-nav__actions"><a class="btn" href="#examples-final">Обсудить проект</a></div></div></header>
           <section class="page-section page-section--dark page-section--compact"><div class="inner"><h1>Примеры наших работ</h1><p class="lead">Настоящие проекты настоящих клиентов: с контент-планами, текстами, каруселями и календарями публикаций. Выберите свою нишу - посмотрите, как это может выглядеть у вас.</p><div class="catalog-filters"><div class="catalog-filter-row"><span class="pill">Все</span><span class="pill">Еда</span><span class="pill">Красота и здоровье</span><span class="pill">Спорт</span><span class="pill">Ремонт и дом</span></div><div class="catalog-filter-row"><span class="pill">Услуги и эксперты</span><span class="pill">Товары</span><span class="pill">Отдых</span><span class="pill">Соцпроекты</span></div><div class="catalog-filter-row"><span class="pill">Посты</span><span class="pill">Карусели</span><span class="pill">Сторис</span><span class="pill">Ролики</span><span class="pill">Оформление</span><span class="pill">Логотипы</span></div></div><p class="trust" style="margin-top:22px;color:var(--lm-color-neutral-100)">На этой странице - свежие проекты. Всего за 6 лет - больше 10 000 работ.</p></div></section>
-          <section class="page-section page-section--soft"><div class="inner catalog-grid">
-            <article class="case-card"><div class="case-card__media"><img src="assets/cases/saratov-kitchens-2026-08/posts/01.webp" alt="Реальный материал проекта"><img src="assets/cases/saratov-kitchens-2026-08/posts/03.webp" alt="Реальный материал проекта"><img src="assets/cases/saratov-kitchens-2026-08/posts/05.webp" alt="Реальный материал проекта"></div><div class="case-card__body"><small>Кухни и интерьер · 15 публикаций</small><h3>Саратов Кухни</h3><p>Польза, модели, доказательства работ и предложения собраны в один месяц.</p><a class="btn btn--ghost" href="#atlas-case">Открыть проект</a></div></article>
+          <section class="page-section page-section--soft"><div class="inner catalog-grid"><p class="catalog-note"><strong>Как читать атлас:</strong> полностью собран один кейс - «Саратов Кухни». Для остальных проектов показаны реальные материалы и будущий переход в страницу по тому же шаблону; отдельные кейсы пока не нарисованы.</p>
+            <article class="case-card"><div class="case-card__media"><img src="assets/cases/saratov-kitchens-2026-08/posts/01.webp" alt="Публикация Саратов Кухни"><img src="assets/cases/saratov-kitchens-2026-08/posts/03.webp" alt="Публикация Саратов Кухни"><img src="assets/cases/saratov-kitchens-2026-08/posts/05.webp" alt="Публикация Саратов Кухни"></div><div class="case-card__body"><span class="price-card__badge">Ремонт и дом</span><h3>Саратов Кухни · Саратов</h3><small>15 публикаций · 5 каруселей · 34 слайда</small><p>Польза, модели, доказательства работ и предложения собраны в один месяц.</p><a class="btn btn--ghost" href="#atlas-case">Открыть проект</a></div></article>
             <article class="case-card"><div class="case-card__media"><img src="assets/cases/fr-moto/posts/08.jpg" alt="Публикация FR-moto"><img src="assets/cases/fr-moto/carousels/03/01.jpg" alt="Карусель FR-moto"><img class="is-story" src="assets/cases/fr-moto/stories/01.jpg" alt="Сторис FR-moto"></div><div class="case-card__body"><span class="price-card__badge">Товары</span><h3>FR-moto · город не опубликован</h3><small>10 публикаций · 2 карусели · 25 изображений</small><p>Сложный продукт объяснён через выбор, применение и реальные ситуации.</p><a class="btn btn--ghost" href="#atlas-case">Открыть проект</a></div></article>
             <article class="case-card"><div class="case-card__media"><img src="assets/cases/ateris/posts/03.jpg" alt="Публикация Атерис"><img src="assets/cases/ateris/posts/05.jpg" alt="Публикация Атерис"><img src="assets/cases/ateris/posts/08.jpg" alt="Публикация Атерис"></div><div class="case-card__body"><span class="price-card__badge">Красота и здоровье</span><h3>Атерис · город не опубликован</h3><small>10 публикаций · 2 карусели · 29 визуалов</small><p>Экспертные темы превращены в понятные ответы и спокойный путь к обращению.</p><a class="btn btn--ghost" href="#atlas-case">Открыть проект</a></div></article>
             <article class="case-card"><div class="case-card__media"><img src="assets/cases/sergey-glibin/posts/19.jpg" alt="Публикация Сергея Глибина"><img src="assets/cases/sergey-glibin/carousels/06/01.jpg" alt="Карусель Сергея Глибина"><img class="is-story" src="assets/cases/sergey-glibin/stories/03.jpg" alt="Сторис Сергея Глибина"></div><div class="case-card__body"><span class="price-card__badge">Услуги и эксперты</span><h3>Сергей Глибин · город не опубликован</h3><small>20 публикаций · 5 каруселей · 53 изображения</small><p>Личность, опыт и услуга раскрываются в одной узнаваемой системе.</p><a class="btn btn--ghost" href="#atlas-case">Открыть проект</a></div></article>
             <article class="case-card"><div class="case-card__media"><img src="assets/cases/moscow-padel/posts/19.jpg" alt="Публикация MoscowPadel"><img src="assets/cases/moscow-padel/posts/20.jpg" alt="Публикация MoscowPadel"><img src="assets/cases/moscow-padel/posts/15.jpg" alt="Публикация MoscowPadel"></div><div class="case-card__body"><span class="price-card__badge">Спорт</span><h3>MoscowPadel · город не опубликован</h3><small>20 публикаций · 11 каруселей · 87 изображений</small><p>Продукт показан через возможности объекта, сценарии использования и доверие.</p><a class="btn btn--ghost" href="#atlas-case">Открыть проект</a></div></article>
-            <article class="case-card"><div class="case-card__media"><img src="assets/cases/ritual-s/posts/04.webp" alt="Публикация Ритуал-С"><img src="assets/cases/ritual-s/carousels/01/01.webp" alt="Карусель Ритуал-С"><img src="assets/cases/ritual-s/carousels/08/01.webp" alt="Карусель Ритуал-С"></div><div class="case-card__body"><span class="price-card__badge">Услуги</span><h3>Ритуал-С · город не опубликован</h3><small>20 публикаций · 5 каруселей · 50 изображений</small><p>Чувствительная тема объяснена спокойно: материалы, формы, стоимость и уход.</p><a class="btn btn--ghost" href="#atlas-case">Открыть проект</a></div></article>
+            <article class="case-card"><div class="case-card__media"><img src="assets/cases/ritual-s/posts/04.webp" alt="Публикация Ритуал-С"><img src="assets/cases/ritual-s/carousels/01/01.webp" alt="Карусель Ритуал-С"><img src="assets/cases/ritual-s/carousels/08/01.webp" alt="Карусель Ритуал-С"></div><div class="case-card__body"><span class="price-card__badge">Услуги и эксперты</span><h3>Ритуал-С · город не опубликован</h3><small>20 публикаций · 5 каруселей · 50 изображений</small><p>Чувствительная тема объяснена спокойно: материалы, формы, стоимость и уход.</p><a class="btn btn--ghost" href="#atlas-case">Открыть проект</a></div></article>
             <article class="case-card"><div class="case-card__media"><img src="assets/cases/masterpol/post-01.jpg" alt="Публикация МастерПол"><img src="assets/cases/masterpol/post-02.jpg" alt="Публикация МастерПол"><img src="assets/cases/masterpol/post-03-slide-04.jpg" alt="Карусель МастерПол"></div><div class="case-card__body"><span class="price-card__badge">Ремонт и дом</span><h3>МастерПол · Екатеринбург</h3><small>10 публикаций · 2 карусели · 27 материалов</small><p>Реальные работы, выбор материалов, возражения и путь к замеру.</p><a class="btn btn--ghost" href="#atlas-case">Открыть проект</a></div></article>
             <article class="case-card"><div class="case-card__media"><img src="assets/cases/fjord-petersburg/posts/01.jpg" alt="Публикация Fjord-Petersburg"><img src="assets/cases/fjord-petersburg/posts/05.jpg" alt="Публикация Fjord-Petersburg"><img src="assets/cases/fjord-petersburg/carousels/03/01.jpg" alt="Карусель Fjord-Petersburg"></div><div class="case-card__body"><span class="price-card__badge">Отдых</span><h3>Fjord-Petersburg · Санкт-Петербург</h3><small>10 публикаций · 3 карусели · 29 изображений</small><p>Маршруты, выбор судна и сценарии отдыха собраны в путь к сообщению.</p><a class="btn btn--ghost" href="#atlas-case">Открыть проект</a></div></article>
             <article class="case-card"><div class="case-card__media"><img src="assets/cases/chebusser/posts/01.jpg" alt="Публикация ЧЕБУССЭР"><img src="assets/cases/chebusser/posts/02.jpg" alt="Публикация ЧЕБУССЭР"><img src="assets/cases/chebusser/posts/07.jpg" alt="Публикация ЧЕБУССЭР"></div><div class="case-card__body"><span class="price-card__badge">Еда</span><h3>ЧЕБУССЭР · Кемерово</h3><small>10 публикаций · 2 карусели · 27 изображений</small><p>Ассортимент, свежесть, удобство и первый заказ в одной системе.</p><a class="btn btn--ghost" href="#atlas-case">Открыть проект</a></div></article>
@@ -286,35 +549,35 @@
             <div style="grid-column:1/-1;text-align:center"><button class="btn btn--ghost" type="button">Показать ещё</button></div>
           </div></section>
           <section class="page-section page-section--purple-soft page-section--compact"><div class="inner"><h2>Вашей ниши здесь нет?</h2><p class="lead">Это не значит, что мы не сможем. За 6 лет были шиномонтажки, нумерологи, глэмпинги, футбольные стадионы и благотворительные фонды. Пришлите ссылку на вашу соцсеть - бесплатно разберём и покажем, каким может быть ваш контент.</p><a class="btn" href="#atlas-audit">Получить бесплатный разбор</a></div></section>
-          <section class="page-section page-section--dark" id="examples-final"><div class="inner final-grid"><div><h2>Хотите так же?</h2><p class="lead">Выберите тариф или оставьте номер. Менеджер покажет дополнительные примеры именно по вашей нише.</p></div><form class="lead-form"><h3>Давайте начнём</h3><strong>Выберите тариф</strong><div class="form-tabs"><span>Старт</span><span>Стандарт</span><span>Максимум</span><span>Не решил - посоветуйте</span></div><div class="form-tabs"><span>Напишу сам</span><span>Свяжитесь со мной</span></div><div class="messengers"><span>ВКонтакте</span><span>Telegram</span><span>WhatsApp</span><span>MAX</span><span>Instagram*</span></div><div class="field"><label>Имя</label><input placeholder="Как вас зовут"></div><div class="field"><label>Телефон</label><input placeholder="+7 900 000-00-00"></div><button class="btn" type="button">Отправить</button><small>Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности. *Instagram принадлежит Meta, признанной экстремистской организацией и запрещённой в РФ.</small></form></div></section>
-          <footer class="site-footer"><div class="inner site-footer__grid"><div><img src="assets/design/logo-white.svg" alt="lemonmedia"><p>Регулярный контент под ключ для российского малого и среднего бизнеса. Команда lemonmedia работает с 2020 года.</p></div><div class="site-footer__col"><strong>Выбрать</strong><a href="#atlas-pricing">Цены и конструктор</a><a href="#atlas-examples">Работы</a><a href="#main-process">Как работаем</a><a href="compare.html">Сравнение</a></div><div class="site-footer__col"><strong>Узнать больше</strong><a href="reviews.html">Отзывы</a><a href="about.html">О компании</a><a href="services.html">Разовые услуги</a><a href="partners-design.html">Партнёрам</a><a href="articles.html">Статьи</a><a href="faq.html">Все вопросы</a></div><div class="site-footer__col"><strong>Начать</strong><a href="#examples-final">Собрать пакет</a><a href="#atlas-audit">Бесплатный разбор</a><a href="legal.html#offer">Условия гарантии</a><a href="legal.html#offer">Условия работы</a><a href="legal.html#privacy">Конфиденциальность</a></div></div></footer>
+          <section class="page-section page-section--dark" id="examples-final"><div class="inner final-grid"><div><h2>Хотите так же?</h2></div><form class="lead-form"><h3>Давайте начнём</h3><strong>Выберите тариф</strong><div class="form-tabs"><span>Старт</span><span>Стандарт</span><span>Максимум</span><span>Не решил - посоветуйте</span></div><div class="form-tabs"><span>Напишу сам</span><span>Свяжитесь со мной</span></div><div class="messengers"><span>ВКонтакте</span><span>Telegram</span><span>WhatsApp</span><span>MAX</span><span>Instagram*</span></div><div class="field"><label>Имя</label><input placeholder="Как вас зовут"></div><div class="field"><label>Телефон</label><input placeholder="+7 900 000-00-00"></div><button class="btn" type="button">Отправить</button><small>Менеджер ответит в течение дня, чаще - в течение часа</small><small>Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности. *Instagram принадлежит Meta, признанной экстремистской организацией и запрещённой в РФ.</small></form></div></section>
+          <footer class="site-footer"><div class="inner site-footer__grid"><div><img src="assets/design/logo-white.svg" alt="lemonmedia"><p>Ведём соцсети под ключ: контент-план, тексты, дизайн и публикация.</p><p>6 лет · 10 000+ проектов · работаем по всей России.</p></div><div class="site-footer__col"><strong>Страницы</strong><a href="#atlas-main">Главная</a><a href="#atlas-examples">Работы</a><a href="#atlas-pricing">Цены</a><a href="#atlas-audit">Бесплатный разбор</a></div><div class="site-footer__col"><strong>Услуги</strong><a href="#pricing-social">Ведение соцсетей</a><a href="#pricing-reels">Ролики</a><a href="#pricing-once">Оформление и логотип</a><a href="#examples-final">Обсудить проект</a></div></div></footer>
         </article>
       </div>
       <div class="atlas-page-wrap" id="atlas-case">
         <div class="atlas-label"><b>04 · Кейс</b><span>10 блоков · доказательство продукта</span></div>
         <article class="atlas-page">
-          <header class="site-header"><div class="site-nav"><img src="assets/design/logo-dark.svg" alt="lemonmedia"><nav class="site-nav__links"><a href="#atlas-examples">Работы</a><a href="#main-process">Как работаем</a><a href="#atlas-pricing">Цены</a><a href="reviews.html">Отзывы</a><a href="about.html">О компании</a><a href="articles.html">Статьи</a></nav><div class="site-nav__actions"><a class="btn" href="#case-final">Начать работу</a></div></div></header>
-          <section class="page-section page-section--dark"><div class="inner case-cover"><div><h1>Показать кухни так, чтобы им доверили ремонт</h1><p class="lead">Связный контент-план о выборе кухни, готовых решениях, возражениях и предложениях бренда. Задача - помочь аудитории разобраться в выборе и подвести к обращению без обещаний коммерческого результата.</p><a class="btn" href="#case-plan">Смотреть весь месяц</a></div><div class="case-cover__media"><img src="assets/cases/saratov-kitchens-2026-08/posts/01.webp" alt="Пост о выборе кухни"><img src="assets/cases/saratov-kitchens-2026-08/posts/03.webp" alt="Пост о модели Beverly"><img src="assets/cases/saratov-kitchens-2026-08/posts/05.webp" alt="Пост о бесплатном замере"></div></div></section>
-          <section class="page-section page-section--compact"><div class="inner case-metrics"><div class="case-metric"><b>15</b>публикаций</div><div class="case-metric"><b>5 / 34</b>каруселей / слайдов</div><div class="case-metric"><b>5</b>экранов сторис</div><div class="case-metric"><b>5</b>площадок</div></div></section>
+          <header class="site-header"><div class="site-nav"><a href="#atlas-main" aria-label="Главная lemonmedia"><img src="assets/design/logo-dark.svg" alt="lemonmedia"></a><nav class="site-nav__links"><a href="#atlas-examples">Работы</a><a href="#main-process">Как работаем</a><a href="#atlas-pricing">Цены</a><a href="#atlas-audit">Бесплатный разбор</a></nav><div class="site-nav__actions"><a class="btn" href="#case-final">Обсудить проект</a></div></div></header>
+          <section class="page-section page-section--dark"><div class="inner case-cover"><div><p class="case-identity">Саратов Кухни - кухни на заказ, Саратов</p><h1>Показать кухни так, чтобы им доверили ремонт</h1><p class="lead">Связный контент-план о выборе кухни, готовых решениях, возражениях и предложениях бренда. Задача - помочь аудитории разобраться в выборе и подвести к обращению без обещаний коммерческого результата.</p><a class="btn" href="#case-plan">Смотреть весь месяц</a></div><div class="case-cover__media"><img src="assets/cases/saratov-kitchens-2026-08/posts/01.webp" alt="Пост о выборе кухни"><img src="assets/cases/saratov-kitchens-2026-08/posts/03.webp" alt="Пост о модели Beverly"><img src="assets/cases/saratov-kitchens-2026-08/posts/05.webp" alt="Пост о бесплатном замере"></div></div></section>
+          <section class="page-section page-section--compact"><div class="inner case-metrics"><div class="case-metric"><b>15</b>публикаций</div><div class="case-metric"><b>5 / 34</b>каруселей / слайдов</div><div class="case-metric"><b>49</b>визуалов</div><div class="case-metric"><b>5</b>площадок</div></div></section>
           <section class="page-section page-section--soft case-skin"><div class="inner"><h2>От страха перед ремонтом - к понятному следующему шагу</h2><div class="logic-grid"><article class="logic-card"><b>01 · Барьер</b><h3>Сложно выбрать</h3><p>Покупатель боится ошибиться с материалом, цветом, планировкой и ценой.</p></article><article class="logic-card"><b>02 · Темы</b><h3>Помочь разобраться</h3><p>Выбор фасадов, проверка перед заказом, мифы и реальные планировки.</p></article><article class="logic-card"><b>03 · Ритм</b><h3>Каждые два дня</h3><p>15 публикаций с 5 августа по 2 сентября: польза, работы, продукт и предложения.</p></article><article class="logic-card"><b>04 · Стиль</b><h3>Кухня - главный герой</h3><p>Крупные интерьеры, ясные подписи и единая система, которая не спорит с продуктом.</p></article><article class="logic-card"><b>05 · Действие</b><h3>Замер и обращение</h3><p>Контент ведёт к бесплатному замеру, 3D-проекту и запросу стоимости.</p></article></div></div></section>
           <section class="page-section"><div class="inner"><h2>Не просто показать кухни - помочь представить свою</h2><p class="lead">Вместо бесконечной витрины мы чередуем готовые интерьеры с подсказками: что проверить, как выбрать, чего не бояться и какой шаг сделать дальше.</p><div class="gallery-2x2"><img src="assets/cases/saratov-kitchens-2026-08/posts/02.webp" alt="Двухцветная классика"><img src="assets/cases/saratov-kitchens-2026-08/posts/08.webp" alt="Кухня без ручек"><img src="assets/cases/saratov-kitchens-2026-08/posts/12.webp" alt="Фасады кухни"><img src="assets/cases/saratov-kitchens-2026-08/posts/14.webp" alt="Модель Provence"></div></div></section>
           <section class="page-section page-section--dark" id="case-plan"><div class="inner content-plan"><div><h2>Весь контент-план целиком</h2><p class="lead">Каждая тема - с задачей и датой. В плане 15 публикаций: 10 обычных постов и 5 каруселей. Публикации запланированы каждые два дня.</p></div><div class="plan-list"><article><b>5 августа</b><span>Как выбрать кухню и не переделывать через год</span></article><article><b>7 августа</b><span>Двухцветная классика на годы</span></article><article><b>9 августа</b><span>Модель Beverly - тёплая классика</span></article><article><b>11 августа</b><span>Кухня на заказ = переплата</span></article><article><b>13 августа</b><span>Бесплатный замер и 3D-проект</span></article><article><b>15 августа</b><span>Маленькая кухня-студия</span></article><article><b>17 августа</b><span>Что проверить перед заказом кухни</span></article><article><b>19 августа</b><span>Кухня без ручек с профилем Gola</span></article><article><b>21 августа</b><span>Серая угловая кухня с барной стойкой</span></article><article><b>23 августа</b><span>Мифы о кухнях на заказ</span></article><article><b>25 августа</b><span>Модели, которые выбирают чаще всего</span></article><article><b>27 августа</b><span>Из чего делают фасады кухни</span></article><article><b>29 августа</b><span>Зелёная кухня без страха цвета</span></article><article><b>31 августа</b><span>Модель Provence - светлая классика</span></article><article><b>2 сентября</b><span>Кухня в рассрочку 0%</span></article></div></div></section>
           <section class="page-section page-section--soft"><div class="inner format-showcase"><div><h2>Лента · Карусели · Сторис</h2><div class="tabs"><span>Лента</span><span>Карусели</span><span>Сторис</span></div></div><div class="format-gallery"><img src="assets/cases/saratov-kitchens-2026-08/posts/01.webp" alt="Реальный материал проекта"><img src="assets/cases/saratov-kitchens-2026-08/posts/03.webp" alt="Реальный материал проекта"><img src="assets/cases/saratov-kitchens-2026-08/posts/05.webp" alt="Реальный материал проекта"><img src="assets/cases/saratov-kitchens-2026-08/posts/08.webp" alt="Реальный материал проекта"><img src="assets/cases/saratov-kitchens-2026-08/posts/12.webp" alt="Реальный материал проекта"></div><h3>Карусель по слайдам</h3><div class="format-gallery"><img src="assets/cases/saratov-kitchens-2026-08/carousels/06/01.webp" alt="Реальный материал проекта"><img src="assets/cases/saratov-kitchens-2026-08/carousels/06/02.webp" alt="Реальный материал проекта"><img src="assets/cases/saratov-kitchens-2026-08/carousels/06/03.webp" alt="Реальный материал проекта"><img src="assets/cases/saratov-kitchens-2026-08/carousels/06/04.webp" alt="Реальный материал проекта"><img src="assets/cases/saratov-kitchens-2026-08/carousels/06/05.webp" alt="Реальный материал проекта"></div><h3>Сторис одной серией</h3><div class="format-gallery format-gallery--stories"><img src="assets/cases/saratov-kitchens-2026-08/stories/01.webp" alt="Реальный материал проекта"><img src="assets/cases/saratov-kitchens-2026-08/stories/02.webp" alt="Реальный материал проекта"><img src="assets/cases/saratov-kitchens-2026-08/stories/03.webp" alt="Реальный материал проекта"><img src="assets/cases/saratov-kitchens-2026-08/stories/04.webp" alt="Реальный материал проекта"><img src="assets/cases/saratov-kitchens-2026-08/stories/05.webp" alt="Реальный материал проекта"></div></div></section>
           <section class="page-section"><div class="inner result-card"><div><h2>Честный результат</h2></div><div><p>Подготовлен контент-план из 15 публикаций: 10 обычных постов, 5 каруселей, 4 готовых экрана сторис и 1 экран под репост публикации. Материалы подготовлены для размещения на 5 площадках.</p><p><strong>Не заявляем:</strong> продажи, заявки, выручку, рост охватов или подписчиков - эти данные не измерялись.</p><a class="btn btn--ghost" href="https://vk.ru/sk.saratov">Проверить группу клиента ↗</a></div></div></section>
-          <section class="page-section page-section--dark" id="case-final"><div class="inner final-grid"><div><h2>Хотите такой же контент для своего бизнеса?</h2><p class="lead">Напишите нам - покажем, как похожий объём будет выглядеть в вашей нише. В заявке уже стоит контекст «хочу как в кейсе Саратов Кухни».</p></div><form class="lead-form"><h3>Хочу как в этом кейсе</h3><div class="form-tabs"><span>Напишу сам</span><span>Свяжитесь со мной</span></div><div class="messengers"><span>ВКонтакте</span><span>Telegram</span><span>WhatsApp</span><span>MAX</span><span>Instagram*</span></div><div class="field"><label>Имя</label><input placeholder="Как вас зовут"></div><div class="field"><label>Телефон</label><input placeholder="+7 900 000-00-00"></div><button class="btn" type="button">Отправить</button><small>Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности. *Instagram принадлежит Meta, признанной экстремистской организацией и запрещённой в РФ.</small></form></div></section>
-          <footer class="site-footer"><div class="inner site-footer__grid"><div><img src="assets/design/logo-white.svg" alt="lemonmedia"><p>Регулярный контент под ключ для российского малого и среднего бизнеса. Команда lemonmedia работает с 2020 года.</p></div><div class="site-footer__col"><strong>Выбрать</strong><a href="#atlas-pricing">Цены и конструктор</a><a href="#atlas-examples">Работы</a><a href="#main-process">Как работаем</a><a href="compare.html">Сравнение</a></div><div class="site-footer__col"><strong>Узнать больше</strong><a href="reviews.html">Отзывы</a><a href="about.html">О компании</a><a href="services.html">Разовые услуги</a><a href="partners-design.html">Партнёрам</a><a href="articles.html">Статьи</a><a href="faq.html">Все вопросы</a></div><div class="site-footer__col"><strong>Начать</strong><a href="#case-final">Хочу похожий проект</a><a href="#atlas-audit">Бесплатный разбор</a><a href="legal.html#offer">Условия гарантии</a><a href="legal.html#offer">Условия работы</a><a href="legal.html#privacy">Конфиденциальность</a></div></div></footer>
+          <section class="page-section page-section--dark" id="case-final"><div class="inner final-grid"><div><h2>Хотите такой же контент для своего бизнеса?</h2><p class="lead">Напишите нам - покажем, как это будет выглядеть в вашей нише.</p><p class="tab-note">Тариф этого проекта не записан в исходных данных. Не подставляем его наугад - перед публикацией нужно сверить с договором.</p></div><form class="lead-form"><h3>Хочу как в кейсе «Саратов Кухни»</h3><div class="form-tabs"><span>Напишу сам</span><span>Свяжитесь со мной</span></div><div class="messengers"><span>ВКонтакте</span><span>Telegram</span><span>WhatsApp</span><span>MAX</span><span>Instagram*</span></div><div class="field"><label>Имя</label><input placeholder="Как вас зовут"></div><div class="field"><label>Телефон</label><input placeholder="+7 900 000-00-00"></div><button class="btn" type="button">Отправить</button><small>Менеджер ответит в течение дня, чаще - в течение часа</small><small>Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности. *Instagram принадлежит Meta, признанной экстремистской организацией и запрещённой в РФ.</small></form></div></section>
+          <footer class="site-footer"><div class="inner site-footer__grid"><div><img src="assets/design/logo-white.svg" alt="lemonmedia"><p>Ведём соцсети под ключ: контент-план, тексты, дизайн и публикация.</p><p>6 лет · 10 000+ проектов · работаем по всей России.</p></div><div class="site-footer__col"><strong>Страницы</strong><a href="#atlas-main">Главная</a><a href="#atlas-examples">Работы</a><a href="#atlas-pricing">Цены</a><a href="#atlas-audit">Бесплатный разбор</a></div><div class="site-footer__col"><strong>Услуги</strong><a href="#pricing-social">Ведение соцсетей</a><a href="#pricing-reels">Ролики</a><a href="#pricing-once">Оформление и логотип</a><a href="#case-final">Хочу похожий проект</a></div></div></footer>
         </article>
       </div>
       <div class="atlas-page-wrap" id="atlas-audit">
         <div class="atlas-label"><b>05 · Бесплатный разбор</b><span>5 блоков · безопасный первый шаг</span></div>
         <article class="atlas-page">
-          <header class="site-header"><div class="site-nav"><img src="assets/design/logo-dark.svg" alt="lemonmedia"><nav class="site-nav__links"><a href="#atlas-examples">Работы</a><a href="#main-process">Как работаем</a><a href="#atlas-pricing">Цены</a><a href="reviews.html">Отзывы</a><a href="about.html">О компании</a><a href="articles.html">Статьи</a></nav><div class="site-nav__actions"><a class="btn" href="#audit-form">Начать работу</a></div></div></header>
-          <section class="page-section page-section--purple-soft"><div class="inner audit-hero"><div><h1>Бесплатно разберём ваши соцсети</h1><p class="lead">Пришлите ссылку на группу или профиль - маркетолог посмотрит глазами вашего клиента и честно скажет: что уже работает, что отпугивает и что исправить в первую очередь.</p><a class="btn" href="#audit-form">Получить разбор</a><p class="trust" style="margin-top:18px">Бесплатно и без обязательств. Разбор придёт в мессенджер - текстом или видео.</p></div><div class="missing-proof"><div><strong>Нужен настоящий кадр видео-разбора</strong><p>Материала в папке сайта нет. До его получения мы не показываем выдуманные таймкоды, интерфейс или результат.</p></div></div></div></section>
-          <section class="page-section"><div class="inner"><h2>Что вы получите</h2><div class="audit-list"><article><h3>Оформление глазами клиента</h3><p>Шапка, описание, меню, виджеты, закреплённый пост - что видно в первые 10 секунд.</p></article><article><h3>Что уже работает</h3><p>Фиксируем сильные места, чтобы не сломать их при изменениях.</p></article><article><h3>Что исправить первым</h3><p>Два-три шага с самым быстрым и понятным эффектом.</p></article><article><h3>Темы для контента</h3><p>О чём вашему бизнесу стоит рассказывать аудитории.</p></article><article><h3>Честный следующий шаг</h3><p>Иногда это «справитесь своими силами» - и мы так и пишем.</p></article></div></div></section>
+          <header class="site-header"><div class="site-nav"><a href="#atlas-main" aria-label="Главная lemonmedia"><img src="assets/design/logo-dark.svg" alt="lemonmedia"></a><nav class="site-nav__links"><a href="#atlas-examples">Работы</a><a href="#main-process">Как работаем</a><a href="#atlas-pricing">Цены</a><a href="#atlas-audit">Бесплатный разбор</a></nav><div class="site-nav__actions"><a class="btn" href="#audit-form">Получить разбор</a></div></div></header>
+          <section class="page-section page-section--purple-soft"><div class="inner audit-hero"><div><h1>Бесплатно разберём ваши соцсети</h1><p class="lead">Пришлите ссылку на группу или профиль - маркетолог посмотрит глазами вашего клиента и честно скажет: что уже работает, что отпугивает и что исправить в первую очередь.</p><a class="btn" href="#audit-form">Получить разбор</a><p class="trust" style="margin-top:18px">Бесплатно и без обязательств. Разбор придёт вам в мессенджер - текстом или видео.</p></div><div class="missing-proof"><div><strong>Нужен настоящий кадр видео-разбора</strong><p>Материала в папке сайта нет. До его получения мы не показываем выдуманные таймкоды, интерфейс или результат.</p></div></div></div></section>
+          <section class="page-section"><div class="inner"><h2>Что вы получите</h2><div class="audit-list"><article><h3>Оформление глазами клиента</h3><p>Шапка, описание, меню, виджеты, закреплённый пост - что видит человек в первые 10 секунд и почему уходит.</p></article><article><h3>Что уже работает</h3><p>Чтобы не сломать при изменениях.</p></article><article><h3>Что исправить первым</h3><p>2-3 шага с самым быстрым эффектом.</p></article><article><h3>Темы для контента</h3><p>О чём вашему бизнесу стоит рассказывать аудитории.</p></article><article><h3>Честный следующий шаг</h3><p>Иногда это «справитесь своими силами» - и мы так и пишем.</p></article></div></div></section>
           <section class="page-section page-section--soft"><div class="inner audit-example"><div><h2>Так выглядит разбор</h2><p class="lead">Тренер по физической реабилитации завёл группу ВКонтакте и прислал ссылку. В видео-разборе маркетолог показал, как перестроить шапку, меню и закреп под запись на онлайн-ведение. Совет понравился - клиент заказал оформление группы и ведение контента.</p><p><strong>Для публикации нужны доказательства:</strong> 2-3 настоящих кадра разбора и «до/после» из Битрикс24.</p></div><div class="audit-example__frames"><div class="missing-proof"><div><strong>Кадр «до»</strong><p>Исходник ещё не загружен.</p></div></div><div class="missing-proof"><div><strong>Кадр «после»</strong><p>Исходник ещё не загружен.</p></div></div></div></div></section>
           <section class="page-section page-section--lemon-soft page-section--compact"><div class="inner"><h2>Честно: зачем мы это делаем</h2><p class="lead">Разбор - наш способ познакомиться. Части бизнесов после него хватает своих рук - и это нормально. Кому-то удобнее отдать контент нам - для этого есть тарифы от 4 990 ₽/мес. Навязывать не будем: разбор полезен сам по себе.</p><div class="metric-grid"><div class="metric"><b>6 лет</b>работаем</div><div class="metric"><b>10 000+</b>проектов</div><div class="metric"><b>200+</b>отзывов</div><div class="metric"><b>5,0</b>рейтинг</div></div></div></section>
-          <section class="page-section page-section--dark" id="audit-form"><div class="inner final-grid"><div><h2>Пришлите ссылку - получите разбор</h2><p class="lead">Разбор придёт в течение 1-2 рабочих дней. Выберите: написать нам самому или оставить контакт.</p></div><form class="lead-form"><h3>Ссылка на соцсеть</h3><div class="field"><label>Группа или профиль</label><input placeholder="vk.com/ваша-группа"></div><div class="field"><label>Пара слов о бизнесе</label><input placeholder="Необязательно"></div><div class="form-tabs"><span>Напишу сам</span><span>Свяжитесь со мной</span></div><div class="messengers"><span>ВКонтакте</span><span>Telegram</span><span>WhatsApp</span><span>MAX</span><span>Instagram*</span></div><button class="btn" type="button">Получить разбор</button><small>Разбор придёт в течение 1-2 рабочих дней</small><small>Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности. *Instagram принадлежит Meta, признанной экстремистской организацией и запрещённой в РФ.</small></form></div></section>
-          <footer class="site-footer"><div class="inner site-footer__grid"><div><img src="assets/design/logo-white.svg" alt="lemonmedia"><p>Регулярный контент под ключ для российского малого и среднего бизнеса. Команда lemonmedia работает с 2020 года.</p></div><div class="site-footer__col"><strong>Выбрать</strong><a href="#atlas-pricing">Цены и конструктор</a><a href="#atlas-examples">Работы</a><a href="#main-process">Как работаем</a><a href="compare.html">Сравнение</a></div><div class="site-footer__col"><strong>Узнать больше</strong><a href="reviews.html">Отзывы</a><a href="about.html">О компании</a><a href="services.html">Разовые услуги</a><a href="partners-design.html">Партнёрам</a><a href="articles.html">Статьи</a><a href="faq.html">Все вопросы</a></div><div class="site-footer__col"><strong>Начать</strong><a href="#atlas-pricing">Собрать пакет</a><a href="#audit-form">Бесплатный разбор</a><a href="legal.html#offer">Условия гарантии</a><a href="legal.html#offer">Условия работы</a><a href="legal.html#privacy">Конфиденциальность</a></div></div></footer>
+          <section class="page-section page-section--dark" id="audit-form"><div class="inner final-grid"><div><h2>Пришлите ссылку - получите разбор</h2></div><form class="lead-form"><h3>Ссылка на соцсеть</h3><div class="field"><label>Ссылка на вашу группу или профиль</label><input placeholder="vk.com/ваша-группа"></div><div class="field"><label>Пара слов о бизнесе</label><input placeholder="Необязательно"></div><div class="form-tabs"><span>Напишу сам</span><span>Свяжитесь со мной</span></div><div class="messengers"><span>ВКонтакте</span><span>Telegram</span><span>WhatsApp</span><span>MAX</span><span>Instagram*</span></div><button class="btn" type="button">Получить разбор</button><small>Разбор придёт в течение 1-2 рабочих дней</small><small>Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности. *Instagram принадлежит Meta, признанной экстремистской организацией и запрещённой в РФ.</small></form></div></section>
+          <footer class="site-footer"><div class="inner site-footer__grid"><div><img src="assets/design/logo-white.svg" alt="lemonmedia"><p>Ведём соцсети под ключ: контент-план, тексты, дизайн и публикация.</p><p>6 лет · 10 000+ проектов · работаем по всей России.</p></div><div class="site-footer__col"><strong>Страницы</strong><a href="#atlas-main">Главная</a><a href="#atlas-examples">Работы</a><a href="#atlas-pricing">Цены</a><a href="#atlas-audit">Бесплатный разбор</a></div><div class="site-footer__col"><strong>Услуги</strong><a href="#pricing-social">Ведение соцсетей</a><a href="#pricing-reels">Ролики</a><a href="#pricing-once">Оформление и логотип</a><a href="#audit-form">Получить разбор</a></div></div></footer>
         </article>
       </div>
     </div>
@@ -326,6 +589,361 @@
       button.setAttribute('aria-pressed', 'true');
       board.style.setProperty('--atlas-scale', button.dataset.scale);
     }));
+
+    const carouselFiles = [
+      ...Array.from({ length: 7 }, (_, index) => `06/${String(index + 1).padStart(2, '0')}.webp`),
+      ...Array.from({ length: 6 }, (_, index) => `07/${String(index + 1).padStart(2, '0')}.webp`),
+      ...Array.from({ length: 7 }, (_, index) => `10/${String(index + 1).padStart(2, '0')}.webp`),
+      ...Array.from({ length: 7 }, (_, index) => `11/${String(index + 1).padStart(2, '0')}.webp`),
+      ...Array.from({ length: 7 }, (_, index) => `13/${String(index + 1).padStart(2, '0')}.webp`)
+    ];
+
+    const makeImageGallery = (className, files, folder, alt) => {
+      const gallery = document.createElement('div');
+      gallery.className = className;
+      files.forEach((file, index) => {
+        const image = document.createElement('img');
+        image.loading = 'lazy';
+        image.src = `assets/cases/saratov-kitchens-2026-08/${folder}/${file}`;
+        image.alt = `${alt} ${index + 1}`;
+        gallery.append(image);
+      });
+      return gallery;
+    };
+
+    const wireTabs = (tabList, panels) => {
+      const tabs = [...tabList.querySelectorAll('span')];
+      tabList.setAttribute('role', 'tablist');
+      const activate = (index) => {
+        tabs.forEach((tab, tabIndex) => {
+          const active = tabIndex === index;
+          tab.classList.toggle('is-active', active);
+          tab.setAttribute('aria-selected', String(active));
+          tab.tabIndex = active ? 0 : -1;
+        });
+        panels.forEach((panel, panelIndex) => { panel.hidden = panelIndex !== index; });
+      };
+      tabs.forEach((tab, index) => {
+        tab.setAttribute('role', 'tab');
+        tab.addEventListener('click', () => activate(index));
+        tab.addEventListener('keydown', (event) => {
+          if (event.key === 'Enter' || event.key === ' ') {
+            event.preventDefault();
+            activate(index);
+          }
+        });
+      });
+      activate(0);
+    };
+
+    const monthBoard = document.querySelector('#atlas-main .month-board');
+    if (monthBoard) {
+      const tabs = monthBoard.querySelector('.tabs');
+      const plan = monthBoard.querySelector('.month-plan');
+      const feed = monthBoard.querySelector('.month-grid');
+      const stories = monthBoard.querySelector('.format-gallery--stories');
+      const titles = [...plan.querySelectorAll('span')].map((item) => item.textContent.trim());
+      const textPanel = document.createElement('div');
+      textPanel.className = 'text-preview';
+      titles.forEach((title, index) => {
+        const card = document.createElement('article');
+        card.innerHTML = `<b>${String(index + 1).padStart(2, '0')} · ${title.split(' · ').slice(1).join(' · ')}</b><small>Полный согласованный текст не хранится в папке проекта. В готовом сайте здесь откроется текст публикации без сокращений.</small>`;
+        textPanel.append(card);
+      });
+      const carouselPanel = makeImageGallery('format-gallery', carouselFiles, 'carousels', 'Слайд карусели');
+      const calendarPanel = document.createElement('div');
+      calendarPanel.className = 'calendar-preview';
+      titles.forEach((title) => {
+        const [date, ...name] = title.split(' · ');
+        const card = document.createElement('article');
+        card.innerHTML = `<b>${date}</b><span>${name.join(' · ')}</span>`;
+        calendarPanel.append(card);
+      });
+      const panels = [plan, feed, textPanel, carouselPanel, stories, calendarPanel];
+      panels.forEach((panel) => panel.classList.add('tab-panel'));
+      const summary = [...monthBoard.children].find((item) => item.tagName === 'P');
+      monthBoard.insertBefore(textPanel, summary);
+      monthBoard.insertBefore(carouselPanel, summary);
+      monthBoard.insertBefore(calendarPanel, summary);
+      wireTabs(tabs, panels);
+    }
+
+    const caseShowcase = document.querySelector('#atlas-case .format-showcase');
+    if (caseShowcase) {
+      const header = caseShowcase.firstElementChild;
+      [...caseShowcase.children].slice(1).forEach((item) => item.remove());
+      const postFiles = Array.from({ length: 15 }, (_, index) => `${String(index + 1).padStart(2, '0')}.webp`);
+      const storyFiles = Array.from({ length: 5 }, (_, index) => `${String(index + 1).padStart(2, '0')}.webp`);
+      const panels = [
+        makeImageGallery('format-gallery case-format-panel', postFiles, 'posts', 'Публикация'),
+        makeImageGallery('format-gallery case-format-panel', carouselFiles, 'carousels', 'Слайд карусели'),
+        makeImageGallery('format-gallery format-gallery--stories case-format-panel', storyFiles, 'stories', 'Экран сторис')
+      ];
+      panels.forEach((panel) => caseShowcase.append(panel));
+      wireTabs(header.querySelector('.tabs'), panels);
+    }
+
+    const tariffAssets = {
+      'Старт': [
+        ['assets/cases/saratov-kitchens-2026-08/posts/01.webp', 'Пост'],
+        ['assets/cases/ateris/posts/03.jpg', 'Пост'],
+        ['assets/cases/moscow-padel/posts/19.jpg', 'Пост']
+      ],
+      'Стандарт': [
+        ['assets/cases/saratov-kitchens-2026-08/posts/03.webp', 'Пост'],
+        ['assets/cases/saratov-kitchens-2026-08/carousels/06/01.webp', 'Карусель'],
+        ['assets/cases/saratov-kitchens-2026-08/stories/01.webp', 'Сторис']
+      ],
+      'Максимум': [
+        ['assets/cases/saratov-kitchens-2026-08/posts/08.webp', 'Пост'],
+        ['assets/cases/saratov-kitchens-2026-08/carousels/10/01.webp', 'Карусель'],
+        ['assets/cases/saratov-kitchens-2026-08/stories/03.webp', 'Сторис']
+      ]
+    };
+    document.querySelectorAll('.pricing-grid .price-card').forEach((card) => {
+      const plan = card.querySelector('h3')?.textContent.trim();
+      const assets = tariffAssets[plan];
+      if (!assets) return;
+      const preview = document.createElement('div');
+      preview.className = `tariff-preview${plan === 'Максимум' ? ' tariff-preview--max' : ''}`;
+      assets.forEach(([src, label]) => {
+        const figure = document.createElement('figure');
+        figure.innerHTML = `<img loading="lazy" src="${src}" alt="Реальный пример формата: ${label}"><figcaption>${label}</figcaption>`;
+        preview.append(figure);
+      });
+      if (plan === 'Максимум') {
+        const video = document.createElement('div');
+        video.className = 'tariff-preview__video';
+        video.textContent = 'Реальный ролик нужно добавить';
+        preview.append(video);
+      }
+      const price = card.querySelector('.price-card__price');
+      price.insertAdjacentElement('afterend', preview);
+    });
+
+    document.querySelectorAll('#pricing-once .service-card').forEach((card, index) => {
+      const proof = document.createElement('div');
+      proof.className = 'service-proof';
+      proof.textContent = index === 0 ? 'Нужен реальный носитель: оформление до / после.' : 'Нужен реальный носитель: сетка утверждённых логотипов.';
+      card.querySelector('.btn').insertAdjacentElement('beforebegin', proof);
+    });
+
+    document.querySelectorAll('.lead-form').forEach((form) => {
+      const button = form.querySelector('button');
+      const hasContactChoice = [...form.querySelectorAll('.form-tabs span')].some((item) => item.textContent.trim() === 'Напишу сам');
+      if (!hasContactChoice) return;
+      form.querySelectorAll('.field').forEach((field) => {
+        const label = field.querySelector('label')?.textContent.trim();
+        if (label === 'Имя' || label === 'Телефон') field.dataset.contactField = 'true';
+      });
+      if (!form.querySelector('[data-contact-field]')) {
+        button.insertAdjacentHTML('beforebegin', '<div class="field" data-contact-field="true"><label>Имя</label><input placeholder="Как вас зовут"></div><div class="field" data-contact-field="true"><label>Телефон</label><input placeholder="+7 900 000-00-00"></div>');
+      }
+      button.insertAdjacentHTML('beforebegin', '<div class="form-tabs contact-method"><span>Звонок</span><span>Мессенджер</span></div>');
+      form.querySelectorAll('.field').forEach((field, index) => {
+        const label = field.querySelector('label');
+        const input = field.querySelector('input');
+        if (!label || !input) return;
+        const id = `lead-field-${Math.random().toString(36).slice(2)}-${index}`;
+        input.id = id;
+        label.htmlFor = id;
+      });
+      const privacy = [...form.querySelectorAll('small')].find((item) => item.textContent.includes('политик'));
+      if (privacy) privacy.innerHTML = 'Нажимая кнопку, вы соглашаетесь с <a href="legal-design.html#privacy">политикой конфиденциальности</a>. *Instagram принадлежит Meta, признанной экстремистской организацией и запрещённой в РФ.';
+    });
+
+    const syncContactForm = (form) => {
+      const contactGroup = [...form.querySelectorAll('.form-tabs')].find((group) => [...group.querySelectorAll('span')].some((item) => item.textContent.trim() === 'Напишу сам'));
+      if (!contactGroup) return;
+      const selfWrites = contactGroup.querySelector('.is-selected')?.textContent.trim() === 'Напишу сам';
+      const messengers = form.querySelector('.messengers');
+      if (messengers) messengers.hidden = !selfWrites;
+      form.querySelectorAll('[data-contact-field]').forEach((field) => field.hidden = selfWrites);
+      const method = form.querySelector('.contact-method');
+      if (method) method.hidden = selfWrites;
+    };
+
+    document.querySelectorAll('.lead-form .form-tabs').forEach((group) => {
+      const options = [...group.querySelectorAll('span')];
+      const isContactChoice = options.some((item) => item.textContent.trim() === 'Напишу сам');
+      const initial = options.find((item) => item.textContent.trim() === 'Стандарт') || (isContactChoice ? options[0] : options[0]);
+      initial?.classList.add('is-selected');
+      options.forEach((option) => option.addEventListener('click', () => {
+        options.forEach((item) => item.classList.remove('is-selected'));
+        option.classList.add('is-selected');
+        syncContactForm(group.closest('.lead-form'));
+      }));
+    });
+
+    document.querySelectorAll('.lead-form').forEach(syncContactForm);
+
+    document.querySelectorAll('.lead-form .messengers').forEach((group) => {
+      const options = [...group.querySelectorAll('span')];
+      options[0]?.classList.add('is-selected');
+      options.forEach((option) => {
+        option.setAttribute('role', 'button');
+        option.tabIndex = 0;
+        const select = () => {
+          options.forEach((item) => item.classList.remove('is-selected'));
+          option.classList.add('is-selected');
+        };
+        option.addEventListener('click', select);
+        option.addEventListener('keydown', (event) => {
+          if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); select(); }
+        });
+      });
+    });
+
+    document.querySelectorAll('.price-card:not(.price-card--standard) .btn, .service-card--dark .btn').forEach((button) => button.classList.add('btn--ghost'));
+
+    document.querySelectorAll('.price-card .btn').forEach((button) => button.addEventListener('click', () => {
+      const plan = button.closest('.price-card')?.querySelector('h3')?.textContent.trim();
+      const form = document.querySelector(button.getAttribute('href'))?.querySelector('.lead-form');
+      if (!plan || !form) return;
+      const tariffGroup = [...form.querySelectorAll('.form-tabs')].find((group) => [...group.querySelectorAll('span')].some((item) => item.textContent.trim() === plan));
+      const option = tariffGroup ? [...tariffGroup.querySelectorAll('span')].find((item) => item.textContent.trim() === plan) : null;
+      if (!option) return;
+      option.parentElement.querySelectorAll('span').forEach((item) => item.classList.remove('is-selected'));
+      option.classList.add('is-selected');
+      let context = form.querySelector('.form-context');
+      if (!context) {
+        context = document.createElement('div');
+        context.className = 'form-context';
+        form.querySelector('h3').insertAdjacentElement('afterend', context);
+      }
+      context.textContent = `Выбрано: тариф «${plan}»`;
+    }));
+
+    document.querySelectorAll('#atlas-pricing .service-card .btn').forEach((button) => button.addEventListener('click', () => {
+      const form = document.querySelector('#pricing-final .lead-form');
+      const service = button.closest('.service-card')?.querySelector('b')?.innerText.split('\n')[0].trim();
+      if (!form || !service) return;
+      [...form.querySelectorAll('.form-tabs')].find((group) => [...group.querySelectorAll('span')].some((item) => item.textContent.trim() === 'Стандарт'))?.querySelectorAll('span').forEach((item) => item.classList.remove('is-selected'));
+      let context = form.querySelector('.form-context');
+      if (!context) {
+        context = document.createElement('div');
+        context.className = 'form-context';
+        form.querySelector('h3').insertAdjacentElement('afterend', context);
+      }
+      context.textContent = `Выбрано: ${service}`;
+    }));
+
+    document.querySelectorAll('.lead-form button').forEach((button) => button.addEventListener('click', () => {
+      const form = button.closest('.lead-form');
+      form.querySelector('.form-status')?.remove();
+      form.querySelectorAll('.field-error').forEach((item) => item.remove());
+      form.querySelectorAll('[aria-invalid="true"]').forEach((item) => item.removeAttribute('aria-invalid'));
+      const contactGroup = [...form.querySelectorAll('.form-tabs')].find((group) => [...group.querySelectorAll('span')].some((item) => item.textContent.trim() === 'Напишу сам'));
+      const selfWrites = contactGroup?.querySelector('.is-selected')?.textContent.trim() === 'Напишу сам';
+      let invalid = false;
+      form.querySelectorAll('.field').forEach((field) => {
+        const label = field.querySelector('label')?.textContent.trim() || '';
+        const input = field.querySelector('input');
+        if (!input || !label.startsWith('Ссылка на вашу') || input.value.trim()) return;
+        invalid = true;
+        input.setAttribute('aria-invalid', 'true');
+        const error = document.createElement('p');
+        error.className = 'field-error';
+        error.textContent = 'Добавьте ссылку на группу или профиль.';
+        input.insertAdjacentElement('afterend', error);
+      });
+      if (!selfWrites) {
+        form.querySelectorAll('[data-contact-field] input').forEach((input) => {
+          if (input.value.trim()) return;
+          invalid = true;
+          input.setAttribute('aria-invalid', 'true');
+          const error = document.createElement('p');
+          error.className = 'field-error';
+          error.textContent = 'Заполните это поле или выберите «Напишу сам».';
+          input.insertAdjacentElement('afterend', error);
+        });
+      }
+      if (invalid) return;
+      const status = document.createElement('div');
+      status.className = 'form-status';
+      if (selfWrites) {
+        const channel = form.querySelector('.messengers .is-selected')?.textContent.trim() || 'мессенджер';
+        status.textContent = `Прототип перехода: в рабочем сайте здесь откроется ${channel}. Ссылки lemonmedia пока не записаны в исходных данных.`;
+      } else {
+        status.textContent = 'Прототип состояния после отправки: заявка принята, менеджер ответит в течение дня, чаще - в течение часа.';
+      }
+      button.insertAdjacentElement('afterend', status);
+    }));
+
+    document.querySelectorAll('#atlas-main .case-grid .case-card').forEach((card, index) => {
+      if (index === 0) return;
+      const link = card.querySelector('.btn');
+      link.href = '#atlas-examples';
+      link.textContent = 'Смотреть в каталоге';
+    });
+
+    document.querySelectorAll('#atlas-examples .catalog-grid .case-card').forEach((card, index) => {
+      if (index === 0) return;
+      const link = card.querySelector('.btn');
+      link.removeAttribute('href');
+      link.setAttribute('aria-disabled', 'true');
+      link.textContent = 'Кейс ещё не собран';
+    });
+
+    const catalog = document.querySelector('#atlas-examples .catalog-grid');
+    if (catalog) {
+      const cards = [...catalog.querySelectorAll('.case-card')];
+      const rows = [...document.querySelectorAll('#atlas-examples .catalog-filter-row')];
+      const nicheChips = rows.slice(0, 2).flatMap((row) => [...row.querySelectorAll('.pill')]);
+      const formatChips = [...rows[2].querySelectorAll('.pill')];
+      const moreButton = [...catalog.querySelectorAll('button')].find((button) => button.textContent.includes('Показать ещё'));
+      const moreWrap = moreButton?.parentElement;
+      const empty = document.createElement('p');
+      empty.className = 'catalog-empty';
+      empty.hidden = true;
+      empty.textContent = 'В загруженных материалах пока нет проекта с таким сочетанием. Фильтр работает честно и не подменяет результат.';
+      catalog.insertBefore(empty, moreWrap || null);
+      let niche = 'Все';
+      let format = 'Посты';
+      let expanded = false;
+      const formatsByProject = {
+        'Саратов Кухни': ['Посты', 'Карусели', 'Сторис'],
+        'FR-moto': ['Посты', 'Карусели', 'Сторис'],
+        'Атерис': ['Посты', 'Карусели'],
+        'Сергей Глибин': ['Посты', 'Карусели', 'Сторис'],
+        'MoscowPadel': ['Посты', 'Карусели'],
+        'Ритуал-С': ['Посты', 'Карусели'],
+        'МастерПол': ['Посты', 'Карусели', 'Сторис'],
+        'Fjord-Petersburg': ['Посты', 'Карусели'],
+        'ЧЕБУССЭР': ['Посты', 'Карусели', 'Сторис'],
+        'Доброе сердце': ['Посты', 'Карусели']
+      };
+      const matchesFormat = (card) => {
+        const title = card.querySelector('h3')?.textContent.split(' · ')[0].trim() || '';
+        return formatsByProject[title]?.includes(format) || false;
+      };
+      const applyFilters = () => {
+        const matched = cards.filter((card) => {
+          const badge = card.querySelector('.price-card__badge')?.textContent.trim() || '';
+          return (niche === 'Все' || badge.includes(niche)) && matchesFormat(card);
+        });
+        cards.forEach((card) => { card.hidden = true; });
+        matched.slice(0, expanded ? matched.length : 6).forEach((card) => { card.hidden = false; });
+        empty.hidden = matched.length !== 0;
+        if (moreWrap) moreWrap.hidden = expanded || matched.length <= 6;
+      };
+      nicheChips.forEach((chip) => chip.addEventListener('click', () => {
+        niche = chip.textContent.trim();
+        expanded = false;
+        nicheChips.forEach((item) => item.classList.toggle('is-active', item === chip));
+        applyFilters();
+      }));
+      formatChips.forEach((chip) => chip.addEventListener('click', () => {
+        format = chip.textContent.trim();
+        expanded = false;
+        formatChips.forEach((item) => item.classList.toggle('is-active', item === chip));
+        applyFilters();
+      }));
+      nicheChips[0]?.classList.add('is-active');
+      formatChips[0]?.classList.add('is-active');
+      moreButton?.addEventListener('click', () => { expanded = true; applyFilters(); });
+      applyFilters();
+    }
   </script>
 </body>
 </html>
