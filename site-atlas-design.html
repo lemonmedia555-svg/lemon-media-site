@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="assets/design/components.css">
   <style>
     * { box-sizing: border-box; }
+    [hidden] { display: none !important; }
     html { scroll-behavior: smooth; }
     body { margin: 0; font-family: var(--lm-font-sans); color: var(--lm-text-primary); background: var(--lm-surface-inverse); }
     button, input { font: inherit; }
@@ -23,7 +24,9 @@
     .atlas-nav { display: flex; gap: 8px; flex-wrap: wrap; }
     .atlas-nav a, .atlas-zoom button { min-height: 40px; padding: 9px 14px; border: 1px solid var(--lm-color-neutral-800); border-radius: var(--lm-radius-pill); color: var(--lm-text-inverse); background: var(--lm-color-neutral-900); text-decoration: none; cursor: pointer; }
     .atlas-nav a:hover, .atlas-zoom button:hover, .atlas-zoom button[aria-pressed="true"] { color: var(--lm-text-on-lemon); background: var(--lm-surface-lemon); border-color: var(--lm-surface-lemon); }
-    .atlas-zoom { display: flex; gap: 8px; }
+    .atlas-toolbar { min-height: 72px; padding: 12px 24px; }
+    .atlas-toolbar img { width: 154px; }
+    .atlas-zoom { display: flex; gap: 8px; margin-left: auto; }
     .atlas-stage { overflow: auto; min-height: calc(100vh - 76px); padding: 56px; background: radial-gradient(circle at 20% 0%, var(--lm-color-neutral-800), var(--lm-surface-inverse) 44%); }
     .atlas-board { --atlas-scale: .4; display: grid; grid-template-columns: repeat(5, 1440px); align-items: start; gap: 96px; width: max-content; zoom: var(--atlas-scale); }
     .atlas-page-wrap { display: grid; gap: 18px; }
@@ -437,39 +440,207 @@
       .atlas-map__node::after { display: none !important; }
     }
   </style>
+  <style id="main-art-direction-v2">
+    /* Главная v2: новая композиция поверх сохранённых текстов и структуры. */
+    #atlas-main .atlas-page { background: var(--lm-surface-default); }
+    #atlas-main .page-section { margin: 0; padding: 128px 64px; border-radius: 0; }
+    #atlas-main h1, #atlas-main h2 { text-wrap: balance; }
+    #atlas-main h2 { max-width: 920px; }
+    #atlas-main .btn { min-height: 56px; padding: 16px 28px; border-radius: var(--lm-radius-pill); font-size: 17px; box-shadow: none; }
+    #atlas-main .btn:hover { transform: translateY(-2px); box-shadow: var(--lm-shadow-soft); }
+    #atlas-main .btn--ghost { color: var(--lm-text-primary); background: transparent; border-color: currentColor; }
+
+    #atlas-main .site-header { padding: 20px 64px 0; background: var(--lm-color-cool-050); }
+    #atlas-main .site-nav { min-height: 72px; padding: 10px 12px 10px 24px; border: 1px solid var(--lm-color-border); background: var(--lm-surface-default); box-shadow: var(--lm-shadow-soft); }
+    #atlas-main .site-nav__actions .btn { min-height: 48px; padding: 12px 22px; color: var(--lm-text-inverse); background: var(--lm-surface-inverse); }
+
+    #atlas-main .main-hero { min-height: 940px; padding-top: 96px; padding-bottom: 64px; overflow: hidden; background: var(--lm-color-cool-050); }
+    #atlas-main .hero-grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 24px; align-items: center; }
+    #atlas-main .hero-grid > div:first-child { grid-column: 1 / span 6; position: relative; z-index: 2; padding-right: 24px; }
+    #atlas-main .main-hero h1 { max-width: 660px; margin-bottom: 32px; font-size: 58px; line-height: 1.02; letter-spacing: -.03em; }
+    #atlas-main .main-hero .lead { max-width: 580px; margin-bottom: 28px; }
+    #atlas-main .hero-checks { gap: 0; margin: 32px 0; border-top: 1px solid var(--lm-color-border-2); }
+    #atlas-main .hero-checks span { min-height: 52px; padding: 14px 0; border-bottom: 1px solid var(--lm-color-border-2); font-size: 17px; }
+    #atlas-main .hero-actions { align-items: center; gap: 24px; margin: 32px 0 24px; }
+    #atlas-main .hero-actions .btn--ghost { min-height: auto; padding: 10px 0; border: 0; border-bottom: 1px solid currentColor; border-radius: 0; }
+    #atlas-main .trust { max-width: 520px; font-size: 15px; line-height: 1.6; }
+    #atlas-main .work-wall { grid-column: 7 / -1; position: relative; height: 780px; grid-template-columns: repeat(5, 1fr); gap: 12px; padding: 20px; overflow: hidden; border: 1px solid var(--lm-color-border); border-radius: var(--lm-radius-lg); background: var(--lm-color-lavender-100); box-shadow: var(--lm-shadow-pop); transform: none; }
+    #atlas-main .work-wall::before { content: ""; position: absolute; z-index: 0; width: 320px; height: 320px; right: -80px; top: -80px; border-radius: 50%; background: var(--lm-surface-lemon); filter: blur(80px); opacity: .45; }
+    #atlas-main .work-wall__column { position: relative; z-index: 1; gap: 12px; }
+    #atlas-main .work-wall img { display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: center; border-radius: var(--lm-radius-md); box-shadow: var(--lm-shadow-card); }
+    #atlas-main .work-wall img.work-wall__story { aspect-ratio: 9 / 16; }
+
+    #atlas-main .page-section:nth-of-type(2) { position: relative; overflow: hidden; color: var(--lm-text-inverse); background: var(--lm-surface-inverse); }
+    #atlas-main .page-section:nth-of-type(2)::before { content: "1 → 5"; position: absolute; right: 64px; top: 24px; color: var(--lm-color-neutral-900); font-size: 180px; font-weight: 800; line-height: 1; letter-spacing: -.06em; }
+    #atlas-main .page-section:nth-of-type(2) .inner { position: relative; z-index: 1; display: grid; grid-template-columns: repeat(12, 1fr); gap: 24px; align-items: center; }
+    #atlas-main .page-section:nth-of-type(2) h2,
+    #atlas-main .page-section:nth-of-type(2) .lead,
+    #atlas-main .page-section:nth-of-type(2) .pill-grid,
+    #atlas-main .page-section:nth-of-type(2) .trust { grid-column: 1 / span 5; }
+    #atlas-main .page-section:nth-of-type(2) h2 { align-self: end; max-width: 520px; }
+    #atlas-main .page-section:nth-of-type(2) .lead { color: var(--lm-color-neutral-100); }
+    #atlas-main .page-section:nth-of-type(2) .pill-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; margin: 0; }
+    #atlas-main .page-section:nth-of-type(2) .pill { min-height: 48px; justify-content: flex-start; padding: 12px 16px; border-color: var(--lm-color-neutral-800); color: var(--lm-text-inverse); background: var(--lm-color-neutral-900); box-shadow: none; }
+    #atlas-main .page-section:nth-of-type(2) .trust { color: var(--lm-color-muted-2); }
+    #atlas-main .platform-proof { grid-column: 7 / -1; grid-row: 1 / span 4; display: grid; grid-template-columns: repeat(6, 1fr); grid-auto-rows: 220px; gap: 16px; align-items: stretch; }
+    #atlas-main .platform-proof article { display: flex; min-height: 0; flex-direction: column; padding: 12px; border: 1px solid var(--lm-color-neutral-800); border-radius: var(--lm-radius-lg); color: var(--lm-text-primary); background: var(--lm-surface-default); box-shadow: none; transform: none; }
+    #atlas-main .platform-proof article:first-child { grid-column: span 4; grid-row: span 2; }
+    #atlas-main .platform-proof article:not(:first-child) { grid-column: span 2; }
+    #atlas-main .platform-proof article:nth-child(2),
+    #atlas-main .platform-proof article:nth-child(5) { transform: none; }
+    #atlas-main .platform-proof img { min-height: 0; flex: 1; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: center; border-radius: var(--lm-radius-md); }
+    #atlas-main .platform-proof span { flex: 0 0 auto; }
+    #atlas-main .platform-proof article::after { flex: 0 0 auto; }
+
+    #atlas-main .page-section:nth-of-type(3) { background: var(--lm-surface-default); }
+    #atlas-main .page-section:nth-of-type(3) h2 { max-width: 760px; }
+    #atlas-main .page-section:nth-of-type(3) .lead { max-width: 760px; }
+    #atlas-main .step-grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 16px; margin-top: 64px; }
+    #atlas-main .step { display: flex; min-height: 660px; flex-direction: column; grid-column: span 3; padding: 24px; overflow: hidden; border: 0; border-radius: var(--lm-radius-lg); background: var(--lm-color-surface); box-shadow: none; }
+    #atlas-main .step:nth-child(1), #atlas-main .step:nth-child(4) { grid-column: span 3; }
+    #atlas-main .step:nth-child(2), #atlas-main .step:nth-child(3) { grid-column: span 3; background: var(--lm-surface-purple-soft); }
+    #atlas-main .step b { display: block; width: auto; height: auto; margin: 0 0 24px; color: var(--lm-color-purple-600); background: transparent; font-size: 52px; line-height: .9; letter-spacing: -.06em; }
+    #atlas-main .step h3 { max-width: 520px; margin-bottom: 16px; font-size: 24px; }
+    #atlas-main .step p { max-width: 540px; margin-bottom: 24px; color: var(--lm-color-muted); font-size: 15px; line-height: 1.6; }
+    #atlas-main .step img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 10; margin: auto 0 0; padding: 12px; object-fit: contain; object-position: center; border: 1px solid var(--lm-color-border); border-radius: var(--lm-radius-md); background: var(--lm-surface-default); box-shadow: var(--lm-shadow-card); }
+    #atlas-main .step-proof-button { position: relative; display: block; width: 100%; margin: auto 0 0; padding: 0; border: 0; background: transparent; cursor: zoom-in; }
+    #atlas-main .step-proof-button img { margin: 0; }
+    #atlas-main .step-proof-button::after { content: "Увеличить ↗"; position: absolute; right: 12px; bottom: 12px; padding: 8px 12px; border-radius: var(--lm-radius-pill); color: var(--lm-text-inverse); background: var(--lm-surface-inverse); font-size: 15px; font-weight: 800; }
+    .proof-lightbox { position: fixed; inset: 0; z-index: 3000; display: grid; place-items: center; padding: 64px; color: var(--lm-text-inverse); background: var(--lm-surface-inverse); }
+    .proof-lightbox__figure { width: min(1280px, 100%); margin: 0; }
+    .proof-lightbox__image { display: block; width: 100%; max-height: 80vh; aspect-ratio: 16 / 10; padding: 24px; object-fit: contain; border-radius: var(--lm-radius-lg); background: var(--lm-surface-default); box-shadow: var(--lm-shadow-pop); }
+    .proof-lightbox__caption { margin-top: 16px; color: var(--lm-color-neutral-100); font-size: 17px; }
+    .proof-lightbox__close { position: absolute; right: 32px; top: 24px; min-width: 48px; min-height: 48px; border: 1px solid var(--lm-color-neutral-800); border-radius: 50%; color: var(--lm-text-inverse); background: var(--lm-color-neutral-900); font-size: 24px; cursor: pointer; }
+    #atlas-main .page-section:nth-of-type(3) > .inner > p[style] { margin-top: 40px !important; font-size: 20px; }
+    #atlas-main .page-section:nth-of-type(3) .missing-proof { position: relative; display: flex; min-height: 360px !important; align-items: flex-end; justify-content: flex-start; margin-top: 40px !important; padding: 48px; overflow: hidden; border: 0; color: var(--lm-text-inverse); text-align: left; background: var(--lm-grad-brand-dark); }
+    #atlas-main .page-section:nth-of-type(3) .missing-proof::before { content: "▶"; position: absolute; right: 64px; top: 50%; display: grid; width: 144px; height: 144px; place-items: center; border-radius: 50%; color: var(--lm-text-on-lemon); background: var(--lm-surface-lemon); box-shadow: var(--lm-glow-lemon); transform: translateY(-50%); font-size: 44px; }
+    #atlas-main .page-section:nth-of-type(3) .missing-proof > div { position: relative; z-index: 1; max-width: 600px; }
+    #atlas-main .page-section:nth-of-type(3) .missing-proof strong { font-size: 30px; }
+    #atlas-main .page-section:nth-of-type(3) .missing-proof p { margin: 12px 0 0; color: var(--lm-color-neutral-100); }
+
+    #atlas-main .page-section:nth-of-type(4) { padding-inline: 64px; color: var(--lm-text-inverse); background: var(--lm-surface-inverse); }
+    #atlas-main .page-section:nth-of-type(4) .inner { display: grid; grid-template-columns: repeat(12, 1fr); gap: 24px; align-items: start; }
+    #atlas-main .page-section:nth-of-type(4) h2,
+    #atlas-main .page-section:nth-of-type(4) > .inner > .lead { grid-column: 1 / span 4; }
+    #atlas-main .page-section:nth-of-type(4) h2 { position: sticky; top: 96px; max-width: 420px; }
+    #atlas-main .page-section:nth-of-type(4) > .inner > .lead { grid-row: 2; max-width: 420px; color: var(--lm-color-muted-2); }
+    #atlas-main .month-board { grid-column: 5 / -1; grid-row: 1 / span 3; gap: 24px; margin: 0; padding: 32px; border: 1px solid var(--lm-color-neutral-800); border-radius: var(--lm-radius-lg); background: var(--lm-color-neutral-900); }
+    #atlas-main .month-board .tabs { padding-bottom: 20px; border-bottom: 1px solid var(--lm-color-neutral-800); }
+    #atlas-main .month-board .tabs span { min-height: 42px; display: inline-flex; align-items: center; padding: 10px 16px; }
+    #atlas-main .month-plan { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+    #atlas-main .month-plan span { min-height: 64px; display: flex; align-items: center; padding: 12px 16px; }
+    #atlas-main .month-grid { grid-template-columns: repeat(4, 1fr); gap: 12px; }
+    #atlas-main .month-grid img { display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: center; transform: none; }
+    #atlas-main .month-board .format-gallery { grid-template-columns: repeat(4, 1fr); }
+    #atlas-main .month-board .format-gallery img { display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: center; }
+    #atlas-main .month-board .format-gallery--stories img { aspect-ratio: 9 / 16; }
+    #atlas-main .month-board > p { margin: 0; color: var(--lm-color-muted-2); }
+    #atlas-main .month-board > .btn { justify-self: start; }
+    #atlas-main .month-board .text-preview { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+    #atlas-main .month-board .text-preview article { max-height: 360px; overflow: auto; }
+    #atlas-main .month-board .text-preview article > div { color: var(--lm-color-muted); font-size: 15px; line-height: 1.6; }
+    #atlas-main .month-board .text-preview article > div p:first-child { margin-top: 0; }
+
+    #atlas-main .page-section:nth-of-type(5) { background: var(--lm-color-surface); }
+    #atlas-main .page-section:nth-of-type(5) h2 { max-width: 600px; }
+    #atlas-main .page-section:nth-of-type(5) .lead { max-width: 680px; }
+    #atlas-main .case-filters { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 40px; }
+    #atlas-main .case-filters button { min-height: 44px; padding: 10px 18px; border: 1px solid var(--lm-color-border-2); border-radius: var(--lm-radius-pill); color: var(--lm-text-primary); background: transparent; font: inherit; font-size: 15px; font-weight: 700; cursor: pointer; }
+    #atlas-main .case-filters button[aria-pressed="true"] { color: var(--lm-text-inverse); background: var(--lm-surface-inverse); border-color: var(--lm-surface-inverse); }
+    #atlas-main .case-grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 24px; margin-top: 64px; }
+    #atlas-main .case-card { grid-column: span 6; overflow: hidden; border: 0; border-radius: var(--lm-radius-lg); background: var(--lm-surface-default); box-shadow: none; }
+    #atlas-main .case-card[hidden] { display: none !important; }
+    #atlas-main .case-card:first-child { grid-column: span 8; display: block; }
+    #atlas-main .case-card:nth-child(2) { grid-column: span 4; }
+    #atlas-main .case-card:nth-child(3), #atlas-main .case-card:nth-child(4), #atlas-main .case-card:nth-child(5), #atlas-main .case-card:nth-child(6) { grid-column: span 3; }
+    #atlas-main .case-grid.is-filtered .case-card { grid-column: span 8; }
+    #atlas-main .case-card__media { min-height: 0; grid-template-columns: repeat(3, 1fr); gap: 12px; align-items: center; padding: 24px; background: var(--lm-color-lavender-100); }
+    #atlas-main .case-card:first-child .case-card__media { min-height: 0; }
+    #atlas-main .case-card__media img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; object-position: center; }
+    #atlas-main .case-card__media img.is-story { aspect-ratio: 9 / 16; object-fit: cover; }
+    #atlas-main .case-card__body { display: flex; flex-direction: column; padding: 32px; }
+    #atlas-main .case-card__body .btn { align-self: flex-start; min-height: auto; margin-top: auto; padding: 8px 0; border: 0; border-bottom: 1px solid currentColor; border-radius: 0; }
+
+    #atlas-main .page-section:nth-of-type(6) { background: var(--lm-surface-default); }
+    #atlas-main .page-section:nth-of-type(6) h2 { max-width: 680px; }
+    #atlas-main .pricing-grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 24px; align-items: end; margin-top: 64px; }
+    #atlas-main .price-card { position: relative; grid-column: span 3; min-height: 760px; padding: 32px; overflow: hidden; border: 1px solid var(--lm-color-border); border-radius: var(--lm-radius-lg); background: var(--lm-color-surface); box-shadow: none; }
+    #atlas-main .price-card--standard { grid-column: span 5; min-height: 860px; padding: 40px; border: 0; background: var(--lm-surface-purple-soft); box-shadow: var(--lm-shadow-pop); }
+    #atlas-main .price-card--max { grid-column: span 4; min-height: 810px; border: 0; color: var(--lm-text-inverse); background: var(--lm-surface-inverse); }
+    #atlas-main .price-card__price { margin: 12px 0 32px; font-size: 52px; }
+    #atlas-main .tariff-preview { margin-bottom: 32px; }
+    #atlas-main .tariff-preview img, #atlas-main .tariff-preview__video { display: block; aspect-ratio: 4 / 5; object-fit: cover; object-position: center; }
+    #atlas-main .tariff-preview img.is-story, #atlas-main .tariff-preview__video { aspect-ratio: 9 / 16; }
+    #atlas-main .tariff-preview__video { display: grid; place-items: center; }
+    #atlas-main .price-card ul { gap: 14px; padding-left: 20px; }
+    #atlas-main .price-card .btn { width: 100%; margin-top: auto; }
+    #atlas-main .price-card:not(.price-card--standard):not(.price-card--max) .btn { color: var(--lm-text-inverse); background: var(--lm-surface-inverse); border: 0; }
+    #atlas-main .price-card--standard .btn { color: var(--lm-text-on-lemon); background: var(--lm-surface-lemon); border: 0; box-shadow: var(--lm-glow-lemon); }
+    #atlas-main .price-card--max .btn { color: var(--lm-text-primary); background: var(--lm-surface-default); border: 0; }
+
+    #atlas-main .page-section:nth-of-type(7) { padding-block: 96px; color: var(--lm-text-on-lemon); background: var(--lm-surface-lemon); }
+    #atlas-main .guarantee { display: grid; grid-template-columns: 5fr 7fr; gap: 64px; align-items: center; }
+    #atlas-main .guarantee__number { font-size: 180px; line-height: .72; letter-spacing: -.08em; }
+    #atlas-main .guarantee h2 { max-width: 680px; }
+    #atlas-main .guarantee .lead { max-width: 720px; }
+    #atlas-main .guarantee a { color: inherit; font-size: 17px; font-weight: 800; }
+
+    #atlas-main .page-section:nth-of-type(8) { background: var(--lm-surface-default); }
+    #atlas-main .page-section:nth-of-type(8) h2 { max-width: 760px; }
+    #atlas-main .compare { margin-top: 64px; overflow: hidden; border-collapse: separate; border-spacing: 0 8px; border-radius: 0; background: transparent; box-shadow: none; }
+    #atlas-main .compare thead { color: var(--lm-text-inverse); background: var(--lm-surface-inverse); }
+    #atlas-main .compare th { padding: 20px 24px; border: 0; color: var(--lm-text-inverse); background: var(--lm-surface-inverse); }
+    #atlas-main .compare th:first-child { border-radius: var(--lm-radius-md) 0 0 var(--lm-radius-md); }
+    #atlas-main .compare th:last-child { border-radius: 0 var(--lm-radius-md) var(--lm-radius-md) 0; }
+    #atlas-main .compare td { padding: 24px; border: 0; background: var(--lm-color-surface); }
+    #atlas-main .compare tbody tr:last-child td { color: var(--lm-text-on-lemon); background: var(--lm-surface-lemon); }
+    #atlas-main .compare tbody tr td:first-child { border-radius: var(--lm-radius-md) 0 0 var(--lm-radius-md); }
+    #atlas-main .compare tbody tr td:last-child { border-radius: 0 var(--lm-radius-md) var(--lm-radius-md) 0; }
+
+    #atlas-main .page-section:nth-of-type(9) { color: var(--lm-text-inverse); background: var(--lm-grad-space); }
+    #atlas-main .page-section:nth-of-type(9) h2 { max-width: 700px; }
+    #atlas-main .metric-grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 16px; margin: 64px 0 32px; }
+    #atlas-main .metric { grid-column: span 3; min-height: 220px; padding: 32px; border: 1px solid var(--lm-color-neutral-800); color: var(--lm-text-inverse); background: var(--lm-color-neutral-900); box-shadow: none; }
+    #atlas-main .metric:first-child { grid-column: span 5; background: var(--lm-surface-lemon); color: var(--lm-text-on-lemon); }
+    #atlas-main .metric:nth-child(2) { grid-column: span 3; background: var(--lm-color-neutral-900); }
+    #atlas-main .metric:nth-child(3), #atlas-main .metric:nth-child(4) { grid-column: span 2; background: var(--lm-surface-purple); }
+    #atlas-main .metric b { font-size: 52px; }
+    #atlas-main .review-wall { display: grid; grid-template-columns: repeat(12, 1fr); gap: 16px; }
+    #atlas-main .review { grid-column: span 4; min-height: 260px; padding: 32px; border: 1px solid var(--lm-color-neutral-800); color: var(--lm-text-primary); background: var(--lm-surface-default); }
+    #atlas-main .review:first-child { grid-column: span 5; grid-row: auto; background: var(--lm-surface-lemon-soft); }
+    #atlas-main .review:nth-child(2) { grid-column: span 3; }
+    #atlas-main .review:nth-child(3) { grid-column: span 4; background: var(--lm-surface-purple-soft); }
+    #atlas-main .review .btn { min-height: auto; padding: 8px 0; border: 0; border-bottom: 1px solid currentColor; border-radius: 0; }
+    #atlas-main .page-section:nth-of-type(9) .missing-proof { min-height: 200px !important; border-color: var(--lm-color-neutral-800); color: var(--lm-text-inverse); background: var(--lm-color-neutral-900); }
+
+    #atlas-main .page-section:nth-of-type(10) { background: var(--lm-color-surface); }
+    #atlas-main .page-section:nth-of-type(10) .inner { display: grid; grid-template-columns: 5fr 7fr; gap: 64px; align-items: start; }
+    #atlas-main .page-section:nth-of-type(10) h2 { position: sticky; top: 96px; max-width: 520px; }
+    #atlas-main .faq-list { grid-column: 2; gap: 0; margin: 0; border-top: 1px solid var(--lm-color-border-2); }
+    #atlas-main .faq-list details { border: 0; border-bottom: 1px solid var(--lm-color-border-2); border-radius: 0; background: transparent; }
+    #atlas-main .faq-list summary { padding: 24px 0; font-size: 20px; }
+    #atlas-main .faq-list details p { padding: 0 0 24px; }
+
+    #atlas-main .page-section:nth-of-type(11) { color: var(--lm-text-inverse); background: var(--lm-grad-brand-dark); }
+    #atlas-main .page-section:nth-of-type(11) .final-grid { grid-template-columns: 5fr 7fr; gap: 64px; }
+    #atlas-main .page-section:nth-of-type(11) h2 { max-width: 540px; }
+    #atlas-main .page-section:nth-of-type(11) .lead { max-width: 520px; color: var(--lm-color-neutral-100); }
+    #atlas-main .page-section:nth-of-type(11) .missing-proof { min-height: 220px !important; border: 1px solid var(--lm-color-neutral-800); color: var(--lm-text-inverse); background: var(--lm-color-neutral-900); }
+    #atlas-main .lead-form { gap: 20px; padding: 48px; border-radius: var(--lm-radius-lg); color: var(--lm-text-primary); background: var(--lm-surface-default); box-shadow: var(--lm-shadow-pop); }
+    #atlas-main .lead-form .btn { width: 100%; }
+    #atlas-main .field input { border-radius: var(--lm-radius-sm); }
+    #atlas-main .site-footer { margin: 0; padding: 96px 64px; border-radius: 0; background: var(--lm-surface-inverse); }
+  </style>
 </head>
 <body>
   <header class="atlas-toolbar">
     <img src="assets/design/logo-white.svg" alt="lemonmedia">
-    <div class="atlas-toolbar__copy"><strong>Атлас дизайна сайта</strong><small>5 страниц · один холст · компьютерная версия</small></div>
-    <nav class="atlas-nav" aria-label="Страницы атласа">
-      <a href="#atlas-main">Главная</a><a href="#atlas-pricing">Цены</a><a href="#atlas-examples">Примеры</a><a href="#atlas-case">Кейс</a><a href="#atlas-audit">Разбор</a>
-    </nav>
     <div class="atlas-zoom" aria-label="Масштаб">
       <button type="button" data-scale=".3">30%</button><button type="button" data-scale=".4" aria-pressed="true">40%</button><button type="button" data-scale=".55">55%</button><button type="button" data-scale="1">100%</button>
     </div>
   </header>
 
   <main class="atlas-stage">
-    <section class="atlas-map" aria-label="Карта переходов сайта">
-      <div class="atlas-map__head">
-        <h2>Как страницы связаны</h2>
-        <p>Это не линейная цепочка. Главная разводит человека по трём сценариям: увидеть доказательства, выбрать тариф или начать с бесплатного разбора. Кейс открывается только из конкретной работы.</p>
-      </div>
-      <div class="atlas-map__flow">
-        <a class="atlas-map__node atlas-map__node--entry" href="#atlas-main"><b>Главная</b><span>Объясняет услугу и помогает выбрать следующий шаг</span></a>
-        <a class="atlas-map__node" href="#atlas-examples"><b>Работы</b><span>Фильтр → карточка проекта → его кейс</span></a>
-        <a class="atlas-map__node" href="#atlas-pricing"><b>Цены</b><span>Тариф → выбранный контекст в форме</span></a>
-        <a class="atlas-map__node" href="#atlas-audit"><b>Разбор</b><span>Безопасный первый шаг → заявка</span></a>
-        <a class="atlas-map__node atlas-map__node--case" href="#atlas-case"><b>Кейс</b><span>Весь месяц → форма «хочу так же»</span></a>
-      </div>
-      <div class="atlas-map__states" aria-label="Состояния действий и форм">
-        <div class="atlas-map__state"><b>Кнопка тарифа</b><span>Открывает форму с уже выбранным тарифом</span></div>
-        <div class="atlas-map__state"><b>Форма</b><span>«Напишу сам» или «Свяжитесь со мной»</span></div>
-        <div class="atlas-map__state"><b>Заявка отправлена</b><span>Спасибо + срок ответа менеджера</span></div>
-        <div class="atlas-map__state"><b>Ошибка</b><span>Пояснение под конкретным полем, не только цвет</span></div>
-      </div>
-    </section>
     <div class="atlas-board" data-atlas-board>
       <div class="atlas-page-wrap" id="atlas-main">
         <div class="atlas-label"><b>01 · Главная</b><span>11 блоков · главный путь продажи</span></div>
@@ -484,16 +655,16 @@
 
           <section class="page-section page-section--dark"><div class="inner"><h2>Вот как выглядит месяц нашей работы. Целиком</h2><p class="lead">Красивые картинки в портфолио умеют показывать все. Мы показываем весь месяц одного клиента без купюр: каждый пост, каждый текст, каждый слайд карусели и календарь выхода.</p><div class="month-board"><div class="tabs"><span>План</span><span>Лента</span><span>Тексты</span><span>Карусели</span><span>Сторис</span><span>Календарь</span></div><div class="month-plan"><span>05.08 · Как выбрать кухню</span><span>07.08 · Двухцветная классика</span><span>09.08 · Модель Beverly</span><span>11.08 · Кухня на заказ = переплата</span><span>13.08 · Замер и 3D-проект</span><span>15.08 · Маленькая кухня-студия</span><span>17.08 · Что проверить до заказа</span><span>19.08 · Кухня без ручек</span><span>21.08 · Серая угловая кухня</span><span>23.08 · Мифы о кухнях</span><span>25.08 · Популярные модели</span><span>27.08 · Из чего делают фасады</span><span>29.08 · Зелёная кухня</span><span>31.08 · Модель Provence</span><span>02.09 · Рассрочка 0%</span></div><div class="month-grid"><img src="assets/cases/saratov-kitchens-2026-08/posts/01.webp" alt="Публикация 1"><img src="assets/cases/saratov-kitchens-2026-08/posts/02.webp" alt="Публикация 2"><img src="assets/cases/saratov-kitchens-2026-08/posts/03.webp" alt="Публикация 3"><img src="assets/cases/saratov-kitchens-2026-08/posts/04.webp" alt="Публикация 4"><img src="assets/cases/saratov-kitchens-2026-08/posts/05.webp" alt="Публикация 5"><img src="assets/cases/saratov-kitchens-2026-08/posts/06.webp" alt="Публикация 6"><img src="assets/cases/saratov-kitchens-2026-08/posts/07.webp" alt="Публикация 7"><img src="assets/cases/saratov-kitchens-2026-08/posts/08.webp" alt="Публикация 8"><img src="assets/cases/saratov-kitchens-2026-08/posts/09.webp" alt="Публикация 9"><img src="assets/cases/saratov-kitchens-2026-08/posts/10.webp" alt="Публикация 10"><img src="assets/cases/saratov-kitchens-2026-08/posts/11.webp" alt="Публикация 11"><img src="assets/cases/saratov-kitchens-2026-08/posts/12.webp" alt="Публикация 12"><img src="assets/cases/saratov-kitchens-2026-08/posts/13.webp" alt="Публикация 13"><img src="assets/cases/saratov-kitchens-2026-08/posts/14.webp" alt="Публикация 14"><img src="assets/cases/saratov-kitchens-2026-08/posts/15.webp" alt="Публикация 15"></div><div class="format-gallery format-gallery--stories"><img src="assets/cases/saratov-kitchens-2026-08/stories/01.webp" alt="Сторис 1"><img src="assets/cases/saratov-kitchens-2026-08/stories/02.webp" alt="Сторис 2"><img src="assets/cases/saratov-kitchens-2026-08/stories/03.webp" alt="Сторис 3"><img src="assets/cases/saratov-kitchens-2026-08/stories/04.webp" alt="Сторис 4"><img src="assets/cases/saratov-kitchens-2026-08/stories/05.webp" alt="Сторис 5"></div><p>15 публикаций · 5 каруселей · 34 слайда · 5 сторис · выход каждые два дня</p><a class="btn" href="#atlas-case">Посмотреть весь кейс</a></div></div></section>
 
-          <section class="page-section page-section--soft"><div class="inner"><h2>Найдите свою нишу</h2><p class="lead">Кафе и доставка, бьюти, ремонт и стройка, спорт, эксперты, локальный ритейл - за 6 лет мы делали контент почти для всего.</p><div class="case-grid">
-            <article class="case-card"><div class="case-card__media"><img src="assets/cases/saratov-kitchens-2026-08/posts/01.webp" alt="Публикация Саратов Кухни"><img src="assets/cases/saratov-kitchens-2026-08/posts/03.webp" alt="Публикация Саратов Кухни"><img src="assets/cases/saratov-kitchens-2026-08/posts/05.webp" alt="Публикация Саратов Кухни"></div><div class="case-card__body"><span class="price-card__badge">Ремонт и дом</span><h3>Саратов Кухни · Саратов</h3><small>15 публикаций · 5 каруселей · 34 слайда</small><p>Польза, модели, доказательства работ и предложения собраны в один месяц.</p><a class="btn btn--ghost" href="#atlas-case">Открыть проект</a></div></article>
-            <article class="case-card"><div class="case-card__media"><img src="assets/cases/ateris/posts/03.jpg" alt="Реальный материал проекта"><img src="assets/cases/ateris/posts/05.jpg" alt="Реальный материал проекта"><img src="assets/cases/ateris/posts/08.jpg" alt="Реальный материал проекта"></div><div class="case-card__body"><small>Ветеринарный центр · 10 публикаций</small><h3>Атерис</h3><p>Экспертные темы превращены в понятные ответы и спокойный путь к обращению.</p><a class="btn btn--ghost" href="#atlas-case">Открыть проект</a></div></article>
-            <article class="case-card"><div class="case-card__media"><img src="assets/cases/sergey-glibin/posts/08.jpg" alt="Реальный материал проекта"><img src="assets/cases/sergey-glibin/posts/14.jpg" alt="Реальный материал проекта"><img src="assets/cases/sergey-glibin/posts/19.jpg" alt="Реальный материал проекта"></div><div class="case-card__body"><small>Личный бренд · 20 публикаций</small><h3>Сергей Глибин</h3><p>Личность, опыт и услуга раскрываются в одной узнаваемой системе.</p><a class="btn btn--ghost" href="#atlas-case">Открыть проект</a></div></article>
-            <article class="case-card"><div class="case-card__media"><img src="assets/cases/moscow-padel/posts/19.jpg" alt="Публикация MoscowPadel"><img src="assets/cases/moscow-padel/posts/08.jpg" alt="Публикация MoscowPadel"><img src="assets/cases/moscow-padel/posts/15.jpg" alt="Публикация MoscowPadel"></div><div class="case-card__body"><small>Спортивная инфраструктура · 20 публикаций</small><h3>MoscowPadel</h3><p>Продукт показан через возможности объекта, сценарии использования и доверие.</p><a class="btn btn--ghost" href="#atlas-case">Открыть проект</a></div></article>
-            <article class="case-card"><div class="case-card__media"><img src="assets/cases/fr-moto/posts/08.jpg" alt="Реальный материал проекта"><img src="assets/cases/fr-moto/carousels/03/01.jpg" alt="Реальный материал проекта"><img class="is-story" src="assets/cases/fr-moto/stories/01.jpg" alt="Реальный материал проекта"></div><div class="case-card__body"><small>Мото-запчасти · 10 публикаций</small><h3>FR-moto</h3><p>Инженерный продукт объяснён понятно, без потери технической точности.</p><a class="btn btn--ghost" href="#atlas-examples">Открыть проект</a></div></article>
-            <article class="case-card"><div class="case-card__media"><img src="assets/cases/fjord-petersburg/posts/01.jpg" alt="Реальный материал проекта"><img src="assets/cases/fjord-petersburg/posts/05.jpg" alt="Реальный материал проекта"><img src="assets/cases/fjord-petersburg/carousels/03/01.jpg" alt="Реальный материал проекта"></div><div class="case-card__body"><small>Водные прогулки · Санкт-Петербург</small><h3>Fjord-Petersburg</h3><p>Маршруты, выбор судна и сценарии отдыха собраны в спокойный путь к сообщению.</p><a class="btn btn--ghost" href="#atlas-examples">Открыть проект</a></div></article>
+          <section class="page-section page-section--soft"><div class="inner"><h2>Найдите свою нишу</h2><p class="lead">Кафе и доставка, бьюти, ремонт и стройка, спорт, эксперты, локальный ритейл - за 6 лет мы делали контент почти для всего.</p><div class="case-filters" aria-label="Фильтр по нишам"><button type="button" data-case-filter="all" aria-pressed="true">Все</button><button type="button" data-case-filter="home">Ремонт и дом</button><button type="button" data-case-filter="services">Услуги</button><button type="button" data-case-filter="experts">Эксперты</button><button type="button" data-case-filter="sport">Спорт</button><button type="button" data-case-filter="local">Локальный бизнес</button></div><div class="case-grid">
+            <article class="case-card" data-case-sector="home"><div class="case-card__media"><img src="assets/cases/saratov-kitchens-2026-08/posts/01.webp" alt="Публикация Саратов Кухни"><img src="assets/cases/saratov-kitchens-2026-08/posts/03.webp" alt="Публикация Саратов Кухни"><img src="assets/cases/saratov-kitchens-2026-08/posts/05.webp" alt="Публикация Саратов Кухни"></div><div class="case-card__body"><span class="price-card__badge">Ремонт и дом</span><h3>Саратов Кухни · Саратов</h3><small>15 публикаций · 5 каруселей · 34 слайда</small><p>Польза, модели, доказательства работ и предложения собраны в один месяц.</p><a class="btn btn--ghost" href="#atlas-case">Открыть проект</a></div></article>
+            <article class="case-card" data-case-sector="services"><div class="case-card__media"><img src="assets/cases/ateris/posts/03.jpg" alt="Реальный материал проекта"><img src="assets/cases/ateris/posts/05.jpg" alt="Реальный материал проекта"><img src="assets/cases/ateris/posts/08.jpg" alt="Реальный материал проекта"></div><div class="case-card__body"><small>Ветеринарный центр · 10 публикаций</small><h3>Атерис</h3><p>Экспертные темы превращены в понятные ответы и спокойный путь к обращению.</p><a class="btn btn--ghost" href="#atlas-case">Открыть проект</a></div></article>
+            <article class="case-card" data-case-sector="experts"><div class="case-card__media"><img src="assets/cases/sergey-glibin/posts/08.jpg" alt="Реальный материал проекта"><img src="assets/cases/sergey-glibin/posts/14.jpg" alt="Реальный материал проекта"><img src="assets/cases/sergey-glibin/posts/19.jpg" alt="Реальный материал проекта"></div><div class="case-card__body"><small>Личный бренд · 20 публикаций</small><h3>Сергей Глибин</h3><p>Личность, опыт и услуга раскрываются в одной узнаваемой системе.</p><a class="btn btn--ghost" href="#atlas-case">Открыть проект</a></div></article>
+            <article class="case-card" data-case-sector="sport"><div class="case-card__media"><img src="assets/cases/moscow-padel/posts/19.jpg" alt="Публикация MoscowPadel"><img src="assets/cases/moscow-padel/posts/08.jpg" alt="Публикация MoscowPadel"><img src="assets/cases/moscow-padel/posts/15.jpg" alt="Публикация MoscowPadel"></div><div class="case-card__body"><small>Спортивная инфраструктура · 20 публикаций</small><h3>MoscowPadel</h3><p>Продукт показан через возможности объекта, сценарии использования и доверие.</p><a class="btn btn--ghost" href="#atlas-case">Открыть проект</a></div></article>
+            <article class="case-card" data-case-sector="local"><div class="case-card__media"><img src="assets/cases/fr-moto/posts/08.jpg" alt="Реальный материал проекта"><img src="assets/cases/fr-moto/carousels/03/01.jpg" alt="Реальный материал проекта"><img class="is-story" src="assets/cases/fr-moto/stories/01.jpg" alt="Реальный материал проекта"></div><div class="case-card__body"><small>Мото-запчасти · 10 публикаций</small><h3>FR-moto</h3><p>Инженерный продукт объяснён понятно, без потери технической точности.</p><a class="btn btn--ghost" href="#atlas-examples">Открыть проект</a></div></article>
+            <article class="case-card" data-case-sector="services"><div class="case-card__media"><img src="assets/cases/fjord-petersburg/posts/01.jpg" alt="Реальный материал проекта"><img src="assets/cases/fjord-petersburg/posts/05.jpg" alt="Реальный материал проекта"><img src="assets/cases/fjord-petersburg/carousels/03/01.jpg" alt="Реальный материал проекта"></div><div class="case-card__body"><small>Водные прогулки · Санкт-Петербург</small><h3>Fjord-Petersburg</h3><p>Маршруты, выбор судна и сценарии отдыха собраны в спокойный путь к сообщению.</p><a class="btn btn--ghost" href="#atlas-examples">Открыть проект</a></div></article>
           </div><div style="margin-top:26px"><a class="btn btn--ghost" href="#atlas-examples">Все примеры работ</a></div></div></section>
 
-          <section class="page-section" id="main-pricing"><div class="inner"><h2>Три тарифа. Без скрытых доплат</h2><p class="lead">В каждом тарифе - полный цикл: контент-план, тексты, дизайн, публикация и личный менеджер. Разница только в объёме.</p><div class="pricing-grid"><article class="price-card"><h3>Старт</h3><div class="price-card__price">4 990 ₽<small>/мес</small></div><ul><li>8 постов</li><li>Публикации 2 раза в неделю</li><li>План, тексты, дизайн</li><li>Личный менеджер</li><li>Без каруселей, сторис и видео</li></ul><p>Минимум, чтобы соцсети жили и выглядели профессионально.</p><a class="btn" href="#main-final">Выбрать этот тариф</a></article><article class="price-card price-card--standard"><span class="price-card__badge">выбирает большинство</span><h3>Стандарт</h3><div class="price-card__price">9 900 ₽<small>/мес</small></div><ul><li>16 постов</li><li>4 карусели</li><li>8 серий сторис</li><li>Публикации через день</li><li>Контента в 3,5 раза больше «Старта»</li></ul><p>Полноценное присутствие: лента, карусели и сторис работают вместе.</p><a class="btn" href="#main-final">Выбрать этот тариф</a></article><article class="price-card price-card--max"><span class="price-card__badge">максимум отдачи</span><h3>Максимум</h3><div class="price-card__price">14 900 ₽<small>/мес</small></div><ul><li>24 поста</li><li>8 каруселей</li><li>16 серий сторис</li><li>4 ролика</li><li>Публикации почти каждый день</li><li>Единственный тариф с видео</li></ul><p>Соцсети выглядят как у большого бренда: лента, сторис и ролики каждый день.</p><a class="btn" href="#main-final">Выбрать этот тариф</a></article></div><p style="margin-top:24px">Нужны только ролики? Делаем отдельно - от 5 990 ₽/мес. Разовые задачи: оформление соцсети или логотип - по 9 900 ₽. <a href="#atlas-pricing">Все услуги и цены</a></p><p>Оплата как удобно: картой, по счёту, Долями, Сплитом или в рассрочку от надёжных банков. Работаем по всей России и с зарубежьем.</p></div></section>
+          <section class="page-section" id="main-pricing"><div class="inner"><h2>Три тарифа. Без скрытых доплат</h2><p class="lead">В каждом тарифе - полный цикл: контент-план, тексты, дизайн, публикация и личный менеджер. Разница только в объёме.</p><div class="pricing-grid"><article class="price-card"><h3>Старт</h3><div class="price-card__price">4 990 ₽<small>/мес</small></div><ul><li>8 постов</li><li>Публикации 2 раза в неделю</li><li>План, тексты, дизайн</li><li>Личный менеджер</li><li>Без каруселей, сторис и видео</li></ul><p>Минимум, чтобы соцсети жили и выглядели профессионально.</p><a class="btn" href="#main-final">Выбрать этот тариф</a></article><article class="price-card price-card--standard"><span class="price-card__badge">выбирает большинство</span><h3>Стандарт</h3><div class="price-card__price">9 900 ₽<small>/мес</small></div><ul><li>16 постов</li><li>4 карусели</li><li>8 серий сторис</li><li>Публикации через день</li><li>Контента в 3,5 раза больше «Старта» - лента не замолкает ни на день</li></ul><p>Полноценное присутствие: лента, карусели и сторис работают вместе.</p><a class="btn" href="#main-final">Выбрать этот тариф</a></article><article class="price-card price-card--max"><span class="price-card__badge">максимум отдачи</span><h3>Максимум</h3><div class="price-card__price">14 900 ₽<small>/мес</small></div><ul><li>24 поста</li><li>8 каруселей</li><li>16 серий сторис</li><li>4 ролика</li><li>Публикации почти каждый день</li><li>Единственный тариф с видео - самым сильным форматом по охватам</li></ul><p>Соцсети выглядят как у большого бренда: лента, сторис и ролики каждый день.</p><a class="btn" href="#main-final">Выбрать этот тариф</a></article></div><p style="margin-top:24px">Нужны только ролики? Делаем отдельно - от 5 990 ₽/мес. Разовые задачи: оформление соцсети или логотип - по 9 900 ₽. <a href="#atlas-pricing">Все услуги и цены</a></p><p>Оплата как удобно: картой, по счёту, Долями, Сплитом или в рассрочку от надёжных банков. Работаем по всей России и с зарубежьем.</p></div></section>
 
           <section class="page-section page-section--lemon"><div class="inner guarantee"><div class="guarantee__number">14<br>дней</div><div><h2>Первые 14 дней вы ничем не рискуете</h2><p class="lead" style="color:inherit">Посмотрите первую партию контента, попросите правки. Если результат не понравится - вернём деньги. Без выяснений и «а вы сначала докажите». Мы 6 лет на рынке, нам дороже репутация.</p><a href="legal-design.html#refund">Условия возврата и оферты →</a></div></div></section>
 
@@ -582,13 +753,68 @@
       </div>
     </div>
   </main>
+  <script src="assets/design/examples-sales-data.js"></script>
   <script>
     const board = document.querySelector('[data-atlas-board]');
+    const stage = document.querySelector('.atlas-stage');
+    let atlasScale = .4;
+    const setAtlasScale = (nextScale) => {
+      atlasScale = Math.min(1, Math.max(.25, Math.round(nextScale * 20) / 20));
+      board.style.setProperty('--atlas-scale', atlasScale);
+      document.querySelectorAll('[data-scale]').forEach((item) => {
+        item.setAttribute('aria-pressed', String(Number(item.dataset.scale) === atlasScale));
+      });
+    };
     document.querySelectorAll('[data-scale]').forEach((button) => button.addEventListener('click', () => {
-      document.querySelectorAll('[data-scale]').forEach((item) => item.setAttribute('aria-pressed', 'false'));
-      button.setAttribute('aria-pressed', 'true');
-      board.style.setProperty('--atlas-scale', button.dataset.scale);
+      setAtlasScale(Number(button.dataset.scale));
     }));
+    stage.addEventListener('wheel', (event) => {
+      if (!event.metaKey && !event.ctrlKey) return;
+      event.preventDefault();
+      setAtlasScale(atlasScale + (event.deltaY < 0 ? .05 : -.05));
+    }, { passive: false });
+
+    const caseFilterButtons = document.querySelectorAll('[data-case-filter]');
+    const caseCards = document.querySelectorAll('#atlas-main [data-case-sector]');
+    const caseGrid = document.querySelector('#atlas-main .case-grid');
+    caseFilterButtons.forEach((button) => button.addEventListener('click', () => {
+      const filter = button.dataset.caseFilter;
+      caseFilterButtons.forEach((item) => item.setAttribute('aria-pressed', String(item === button)));
+      caseGrid.classList.toggle('is-filtered', filter !== 'all');
+      caseCards.forEach((card) => {
+        card.hidden = filter !== 'all' && card.dataset.caseSector !== filter;
+      });
+    }));
+
+    const proofLightbox = document.createElement('div');
+    proofLightbox.className = 'proof-lightbox';
+    proofLightbox.hidden = true;
+    proofLightbox.setAttribute('role', 'dialog');
+    proofLightbox.setAttribute('aria-modal', 'true');
+    proofLightbox.setAttribute('aria-label', 'Увеличенный скриншот процесса');
+    proofLightbox.innerHTML = '<button class="proof-lightbox__close" type="button" aria-label="Закрыть">×</button><figure class="proof-lightbox__figure"><img class="proof-lightbox__image" alt=""><figcaption class="proof-lightbox__caption"></figcaption></figure>';
+    document.body.append(proofLightbox);
+    const lightboxImage = proofLightbox.querySelector('.proof-lightbox__image');
+    const lightboxCaption = proofLightbox.querySelector('.proof-lightbox__caption');
+    const closeProofLightbox = () => { proofLightbox.hidden = true; };
+    proofLightbox.querySelector('.proof-lightbox__close').addEventListener('click', closeProofLightbox);
+    proofLightbox.addEventListener('click', (event) => { if (event.target === proofLightbox) closeProofLightbox(); });
+    document.addEventListener('keydown', (event) => { if (event.key === 'Escape') closeProofLightbox(); });
+    document.querySelectorAll('#atlas-main .step img').forEach((image) => {
+      const button = document.createElement('button');
+      button.className = 'step-proof-button';
+      button.type = 'button';
+      button.setAttribute('aria-label', `Увеличить: ${image.alt}`);
+      image.insertAdjacentElement('beforebegin', button);
+      button.append(image);
+      button.addEventListener('click', () => {
+        lightboxImage.src = image.src;
+        lightboxImage.alt = image.alt;
+        lightboxCaption.textContent = image.alt;
+        proofLightbox.hidden = false;
+        proofLightbox.querySelector('.proof-lightbox__close').focus();
+      });
+    });
 
     const carouselFiles = [
       ...Array.from({ length: 7 }, (_, index) => `06/${String(index + 1).padStart(2, '0')}.webp`),
@@ -643,11 +869,15 @@
       const feed = monthBoard.querySelector('.month-grid');
       const stories = monthBoard.querySelector('.format-gallery--stories');
       const titles = [...plan.querySelectorAll('span')].map((item) => item.textContent.trim());
+      const copyItems = window.SALES_PROJECTS
+        ?.find((project) => project.name === 'Саратов Кухни')
+        ?.formats?.post?.groups?.flatMap((group) => group.items) || [];
       const textPanel = document.createElement('div');
       textPanel.className = 'text-preview';
       titles.forEach((title, index) => {
         const card = document.createElement('article');
-        card.innerHTML = `<b>${String(index + 1).padStart(2, '0')} · ${title.split(' · ').slice(1).join(' · ')}</b><small>Полный согласованный текст не хранится в папке проекта. В готовом сайте здесь откроется текст публикации без сокращений.</small>`;
+        const source = copyItems.find((item) => item.publicationNumber === index + 1);
+        card.innerHTML = `<b>${String(index + 1).padStart(2, '0')} · ${title.split(' · ').slice(1).join(' · ')}</b><div>${source?.copyHtml || '<p>Текст этой публикации ещё не добавлен в данные проекта.</p>'}</div>`;
         textPanel.append(card);
       });
       const carouselPanel = makeImageGallery('format-gallery', carouselFiles, 'carousels', 'Слайд карусели');
@@ -708,7 +938,7 @@
       preview.className = `tariff-preview${plan === 'Максимум' ? ' tariff-preview--max' : ''}`;
       assets.forEach(([src, label]) => {
         const figure = document.createElement('figure');
-        figure.innerHTML = `<img loading="lazy" src="${src}" alt="Реальный пример формата: ${label}"><figcaption>${label}</figcaption>`;
+        figure.innerHTML = `<img class="${label === 'Сторис' ? 'is-story' : ''}" loading="lazy" src="${src}" alt="Реальный пример формата: ${label}"><figcaption>${label}</figcaption>`;
         preview.append(figure);
       });
       if (plan === 'Максимум') {
